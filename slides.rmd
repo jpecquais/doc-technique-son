@@ -1,0 +1,217 @@
+---
+title: "Formation prise de son"
+subtitle: "Enregistrement des sources acoustiques"
+author: "Jean-Loup Pecquais"
+date: "2021/11/28"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      countIncrementalSlides: false
+---
+
+# Petite histoire des sons enregistrés
+
+A DEVP
+
+---
+
+# Le chemin du signal
+
+IMAGES
+
+!> La qualité du chaîne de traitement est déterminé par son maillon le plus faible !
+
+---
+
+## Le musicien & son instrument
+
++ L'acceuil
++ Ecouter un instrument
++ Quelques bases d'organologies
+
+
+---
+
+## L'acoustique
+
++ Choisir un lieu cohérent
+
+---
+
+## Les microphones
+
+IMAGES
+
+Deux critères :
+
++ La technologie
++ La directivité
+
+---
+
+### Historique
+
+---
+
+### Les technologies
+
++ Electro-statiques
++ Ruban
++ Dynamique
+
+---
+
+## La connectique
+
++ Asymétrique
++ Symétrique
++ L'influence du câble sur le son
+
+---
+
+## Les préamplis
+
++ Le rôle du préampli
++ La couleur des préampli ?
+
+---
+
+## Les convertisseurs A/N
+
++ La numérisation du signal
+  + le théorème de Nyquist-Shannon
+  + La quantification
++ Le fonctionnement des convertisseurs
++ La qualité d'un convertisseurs ?
+
+---
+
+## La sérialisation
+
++ Quésako ?
++ La qualité d'une sérialisation ?
+
+---
+
+## L'enregistrement audio-numérique sur ordinateur
+
++ La problématique de l'"interface chaise-clavier"
++ Comprendre le fonctionnement de l'ordinateur
+  + Le rôle d'un processeur
+  + L'utilisation des différentes mémoires
+  + Le principe des mémoires tampons (buffer/block size)
++ Le stockage de l'audio
+  + Les différents formats
+
+---
+
+## Les stations de travail audio-numérique (ou DAW)
+
++ Des différences de sons ?
++ Des différences de fonctionnalités ?
++ La meilleure station de travail audio-numérique
+
+---
+
+## La conversion numérique/analogique
+
++ La décimation
+
+---
+
+## L'amplificateur
+
++ Le rôle de l'amplification
+
+---
+
+## Les enceintes
+
++ Fonctionnement
++ Choisir ses enceintes
+
+---
+
+## L'acoustique (encore)
+
+---
+
+# Transversal Studio
+
+---
+
+## Le patch
+
+---
+
+## ProTools : le kit de survie
+
+---
+
+# Le B-A-BA de la prise de son
+
+---
+
+## Le microphone, le crayon du preneur du son
+
+---
+
+## Les esthétiques de prise de son
+
++ La prise de son au couple : vers une écoute naturaliste
++ La prise de son en multi-microphonie : l'échantillonnage de l'espace sonore
+
+---
+
+## Les esthétiques de prise de son
+
++ Les prises de son live
++ Les prises de son live en multi-cabine
++ Les prises de son en "re-re"
+
+---
+
+## Préparer une prise de son
+
++ Choisir ses microphones
++ Choisir ses préamplis
++ Ecrire sa feuille de patch
+
+---
+
+## La balance casque
+
++ De l'importance d'une bonne balance
++ Bonnes pratiques et protection des musiciens
++ Utiliser des retours enceintes ?
+
+---
+
+# TP - Enregistrement d'un duo acoustique
+
+Objectifs : découvrir l'influence du placement des microphones.
+
+---
+
+# TP - Enregistrement d'une batterie
+
+Objectifs : découvrir l'influence de l'acoustique sur un instrument
+
+---
+
+# La phase en audio
+
+
+---
+
+# TP - Enregistrement d'un groupe en live
+
+Objectifs : Déployer un dispositif de prise de son et de retour pour un ensemble de musiciens
+
+---
+
+# TP - Enregistrement d'un groupe en multi-cabine
+
+Objectifs : Exploiter l'ensemble des moyens du studio pour produire un enregistrement sonore
