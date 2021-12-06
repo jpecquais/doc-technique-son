@@ -1,0 +1,54 @@
+---
+title: "Formation mixage"
+subtitle: "Evaluation"
+author: "Jean-Loup Pecquais"
+date: "2021/11/28"
+output:
+  pdf_document: default
+---
+
+1. Afin de commencer un mixage audio sur des bases saines, il convient :
+    + De nettoyer le grave de toutes les pistes avec un coupe bas
+    + De chercher à améliorer les interactions de phase entre les signaux
+    + De préparer le routage de sa session
+
+1. La phase :
+    + est audible sur un seul signal
+    + affecte la façon dont se somment des signaux
+
+1. Indiquez trois facteurs qui introduisent de la différence de phase entre deux signaux.
+
+1. L'étape la plus importante d'un mixage est :
+    + L'égalisation
+    + La gestion de la dynamique
+    + La balance
+
+1. L'égalisation :
+    + permet de rattraper une prise de son ratée.
+    + permet de placer les sources dans un mixage
+    + doit absolument être utilisée en soustractif
+
+1. La compression :
+    + Permet d'automatiser la variation de niveau sonore d'une source.
+    + Remonte les bas niveaux
+    + Peut permettre d'augmenter l'attaque d'une source.
+
+1. La réverbération :
+    + Permet de simuler un effet de salle
+    + Se décompose en deux parties : premières réflexions et champs diffus
+    + S'utilise en insert sur les sources
+
+1. La saturation
+    + Est un traitement simple à réaliser en numérique
+    + Introduit des problèmes de repliement spectral
+    + Peut consommer beaucoup de ressources
+
+1. Le mastering
+    + Permet de rattraper un mixage approximatif
+    + Est une étape vitale dans la production d'un morceau
+    + Consiste à traiter un ensemble de morceaux plutôt qu'un ensemble de piste
+
+1. Cochez les réponses justes :
+    + Un bus permet de sommer et véhiculer des signaux
+    + Une piste auxiliaire permet de traiter une source en série
+    + Une piste auxiliaire peut être utilisée pour des retours casque
