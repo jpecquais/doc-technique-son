@@ -7,6 +7,8 @@ output:
   pdf_document: default
 ---
 
+# Prise de son
+
 1. Listez, selon vous, les différents maillons de la chaine de production audio, de l'enregistrement à la diffusion.
 
 1. Parmi ces propositions, la ou lesquelles, ne sont pas des directivités de microphones ?
@@ -52,6 +54,8 @@ output:
     + Un couple XY est un couple de prise de son non coïncident
     + Il n'existe que les couples AB, XY et ORTF.
     + Les abaques de Michael Williams permettent de définir, pour un angle de prise de son donné, des couples de prises de son en fonction de la directivité et de l'écartement des microphones.
+
+# Mixage
 
 1. Afin de commencer un mixage audio sur des bases saines, il convient :
     + De nettoyer le grave de toutes les pistes avec un coupe bas

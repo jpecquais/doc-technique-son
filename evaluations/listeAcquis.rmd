@@ -1,0 +1,54 @@
+---
+title: "Formation prise de son et mixage"
+subtitle: "Evaluation des acquis de formation"
+author: "Jean-Loup Pecquais"
+date: "2021/11/28"
+output:
+  pdf_document: default
+---
+
+# Prise de son
+
+1. Comprend les usages des différents types de microphones et de leurs différentes directivités.
+    + Acquis
+    + En cours d'acquisition
+    + Non acquis
+1. Est capable d'acheminer correctement des signaux.
+    + Acquis
+    + En cours d'acquisition
+    + Non acquis
+1. Comprend l'ensemble des maillons de la chaine audio.
+    + Acquis
+    + En cours d'acquisition
+    + Non acquis
+1. Sait réaliser des retours pour les musiciens.
+    + Acquis
+    + En cours d'acquisition
+    + Non acquis
+1. Sait gérer une session de prise de son.
+    + Acquis
+    + En cours d'acquisition
+    + Non acquis
+
+# Mixage
+
+1. Sait réaliser une balance
+    + Acquis
+    + En cours d'acquisition
+    + Non acquis
+1. Sait réaliser une remise en phase
+    + Acquis
+    + En cours d'acquisition
+    + Non acquis
+1. Sait utiliser l'ensemble des traitements audios.
+    + Acquis
+    + En cours d'acquisition
+    + Non acquis
+1. Est capable de proposer un mixage en fonction de l'esthétique musicale du titre.
+    + Acquis
+    + En cours d'acquisition
+    + Non acquis
+1. Comprend les tenants et aboutissants du mastering.
+    + Acquis
+    + En cours d'acquisition
+    + Non acquis
