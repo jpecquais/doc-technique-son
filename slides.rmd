@@ -56,6 +56,46 @@ output:
 
 A DEVP
 
+???
+
+
+
+Deux types de capsules : a pression, à gradient de pression
+
+Pression : capsules omni-dir ( r = 1 )
+
+Gradient de pression : capsules bi-dir (  r = cos(teta) )
+
+Par combinaison de ces deux capsules il est possible d'obtenir les autres directivités
+
+Directivité :
+
+Omni - Hypocardio - Cardio - Hypercardio - Bidirectionnel
+
+**N'est pas constante en fonction de la fréquence**
+
+Plus la fréquence est élevée plus la directivité devient serrée
+
+Plus la fréquence est faible plus la directivité est large
+
+Les technologies de microphones :
+
+Ruban
+
+Statiques
+
+Electret
+
+Dynamiques
+
+Piezo
+
+Large membrane VS Petite membrane
+
+Large membrane → moins d’aiguë (diffraction de l'onde sonore sur la capsule et sur le corps)
+
+Petite membrane → préférée pour des prises de sons moins interprétés.
+
 ---
 
 # Le chemin du signal
@@ -85,14 +125,60 @@ IMAGES
 
 IMAGES
 
-Deux critères :
+Deux critères critiques :
 
 + La technologie
 + La directivité
 
 ---
 
-### Historique
+### Historique des microphones
+
+Microphones :
+
+Historique
+
+Comme toutes les grandes inventions il est compliqué de définir un seul inventeur:
+Johann Philipp Reis (1834–1874) → "premier" prototype en 1861 pour en transmetteur sonore. Utilise une bande de métal reponsant sur une membrane grâce à une attache métalique permettant de fermer le circuit. Le contact intermittent permet de produit un signal électrique périodique. Fonctionnel sur le principe mais ne suffit pas à obtenir une voix parlée intélligible.
+Le deuxième essaie pour la captation du son est fait par Elisha Gray (1835–1901). Son concept repose sur un "transmetteur liquide". Utilise un principe d'électrodes plongées dans un bain d'acide. Le déplacement d'une électrode par une onde sonore créer un courant alternatif.
+
+En 1876, Alexander Graham Bell propose une approche très similaire.
+
+Qualité de ces transducteurs médiocre → les recherches continues.
+
+David Edward Hughes (1831–1900) propose un microphone reposant sur une capsule en charbon en 1855. La capsule renferme des granules de charbon créant ainsi une résistance entre deux armatures. Résultat médiocres selon nos standars actuels mais représente un grand bon en avant. On lui doit également le nom "microphone". 'This device acts for the ear much in the same way that the microscope serves the eye, hence its name’
+
+Edison améliore le concept et sa version devient standard dans les services de telecom américain.
+
+Un certain Georg Neumann continue d'améliorer le concept afin d'obtenir de meilleur résultat sonores pour la radio. La toute jeune BBC adopte son microphone pendant une dixaine d'années.
+
+Cependant les caspules a charbon sont instables par nature. Les recherches continuent donc. Une des solutions trouvées est la capsule "piezo", reposant sur un système similaire, mais utilisant des cristaux. Les premiers modèles utilisent des cristaux de quartz ou du sel Rochelle. Aujourd'hui les piezo sont fabriqué à partir de céramique.
+
+Le premier microphone a condensateur est conçu par EC Wente en 1917, dans les laboratoire Bell, comme instrument de mesure. Il faudra attendre les années 20 pour voir se dispositif utilisé dans l'enregistrement musical et la radio. Leur première utilisation à la BBC remonte à 1926 mais ils avaient la mauvaise réputation d'être sensible a la température et la l'humidité, les rendant sucéptible de produire des bruits parasites.
+
+Les microphone électromagnétiques apparaissent tardivement. En effet, les aimant de l'époque était relativement faible. Alan Blumlein proposa un microphone dynamique, le HB1 permettant de rivaliser avec le standard des microphones electrostatique de l'époque. Utilisé par la BBC à partir de 1936.
+
+Le premier microphone a ruban apparait autour de 1930 (Harry Olson) et est enfaite une enceinte à ruban modifiée.
+
+Ces microphones était souvent très gros et lourd, mais offraient des résultats équivalent aux microphones a condensateur de l'époque sans être sensible à l'humidité. Il faudra attendre l'après WW2 pour obetnir des aimant suffisemment puissant pour réduire leur taille. Le premier microphone à ruban "miniaturisé" est réalisé par Eugen Beyer en 1958 et est toujours commecialisé aujourd'hui.
+
+Cependant, reste la problématique de la directivité :
+
+Charbon + electrostatique : capsule a pression = omnidirectif
+
+Ruban : capsule a variation de pression = bidirectionnel
+
+Une première approche, menée par RCA, fût de jouer sur le comportement acoustique des microphones a ruban en laissant une moitié du transducteur ouverte (bidir) et l'autre moitié enfermée (omni). La combinaison des deux permet d'obtenir une capsule cardioïde.
+
+Une autre approche, adoptée par Western Electric et ST&C fût de combiner un ruban et une capsules omni et de combiner leur signal de sortie pour obtenir une directivité cardioide.
+
+Plusieurs constructeurs adopte cette approche : Shure, Electrovoice, AKG et Neumann.
+
+L'idée est améliorée en Allemagne avec un double diaphragme avec un aimant movible.
+
+En 1960 apparaissent les premiers microphones à condensateur RF permattant de résoudre les problèmes des premiers microphones a condensateur.
+
+La miniaturisation des microphones pût se faire grâce à l'apparition des transistor à effet de champs.
 
 ---
 
@@ -234,6 +320,24 @@ Deux critères :
 + Bonnes pratiques et protection des musiciens
 + Utiliser des retours enceintes ?
 
+???
+
+Fournir une expérience de retour à un musicien est la **clé** d'une session d'enregistrement réussi. La compétence d'un musicien repose en grande partie sur sa capacité d'écoute et sa capacité de réaction. Cela semble être une lapalissade, mais il convient de ne jamais oublié cette étape de la préparation d'une sessions.
+
+**Choisir son système de retour**
+
+Deux écoles s'opposent :
++ l'ingénieur du son prend en main les retours des musiciens.
++ Un système de mixette sur réseau est mis à disposition des musiciens et chacun d'entre eux peu gérer sa balance.
+
+Dans le premier cas, un dialogue s'installe rapidement entre les artistes et l'ingénieur du son. Chaque instrumentiste fera ses requêtes sur les équilibre des sources. Il convient donc d'être très réactif et de rapidement cadrer les échanges pour ne pas qu'ils ne fassent leur requêtes en même temps.
+
+Une bonne habitude consiste aussi à faire une première balance avant que les musiciens n'arrivent. Ainsi, dès qu'ils seront près à jouer ils pourront déjà s'entendre jouer. Il est en effet facile d'anticiper leurs attentes, le but n'est pas de fournir a cet instant un mixage parfait, mais d'établir une base de travail pour la suite.
+
+Dans le cas de l'utilisation d'un système de mixette sur réseau, il convient de rester très vigilant quant au mix réalisés par les musiciens. Pour cela, le preneur de son doit toujours pouvoir écouter le retour de chacun des musiciens afin de contrôler ce qu'il s'y passe. Si une balance paraît farfelue, il ne faut pas hésité à interroger son utilisateur sur son confort de jeu.
+
+Il est important que, dans tous les cas, le preneur de son est légalement responsable des niveaux sonores diffusés dans les casques. Il convient donc de toujours demander aux musiciens de placer leurs casques autour du cou (et non pas sur les oreilles) avant qu'il n'est pû évaluer le niveau sonore.
+
 ---
 
 # TP - Enregistrement d'un duo acoustique
@@ -265,6 +369,10 @@ Objectifs : découvrir l'influence de l'acoustique sur un instrument
 
 La phase est un état du signal. La modification de celle-ci pour un seul signal est d'ailleurs parfaitement inaudible.
 
+Lors de la sommation de deux signaux entre eux, la résultante de celle-ci dépend de la magnétude des signaux (intensité en fonction de la fréquence, aussi simplement, le spectre ou timbre de la source). 
+
+En effet, si certaines fréquences communes sont **déphasées**, voir en **opposition** de phase, celle-ci seront plus atténuées dans la sommation que dans les signaux d'origines.
+
 ---
 
 ## Un peu de mathématique (mais pas trop)
@@ -277,7 +385,7 @@ y <- sin(x)
 plot(x,y,type="l")
 ```
 
-+ Rappel : un son pur = une seule fréquence
++ Rappel : un son pur correspond à une seule fréquence
 + Cas particulier, bien éloigné de nos cas pratiques
 + Défini sur $\mathbb{R}$
 

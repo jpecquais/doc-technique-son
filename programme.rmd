@@ -1,0 +1,90 @@
+---
+title: "Formation prise de son"
+subtitle: "Enregistrement des sources acoustiques"
+author: "Jean-Loup Pecquais"
+date: "2021/11/28"
+output:
+  pdf_document: default
+---
+
+# Jours 1
+
+## Introduction sur les fondamentaux du son
+
++ Principes généralistes sur l'acoustique
++ Histoire des microphones
++ Le fonctionnement des microphones
++ Les différents types de câbles
++ Le rôle des préamplificateurs
++ La numérisation du signal
+    + Le théorème de Nyquist
+    + Le suréchantillonnage : pourquoi et comment ?
+    + La quantisation
++ La sérialisation d'un signal numérique
++ L'utilisation de l'informatique pour l'enregistrement sonore
++ La conversion numérique vers analogique
++ Le rôle de l'amplification du signal
++ L'importance de l'écoute
+
+## Présentation d'un logiciel de prise de son : Pro Tools
+
++ Création et paramétrage d'une session
++ Création de pistes
++ Utilisation du gestionnaire d'entrées/sorties (I/O setup)
++ Présentation de la console de mixage
++ La gestion des groupes et des playlistes
+
+# Jours 2
+
+## La prise de son stéréophonique
+
++ Présentation des couples de prises de son classique
++ Découverte du principe généraliste de la prise de son stéréophonique
++ Utilisation des abaques de Michael Williams
+
+## TP - enregistrement d'un duo
+
+Objectifs: Enregistrer deux musiciens jouant dans la même pièce, sans besoin de retour casques.
+
+Problématiques:
++ Gérer le placement des intervenants
++ Gérer la reprise entre les différents microphones
++ Gérer la communication entre la régie et la cabine de prise de son
++ Comprendre l'orientation esthétique du projet et adapter en conséquence son dispositif de prise de son
+
+# Jours 3
+
+## La phase en audio
+
++ Comprendre la sommation de deux microphones
++ Identifier un filtrage en peigne
++ Identifier une opposition de phase
+
+## TP - enregistrement d'une batterie
+
+Objectifs: découvrir les problématiques posées par l'enregistrement d'un "multi-instrument"
+
+Problématiques:
++ Gérer les interactions de phase entre les signaux
++ Gérer des microphones d'appoint contre des couples de prise de son
++ Gérer et choisir l'acoustique appropriée
+
+# Jours 4
+
+## TP - enregistrement d'un groupe
+
+Objectifs: découvrir les problématiques posées par l'enregistrement d'une formation complète
+
+Problématiques:
++ Gérer la communication entre les musiciens
++ Gérer les retours casques
++ Gérer le routage des différents microphones et assurer l'enregistrement de tous les signaux
++ Gérer les multiples prises de son et le montage en direct
+
+# Jours 5
+
+## L'après-enregistrement
+
++ Découverte de l'édition
++ La gestion de session et de sauvegarde
++ Réaliser une mise à plat
