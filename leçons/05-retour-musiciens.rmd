@@ -1,0 +1,25 @@
+## Le dialogue avec les musiciens : un dialogue d'image ?
+
+## La balance casque
+
++ De l'importance d'une bonne balance
++ Bonnes pratiques et protection des musiciens
++ Utiliser des retours enceintes ?
+
+???
+
+Fournir une expérience de retour à un musicien est la **clé** d'une session d'enregistrement réussi. La compétence d'un musicien repose en grande partie sur sa capacité d'écoute et sa capacité de réaction. Cela semble être une lapalissade, mais il convient de ne jamais oublié cette étape de la préparation d'une sessions.
+
+**Choisir son système de retour**
+
+Deux écoles s'opposent :
++ l'ingénieur du son prend en main les retours des musiciens.
++ Un système de mixette sur réseau est mis à disposition des musiciens et chacun d'entre eux peu gérer sa balance.
+
+Dans le premier cas, un dialogue s'installe rapidement entre les artistes et l'ingénieur du son. Chaque instrumentiste fera ses requêtes sur les équilibre des sources. Il convient donc d'être très réactif et de rapidement cadrer les échanges pour ne pas qu'ils ne fassent leur requêtes en même temps.
+
+Une bonne habitude consiste aussi à faire une première balance avant que les musiciens n'arrivent. Ainsi, dès qu'ils seront près à jouer ils pourront déjà s'entendre jouer. Il est en effet facile d'anticiper leurs attentes, le but n'est pas de fournir a cet instant un mixage parfait, mais d'établir une base de travail pour la suite.
+
+Dans le cas de l'utilisation d'un système de mixette sur réseau, il convient de rester très vigilant quant au mix réalisés par les musiciens. Pour cela, le preneur de son doit toujours pouvoir écouter le retour de chacun des musiciens afin de contrôler ce qu'il s'y passe. Si une balance paraît farfelue, il ne faut pas hésité à interroger son utilisateur sur son confort de jeu.
+
+Il est important que, dans tous les cas, le preneur de son est légalement responsable des niveaux sonores diffusés dans les casques. Il convient donc de toujours demander aux musiciens de placer leurs casques autour du cou (et non pas sur les oreilles) avant qu'il n'est pû évaluer le niveau sonore.

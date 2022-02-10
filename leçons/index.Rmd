@@ -1,0 +1,21 @@
+---
+title: "Formation prise de son"
+subtitle: "Enregistrement des sources acoustiques"
+author: "Jean-Loup Pecquais"
+date: "2021/11/28"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+# url: your book url like https://bookdown.org/yihui/bookdown
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+  This is a minimal example of using the bookdown package to write a book.
+  The HTML output format for this example is bookdown::gitbook,
+  set in the _output.yml file.
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+---
+
+# Preface {-}
+
+Ce livre est en cours de fabrication. N'hésitez pas à contribuer à son évolution. Vous trouverez des informations sur la méthode de génération de document utilisé dans le readme du dépôt github.  

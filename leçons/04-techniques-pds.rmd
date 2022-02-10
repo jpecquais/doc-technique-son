@@ -1,0 +1,97 @@
+# Les techniques de prise de son
+
+## Le microphone, le crayon du preneur du son
+
++ Jouer avec les directivités
+
+## Les esthétiques de prise de son
+
++ La prise de son au couple : vers une écoute naturaliste
++ La prise de son en multi-microphonie : l'échantillonnage de l'espace sonore
+
+## Les esthétiques de prise de son
+
++ Les prises de son live
++ Les prises de son live en multi-cabine
++ Les prises de son en "re-re"
+
+## Préparer une prise de son
+
++ Choisir ses microphones
++ Choisir ses préamplis
++ Ecrire sa feuille de patch
+
+# La phase en audio : maîtriser sa sommation
+
+---
+
+## Le "plus" est-il toujours "mieux" ?
+
++ Multiplier le nombre de microphone est-elle la clef vers un meilleur rendu sonore ?
++ Que ce passe t-il lorsque l'on somme deux signaux ?
+
+---
+
+## Qu'est ce que la phase ?
+
+???
+
+La phase est un état du signal. La modification de celle-ci pour un seul signal est d'ailleurs parfaitement inaudible.
+
+Lors de la sommation de deux signaux entre eux, la résultante de celle-ci dépend de la magnétude des signaux (intensité en fonction de la fréquence, aussi simplement, le spectre ou timbre de la source). 
+
+En effet, si certaines fréquences communes sont **déphasées**, voir en **opposition** de phase, celle-ci seront plus atténuées dans la sommation que dans les signaux d'origines.
+
+---
+
+## Un peu de mathématique (mais pas trop)
+
+Equation d'un son pur : $s(t) = sin (\omega t + \phi)$
+
+```{r, echo=FALSE}
+x <- seq(0,8*pi,length.out=100)
+y <- sin(x)
+plot(x,y,type="l")
+```
+
++ Rappel : un son pur correspond à une seule fréquence
++ Cas particulier, bien éloigné de nos cas pratiques
++ Défini sur $\mathbb{R}$
+
+---
+
+### La différence de phase (à l'origine)
+
++ Exemple : la caisse claire
++ Les capsules vibrent avec un décalage de phase. 
++ Effet perceptif : baisse de volume / disparition d'un instrument
+
+---
+
+### La différence de temps
+
++ Exemple : un amplificateur guitare avec une distance entre deux microphones
++ L'onde sonore émise par un instrument arrive avec un décalage temporel entre les deux capsules
++ Filtrage en peigne : effet "métalique", "creux", le fameux "ça phase !"
+
+---
+
+## Le temps, une question d'ordre de grandeur
+
++ $\Delta t$ court : filtre en peigne
++ $\Delta t$ moyen : information d'espace
++ $\Delta t$ long : Echo
+
+---
+
+## Le cas des égaliseurs (et filtres)
+
++ Les égaliseurs numériques & analogiques déphasent le signal !
++ La fonction de déphasage est la dérivée de la modification de la magnitude.
++ Les filtres passe-haut et passe-bas déphase énormément !
+
+---
+
+## La remise en phase
+
+---

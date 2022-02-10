@@ -1,0 +1,31 @@
+# Introduction
+
+## Quelques petites idées
+
++ La technique n'a de sens que mis au service de l'esthétiques.
++ Tant que l'on est pas satisfait, tout est permis.
++ On a l'écoute de ses compétence
+
+## Quelques mythes du monde de l'audio
+
++ Le matériel ne fait pas de son, le technicien oui.
++ Nous entendons tous la même chose, seul l'écoute diffère
+
+## Qu'est ce que le son ?
+
++ Vibration mécanique d'un fluide
++ Célérité : $340$ $m.s^{-1}$
+
+## Un peu de vocabulaire
+
++ Fréquence
++ Amplitude
++ Son pur
++ Partiel
++ Harmonique
+
+## Comment décrire un son ?
+
++ Hauteur
++ Timbre
++ Enveloppe
