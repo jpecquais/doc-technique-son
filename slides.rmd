@@ -119,6 +119,42 @@ IMAGES
 
 + Choisir un lieu cohérent
 
+???
+
+L'acoustique est l'élément le plus déterminant lors d'une prise de son. Un studio devrait d'ailleurs toujours être choisis pour son acoustique. En effet, il est toujours possible de déplacer un parc de microphone ou des périphérique externe, l'acoustique, elle ne sera pas (ou peu) manipulable.
+
+**Comment qualifier une acoustique**
+
+La réponse d'une pièce à un stimuli sonore peut se décomposer en trois parties: les premières reflexions, les reflexions tardives et le champ diffus. Notons que, par opposition à la réverbération, nous appelons le son émis par une source son direct.
+
+Les premières réflexions, comme leur noms indiques, constitues les premières reflexions apportés par les paroies d'une salle (murs, sol, plafond). Ces réflexions sont porteuses de la _signature acoustique_ d'un lieu. En d'autres mots, ce qui rend un lieu identifiable, ce sont ses premières réflexions. Celle-ci sont également localisées autour de la source sonore, elles sont donc également vecteur d'une information de spatialisation.
+
+Les reflexions tardives sont générées par les rebonds des premières réflexions sur les paroies de la salle. Ces reflexions tardives sont moins localisées et donc plus diffuse. Elles sont également responsable de la sensation de réverbération lorsqu'un instrument est en train de jouer.
+
+Le champ diffus est responsable de la longueur de réponse d'une pièce. Celui-ci est parfaitement diffus et non localisé et s'entend principalement lorsqu'un instrument viens d'arrêter de jouer.
+
+La norme permettant de déterminer le temps de réverbération d'un pièce se nomme le RT60, ce qui correspond au temps que met la réponse acoustique d'une salle à diminuer de 60 dB par rapport au stimuli initial.
+
+> Ce RT60 est souvent appelé "Decay" dans les moteurs de réverbération artificiels.
+
+**Le piège de l'acoustique mate**
+
+Il n'est pas rare de croiser l'idée que, pour enregistrer, l'idéal est d'avoir l'acoustique la plus mate possible pour ensuite recréer l'acoustique en post-production grâce à l'utilisation de réverbération artificielles. Nous pouvons affirmer qu'il s'agit d'un erreur d'approche.
+
+Primo, l'acoustique n'est pas l'ennemie du preneur de son. Au contraire, apprendre à gérer, utiliser voir sublimer l'acoustique d'un lieu par son dispositif de prise de son fait partie intégrante des compétence attendues d'un preneur de son. Chercher à tout pris à s'extraire de l'acoustique exprime bien plus une peur de ne pas la maîtriser qu'une expertise technique.
+
+Secondo, malgré toute la puissance de nos outils de réverbération, il est impossible de recréer le rendu sonore d'un microphone (ou mieux, d'un couple de microphones !) captant un musicien excitant l'acoustique d'un lieu. La combinatoire pour arriver à ce rendu est en effet bien trop complexe :
++ Chaque lieu possède une acoustique unique
++ La position du musicien dans la pièce est importante
++ La position du ou des microphones ajoute encore une autre couche de complexité
+L'idée n'est pas de dire que nos réverbération numérique n'ont pas d'utilité. Bien au contraire, mais elles ne remplaceront jamais un microphone bien placé dans un pièce à l'acoustique judicieusement choisie.
+
+Tercio, un musicien joue avec l'acoustique. Nous en parleront plus en détail dans la section dédiée au retour des instrumentistes, mais priver un instrumentiste et son instrument d'acoustique peu être le _pire_ choix à faire ! Bien souvent, les instruments acoustiques ont besoin de la réponse d'une salle pour donner le maximum de leur potentiel. L'exemple le plus classique étant sans doute les instruments à cordes frottées. Vous trouverez en annexe un extrait d'enregistrement joué par un quatuor à corde dans une chambre annéquoïque (une salle traitée pour rendre son acoustique négligeable) : attention les oreilles !
+
+**La distance critique**
+
+La chose la plus importante à déterminer pour un preneur de son est la distance critique. Il s'agit de la distance à une source sonore a partir de laquel nous entendons autant la salle que le son direct. Cela délimite la distance maximale à laquelle nous pourront pertimenet placer un microphones cherchant à capter cette source.
+
 ---
 
 ## Les microphones
@@ -129,6 +165,40 @@ Deux critères critiques :
 
 + La technologie
 + La directivité
+
+???
+
+Pour dire les choses simplement, les microphones sont les pinceaux du preneur de son. Il ne s'agit donc pas d'un outil objectif, mais bien d'un point de vue (plus judicieusement, point d'écoute), sur une matière sonore. _Il n'existe pas de captation objective_. La notion de fidélité, de réalisme ou de transparence n'a véritablement pas de sens.
+
+Placer un microphone, c'est déjà interpréter. Placer un microphone, c'est déjà raconter quelque chose.
+
+Laissons pour l'instant la poésie de côté et revenons sur des considération technique.
+
+Un microphone est un transducteur. En physique, un transducteur est un appareil capable de transformer une énergie en une autre. Dans notre cas, le microphone transforme une onde sonore mécanique en un signal électrique.
+
+Si vous avez déjà cherché des informations sur ces transducteurs, vous avez sans doute rencontré les qualificatifs suivant : cardioide, dynamique, statique, directifs, omnidirectionnel, etc. Nous allons tâcher d'expliciter ces appelations
+
+<!-- TODO
+Définir :
++ Capsules
++ Membranes
+-->
+
+**Les directivités**
+
+Les microphones ne captent pas tous la même zone de l'espace qui les entours. Certain en feront une image homogène, d'autre mettrons l'emphase sur ce qui leur fait face, etc. Pour comprendre les différentes directivités d'un microphone, il faut tout d'abord comprendre qu'il existe deux types de capsules.
+
+La première famille de capsule est celle des capsules à pression. Lorsque la pression de l'environnement les entourants varie, celles-ci retranscrive une variation de tension. Ces capsules capte l'ensemble de champ sonore de façon homogène et sont donc qualifiés d'"omnidirectionel"
+
+La seconde famille de capsule est celle des capsules à gradient de pression. Pour simplifier, gradient signifie simplement "variation". Ces capsules sont donc sensible à la variation de la variation de pression. Elles possèdent la particularité de capter les éléments présent a face et derrière elles. Elles sont donc qualifiés de bi-directionnelles.
+
+Toutes les autre directivités sont obtenues à partir de ces capsules. Elles forment par ailleurs les deux directivités extrêmes qu'il est possible de rencontrer. En effet, on ne peut pas faire moins directif qu'un microphone omnidirectionel et plus directif qu'un microphone bidirectionnel.
+
+<!-- TODO
+Diagramme de directivité
+ -->
+
+La directivité de microphone le plus utilisé de nos jours est cardioide. Ces microphones capte ce qui leur fait face et rejette ce qui se trouve a leur dos. Leur nom provient de la forme de leur diagramme de directivité.
 
 ---
 
