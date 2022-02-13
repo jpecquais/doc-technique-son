@@ -1,8 +1,26 @@
-*# Le chemin du signal
+# Le chemin du signal
 
 IMAGES
 
-!> La qualité du chaîne de traitement est déterminé par son maillon le plus faible !
+La chaîne de l'enregistrement et de la reproduction sonore est assez complexes. Nous allons par la suite détailler précisément chaques étapes, mais tout d'abord, prenons le temps d'en comprendre la vue d'ensemble.
+
+> Nous ne considéreront pas, durant ce cours, les supports d'enregistrements analogiques. Leur utilisation aujourd'hui est trop marginale.
+
+La chaîne audio peut se décomposer en cinqs parties principales :
+
+1. La création et l'émission du son
+2. La captation du son
+3. L'enregistrement du son
+4. Le traitement du son
+5. La reproduction et la diffusion du son
+
+Sur l'ensemble de ces parties, la plus importante (et également celle où nous avons le moins d'emprise) et celle où le son est émis. Ici, nous trouvons donc le ou les musiciens, leurs instruments, la composition qui doit être jouée, l'arrangement, et le lieu d'enregistrement. Autant dire, bien peut de sujet sur lesquels nous avons la main. Quatre-vingt pourcent du résultat sonore d'un production musicale dépend de cette étape. Nous intervenons donc sur vingt pourcent du résultat final. Il est bon de s'en rappeler fréquemment.
+
+De notre point de vue d'ingénieur du son, la partie la plus cruciale de notre métier est la captation du son. Des vingt pourcent qui nous incombe dans le résultat sonore d'un titre, celle-ci représente quatre-vingt pourcent du résultat. Durant cette phase, nous allons définir un système de prise de son en fonction d'un évènement sonore à capter. Nous allons donc définir combien de microphones nous allons utiliser, lesquels et comment nous allons les disposer. Il n'existe pas de prise de son objective. De part la présence même de microphones et du choix de leur placement, nous allons imposer un point de vue, ou plutôt, point d'écoute. Il sera par la suite impossible de la modifier d'une quelquonque manière. La captation sonore relève donc autant de la technique que de l'esthétique. Il est donc d'une importance capitale de maitriser ces aspects pour réussir n'importe qu'elle production sonore.
+
+L'enregistrement sonore est une partie purement technique. Il s'agit simplement de stocker une information audio sur un support adéquat (dans notre cas numérique) en minisant au maximum son effet sur le signal.
+
+> La qualité du chaîne de traitement est déterminé par son maillon le plus faible ! Comme le dit le fameux proverb : sh\*t in, sh\*t out.
 
 ## Le musicien & son instrument
 

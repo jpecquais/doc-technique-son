@@ -1,1 +1,4 @@
-## Petite histoire du son enregistré
+# Petite histoire de l'enregistrement et de la repoduction sonore
+
+L'enregistrement et la reproduction du son est une inscription et une recréation électrique, mécanique, électronique ou numérique d'ondes sonores. Les deux principales catégories de technologies d'enregistrement sonore sont l'enregistrement analogique et l'enregistrement numérique. 
+

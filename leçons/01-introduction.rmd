@@ -55,22 +55,24 @@ En résumé, on peut définir le son comme :
 + une **sensation auditive** évoquée par l'oscillation décrite au point précédent
 
 Le son peut se propager sous forme d'ondes longitudinales et également d'ondes transversales dans les solides et est produit par une source sonore. La source sonore créer des vibrations dans le milieu environnant. Lorsque la source continue à faire vibrer le milieu, les vibrations se propagent à partir de la source à la vitesse du son, formant ainsi l'onde sonore.
+
 + À une distance fixe de la source, la pression, la vitesse et le déplacement du milieu varient dans le temps.
 + À un instant donné, la pression, la vitesse et le déplacement varient dans l'espace.
 
 > Notez que **les particules** du milieu **ne se déplacent pas** avec l'onde sonore. Cela est intuitif pour un solide, et il en va de même pour les liquides et les gaz. Pendant la propagation, les ondes peuvent être réfléchies, réfractées ou atténuées par le milieu.
 
 Les ondes sonores sont souvent simplifiées en une description en termes d'ondes planes sinusoïdales, qui sont caractérisées par ces propriétés génériques :
+
 + la **fréquence**, ou son inverse, la **longueur d'onde**
 + l'amplitude, pression acoustique ou **intensité**
 + la **vitesse du son**
 + la direction
 
-La **longueur d'onde** correspond à une distance réalisée par une onde au cours d 'une certaine période et se note $ \lambda $. En d'autres termes, il s'agit d 'une grandeur physique qui permet d'étudier les phénomènes périodiques. La **fréquence** (Hz), l'inverse de la longueur d'onde, décrit le nombre d'oscillation d'une onde par seconde.
+La **longueur d'onde** correspond à une distance réalisée par une onde au cours d 'une certaine période et se note $\lambda$. En d'autres termes, il s'agit d 'une grandeur physique qui permet d'étudier les phénomènes périodiques. La **fréquence** (Hz), l'inverse de la longueur d'onde, décrit le nombre d'oscillation d'une onde par seconde.
 
 Un **son** est dit "**pur**" si il n'est composé que d'une seule fréquence. De tels sons n'existent pas naturellement et correspondent bien souvent à des signaux de test (recherche en laboratoire où outil de calibration d'équipement électronique). La plupart des sons rencontrés sont composés de plusieurs fréquences. La fréquence constituante d'un son la plus grave (ou la plus basse) est appelée **fréquence fondamentale**. Si les autres fréquences constituantes sont des multiples de la fréquence fondamentale alors celle-ci sont qualifié d'**harmoniques**. Sinon elles sont appelées partielles. L'ensemble de ces fréquences est appelé le **spectre sonore**.
 
-La **vitesse du son** dans les gaz dépend de leur température. Dans un air à 20 °C au niveau de la mer, la vitesse du son est d'environ **343 m/s**, soit 1230 km/h. Il est important de connaitre la vitesse du son par coeur. On retient généralement la valeur de **340 m/s**. Cela permet de rapidement calculer le retard perçus entre deux sources sonores placés à des endroits différents. De même, connaitre la distance entre deux microphones permet de calculer la différence de temps parcourus par une onde sonore pour atteindre le microphones le plus éloigné. On utilisera pour cela la formule suivante : $ v = d / t $.
+La **vitesse du son** dépend du milieu traversé et de sa température. Dans un air à 20 °C au niveau de la mer, la vitesse du son est d'environ **343 m/s**, soit 1230 km/h. Il est important de connaitre la vitesse du son par coeur. On retient généralement la valeur de **340 m/s**. Cela permet de rapidement calculer le retard perçus entre deux sources sonores placés à des endroits différents. De même, connaitre la distance entre deux microphones permet de calculer la différence de temps parcourus par une onde sonore pour atteindre le microphones le plus éloigné. On utilisera pour cela la formule suivante : $v = d / t$.
 
 La **pression acoustique** est la différence, dans un milieu donné, entre la pression locale moyenne et la pression de l'onde sonore. Le carré de cette différence (c'est-à-dire le carré de l'écart par rapport à la pression d'équilibre) est généralement moyenné dans le temps et/ou l'espace, et la racine carrée de cette moyenne donne une **valeur quadratique moyenne (RMS)**.
 
@@ -87,18 +89,19 @@ La **hauteur d'un son** est définie par la **hauteur de sa fréquence fondament
 Le **timbre** est une qualification du **spectre sonore** d'un son. Il n'y a rien d'absolu dans la façon dont nous qualifions un timbre (même un son en général). On parlera donc de son "chaud", "brillant", "rond", "ouvert", "criard", "aggressif", "boueux", "épais", "gras", etc. Tout ces termes étant tous plus inefficace les uns que les autres pour décrire le spectre d'un son. Et pourtant, nous les utilisons tous. La manque de vocabulaire précis pour qualifié le son n'est pas un problème nouveau. Nous sommes toujours obligé de retrouver le lien entre le qualificatif employé et la sensation perçue par notre interlocuteur. Une fois la sensation définie, il convient de l'associer à une donnée physique et donc à une bande fréquentielle précise. Etre capable de traduire un qualificatif parfois hazardeux en un geste technique fait parti intégrante des compétences nécéssaires à un ingénieur du son.
 
 L'enveloppe d'un son est une description de l'évolution de son intensité dans le temps. On la décompose classiquement en quatre parties :
+
 + l'attaque (attack)
 + la décroissance (decay)
 + le maintient (sustain)
 + le relâchement (release)
 
-L'attaque est le temps mit par le son pour atteindre son intensité maximale.
+L'**attaque** est le temps mit par le son pour atteindre son intensité maximale.
 
-La décroissance est le temps mit pour le son pour atteindre un niveau stationnaire
+La **décroissance** est le temps mit pour le son pour atteindre un niveau stationnaire
 
-Le maintient est le temps durant lequel l'intensité sonore du son ne varie pas
+Le **maintient** est le temps durant lequel l'intensité sonore du son ne varie pas
 
-La relâchement est le temps mis par un son pour s'éteindre.
+La **relâchement** est le temps mis par un son pour s'éteindre.
 
 On parle de transitoire (transient en anglais) lorsque que les temps d'attaque et de décroissance d'un son sont très court.
 
