@@ -1,0 +1,10 @@
+## Les supports de transmission du signal audio
+
+## Connectiques analogiques
+
++ symétrique vs asymétrique
++ mono vs stéréo
++ jack
++ xlr
++ rca
++ 

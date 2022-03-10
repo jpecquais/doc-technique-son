@@ -1,6 +1,6 @@
 ---
-title: "Formation prise de son"
-subtitle: "Enregistrement des sources acoustiques"
+title: "Encyclopédie pratique du son"
+# subtitle: ""
 author: "Jean-Loup Pecquais"
 date: "2021/11/28"
 site: bookdown::bookdown_site

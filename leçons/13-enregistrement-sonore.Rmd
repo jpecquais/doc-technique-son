@@ -1,0 +1,24 @@
+## L'enregistrement sonore
+
+### Les convertisseurs A/N
+
++ La numérisation du signal
+  + le théorème de Nyquist-Shannon
+  + La quantification
++ Le fonctionnement des convertisseurs
++ La qualité d'un convertisseurs ?
+
+### La sérialisation
+
++ Quésako ?
++ La qualité d'une sérialisation ?
+
+### L'enregistrement audio-numérique sur ordinateur
+
++ La problématique de l'"interface chaise-clavier"
++ Comprendre le fonctionnement de l'ordinateur
+  + Le rôle d'un processeur
+  + L'utilisation des différentes mémoires
+  + Le principe des mémoires tampons (buffer/block size)
++ Le stockage de l'audio
+  + Les différents formats

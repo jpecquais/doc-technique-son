@@ -21,7 +21,7 @@ Le monde de l'audio est un monde fascinant, remplis de domaines et de sujets tec
 
 Cependant, malgré une progression technique réel dans nos métiers, nous continuons à nourrir des mythes tenaces et certain fetichisme envers notre équipement. Je trouve ce grand écart assez curieux et est souvent bien représenté par nos techniciens du monde du live et les techniciens du monde du studio.
 
-Malgré la pandémie mondiale de COVID 19, le monde du live est un monde vivant, en constante évolution. C'est aussi un secteur correctement irrigué, financièrement parlant.
+Le monde du live est un monde vivant, en constante évolution. C'est aussi un secteur correctement irrigué, financièrement parlant.
 
 Les studios d'enregistrement, quant à eux, ferment leurs portes. Les grosses structures sont trop chères à maintenir et la plus part des techniciens de ce domaine n'ont pas suivi les évolutions technologiques. Il reste donc un vague souvenir nostalgique, emprunt de "c'était mieux avant". Sans doute, l'économie du disque se portait mieux à la fin du siècle derniers, mais je crois que cela vient nourrir cet absurde nostalgie des machines "vintages", du besoin patologique d'avoir un vrai U47, trois 1176 et des préamplis Neve, sinon, jamais nous ne pourrons faire de beau disque.
 
@@ -40,7 +40,7 @@ J'ai encore une bonne nouvelle pour vous : cette capacité de travail s'acquiert
 ## Qu'est ce que le son ?
 
 + Vibration mécanique d'un fluide
-+ Célérité : $340$ $m.s^{-1}$
++ Célérité : $340 m.s^{-1}$
 + Phénomène oscillatoire
 + Caractérisé par une variation de pression
 
