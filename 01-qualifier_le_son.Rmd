@@ -1,0 +1,55 @@
+# Qualifier le son
+
+Afin de pouvoir proposer un dispositif cohérent de prise de son, il convient de pouvoir décrire le son à capter.
+
+## Quelques définitions
+
++ Un **son pur** n’est composé que d’une seule fréquence
++ La fréquence permettant de définir la hauteur d’un son est appelée **fréquence fondamentale**. Il s’agit de la fréquence la plus grave d’un son.
++ Les **harmoniques** sont des multiples de la fréquence fondamentale.
+
+## Les paramètres du son
+
+Les sons sont classiquement décrits selon les trois paramètres suivant :
+
++ Leur hauteur, définie par la fréquence fondamentale.
++ Leur enveloppe, décrivant l’évolution du son dans le temps.
++ Leur timbre, défini par le contenu harmonique du son.
+
+## La perception du son
+
+### L’aspect fréquentiel
+
+Il est communément admis que les êtres humains entendent des sons ayant pour fréquence des valeurs comprises entre 20 Hz et 20 kHz. Cette borne supérieure est plutôt théorique. Avec l’âge, voire selon l’hygiène de vie, cette valeur aura tendance à diminuer.
+
+Nous pouvons également découper cette bande de fréquence audible afin d’y poser un nom et d’en décrire une sensation :
+
+ + 20 Hz — 80 Hz : Subharmonique, sensation tripale
+ + 80 Hz — 160 Hz : Grave, sensation d’assise
+ + 160 Hz — 380 Hz : bas-médium, sensation de « chaleur », voir « boueux »
+ + 380 Hz — 1200 Hz : Medium, sensation de « boîte » quand trop présent, sonne « creux » quand trop absent
+ + 1200 Hz — 3200 Hz : Haut-medium : zone de sensibilité maximale de l’oreille.
+ + 3200 Hz — 8000 Hz : Aigu, apporte de la précision voir de l’agressivité
+ + 8000 Hz — 20 000 Hz : Air, apporte une sensation d’ouverture voir de finesse
+
+Il est également important de savoir que les fréquences graves ont un effet masquant sur les fréquences plus aiguës. Ce phénomène est dû au fonctionnement de notre oreille, et plus particulièrement de la cochlée.
+
+### La pression acoustique
+
+Notre oreille n’a pas une réponse en fréquence linéaire en fonction du niveau sonore.
+
+Plus le niveau de pression acoustique est faible, plus le son paraîtra médium. Plus il est fort, plus le son semblera ouvert dans le grave et l’aigu.
+
+Ce phénomène est décrit par les courbes d’isosonie de Fletcher-Munson. Chaque ligne rouge représente une sensation de niveau sonore égale en fonction de la fréquence.
+
+```{r chunk-label2, echo = FALSE, fig.cap = 'Courbes de Fletcher-Munson'}
+knitr::include_graphics(rep("_resources/094d33e2494c70d2395225081ede1162.png"))
+```
+
+### L'évaluation de la distance
+
+La plupart des paramètres permettant d'évaluer la distance d'un son sont relatifs. Cela signifie que le son doit être comparé à un autre pour pouvoir le repositionner dans l'espace.
+
++ Plus le volume d'une source est élevé, plus celle-ci paraît proche.
++ Plus une source est brillante, plus celle-ci paraîtra également proche.
++ Plus la réverbération attachée à une source est présente, plus cette dernière paraît loin

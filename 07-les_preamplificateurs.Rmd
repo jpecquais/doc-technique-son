@@ -1,0 +1,29 @@
+# Les préamplificateurs de microphones
+
+Le rôle d’un préampli est de réaliser une amplification en tension du signal émis par un microphone. Cette opération est indispensable pour permettre à notre signal de traverser tout le reste de la chaîne du traitement audio.
+
+## Les qualités d’un préampli
+
++ La quantité d’amplification. Plus l’amplification disponible est grande, au plus le préampli sera capable de répondre à des situations exigeantes, tel que l’enregistrement d’une source à faible niveau avec un microphone à faible sensibilité.
++ La réponse en fréquence. Théoriquement, celle-ci doit être la plus neutre possible. Une certaine coloration peut être acceptée (voire souhaitée), mais celle-ci doit rester raisonnable pour répondre à des critères d’utilisations professionnelles.
++ La réponse en transitoire. Certains préamplis auront tendance à adoucir la sensation d’attaque des sources. Cet effet n’est pas souhaitable.
++ Le rapport signal bruit. Nous cherchons toujours à rajouter le moins de bruit possible sur le chemin de notre signal.
+
+## Les technologies de préampli
+
+Il existe trois grandes façons de construire un préamplificateur :
+
++ à tubes (ou lampes). Le tube est historiquement le premier composant électronique permettant l’amplification des signaux.
++ à transistor. L’invention du transistor est sans doute la plus grande révolution technologique du siècle dernier. Celui-ci permet de remplacer les lampes pour une taille bien plus petite et une bien meilleure fiabilité.
++ à circuit intégré. Les circuits intégrés permettent également l’amplification de signaux.
+
+Chacune de ces technologies offre de très légère variation de son lorsque les préamplis sont poussés dans leur retranchement. Cette couleur liée à la technologie est toujours à pondérer, car elle dépend grandement de la topologie du circuit. De plus, l’impédance d’entrée et de sortie du préampli a sans doute dans bien des cas un rôle bien plus important.
+
+## Les contrôles d’un préampli
+
+Un préampli propose souvent les réglages suivants :
+
++ Un potentiomètre de gain (qui est souvent remplacé par un sélecteur cranté, plus précis, pour les modèles haut de gamme).
++ Un bouton activant l’alimentation fantôme. En effet, c’est bien le préampli qui génère cette tension d’alimentation pour les microphones statiques.
++ Un bouton d’inversion de phase.
++ Un coupe-bas.

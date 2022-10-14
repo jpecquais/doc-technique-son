@@ -1,0 +1,42 @@
+# Les câbles
+
+Les câbles assurent un rôle de transport vis-à-vis de signaux électriques. Ces signaux peuvent représenter une onde sonore (précédemment captée par un microphone), une valeur de contrôle pour piloter un appareil (pédale d’expression) ou encore une information numérique (câble USB, ethernet, etc.).
+
+En audio, il existe principalement deux types de câbles :
+
++ Les câbles à modulation unique (un signal transporté)
++ Les câbles à double modulation (deux signaux transportés)
+
+## Câble à modulation unique
+
+Ils sont constitués de quatre à cinq composants :
++ d’un cœur composé d’un filament (souvent multibrin) en un métal conducteur, véhiculant le signal électrique.
++ d'une gaine isolante (plastique) protégeant le cœur
++ d'une tresse en cuivre connectée à la masse
++ Parfois, d'une feuille de cuivre, enrobant la tresse, permettant de réaliser une cage de faraday et de protéger le cœur des ondes électromagnétiques.
++ Enfin, d'une dernière gaine isolante, permettant de protéger l'ensemble du câble.
+
+Ces câbles sont communément soudés à des fiches Jack TS, ou RCA. Ils sont communément utilisés pour les instruments des musiques ainsi que pour l'audio grand public.
+
+## Câble à double modulation
+
+La structure de ces câbles est identique aux câbles à modulation unique, à la présence près d'un deuxième cœur, permettant de transporter un deuxième signal électrique.
+
+Ces câbles sont souvent soudés à des fiches XLR, Jack TRS, Jack Battam, « mini-jack », etc.
+
+## Les connexions asymétriques
+
+Les connexions asymétriques permettent de transporter un signal entre une source et un récepteur. Il s'agit de la façon la plus simple de connecter deux appareils devant échanger des signaux. Cependant, sur de longue distance, le câble peut se comporter comme une antenne et induire sur le signal certaines ondes électromagnétiques (comme la radio). Ces connexions utilisent des câbles à modulation unique.
+
+## Les connexions symétriques
+
+Le but de ces connexions est de palier au problème des connexions asymétrique. Dans l'appareil émetteur, le signal à transporter est dupliqué, et ce duplicata est inversé en phase. Cette étape s'appelle la symétrisation. C'est deux signaux sont appelés point chaud (signal d'origine) et point froid (signal opposé en phase). Le câble transporte ces deux signaux. Sur son trajet, lorsqu'une perturbation électromagnétique est induite sur le signal, celle-ci s'inscrit en phase sur les deux signaux (point chaud et point froid). À l'arrivée, l'appareil récepteur inverse la phase du point froid et le somme avec le point chaud. Cette étape se nomme la dé-symétrisation. Ainsi le signal d'origine est sommé en phase, tandis que les interférences sont sommées hors phase et s'annulent.
+Les connexions symétriques nécessitent un câble à double modulation.
+
+## Les connexions stéréo asymétriques
+
+Ces connexions permettent de véhiculer deux signaux à travers un seul et même câble. Elles nécessitent un câble à double modulation.
+
+## Les connexions d'insert
+
+Utilisées dans les consoles afin de permettre l'insertion de périphérique de traitement externe, ces connexions permettent d'envoyer le signal vers le périphérique et de le récupérer avec le même câble. Elles utilisent des câbles à double modulation.

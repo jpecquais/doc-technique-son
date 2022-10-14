@@ -1,0 +1,27 @@
+# Les causes de déphasage
+
+## Les effets sonores de déphasage
+
+Tous les signaux sont caractérisés par une certaine phase. Celle-ci est moins tangible que celles de niveau sonore ou de fréquence. En effet, lorsqu’un signal est écouté seul, celle-ci ne s’entend pas. C’est au moment où plusieurs signaux corrélés (comprendre, enregistrés au même moment, par plusieurs microphones) sont sommés que les différences de phase peuvent s’entendre.
+
+## Approche mathématique
+
+Prenons l’exemple d’un son pur :
+$sin (\omega t + \phi)$ où $\omega = 2\pi f$
+
+La phase de ce signal est décrite par $\omega t +\phi$
+
+Les deux paramètres responsables de déphasages audibles sont :
++ $t$, le temps
++ $\phi$, la phase à l’origine
+
+Attention, pour un son pur, l’effet de la modification de $t$ ou de $\phi$ semble très similaire. Ce n’est pas le cas pour des signaux pseudo-périodiques, atténués dans le temps.
+
+## Les sources de déphasage
+
+Les causes les plus classiques de déphasages sont :
+
++ Un câble XLR avec une inversion sur le point chaud et le point froid
++ Une prise de son avec une différence de distance entre deux microphones
++ Une prise de son utilisant deux microphones positionnés de part et d’autre d’une membrane
++ Un retard de certaines fréquences lié aux objets rencontrés par les signaux

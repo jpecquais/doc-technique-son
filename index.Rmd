@@ -1,0 +1,34 @@
+--- 
+title: "La prise de son musicale"
+author: "Jean-Loup Pecquais"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+# bibliography: [book.bib, packages.bib]
+# url: your book url like https://bookdown.org/yihui/bookdown
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+  This is a minimal example of using the bookdown package to write a book.
+  The HTML output format for this example is bookdown::gitbook,
+  set in the _output.yml file.
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+---
+
+# Avant-propos
+
+Ce livre est naît de la nécessité d'un support de cours pour la formation "Technique de Prise de Son", dispensée par Jean-Loup Pecquais. Il intègre donc l'ensemble des notions abordées, expliquées en détail, ainsi que des exemples sonores.
+
+Ce livre est écrit dans la philosophie de l'Open Source. L'intégralité de son contenu est donc disponible gratuitement. Son code source est accessible dans un dépôt GitHub. Ainsi, il est possible à tout à chacun de reporter les éventuelles erreurs ou de proposer des modifications.
+
+## Mise a jour
+
+La distribution numérique de ce livre permet une mise à jour régulière de son contenu. Cela implique deux choses :
+- Certaines sections peuvent-être incomplètes et seront complétées plus tard
+- C'est une bonne idée de revenir consulter ce site régulièrement
+
+## Structures
+
+Dans un premier temps, ce livre reprend l'ensemble de la chaîne audio, en y explicitant le rôle et le fonctionnement de chacun de ses composants. L'objectif est de fournir une base technique objective au preneur de son.
+
+Dans un second temps, le livre détaile un ensemble de techniques de prise de son, insistant particulièrement sur les mécanismes généraux de la prise et sur l'écoute critique. Cependant, un certain nombre "trucs & astuces" de prise de son sont aussi présentés. Ces derniers ne doivent jamais se supplanté à l'écoute critique.

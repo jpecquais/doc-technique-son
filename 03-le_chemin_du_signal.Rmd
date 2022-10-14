@@ -1,0 +1,13 @@
+# Le chemin du signal
+
+La première mission d'un preneur de son est de s'assurer de l'arriver à bon port des signaux dans l'enregistreur. En effet, toute notion de mise en scène sonore et d'esthétique devient très secondaire si le contenu n'a pas été enregistré.
+
+Le diagramme ci-dessous reprend les principaux étages rencontré par un signal audio dans un context de production numérique. Il est essentiel d'être le plus famillier possible avec ces différents composants.
+
+```{r, echo=FALSE, out.width="100%", fig.cap = "Le chemin du signal"}
+knitr::include_graphics(path = "_resources/diagrams/cheminSignal.drawio.svg")
+```
+
+> Le schéma peut-être agrandi en ouvrant l'image dans un nouvel onglet.
+
+Chaque élément sera abordé dans des sections dédiés dans la suite de ce livre.

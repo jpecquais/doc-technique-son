@@ -1,0 +1,59 @@
+# Les microphones
+
+Un microphone est un **transducteur**, qui permet de transformer une onde acoustique en onde électrique. Il est constitué d’une membrane et d’une électronique associée permettant de préparer le signal capté à être transmis à la suite de la chaîne audio à travers un câble. La connectique standard des microphones est le XLR. Il s’agit de connectique **asymétrique.**
+
+## Les technologies de microphones
+
+Beaucoup de procédés ont pu être utilisés pour permettre la captation du son. Nous aborderons ici les plus communes :
+
++ Les microphones électrostatiques/à condensateur
++ Les microphones à ruban
++ Les microphones dynamiques
+
+### Les microphones électrostatiques/à condensateur
+
++ Ce sont, historiquement, les premiers microphones à permettre une captation satisfaisante du son (réponse en fréquence). Mais à leurs débuts, ils sont très sensibles aux conditions de température et d’humidité. Ces problèmes n’ont plus cours aujourd’hui.
++ Le fonctionnement repose sur l’utilisation d’un condensateur en guise de capsule. Lorsque le son rencontre cette dernière, l’onde déforme les armatures du condensateur et génère donc une variation de tension.
++ De par l’utilisation de condensateur, ces microphones nécessitent une alimentation externe (dites fantôme), maintenant standardisée à +48V.
++ Ces microphones possèdent des réponses en fréquence souvent très linéaire et une excellente réponse en transitoire.
++ Leur niveau de sortie (sensibilité) est élevé.
++ Leur impédance de sortie est basse.
+
+Exemples : Neumann U87/AKG C414/Shoeps CMC4/DPA 4041
+
+### Les microphones à ruban
+
++ Préféré à leurs homologues statiques au début du siècle.
++ Fonctionne grâce à une feuille en métal, attachée entre deux aimants. L’onde sonore fait vibrer le ruban, perturbant ainsi le champ électromagnétique des aimants et générant donc une variation de tension.
++ Attention au 48 volts des alimentations fantôme, elles peuvent mettre l’électronique de ces microphones hors service.
++ Souvent, ces microphones flattent le grave et atténuent les aiguës. Leurs réponses en transitoire sont également assez douces.
++ Leur niveau de sortie est faible.
++ Leur impédance de sortie est élevée.
+
+Exemples : Royer R121/Cohles/Beyerdynamic M160
+
+### Les microphones dynamiques
+
++ Ces microphones sont conçus pour des conditions d’utilisation rudes : scène, fort niveau de pression sonore, etc.
++ Ils sont mécaniquement et électroniquement robustes.
++ Leurs membranes sont rattachées à aimant, lui-même entouré d’une bobine. Lorsque cette première est mise en vibration par une onde sonore, le déplacement de l’aimant à l’intérieur de la bobine permet de créer une variation de tension électrique.
++ Leur réponse en fréquence est souvent accidentée, et donc, loin d’être linéaire. Cela peut être vu comme un inconvénient ou comme un outil de « coloration » du son.
++ Leur niveau de sortie est faible.
++ Leur impédance de sortie est élevée.
+
+Exemples : Shure SM57/Electrovoice RE20/Sennheiser MD441
+
+## La directivité
+
+La directivité d’un microphone permet de décrire sa capacité à réaliser une « écoute » sélective des ondes sonores émises dans un espace.
+
++ Un microphone omnidirectionnel capte le son tout autour de lui.
++ Un microphone cardioïde capte le son devant lui et le rejette à l’arrière.
++ Un microphone bidirectionnel capte très sélectivement devant lui et derrière lui.
+
+Voir la fiche sur les directivités.
+
+## La taille des membranes
+
+La taille des membranes influe sur la captation du son. Plus la capsule est grande, plus les fréquences aiguës seront diffractées et donc atténuées dans le signal généré.
+Un microphone à petite membrane est donc techniquement un microphone plus « juste ». Cependant, l’emploi de large membrane permet aussi d’adoucir l’aiguë trop important de certaines sources. C’est un choix de couleur.

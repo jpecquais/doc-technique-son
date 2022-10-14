@@ -1,0 +1,22 @@
+delete_merged_file: true
+language:
+  label:
+    fig: 'Figure '
+    tab: 'Tablau '
+    eq: 'Equation '
+    thm: 'Théorème '
+    lem: 'Lemma '
+    cor: 'Corollaire '
+    prp: 'Proposition '
+    cnj: 'Conjecture '
+    def: 'Definition '
+    exm: 'Exemple '
+    exr: 'Exercice '
+    hyp: 'Hypothèse '
+    proof: 'Preuve '
+    remark: 'Remarque '
+    solution: 'Solution '
+  ui:
+    edit: Editer
+    appendix_name: ''
+    chapter_name: "Chapitre "

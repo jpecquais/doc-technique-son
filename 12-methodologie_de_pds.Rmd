@@ -1,0 +1,102 @@
+# Méthodologie de prise de son
+
+Le bon déroulement de l’enregistrement d’instruments acoustiques dépend de multiple facteur. Trié par ordre d’importance décroissante, nous trouvons :
+
+1. Le confort du musicien
+2. La qualité de l’instrument enregistré
+3. La qualité de l’acoustique de la pièce où a lieu l’enregistrement
+4. Le placement du microphone
+5. Le choix du microphone (technologie et directivité)
+6. Le choix du préampli
+
+## Le confort du musicien
+
+Même si elle peut sembler triviale, cette « étape » de la chaîne de prise de son est de loin la plus importante.
+La qualité de l’interprétation donnée par le musicien dépendra grandement de son état moral et psychologique :
+
++ Est-il stressé
++ Est-il confiant
++ Se sent-il accueilli
++ etc.
+
+Nous pourrions considérer qu’un ou une musicienne arrivant dans un studio d’enregistrement se présente avec un taux de confiance maximal envers l’équipe technique. Dès lors l’objectif des différents techniciens est de conserver cette jauge au maximum.
+
+Les premières minutes sont particulièrement importantes et va poser un ressenti fort sur la journée de travail. Il y a donc un équilibre à trouver entre un accueil chaleureux et décontracté et un rapport productiviste et sérieux.
+
+Le système permettant aux musiciens de communiquer entre eux et avec les techniciens est primordial. En pratique, il n’est pas rare de dédier certains microphones du plateau à cette tâche. Du côté régi, le « talkback » est l’outil de communication premier des techniciens présents sur la session. Il convient de l’utiliser avec soin et prudence. Un musicien peut rapidement se sentir isolé, s’il enregistre seul. Il convient de maintenir un contact régulier et précis afin de ne pas l’abandonner dans le seul dans sa cabine. Qui plus est, un quiproquo peut être vite arrivé avec les systèmes de talkback. Prudence quant à l’état d’ouverture ou de fermeture du microphone.
+
+## Le choix de l’instrument
+
+La plupart des musiciens se présenteront avec leurs instruments. La marge de manœuvre est donc ici quasi nulle.
+
+Cependant il n’est pas rare que le studio possède du « backline », souvent composé de batteries, d’amplificateur guitare et basse, voire de guitares et de basses. Si l’instrument utilisé par le musicien pose problème pour la prise de son, proposer une alternative peut s’avérer être un bon pari. Il convient évidemment de sonder l’ouverture du musicien par rapport à cette proposition, afin de ne pas le braquer.
+
+Il peut également être intéressant de « préparer » les instruments. Cette technique est très courante sur les pianos et les batteries, afin de changer les propriétés acoustiques de l’instrument grâce a l’utilisation de draps, coussins, couvertures disposées dans ou sur l’instrument.
+
+## Le choix de l’acoustique
+
+L’acoustique de la salle d’enregistrement est-elle aussi plus souvent une contrainte qu’une variable d’ajustement.
+
+On préférera souvent de grandes salles afin de limiter l’apparition prématurée de premières réflexions. Plus la salle sera petite, plus celle-ci apportera une forte coloration sur le contenu enregistré. Il convient donc d’être attentif aux petites cabines de studio, celles-ci sont souvent très mates, mais leur apport sur le timbre des instruments qui y sont enregistrés est souvent très important.
+
+Lorsque l’on a la possibilité d’enregistrer dans de grandes salles, il est souvent intéressant de disposer des quelques panneaux acoustiques mobiles, afin de modeler la pièce à sa convenance.
+
+Si l’acoustique imposée est défavorable, on préférera dans ce cas des prises d’hyper proximité, afin de minimiser son effet au maximum.
+
+## Placer et choisir son microphone
+
+En pratique, il est bien difficile de dissocier le choix du microphone de son placement, les deux étant très interdépendants. Cependant, il convient de garder à l’esprit que le positionnement du microphone est, parmi les deux, sans doute le plus déterminant.
+
+La première étape, avant même de choisir un microphone, consiste à écouter l’instrument dans l’acoustique d’enregistrement. Il s’agit ici d’une écoute active. On se déplace autour de l’instrument, on s’en approche, on s’en éloigne, afin de sentir l’interaction entre la source et l’acoustique du lieu. Aussi, il est important de trouver deux zones d’émission particulière de l’instrument : la zone de projection maximale et la zone au timbre le plus favorable. La première peut nous servir à positionner l’instrumentiste par rapport aux autres instruments afin de minimiser les reprises entre microphones. La deuxième zone nous indique l’axe de prise de son.
+
+Cette zone au timbre le plus favorable est relative. Elle dépend de l’instrument, bien sûr, mais aussi du modèle. Elle dépend également du mode de jeu, de l’articulation du joueur et évidemment, de l’esthétique de la musique.
+
+### Le rapport a la distance du microphone
+
+La distance de positionnement du microphone est un élément excessivement important sur le rendu esthétique de la prise de son.
+
+En règle générale, plus on prend de distance, plus on approche une prise de son naturaliste, cherchant à reproduire un évènement sonore dans son environnement, tel qu’il aurait été entendu dans la pièce. Plus on se rapproche, plus on fragmente l’événement sonore et plus on l’arrache aussi a son contexte de diffusion.
+
+Afin de déterminer efficacement le placement d’un microphone, il convient d’abord d’en connaître sa distance critique. Celle-ci correspond au point, dans une pièce, où le son provenant directement d’une source est perçu au même niveau sonore que la réponse acoustique à cette source. Cela signifie que si nous plaçons notre microphone au-delà de ce point, nous obtiendrons plus d’acoustique que de son direct de l’instrument.
+
+Il est important aussi de considérer que la directivité du microphone influe sur la distance critique. En effet, plus la directivité du microphone est large (tends vers l’omnidirectionnalité), plus le microphone paraîtra éloigné de la source. À l’inverse, plus la directivité d’un microphone est étroite (tends vers la bidirectionnalité), plus le microphone paraîtra proche.
+
+Dans le cas de l’utilisation de microphone directif, le placement en proximité et hyperproximité va créer une accentuation du contenu basse-fréquence de la source. Cela devient parfois un élément esthétique, comme sur les voix radiophoniques. Cela aussi peut être un défaut, une exagération qu’il conviendra de corriger en postproduction.
+
+### Quand choisir une prise de son stéréophonique
+
+La prise de son stéréophonique, comme son nom l’indique, regroupe l’ensemble des techniques de prise de son dédié au système de diffusion stéréophonique (deux enceintes séparées de 60° et orientées vers un auditeur placé à équidistance des deux transducteurs).
+
+L’avantage de tels dispositifs de prises de son est de peupler dès la prise l’espace stéréophonique qui est donné à l’auditeur lors de la diffusion. Ils permettent également de rendre compte de la position de plusieurs évènements sonores ayant lieu dans la même acoustique. Cette dernière est d’ailleurs bien mieux retranscrite par de tels systèmes de prise de son.
+
+Il s’agit à nouveau d’un choix esthétique. Faire le choix d’une prise de son monophonique permet de renforcer la sensation de frontalité et de densité d’une source. À l’inverse, une prise de son stéréophonique donnera une définition spatiale accrue.
+
+### Quand choisir le multi-microphonie
+
+La multi-microphonie consiste à enregistrer un instrument via l’utilisation de microphones (principalement) directifs, placés à différents endroits jugés pertinents et en hyperproximité.
+
+Cette approche esthétique de la prise de son est devenue indissociable des « musiques actuelles ». Elle offre l’avantage d’une grande flexibilité de traitement lors de la phase de mixage. Voir, elle implique une certaine partie des traitements.
+
+En effet, une prise d’hyperproximité va systématiquement relever deux défauts :
++ un effet de proximité : le grave/bas médium de la source paraît hypertrophié lors de l’emploi de microphones directifs.
++ Les dynamiques de jeux sont également hypertrophiées.
+
+L’effet de proximité implique donc bien souvent l’utilisation d’un égaliseur, permettant de corriger cette augmentation artificielle du grave. De même, l’hypertrophie de la dynamique de jeu implique l’usage d’un compresseur afin de corriger ces variations artificielles.
+
+Afin de recréer une sensation de spatialisation, on utilisera principalement deux outils. En premier lieu, le potentiomètre de panoramique afin de diriger ces sons mono dans l’espace stéréophonique, puis les réverbérations artificielles permettra de reconstituer un champ acoustique et de réintégrer ces sources dans une scène sonore.
+
+Si l’approche de la prise au couple pouvait être qualifiée de naturaliste, alors la prise de son en multimicrophone sera son pendant spectaculaire. Évidemment, il convient de ne pas aussi franchement opposer ces deux approches et il existe tout un monde de système de prise de son entre ces deux extrêmes.
+
+## Le choix du préamplificateur
+
+Le rôle du préamplificateur est d’amplifier le signal, le tout en ramenant le minimum de bruit. Un premier élément de choix de préampli va se faire sur le niveau de pression acoustique produit par les sources à enregistrer.
+
+Enregistrer une batterie impose peut de contrainte sur le préampli quand a sa capacité à amplifier sans rajouter beaucoup de bruit sur le signal. À l’inverse, enregistrer des instruments peux sonores, possiblement avec des microphones peux sensibles, implique l’utilisation de préampli avec une excellente réserve de gain et un excellent rapport signal bruit.
+
+### L’influence du préampli sur la « couleur » du son
+
+Il est assez connu que le préampli peut également devenir un choix esthétique pour influencer la couleur d’une prise de son. Cette question semble assez complexe. Voici quelques éléments de réponse :
+
++ Le choix du préampli est d’une influence minime par rapport à **tous** les autres choix précédemment fait.
++ Les préamplis sont souvent catégorisés, en termes de couleur, via les composants utilisés pour réaliser l’amplification. Attention, un composant électronique dépend toujours du contexte dans lequel il est placé (ici, du circuit électronique). Il est donc difficile de précisément qualifier le son d’un préampli à lampe ou à transistor de façon générique.
++ Les impédances d’entrée des préamplis ne sont souvent pas évoquées dans ces discussions. Hors, pour la plus parts des microphones (hors statiques), leur impédance de sortie peut être suffisamment élevée pour engendrer une déperdition en aigu et en transitoire. Cette déperdition peut être heureuse, ou malheureuse, mais surtout bien réelle. Une manière de s’en prémunir peut-être d’utiliser des « booster » de microphones (parfois également appelés préamplis), permettant d’augmenter le niveau de sortie des microphones et aussi d’adapter leur impédance. 
