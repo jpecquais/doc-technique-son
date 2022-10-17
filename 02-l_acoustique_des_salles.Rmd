@@ -1,5 +1,26 @@
 # L'acoustique des salles
 
-## Concidération d'acoustique pour la prise de son
+Tout environnement, sollicité par l’émission d’un son en son sein, produit une réponse acoustique. Cette réponse acoustique est appelée réverbération. Elle est caractéristique d’un lieu et peut, dans certains cas, être un allié précieux dans notre travail. Dans d’autres elle est source de problèmes et complexifie grandement notre travail d’écoute analytique.
 
-## Concidération d'acoustique pour une régie d'écoute
+L’acoustique d’un lieu est un des facteurs les plus déterminants sur le rendu sonore. Mais c’est aussi celui sur lequel il est plus difficile et technique d’intervenir.
+
+## Les types de traitements
+
+On trouve, en général, deux types de traitements :
+
++ Les absorbeurs, qui réduisent l’énergie d’une onde sonore à son impact.
++ Les diffracteurs, qui répartissent l’énergie d’une onde sonore dans l’espace.
+
+Dans un lieu où la quantité de réverbération est jugée trop importante, on utilisera des absorbeurs. À l’inverse, dans un lieu on l’on souhaite préserver la quantité de réverbération, mais en évitant les phénomènes de modes provoqués par les ondes stationnaires, on utilisera des diffracteurs.
+
+Dans de petits lieux, l’usage de diffracteurs semble contre-productif, la priorité étant d’absorber au maximum les premières réflexions, celle-ci arrivant très rapidement après l’émission du son direct.
+
+## Considération d’acoustique pour le travail de son
+
+Il est vivement recommandé d’installer un studio, de prise ou de monitoring, dans un lieu plutôt grand. En effet, plus le lieu est grand, plus il sera facile de positionner un point de prise de son ou d’écoute suffisamment éloigné des parois afin de minimiser l’influence des premières réflexions. Aussi, plus le lieu est grand, plus l’espace sera suffisant pour installer des traitements acoustiques. Certains types de traitement, comme les basstraps, peuvent prendre une place bien trop importante pour être installés dans des pièces de dimension habituelle (chambres, bureau, etc.). Autant que possible, on cherchera à choisir des pièces de travail avec le minimum de surface parallèle, afin de limiter les ondes stationnaires.
+
+En ce qui concerne les traitements en eux-mêmes, il est vivement recommandé de traiter en priorité le bas du spectre. L’ajout de basstrap est donc prioritaire sur le reste des traitements. Plus la longueur d’onde à traiter est grande (donc la fréquence grave), plus la taille des matériaux devra être importante. On retrouve donc le point abordé précédemment : correctement traiter une pièce demande un certain espace. Par ailleurs, il est important que les traitements appliqués à un lieu soient linéaires en fréquence, c’est-à-dire qu’il ne se concentre pas sur une seule zone du spectre. C’est souvent ce qui arrive avec les kits de mousses peu onéreux, mais n’ayant une réelle efficacité que dans le médium et le haut du spectre.
+
+### Cas d’une cabine de prise
+
+### Cas d’une régie d’écoute
