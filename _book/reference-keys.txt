@@ -18,8 +18,10 @@ laspect-fréquentiel
 la-pression-acoustique
 lévaluation-de-la-distance
 lacoustique-des-salles
-concidération-dacoustique-pour-la-prise-de-son
-concidération-dacoustique-pour-une-régie-découte
+les-types-de-traitements
+considération-dacoustique-pour-le-travail-de-son
+cas-dune-cabine-de-prise
+cas-dune-régie-découte
 le-chemin-du-signal
 les-microphones
 les-technologies-de-microphones
@@ -84,4 +86,3 @@ les-effets-sonores-de-déphasage
 approche-mathématique
 les-sources-de-déphasage
 gestion-des-circuits-découtes
-bibliography-book.bib-packages.bib

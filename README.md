@@ -1,13 +1,14 @@
-Welcome! 
+# About "Technique Son"
 
-This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). 
 
-This template provides a skeleton file structure that you can edit to create your book. 
+## How to build the book
 
-The contents inside the .Rmd files provide some pointers to help you get started, but feel free to also delete the content in each file and start fresh.
+This book is written in RMarkdown. To build or serve the book, you must install :
 
-Additional resources:
++ R
++ rmarkdown
++ bookdown
 
-The **bookdown** book: https://bookdown.org/yihui/bookdown/
+Clone the repository and run bookdown::render_book("index.Rmd", "bookdown::gitbook")
 
-The **bookdown** package reference site: https://pkgs.rstudio.com/bookdown
+Alternatively, the book can be edited while monitoring the changes in real-time using bookdown::serve_book(".", "_book")

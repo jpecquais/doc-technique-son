@@ -1,10 +1,10 @@
 # L'acoustique des salles
 
-Tout environnement, sollicité par l’émission d’un son en son sein, produit une réponse acoustique. Cette réponse acoustique est appelée réverbération. Elle est caractéristique d’un lieu et peut, dans certains cas, être un allié précieux dans notre travail. Dans d’autres elle est source de problèmes et complexifie grandement notre travail d’écoute analytique.
-
-L’acoustique d’un lieu est un des facteurs les plus déterminants sur le rendu sonore. Mais c’est aussi celui sur lequel il est plus difficile et technique d’intervenir.
+Tout environnement, sollicité par l’émission d’un son en son sein, produit une réponse acoustique. Cette réponse acoustique est appelée réverbération. Elle est caractéristique d’un lieu et peut, dans certains cas, être une alliée précieuse dans notre travail. Dans d’autres, elle est source de problèmes et complexifie grandement notre travail d’écoute analytique.
 
 ## Les types de traitements
+
+L’acoustique d’un lieu est un des facteurs les plus déterminants sur le rendu sonore. Mais c’est aussi celui sur lequel il est plus difficile et technique d’intervenir.
 
 On trouve, en général, deux types de traitements :
 
