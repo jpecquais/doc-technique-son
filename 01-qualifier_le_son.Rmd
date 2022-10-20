@@ -16,12 +16,12 @@ Les sons sont classiquement décrits selon les trois paramètres suivant :
 + Leur enveloppe, décrivant l’évolution du son dans le temps.
 + Leur timbre, défini par le contenu harmonique du son.
 
-<iframe frameborder="0"
-        noresize="noresize"
-        style="position: absolute; background: transparent; width: 100%; height:100%;"
-        src="_resources\dsp\osc\osc.html"
-        frameborder="0">
+<!-- <iframe src="_resources\dsp\osc\osc.html">
 </iframe>
+
+<object data=_resources\dsp\osc\osc.html width="600" height="400"> <embed src=_resources\dsp\osc\osc.html width="600" height="400"> </embed> Error: Embedded data could not be displayed. </object> -->
+<!-- 
+<script src = "_resources\dsp\osc\osc.js"></script>  -->
 
 ## La perception du son
 

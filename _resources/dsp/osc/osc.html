@@ -5412,46 +5412,386 @@ Compilation options: -lang wasm-ib -cn osc -es 1 -mcd 16 -single -ftz 2
 */
 
 function getJSONosc() {
-	return '{"name": "osc","filename": "osc.dsp","version": "2.49.1","compile_options": "-lang wasm-ib -cn osc -es 1 -mcd 16 -single -ftz 2","include_pathnames": ["/usr/local/share/faust","/usr/local/share/faust","/usr/share/faust",".","/tmp/sessions/ACBBB21591E4B4F023E6B31B4310380CB9847DA7/web/webaudiowasm"],"size": 262200,"inputs": 0,"outputs": 1,"meta": [ { "author": "Grame" },{ "basics_lib_name": "Faust Basic Element Library" },{ "basics_lib_version": "0.8" },{ "compile_options": "-single -scal -I libraries/ -I project/ -lang wasm" },{ "copyright": "(c)GRAME 2009" },{ "filename": "osc.dsp" },{ "library_path0": "/libraries/stdfaust.lib" },{ "library_path1": "/libraries/oscillators.lib" },{ "library_path2": "/libraries/platform.lib" },{ "library_path3": "/libraries/maths.lib" },{ "library_path4": "/libraries/basics.lib" },{ "library_path5": "/libraries/signals.lib" },{ "license": "BSD" },{ "maths_lib_author": "GRAME" },{ "maths_lib_copyright": "GRAME" },{ "maths_lib_license": "LGPL with exception" },{ "maths_lib_name": "Faust Math Library" },{ "maths_lib_version": "2.5" },{ "name": "osc" },{ "oscillators_lib_name": "Faust Oscillator Library" },{ "oscillators_lib_version": "0.3" },{ "platform_lib_name": "Generic Platform Library" },{ "platform_lib_version": "0.2" },{ "signals_lib_name": "Faust Signal Routing Library" },{ "signals_lib_version": "0.3" },{ "version": "2.52.3" }],"ui": [ {"type": "vgroup","label": "Oscillator","items": [ {"type": "hslider","label": "freq","shortname": "freq","address": "/Oscillator/freq","index": 262144,"meta": [{ "scale": "log" },{ "unit": "Hz" }],"init": 1000,"min": 20,"max": 24000,"step": 1},{"type": "hslider","label": "volume","shortname": "volume","address": "/Oscillator/volume","index": 262172,"meta": [{ "unit": "dB" }],"init": -20,"min": -96,"max": 0,"step": 0.1}]}]}';
+	return '{"name": "osc","filename": "osc.dsp","version": "2.49.1","compile_options": "-lang wasm-ib -cn osc -es 1 -mcd 16 -single -ftz 2","include_pathnames": ["/usr/local/share/faust","/usr/local/share/faust","/usr/share/faust",".","/tmp/sessions/ACBBB21591E4B4F023E6B31B4310380CB9847DA7/web/webaudiowasm-worklet"],"size": 262200,"inputs": 0,"outputs": 1,"meta": [ { "author": "Grame" },{ "basics_lib_name": "Faust Basic Element Library" },{ "basics_lib_version": "0.8" },{ "compile_options": "-single -scal -I libraries/ -I project/ -lang wasm" },{ "copyright": "(c)GRAME 2009" },{ "filename": "osc.dsp" },{ "library_path0": "/libraries/stdfaust.lib" },{ "library_path1": "/libraries/oscillators.lib" },{ "library_path2": "/libraries/platform.lib" },{ "library_path3": "/libraries/maths.lib" },{ "library_path4": "/libraries/basics.lib" },{ "library_path5": "/libraries/signals.lib" },{ "license": "BSD" },{ "maths_lib_author": "GRAME" },{ "maths_lib_copyright": "GRAME" },{ "maths_lib_license": "LGPL with exception" },{ "maths_lib_name": "Faust Math Library" },{ "maths_lib_version": "2.5" },{ "name": "osc" },{ "oscillators_lib_name": "Faust Oscillator Library" },{ "oscillators_lib_version": "0.3" },{ "platform_lib_name": "Generic Platform Library" },{ "platform_lib_version": "0.2" },{ "signals_lib_name": "Faust Signal Routing Library" },{ "signals_lib_version": "0.3" },{ "version": "2.52.3" }],"ui": [ {"type": "vgroup","label": "Oscillator","items": [ {"type": "hslider","label": "freq","shortname": "freq","address": "/Oscillator/freq","index": 262144,"meta": [{ "scale": "log" },{ "unit": "Hz" }],"init": 1000,"min": 20,"max": 24000,"step": 1},{"type": "hslider","label": "volume","shortname": "volume","address": "/Oscillator/volume","index": 262172,"meta": [{ "unit": "dB" }],"init": -20,"min": -96,"max": 0,"step": 0.1}]}]}';
 }
-function getBase64Codeosc() { return "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LXNjYWwgLUkgbGlicmFyaWVzLyAtSSBwcm9qZWN0LyAtbGFuZyB3YXNtIiB9LHsgImNvcHlyaWdodCI6ICIoYylHUkFNRSAyMDA5IiB9LHsgImZpbGVuYW1lIjogIm9zYy5kc3AiIH0seyAibGlicmFyeV9wYXRoMCI6ICIvbGlicmFyaWVzL3N0ZGZhdXN0LmxpYiIgfSx7ICJsaWJyYXJ5X3BhdGgxIjogIi9saWJyYXJpZXMvb3NjaWxsYXRvcnMubGliIiB9LHsgImxpYnJhcnlfcGF0aDIiOiAiL2xpYnJhcmllcy9wbGF0Zm9ybS5saWIiIH0seyAibGlicmFyeV9wYXRoMyI6ICIvbGlicmFyaWVzL21hdGhzLmxpYiIgfSx7ICJsaWJyYXJ5X3BhdGg0IjogIi9saWJyYXJpZXMvYmFzaWNzLmxpYiIgfSx7ICJsaWJyYXJ5X3BhdGg1IjogIi9saWJyYXJpZXMvc2lnbmFscy5saWIiIH0seyAibGljZW5zZSI6ICJCU0QiIH0seyAibWF0aHNfbGliX2F1dGhvciI6ICJHUkFNRSIgfSx7ICJtYXRoc19saWJfY29weXJpZ2h0IjogIkdSQU1FIiB9LHsgIm1hdGhzX2xpYl9saWNlbnNlIjogIkxHUEwgd2l0aCBleGNlcHRpb24iIH0seyAibWF0aHNfbGliX25hbWUiOiAiRmF1c3QgTWF0aCBMaWJyYXJ5IiB9LHsgIm1hdGhzX2xpYl92ZXJzaW9uIjogIjIuNSIgfSx7ICJuYW1lIjogIm9zYyIgfSx7ICJvc2NpbGxhdG9yc19saWJfbmFtZSI6ICJGYXVzdCBPc2NpbGxhdG9yIExpYnJhcnkiIH0seyAib3NjaWxsYXRvcnNfbGliX3ZlcnNpb24iOiAiMC4zIiB9LHsgInBsYXRmb3JtX2xpYl9uYW1lIjogIkdlbmVyaWMgUGxhdGZvcm0gTGlicmFyeSIgfSx7ICJwbGF0Zm9ybV9saWJfdmVyc2lvbiI6ICIwLjIiIH0seyAic2lnbmFsc19saWJfbmFtZSI6ICJGYXVzdCBTaWduYWwgUm91dGluZyBMaWJyYXJ5IiB9LHsgInNpZ25hbHNfbGliX3ZlcnNpb24iOiAiMC4zIiB9LHsgInZlcnNpb24iOiAiMi41Mi4zIiB9XSwidWkiOiBbIHsidHlwZSI6ICJ2Z3JvdXAiLCJsYWJlbCI6ICJPc2NpbGxhdG9yIiwiaXRlbXMiOiBbIHsidHlwZSI6ICJoc2xpZGVyIiwibGFiZWwiOiAiZnJlcSIsInNob3J0bmFtZSI6ICJmcmVxIiwiYWRkcmVzcyI6ICIvT3NjaWxsYXRvci9mcmVxIiwiaW5kZXgiOiAyNjIxNDQsIm1ldGEiOiBbeyAic2NhbGUiOiAibG9nIiB9LHsgInVuaXQiOiAiSHoiIH1dLCJpbml0IjogMTAwMCwibWluIjogMjAsIm1heCI6IDI0MDAwLCJzdGVwIjogMX0seyJ0eXBlIjogImhzbGlkZXIiLCJsYWJlbCI6ICJ2b2x1bWUiLCJzaG9ydG5hbWUiOiAidm9sdW1lIiwiYWRkcmVzcyI6ICIvT3NjaWxsYXRvci92b2x1bWUiLCJpbmRleCI6IDI2MjE3MiwibWV0YSI6IFt7ICJ1bml0IjogImRCIiB9XSwiaW5pdCI6IC0yMCwibWluIjogLTk2LCJtYXgiOiAwLCJzdGVwIjogMC4xfV19XX0="; }
+function getBase64Codeosc() { return "AGFzbQEAAAAB1oCAgAAQYAJ/fwBgBH9/f38AYAF/AX9gAX8Bf2ACf38BfWABfwF/YAJ/fwBgAX8AYAJ/fwBgAn9/AGABfwBgAn9/AX9gAn9/AX9gAn19AX1gA39/fQBgAX0BfQKZgICAAAIDZW52BV9wb3dmAA0DZW52BV9zaW5mAA8Dj4CAgAAOAAECAwQFBgcICQoLDA4FjICAgAABAYiAgIAA8IeAgAAHuoGAgAAMB2NvbXB1dGUAAwxnZXROdW1JbnB1dHMABA1nZXROdW1PdXRwdXRzAAUNZ2V0UGFyYW1WYWx1ZQAGDWdldFNhbXBsZVJhdGUABwRpbml0AAgNaW5zdGFuY2VDbGVhcgAJEWluc3RhbmNlQ29uc3RhbnRzAAoMaW5zdGFuY2VJbml0AAsaaW5zdGFuY2VSZXNldFVzZXJJbnRlcmZhY2UADA1zZXRQYXJhbVZhbHVlAA8GbWVtb3J5AgAKpYeAgAAO34GAgAABA39BACEEQQAhAkEAIQNBACECA0ACQEGogBAgAkECdGpBADYCACACQQFqIQIgAkECSARADAIMAQsLC0EAIQMDQAJAQbCAECADQQJ0akEANgIAIANBAWohAyADQQJIBEAMAgwBCwsLQQAhBANAAkBBAEEBNgKogBBBAEEAKAKsgBBBACgCtIAQakGAgARvNgKwgBAgBEECdEPbD8k4QQAoArCAELKUEAE4AgBBAEEAKAKogBA2AqyAEEEAQQAoArCAEDYCtIAQIARBAWohBCAEQYCABEgEQAwCDAELCwsLp4KAgAACAn8EfUEAIQRDAAAAACEGQwAAAAAhB0EAIQVDAAAAACEIQwAAAAAhCSADQQBqKAIAIQRBACoCiIAQQQAqAoCAEJQhBkEAKgKUgBBDAAAgQUPNzEw9QQAqApyAEJQQAJQhB0EAIQUDQAJAIAZBACoCkIAQIAZBACoCkIAQko6TkiEIQQAgCLxBgICA/AdxBH0gCAVDAAAAAAs4AoyAECAHQQAqApiAEEEAKgKkgBCUkiEJQQAgCbxBgICA/AdxBH0gCQVDAAAAAAs4AqCAECAEIAVqQQAqAqCAEEMAAIBHQQAqAoyAEJSoQQJ0KgIAlDgCAEEAQQAqAoyAEDgCkIAQQQBBACoCoIAQOAKkgBAgBUEEaiEFIAVBBCABbEgEQAwCDAELCwsLhYCAgAAAQQAPC4WAgIAAAEEBDwuLgICAAAAgACABaioCAA8LioCAgAAAQQAoAoSAEA8LjoCAgAAAIAAgARACIAAgARALC+qAgIAAAQJ/QQAhAUEAIQJBACEBA0ACQEGMgBAgAUECdGpDAAAAADgCACABQQFqIQEgAUECSARADAIMAQsLC0EAIQIDQAJAQaCAECACQQJ0akMAAAAAOAIAIAJBAWohAiACQQJIBEAMAgwBCwsLC+uAgIAAAQF9QwCAO0hDAACAP0EAKAKEgBCyl5YhAkEAIAE2AoSAEEMAgDtIQwAAgD9BACgChIAQspeWIQJBAEMAAIA/IAKVOAKIgBBBAENmZjBCIAKVOAKUgBBBAEMAAIA/QQAqApSAEJM4ApiAEAuQgICAAAAgACABEAogABAMIAAQCQuagICAAABBAEMAAHpEOAKAgBBBAEMAAKDBOAKcgBALkICAgAAAIAAgAUgEfyABBSAACw8LkICAgAAAIAAgAUgEfyAABSABCw8LjICAgAAAIAAgAWogAjgCAAsLro6AgAABAEEAC6cOeyJuYW1lIjogIm9zYyIsImZpbGVuYW1lIjogIm9zYy5kc3AiLCJ2ZXJzaW9uIjogIjIuNDkuMSIsImNvbXBpbGVfb3B0aW9ucyI6ICItbGFuZyB3YXNtLWliIC1jbiBvc2MgLWVzIDEgLW1jZCAxNiAtc2luZ2xlIC1mdHogMiIsImluY2x1ZGVfcGF0aG5hbWVzIjogWyIvdXNyL2xvY2FsL3NoYXJlL2ZhdXN0IiwiL3Vzci9sb2NhbC9zaGFyZS9mYXVzdCIsIi91c3Ivc2hhcmUvZmF1c3QiLCIuIiwiL3RtcC9zZXNzaW9ucy9BQ0JCQjIxNTkxRTRCNEYwMjNFNkIzMUI0MzEwMzgwQ0I5ODQ3REE3L3dlYi93ZWJhdWRpb3dhc20td29ya2xldCJdLCJzaXplIjogMjYyMjAwLCJpbnB1dHMiOiAwLCJvdXRwdXRzIjogMSwibWV0YSI6IFsgeyAiYXV0aG9yIjogIkdyYW1lIiB9LHsgImJhc2ljc19saWJfbmFtZSI6ICJGYXVzdCBCYXNpYyBFbGVtZW50IExpYnJhcnkiIH0seyAiYmFzaWNzX2xpYl92ZXJzaW9uIjogIjAuOCIgfSx7ICJjb21waWxlX29wdGlvbnMiOiAiLXNpbmdsZSAtc2NhbCAtSSBsaWJyYXJpZXMvIC1JIHByb2plY3QvIC1sYW5nIHdhc20iIH0seyAiY29weXJpZ2h0IjogIihjKUdSQU1FIDIwMDkiIH0seyAiZmlsZW5hbWUiOiAib3NjLmRzcCIgfSx7ICJsaWJyYXJ5X3BhdGgwIjogIi9saWJyYXJpZXMvc3RkZmF1c3QubGliIiB9LHsgImxpYnJhcnlfcGF0aDEiOiAiL2xpYnJhcmllcy9vc2NpbGxhdG9ycy5saWIiIH0seyAibGlicmFyeV9wYXRoMiI6ICIvbGlicmFyaWVzL3BsYXRmb3JtLmxpYiIgfSx7ICJsaWJyYXJ5X3BhdGgzIjogIi9saWJyYXJpZXMvbWF0aHMubGliIiB9LHsgImxpYnJhcnlfcGF0aDQiOiAiL2xpYnJhcmllcy9iYXNpY3MubGliIiB9LHsgImxpYnJhcnlfcGF0aDUiOiAiL2xpYnJhcmllcy9zaWduYWxzLmxpYiIgfSx7ICJsaWNlbnNlIjogIkJTRCIgfSx7ICJtYXRoc19saWJfYXV0aG9yIjogIkdSQU1FIiB9LHsgIm1hdGhzX2xpYl9jb3B5cmlnaHQiOiAiR1JBTUUiIH0seyAibWF0aHNfbGliX2xpY2Vuc2UiOiAiTEdQTCB3aXRoIGV4Y2VwdGlvbiIgfSx7ICJtYXRoc19saWJfbmFtZSI6ICJGYXVzdCBNYXRoIExpYnJhcnkiIH0seyAibWF0aHNfbGliX3ZlcnNpb24iOiAiMi41IiB9LHsgIm5hbWUiOiAib3NjIiB9LHsgIm9zY2lsbGF0b3JzX2xpYl9uYW1lIjogIkZhdXN0IE9zY2lsbGF0b3IgTGlicmFyeSIgfSx7ICJvc2NpbGxhdG9yc19saWJfdmVyc2lvbiI6ICIwLjMiIH0seyAicGxhdGZvcm1fbGliX25hbWUiOiAiR2VuZXJpYyBQbGF0Zm9ybSBMaWJyYXJ5IiB9LHsgInBsYXRmb3JtX2xpYl92ZXJzaW9uIjogIjAuMiIgfSx7ICJzaWduYWxzX2xpYl9uYW1lIjogIkZhdXN0IFNpZ25hbCBSb3V0aW5nIExpYnJhcnkiIH0seyAic2lnbmFsc19saWJfdmVyc2lvbiI6ICIwLjMiIH0seyAidmVyc2lvbiI6ICIyLjUyLjMiIH1dLCJ1aSI6IFsgeyJ0eXBlIjogInZncm91cCIsImxhYmVsIjogIk9zY2lsbGF0b3IiLCJpdGVtcyI6IFsgeyJ0eXBlIjogImhzbGlkZXIiLCJsYWJlbCI6ICJmcmVxIiwic2hvcnRuYW1lIjogImZyZXEiLCJhZGRyZXNzIjogIi9Pc2NpbGxhdG9yL2ZyZXEiLCJpbmRleCI6IDI2MjE0NCwibWV0YSI6IFt7ICJzY2FsZSI6ICJsb2ciIH0seyAidW5pdCI6ICJIeiIgfV0sImluaXQiOiAxMDAwLCJtaW4iOiAyMCwibWF4IjogMjQwMDAsInN0ZXAiOiAxfSx7InR5cGUiOiAiaHNsaWRlciIsImxhYmVsIjogInZvbHVtZSIsInNob3J0bmFtZSI6ICJ2b2x1bWUiLCJhZGRyZXNzIjogIi9Pc2NpbGxhdG9yL3ZvbHVtZSIsImluZGV4IjogMjYyMTcyLCJtZXRhIjogW3sgInVuaXQiOiAiZEIiIH1dLCJpbml0IjogLTIwLCJtaW4iOiAtOTYsIm1heCI6IDAsInN0ZXAiOiAwLjF9XX1dfQ=="; }
 
-/*
- faust2webaudio
-
- Primarily written by Myles Borins
- During the Spring 2013 offering of Music 420b with Julius Smith
- A bit during the Summer of 2013 with the help of Joshua Kit Clayton
- And finally a sprint during the late fall of 2013 to get everything working
- A Special thanks to Yann Orlarey and Stéphane Letz
-
- faust2webaudio is distributed under the terms the MIT or GPL2 Licenses.
- Choose the license that best suits your project. The text of the MIT and GPL
- licenses are at the root directory.
-
- Additional code: GRAME 2014-2019
-*/
+/************************************************************************
+ FAUST Architecture File
+ Copyright (C) 2003-2019 GRAME, Centre National de Creation Musicale
+ ---------------------------------------------------------------------
+ This Architecture section is free software; you can redistribute it
+ and/or modify it under the terms of the GNU General Public License
+ as published by the Free Software Foundation; either version 3 of
+ the License, or (at your option) any later version.
+ 
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ 
+ You should have received a copy of the GNU General Public License
+ along with this program; If not, see <http://www.gnu.org/licenses/>.
+ 
+ EXCEPTION : As a special exception, you may create a larger work
+ that contains this FAUST architecture section and distribute
+ that work under terms of your choice, so long as this FAUST
+ architecture section is not modified.
+ 
+ ************************************************************************
+ ************************************************************************/
 
 'use strict';
 
-/**
- * @class FaustWasm2ScriptProcessor
- * @property {string} name - name of current osc
- * @property {any[]} _log - event log
- * @property {string[]} node - ScriptProcessorNode
- * @property {boolean} debug - debug mode
- */
-class FaustWasm2ScriptProcessor {
+if (typeof (AudioWorkletNode) === "undefined") {
+    alert("AudioWorklet is not supported in this browser !")
+}
+
+class oscNode extends AudioWorkletNode {
+
+    constructor(context, baseURL, options) {
+        super(context, 'osc', options);
+
+        this.baseURL = baseURL;
+        this.json = options.processorOptions.json;
+        this.json_object = JSON.parse(this.json);
+
+        // JSON parsing functions
+        this.parse_ui = function (ui, obj) {
+            for (var i = 0; i < ui.length; i++) {
+                this.parse_group(ui[i], obj);
+            }
+        }
+
+        this.parse_group = function (group, obj) {
+            if (group.items) {
+                this.parse_items(group.items, obj);
+            }
+        }
+
+        this.parse_items = function (items, obj) {
+            for (var i = 0; i < items.length; i++) {
+                this.parse_item(items[i], obj);
+            }
+        }
+
+        this.parse_item = function (item, obj) {
+            if (item.type === "vgroup"
+                || item.type === "hgroup"
+                || item.type === "tgroup") {
+                this.parse_items(item.items, obj);
+            } else if (item.type === "hbargraph"
+                || item.type === "vbargraph") {
+                // Keep bargraph adresses
+                obj.outputs_items.push(item.address);
+            } else if (item.type === "vslider"
+                || item.type === "hslider"
+                || item.type === "button"
+                || item.type === "checkbox"
+                || item.type === "nentry") {
+                // Keep inputs adresses
+                obj.inputs_items.push(item.address);
+                obj.descriptor.push(item);
+                // Decode MIDI
+                if (item.meta !== undefined) {
+                    for (var i = 0; i < item.meta.length; i++) {
+                        if (item.meta[i].midi !== undefined) {
+                            if (item.meta[i].midi.trim() === "pitchwheel") {
+                                obj.fPitchwheelLabel.push({
+                                    path: item.address,
+                                    min: parseFloat(item.min),
+                                    max: parseFloat(item.max)
+                                });
+                            } else if (item.meta[i].midi.trim().split(" ")[0] === "ctrl") {
+                                obj.fCtrlLabel[parseInt(item.meta[i].midi.trim().split(" ")[1])]
+                                    .push({
+                                        path: item.address,
+                                        min: parseFloat(item.min),
+                                        max: parseFloat(item.max)
+                                    });
+                            }
+                        }
+                    }
+                }
+                // Define setXXX/getXXX, replacing '/c' with 'C' everywhere in the string
+                var set_name = "set" + item.address;
+                var get_name = "get" + item.address;
+                set_name = set_name.replace(/\/./g, (x) => { return x.substr(1, 1).toUpperCase(); });
+                get_name = get_name.replace(/\/./g, (x) => { return x.substr(1, 1).toUpperCase(); });
+                obj[set_name] = (val) => { obj.setParamValue(item.address, val); };
+                obj[get_name] = () => { return obj.getParamValue(item.address); };
+                //console.log(set_name);
+                //console.log(get_name);
+            }
+        }
+
+        this.output_handler = null;
+
+        // input/output items
+        this.inputs_items = [];
+        this.outputs_items = [];
+        this.descriptor = [];
+
+        // MIDI
+        this.fPitchwheelLabel = [];
+        this.fCtrlLabel = new Array(128);
+        for (var i = 0; i < this.fCtrlLabel.length; i++) { this.fCtrlLabel[i] = []; }
+
+        // Parse UI
+        this.parse_ui(this.json_object.ui, this);
+
+        // Set message handler
+        this.port.onmessage = this.handleMessage.bind(this);
+        try {
+            if (this.parameters) this.parameters.forEach(p => p.automationRate = "k-rate");
+        } catch (e) { }
+    }
+
+    // To be called by the message port with messages coming from the processor
+    handleMessage(event) {
+        var msg = event.data;
+        if (this.output_handler) {
+            this.output_handler(msg.path, msg.value);
+        }
+    }
+
+    // Public API
 
     /**
-     * Creates an instance of FaustWasm2ScriptProcessor.
-     * @param {string} dspName - dsp name
-     * @param {{ debug: boolean, [key: string]: any }} options - compile options
+     * Destroy the node, deallocate resources.
      */
-    constructor(dspName, options) {
-        this.name = dspName;
-        this._log = [];
-        this.debug = false || (typeof options === "object" && options.debug);
+    destroy() {
+        this.port.postMessage({ type: "destroy" });
+        this.port.close();
+    }
+
+    /**
+     *  Returns a full JSON description of the osc.
+     */
+    getJSON() {
+        return this.json;
+    }
+
+    // For WAP
+    async getMetadata() {
+        return new Promise(resolve => {
+            let real_url = (this.baseURL === "") ? "main.json" : (this.baseURL + "/main.json");
+            fetch(real_url).then(responseJSON => {
+                return responseJSON.json();
+            }).then(json => {
+                resolve(json);
+            })
+        });
+    }
+
+    /**
+     *  Set the control value at a given path.
+     *
+     * @param path - a path to the control
+     * @param val - the value to be set
+     */
+    setParamValue(path, val) {
+        // Needed for sample accurate control
+        this.parameters.get(path).setValueAtTime(val, 0);
+    }
+
+    // For WAP
+    setParam(path, val) {
+        // Needed for sample accurate control
+        this.parameters.get(path).setValueAtTime(val, 0);
+    }
+
+    /**
+     *  Get the control value at a given path.
+     *
+     * @return the current control value
+     */
+    getParamValue(path) {
+        return this.parameters.get(path).value;
+    }
+
+    // For WAP
+    getParam(path) {
+        return this.parameters.get(path).value;
+    }
+
+    /**
+     * Setup a control output handler with a function of type (path, value)
+     * to be used on each generated output value. This handler will be called
+     * each audio cycle at the end of the 'compute' method.
+     *
+     * @param handler - a function of type function(path, value)
+     */
+    setOutputParamHandler(handler) {
+        this.output_handler = handler;
+    }
+
+    /**
+     * Get the current output handler.
+     */
+    getOutputParamHandler() {
+        return this.output_handler;
+    }
+
+    getNumInputs() {
+        return parseInt(this.json_object.inputs);
+    }
+
+    getNumOutputs() {
+        return parseInt(this.json_object.outputs);
+    }
+
+    // For WAP
+    inputChannelCount() {
+        return parseInt(this.json_object.inputs);
+    }
+
+    outputChannelCount() {
+        return parseInt(this.json_object.outputs);
+    }
+
+    /**
+     * Returns an array of all input paths (to be used with setParamValue/getParamValue)
+     */
+    getParams() {
+        return this.inputs_items;
+    }
+
+    // For WAP
+    getDescriptor() {
+        var desc = {};
+        for (const item in this.descriptor) {
+            if (this.descriptor.hasOwnProperty(item)) {
+                if (this.descriptor[item].label != "bypass") {
+                    desc = Object.assign({ [this.descriptor[item].label]: { minValue: this.descriptor[item].min, maxValue: this.descriptor[item].max, defaultValue: this.descriptor[item].init } }, desc);
+                }
+            }
+        }
+        return desc;
+    }
+
+    /**
+     * Control change
+     *
+     * @param channel - the MIDI channel (0..15, not used for now)
+     * @param ctrl - the MIDI controller number (0..127)
+     * @param value - the MIDI controller value (0..127)
+     */
+    ctrlChange(channel, ctrl, value) {
+        if (this.fCtrlLabel[ctrl] !== []) {
+            for (var i = 0; i < this.fCtrlLabel[ctrl].length; i++) {
+                var path = this.fCtrlLabel[ctrl][i].path;
+                this.setParamValue(path, oscNode.remap(value, 0, 127, this.fCtrlLabel[ctrl][i].min, this.fCtrlLabel[ctrl][i].max));
+                if (this.output_handler) {
+                    this.output_handler(path, this.getParamValue(path));
+                }
+            }
+        }
+    }
+
+    /**
+     * PitchWeel
+     *
+     * @param channel - the MIDI channel (0..15, not used for now)
+     * @param value - the MIDI controller value (0..16383)
+     */
+    pitchWheel(channel, wheel) {
+        for (var i = 0; i < this.fPitchwheelLabel.length; i++) {
+            var pw = this.fPitchwheelLabel[i];
+            this.setParamValue(pw.path, oscNode.remap(wheel, 0, 16383, pw.min, pw.max));
+            if (this.output_handler) {
+                this.output_handler(pw.path, this.getParamValue(pw.path));
+            }
+        }
+    }
+
+    /**
+     * Generic MIDI message handler.
+     */
+    midiMessage(data) {
+        var cmd = data[0] >> 4;
+        var channel = data[0] & 0xf;
+        var data1 = data[1];
+        var data2 = data[2];
+
+        if (channel === 9) {
+            return;
+        } else if (cmd === 11) {
+            this.ctrlChange(channel, data1, data2);
+        } else if (cmd === 14) {
+            this.pitchWheel(channel, (data2 * 128.0 + data1));
+        }
+    }
+
+    // For WAP
+    onMidi(data) {
+        midiMessage(data);
+    }
+
+    /**
+     * @returns {Object} describes the path for each available param and its current value
+     */
+    async getState() {
+        var params = new Object();
+        for (let i = 0; i < this.getParams().length; i++) {
+            Object.assign(params, { [this.getParams()[i]]: `${this.getParam(this.getParams()[i])}` });
+        }
+        return new Promise(resolve => { resolve(params) });
+    }
+
+    /**
+     * Sets each params with the value indicated in the state object
+     * @param {Object} state 
+     */
+    async setState(state) {
+        return new Promise(resolve => {
+            for (const param in state) {
+                if (state.hasOwnProperty(param)) this.setParam(param, state[param]);
+            }
+            try {
+                this.gui.setAttribute('state', JSON.stringify(state));
+            } catch (error) {
+                console.warn("Plugin without gui or GUI not defined", error);
+            }
+            resolve(state);
+        })
+    }
+
+    /**
+     * A different call closer to the preset management
+     * @param {Object} patch to assign as a preset to the node
+     */
+    setPatch(patch) {
+        this.setState(this.presets[patch])
+    }
+
+    static remap(v, mn0, mx0, mn1, mx1) {
+        return (1.0 * (v - mn0) / (mx0 - mn0)) * (mx1 - mn1) + mn1;
+    }
+
+}
+
+// Factory class
+class osc {
+
+    static fWorkletProcessors;
+
+    /**
+     * Factory constructor.
+     *
+     * @param context - the audio context
+     * @param baseURL - the baseURL of the plugin folder
+     */
+    constructor(context, baseURL = "") {
+        console.log("baseLatency " + context.baseLatency);
+        console.log("outputLatency " + context.outputLatency);
+        console.log("sampleRate " + context.sampleRate);
+
+        this.context = context;
+        this.baseURL = baseURL;
+        this.pathTable = [];
+
+        this.fWorkletProcessors = this.fWorkletProcessors || [];
     }
 
     heap2Str(buf) {
@@ -5464,568 +5804,726 @@ class FaustWasm2ScriptProcessor {
     }
 
     /**
-    * Constructor of Monophonic Faust osc
-    *
-    * @param {WebAssembly.Instance} dspInstance - the wasm instance
-    * @param {AudioContext | webkitAudioContext} audioCtx - the Web Audio context
-    * @param {number} bufferSize - the buffer_size in frames
-    *
-    * @returns {ScriptProcessorNode} a valid WebAudio ScriptProcessorNode object or null
-    */
-    getNode(dspInstance, audioCtx, bufferSize) {
-
-        // JSON is as offset 0
-        var HEAPU8 = new Uint8Array(dspInstance.exports.memory.buffer);
-        this.json = this.heap2Str(HEAPU8);
-        this.json_object = JSON.parse(this.json);
-
-        let sp;
-        const inputs = parseInt(this.json_object.inputs);
-        const outputs = parseInt(this.json_object.outputs);
+     * Load additionnal resources to prepare the custom AudioWorkletNode. Returns a promise to be used with the created node.
+     */
+    async load() {
         try {
-            sp = audioCtx.createScriptProcessor(bufferSize, inputs, outputs);
+            const importObject = {
+                env: {
+                    memoryBase: 0,
+                    tableBase: 0,
+                    _abs: Math.abs,
+
+                    // Float version
+                    _acosf: Math.acos,
+                    _asinf: Math.asin,
+                    _atanf: Math.atan,
+                    _atan2f: Math.atan2,
+                    _ceilf: Math.ceil,
+                    _cosf: Math.cos,
+                    _expf: Math.exp,
+                    _floorf: Math.floor,
+                    _fmodf: (x, y) => x % y,
+                    _logf: Math.log,
+                    _log10f: Math.log10,
+                    _max_f: Math.max,
+                    _min_f: Math.min,
+                    _remainderf: (x, y) => x - Math.round(x / y) * y,
+                    _powf: Math.pow,
+                    _roundf: Math.fround,
+                    _sinf: Math.sin,
+                    _sqrtf: Math.sqrt,
+                    _tanf: Math.tan,
+                    _acoshf: Math.acosh,
+                    _asinhf: Math.asinh,
+                    _atanhf: Math.atanh,
+                    _coshf: Math.cosh,
+                    _sinhf: Math.sinh,
+                    _tanhf: Math.tanh,
+                    _isnanf: Number.isNaN,
+                    _isinff: function (x) { return !isFinite(x); },
+                    _copysignf: function (x, y) { return Math.sign(x) === Math.sign(y) ? x : -x; },
+
+                    // Double version
+                    _acos: Math.acos,
+                    _asin: Math.asin,
+                    _atan: Math.atan,
+                    _atan2: Math.atan2,
+                    _ceil: Math.ceil,
+                    _cos: Math.cos,
+                    _exp: Math.exp,
+                    _floor: Math.floor,
+                    _fmod: (x, y) => x % y,
+                    _log: Math.log,
+                    _log10: Math.log10,
+                    _max_: Math.max,
+                    _min_: Math.min,
+                    _remainder: (x, y) => x - Math.round(x / y) * y,
+                    _pow: Math.pow,
+                    _round: Math.fround,
+                    _sin: Math.sin,
+                    _sqrt: Math.sqrt,
+                    _tan: Math.tan,
+                    _acosh: Math.acosh,
+                    _asinh: Math.asinh,
+                    _atanh: Math.atanh,
+                    _cosh: Math.cosh,
+                    _sinh: Math.sinh,
+                    _tanh: Math.tanh,
+                    _isnan: Number.isNaN,
+                    _isinf: function (x) { return !isFinite(x); },
+                    _copysign: function (x, y) { return Math.sign(x) === Math.sign(y) ? x : -x; },
+
+                    table: new WebAssembly.Table({ initial: 0, element: "anyfunc" })
+                }
+            };
+
+            let real_url = (this.baseURL === "") ? "osc.wasm" : (this.baseURL + "/osc.wasm");
+            const dspFile = await fetch(real_url);
+            const dspBuffer = await dspFile.arrayBuffer();
+            const dspModule = await WebAssembly.compile(dspBuffer);
+            const dspInstance = await WebAssembly.instantiate(dspModule, importObject);
+
+            let HEAPU8 = new Uint8Array(dspInstance.exports.memory.buffer);
+            let json = this.heap2Str(HEAPU8);
+            let json_object = JSON.parse(json);
+            let options = { wasm_module: dspModule, json: json };
+
+            if (this.fWorkletProcessors.indexOf(name) === -1) {
+                try {
+                    let re = /JSON_STR/g;
+                    let oscProcessorString1 = oscProcessorString.replace(re, json);
+                    let real_url = window.URL.createObjectURL(new Blob([oscProcessorString1], { type: 'text/javascript' }));
+                    await this.context.audioWorklet.addModule(real_url);
+                    // Keep the osc name
+                    console.log("Keep the osc name");
+                    this.fWorkletProcessors.push(name);
+                } catch (e) {
+                    console.error(e);
+                    console.error("Faust " + this.name + " cannot be loaded or compiled");
+                    return null;
+                }
+            }
+            this.node = new oscNode(this.context, this.baseURL,
+                {
+                    numberOfInputs: (parseInt(json_object.inputs) > 0) ? 1 : 0,
+                    numberOfOutputs: (parseInt(json_object.outputs) > 0) ? 1 : 0,
+                    channelCount: Math.max(1, parseInt(json_object.inputs)),
+                    outputChannelCount: [parseInt(json_object.outputs)],
+                    channelCountMode: "explicit",
+                    channelInterpretation: "speakers",
+                    processorOptions: options
+                });
+            this.node.onprocessorerror = () => { console.log('An error from osc-processor was detected.'); }
+            return (this.node);
         } catch (e) {
-            this.error("Error in createScriptProcessor: " + e);
+            console.error(e);
+            console.error("Faust " + this.name + " cannot be loaded or compiled");
             return null;
         }
+    }
 
-        sp.output_handler = null;
-        sp.ins = null;
-        sp.outs = null;
-        sp.compute_handler = null;
-
-        sp.dspInChannnels = [];
-        sp.dspOutChannnels = [];
-
-        sp.fPitchwheelLabel = [];
-        sp.fCtrlLabel = new Array(128).fill(null).map(() => []);
-
-        sp.remap = (v, mn0, mx0, mn1, mx1) => (v - mn0) / (mx0 - mn0) * (mx1 - mn1) + mn1;
-
-        sp.numIn = inputs;
-        sp.numOut = outputs;
-
-        this.log(sp.numIn);
-        this.log(sp.numOut);
-
-        // Memory allocator
-        sp.ptr_size = 4;
-        sp.sample_size = 4;
-
-        sp.factory = dspInstance.exports;
-        sp.HEAP = dspInstance.exports.memory.buffer;
-        sp.HEAP32 = new Int32Array(sp.HEAP);
-        sp.HEAPF32 = new Float32Array(sp.HEAP);
-
-        this.log(sp.HEAP);
-        this.log(sp.HEAP32);
-        this.log(sp.HEAPF32);
-
-        // bargraph
-        sp.outputs_timer = 5;
-        sp.outputs_items = [];
-
-        // input items
-        sp.inputs_items = [];
-
-        // Start of HEAP index
-
-        // osc is placed first with index 0. Audio buffer start at the end of osc.
-        sp.audio_heap_ptr = parseInt(this.json_object.size);
-
-        // Setup pointers offset
-        sp.audio_heap_ptr_inputs = sp.audio_heap_ptr;
-        sp.audio_heap_ptr_outputs = sp.audio_heap_ptr_inputs + sp.numIn * sp.ptr_size;
-
-        // Setup buffer offset
-        sp.audio_heap_inputs = sp.audio_heap_ptr_outputs + sp.numOut * sp.ptr_size;
-        sp.audio_heap_outputs = sp.audio_heap_inputs + sp.numIn * bufferSize * sp.sample_size;
-
-        // Start of osc memory : osc is placed first with index 0
-        sp.dsp = 0;
-
-        sp.pathTable = [];
-
-        sp.update_outputs = () => {
-            if (sp.outputs_items.length > 0 && sp.output_handler && sp.outputs_timer-- === 0) {
-                sp.outputs_timer = 5;
-                sp.outputs_items.forEach(item => sp.output_handler(item, sp.factory.getParamValue(sp.dsp, sp.pathTable[item])));
-            }
-        };
-
-        sp.compute = e => {
-            for (let i = 0; i < sp.numIn; i++) { // Read inputs
-                const input = e.inputBuffer.getChannelData(i);
-                const dspInput = sp.dspInChannnels[i];
-                dspInput.set(input);
-            }
-            // Possibly call an externally given callback (for instance to synchronize playing a MIDIFile...)
-            if (sp.compute_handler) sp.compute_handler(bufferSize);
+    async loadGui() {
+        return new Promise((resolve, reject) => {
             try {
-                sp.factory.compute(sp.dsp, bufferSize, sp.ins, sp.outs); // Compute
+                // DO THIS ONLY ONCE. If another instance has already been added, do not add the html file again
+                let real_url = (this.baseURL === "") ? "main.html" : (this.baseURL + "/main.html");
+                if (!this.linkExists(real_url)) {
+                    // LINK DOES NOT EXIST, let's add it to the document
+                    var link = document.createElement('link');
+                    link.rel = 'import';
+                    link.href = real_url;
+                    document.head.appendChild(link);
+                    link.onload = (e) => {
+                        // the file has been loaded, instanciate GUI
+                        // and get back the HTML elem
+                        // HERE WE COULD REMOVE THE HARD CODED NAME
+                        var element = createoscGUI(this.node);
+                        resolve(element);
+                    }
+                } else {
+                    // LINK EXIST, WE AT LEAST CREATED ONE INSTANCE PREVIOUSLY
+                    // so we can create another instance
+                    var element = createoscGUI(this.node);
+                    resolve(element);
+                }
             } catch (e) {
+                console.log(e);
+                reject(e);
+            }
+        });
+    };
+
+    linkExists(url) {
+        return document.querySelectorAll(`link[href="${url}"]`).length > 0;
+    }
+}
+
+// Template string for AudioWorkletProcessor
+
+let oscProcessorString = `
+
+    'use strict';
+
+    // Monophonic Faust osc
+    class oscProcessor extends AudioWorkletProcessor {
+        
+        // JSON parsing functions
+        static parse_ui(ui, obj, callback)
+        {
+            for (var i = 0; i < ui.length; i++) {
+                oscProcessor.parse_group(ui[i], obj, callback);
+            }
+        }
+        
+        static parse_group(group, obj, callback)
+        {
+            if (group.items) {
+                oscProcessor.parse_items(group.items, obj, callback);
+            }
+        }
+        
+        static parse_items(items, obj, callback)
+        {
+            for (var i = 0; i < items.length; i++) {
+                callback(items[i], obj, callback);
+            }
+        }
+        
+        static parse_item1(item, obj, callback)
+        {
+            if (item.type === "vgroup"
+                || item.type === "hgroup"
+                || item.type === "tgroup") {
+                oscProcessor.parse_items(item.items, obj, callback);
+            } else if (item.type === "hbargraph"
+                       || item.type === "vbargraph") {
+                // Nothing
+            } else if (item.type === "vslider"
+                       || item.type === "hslider"
+                       || item.type === "button"
+                       || item.type === "checkbox"
+                       || item.type === "nentry") {
+                obj.push({ name: item.address,
+                         defaultValue: item.init,
+                         minValue: item.min,
+                         maxValue: item.max });
+            }
+        }
+        
+        static parse_item2(item, obj, callback)
+        {
+            if (item.type === "vgroup"
+                || item.type === "hgroup"
+                || item.type === "tgroup") {
+                oscProcessor.parse_items(item.items, obj, callback);
+            } else if (item.type === "hbargraph"
+                       || item.type === "vbargraph") {
+                // Keep bargraph adresses
+                obj.outputs_items.push(item.address);
+                obj.pathTable[item.address] = parseInt(item.index);
+            } else if (item.type === "vslider"
+                       || item.type === "hslider"
+                       || item.type === "button"
+                       || item.type === "checkbox"
+                       || item.type === "nentry") {
+                // Keep inputs adresses
+                obj.inputs_items.push(item.address);
+                obj.pathTable[item.address] = parseInt(item.index);
+            }
+        }
+     
+        static get parameterDescriptors() 
+        {
+            // Analyse JSON to generate AudioParam parameters
+            var params = [];
+            oscProcessor.parse_ui(JSON.parse(\`JSON_STR\`).ui, params, oscProcessor.parse_item1);
+            return params;
+        }
+       
+        constructor(options)
+        {
+            super(options);
+            this.running = true;
+            
+            const importObject = {
+                    env: {
+                        memoryBase: 0,
+                        tableBase: 0,
+
+                        // Integer version
+                        _abs: Math.abs,
+
+                        // Float version
+                        _acosf: Math.acos,
+                        _asinf: Math.asin,
+                        _atanf: Math.atan,
+                        _atan2f: Math.atan2,
+                        _ceilf: Math.ceil,
+                        _cosf: Math.cos,
+                        _expf: Math.exp,
+                        _floorf: Math.floor,
+                        _fmodf: function(x, y) { return x % y; },
+                        _logf: Math.log,
+                        _log10f: Math.log10,
+                        _max_f: Math.max,
+                        _min_f: Math.min,
+                        _remainderf: function(x, y) { return x - Math.round(x/y) * y; },
+                        _powf: Math.pow,
+                        _roundf: Math.fround,
+                        _sinf: Math.sin,
+                        _sqrtf: Math.sqrt,
+                        _tanf: Math.tan,
+                        _acoshf: Math.acosh,
+                        _asinhf: Math.asinh,
+                        _atanhf: Math.atanh,
+                        _coshf: Math.cosh,
+                        _sinhf: Math.sinh,
+                        _tanhf: Math.tanh,
+
+                        // Double version
+                        _acos: Math.acos,
+                        _asin: Math.asin,
+                        _atan: Math.atan,
+                        _atan2: Math.atan2,
+                        _ceil: Math.ceil,
+                        _cos: Math.cos,
+                        _exp: Math.exp,
+                        _floor: Math.floor,
+                        _fmod: function(x, y) { return x % y; },
+                        _log: Math.log,
+                        _log10: Math.log10,
+                        _max_: Math.max,
+                        _min_: Math.min,
+                        _remainder:function(x, y) { return x - Math.round(x/y) * y; },
+                        _pow: Math.pow,
+                        _round: Math.fround,
+                        _sin: Math.sin,
+                        _sqrt: Math.sqrt,
+                        _tan: Math.tan,
+                        _acosh: Math.acosh,
+                        _asinh: Math.asinh,
+                        _atanh: Math.atanh,
+                        _cosh: Math.cosh,
+                        _sinh: Math.sinh,
+                        _tanh: Math.tanh,
+
+                        table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
+                    }
+            };
+            
+            this.osc_instance = new WebAssembly.Instance(options.processorOptions.wasm_module, importObject);
+            this.json_object = JSON.parse(options.processorOptions.json);
+         
+            this.output_handler = function(path, value) { this.port.postMessage({ path: path, value: value }); };
+            
+            this.ins = null;
+            this.outs = null;
+
+            this.dspInChannnels = [];
+            this.dspOutChannnels = [];
+
+            this.numIn = parseInt(this.json_object.inputs);
+            this.numOut = parseInt(this.json_object.outputs);
+
+            // Memory allocator
+            this.ptr_size = 4;
+            this.sample_size = 4;
+            this.integer_size = 4;
+            
+            this.factory = this.osc_instance.exports;
+            this.HEAP = this.osc_instance.exports.memory.buffer;
+            this.HEAP32 = new Int32Array(this.HEAP);
+            this.HEAPF32 = new Float32Array(this.HEAP);
+
+            // Warning: keeps a ref on HEAP in Chrome and prevent proper GC
+            //console.log(this.HEAP);
+            //console.log(this.HEAP32);
+            //console.log(this.HEAPF32);
+
+            // bargraph
+            this.outputs_timer = 5;
+            this.outputs_items = [];
+
+            // input items
+            this.inputs_items = [];
+        
+            // Start of HEAP index
+
+            // osc is placed first with index 0. Audio buffer start at the end of osc.
+            this.audio_heap_ptr = parseInt(this.json_object.size);
+
+            // Setup pointers offset
+            this.audio_heap_ptr_inputs = this.audio_heap_ptr;
+            this.audio_heap_ptr_outputs = this.audio_heap_ptr_inputs + (this.numIn * this.ptr_size);
+
+            // Setup buffer offset
+            this.audio_heap_inputs = this.audio_heap_ptr_outputs + (this.numOut * this.ptr_size);
+            this.audio_heap_outputs = this.audio_heap_inputs + (this.numIn * NUM_FRAMES * this.sample_size);
+            
+            // Start of osc memory : osc is placed first with index 0
+            this.dsp = 0;
+
+            this.pathTable = [];
+         
+            // Send output values to the AudioNode
+            this.update_outputs = function ()
+            {
+                if (this.outputs_items.length > 0 && this.output_handler && this.outputs_timer-- === 0) {
+                    this.outputs_timer = 5;
+                    for (var i = 0; i < this.outputs_items.length; i++) {
+                        this.output_handler(this.outputs_items[i], this.HEAPF32[this.pathTable[this.outputs_items[i]] >> 2]);
+                    }
+                }
+            }
+            
+            this.initAux = function ()
+            {
+                var i;
+                
+                if (this.numIn > 0) {
+                    this.ins = this.audio_heap_ptr_inputs;
+                    for (i = 0; i < this.numIn; i++) {
+                        this.HEAP32[(this.ins >> 2) + i] = this.audio_heap_inputs + ((NUM_FRAMES * this.sample_size) * i);
+                    }
+                    
+                    // Prepare Ins buffer tables
+                    var dspInChans = this.HEAP32.subarray(this.ins >> 2, (this.ins + this.numIn * this.ptr_size) >> 2);
+                    for (i = 0; i < this.numIn; i++) {
+                        this.dspInChannnels[i] = this.HEAPF32.subarray(dspInChans[i] >> 2, (dspInChans[i] + NUM_FRAMES * this.sample_size) >> 2);
+                    }
+                }
+                
+                if (this.numOut > 0) {
+                    this.outs = this.audio_heap_ptr_outputs;
+                    for (i = 0; i < this.numOut; i++) {
+                        this.HEAP32[(this.outs >> 2) + i] = this.audio_heap_outputs + ((NUM_FRAMES * this.sample_size) * i);
+                    }
+                    
+                    // Prepare Out buffer tables
+                    var dspOutChans = this.HEAP32.subarray(this.outs >> 2, (this.outs + this.numOut * this.ptr_size) >> 2);
+                    for (i = 0; i < this.numOut; i++) {
+                        this.dspOutChannnels[i] = this.HEAPF32.subarray(dspOutChans[i] >> 2, (dspOutChans[i] + NUM_FRAMES * this.sample_size) >> 2);
+                    }
+                }
+                
+                // Parse UI
+                oscProcessor.parse_ui(this.json_object.ui, this, oscProcessor.parse_item2);
+                
+                // Init osc
+                this.factory.init(this.dsp, sampleRate); // 'sampleRate' is defined in AudioWorkletGlobalScope  
+            }
+
+            this.setParamValue = function (path, val)
+            {
+                this.HEAPF32[this.pathTable[path] >> 2] = val;
+            }
+
+            this.getParamValue = function (path)
+            {
+                return this.HEAPF32[this.pathTable[path] >> 2];
+            }
+
+            // Init resulting osc
+            this.initAux();
+        }
+        
+        process(inputs, outputs, parameters) 
+        {
+            var input = inputs[0];
+            var output = outputs[0];
+            
+            // Check inputs
+            if (this.numIn > 0 && (!input || !input[0] || input[0].length === 0)) {
+                //console.log("Process input error");
+                return true;
+            }
+            // Check outputs
+            if (this.numOut > 0 && (!output || !output[0] || output[0].length === 0)) {
+                //console.log("Process output error");
+                return true;
+            }
+            
+            // Copy inputs
+            if (input !== undefined) {
+                for (var chan = 0; chan < Math.min(this.numIn, input.length); ++chan) {
+                    var dspInput = this.dspInChannnels[chan];
+                    dspInput.set(input[chan]);
+                }
+            }
+            
+            /*
+            TODO: sample accurate control change is not yet handled
+            When no automation occurs, params[i][1] has a length of 1,
+            otherwise params[i][1] has a length of NUM_FRAMES with possible control change each sample
+            */
+            
+            // Update controls
+            for (const path in parameters) {
+                const paramArray = parameters[path];
+                this.setParamValue(path, paramArray[0]);
+            }
+        
+          	// Compute
+            try {
+                this.factory.compute(this.dsp, NUM_FRAMES, this.ins, this.outs);
+            } catch(e) {
                 console.log("ERROR in compute (" + e + ")");
             }
-            sp.update_outputs(); // Update bargraph
-            for (let i = 0; i < sp.numOut; i++) { // Write outputs
-                const output = e.outputBuffer.getChannelData(i);
-                const dspOutput = sp.dspOutChannnels[i];
-                output.set(dspOutput);
-            }
-        };
-        // JSON parsing
-        sp.parse_ui = ui => ui.forEach(group => sp.parse_group(group));
-        sp.parse_group = group => group.items ? sp.parse_items(group.items) : null;
-        sp.parse_items = items => items.forEach(item => sp.parse_item(item));
-        sp.parse_item = item => {
-            if (item.type === "vgroup" || item.type === "hgroup" || item.type === "tgroup") {
-                sp.parse_items(item.items);
-            } else if (item.type === "hbargraph" || item.type === "vbargraph") {
-                // Keep bargraph adresses
-                sp.outputs_items.push(item.address);
-                sp.pathTable[item.address] = parseInt(item.index);
-            } else if (item.type === "vslider" || item.type === "hslider" || item.type === "button"
-                || item.type === "checkbox" || item.type === "nentry") {
-                // Keep inputs adresses
-                sp.inputs_items.push(item.address);
-                sp.pathTable[item.address] = parseInt(item.index);
-                if (!item.meta) return;
-                item.meta.forEach(meta => {
-                    const midi = meta.midi;
-                    if (!midi) return;
-                    const strMidi = midi.trim();
-                    if (strMidi === "pitchwheel") {
-                        sp.fPitchwheelLabel.push({
-                            path: item.address,
-                            min: parseFloat(item.min),
-                            max: parseFloat(item.max)
-                        });
-                    } else {
-                        const matched = strMidi.match(/^ctrl\s(\d+)/);
-                        if (!matched) return;
-                        sp.fCtrlLabel[parseInt(matched[1])].push({
-                            path: item.address,
-                            min: parseFloat(item.min),
-                            max: parseFloat(item.max)
-                        });
-                    }
-                })
-            }
-        }
-        sp.initAux = () => { // Setup web audio context
-            this.log("buffer_size " + bufferSize);
-            sp.onaudioprocess = sp.compute;
-            if (sp.numIn > 0) {
-                sp.ins = sp.audio_heap_ptr_inputs;
-                for (let i = 0; i < sp.numIn; i++) {
-                    sp.HEAP32[(sp.ins >> 2) + i] = sp.audio_heap_inputs + bufferSize * sp.sample_size * i;
-                }
-                // Prepare Ins buffer tables
-                const dspInChans = sp.HEAP32.subarray(sp.ins >> 2, (sp.ins + sp.numIn * sp.ptr_size) >> 2);
-                for (let i = 0; i < sp.numIn; i++) {
-                    sp.dspInChannnels[i] = sp.HEAPF32.subarray(dspInChans[i] >> 2, (dspInChans[i] + bufferSize * sp.sample_size) >> 2);
+            
+            // Update bargraph
+            this.update_outputs();
+            
+            // Copy outputs
+            if (output !== undefined) {
+                for (var chan = 0; chan < Math.min(this.numOut, output.length); ++chan) {
+                    var dspOutput = this.dspOutChannnels[chan];
+                    output[chan].set(dspOutput);
                 }
             }
-            if (sp.numOut > 0) {
-                sp.outs = sp.audio_heap_ptr_outputs;
-                for (let i = 0; i < sp.numOut; i++) {
-                    sp.HEAP32[(sp.outs >> 2) + i] = sp.audio_heap_outputs + bufferSize * sp.sample_size * i;
-                }
-                // Prepare Out buffer tables
-                const dspOutChans = sp.HEAP32.subarray(sp.outs >> 2, (sp.outs + sp.numOut * sp.ptr_size) >> 2);
-                for (let i = 0; i < sp.numOut; i++) {
-                    sp.dspOutChannnels[i] = sp.HEAPF32.subarray(dspOutChans[i] >> 2, (dspOutChans[i] + bufferSize * sp.sample_size) >> 2);
-                }
+            
+            return this.running;
+    	}
+        
+        handleMessage(event)
+        {
+            var msg = event.data;
+            switch (msg.type) {
+                case "destroy": this.running = false; break;
             }
-            // Parse JSON UI part
-            sp.parse_ui(this.json_object.ui);
-            // Init osc
-            sp.factory.init(sp.dsp, audioCtx.sampleRate);
-        }
-
-        // Public API
-
-        /**
-         * Destroy the node, deallocate resources.
-         */
-        sp.destroy = () => { }
-
-        sp.getSampleRate = () => audioCtx.sampleRate;   // Return current sample rate
-        sp.getNumInputs = () => sp.numIn;               // Return instance number of audio inputs.
-        sp.getNumOutputs = () => sp.numOut;             // Return instance number of audio outputs.    
-
-        /**
-        * Global init, doing the following initialization:
-        * - static tables initialization
-        * - call 'instanceInit': constants and instance state initialisation
-        *
-        * @param {number} sampleRate - the sampling rate in Hertz
-        */
-        sp.init = sampleRate => sp.factory.init(sp.dsp, sampleRate);
-
-        /**
-        * Init instance state.
-        *
-        * @param {number} sampleRate - the sampling rate in Hertz
-        */
-        sp.instanceInit = sampleRate => sp.factory.instanceInit(sp.dsp, sampleRate);
-
-        /**
-        * Init instance constant state.
-        *
-        * @param {number} sampleRate - the sampling rate in Hertz
-        */
-        sp.instanceConstants = sampleRate => sp.factory.instanceConstants(sp.dsp, sampleRate);
-
-        /* Init default control parameters values. */
-        sp.instanceResetUserInterface = () => sp.factory.instanceResetUserInterface(sp.dsp);
-
-        /* Init instance state (delay lines...).*/
-        sp.instanceClear = () => sp.factory.instanceClear(sp.dsp);
-
-        /**
-         * Trigger the Meta handler with instance specific calls to 'declare' (key, value) metadata.
-         *
-         * @param {{ declare: (string, any) => any }} handler - the Meta handler as a 'declare' function of type (key, value)
-         */
-        sp.metadata = handler => {
-            if (this.json_object.meta) {
-                this.json_object.meta.forEach(meta => handler.declare(Object.keys(meta)[0], Object.values(meta)[0]));
-            }
-        }
-
-        /**
-         * Setup a control output handler with a function of type (path, value)
-         * to be used on each generated output value. This handler will be called
-         * each audio cycle at the end of the 'compute' method.
-         *
-         * @param {{ declare: (string, any) => any }} handler - a function of type function(path, value)
-         */
-        sp.setOutputParamHandler = handler => sp.output_handler = handler;
-
-        /**
-         * Get the current output handler.
-         */
-        sp.getOutputParamHandler = () => sp.output_handler;
-
-        /**
-         * Control change
-         *
-         * @param {number} channel - the MIDI channel (0..15, not used for now)
-         * @param {number} ctrl - the MIDI controller number (0..127)
-         * @param {number} value - the MIDI controller value (0..127)
-         */
-        sp.ctrlChange = (channel, ctrl, value) => {
-            if (!sp.fCtrlLabel[ctrl].length) return;
-            sp.fCtrlLabel[ctrl].forEach(ctrl => {
-                const path = ctrl.path;
-                sp.setParamValue(path, sp.remap(value, 0, 127, ctrl.min, ctrl.max));
-                if (sp.output_handler) sp.output_handler(path, sp.getParamValue(path));
-            })
-        }
-
-        /**
-         * PitchWeel
-         *
-         * @param {number} channel - the MIDI channel (0..15, not used for now)
-         * @param {number} value - the MIDI controller value (0..16383)
-         */
-        sp.pitchWheel = (channel, wheel) => {
-            sp.fPitchwheelLabel.forEach(pw => {
-                sp.setParamValue(pw.path, sp.remap(wheel, 0, 16383, pw.min, pw.max));
-                if (sp.output_handler) sp.output_handler(pw.path, sp.getParamValue(pw.path));
-            });
-        }
-
-        /**
-         * Set control value.
-         *
-         * @param {string} path - the path to the wanted control (retrieved using 'getParams' method)
-         * @param {number} val - the float value for the wanted parameter
-         */
-
-        sp.setParamValue = (path, val) => sp.factory.setParamValue(sp.dsp, sp.pathTable[path], val);
-        /**
-         * Get control value.
-         *
-         * @param {string} path - the path to the wanted control (retrieved using 'getParams' method)
-         *
-         * @return {number} the float value
-         */
-        sp.getParamValue = path => sp.factory.getParamValue(sp.dsp, sp.pathTable[path]);
-
-        /**
-         * Get the table of all input parameters paths.
-         *
-         * @return {object} the table of all input parameter paths.
-         */
-        sp.getParams = () => sp.inputs_items;
-
-        /**
-         * Get osc JSON description with its UI and metadata.
-         *
-         * @return {string} osc JSON description
-         */
-        sp.getJSON = () => this.json;
-
-        // Init resulting osc
-        sp.initAux();
-        return sp;
-    }
-
-    /**
-    * Create a ScriptProcessorNode Web Audio object
-    * by loading and compiling the Faust wasm file
-    *
-    * @param {AudioContext | webkitAudioContext} audioCtx - the Web Audio context
-    * @param {number} bufferSize - the bufferSize in frames
-    * @returns {Promise<ScriptProcessorNode>} a Promise for valid WebAudio ScriptProcessorNode object or null
-    */
-    async createosc(audioCtx, bufferSize) {
-        const importObject = {
-            env: {
-                memoryBase: 0,
-                tableBase: 0,
-                _abs: Math.abs,
-
-                // Float version
-                _acosf: Math.acos,
-                _asinf: Math.asin,
-                _atanf: Math.atan,
-                _atan2f: Math.atan2,
-                _ceilf: Math.ceil,
-                _cosf: Math.cos,
-                _expf: Math.exp,
-                _floorf: Math.floor,
-                _fmodf: (x, y) => x % y,
-                _logf: Math.log,
-                _log10f: Math.log10,
-                _max_f: Math.max,
-                _min_f: Math.min,
-                _remainderf: (x, y) => x - Math.round(x / y) * y,
-                _powf: Math.pow,
-                _roundf: Math.fround,
-                _sinf: Math.sin,
-                _sqrtf: Math.sqrt,
-                _tanf: Math.tan,
-                _acoshf: Math.acosh,
-                _asinhf: Math.asinh,
-                _atanhf: Math.atanh,
-                _coshf: Math.cosh,
-                _sinhf: Math.sinh,
-                _tanhf: Math.tanh,
-                _isnanf: Number.isNaN,
-                _isinff: function (x) { return !isFinite(x); },
-                _copysignf: function (x, y) { return Math.sign(x) === Math.sign(y) ? x : -x; },
-
-                // Double version
-                _acos: Math.acos,
-                _asin: Math.asin,
-                _atan: Math.atan,
-                _atan2: Math.atan2,
-                _ceil: Math.ceil,
-                _cos: Math.cos,
-                _exp: Math.exp,
-                _floor: Math.floor,
-                _fmod: (x, y) => x % y,
-                _log: Math.log,
-                _log10: Math.log10,
-                _max_: Math.max,
-                _min_: Math.min,
-                _remainder: (x, y) => x - Math.round(x / y) * y,
-                _pow: Math.pow,
-                _round: Math.fround,
-                _sin: Math.sin,
-                _sqrt: Math.sqrt,
-                _tan: Math.tan,
-                _acosh: Math.acosh,
-                _asinh: Math.asinh,
-                _atanh: Math.atanh,
-                _cosh: Math.cosh,
-                _sinh: Math.sinh,
-                _tanh: Math.tanh,
-                _isnan: Number.isNaN,
-                _isinf: function (x) { return !isFinite(x); },
-                _copysign: function (x, y) { return Math.sign(x) === Math.sign(y) ? x : -x; },
-
-                table: new WebAssembly.Table({ initial: 0, element: "anyfunc" })
-            }
-        };
-
-        try {
-            const dspFile = await fetch(this.name + ".wasm");
-            const dspBuffer = await dspFile.arrayBuffer();
-            const dspModule = await WebAssembly.instantiate(dspBuffer, importObject);
-            return this.getNode(dspModule.instance, audioCtx, bufferSize);
-        } catch (e) {
-            this.error(e);
-            this.error("Faust " + this.name + " cannot be loaded or compiled");
         }
     }
 
-    log(str) {
-        this._log.push(str);
-        if (this.debug) console.log(str);
+    // Globals
+    const NUM_FRAMES = 128;
+    try {
+        registerProcessor('osc', oscProcessor);
+    } catch (error) {
+        console.warn(error);
     }
-
-    error(str) {
-        this._log.push(str);
-        console.error(str);
-    }
-}
+`;
 
 const dspName = "osc";
-const instance = new FaustWasm2ScriptProcessor(dspName);
 
-// output to window or npm package module
+// WAP factory or npm package module
 if (typeof module === "undefined") {
-    window[dspName] = instance;
+    window.osc = osc;
+    window.Faustosc = osc;
+    window[dspName] = osc;
 } else {
-    const exp = {};
-    exp[dspName] = instance;
-    module.exports = exp;
+    module.exports = { osc };
 }
-
-// Usage : osc.createosc(audioCtx, 1024).then(dsp => dsp.connect(audioCtx.destination));
 </script>
 </head>
 <body>
 
 
 <script>
-    'use strict';
-    // Faust part
-    if (!window.dspName) window.dspName = "mydsp";
-    const audioCtx = new (window.AudioContext || window.webkitAudioContext)(({ latencyHint: 0.00001 }));
-    audioCtx.destination.channelInterpretation = "discrete";
-    let audioInput, dspNode, $faustUI;
-    let dspOutputHandler = () => {};
 
-    // MIDI input handling
-    const midiMessageReceived = e => {
-        if (!dspNode) return;
-        const cmd = e.data[0] >> 4;
-        const channel = e.data[0] & 0xf;
-        const data1 = e.data[1];
-        const data2 = e.data[2];
-        if (channel === 9) return;
-        else if (cmd === 11) dspNode.ctrlChange(channel, data1, data2);
-        else if (cmd === 14) dspNode.pitchWheel(channel, (data2 * 128.0 + data1));
+'use strict';
+
+// Faust part
+const isWasm = (typeof(WebAssembly) !== "undefined");
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)(({ latencyHint: 0.00001 }));
+audioCtx.destination.channelInterpretation = "discrete";
+let factory = null;
+let node = null;
+
+function workletAvailable()
+{
+    if (typeof (OfflineAudioContext) === "undefined") return false;
+    const context = new OfflineAudioContext(1, 1, 44100);
+    return context.audioWorklet && typeof context.audioWorklet.addModule === 'function';
+}
+
+// MIDI input handling
+
+function pitchWheel(channel, wheel)
+{
+    if (node) {
+        node.pitchWheel(channel, wheel);
     }
-    const activateMIDIInput = () => {
-        console.log("activateMIDIInput");
-        const onError = error => console.error(error);
-        const onSuccess = access => {
-            access.onstatechange = e => {
-                if (e.port.type === "input") {
-                    if (e.port.state === "connected") {
-                        console.log(e.port.name + " is connected");
-                        e.port.onmidimessage = midiMessageReceived;
-                    } else if (e.port.state  === "disconnected") {
-                        console.log(e.port.name + " is disconnected");
-                        e.port.onmidimessage = null;
-                    }
-                }
-            }
-            for (const input of access.inputs.values()) {
-                input.onmidimessage = midiMessageReceived;
-                console.log(input.name + " is connected");
+}
+
+function ctrlChange(channel, ctrl, value)
+{
+    if (node) {
+        node.ctrlChange(channel, ctrl, value);
+    }
+}
+
+function midiMessageReceived(ev)
+{
+    var cmd = ev.data[0] >> 4;
+    var channel = ev.data[0] & 0xf;
+    var data1 = ev.data[1];
+    var data2 = ev.data[2];
+
+    if (channel === 9) {
+        return;
+    } else if (cmd === 11) {
+        ctrlChange(channel, data1, data2);
+    } else if (cmd === 14) {
+        pitchWheel(channel, (data2 * 128.0 + data1));
+    }
+}
+
+function onerrorcallback(error) {
+    console.log(error);
+}
+
+function onsuccesscallbackStandard(access) {
+    
+    access.onstatechange = function(e) {
+        if (e.port.type === "input") {
+            if (e.port.state === "connected") {
+                console.log(e.port.name + " is connected");
+                e.port.onmidimessage = midiMessageReceived;
+            } else if (e.port.state  === "disconnected") {
+                console.log(e.port.name + " is disconnected");
+                e.port.onmidimessage = null;
             }
         }
-
-        if (navigator.requestMIDIAccess) {
-            navigator.requestMIDIAccess().then(onSuccess, onError);
-        } else {
-            alert("MIDI input cannot be activated, either your browser still does't have it, or you need to explicitly activate it.");
-        }
     }
+    
+    for (var input of access.inputs.values()) {
+        input.onmidimessage = midiMessageReceived;
+        console.log(input.name + " is connected");
+    }
+}
 
-    // Audio input handling
-    const activateAudioInput = () => {
-        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-            const onSuccess = device => {
-                audioInput = audioCtx.createMediaStreamSource(device); // Create an AudioNode from the stream.
-                audioInput.connect(dspNode); // Connect it to the destination.
-            };
+function activateMIDIInput() {
+    console.log("activateMIDIInput");
+    if (typeof(navigator.requestMIDIAccess) !== "undefined") {
+        navigator.requestMIDIAccess().then(onsuccesscallbackStandard, onerrorcallback);
+    } else {
+        alert("MIDI input cannot be activated, either your browser still does't have it, or you need to explicitly activate it.");
+    }
+}
 
-            const onError = e => {
+// Audio input handling
+
+function activateAudioInput()
+{
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: false } })
+            .then(getDevice)
+            .catch((e) => {
                 alert('Error getting audio input');
-                console.error(e);
-                audioInput = null;
-            };
+                console.log(e);
+            });
+    } else {
+        alert('Audio input API not available');
+    }
+}
 
-            navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: false } })
-                .then(onSuccess)
-                .catch(onError);
-        } else {
-            alert('Audio input API not available');
+function getDevice(device)
+{
+    // Connect the input to the destination.
+    audioCtx.createMediaStreamSource(device).connect(node);
+}
+
+// Save/Load functions using local storage
+
+//set item from local storage 'item_key' key
+function getStorageItemValue(item_key, key)
+{
+    if (localStorage.getItem(item_key)) {
+        var item_value = JSON.parse(localStorage.getItem(item_key));
+        var item_index = item_value.findIndex((obj => obj[0] === key));
+        return (item_index >= 0) ? item_value[item_index][1]: null;
+    } else {
+        return null;
+    }
+}
+
+//get [key, value] in local storage item_key key
+function setStorageItemValue(item_key, key, value)
+{
+    var item_value;
+    if (localStorage.getItem(item_key)) {
+        item_value = JSON.parse(localStorage.getItem(item_key));
+    } else {
+        item_value = [];
+    }
+    
+    // Possibly update an existing 'key'
+    var item_index = item_value.findIndex((obj => obj[0] === key));
+    if (item_index >= 0) {
+        item_value[item_index][1] = value;
+        // Otherwise push a new [key, value]
+    } else {
+        item_value.push([key, value]);
+    }
+    
+    localStorage.setItem(item_key, JSON.stringify(item_value));
+}
+
+function saveoscState()
+{
+    var params = node.getParams();
+    for (var i = 0; i < params.length; i++) {
+        setStorageItemValue('osc', params[i], node.getParamValue(params[i]));
+    }
+}
+
+function loadoscState()
+{
+    var params = node.getParams();
+    for (var i = 0; i < params.length; i++) {
+        var value = getStorageItemValue('osc', params[i]);
+        if (value) {
+            // Restore osc state
+            node.setParamValue(params[i], Number(value));
+            // Restore GUI state
+            node.getOutputParamHandler()(params[i], Number(value));
         }
     }
+}
 
-    // Save/Load functions using local storage
-    const getStorageItemValue = (item_key, key) => { // get item from local storage 'item_key' key
-        if (!localStorage.getItem(item_key)) return null;
-        const item_value = JSON.parse(localStorage.getItem(item_key));
-        const item_index = item_value.findIndex(obj => obj[0] === key);
-        return item_index >= 0 ? item_value[item_index][1] : null;
-    }
+function startoscAux(aw_node)
+{
+    node = aw_node;
 
-    const setStorageItemValue = (item_key, key, value) => { // set [key, value] in local storage item_key key
-        let item_value = [];
-        if (localStorage.getItem(item_key)) item_value = JSON.parse(localStorage.getItem(item_key));
-        const item_index = item_value.findIndex((obj => obj[0] === key)); // Possibly update an existing 'key'
-        if (item_index >= 0) item_value[item_index][1] = value; // Otherwise push a new [key, value]
-        else item_value.push([key, value]);
-        localStorage.setItem(item_key, JSON.stringify(item_value));
+    if (node.getNumInputs() > 0) {
+        activateAudioInput();
     }
+    
+    node.connect(audioCtx.destination);
+    console.log(node.getJSON());
+    console.log(node.getParams());
 
-    const saveoscState = () => {
-        dspNode.getParams().forEach(param => {
-            setStorageItemValue('osc', param, dspNode.getParamValue(param));
-        })
-    }
+    // No polling from the server needed, so use an empty loop
+    _f4u$t.main_loop = function() {}
 
-    const loadoscState = () => {
-        dspNode.getParams().forEach(param => {
-            const value = getStorageItemValue('osc', param);
-            if (typeof value === "number") {
-                dspNode.setParamValue(param, parseFloat(value)); // Restore osc state
-                dspOutputHandler(param, parseFloat(value)); // Restore GUI state
-            }
-        })
-    }
+    var faustsvg = $('<div />');
+    $('body').append(faustsvg);
+    
+    node.setOutputParamHandler(_f4u$t.main(node.getJSON(), faustsvg, function(path, val) { node.setParamValue(path, val); }));
 
-    const initosc = bufferSizeIn => {
-        if (typeof WebAssembly === "undefined") return alert("WebAssembly is not supported in this browser !");
-        if (!window[dspName]) return console.error(dspName + " instance not found.");
-        const bufferSize = bufferSizeIn || 1024;
-        window[dspName].createosc(audioCtx, bufferSize)
-        .then(dsp => {
-            if (!dsp) return console.error("Error in osc creation.");
-            if (dspNode) { // destroy current
-                dspNode.disconnect(audioCtx.destination);
-                if (audioInput) audioInput.disconnect(dspNode);
-            }
-            dspNode = dsp;
-            if (dspNode.getNumInputs() > 0) activateAudioInput();
-            dspNode.connect(audioCtx.destination);
-            // console.log(dspNode.getJSON());
-            // TODO: emcc
-            // dspNode.metadata({ declare: function(key, value) { console.log("key = " + key + " value = " + value); }});
-            // console.log(dspNode.getParams());
-            if (typeof _f4u$t === "undefined") return;
-            if (typeof $ === "undefined") return;
-            if ($faustUI) $faustUI.remove();
-            $faustUI = $("<div>");
-            $("body").append($faustUI);
-            dspOutputHandler = _f4u$t.main(dspNode.getJSON(), $faustUI, (path, val) => dspNode.setParamValue(path, val));
-            dspNode.setOutputParamHandler(dspOutputHandler);
-        
-            loadoscState(); // Load osc state from local storage
-        });
+    // Load osc state from local storage
+    loadoscState();
+}
+
+function startosc()
+{
+    startNewosc();
+}
+
+function startNewosc()
+{
+    if (isWasm && workletAvailable()) {
+        factory = new Faustosc(audioCtx, "");
+        factory.load()
+        .then((aw_node) => startoscAux(aw_node))
+        .catch((error) => { console.log(error); console.log("Faust mydsp cannot be loaded or compiled"); });
+    }  else {
+        alert("WebAssembly or AudioWorklet is not supported in this browser !");
     }
-    // To activate audio on iOS
-    window.addEventListener("touchstart", () => {
+}
+
+// To activate audio on iOS
+window.addEventListener("touchstart", () => {
         if (audioCtx.state !== "suspended") return;
         const buffer = audioCtx.createBuffer(1, 1, 22050);
         const source = audioCtx.createBufferSource(); // create empty buffer
@@ -6033,40 +6531,27 @@ if (typeof module === "undefined") {
         source.connect(audioCtx.destination); // connect to output (your speakers)
         source.start(); // play the file
         audioCtx.resume().then(() => console.log("Audio resumed"));
-    }, false);
-    
-    // On desktop
-    window.addEventListener("mousedown", () => {
-        if (audioCtx.state !== "suspended") return;
-        audioCtx.resume().then(() => console.log("Audio resumed"))
-    });
-    
-    if (typeof _f4u$t !== "undefined") _f4u$t.main_loop = () => {}; // No polling from the server needed, so use an empty loop
-    
-    // Start monophonic instrument
-    if (typeof Module !== "undefined") {
-        console.log("Compiled with EMCC");
-        Module['onRuntimeInitialized'] = initosc;
-    } else {
-        console.log("Compiled with WASM backend");
-        initosc();
-        activateMIDIInput();
-    }
+        }, false);
+        
+// On desktop
+window.addEventListener("mousedown", () => {
+    if (audioCtx.state !== "suspended") return;
+    audioCtx.resume().then(() => console.log("Audio resumed"))
+});
 
-    // Save osc state to local storage
-    setInterval(() => dspNode ? saveoscState() : null, 1000);
+// Start monophonic instrument
+if (typeof (Module) !== "undefined") {
+    console.log("Compiled with EMCC");
+    Module['onRuntimeInitialized'] = startosc;
+} else {
+    console.log("Compiled with WASM backend");
+    activateMIDIInput();
+    startosc();
+}
+
+// Save osc state to local storage
+setInterval(function() { if (node) saveoscState(); }, 1000);
 
 </script>
-
-<div style="text-align: center">
-    <select name="selectedBuffer" onChange="initosc(this.options[this.selectedIndex].value)">
-        <option value="256">256</option>
-        <option value="512">512</option>
-        <option selected value="1024">1024</option>
-        <option value="2048">2048</option>
-        <option value="4096">4096</option>
-        <option value="8192">8192</option>
-    </select>
-</div>
 </body>
 </html>
