@@ -18,6 +18,7 @@ laspect-fréquentiel
 la-pression-acoustique
 lévaluation-de-la-distance
 lacoustique-des-salles
+décrire-une-acoustique
 les-types-de-traitements
 considération-dacoustique-pour-le-travail-de-son
 cas-dune-cabine-de-prise

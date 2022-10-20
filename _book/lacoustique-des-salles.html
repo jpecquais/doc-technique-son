@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Jean-Loup Pecquais" />
 
 
-<meta name="date" content="2022-10-18" />
+<meta name="date" content="2022-10-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -103,11 +103,12 @@ set in the _output.yml file.</p>" />
 </ul></li>
 <li class="chapter" data-level="4" data-path="lacoustique-des-salles.html"><a href="lacoustique-des-salles.html"><i class="fa fa-check"></i><b>4</b> L’acoustique des salles</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="lacoustique-des-salles.html"><a href="lacoustique-des-salles.html#les-types-de-traitements"><i class="fa fa-check"></i><b>4.1</b> Les types de traitements</a></li>
-<li class="chapter" data-level="4.2" data-path="lacoustique-des-salles.html"><a href="lacoustique-des-salles.html#considération-dacoustique-pour-le-travail-de-son"><i class="fa fa-check"></i><b>4.2</b> Considération d’acoustique pour le travail de son</a>
+<li class="chapter" data-level="4.1" data-path="lacoustique-des-salles.html"><a href="lacoustique-des-salles.html#décrire-une-acoustique"><i class="fa fa-check"></i><b>4.1</b> Décrire une acoustique</a></li>
+<li class="chapter" data-level="4.2" data-path="lacoustique-des-salles.html"><a href="lacoustique-des-salles.html#les-types-de-traitements"><i class="fa fa-check"></i><b>4.2</b> Les types de traitements</a></li>
+<li class="chapter" data-level="4.3" data-path="lacoustique-des-salles.html"><a href="lacoustique-des-salles.html#considération-dacoustique-pour-le-travail-de-son"><i class="fa fa-check"></i><b>4.3</b> Considération d’acoustique pour le travail de son</a>
 <ul>
-<li class="chapter" data-level="4.2.1" data-path="lacoustique-des-salles.html"><a href="lacoustique-des-salles.html#cas-dune-cabine-de-prise"><i class="fa fa-check"></i><b>4.2.1</b> Cas d’une cabine de prise</a></li>
-<li class="chapter" data-level="4.2.2" data-path="lacoustique-des-salles.html"><a href="lacoustique-des-salles.html#cas-dune-régie-découte"><i class="fa fa-check"></i><b>4.2.2</b> Cas d’une régie d’écoute</a></li>
+<li class="chapter" data-level="4.3.1" data-path="lacoustique-des-salles.html"><a href="lacoustique-des-salles.html#cas-dune-cabine-de-prise"><i class="fa fa-check"></i><b>4.3.1</b> Cas d’une cabine de prise</a></li>
+<li class="chapter" data-level="4.3.2" data-path="lacoustique-des-salles.html"><a href="lacoustique-des-salles.html#cas-dune-régie-découte"><i class="fa fa-check"></i><b>4.3.2</b> Cas d’une régie d’écoute</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="le-chemin-du-signal.html"><a href="le-chemin-du-signal.html"><i class="fa fa-check"></i><b>5</b> Le chemin du signal</a></li>
@@ -227,26 +228,37 @@ set in the _output.yml file.</p>" />
 <div id="lacoustique-des-salles" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">Chapitre 4</span> L’acoustique des salles<a href="lacoustique-des-salles.html#lacoustique-des-salles" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Tout environnement, sollicité par l’émission d’un son en son sein, produit une réponse acoustique. Cette réponse acoustique est appelée réverbération. Elle est caractéristique d’un lieu et peut, dans certains cas, être une alliée précieuse dans notre travail. Dans d’autres, elle est source de problèmes et complexifie grandement notre travail d’écoute analytique.</p>
-<div id="les-types-de-traitements" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> Les types de traitements<a href="lacoustique-des-salles.html#les-types-de-traitements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="décrire-une-acoustique" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Décrire une acoustique<a href="lacoustique-des-salles.html#décrire-une-acoustique" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Il est commun de décrire une acoustique comme un phénomène en deux parties : les premières réflexions et le champ diffus.</p>
+<p>Les premières réflexions sont les premiers rebonds d’une onde sonore sur les parois d’une salle et sont caractéristiques de la signature acoustique du lieu. Ces rebonds reviennent à l’auditeur avec un certain temps. Ce retard se nomme souvent « Pré-délai » dans les moteurs de réverbération artificiels. Ce prédélai est fonction de deux paramètres :</p>
+<ul>
+<li>la taille de la pièce ; plus la pièce est petite, plus les premières réflexions reviendront à l’auditeur rapidement.</li>
+<li>les positions de la source sonore et de l’auditeur ; plus l’auditeur est proche de la source, plus les premières réflexions arriveront après le son direct, plus l’auditeur est loin de la source, plus les premières réflexions arriveront en même temps que le son direct.</li>
+</ul>
+<p>Lorsque les premières réflexions elles-mêmes auront rebondi plusieurs fois sur les parois du lieu, le phénomène d’écho des premières réflexions va se muer en champs diffus, par nature plus dense. La longueur du champ diffus se mesure grâce au RT60. Cette méthode de mesure propose de regarder le temps que met la réverbération à perdre 60 dB. Ce temps permettra ensuite de donner une longueur de réverbération.</p>
+<p>Attention, il est souvent considéré que la taille de la pièce joue sur la longueur de réverbération. En fait, la taille de la pièce joue sur la structure des échos dans le temps, et donc, principalement sur les premières réflexions. La longueur de la réverbération dépend plutôt de la nature des matériaux dans la pièce. Plus ceux-ci seront réfléchissants, plus la réverbération sera longue, plus ceux-ci seront absorbants, plus la réverbération sera courte.</p>
+</div>
+<div id="les-types-de-traitements" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Les types de traitements<a href="lacoustique-des-salles.html#les-types-de-traitements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>L’acoustique d’un lieu est un des facteurs les plus déterminants sur le rendu sonore. Mais c’est aussi celui sur lequel il est plus difficile et technique d’intervenir.</p>
 <p>On trouve, en général, deux types de traitements :</p>
 <ul>
 <li>Les absorbeurs, qui réduisent l’énergie d’une onde sonore à son impact.</li>
 <li>Les diffracteurs, qui répartissent l’énergie d’une onde sonore dans l’espace.</li>
 </ul>
-<p>Dans un lieu où la quantité de réverbération est jugée trop importante, on utilisera des absorbeurs. À l’inverse, dans un lieu on l’on souhaite préserver la quantité de réverbération, mais en évitant les phénomènes de modes provoqués par les ondes stationnaires, on utilisera des diffracteurs.</p>
+<p>Dans un lieu où la quantité de réverbération est jugée trop importante, on utilisera des absorbeurs. À l’inverse, dans un lieu où l’on souhaite préserver la quantité de réverbération, mais en évitant les phénomènes de modes provoqués par les ondes stationnaires, on utilisera des diffracteurs.</p>
 <p>Dans de petits lieux, l’usage de diffracteurs semble contre-productif, la priorité étant d’absorber au maximum les premières réflexions, celle-ci arrivant très rapidement après l’émission du son direct.</p>
 </div>
-<div id="considération-dacoustique-pour-le-travail-de-son" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Considération d’acoustique pour le travail de son<a href="lacoustique-des-salles.html#considération-dacoustique-pour-le-travail-de-son" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Il est vivement recommandé d’installer un studio, de prise ou de monitoring, dans un lieu plutôt grand. En effet, plus le lieu est grand, plus il sera facile de positionner un point de prise de son ou d’écoute suffisamment éloigné des parois afin de minimiser l’influence des premières réflexions. Aussi, plus le lieu est grand, plus l’espace sera suffisant pour installer des traitements acoustiques. Certains types de traitement, comme les basstraps, peuvent prendre une place bien trop importante pour être installés dans des pièces de dimension habituelle (chambres, bureau, etc.). Autant que possible, on cherchera à choisir des pièces de travail avec le minimum de surface parallèle, afin de limiter les ondes stationnaires.</p>
+<div id="considération-dacoustique-pour-le-travail-de-son" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Considération d’acoustique pour le travail de son<a href="lacoustique-des-salles.html#considération-dacoustique-pour-le-travail-de-son" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Il est vivement recommandé d’installer un studio, de prise ou de monitoring, dans un lieu plutôt grand. En effet, plus le lieu est grand, plus il sera facile de positionner un point de prise de son ou d’écoute suffisamment éloigné des parois afin de minimiser l’influence des premières réflexions. Aussi, plus le lieu est grand, plus l’espace sera suffisant pour installer des traitements acoustiques. Certains types de traitements, comme les basstraps, peuvent prendre une place bien trop importante pour être installés dans des pièces de dimension habituelle (chambres, bureau, etc.). Autant que possible, on cherchera à choisir des pièces de travail avec le minimum de surface parallèle, afin de limiter les ondes stationnaires.</p>
 <p>En ce qui concerne les traitements en eux-mêmes, il est vivement recommandé de traiter en priorité le bas du spectre. L’ajout de basstrap est donc prioritaire sur le reste des traitements. Plus la longueur d’onde à traiter est grande (donc la fréquence grave), plus la taille des matériaux devra être importante. On retrouve donc le point abordé précédemment : correctement traiter une pièce demande un certain espace. Par ailleurs, il est important que les traitements appliqués à un lieu soient linéaires en fréquence, c’est-à-dire qu’il ne se concentre pas sur une seule zone du spectre. C’est souvent ce qui arrive avec les kits de mousses peu onéreux, mais n’ayant une réelle efficacité que dans le médium et le haut du spectre.</p>
-<div id="cas-dune-cabine-de-prise" class="section level3 hasAnchor" number="4.2.1">
-<h3><span class="header-section-number">4.2.1</span> Cas d’une cabine de prise<a href="lacoustique-des-salles.html#cas-dune-cabine-de-prise" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="cas-dune-cabine-de-prise" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Cas d’une cabine de prise<a href="lacoustique-des-salles.html#cas-dune-cabine-de-prise" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="cas-dune-régie-découte" class="section level3 hasAnchor" number="4.2.2">
-<h3><span class="header-section-number">4.2.2</span> Cas d’une régie d’écoute<a href="lacoustique-des-salles.html#cas-dune-régie-découte" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="cas-dune-régie-découte" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Cas d’une régie d’écoute<a href="lacoustique-des-salles.html#cas-dune-régie-découte" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 
 </div>
 </div>
