@@ -13,7 +13,13 @@ Les premières réflexions sont les premiers rebonds d’une onde sonore sur les
 
 Lorsque les premières réflexions elles-mêmes auront rebondi plusieurs fois sur les parois du lieu, le phénomène d’écho des premières réflexions va se muer en champs diffus, par nature plus dense. La longueur du champ diffus se mesure grâce au RT60. Cette méthode de mesure propose de regarder le temps que met la réverbération à perdre 60 dB. Ce temps permettra ensuite de donner une longueur de réverbération.
 
-Attention, il est souvent considéré que la taille de la pièce joue sur la longueur de réverbération. En fait, la taille de la pièce joue sur la structure des échos dans le temps, et donc, principalement sur les premières réflexions. La longueur de la réverbération dépend plutôt de la nature des matériaux dans la pièce. Plus ceux-ci seront réfléchissants, plus la réverbération sera longue, plus ceux-ci seront absorbants, plus la réverbération sera courte.
+Attention, il est souvent considéré que la taille de la pièce joue sur la longueur de réverbération. En fait, la taille de la pièce joue sur la structure temporelle des échos, et donc, principalement sur les premières réflexions. La longueur de la réverbération dépend plutôt de la nature des matériaux dans la pièce. Plus ceux-ci seront réfléchissants, plus la réverbération sera longue, plus ceux-ci seront absorbants, plus la réverbération sera courte.
+
+## Le phénomène d'onde stationnaire
+
+La plupart des salles d'habitations sont des salles "rectangulaire". Dans ce cas, les surfaces sont toutes parallèles. Ce type de salle est particulièrement propice à l'apparition d'ondes stationnaires.
+
+Une onde stationnaire est un phénomène acoustique provoquant l'augmentation de volume de certaines fréquences et la disparition d'autres.
 
 ## Les types de traitements
 
@@ -33,7 +39,3 @@ Dans de petits lieux, l’usage de diffracteurs semble contre-productif, la prio
 Il est vivement recommandé d’installer un studio, de prise ou de monitoring, dans un lieu plutôt grand. En effet, plus le lieu est grand, plus il sera facile de positionner un point de prise de son ou d’écoute suffisamment éloigné des parois afin de minimiser l’influence des premières réflexions. Aussi, plus le lieu est grand, plus l’espace sera suffisant pour installer des traitements acoustiques. Certains types de traitements, comme les basstraps, peuvent prendre une place bien trop importante pour être installés dans des pièces de dimension habituelle (chambres, bureau, etc.). Autant que possible, on cherchera à choisir des pièces de travail avec le minimum de surface parallèle, afin de limiter les ondes stationnaires.
 
 En ce qui concerne les traitements en eux-mêmes, il est vivement recommandé de traiter en priorité le bas du spectre. L’ajout de basstrap est donc prioritaire sur le reste des traitements. Plus la longueur d’onde à traiter est grande (donc la fréquence grave), plus la taille des matériaux devra être importante. On retrouve donc le point abordé précédemment : correctement traiter une pièce demande un certain espace. Par ailleurs, il est important que les traitements appliqués à un lieu soient linéaires en fréquence, c’est-à-dire qu’il ne se concentre pas sur une seule zone du spectre. C’est souvent ce qui arrive avec les kits de mousses peu onéreux, mais n’ayant une réelle efficacité que dans le médium et le haut du spectre.
-
-### Cas d’une cabine de prise
-
-### Cas d’une régie d’écoute
