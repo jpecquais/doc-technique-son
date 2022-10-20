@@ -16,6 +16,13 @@ Les sons sont classiquement décrits selon les trois paramètres suivant :
 + Leur enveloppe, décrivant l’évolution du son dans le temps.
 + Leur timbre, défini par le contenu harmonique du son.
 
+<iframe frameborder="0"
+        noresize="noresize"
+        style="position: absolute; background: transparent; width: 100%; height:100%;"
+        src="_resources\dsp\osc\osc.html"
+        frameborder="0">
+</iframe>
+
 ## La perception du son
 
 ### L’aspect fréquentiel

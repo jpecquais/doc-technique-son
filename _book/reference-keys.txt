@@ -19,10 +19,9 @@ la-pression-acoustique
 lévaluation-de-la-distance
 lacoustique-des-salles
 décrire-une-acoustique
+le-phénomène-donde-stationnaire
 les-types-de-traitements
 considération-dacoustique-pour-le-travail-de-son
-cas-dune-cabine-de-prise
-cas-dune-régie-découte
 le-chemin-du-signal
 les-microphones
 les-technologies-de-microphones
