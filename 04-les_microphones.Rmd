@@ -12,12 +12,9 @@ Beaucoup de procédés ont pu être utilisés pour permettre la captation du son
 
 ### Les microphones électrostatiques/à condensateur
 
-+ Ce sont, historiquement, les premiers microphones à permettre une captation satisfaisante du son (réponse en fréquence). Mais à leurs débuts, ils sont très sensibles aux conditions de température et d’humidité. Ces problèmes n’ont plus cours aujourd’hui.
-+ Le fonctionnement repose sur l’utilisation d’un condensateur en guise de capsule. Lorsque le son rencontre cette dernière, l’onde déforme les armatures du condensateur et génère donc une variation de tension.
-+ De par l’utilisation de condensateur, ces microphones nécessitent une alimentation externe (dites fantôme), maintenant standardisée à +48V.
-+ Ces microphones possèdent des réponses en fréquence souvent très linéaire et une excellente réponse en transitoire.
-+ Leur niveau de sortie (sensibilité) est élevé.
-+ Leur impédance de sortie est basse.
+Ce sont, historiquement, les premiers microphones à permettre une captation satisfaisante du son (réponse en fréquence). Mais à leurs débuts, ils sont très sensibles aux conditions de température et d’humidité. Ces problèmes n’ont plus cours aujourd’hui. Leur fonctionnement repose sur l’utilisation d’un condensateur en guise de capsule. Lorsque le son rencontre celle-critique, l’onde déforme les armatures du condensateur et génère donc une variation de tension. De par l’utilisation de ce condensateur, ces microphones nécessitent une alimentation externe (dites fantôme), maintenant standardisée à +48V.
+
+Ces microphones possèdent des réponses en fréquence souvent très linéaire et une excellente réponse en transitoire. Leur niveau de sortie (sensibilité) est élevé. Leur impédance de sortie est basse.
 
 Exemples : Neumann U87/AKG C414/Shoeps CMC4/DPA 4041
 

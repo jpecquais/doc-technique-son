@@ -8,7 +8,7 @@
   <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapitre 3 Qualifier le son | La prise de son musicale" />
   <meta property="og:type" content="book" />
@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Jean-Loup Pecquais" />
 
 
-<meta name="date" content="2022-10-20" />
+<meta name="date" content="2022-10-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -78,17 +78,17 @@ set in the _output.yml file.</p>" />
 <li><a href="./">La prise de son musicale</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> bibliography: [book.bib, packages.bib]</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Avant-propos</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#mise-a-jour"><i class="fa fa-check"></i><b>1.1</b> Mise a jour</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#structures"><i class="fa fa-check"></i><b>1.2</b> Structures</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="description-dune-production-musicale-type.html"><a href="description-dune-production-musicale-type.html"><i class="fa fa-check"></i><b>2</b> Description d’une production musicale type</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="description-dune-production-musicale-type.html"><a href="description-dune-production-musicale-type.html#les-acteurs-de-la-réalisation-dune-oeuvre-enregistrée"><i class="fa fa-check"></i><b>2.1</b> les acteurs de la réalisation d’une oeuvre enregistrée</a></li>
-<li class="chapter" data-level="2.2" data-path="description-dune-production-musicale-type.html"><a href="description-dune-production-musicale-type.html#la-pré-production"><i class="fa fa-check"></i><b>2.2</b> La pré-production</a></li>
+<li class="chapter" data-level="2.1" data-path="description-dune-production-musicale-type.html"><a href="description-dune-production-musicale-type.html#les-acteurs-de-la-réalisation-dune-œuvre-enregistrée"><i class="fa fa-check"></i><b>2.1</b> les acteurs de la réalisation d’une œuvre enregistrée</a></li>
+<li class="chapter" data-level="2.2" data-path="description-dune-production-musicale-type.html"><a href="description-dune-production-musicale-type.html#la-préproduction"><i class="fa fa-check"></i><b>2.2</b> La préproduction</a></li>
 <li class="chapter" data-level="2.3" data-path="description-dune-production-musicale-type.html"><a href="description-dune-production-musicale-type.html#la-production"><i class="fa fa-check"></i><b>2.3</b> La production</a></li>
-<li class="chapter" data-level="2.4" data-path="description-dune-production-musicale-type.html"><a href="description-dune-production-musicale-type.html#la-post-production"><i class="fa fa-check"></i><b>2.4</b> La post-production</a></li>
+<li class="chapter" data-level="2.4" data-path="description-dune-production-musicale-type.html"><a href="description-dune-production-musicale-type.html#la-postproduction"><i class="fa fa-check"></i><b>2.4</b> La postproduction</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="qualifier-le-son.html"><a href="qualifier-le-son.html"><i class="fa fa-check"></i><b>3</b> Qualifier le son</a>
 <ul>
@@ -264,8 +264,8 @@ set in the _output.yml file.</p>" />
 <p>Notre oreille n’a pas une réponse en fréquence linéaire en fonction du niveau sonore.</p>
 <p>Plus le niveau de pression acoustique est faible, plus le son paraîtra médium. Plus il est fort, plus le son semblera ouvert dans le grave et l’aigu.</p>
 <p>Ce phénomène est décrit par les courbes d’isosonie de Fletcher-Munson. Chaque ligne rouge représente une sensation de niveau sonore égale en fonction de la fréquence.</p>
-<div class="figure"><span style="display:block;" id="fig:chunk-label2"></span>
-<img src="_resources/094d33e2494c70d2395225081ede1162.png" alt="Courbes de Fletcher-Munson"  />
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="_resources/094d33e2494c70d2395225081ede1162.png" alt="Courbes de Fletcher-Munson" width="338" />
 <p class="caption">
 Figure 3.1: Courbes de Fletcher-Munson
 </p>
@@ -349,7 +349,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

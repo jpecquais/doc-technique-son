@@ -21,9 +21,14 @@ La plupart des salles d'habitations sont des salles "rectangulaire". Dans ce cas
 
 Une onde stationnaire est un phénomène acoustique provoquant l'augmentation de volume de certaines fréquences (ventre) et la disparition d'autres (noeuds).
 
-```{r chunk-label2, echo = FALSE, fig.cap = 'Les points rouges représente les noeuds, les amplitudes maximales sont les ventres. Infographie par Lucas Vieira'}
+```{r, echo = FALSE, fig.cap = 'Les points rouges représente les noeuds, les amplitudes maximales sont les ventres. Infographie par Lucas Vieira'}
 knitr::include_graphics(rep("https://upload.wikimedia.org/wikipedia/commons/7/7d/Standing_wave_2.gif"))
 ```
+
+Il est possible de calculer la fréquence d'un mode grâce à la formule
+
+$$f(n) = \frac{c}{2L}$$
+où $c=340m/s$ et $L$ est la longueur considérée.
 
 ## Les types de traitements
 

@@ -42,7 +42,7 @@ Plus le niveau de pression acoustique est faible, plus le son paraîtra médium.
 
 Ce phénomène est décrit par les courbes d’isosonie de Fletcher-Munson. Chaque ligne rouge représente une sensation de niveau sonore égale en fonction de la fréquence.
 
-```{r chunk-label2, echo = FALSE, fig.cap = 'Courbes de Fletcher-Munson'}
+```{r, echo = FALSE, fig.cap = 'Courbes de Fletcher-Munson'}
 knitr::include_graphics(rep("_resources/094d33e2494c70d2395225081ede1162.png"))
 ```
 
