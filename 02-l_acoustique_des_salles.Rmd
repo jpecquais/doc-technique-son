@@ -19,7 +19,11 @@ Attention, il est souvent considéré que la taille de la pièce joue sur la lon
 
 La plupart des salles d'habitations sont des salles "rectangulaire". Dans ce cas, les surfaces sont toutes parallèles. Ce type de salle est particulièrement propice à l'apparition d'ondes stationnaires.
 
-Une onde stationnaire est un phénomène acoustique provoquant l'augmentation de volume de certaines fréquences et la disparition d'autres.
+Une onde stationnaire est un phénomène acoustique provoquant l'augmentation de volume de certaines fréquences (ventre) et la disparition d'autres (noeuds).
+
+```{r chunk-label2, echo = FALSE, fig.cap = 'Les points rouges représente les noeuds, les amplitudes maximales sont les ventres. Infographie par Lucas Vieira'}
+knitr::include_graphics(rep("https://upload.wikimedia.org/wikipedia/commons/7/7d/Standing_wave_2.gif"))
+```
 
 ## Les types de traitements
 
