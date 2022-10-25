@@ -8,9 +8,7 @@ documentclass: book
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
-  This is a minimal example of using the bookdown package to write a book.
-  The HTML output format for this example is bookdown::gitbook,
-  set in the _output.yml file.
+  Livre sur la prise de son musicale, par Jean-Loup Pecquais.
 link-citations: yes
 github-repo: rstudio/bookdown-demo
 ---
