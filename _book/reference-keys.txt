@@ -92,3 +92,6 @@ directivités-théoriques
 directivités-réelles
 capsules-à-pression
 mise-à-jour
+capsules-à-gradient-de-pression
+et-les-autres-directivités
+les-supports-denregistrement-numériques-du-son
