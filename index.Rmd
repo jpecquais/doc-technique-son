@@ -15,19 +15,19 @@ github-repo: rstudio/bookdown-demo
 
 # Avant-propos
 
-Ce livre est naît de la nécessité d'un support de cours pour la formation "Technique de Prise de Son", dispensée par Jean-Loup Pecquais. Il intègre donc l'ensemble des notions abordées, expliquées en détail, ainsi que des exemples sonores.
+Ce livre est né de la nécessité d'un support de cours pour la formation "Technique de Prise de Son", dispensée par Jean-Loup Pecquais. Il intègre donc l'ensemble des notions abordées, expliquées en détail, ainsi que des exemples sonores.
 
 Ce livre est écrit dans la philosophie de l'Open Source. L'intégralité de son contenu est donc disponible gratuitement. Son code source est accessible dans un dépôt GitHub. Ainsi, il est possible à tout à chacun de reporter les éventuelles erreurs ou de proposer des modifications.
 
-## Mise a jour
+## Mise à jour
 
 La distribution numérique de ce livre permet une mise à jour régulière de son contenu. Cela implique deux choses :
 
-+ Certaines sections peuvent-être incomplètes et seront complétées plus tard
++ Certaines sections peuvent être incomplètes, et seront complétées plus tard
 + C'est une bonne idée de revenir consulter ce site régulièrement
 
 ## Structures
 
 Dans un premier temps, ce livre reprend l'ensemble de la chaîne audio, en y explicitant le rôle et le fonctionnement de chacun de ses composants. L'objectif est de fournir une base technique objective au preneur de son.
 
-Dans un second temps, le livre détaile un ensemble de techniques de prise de son, insistant particulièrement sur les mécanismes généraux de la prise et sur l'écoute critique. Cependant, un certain nombre "trucs & astuces" de prise de son sont aussi présentés. Ces derniers ne doivent jamais se supplanté à l'écoute critique.
+Dans un second temps, le livre détaille un ensemble de techniques de prise de son, insistant particulièrement sur les mécanismes généraux de la prise et sur l'écoute critique. Cependant, un certain nombre "trucs & astuces" de prises de son sont aussi présentées. Ces derniers ne doivent jamais se supplanter à l'écoute critique.

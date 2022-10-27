@@ -1,3 +1,25 @@
 # La directivité des microphones
 
-bla
+Comme décris dans le chapitre sur les microphones, sa directivité rend compte de sa capacité à selectionner, ou pas, son champs de captation. On connait trois grandes directivités :
+
++ Omnidirectionnel : qui capte l'ensemble de champ sonore de façon indifferenciée
++ Cardioïde : qui capte à l'avant mais rejette à l'arrière du microphone
++ Bidirectionnel : qui capte à l'avant et à l'arriève mais selon un lobe plus resséré qu'en cardioïde.
+
+Dans ce chapitre, nous tâcherons d'étudier les différentes directivités de microphones et leur influence sur une prise de son.
+
+## Capsules à pression
+
+Lorsque l'on étudie un microphone, il est peut être plus judicieux de revenir à son élément fondamentale : la capsule. Il existe deux familles deux capsules, celles dîtes "à pression", et celles dîtes à la "gradient de pression".
+
+Une capsule sensible à la pression est omnidirectionnel, puisqu'elle capte l'ensemble du champ acoustique. Mathématiquement, cette relation s'exprime, en coordonnées polaire, par :
+
+$$ \theta = 1 $$
+
+Il faut ici comprendre que, peux importe l'angle d'incidence d'un son par rapport au microphone, ce dernier n'attenura jamais le signal.
+
+## Directivités théoriques
+
+
+
+## Directivités réelles
