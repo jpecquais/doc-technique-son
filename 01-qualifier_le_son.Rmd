@@ -1,4 +1,4 @@
-# Qualifier le son
+# Quantifier et qualifier le son
 
 Le son peut s'appréhender de plusieurs façons différentes. Particulièrement, sa description physique et psychoacoustique est très précieuse pour tous les praticiens du son. Il convient donc, afin de pouvoir proposer un dispositif cohérent de prise de son, de comprendre la physique élémentaire du son ainsi que d'être capable de le décrire efficacement. 
 
@@ -8,12 +8,8 @@ Le son peut s'appréhender de plusieurs façons différentes. Particulièrement,
 + La fréquence permettant de définir la hauteur d’un son est appelée **fréquence fondamentale**. Il s’agit de la fréquence la plus grave d’un son.
 + Les **harmoniques** sont des multiples de la fréquence fondamentale.
 
-```{r, echo=FALSE, out.width="100%", fig.cap = "Représentation d'un son pur : temps en absisses, amplitude en ordonnée"}
-knitr::include_graphics(path = "_resources/sinus_tps.svg")
-```
-
-```{r, echo=FALSE, out.width="100%", fig.cap = "Représentation d'un son pur : fréquences en absisses, amplitude en ordonnée"}
-knitr::include_graphics(path = "_resources/sinus_fqc.svg")
+```{r, echo=FALSE, out.width="50%", fig.show = 'hold', fig.cap = "Représentation d'un son pur : (1) domaine temporel ; (2) domaine fréquentiel"}
+knitr::include_graphics(rep(c("_resources/sinus_tps.svg","_resources/sinus_fqc.svg")))
 ```
 
 

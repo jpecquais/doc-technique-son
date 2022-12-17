@@ -94,3 +94,4 @@ approche-mathématique
 les-sources-de-déphasage
 gestion-des-circuits-découtes
 bibliography-book.bib-packages.bib
+quantifier-et-qualifier-le-son
