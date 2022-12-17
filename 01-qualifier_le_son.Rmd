@@ -8,6 +8,10 @@ Le son peut s'appréhender de plusieurs façons différentes. Particulièrement,
 + La fréquence permettant de définir la hauteur d’un son est appelée **fréquence fondamentale**. Il s’agit de la fréquence la plus grave d’un son.
 + Les **harmoniques** sont des multiples de la fréquence fondamentale.
 
+```{r, echo=FALSE, out.width="100%", fig.cap = "Représentation d'un son pur : fréquences en absisses, Amplitude en ordonnée"}
+knitr::include_graphics(path = "_resources/sinus_fqc.svg")
+```
+
 ## Les paramètres du son
 
 Les sons sont classiquement décrits selon les trois paramètres suivant :
