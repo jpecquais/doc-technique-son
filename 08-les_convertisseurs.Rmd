@@ -13,6 +13,7 @@ La caractéristique principale d'un signal analogique est sa continuité. Un sig
 La numérisation du signal est comparable à l'utilisation d'un multimètre pour mesurer une tension. Un convertisseur va prélever la valeur du signal, de façon régulière, au cours du temps.
 
 Afin de correctement numériser un signal, il convient de définir deux paramètres :
+
 + la vitesse de prélèvement, ou **fréquence d'échantillonnage**
 + la plage de valeur permise pour le signal, ou **résolution de quantification**
 
@@ -22,15 +23,15 @@ Cette fréquence définit le nombre de prélèvements par seconde. Par exemple, 
 
 La fréquence de travail la plus courante est 48 kHz, mais l'on rencontre parfois des valeurs supérieures, multiple de celle-ci : 96 kHz, 192 kHz, etc. Cette augmentation proportionnelle de la fréquence d'échantillonnage s'appelle **suréchantillonnage**. Certains techniciens espèrent, par le biais de ce suréchantillonnage, améliorer la qualité de l'enregistrement.
 
-Le suréchantillonnage vient également à un coût de ressource et d'espace de stockage. Un flux audio échantillonné à 96 kHz demande deux fois plus de ressource et d'espace qu'un flux échantillonnés à 48 kHz.
+Le suréchantillonnage vient également à un coût de ressource et d'espace de stockage. Un flux audio échantillonné à 96 kHz demande deux fois plus de ressource et d'espace qu'un flux échantillonné à 48 kHz.
 
 ### Le théorème de Shannon-Nyquist
 
 Cette valeur initiale de 44 100 Hz (ou 48 kHz) n'a pas été choisie au hasard. Pour la comprendre, il faut revenir sur le phénomène que nous cherchons à numériser.
 
-Le son est une onde mécanique, et nous l'entendons dans une plage de fréquence comprise entre 20 Hz (très grave) et 20 000 Hz (très aigu). Il faut donc que notre système de numérisation soit capable de reproduire une fréquence maximale allant jusqu'à 20 000 Hz. Pour cela, nous utilisons les travaux des chercheurs Harry Nyquist et Claude Shannon (tous deux ayant travaillé aux laboratoires Bell).
+Le son est une onde mécanique, et nous l'entendons dans une plage de fréquence comprise entre 20 Hz (très grave) et 20 000 Hz (très aigu). Il faut donc que notre système de numérisation soit capable de reproduire une fréquence maximale allant jusqu'à 20 000 Hz. Pour cela, nous utilisons les résultats des travaux des chercheurs Harry Nyquist et Claude Shannon (tous deux ayant travaillé aux laboratoires Bell).
 
-Le théorème de Shannon-Nyquist stipule que pour être capable d'échantillonner un signal de fréquence f, la fréquence d'échantillonnage doit au moins être de 2 f. Un ensemble de points généré par une fréquence ne peut correspondre qu'à cette seule fréquence. Notre plage d'écoute étant limitée à 20 kHz, la fréquence d'échantillonnage minimale dont nous avons besoin est de 40 kHz.
+Le théorème de Shannon-Nyquist stipule que, pour être capable d'échantillonner un signal de fréquence $f$, la fréquence d'échantillonnage doit au moins être de $2f$. Un ensemble de points généré par une fréquence ne peut correspondre qu'à cette seule fréquence. Notre plage d'écoute étant limitée à 20 kHz, la fréquence d'échantillonnage minimale dont nous avons besoin est de 40 kHz.
 
 Que se passe-t-il si la fréquence du signal dépasse la moitié de la fréquence d'échantillonnage ? Dans ce cas, la vitesse de prélèvement n'est plus suffisante et nous observons l'apparition de nouvelles fréquences ne provenant pas du signal original. Ce phénomène se nomme **repliement spectral**.
 
@@ -42,16 +43,21 @@ En pratique, augmenter la résolution de quantification permet principalement de
 
 La résolution de quantification standard en enregistrement est 24 bit. La plage dynamique est telle qu'elle rend le travail d'enregistrement beaucoup plus souple sur les niveaux d'acquisition des différentes sources.
 
-## La mauvaise réputation du son numérique
+## La "mauvaise réputation" du son numérique
 
 Le son numérique a longtemps eu la réputation d'être dur, particulièrement dans le haut du spectre. Cela s'explique assez facilement par la méthode de fabrication des premiers convertisseurs.
 
 En effet, toute la difficulté de fabrication d'un convertisseur réside dans la réalisation d'un filtre anti-repliement. Ce filtre enlève les fréquences au-dessus de la moitié de la fréquence d'échantillonnage, afin de prévenir tout repliement spectral. Ce type de filtre est extrêmement délicat à réaliser en analogique. Ce problème est résolu grâce à l'approche sigma-delta.
+
+De plus, le **repliement spectral** parfois généré par certains traitements (saturation, simulation analogique, compresseurs) n'a pas non plus aidé à la réputation du son numérique. En effets, lorsqu'il devient audible, le repliement spectral se caractérise par l'apparition de fréquences **non harmoniques** souvent qualifiées de dures et désagréables. Il est cependant bon de rappeler que ce phénomène, certes bien réel, se produit aussi dans des conditions de saturation du signal importante et sur des sources sonores riches en aigus.
+
+Malgré la vie dur que mène le son numérique dans l'inconscient collectif, il est important de rappeler qu'il a apporté un grand nombre d'avantages sur le son analogique, **y compris sur des questions de rendus sonores**. Par exemple, la dynamique est bien plus importante, la distorsion involontaire du signal infime et l'ajout de bruit inexistant.
 
 ## La conversion sigma-delta
 
 Aujourd'hui, les convertisseurs ne travaillent pas directement à 44,1 kHz/16 bit ou 48 kHz/24 bit. Ils utilisent à la place un procédé appelé échantillonnage sigma-delta. Le principe est d'utiliser une fréquence d'échantillonnage très rapide (384 kHz) et de coder la dynamique du signal, en relatif, sur un seul bit (ce bit prend une valeur de 1 si le nouvel échantillon est plus fort que l'ancien, 0 pour le cas inverse). Les formats de travail que nous utilisons sont générés après cette première étape.
 
 L'intérêt de cette méthode est double :
+
 + Le signal est suréchantillonné dès l'enregistrement
 + Les filtres permettant d'éviter le repliement spectral sont donc très simples à réaliser
