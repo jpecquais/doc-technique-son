@@ -2,9 +2,10 @@ fig:unnamed-chunk-1
 fig:unnamed-chunk-2
 fig:unnamed-chunk-3
 fig:unnamed-chunk-4
+fig:unnamed-chunk-5
 fig:chunk-label
 avant-propos
-mise-a-jour
+mise-à-jour
 structures
 description-dune-production-musicale-type
 les-acteurs-de-la-réalisation-dune-œuvre-enregistrée
@@ -32,6 +33,10 @@ les-microphones-dynamiques
 la-directivité
 la-taille-des-membranes
 la-directivité-des-microphones
+capsules-à-pression
+capsules-à-gradient-de-pression
+et-les-autres-directivités
+directivités-réelles
 les-câbles
 câble-à-modulation-unique
 câble-à-double-modulation
@@ -51,7 +56,7 @@ le-théorème-de-shannon-nyquist
 la-résolution-de-quantification
 la-mauvaise-réputation-du-son-numérique
 la-conversion-sigma-delta
-les-supports-denregistrement-sonore-numériques
+les-supports-denregistrement-numériques-du-son
 les-enceintes-de-monitoring
 choisir-une-paire-découtes
 placer-correctement-son-écoute
@@ -88,10 +93,4 @@ approche-mathématique
 les-sources-de-déphasage
 gestion-des-circuits-découtes
 bibliography-book.bib-packages.bib
-directivités-théoriques
-directivités-réelles
-capsules-à-pression
-mise-à-jour
-capsules-à-gradient-de-pression
-et-les-autres-directivités
-les-supports-denregistrement-numériques-du-son
+la-relation-entre-temps-distance-et-fréquence

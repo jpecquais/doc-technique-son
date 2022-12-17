@@ -1,6 +1,6 @@
 # Qualifier le son
 
-Afin de pouvoir proposer un dispositif cohérent de prise de son, il convient de pouvoir décrire le son à capter.
+Le son peut s'appréhender de plusieurs façons différentes. Particulièrement, sa description physique et psychoacoustique est très précieuse pour tous les praticiens du son. Il convient donc, afin de pouvoir proposer un dispositif cohérent de prise de son, de comprendre la physique élémentaire du son ainsi que d'être capable de le décrire efficacement. 
 
 ## Quelques définitions
 
@@ -15,6 +15,12 @@ Les sons sont classiquement décrits selon les trois paramètres suivant :
 + Leur hauteur, définie par la fréquence fondamentale.
 + Leur enveloppe, décrivant l’évolution du son dans le temps.
 + Leur timbre, défini par le contenu harmonique du son.
+
+## La relation entre temps, distance et fréquence
+
+$$ c = d/t $$
+
+$$ f = 1/f $$
 
 ## La perception du son
 
