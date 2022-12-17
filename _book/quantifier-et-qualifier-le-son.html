@@ -12,7 +12,7 @@
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Livre sur la prise de son musicale, par Jean-Loup Pecquais." />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
+  <meta name="github-repo" content="jpecquais/doc-technique-son" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Chapitre 3 Quantifier et qualifier le son | La prise de son musicale" />
@@ -228,17 +228,16 @@
 <p>Le son peut s’appréhender de plusieurs façons différentes. Particulièrement, sa description physique et psychoacoustique est très précieuse pour tous les praticiens du son. Il convient donc, afin de pouvoir proposer un dispositif cohérent de prise de son, de comprendre la physique élémentaire du son ainsi que d’être capable de le décrire efficacement.</p>
 <div id="quelques-définitions" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> Quelques définitions<a href="quantifier-et-qualifier-le-son.html#quelques-définitions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li>Un <strong>son pur</strong> n’est composé que d’une seule fréquence</li>
-<li>La fréquence permettant de définir la hauteur d’un son est appelée <strong>fréquence fondamentale</strong>. Il s’agit de la fréquence la plus grave d’un son.</li>
-<li>Les <strong>harmoniques</strong> sont des multiples de la fréquence fondamentale.</li>
-</ul>
+<p>Le son est une vibration mécanique d’un fluide. Dans le cadre de ce cours, nous ne considérerons que l’air comme médium de propagation. Cette onde cause une variation de la pression dans l’espace. Nous, les êtres humains, le percevons grâce à notre ouïe. Il s’agit donc, par définition, d’un phénomène ondulatoire et peut être caractérisé par un nombre d’oscillations par seconde, aussi appelé fréquence.</p>
+<p>Les sons composés d’une seule fréquence se nomment <strong>sons purs</strong>. Cependant, de tels signaux n’existent pas dans la nature, et sont souvent utilisés afin de réaliser des mesures ou des tests psychoacoustiques.</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
 <img src="_resources/sinus_tps.svg" alt="Représentation d'un son pur : (1) domaine temporel ; (2) domaine fréquentiel" width="50%" /><img src="_resources/sinus_fqc.svg" alt="Représentation d'un son pur : (1) domaine temporel ; (2) domaine fréquentiel" width="50%" />
 <p class="caption">
 Figure 3.1: Représentation d’un son pur : (1) domaine temporel ; (2) domaine fréquentiel
 </p>
 </div>
+<p>Dans notre environnement, les sons sont donc composés de plusieurs fréquences. La fréquence la plus grave d’un son est sa <strong>fréquence fondamentale</strong>. Les autres sont alors appelées <strong>partiels</strong>. Si ces partielles ont pour fréquence un multiple de la fréquence fondamentale, alors on les nomme <strong>harmoniques</strong>.</p>
+<p>La fréquence fondamentale donne la <strong>hauteur</strong> du son (sa note en musique par exemple). Les partiels enrichissent cette fréquence fondamentale et créés le <strong>timbre</strong> d’un son. C’est en partie grâce au timbre que l’on peut reconnaître différents instruments de musiques jouant la même note.</p>
 </div>
 <div id="les-paramètres-du-son" class="section level2 hasAnchor" number="3.2">
 <h2><span class="header-section-number">3.2</span> Les paramètres du son<a href="quantifier-et-qualifier-le-son.html#les-paramètres-du-son" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -251,8 +250,10 @@ Figure 3.1: Représentation d’un son pur : (1) domaine temporel ; (2) domaine 
 </div>
 <div id="la-relation-entre-temps-distance-et-fréquence" class="section level2 hasAnchor" number="3.3">
 <h2><span class="header-section-number">3.3</span> La relation entre temps, distance et fréquence<a href="quantifier-et-qualifier-le-son.html#la-relation-entre-temps-distance-et-fréquence" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><span class="math display">\[ c = d/t \]</span></p>
-<p><span class="math display">\[ f = 1/f \]</span></p>
+<p>Il est important de garder à l’esprit que les notions de temps, de fréquence et de distance sont étroitement liées. Tout d’abord, le son se déplace à une vitesse constante dans un milieu donné. Dans l’air, à une température de 15 °C et au niveau de la mer, sa célérité est de <span class="math inline">\(340 m.s^{-1}\)</span>. On admettra cette valeur pour réaliser l’ensemble de nos différents calculs.</p>
+<p><span class="math display">\[ c =\frac d t \]</span></p>
+<p><span class="math display">\[ c \approx 340 m.s^{-1} \]</span></p>
+<p><span class="math display">\[ f =\frac  1 T \]</span></p>
 </div>
 <div id="la-perception-du-son" class="section level2 hasAnchor" number="3.4">
 <h2><span class="header-section-number">3.4</span> La perception du son<a href="quantifier-et-qualifier-le-son.html#la-perception-du-son" class="anchor-section" aria-label="Anchor link to header"></a></h2>
