@@ -70,27 +70,29 @@ Nous nous bornerons au fil de ce cours à quelques notions liées à l'ouïe et 
 
 <!--CComme évoqué précédemment, il est communément admis que les êtres humains entendent des sons ayant pour fréquence des valeurs comprises entre 20 Hz et 20 kHz. Cette borne supérieure est par ailleurs plutôt théorique. Avec l’âge, voire selon l’hygiène de vie (exposition à de forts niveaux sonores), cette valeur aura tendance à diminuer..-->
 
-D'un point de vue perceptif, le spectre d'un son est une chose facilement remarquable. Il est, par contre, beaucoup plus difficile à qualifier. Il n'est pas rare de rencontrer les adjectifs "chaud", "brillant", "rond", "aéré", "ouvert", "sombre", voir des qualificatifs encore plus ésotérique, pour tenter de communiquer la sensation ressentie à l'écoute de tel ou tel son.
+D'un point de vue perceptif, le spectre d'un son est facilement remarquable. Il est, par contre, beaucoup plus difficile à qualifier. Il n'est pas rare de rencontrer les adjectifs "chaud", "brillant", "rond", "aéré", "ouvert", "sombre", voir d'autres encore plus ésotérique, pour tenter de communiquer la sensation ressentie à l'écoute de tel ou tel son.
 
-Cette difficulté liée à l'absence de vocabulaire commun quant à la qualification des sons emmène systématiquement la redéfinition de ce vocable en fonction de son interlocuteur. En effet, le mot "rond" ne signifiera pas forcément la même chose pour différentes personnes. Une stratégie possible consiste à questionner son interlocuteur sur l'utilisation de ses adjectifs tout en cherchant à y associer des exemples sonores.
+Cette difficulté liée à l'absence de vocabulaire commun quant à la qualification des sons emmène systématiquement la redéfinition de ce vocable en fonction de son interlocuteur. En effet, le mot "rond" ne signifiera pas forcément la même chose selon à qui on s'adresse. Une stratégie possible consiste à questionner son interlocuteur sur l'utilisation de ses adjectifs tout en cherchant à y associer des exemples sonores.
 
 Nous pouvons tout de même nous essayer à cet exercice pour nous permettre d'avoir un vocabulaire commun au fil de ce cours. Vous aurez sans doute compris qu'il n'y aura, dans les termes employés, aucun critère absolu.
 
-```{r, echo=FALSE, out.width="85%", fig.align="center", fig.cap = "Distance entre deux microphones."}
+```{r, echo=FALSE, out.width="100%", fig.align="center", fig.cap = "Distance entre deux microphones."}
 knitr::include_graphics("_resources/drawings/spectre.svg")
 ```
 
-> 💡 Proposition d'association entre bandes de fréquences et sensation.
-> 
-> + **20 Hz — 80 Hz** : Subharmonique, sensation tripale
-> + **80 Hz — 160 Hz** : Grave, sensation d’assise
-> + **160 Hz — 380 Hz** : bas-médium, sensation de « chaleur », voir « boueux »
-> + **380 Hz — 1400 Hz** : Medium, sensation de « boîte » quand trop présent, sonne « creux » quand trop absent
-> + **1400 Hz — 3200 Hz** : Haut-medium : zone de sensibilité maximale de l’oreille.
-> + **3200 Hz — 8000 Hz** : Aigu, apporte de la précision voir de l’agressivité
-> + **8000 Hz — 20 000 Hz** : Air, apporte une sensation d’ouverture voir de finesse
+**Proposition d'association entre bandes de fréquences et sensation**.
+ 
++ **20 Hz — 80 Hz** : Subharmonique, sensation tripale
++ **80 Hz — 160 Hz** : Grave, sensation d’assise
++ **160 Hz — 380 Hz** : bas-médium, sensation de « chaleur », voir « boueux »
++ **380 Hz — 1400 Hz** : Medium, sensation de « boîte » quand trop présent, sonne « creux » quand trop absent
++ **1400 Hz — 3200 Hz** : Haut-medium : zone de sensibilité maximale de l’oreille.
++ **3200 Hz — 8000 Hz** : Aigu, apporte de la précision voir de l’agressivité
++ **8000 Hz — 20 000 Hz** : Air, apporte une sensation d’ouverture voir de finesse
 
-Il est également important de savoir que les fréquences graves ont un effet masquant sur les fréquences plus aiguës. Ce phénomène est dû au fonctionnement de notre oreille, et plus particulièrement de la cochlée.
+Il est intéressant de former son oreille à reconnaître une plage de fréquence, ainsi que d'y associer son propre vocabulaire et une sensation. Les appellations proposées ci-dessus ne sont à prendre que comme guides et n'ont pas valeur de référence. Cela favorise une écoute critique et analytique.
+
+> 💡 Il est également important de savoir que les fréquences graves ont un effet masquant sur les fréquences plus aiguës. Ce phénomène est dû au fonctionnement de notre oreille, et plus particulièrement de la cochlée.
 
 ### La pression acoustique
 
@@ -100,8 +102,8 @@ Plus le niveau de pression acoustique est faible, plus le son paraîtra médium.
 
 Ce phénomène est décrit par les courbes d’isosonie de Fletcher-Munson. Chaque ligne rouge représente une sensation de niveau sonore égale en fonction de la fréquence.
 
-```{r, echo = FALSE, fig.cap = 'Courbes de Fletcher-Munson'}
-knitr::include_graphics(path = "_resources/094d33e2494c70d2395225081ede1162.png")
+```{r, echo = FALSE, fig.align="center", fig.cap = 'Courbes de Fletcher-Munson'}
+knitr::include_graphics(path = "_resources/diagrams/FletcherMunson_ELC.svg")
 ```
 
 ### L'évaluation de la distance
