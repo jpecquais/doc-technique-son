@@ -16,13 +16,7 @@ Dans notre environnement, les sons sont donc composés de plusieurs fréquences.
 
 La fréquence fondamentale donne la **hauteur** du son (sa note en musique par exemple). Les partiels enrichissent cette fréquence fondamentale et créés le **timbre** d'un son. C'est en partie grâce au timbre que l'on peut reconnaître différents instruments de musiques jouant la même note.
 
-## Les paramètres du son
-
-Les sons sont classiquement décrits selon les trois paramètres suivant :
-
-+ Leur hauteur, définie par la fréquence fondamentale.
-+ Leur enveloppe, décrivant l’évolution du son dans le temps.
-+ Leur timbre, défini par le contenu harmonique du son.
+Un son se caractérise également pas l'évolution de son amplitude dans le temps. On parle alors de son **enveloppe**. Un modèle courant d'enveloppe est l'ADSR : *Attack*, *Decay*, *Sustain*, *Release*, soit *Attaque*, *Décroissance*, *Maintient* et *Relâchement*.
 
 ## La relation entre temps, distance et fréquence
 
