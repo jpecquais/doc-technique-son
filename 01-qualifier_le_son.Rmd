@@ -9,7 +9,7 @@ Le son est une vibration mécanique d'un fluide. Dans le cadre de ce cours, nous
 Les sons composés d'une seule fréquence se nomment **sons purs**. Cependant, de tels signaux n'existent pas dans la nature, et sont souvent utilisés afin de réaliser des mesures ou des tests psychoacoustiques. 
 
 ```{r, echo=FALSE, out.width="50%", fig.show = 'hold', fig.cap = "Représentation d'un son pur : (1) domaine temporel ; (2) domaine fréquentiel"}
-knitr::include_graphics(rep(c("_resources/sinus_tps.svg","_resources/sinus_fqc.svg")))
+knitr::include_graphics(rep(c("_resources/drawings/sinus_tps.svg","_resources/drawings/sinus_fqc.svg")))
 ```
 
 Dans notre environnement, les sons sont donc composés de plusieurs fréquences. La fréquence la plus grave d'un son est sa **fréquence fondamentale**. Les autres sont alors appelées **partiels**. Si ces partielles ont pour fréquence un multiple de la fréquence fondamentale, alors on les nomme **harmoniques**.
@@ -17,6 +17,10 @@ Dans notre environnement, les sons sont donc composés de plusieurs fréquences.
 La fréquence fondamentale donne la **hauteur** du son (sa note en musique par exemple). Les partiels enrichissent cette fréquence fondamentale et créés le **timbre** d'un son. C'est en partie grâce au timbre que l'on peut reconnaître différents instruments de musiques jouant la même note.
 
 Un son se caractérise également pas l'évolution de son amplitude dans le temps. On parle alors de son **enveloppe**. Un modèle courant d'enveloppe est l'ADSR : *Attack*, *Decay*, *Sustain*, *Release*, soit *Attaque*, *Décroissance*, *Maintient* et *Relâchement*.
+
+```{r, echo=FALSE, out.width="65%", fig.align="center", fig.cap = "Exemple d'enveloppe ADSR"}
+knitr::include_graphics("_resources/drawings/adsr.svg")
+```
 
 ## La relation entre temps, distance et fréquence
 
