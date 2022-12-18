@@ -3,6 +3,7 @@ fig:unnamed-chunk-2
 fig:unnamed-chunk-3
 fig:unnamed-chunk-4
 fig:unnamed-chunk-5
+fig:unnamed-chunk-6
 fig:chunk-label
 avant-propos
 mise-à-jour
@@ -12,7 +13,7 @@ les-acteurs-de-la-réalisation-dune-œuvre-enregistrée
 la-préproduction
 la-production
 la-postproduction
-qualifier-le-son
+quantifier-et-qualifier-le-son
 quelques-définitions
 les-paramètres-du-son
 la-relation-entre-temps-distance-et-fréquence

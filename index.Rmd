@@ -10,7 +10,7 @@ documentclass: book
 description: |
   Livre sur la prise de son musicale, par Jean-Loup Pecquais.
 link-citations: yes
-github-repo: rstudio/bookdown-demo
+github-repo: jpecquais/doc-technique-son
 ---
 
 # Avant-propos
