@@ -90,7 +90,7 @@
 <li class="chapter" data-level="3.2" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#la-relation-entre-temps-distance-et-fréquence"><i class="fa fa-check"></i><b>3.2</b> La relation entre temps, distance et fréquence</a></li>
 <li class="chapter" data-level="3.3" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#la-perception-du-son"><i class="fa fa-check"></i><b>3.3</b> La perception du son</a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#laspect-fréquentiel"><i class="fa fa-check"></i><b>3.3.1</b> L’aspect fréquentiel</a></li>
+<li class="chapter" data-level="3.3.1" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#spectre-timbre-et-vocabulaire"><i class="fa fa-check"></i><b>3.3.1</b> Spectre, timbre et vocabulaire</a></li>
 <li class="chapter" data-level="3.3.2" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#la-pression-acoustique"><i class="fa fa-check"></i><b>3.3.2</b> La pression acoustique</a></li>
 <li class="chapter" data-level="3.3.3" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#lévaluation-de-la-distance"><i class="fa fa-check"></i><b>3.3.3</b> L’évaluation de la distance</a></li>
 </ul></li>
@@ -227,7 +227,7 @@
 <p>Le son peut s’appréhender de plusieurs façons différentes. Particulièrement, sa description physique et psychoacoustique est très précieuse pour tous les praticiens du son. Il convient donc, afin de pouvoir proposer un dispositif cohérent de prise de son, de comprendre la physique élémentaire du son ainsi que d’être capable de le décrire efficacement.</p>
 <div id="quelques-définitions" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> Quelques définitions<a href="quantifier-et-qualifier-le-son.html#quelques-définitions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Le son est une vibration mécanique d’un fluide. Dans le cadre de ce cours, nous ne considérerons que l’air comme médium de propagation. Cette onde cause une variation de la pression dans l’espace. Nous, les êtres humains, le percevons grâce à notre ouïe. Il s’agit donc, par définition, d’un phénomène ondulatoire et peut être caractérisé par un nombre d’oscillations par seconde, aussi appelé fréquence.</p>
+<p>Le son est une vibration mécanique d’un fluide. Dans le cadre de ce cours, nous ne considérerons que l’air comme médium de propagation. Cette onde cause une variation de la pression dans l’espace. Nous, les êtres humains, le percevons grâce à notre ouïe. Il s’agit donc, par définition, d’un phénomène ondulatoire et peut être caractérisé par un nombre d’oscillations par seconde, aussi appelé fréquence. On estime que notre espèce est sensible aux fréquences allant de 20 Hz (très grave) jusqu’à 20 000 Hz (très aigu).</p>
 <p>Les sons composés d’une seule fréquence se nomment <strong>sons purs</strong>. Cependant, de tels signaux n’existent pas dans la nature, et sont souvent utilisés afin de réaliser des mesures ou des tests psychoacoustiques.</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
 <img src="_resources/drawings/sinus_tps.svg" alt="Représentation d'un son pur : (1) domaine temporel ; (2) domaine fréquentiel" width="50%" /><img src="_resources/drawings/sinus_fqc.svg" alt="Représentation d'un son pur : (1) domaine temporel ; (2) domaine fréquentiel" width="50%" />
@@ -236,37 +236,74 @@ Figure 3.1: Représentation d’un son pur : (1) domaine temporel ; (2) domaine 
 </p>
 </div>
 <p>Dans notre environnement, les sons sont donc composés de plusieurs fréquences. La fréquence la plus grave d’un son est sa <strong>fréquence fondamentale</strong>. Les autres sont alors appelées <strong>partiels</strong>. Si ces partielles ont pour fréquence un multiple de la fréquence fondamentale, alors on les nomme <strong>harmoniques</strong>.</p>
-<p>La fréquence fondamentale donne la <strong>hauteur</strong> du son (sa note en musique par exemple). Les partiels enrichissent cette fréquence fondamentale et créés le <strong>timbre</strong> d’un son. C’est en partie grâce au timbre que l’on peut reconnaître différents instruments de musiques jouant la même note.</p>
-<p>Un son se caractérise également pas l’évolution de son amplitude dans le temps. On parle alors de son <strong>enveloppe</strong>. Un modèle courant d’enveloppe est l’ADSR : <em>Attack</em>, <em>Decay</em>, <em>Sustain</em>, <em>Release</em>, soit <em>Attaque</em>, <em>Décroissance</em>, <em>Maintient</em> et <em>Relâchement</em>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
-<img src="_resources/drawings/adsr.svg" alt="Exemple d'enveloppe ADSR" width="65%" />
+<blockquote>
+<p>💡 Plus généralement, on admettra que la composition fréquentielle, ou spectrale, de tout son peut être décomposée par une somme de sinusoïde. L’outil permettant de passer de la représentation temporelle d’un signal à sa représentation fréquentiel s’appelle la <strong>transformée de Fourrier.</strong></p>
+</blockquote>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="_resources/drawings/square_tps.svg" alt="Représentation d'une onde carrée qui ne contient que les harmoniques impaires." width="50%" /><img src="_resources/drawings/square_fqc.svg" alt="Représentation d'une onde carrée qui ne contient que les harmoniques impaires." width="50%" />
 <p class="caption">
-Figure 3.2: Exemple d’enveloppe ADSR
+Figure 3.2: Représentation d’une onde carrée qui ne contient que les harmoniques impaires.
 </p>
 </div>
+<p>La fréquence fondamentale donne la <strong>hauteur</strong> du son (sa note en musique par exemple). Les partiels enrichissent cette fréquence fondamentale et créés le <strong>timbre</strong> d’un son. C’est en partie grâce au timbre que l’on peut reconnaître différents instruments de musiques jouant la même note.</p>
+<p>Un son se caractérise également par l’évolution de son amplitude au cours du temps. On parle alors de son <strong>enveloppe</strong>. Un modèle courant d’enveloppe est l’ADSR : <em>Attack</em>, <em>Decay</em>, <em>Sustain</em>, <em>Release</em>, soit <em>Attaque</em>, <em>Décroissance</em>, <em>Maintient</em> et <em>Relâchement</em>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="_resources/drawings/adsr.svg" alt="Exemple d'enveloppe ADSR" width="65%" />
+<p class="caption">
+Figure 3.3: Exemple d’enveloppe ADSR
+</p>
+</div>
+<p>Lorsque son temps et très bref, l’ensemble <em>attaque</em> et <em>décroissance</em> forme les <strong>transitoires</strong>. Cette partie du signal est responsable de la sensation percussive du son.</p>
 </div>
 <div id="la-relation-entre-temps-distance-et-fréquence" class="section level2 hasAnchor" number="3.2">
 <h2><span class="header-section-number">3.2</span> La relation entre temps, distance et fréquence<a href="quantifier-et-qualifier-le-son.html#la-relation-entre-temps-distance-et-fréquence" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Il est important de garder à l’esprit que les notions de temps, de fréquence et de distance sont étroitement liées. Tout d’abord, le son se déplace à une vitesse constante dans un milieu donné. Dans l’air, à une température de 15 °C et au niveau de la mer, sa célérité est de <span class="math inline">\(340 m.s^{-1}\)</span>. On admettra cette valeur pour réaliser l’ensemble de nos différents calculs.</p>
+<p>Il est important de garder à l’esprit que les notions de temps, de fréquence et de distance sont étroitement liées. Nous avons vu ci-dessus que tous les sons peuvent être décrits par une somme de sinusoïde. Leur fréquence la plus grave, dite fondamentale, permet de définir la <strong>période</strong>. La période est le temps que met un signal à répéter son motif oscillatoire (voir schémas 3.1 et 3.2). Le lien mathématique entre fréquence et période est très simple, car l’un est l’inverse de l’autre :</p>
+<p><span class="math display">\[ f = \frac 1 T \]</span></p>
+<p>Si nous étudions les fréquences extrêmes, audibles par notre ouïe, nous trouvons que pour <span class="math inline">\(f_{min} = 20 \,Hz\)</span>, sa période <span class="math inline">\(T_{f_{min}} = 50 \,ms\)</span>. Pour <span class="math inline">\(f_{max} = 20\,000 \,Hz\)</span>, <span class="math inline">\(T_{f_{max}} = 0.5 \,ms\)</span>.</p>
+<p>Une onde sonore est également caractérisée par sa <strong>célérité</strong>. Celle-ci est constante dans un milieu donné. Dans l’air, à une température de <span class="math inline">\(15 \,°C\)</span> et au niveau de la mer, sa célérité <span class="math inline">\(c\)</span> est de <span class="math inline">\(340\,m.s^{-1}\)</span>. On admettra cette valeur pour réaliser l’ensemble de nos différents calculs.</p>
+<p>Comme son unité l’indique, la célérité du son est homogène à une distance divisée par un temps, soit :</p>
 <p><span class="math display">\[ c =\frac d t \]</span></p>
-<p><span class="math display">\[ c \approx 340 m.s^{-1} \]</span></p>
-<p><span class="math display">\[ f =\frac  1 T \]</span></p>
+<p>Suivant cette formule, nous pouvons alors calculer la <strong>longueur d’onde</strong> correspondant à une fréquence. La longueur d’onde se note <span class="math inline">\(\lambda\)</span>.</p>
+<p><span class="math display">\[ \lambda = cT \; \iff \; \lambda = \frac c f\]</span></p>
+<p>Si nous étudions à nouveau les bornes minimale et maximale de notre audition, nous trouvons que <span class="math inline">\(\lambda_{f_{min}} = 17 \,m\)</span> et <span class="math inline">\(\lambda_{f_{max}} = 17 \,mm\)</span>.</p>
+<p>Nous pouvons également calculer le temps de propagation du son. En pratique, nous serons souvent intéressés par le temps de propagation séparant deux points dans l’espace (par exemple, le temps séparant deux microphones par rapport à un instrument).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="_resources/drawings/mic_dist.svg" alt="Distance entre deux microphones." width="25%" />
+<p class="caption">
+Figure 3.4: Distance entre deux microphones.
+</p>
+</div>
+<p><span class="math display">\[ t = \frac {d_2-d_1}{c}\]</span></p>
 </div>
 <div id="la-perception-du-son" class="section level2 hasAnchor" number="3.3">
 <h2><span class="header-section-number">3.3</span> La perception du son<a href="quantifier-et-qualifier-le-son.html#la-perception-du-son" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="laspect-fréquentiel" class="section level3 hasAnchor" number="3.3.1">
-<h3><span class="header-section-number">3.3.1</span> L’aspect fréquentiel<a href="quantifier-et-qualifier-le-son.html#laspect-fréquentiel" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Il est communément admis que les êtres humains entendent des sons ayant pour fréquence des valeurs comprises entre 20 Hz et 20 kHz. Cette borne supérieure est plutôt théorique. Avec l’âge, voire selon l’hygiène de vie, cette valeur aura tendance à diminuer.</p>
-<p>Nous pouvons également découper cette bande de fréquence audible afin d’y poser un nom et d’en décrire une sensation :</p>
+<p>Nous avons abordé quelques notions physiques permettant de mieux caractériser le phénomène sonore. Comme indiqué au début de ce chapitre, le son peut également être discuté sous l’angle de notre ouïe, et donc, de notre perception. Cette branche de la science se nomme la psychoacoustique et cherche à étudier la façon dont nous percevons le son.</p>
+<p>Notre corps, et a fortiori notre cerveau, sont des machines extrêmement complexes. Nous sommes équipés d’une multitude de capteurs permettant de sentir le contact d’une matière, des odeurs, d’entendre, de goûter, de voir, de positionner nos membres dans l’espace, de ressentir la douleur, etc. Pris indépendamment, chacun de ces sens est déjà un phénomène complexe à décrire, mais il existe en plus une grande interdépendance entre ceux-ci. Par exemple, l’interdépendance entre la vision et l’audition est à l’origine d’un certain nombre de mécanismes biaisant notre écoute.</p>
+<p>Nous nous bornerons au fil de ce cours à quelques notions liées à l’ouïe et à son interdépendance à d’autre sens quand cela sera pertinent.</p>
+<div id="spectre-timbre-et-vocabulaire" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Spectre, timbre et vocabulaire<a href="quantifier-et-qualifier-le-son.html#spectre-timbre-et-vocabulaire" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<!--CComme évoqué précédemment, il est communément admis que les êtres humains entendent des sons ayant pour fréquence des valeurs comprises entre 20 Hz et 20 kHz. Cette borne supérieure est par ailleurs plutôt théorique. Avec l’âge, voire selon l’hygiène de vie (exposition à de forts niveaux sonores), cette valeur aura tendance à diminuer..-->
+<p>D’un point de vue perceptif, le spectre d’un son est une chose facilement remarquable. Il est, par contre, beaucoup plus difficile à qualifier. Il n’est pas rare de rencontrer les adjectifs “chaud”, “brillant”, “rond”, “aéré”, “ouvert”, “sombre”, voir des qualificatifs encore plus ésotérique, pour tenter de communiquer la sensation ressentie à l’écoute de tel ou tel son.</p>
+<p>Cette difficulté liée à l’absence de vocabulaire commun quant à la qualification des sons emmène systématiquement la redéfinition de ce vocable en fonction de son interlocuteur. En effet, le mot “rond” ne signifiera pas forcément la même chose pour différentes personnes. Une stratégie possible consiste à questionner son interlocuteur sur l’utilisation de ses adjectifs tout en cherchant à y associer des exemples sonores.</p>
+<p>Nous pouvons tout de même nous essayer à cet exercice pour nous permettre d’avoir un vocabulaire commun au fil de ce cours. Vous aurez sans doute compris qu’il n’y aura, dans les termes employés, aucun critère absolu.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<img src="_resources/drawings/spectre.svg" alt="Distance entre deux microphones." width="85%" />
+<p class="caption">
+Figure 3.5: Distance entre deux microphones.
+</p>
+</div>
+<blockquote>
+<p>💡 Proposition d’association entre bandes de fréquences et sensation.</p>
 <ul>
-<li>20 Hz — 80 Hz : Subharmonique, sensation tripale</li>
-<li>80 Hz — 160 Hz : Grave, sensation d’assise</li>
-<li>160 Hz — 380 Hz : bas-médium, sensation de « chaleur », voir « boueux »</li>
-<li>380 Hz — 1200 Hz : Medium, sensation de « boîte » quand trop présent, sonne « creux » quand trop absent</li>
-<li>1200 Hz — 3200 Hz : Haut-medium : zone de sensibilité maximale de l’oreille.</li>
-<li>3200 Hz — 8000 Hz : Aigu, apporte de la précision voir de l’agressivité</li>
-<li>8000 Hz — 20 000 Hz : Air, apporte une sensation d’ouverture voir de finesse</li>
+<li><strong>20 Hz — 80 Hz</strong> : Subharmonique, sensation tripale</li>
+<li><strong>80 Hz — 160 Hz</strong> : Grave, sensation d’assise</li>
+<li><strong>160 Hz — 380 Hz</strong> : bas-médium, sensation de « chaleur », voir « boueux »</li>
+<li><strong>380 Hz — 1400 Hz</strong> : Medium, sensation de « boîte » quand trop présent, sonne « creux » quand trop absent</li>
+<li><strong>1400 Hz — 3200 Hz</strong> : Haut-medium : zone de sensibilité maximale de l’oreille.</li>
+<li><strong>3200 Hz — 8000 Hz</strong> : Aigu, apporte de la précision voir de l’agressivité</li>
+<li><strong>8000 Hz — 20 000 Hz</strong> : Air, apporte une sensation d’ouverture voir de finesse</li>
 </ul>
+</blockquote>
 <p>Il est également important de savoir que les fréquences graves ont un effet masquant sur les fréquences plus aiguës. Ce phénomène est dû au fonctionnement de notre oreille, et plus particulièrement de la cochlée.</p>
 </div>
 <div id="la-pression-acoustique" class="section level3 hasAnchor" number="3.3.2">
@@ -274,10 +311,10 @@ Figure 3.2: Exemple d’enveloppe ADSR
 <p>Notre oreille n’a pas une réponse en fréquence linéaire en fonction du niveau sonore.</p>
 <p>Plus le niveau de pression acoustique est faible, plus le son paraîtra médium. Plus il est fort, plus le son semblera ouvert dans le grave et l’aigu.</p>
 <p>Ce phénomène est décrit par les courbes d’isosonie de Fletcher-Munson. Chaque ligne rouge représente une sensation de niveau sonore égale en fonction de la fréquence.</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
 <img src="_resources/094d33e2494c70d2395225081ede1162.png" alt="Courbes de Fletcher-Munson"  />
 <p class="caption">
-Figure 3.3: Courbes de Fletcher-Munson
+Figure 3.6: Courbes de Fletcher-Munson
 </p>
 </div>
 </div>
