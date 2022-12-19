@@ -98,3 +98,9 @@ approche-mathématique
 les-sources-de-déphasage
 gestion-des-circuits-découtes
 bibliography-book.bib-packages.bib
+la-pression-acoustique-échelle-et-perception
+pression-acoustique-niveau-sonore
+positionnement-dans-lespace
+relation-entre-temps-distance-et-fréquence
+perception-du-son
+phénomène-physique
