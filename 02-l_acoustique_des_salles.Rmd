@@ -1,5 +1,11 @@
 # L’acoustique des salles
 
+<!--
+
+Parler de la réverbération, premières reflexions, etc. 
+
+-->
+
 Tout environnement, sollicité par l’émission d’un son en son sein, produit une réponse acoustique. Cette réponse acoustique est appelée réverbération. Elle est caractéristique d’un lieu et peut, dans certains cas, être une alliée précieuse dans notre travail. Dans d’autres, elle est source de problèmes et complexifie grandement notre travail d’écoute analytique.
 
 ## Décrire une acoustique
