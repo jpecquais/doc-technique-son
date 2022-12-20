@@ -1,5 +1,4 @@
 fig:unnamed-chunk-1
-fig:unnamed-chunk-2
 fig:unnamed-chunk-3
 fig:unnamed-chunk-4
 fig:unnamed-chunk-5
@@ -8,6 +7,8 @@ fig:unnamed-chunk-7
 fig:unnamed-chunk-8
 fig:unnamed-chunk-9
 fig:unnamed-chunk-10
+fig:unnamed-chunk-11
+fig:unnamed-chunk-12
 fig:chunk-label
 avant-propos
 mise-à-jour
@@ -18,12 +19,13 @@ la-préproduction
 la-production
 la-postproduction
 quantifier-et-qualifier-le-son
+phénomène-physique
 quelques-définitions
-la-relation-entre-temps-distance-et-fréquence
-la-perception-du-son
+relation-entre-temps-distance-et-fréquence
+perception-du-son
 spectre-timbre-et-vocabulaire
-la-pression-acoustique
-lévaluation-de-la-distance
+pression-acoustique-niveau-sonore
+positionnement-dans-lespace
 lacoustique-des-salles
 décrire-une-acoustique
 le-phénomène-donde-stationnaire
@@ -98,9 +100,7 @@ approche-mathématique
 les-sources-de-déphasage
 gestion-des-circuits-découtes
 bibliography-book.bib-packages.bib
-la-pression-acoustique-échelle-et-perception
-pression-acoustique-niveau-sonore
-positionnement-dans-lespace
-relation-entre-temps-distance-et-fréquence
-perception-du-son
-phénomène-physique
+fig:unnamed-chunk-2
+liens-entre-vision-et-audition
+traitement-acoustique
+généralités

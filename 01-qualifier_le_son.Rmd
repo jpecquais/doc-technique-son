@@ -1,3 +1,8 @@
+```{r setup, include=FALSE}
+library(reticulate)
+knitr::knit_engines$set(python = reticulate::eng_python)
+```
+
 # Quantifier et qualifier le son
 
 Le son peut s'appréhender de plusieurs façons différentes. Particulièrement, sa description physique et psychoacoustique est très précieuse pour tous les praticiens du son. Il convient donc, afin de pouvoir proposer un dispositif cohérent de prise de son, de comprendre la physique élémentaire du son ainsi que d'être capable de le décrire efficacement. 
@@ -11,6 +16,45 @@ Le son est une vibration mécanique d'un fluide. Dans le cadre de ce cours, nous
 On parlera d'**évènement sonore** pour parler généralement de phénomènes physiques produisant une onde sonore.
 
 Les sons composés d'une seule fréquence se nomment **sons purs**. Cependant, de tels signaux n'existent pas dans la nature, et sont souvent utilisés afin de réaliser des mesures ou des tests psychoacoustiques. 
+
+<!--
+```{python, echo=FALSE}
+import matplotlib.pyplot as plt
+import numpy as np
+
+sr = 40000
+tstep = 1/sr
+f0 = 440
+period = 1/f0
+nPeriod = 1*period
+
+A = 1
+
+N = int(sr/f0)
+t = np.arange(0, nPeriod, tstep)
+
+fstep = sr / N
+f = np.linspace(0, (N-1)*fstep, N)
+
+y = A*np.sin(2*np.pi*f0*t)
+
+X = np.fft.fft(y)
+X_mag = np.abs(X) / N
+
+fig, [ax1, ax2] = plt.subplots(nrows=2,ncols=1)
+
+f_plot = f[0:int(N/2+1)]
+x_mag_plot = 2 * X_mag[0:int(N/2+1)]
+x_mag_plot[0] = x_mag_plot[0] / 2
+
+ax1.plot(t, y)
+var = ax2.stem(f_plot, x_mag_plot)
+var = 0
+
+
+plt.show()
+```
+-->
 
 ```{r, echo=FALSE, out.width="50%", fig.show = 'hold', fig.cap = "Représentation d'un son pur : (1) domaine temporel ; (2) domaine fréquentiel"}
 knitr::include_graphics(rep(c("_resources/drawings/sinus_tps.svg","_resources/drawings/sinus_fqc.svg")))
