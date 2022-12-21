@@ -8,7 +8,8 @@ fig:unnamed-chunk-9
 fig:unnamed-chunk-10
 fig:unnamed-chunk-11
 fig:unnamed-chunk-13
-fig:unnamed-chunk-14
+fig:unnamed-chunk-15
+fig:unnamed-chunk-16
 fig:chunk-label
 avant-propos
 mise-à-jour
@@ -26,11 +27,11 @@ perception-du-son
 spectre-timbre-et-vocabulaire
 pression-acoustique-niveau-sonore
 positionnement-dans-lespace
-lacoustique-des-salles
+acoustique-des-salles
 généralités
 la-réverbération
 le-phénomène-donde-stationnaire
-première-reflexions-et-filtrage-en-peigne
+premières-réflexions-et-filtre-en-peigne
 traitement-acoustique
 les-types-de-traitements
 considération-dacoustique-pour-le-travail-de-son
@@ -105,4 +106,5 @@ gestion-des-circuits-découtes
 fig:unnamed-chunk-2
 bibliography-book.bib-packages.bib
 liens-entre-vision-et-audition
-première-reflexions-et-filtre-en-peigne
+calcul-du-temps-de-reverbération
+limite-de-léquation-de-sabine

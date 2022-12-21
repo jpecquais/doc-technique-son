@@ -247,7 +247,7 @@
 Figure 4.1: Schéma d’une réponse impulsionnelle de réverbération.
 </p>
 </div>
-<p>Les premières réflexions sont les premiers rebonds d’une onde sonore sur les parois d’une salle et sont caractéristiques de la signature acoustique du lieu. Ces rebonds reviennent à l’auditeur avec un certain temps. Ce retard se nomme souvent « Pré-délai » dans les moteurs de réverbération artificiels. Ce pré-délai est fonction de deux paramètres :</p>
+<p>Les premières réflexions sont les premiers rebonds d’une onde sonore sur les parois d’une salle et sont caractéristiques de la signature acoustique du lieu. Ces rebonds reviennent à l’auditeur avec un certain temps. Ce retard se nomme souvent « pré-délai » dans les moteurs de réverbération artificiels. Ce pré-délai est fonction de deux paramètres :</p>
 <ul>
 <li>la taille de la pièce ; plus la pièce est petite, plus les premières réflexions reviendront à l’auditeur rapidement.</li>
 <li>les positions de la source sonore et de l’auditeur ; plus l’auditeur est proche de la source, plus les premières réflexions arriveront après le son direct, plus l’auditeur est loin de la source, plus les premières réflexions arriveront en même temps que le son direct.</li>
@@ -281,25 +281,49 @@ où <span class="math inline">\(c=340\,m.s^{-1}\)</span>, <span class="math inli
 <p>Toujours en utilisant les formules définies au premier chapitre, on établit la relation suivante :</p>
 <p><span class="math display">\[ fc = \frac 1{2t} = \frac c{2d} \]</span></p>
 <p>Où <span class="math inline">\(fc\)</span> correspond à la fréquence d’annulation la plus grave du filtre en peigne. Les autres fréquences se calculent grâce à la relation <span class="math inline">\(f(n) = fc*n\)</span>. Le phénomène de filtre en peigne est donc également harmonique.</p>
-<p>Ainsi, on peut calculer les filtres en peignes présents au point d’écoute d’une régie de mixage ou de prise de son.</p>
+<p>Ainsi, on peut calculer les filtres en peignes présents au point d’écoute d’une régie de mixage ou de prise de son grâce à la mesure du chemin des premières reflexions.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="_resources/drawings/roomPr.svg" alt="Ensemble des premières reflexions entendues par une oreille pour une enceinte (hors plafond et plancher/bureau)."  />
+<p class="caption">
+Figure 4.3: Ensemble des premières reflexions entendues par une oreille pour une enceinte (hors plafond et plancher/bureau).
+</p>
+</div>
+<blockquote>
+<p>💡 La reflexion du son sur une paroi est tout à fait comparable à de l’optique géométrique. Une onde sonore arrivant avec un angle d’incidence <span class="math inline">\(\alpha\)</span> sur une surface sera réfléchie avec le même angle. Ainsi, il est souvent conseillé d’utiliser un miroir lorsque l’on positionne des traitements acoustiques. Lorsque la personne assise au point d’écoute voit une enceinte dans un miroir placé sur un mur, on sait alors qu’il faudra placer le panneau à la place du miroir.</p>
+</blockquote>
+<p>On se rend donc compte que l’influence des filtres en peigne générés par les premières reflexions est très importante. Ce phénomène à lui seul explique l’intêret d’un grand régie d’écoute. En effet, plus une pièce est grande, plus l’écart de temps entre le son direct et les première reflexions est important. Cela implique deux choses :</p>
+<ul>
+<li>Notre cerveau favorisera le son direct plus facilement (effet de précédence)</li>
+<li>A partir d’une certaine taille, l’effet du filtre en peigne se mue en information d’acoustique pour notre cerveau. A partir de 40 ms (trajet d’un première reflexion d’environ 14 m), l’écart entre le son direct et les premières reflexions est tel que nous entendons un écho (effet Haas).</li>
+</ul>
+<p>Afin de réduire au maximum les effets des filtres en peignes, il est recommandé de placer des traiments aux points de reflexion critique par rapport à la position d’écoute (voir schéma ci-dessus).</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="traitement-acoustique" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Traitement acoustique<a href="lacoustique-des-salles.html#traitement-acoustique" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Grâce aux différents points abordés ci-dessus, nous avons maintenant bien l’idée que l’acoustique d’un lieu est un des facteurs les plus déterminants sur le rendu sonore. Mais c’est aussi celui sur lequel il est plus difficile et technique d’intervenir.</p>
+<p>On favorisera au maximum une architecture optimisée pour l’acoustique. Dans ce but, il convient de n’avoir aucune surface parallèle, cela permettant de grandement limiter l’appartition d’ondes stationnaires. On choisira également des matériaux avec des propriétés acoustiques intéressantes (placo et carrelage sont à proscrire, au profit du bois par exemple).</p>
+<p>On se posera ensuite la question de (des) endroit(s) de la pièce les plus propices pour y positionner un évènement sonore (enceinte, musicien, etc.). On cherchera donc un point ou la contribution des différents modes semble équilibré. Pour cela, il suffit simplement de se munir d’une enceinte et d’y diffuser une musique où signal test qui nous est famillié. En déplaçant l’enceinte, on pourra évaluer la contribution acoustique de la pièce en différent points.</p>
+<p>Une fois ces considérations prises en compte, on pourra alors aborder le traitement de l’acoustique.</p>
+<blockquote>
+<p>🛑 Il ne faut pas confondre isolation acoustique et traitement acoustique. Dans le premier cas, on chercher a limiter la contribution sonore d’un lieu sur son environnement, dans l’autre on cherche à améliorer la propagation du son dans un espace donné. Une isolation acoustique satisfaisante nécessite de lourd travaux, voir l’aménagement d’une “boîte dans une boîte”. Ces notions d’acoustiques dépassent le cadre de ce cours.</p>
+</blockquote>
 <div id="les-types-de-traitements" class="section level3 hasAnchor" number="4.3.1">
 <h3><span class="header-section-number">4.3.1</span> Les types de traitements<a href="lacoustique-des-salles.html#les-types-de-traitements" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>L’acoustique d’un lieu est un des facteurs les plus déterminants sur le rendu sonore. Mais c’est aussi celui sur lequel il est plus difficile et technique d’intervenir.</p>
 <p>On trouve, en général, deux types de traitements :</p>
 <ul>
 <li>Les absorbeurs, qui réduisent l’énergie d’une onde sonore à son impact.</li>
 <li>Les diffracteurs, qui répartissent l’énergie d’une onde sonore dans l’espace.</li>
 </ul>
-<p>Dans un lieu où la quantité de réverbération est jugée trop importante, on utilisera des absorbeurs. À l’inverse, dans un lieu où l’on souhaite préserver la quantité de réverbération, mais en évitant les phénomènes de modes provoqués par les ondes stationnaires, on utilisera des diffracteurs.</p>
+<p>Dans un lieu où la quantité de réverbération est jugée trop importante, on utilisera des absorbeurs. À l’inverse, dans un lieu où l’on souhaite préserver la quantité de réverbération, mais en évitant les phénomènes de modes ou de filtre en peignes, on utilisera des diffracteurs.</p>
 <p>Dans de petits lieux, l’usage de diffracteurs semble contre-productif, la priorité étant d’absorber au maximum les premières réflexions, celle-ci arrivant très rapidement après l’émission du son direct.</p>
 </div>
 <div id="considération-dacoustique-pour-le-travail-de-son" class="section level3 hasAnchor" number="4.3.2">
 <h3><span class="header-section-number">4.3.2</span> Considération d’acoustique pour le travail de son<a href="lacoustique-des-salles.html#considération-dacoustique-pour-le-travail-de-son" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Il est vivement recommandé d’installer un studio, de prise ou de monitoring, dans un lieu plutôt grand. En effet, plus le lieu est grand, plus il sera facile de positionner un point de prise de son ou d’écoute suffisamment éloigné des parois afin de minimiser l’influence des premières réflexions. Aussi, plus le lieu est grand, plus l’espace y sera suffisant pour installer des traitements acoustiques. Certains types de traitements, comme les basstraps, peuvent prendre une place bien trop importante pour être installés dans des pièces de dimension habituelle (chambres, bureau, etc.). Autant que possible, on cherchera à choisir des pièces de travail avec le minimum de surface parallèle, afin de limiter les ondes stationnaires.</p>
+<p>Il est vivement recommandé d’installer un studio, de prise de son ou de monitoring, dans un lieu plutôt grand. En effet, plus le lieu est grand, plus il sera facile de positionner un point de prise de son ou d’écoute suffisamment éloigné des parois afin de minimiser l’influence des premières réflexions. Aussi, plus le lieu est grand, plus l’espace y sera suffisant pour installer des traitements acoustiques. Certains types de traitements, comme les basstraps, peuvent prendre une place bien trop importante pour être installés dans des pièces de dimension habituelle (chambres, bureau, etc.). On se rappellera aussi de choisir une pièce de travail avec le minimum de surface parallèle, afin de limiter les ondes stationnaires.</p>
 <p>En ce qui concerne les traitements en eux-mêmes, il est vivement recommandé de traiter en priorité le bas du spectre. L’ajout de basstrap est donc prioritaire sur le reste des traitements. Plus la longueur d’onde à traiter est grande (donc la fréquence grave), plus la taille des matériaux devra être importante. On retrouve donc le point abordé précédemment : traiter une pièce correctement demande un certain espace. Par ailleurs, il est important que les traitements appliqués à un lieu soient linéaires en fréquence, c’est-à-dire qu’il ne se concentre pas sur une seule zone du spectre. Cela arrive souvent avec les kits de mousses peu onéreux, mais n’ayant une réelle efficacité que dans les médiums et hautes fréquences.</p>
+<p>Pour une régie d’écoute, on sera tenté de prévilégier des traitements d’absorption. En effet, une réverbération trop longue dans une régie de monitoring risque fort de fausser certaines prise de décisions (distance des microphones à la source, quantité de reverb, etc.). A l’inverse, une pièce avec un temps de réverbération trop court pourra créer un sentiment d’inconfort voir de malaise.</p>
+<p>Pour une salle de prise de son, l’idéal est de disposer d’un grand espace avec un traitement acoustique principalement basé sur de la diffusion, pour ensuite disposer de traitements absorbant movible permettant de sculpter le rendu acoustique en fonction de la prise de son à réaliser. Pour des petits lieux (- de 25 m²), on cherchera à absorber au maximum afin de limiter les effets de filtre en peigne.</p>
 
 </div>
 </div>
