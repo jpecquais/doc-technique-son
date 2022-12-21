@@ -11,14 +11,13 @@ Tout environnement, sollicité par un évènement sonore, produit une réponse a
 
 ## Généralités
 
-### Décrire une acoustique
+### La réverbération
 
 L'acoustique d'une salle est généralement décrite en deux temps : le temps des premières reflexions et le temps du champ diffus.
 
 ```{r, echo = FALSE, fig.align='center', fig.cap = "Schéma d'une réponse impulsionnelle de réverbération."}
 knitr::include_graphics(rep("_resources/drawings/reverb.svg"))
 ```
-
 
 Les premières réflexions sont les premiers rebonds d’une onde sonore sur les parois d’une salle et sont caractéristiques de la signature acoustique du lieu. Ces rebonds reviennent à l’auditeur avec un certain temps. Ce retard se nomme souvent « Pré-délai » dans les moteurs de réverbération artificiels. Ce pré-délai est fonction de deux paramètres :
 
@@ -31,9 +30,9 @@ Attention, il est souvent considéré que la taille de la pièce joue sur la lon
 
 ### Le phénomène d'onde stationnaire
 
-La plupart des pièces d'habitations sont des salles "rectangulaire". Dans ce cas, les surfaces sont toutes parallèles. Ce type de salle est particulièrement propice à l'apparition d'ondes stationnaires.
+La plupart des pièces de vie sont des salles rectangulaire. Dans ce cas, les surfaces sont toutes parallèles. Ce type de salle est particulièrement propice à l'apparition d'ondes stationnaires. Une onde stationnaire est un phénomène acoustique provoquant l'augmentation de volume de certaines fréquences (ventre) et la disparition d'autres (noeuds).
 
-Une onde stationnaire est un phénomène acoustique provoquant l'augmentation de volume de certaines fréquences (ventre) et la disparition d'autres (noeuds).
+Nous aborderons ici ce  phénomène sous l'angle de l'acoustique des salles, mais il est appliquable dans d'autres situations, comme la vibration d'une corde par exemple.
 
 ```{r, echo = FALSE, fig.align='center', fig.cap = 'Les points rouges représente les noeuds, les amplitudes maximales sont les ventres. Infographie par Lucas Vieira'}
 knitr::include_graphics(rep("https://upload.wikimedia.org/wikipedia/commons/7/7d/Standing_wave_2.gif"))
@@ -42,7 +41,59 @@ knitr::include_graphics(rep("https://upload.wikimedia.org/wikipedia/commons/7/7d
 Il est possible de calculer les fréquences d'un mode grâce aux formules vues au chapitre précédent :
 
 $$f(n) = \frac{c}{2L}.n$$
-où $c=340\,m.s^{-1}$, $L$ est la longueur considérée de la pièce. Pour $n=0$ on trouve le **mode propre**. Pour $n>0$ on trouvera tous les **modes harmoniques**.
+où $c=340\,m.s^{-1}$, $L$ est la longueur considérée de la pièce. Pour $n=1$ on trouve le **mode propre**. Pour $n>1$ on trouvera tous les **modes harmoniques**.
+
+Etudions la fréquence du mode propre pour deux cas théorique : une salle de 16 m² (4x4) et une autre de de 49 m² (7x7). On trouvera donc :
+
+$$f(1)_{L=4m} = 42.5 \,Hz \>\>\>\> f(1)_{L=7m} = 24 \,Hz$$
+
+On en déduit donc que, plus la pièce est grande, plus la fréquence des modes propres sera grave. Il convient également de considérer la distance de chaques surfaces parallèles, car les pièces sont rarement cubiques. Cela implique donc la présence de trois modes propres, plus leurs modes harmoniques, pour une seule et même salle.
+
+## Première reflexions et filtre en peigne
+
+Nous avons vu que la réponse acoustique, ou reverbération, d'une salle se décompose géneralement en deux parties, la première étant les premières reflexions. Ces premières reflexions sont donc, comme leur nom l'indique, les premiers rebonds que nous entendons suite à un évènement sonore.
+
+Dans de petites pièces, les premières reflexions peuvent être entendues si proche du son direct que cela génère un type de filtrage bien particulié appelé **filtre en peigne**.
+
+```{python, echo=FALSE, fig.align="center", fig.caption="Filtre en peigne correspondant à un retard d'une milliseconde"}
+import matplotlib.pyplot as plt
+import numpy as np
+
+fs = 48000  # Sample rate
+T = 1/fs    # Sample period
+L = 48    # Delay
+a = 1     # Attenuation factor
+
+# h[n] = dirac[n] + a * dirac[n-L]
+h = np.zeros(fs)
+h[0] = 1
+h[L] = a
+
+# Transfer function H via FFT - same # of bins
+H_FFT = 20*np.log10(np.fft.fft(h, fs))
+
+# Correct comb filter
+plt.figure()
+plt.plot(np.abs(H))
+# Runing FFT gives a form of strange envelope error
+plt.figure()
+var = plt.xlim(20,20000)
+var = plt.ylim(-144,24)
+var = 0
+plt.xscale("log")
+plt.xlabel("Frequency (Hz)")
+plt.ylabel("Amplitude (dB)")
+plt.title("Filtre en peigne correspondant à un retard d'une milliseconde")
+plt.plot(H_FFT)
+```
+
+Toujours en utilisant les formules définies au premier chapitre, on établit la relation suivante :
+
+$$ fc = \frac 1{2t} = \frac c{2d} $$
+
+Où $fc$ correspond à la fréquence d'annulation la plus grave du filtre en peigne. Les autres fréquences se calculent grâce à la relation $f(n) = fc*n$. Le phénomène de filtre en peigne est donc également harmonique.
+
+Ainsi, on peut calculer les filtres en peignes présents au point d'écoute d'une régie de mixage ou de prise de son.
 
 ## Traitement acoustique
 

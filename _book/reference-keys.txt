@@ -1,5 +1,4 @@
 fig:unnamed-chunk-1
-fig:unnamed-chunk-3
 fig:unnamed-chunk-4
 fig:unnamed-chunk-5
 fig:unnamed-chunk-6
@@ -8,7 +7,8 @@ fig:unnamed-chunk-8
 fig:unnamed-chunk-9
 fig:unnamed-chunk-10
 fig:unnamed-chunk-11
-fig:unnamed-chunk-12
+fig:unnamed-chunk-13
+fig:unnamed-chunk-14
 fig:chunk-label
 avant-propos
 mise-à-jour
@@ -27,8 +27,11 @@ spectre-timbre-et-vocabulaire
 pression-acoustique-niveau-sonore
 positionnement-dans-lespace
 lacoustique-des-salles
-décrire-une-acoustique
+généralités
+la-réverbération
 le-phénomène-donde-stationnaire
+première-reflexions-et-filtrage-en-peigne
+traitement-acoustique
 les-types-de-traitements
 considération-dacoustique-pour-le-travail-de-son
 le-chemin-du-signal
@@ -99,8 +102,7 @@ les-effets-sonores-de-déphasage
 approche-mathématique
 les-sources-de-déphasage
 gestion-des-circuits-découtes
-bibliography-book.bib-packages.bib
 fig:unnamed-chunk-2
+bibliography-book.bib-packages.bib
 liens-entre-vision-et-audition
-traitement-acoustique
-généralités
+première-reflexions-et-filtre-en-peigne
