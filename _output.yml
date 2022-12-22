@@ -7,7 +7,8 @@ bookdown::gitbook:
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Publié avec bookdown</a></li>
     edit: "https://github.com/jpecquais/doc-technique-son/%s/index.Rmd"
-    download: ["pdf", "epub"]
+    download:
+      - ["_main.pdf", "PDF"]
     sharing:
       facebook: false
       github: true
