@@ -1,9 +1,3 @@
-<!--   
-    Effet Haas
-    Première reflexion et filtre en peigne
-    
-    -->
-
 # Acoustique des salles
 
 
@@ -26,29 +20,35 @@ Les premières réflexions sont les premiers rebonds d’une onde sonore sur les
 
 Lorsque les premières réflexions elles-mêmes auront rebondi plusieurs fois sur les parois du lieu, le phénomène d’écho des premières réflexions va se muer en champs diffus, par nature plus dense. La longueur du champ diffus se mesure grâce au RT60. Cette méthode de mesure propose de regarder le temps que met la réverbération à perdre 60 dB. Ce temps permettra ensuite de donner une longueur de réverbération.
 
-### Calcul du temps de reverbération
+### Calcul du temps de réverbération
 
-L'équation de Sabine permet de calculer le temps de réverbération d'une salle à partir de son volume et du coefficient d'absorption de ses matériau.
+L'équation de Sabine permet de calculer le temps de réverbération d'une salle à partir de son volume et du coefficient d'absorption de ses matériaux.
 
 $$RT_{60} = 0.1611 \times \frac{V}{\sum_{i=0}^{k} S_i.\alpha_i}$$
 
-$V$ s'exprime en $m^3$ et $S$ en $m^2$. $\alpha$ est le coefficient d'absorption du matériaux, en sabins. Ce coefficient est compris entre 0 et 1, plus il est important plus le matériau est absorbant.
+$V$ s'exprime en $m^3$ et $S$ en $m^2$. $\alpha$ est le coefficient d'absorption du matériau, en sabins. Ce coefficient est compris entre 0 et 1, plus il est important plus le matériau est absorbant.
 
-En guise d'exemple sur l'utilisation de la formule ci-dessus, prenons le cas d'une pièce de $25\,m^2$ ($5\,m$ par $5\,m$) et de $2.40\,m$ de hauteur. Nous considérons que le sol est en parquet et les murs en platre. Nous avons donc $25\,m^2$ de parquet et $4\times(5\times2.4)=48\,m^2$. On trouve sur les sites de fabricant de matériaux que le platre peint a un coefficient d'absorption de 0.05 sabins et le bois un coefficient de 0.15 sabins. Notre calcul final.
+En guise d'exemple sur l'utilisation de la formule ci-dessus, prenons le cas d'une pièce de $25\,m^2$ ($5\,m$ par $5\,m$) et de $2.40\,m$ de hauteur. Nous considérons que le sol est en parquet et les murs en plâtre. Nous avons donc $25\,m^2$ de parquet et $4\times(5\times2.4)=48\,m^2$. On trouve sur les sites de fabricant de matériaux que le plâtre peint a un coefficient d'absorption de 0.05 sabins et le bois un coefficient de 0.15 sabins. Notre calcul final.
 
 $$RT_{60} = 0.1611 \times \frac{25 \times 2.4}{25\times0.15+48\times0.05} \approx 1.57\,s$$
 
-On peut dès lors calculer la **distance critique**, distance à partir de laquel on entendra autant un évènement sonore que la réponse acoustique de la salle à son stimulus.
+On peut dès lors calculer la **distance critique**, distance à partir de laquelle on entendra autant un évènement sonore que la réponse acoustique de la salle à son stimulus.
 
 $$d_c \approx 0.057 \times \sqrt{\frac{V}{RT60}}$$
 
 Dans notre exemple $d_c \approx 0.35\,m$.
 
-Il est souvent considéré que la taille de la pièce joue un rôle déterminant sur la longueur de réverbération. L'équation de Sabine indique bien que le coefficient d'absorption des matériaux y joue un beaucoup plus rôle important. Le modèle de réverberation de l'IRCAM va jusqu'à complètement décorréler la taille de la pièce simulée du temps de réverbération. Au final, la taille de l'espace joue d'avantage sur la structure temporelle des échos, et donc, principalement sur les premières réflexions.
+Il est souvent considéré que la taille de la pièce joue un rôle déterminant sur la longueur de réverbération. L'équation de Sabine indique bien que le coefficient d'absorption des matériaux y joue un rôle beaucoup plus important. Le modèle de réverbération de l'IRCAM va jusqu'à complètement décorréler la taille de la pièce simulée du temps de réverbération. Au final, la taille de l'espace joue davantage sur la structure temporelle des échos, et donc, principalement sur les premières réflexions.
 
 ### Limite de l'équation de Sabine
 
-Il convient d'observer plusieurs réserves quant à l'utilisation de l'équation de Sabine. Premièrement, elle ne tient pas compte de l'aspect fréquentiel lié à l'absorption des matériaux. En effet, le temps de réverbération des graves est bien souvent plus long que celui des aigus.  
+Il convient d'observer plusieurs réserves quant à l'utilisation de l'équation de Sabine. Premièrement, elle ne tient pas compte de l'aspect fréquentiel lié à l'absorption des matériaux. En effet, le temps de réverbération des graves est presque toujours plus long que celui des aigus. Afin de contourner ce problème, on pourra chercher des coefficients d'absorption tenant compte de la fréquence et ainsi résoudre l'équation de Sabine pour certaines plages fréquentielles.
+
+L'équation de Sabine pose également problème pour de petits espaces (régie d'écoute par exemple) en prédisant un temps de réverbération trop long. Dans ce cas, l'équation d'Eyring est plus adaptée.
+
+$$RT_{60} = -0.1611 \times \frac{V}{\sum_{i=0}^{k} S_i.\ln(1-\alpha_i)}$$
+
+> 💡 l'équation d'Eyring n'améliore pas non plus la problématique fréquentielle.
 
 ### Le phénomène d'onde stationnaire
 
@@ -99,7 +99,7 @@ var = plt.xlim(20,20000)
 var = plt.ylim(-94,24)
 var = 0
 plt.xscale("log")
-plt.xlabel("Frequency (Hz)")
+plt.xlabel("Frequences (Hz)")
 plt.ylabel("Amplitude (dB)")
 plt.title("Filtre en peigne correspondant à un retard d'une milliseconde")
 plt.plot(H_FFT)
@@ -148,7 +148,7 @@ var = plt.xlim(20,20000)
 var = plt.ylim(-144,24)
 var = 0
 plt.xscale("log")
-plt.xlabel("Frequency (Hz)")
+plt.xlabel("Frequences (Hz)")
 plt.ylabel("Amplitude (dB)")
 plt.title("Même filtre en peigne, avec une atténuation de 20 dB sur la reflexion")
 plt.plot(H_FFT)
@@ -176,7 +176,7 @@ On trouve, en général, deux types de traitements :
 
 Dans un lieu où la quantité de réverbération est jugée trop importante, on utilisera des absorbeurs. À l’inverse, dans un lieu où l’on souhaite préserver la quantité de réverbération, mais en évitant les phénomènes de modes ou de filtre en peignes, on utilisera des diffuseurs.
 
-Dans de petits lieux, l’usage de diffracter semble contre-productif, la priorité étant d’absorber au maximum les premières réflexions, celle-ci arrivant très rapidement après l’émission du son direct.
+Dans de petits lieux, l’usage de diffuseur semble contre-productif, la priorité étant d’absorber au maximum les premières réflexions, celle-ci arrivant très rapidement après l’émission du son direct.
 
 ### Considération d’acoustique pour le travail de son
 

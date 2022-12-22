@@ -17,56 +17,85 @@ On parlera d'**évènement sonore** pour parler généralement de phénomènes p
 
 Les sons composés d'une seule fréquence se nomment **sons purs**. Cependant, de tels signaux n'existent pas dans la nature, et sont souvent utilisés afin de réaliser des mesures ou des tests psychoacoustiques. 
 
-<!--
-```{python, echo=FALSE}
+```{python, echo=FALSE, fig.align="center", fig.caption="Onde sinusoïdale et visualisation de son spectre"}
 import matplotlib.pyplot as plt
 import numpy as np
 
-sr = 40000
-tstep = 1/sr
-f0 = 440
-period = 1/f0
-nPeriod = 1*period
+fs = 48000  # Sample rate
+T = 1/fs    # Sample period
+f0 = 1000
 
-A = 1
+t = np.arange(0,1,1/fs)
+h = np.sin(2*np.pi*f0*t)
 
-N = int(sr/f0)
-t = np.arange(0, nPeriod, tstep)
+# Transfer function H via FFT - same # of bins
+H_FFT = 20*np.log(2*np.fft.fft(h, fs)/fs)
 
-fstep = sr / N
-f = np.linspace(0, (N-1)*fstep, N)
+plt.figure()
+fig, axs = plt.subplots(nrows=2, ncols=1)
+#axs[0].title("Onde sinusoïdale et visualisation de son spectre")
+axs[0].plot(t, h, label = str(f0) + " Hz")
+var = axs[0].set_xlim(0,1/f0)
+#axs[0].set_xlabel("Temps (s)")
+axs[0].set_ylabel("Amplitude")
+axs[0].legend()
 
-y = A*np.sin(2*np.pi*f0*t)
-
-X = np.fft.fft(y)
-X_mag = np.abs(X) / N
-
-fig, [ax1, ax2] = plt.subplots(nrows=2,ncols=1)
-
-f_plot = f[0:int(N/2+1)]
-x_mag_plot = 2 * X_mag[0:int(N/2+1)]
-x_mag_plot[0] = x_mag_plot[0] / 2
-
-ax1.plot(t, y)
-var = ax2.stem(f_plot, x_mag_plot)
+axs[1].plot(H_FFT)
+var = axs[1].set_xlim(20,20000)
+axs[1].set_xscale("log")
+var = axs[1].set_ylim(-96,24)
 var = 0
-
-
-plt.show()
+axs[1].set_xlabel("Frequences (Hz)")
+axs[1].set_ylabel("Amplitude (dB)")
 ```
--->
 
+<!--
 ```{r, echo=FALSE, out.width="50%", fig.show = 'hold', fig.cap = "Représentation d'un son pur : (1) domaine temporel ; (2) domaine fréquentiel"}
 knitr::include_graphics(rep(c("_resources/drawings/sinus_tps.svg","_resources/drawings/sinus_fqc.svg")))
 ```
+-->
 
 Dans notre environnement, les sons sont donc composés de plusieurs fréquences. La fréquence la plus grave d'un son est sa **fréquence fondamentale**. Les autres sont alors appelées **partiels**. Si ces partielles ont pour fréquence un multiple de la fréquence fondamentale, alors on les nomme **harmoniques**.
 
 > 💡 Plus généralement, on admettra que la composition fréquentielle, ou spectrale, de tout son peut être décomposée par une somme de sinusoïde. L'outil permettant de passer de la représentation temporelle d'un signal à sa représentation fréquentiel s'appelle la **transformée de Fourrier.** 
 
+```{python, echo=FALSE, fig.align="center", fig.caption="Signal carré et visualisation de son spectre"}
+import matplotlib.pyplot as plt
+import numpy as np
+
+fs = 48000  # Sample rate
+T = 1/fs    # Sample period
+f0 = 1000
+
+t = np.arange(0,1,1/fs)
+sine = np.sin(2*np.pi*f0*t)
+square = np.array([1 if np.sin(2*np.pi*f0*x) >= 0 else -1 for x in t])
+
+# Transfer function H via FFT - same # of bins
+H_FFT = 20*np.log(2*np.fft.fft(square, fs)/fs)
+
+plt.figure()
+fig, axs = plt.subplots(nrows=2, ncols=1)
+axs[0].plot(t, square, label = str(f0) + " Hz")
+var = axs[0].set_xlim(0,1/f0)
+#axs[0].set_xlabel("Temps (s))")
+axs[0].set_ylabel("Amplitude")
+axs[0].legend()
+
+axs[1].plot(H_FFT)
+var = axs[1].set_xlim(20,20000)
+axs[1].set_xscale("log")
+var = axs[1].set_ylim(-96,24)
+var = 0
+axs[1].set_xlabel("Frequences (Hz)")
+axs[1].set_ylabel("Amplitude (dB)")
+```
+
+<!--
 ```{r, echo=FALSE, out.width="50%", fig.show = 'hold', fig.cap = "Représentation d'une onde carrée qui ne contient que les harmoniques impaires."}
 knitr::include_graphics(rep(c("_resources/drawings/square_tps.svg","_resources/drawings/square_fqc.svg")))
 ```
+-->
 
 La fréquence fondamentale donne la **hauteur** du son (sa note en musique par exemple). Les partiels enrichissent cette fréquence fondamentale et créés le **timbre** d'un son. C'est en partie grâce au timbre que l'on peut reconnaître différents instruments de musiques jouant la même note.
 

@@ -23,7 +23,7 @@
 <meta name="author" content="Jean-Loup Pecquais" />
 
 
-<meta name="date" content="2022-12-21" />
+<meta name="date" content="2022-12-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -104,7 +104,7 @@
 <li class="chapter" data-level="4.1" data-path="acoustique-des-salles.html"><a href="acoustique-des-salles.html#généralités"><i class="fa fa-check"></i><b>4.1</b> Généralités</a>
 <ul>
 <li class="chapter" data-level="4.1.1" data-path="acoustique-des-salles.html"><a href="acoustique-des-salles.html#la-réverbération"><i class="fa fa-check"></i><b>4.1.1</b> La réverbération</a></li>
-<li class="chapter" data-level="4.1.2" data-path="acoustique-des-salles.html"><a href="acoustique-des-salles.html#calcul-du-temps-de-reverbération"><i class="fa fa-check"></i><b>4.1.2</b> Calcul du temps de reverbération</a></li>
+<li class="chapter" data-level="4.1.2" data-path="acoustique-des-salles.html"><a href="acoustique-des-salles.html#calcul-du-temps-de-réverbération"><i class="fa fa-check"></i><b>4.1.2</b> Calcul du temps de réverbération</a></li>
 <li class="chapter" data-level="4.1.3" data-path="acoustique-des-salles.html"><a href="acoustique-des-salles.html#limite-de-léquation-de-sabine"><i class="fa fa-check"></i><b>4.1.3</b> Limite de l’équation de Sabine</a></li>
 <li class="chapter" data-level="4.1.4" data-path="acoustique-des-salles.html"><a href="acoustique-des-salles.html#le-phénomène-donde-stationnaire"><i class="fa fa-check"></i><b>4.1.4</b> Le phénomène d’onde stationnaire</a></li>
 </ul></li>
@@ -256,21 +256,26 @@ Figure 4.1: Schéma d’une réponse impulsionnelle de réverbération.
 </ul>
 <p>Lorsque les premières réflexions elles-mêmes auront rebondi plusieurs fois sur les parois du lieu, le phénomène d’écho des premières réflexions va se muer en champs diffus, par nature plus dense. La longueur du champ diffus se mesure grâce au RT60. Cette méthode de mesure propose de regarder le temps que met la réverbération à perdre 60 dB. Ce temps permettra ensuite de donner une longueur de réverbération.</p>
 </div>
-<div id="calcul-du-temps-de-reverbération" class="section level3 hasAnchor" number="4.1.2">
-<h3><span class="header-section-number">4.1.2</span> Calcul du temps de reverbération<a href="acoustique-des-salles.html#calcul-du-temps-de-reverbération" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>L’équation de Sabine permet de calculer le temps de réverbération d’une salle à partir de son volume et du coefficient d’absorption de ses matériau.</p>
+<div id="calcul-du-temps-de-réverbération" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Calcul du temps de réverbération<a href="acoustique-des-salles.html#calcul-du-temps-de-réverbération" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>L’équation de Sabine permet de calculer le temps de réverbération d’une salle à partir de son volume et du coefficient d’absorption de ses matériaux.</p>
 <p><span class="math display">\[RT_{60} = 0.1611 \times \frac{V}{\sum_{i=0}^{k} S_i.\alpha_i}\]</span></p>
-<p><span class="math inline">\(V\)</span> s’exprime en <span class="math inline">\(m^3\)</span> et <span class="math inline">\(S\)</span> en <span class="math inline">\(m^2\)</span>. <span class="math inline">\(\alpha\)</span> est le coefficient d’absorption du matériaux, en sabins. Ce coefficient est compris entre 0 et 1, plus il est important plus le matériau est absorbant.</p>
-<p>En guise d’exemple sur l’utilisation de la formule ci-dessus, prenons le cas d’une pièce de <span class="math inline">\(25\,m^2\)</span> (<span class="math inline">\(5\,m\)</span> par <span class="math inline">\(5\,m\)</span>) et de <span class="math inline">\(2.40\,m\)</span> de hauteur. Nous considérons que le sol est en parquet et les murs en platre. Nous avons donc <span class="math inline">\(25\,m^2\)</span> de parquet et <span class="math inline">\(4\times(5\times2.4)=48\,m^2\)</span>. On trouve sur les sites de fabricant de matériaux que le platre peint a un coefficient d’absorption de 0.05 sabins et le bois un coefficient de 0.15 sabins. Notre calcul final.</p>
+<p><span class="math inline">\(V\)</span> s’exprime en <span class="math inline">\(m^3\)</span> et <span class="math inline">\(S\)</span> en <span class="math inline">\(m^2\)</span>. <span class="math inline">\(\alpha\)</span> est le coefficient d’absorption du matériau, en sabins. Ce coefficient est compris entre 0 et 1, plus il est important plus le matériau est absorbant.</p>
+<p>En guise d’exemple sur l’utilisation de la formule ci-dessus, prenons le cas d’une pièce de <span class="math inline">\(25\,m^2\)</span> (<span class="math inline">\(5\,m\)</span> par <span class="math inline">\(5\,m\)</span>) et de <span class="math inline">\(2.40\,m\)</span> de hauteur. Nous considérons que le sol est en parquet et les murs en plâtre. Nous avons donc <span class="math inline">\(25\,m^2\)</span> de parquet et <span class="math inline">\(4\times(5\times2.4)=48\,m^2\)</span>. On trouve sur les sites de fabricant de matériaux que le plâtre peint a un coefficient d’absorption de 0.05 sabins et le bois un coefficient de 0.15 sabins. Notre calcul final.</p>
 <p><span class="math display">\[RT_{60} = 0.1611 \times \frac{25 \times 2.4}{25\times0.15+48\times0.05} \approx 1.57\,s\]</span></p>
-<p>On peut dès lors calculer la <strong>distance critique</strong>, distance à partir de laquel on entendra autant un évènement sonore que la réponse acoustique de la salle à son stimulus.</p>
+<p>On peut dès lors calculer la <strong>distance critique</strong>, distance à partir de laquelle on entendra autant un évènement sonore que la réponse acoustique de la salle à son stimulus.</p>
 <p><span class="math display">\[d_c \approx 0.057 \times \sqrt{\frac{V}{RT60}}\]</span></p>
 <p>Dans notre exemple <span class="math inline">\(d_c \approx 0.35\,m\)</span>.</p>
-<p>Il est souvent considéré que la taille de la pièce joue un rôle déterminant sur la longueur de réverbération. L’équation de Sabine indique bien que le coefficient d’absorption des matériaux y joue un beaucoup plus rôle important. Le modèle de réverberation de l’IRCAM va jusqu’à complètement décorréler la taille de la pièce simulée du temps de réverbération. Au final, la taille de l’espace joue d’avantage sur la structure temporelle des échos, et donc, principalement sur les premières réflexions.</p>
+<p>Il est souvent considéré que la taille de la pièce joue un rôle déterminant sur la longueur de réverbération. L’équation de Sabine indique bien que le coefficient d’absorption des matériaux y joue un rôle beaucoup plus important. Le modèle de réverbération de l’IRCAM va jusqu’à complètement décorréler la taille de la pièce simulée du temps de réverbération. Au final, la taille de l’espace joue davantage sur la structure temporelle des échos, et donc, principalement sur les premières réflexions.</p>
 </div>
 <div id="limite-de-léquation-de-sabine" class="section level3 hasAnchor" number="4.1.3">
 <h3><span class="header-section-number">4.1.3</span> Limite de l’équation de Sabine<a href="acoustique-des-salles.html#limite-de-léquation-de-sabine" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Il convient d’observer plusieurs réserves quant à l’utilisation de l’équation de Sabine. Premièrement, elle ne tient pas compte de l’aspect fréquentiel lié à l’absorption des matériaux. En effet, le temps de réverbération des graves est bien souvent plus long que celui des aigus.</p>
+<p>Il convient d’observer plusieurs réserves quant à l’utilisation de l’équation de Sabine. Premièrement, elle ne tient pas compte de l’aspect fréquentiel lié à l’absorption des matériaux. En effet, le temps de réverbération des graves est presque toujours plus long que celui des aigus. Afin de contourner ce problème, on pourra chercher des coefficients d’absorption tenant compte de la fréquence et ainsi résoudre l’équation de Sabine pour certaines plages fréquentielles.</p>
+<p>L’équation de Sabine pose également problème pour de petits espaces (régie d’écoute par exemple) en prédisant un temps de réverbération trop long. Dans ce cas, l’équation d’Eyring est plus adaptée.</p>
+<p><span class="math display">\[RT_{60} = -0.1611 \times \frac{V}{\sum_{i=0}^{k} S_i.\ln(1-\alpha_i)}\]</span></p>
+<blockquote>
+<p>💡 l’équation d’Eyring n’améliore pas non plus la problématique fréquentielle.</p>
+</blockquote>
 </div>
 <div id="le-phénomène-donde-stationnaire" class="section level3 hasAnchor" number="4.1.4">
 <h3><span class="header-section-number">4.1.4</span> Le phénomène d’onde stationnaire<a href="acoustique-des-salles.html#le-phénomène-donde-stationnaire" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -333,7 +338,7 @@ Figure 4.3: Ensemble des premières reflexions entendues par une oreille pour un
 <li>Les diffuseurs, qui répartissent l’énergie d’une onde sonore dans l’espace.</li>
 </ul>
 <p>Dans un lieu où la quantité de réverbération est jugée trop importante, on utilisera des absorbeurs. À l’inverse, dans un lieu où l’on souhaite préserver la quantité de réverbération, mais en évitant les phénomènes de modes ou de filtre en peignes, on utilisera des diffuseurs.</p>
-<p>Dans de petits lieux, l’usage de diffracter semble contre-productif, la priorité étant d’absorber au maximum les premières réflexions, celle-ci arrivant très rapidement après l’émission du son direct.</p>
+<p>Dans de petits lieux, l’usage de diffuseur semble contre-productif, la priorité étant d’absorber au maximum les premières réflexions, celle-ci arrivant très rapidement après l’émission du son direct.</p>
 </div>
 <div id="considération-dacoustique-pour-le-travail-de-son" class="section level3 hasAnchor" number="4.3.2">
 <h3><span class="header-section-number">4.3.2</span> Considération d’acoustique pour le travail de son<a href="acoustique-des-salles.html#considération-dacoustique-pour-le-travail-de-son" class="anchor-section" aria-label="Anchor link to header"></a></h3>

@@ -1,0 +1,1373 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={La prise de son musicale},
+  pdfauthor={Jean-Loup Pecquais},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{La prise de son musicale}
+\author{Jean-Loup Pecquais}
+\date{2022-12-22}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{avant-propos}{%
+\chapter{Avant-propos}\label{avant-propos}}
+
+Ce livre est né de la nécessité d'un support de cours pour la formation ``Technique de Prise de Son'', dispensée par Jean-Loup Pecquais. Il intègre donc l'ensemble des notions abordées, expliquées en détail, ainsi que des exemples sonores.
+
+Ce livre est écrit dans la philosophie de l'Open Source. L'intégralité de son contenu est donc disponible gratuitement. Son code source est accessible dans un dépôt GitHub. Ainsi, il est possible à tout à chacun de reporter les éventuelles erreurs ou de proposer des modifications.
+
+\hypertarget{mise-uxe0-jour}{%
+\section{Mise à jour}\label{mise-uxe0-jour}}
+
+La distribution numérique de ce livre permet une mise à jour régulière de son contenu. Cela implique deux choses :
+
+\begin{itemize}
+\tightlist
+\item
+  Certaines sections peuvent être incomplètes, et seront complétées plus tard
+\item
+  C'est une bonne idée de revenir consulter ce site régulièrement
+\end{itemize}
+
+\hypertarget{structures}{%
+\section{Structures}\label{structures}}
+
+Dans un premier temps, ce livre reprend l'ensemble de la chaîne audio, en y explicitant le rôle et le fonctionnement de chacun de ses composants. L'objectif est de fournir une base technique objective au preneur de son.
+
+Dans un second temps, le livre détaille un ensemble de techniques de prise de son, insistant particulièrement sur les mécanismes généraux de la prise et sur l'écoute critique. Cependant, un certain nombre ``trucs \& astuces'' de prises de son sont aussi présentées. Ces derniers ne doivent jamais se supplanter à l'écoute critique.
+
+\hypertarget{description-dune-production-musicale-type}{%
+\chapter{Description d'une production musicale type}\label{description-dune-production-musicale-type}}
+
+Afin de comprendre quels vont être les enjeux du preneur de son, il convient de comprendre dans quel contexte il intervient. Certes, il est le premier métier du son à rentrer en scène, mais l'œuvre à enregistrer a déjà très probablement eu une longue vie. Elle a été composée, arrangée, peut-être même déjà interprétée au cours de concerts.
+
+À ce stade, le preneur de son aura un regard neuf sur la matière. Il aura donc le potentiel de permettre aux créateurs de prendre du recul sur leur travail. Il convient d'ailleurs de rappeler qu'un preneur de son, aussi talentueux et créatif soit il, est un \textbf{assistant de création}. Cela signifie qu'il met à disposition une compétence technique à un d'artiste pour lui permettre d'avancer sur son projet. Cela implique également que celui ou celle qui a le mot final sur le choix des orientations esthétiques est l'artiste en question. Il convient donc, en tant que preneur de son, d'être force de proposition, tout en sachant respecter le choix (qu'ils soient bons ou mauvais) des artistes.
+
+D'un point de vue sonore, le travail de prise de son est absolument critique. Ce sera à ce moment que va se jouer la majorité des choix esthétiques. Il convient donc de réunir les conditions optimales pour~:
+
+\begin{itemize}
+\tightlist
+\item
+  offrir aux musiciens et musiciennes la chance de donner leur meilleure interprétation possible
+\item
+  réaliser une prise de son en adéquation avec l'orientation esthétique du projet
+\end{itemize}
+
+La plupart des choix faits à la prise de son ne pourront pas être renégociés a posteriori. Il convient donc de mettre d'accord les artistes, le directeur artistique et le preneur de son sur les moyens à mettre en œuvre.
+
+\begin{figure}
+\includegraphics[width=0.8\linewidth]{_resources/diagrams/productionSonore} \caption{Entonnoir de la production musicale}\label{fig:unnamed-chunk-1}
+\end{figure}
+
+\hypertarget{les-acteurs-de-la-ruxe9alisation-dune-ux153uvre-enregistruxe9e}{%
+\section{les acteurs de la réalisation d'une œuvre enregistrée}\label{les-acteurs-de-la-ruxe9alisation-dune-ux153uvre-enregistruxe9e}}
+
+Nous allons ici rapidement discuter des différents rôles apparaissant dans la production d'une œuvre musicale enregistrée. Ceux-ci sont volontairement très séparés, bien que dans les cas pratiques, une personne puisse en incarner plusieurs.
+
+\textbf{Le compositeur} est la personne qui a composé la mélodie et l'harmonie de l'œuvre.
+
+\textbf{L'arrangeur} est chargé de l'orchestration (choix des instruments) et l'écriture des différentes partitions.
+
+\textbf{L'interprète} a la responsabilité de retranscrire une partition le plus justement possible, à la fois dans sa dimension technique et sensible.
+
+\textbf{Le directeur artistique} (ou DA) supervise l'ensemble de l'enregistrement. Il aura, par exemple, à choisir le preneur de son, le mixeur ou dans quel studio enregistrer. Lors de la session d'enregistrement, il aura à diriger les musiciens (comme un réalisateur dirige ses acteurs au cinéma) afin de leur faire jouer la meilleure interprétation possible pour l'œuvre. Lors du mixage, il sera le principal interlocuteur du mixeur. Pour faire court~: il est le garant de l'orientation esthétique du projet.
+
+\textbf{Le producteur} finance l'ensemble de projets. C'est donc un investisseur qui attend un retour sur investissement.
+
+\begin{quote}
+L'appellation abusive de «~producteur~» pour parler du directeur artistique vient d'un anglicisme du mot «~producer~». Le producteur est donc bien l'équivalent du directeur artistique dans les pays anglo-saxons. Si le DA a besoin d'un certain talent, le producteur a surtout besoin d'argent.
+\end{quote}
+
+\textbf{Le preneur de son} est chargé d'enregistrer les musiciens et musiciennes. Il a donc un rôle premier très technique~: il doit inscrire sur un support les ondes sonores produites par ces musiciens. Il a également un rôle esthétique très important, d'un point de vue sonore, car le choix du dispositif de prise de son aura un fort effet sur la suite de la vie de l'œuvre.
+
+\textbf{Le mixeur} intervient après la prise de son et doit réaliser une sommation de l'ensemble des points de captations (microphone) vers un format écoutable par le grand public (mono, stéréo, 5.1, Ambisonique, Dolby Atmos, etc.). Son rôle esthétique est fortement contraint par le travail de prise de son. Si celle-ci est réussie, il pourra amplifier et bonifier les choix de production. Dans le cas contraire, il devra lutter pour essayer de faire sortir le meilleur d'une matière imparfaite.
+
+\textbf{Le technicien de mastering} est le dernier maillon de la chaîne. Son rôle premier sera de préparer le travail de mixage à aux supports de diffusion. Il se devra également d'offrir une oreille nouvelle sur le travail réalisé au mixage.
+
+\hypertarget{la-pruxe9production}{%
+\section{La préproduction}\label{la-pruxe9production}}
+
+La préproduction concerne toutes les étapes d'une œuvre enregistrée qui ont lieu avant ledit enregistrement. On parlera donc en premier lieu de la composition et particulièrement de l'arrangement.
+
+La qualité d'un arrangement aura une influence énorme sur la facilité à mixer une œuvre. Si les instruments sont astucieusement répartis sur l'ensemble du spectre sonore, cela sera une difficulté de moins à gérer au mixage par exemple.
+
+Il est aussi courant pour des artistes de réaliser des «~démos~». Celles-ci sont souvent des enregistrements réalisés en home studio afin de définir un cap esthétique pour la suite de la production sonore. C'est un atout extrêmement précieux pour un preneur de son, cela permet de rapidement identifier quel est le projet esthétique de l'œuvre.
+
+\hypertarget{la-production}{%
+\section{La production}\label{la-production}}
+
+C'est ici que le travail du preneur de son commence. L'étape de production consiste à fixer les interprétations définitives. Le premier objectif est donc de s'assurer du bon enregistrement de tous les canaux prévus. Bien sûr, l'enjeu n'est pas seulement technique, mais aussi esthétique. Et il n'est pas moindre, les choix pris lors de la prise de son seront des carcans impossibles à outrepasser lors de la phase de mixage. Enfin, l'élément le plus déterminant de cette étape est d'obtenir des musiciens leurs meilleures interprétations. La présence d'un directeur artistique est d'une aide précieuse afin de diriger et d'orienter les musiciens. Il permet aussi de faire le lien entre les artistes et l'équipe technique, en exprimant les besoins des uns aux autres.
+
+Sur les projets les plus modestes, le poste de directeur artistique est souvent sacrifié. Il en va donc à l'ingénieur du son de, parfois, remplir ce rôle.
+
+\hypertarget{la-postproduction}{%
+\section{La postproduction}\label{la-postproduction}}
+
+Arrivé à ce stade, la majorité du travail est déjà accompli, il ne reste que le mixage et le mastering. Classiquement, chacune de ces tâches incombe à un technicien différent. Le travail du mixeur consistera à réaliser la sommation, généralement en stéréo, de l'ensemble des canaux enregistrés lors de la prise de son. Afin de faire cohabiter tous ces signaux, il est commun d'utiliser des traitements pour les répartir sur l'ensemble du spectre et de gérer leur dynamique. Parfois, ces traitements remplissent un rôle esthétique, en déformant le signal d'origine pour aboutir à une nouvelle matière.
+
+Une fois le travail du mixeur terminé, le mastering commence. Le but et d'homogénéiser l'ensemble des titres d'un disque, en volume, en dynamique et en couleur. Ensuite, il convient aussi de définir le niveau de sortie général du disque. La dernière étape consistera à monter l'ordre des morceaux pour le disque, d'y inscrire les métadonnées (nom de l'artiste, des titres, genre musical, etc.) et de générer le fichier final, dédier à l'exploitation.
+
+\hypertarget{quantifier-et-qualifier-le-son}{%
+\chapter{Quantifier et qualifier le son}\label{quantifier-et-qualifier-le-son}}
+
+Le son peut s'appréhender de plusieurs façons différentes. Particulièrement, sa description physique et psychoacoustique est très précieuse pour tous les praticiens du son. Il convient donc, afin de pouvoir proposer un dispositif cohérent de prise de son, de comprendre la physique élémentaire du son ainsi que d'être capable de le décrire efficacement.
+
+\hypertarget{phuxe9nomuxe8ne-physique}{%
+\section{Phénomène physique}\label{phuxe9nomuxe8ne-physique}}
+
+\hypertarget{quelques-duxe9finitions}{%
+\subsection{Quelques définitions}\label{quelques-duxe9finitions}}
+
+Le son est une vibration mécanique d'un fluide. Dans le cadre de ce cours, nous ne considérerons que l'air comme médium de propagation. Cette onde cause une variation de la pression dans l'espace. Nous, les êtres humains, le percevons grâce à notre ouïe. Il s'agit donc, par définition, d'un phénomène ondulatoire et peut être caractérisé par un nombre d'oscillations par seconde, aussi appelé fréquence. On estime que notre espèce est sensible aux fréquences allant de 20 Hz (très grave) jusqu'à 20 000 Hz (très aigu).
+
+On parlera d'\textbf{évènement sonore} pour parler généralement de phénomènes physiques produisant une onde sonore.
+
+Les sons composés d'une seule fréquence se nomment \textbf{sons purs}. Cependant, de tels signaux n'existent pas dans la nature, et sont souvent utilisés afin de réaliser des mesures ou des tests psychoacoustiques.
+
+\begin{center}\includegraphics{_main_files/figure-latex/unnamed-chunk-2-1} \end{center}
+
+Dans notre environnement, les sons sont donc composés de plusieurs fréquences. La fréquence la plus grave d'un son est sa \textbf{fréquence fondamentale}. Les autres sont alors appelées \textbf{partiels}. Si ces partielles ont pour fréquence un multiple de la fréquence fondamentale, alors on les nomme \textbf{harmoniques}.
+
+\begin{quote}
+💡 Plus généralement, on admettra que la composition fréquentielle, ou spectrale, de tout son peut être décomposée par une somme de sinusoïde. L'outil permettant de passer de la représentation temporelle d'un signal à sa représentation fréquentiel s'appelle la \textbf{transformée de Fourrier.}
+\end{quote}
+
+\begin{center}\includegraphics{_main_files/figure-latex/unnamed-chunk-4-1} \end{center}
+
+La fréquence fondamentale donne la \textbf{hauteur} du son (sa note en musique par exemple). Les partiels enrichissent cette fréquence fondamentale et créés le \textbf{timbre} d'un son. C'est en partie grâce au timbre que l'on peut reconnaître différents instruments de musiques jouant la même note.
+
+Un son se caractérise également par l'évolution de son amplitude au cours du temps. On parle alors de son \textbf{enveloppe}. Un modèle courant d'enveloppe est l'ADSR : \emph{Attack}, \emph{Decay}, \emph{Sustain}, \emph{Release}, soit \emph{Attaque}, \emph{Décroissance}, \emph{Maintient} et \emph{Relâchement}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.65\linewidth]{_resources/drawings/adsr} 
+
+}
+
+\caption{Exemple d'enveloppe ADSR}\label{fig:unnamed-chunk-6}
+\end{figure}
+
+Lorsque son temps et très bref, l'ensemble \emph{attaque} et \emph{décroissance} forme les \textbf{transitoires}. Cette partie du signal est responsable de la sensation percussive du son.
+
+\hypertarget{relation-entre-temps-distance-et-fruxe9quence}{%
+\subsection{Relation entre temps, distance et fréquence}\label{relation-entre-temps-distance-et-fruxe9quence}}
+
+Il est important de garder à l'esprit que les notions de temps, de fréquence et de distance sont étroitement liées. Nous avons vu ci-dessus que tous les sons peuvent être décrits par une somme de sinusoïde. Leur fréquence la plus grave, dite fondamentale, permet de définir la \textbf{période}. La période est le temps que met un signal à répéter son motif oscillatoire (voir schémas 3.1 et 3.2). Le lien mathématique entre fréquence et période est très simple, car l'un est l'inverse de l'autre :
+
+\[ f = \frac 1 T \]
+
+Si nous étudions les fréquences extrêmes, audibles par notre ouïe, nous trouvons que pour \(f_{min} = 20 \,Hz\), sa période \(T_{f_{min}} = 50 \,ms\). Pour \(f_{max} = 20\,000 \,Hz\), \(T_{f_{max}} = 0.5 \,ms\).
+
+Une onde sonore est également caractérisée par sa \textbf{célérité}. Celle-ci est constante dans un milieu donné. Dans l'air, à une température de \(15 \,°C\) et au niveau de la mer, sa célérité \(c\) est de \(340\,m.s^{-1}\). On admettra cette valeur pour réaliser l'ensemble de nos différents calculs.
+
+Comme son unité l'indique, la célérité du son est homogène à une distance divisée par un temps, soit :
+
+\[ c =\frac d t \]
+
+Suivant cette formule, nous pouvons alors calculer la \textbf{longueur d'onde} correspondant à une fréquence. La longueur d'onde se note \(\lambda\).
+
+\[ \lambda = cT \; \iff \; \lambda = \frac c f\]
+
+Si nous étudions à nouveau les bornes minimale et maximale de notre audition, nous trouvons que \(\lambda_{f_{min}} = 17 \,m\) et \(\lambda_{f_{max}} = 17 \,mm\).
+
+Nous pouvons également calculer le temps de propagation du son. En pratique, nous serons souvent intéressés par le temps de propagation séparant deux points dans l'espace (par exemple, le temps séparant deux microphones par rapport à un instrument).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.25\linewidth]{_resources/drawings/mic_dist} 
+
+}
+
+\caption{Distance entre deux microphones.}\label{fig:unnamed-chunk-7}
+\end{figure}
+
+\[ t = \frac {d_2-d_1}{c}\]
+
+\hypertarget{perception-du-son}{%
+\section{Perception du son}\label{perception-du-son}}
+
+Nous avons abordé quelques notions de physique permettant de mieux caractériser le phénomène sonore. Comme indiqué au début de ce chapitre, le son peut également être discuté sous l'angle de notre ouïe, et donc, de notre perception. Cette branche de la science se nomme la psychoacoustique et cherche à étudier la façon dont nous percevons le son.
+
+Notre corps, et a fortiori notre cerveau, sont des machines extrêmement complexes. Nous sommes équipés d'une multitude de capteurs permettant de sentir le contact d'une matière, des odeurs, d'entendre, de goûter, de voir, de positionner nos membres dans l'espace, de ressentir la douleur, etc. Pris indépendamment, chacun de ces sens est déjà un phénomène complexe à décrire, mais il existe en plus une grande interdépendance entre ceux-ci. Par exemple, l'interdépendance entre la vision et l'audition est à l'origine d'un certain nombre de mécanismes biaisant notre écoute.
+
+Nous nous bornerons au fil de ce cours à quelques notions liées à l'ouïe et à son interdépendance à d'autre sens quand cela sera pertinent.
+
+\hypertarget{spectre-timbre-et-vocabulaire}{%
+\subsection{Spectre, timbre et vocabulaire}\label{spectre-timbre-et-vocabulaire}}
+
+D'un point de vue perceptif, le spectre d'un évènement sonore est facilement remarquable. Il est, par contre, beaucoup plus difficile à qualifier. Il n'est pas rare de rencontrer les adjectifs ``chaud'', ``brillant'', ``rond'', ``aéré'', ``ouvert'', ``sombre'', voir d'autres encore plus ésotérique, pour tenter de communiquer la sensation ressentie à l'écoute de tel ou tel son.
+
+Cette difficulté liée à l'absence de vocabulaire commun quant à la qualification le son emmène systématiquement la redéfinition de ce vocable en fonction de son interlocuteur. En effet, le mot ``rond'' ne signifiera pas forcément la même chose selon à qui on s'adresse. Une stratégie possible consiste à questionner son interlocuteur sur l'utilisation de ses adjectifs tout en cherchant à y associer des exemples sonores.
+
+Nous pouvons tout de même nous essayer à cet exercice pour nous permettre d'avoir un vocabulaire commun au fil de ce cours. Vous aurez sans doute compris qu'il n'y aura, dans les termes employés, aucun critère absolu.
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{_resources/drawings/spectre} 
+
+}
+
+\caption{Distance entre deux microphones.}\label{fig:unnamed-chunk-8}
+\end{figure}
+
+\textbf{Proposition d'association entre bandes de fréquences et sensation}.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{20~Hz --- 80~Hz} : Subharmonique, sensation tripale
+\item
+  \textbf{80~Hz --- 160~Hz} : Grave, sensation d'assise
+\item
+  \textbf{160~Hz --- 380~Hz} : bas-médium, sensation de «~chaleur~», voir «~boueux~»
+\item
+  \textbf{380~Hz --- 1400~Hz} : Medium, sensation de «~boîte~» quand trop présent, sonne «~creux~» quand trop absent
+\item
+  \textbf{1400~Hz --- 3200~Hz} : Haut-medium : zone de sensibilité maximale de l'oreille.
+\item
+  \textbf{3200~Hz --- 8000~Hz} : Aigu, apporte de la précision voir de l'agressivité
+\item
+  \textbf{8000~Hz --- 20~000~Hz} : Air, apporte une sensation d'ouverture voir de finesse
+\end{itemize}
+
+Il est intéressant de former son oreille à reconnaître une plage de fréquence, ainsi que d'y associer son propre vocabulaire et une sensation. Les appellations proposées ci-dessus ne sont à prendre que comme guides et n'ont pas valeur de référence. Cela favorise une écoute critique et analytique.
+
+\begin{quote}
+💡 Aussi, les fréquences graves ont un effet masquant sur les fréquences plus aiguës. Ce phénomène est dû au fonctionnement de notre oreille, et plus particulièrement de la cochlée.
+\end{quote}
+
+\hypertarget{pression-acoustique-niveau-sonore}{%
+\subsection{Pression acoustique \& niveau sonore}\label{pression-acoustique-niveau-sonore}}
+
+Nous l'avons abordé plus haut, lorsqu'une onde sonore se déplace dans l'air, on constate la variation de la pression atmosphérique en ce point. Dès lors, il est facile de corréler l'amplitude de la variation de la pression avec le niveau sonore entendu (ou mesuré).
+
+L'unité du système international de la pression est le \textbf{pascal} (\textbf{Pa}). Or, il est très rare de parler de la pression acoustique en pascal, car la variation de cette pression exprimée en pascal ne correspond pas à ce que nous percevons. En d'autres termes, si la pression acoustique exprimée en pascal double, nous ne percevons pas un son deux fois plus fort.
+
+Notre oreille fonctionne de façon logarithmique, et non linéairement, face à une variation de pression acoustique. C'est pour cela que l'on parle généralement de \textbf{niveau de pression acoustique}, où \textbf{SPL} (pour Sound Pressure Level en anglais), qui s'exprimera en \textbf{décibel}. La relation entre la variation de pression et le niveau de pression acoustique se fait grâce à la relation :
+
+\[L_p = 20\,\log_{10}\Big(\frac{p_{eff}}{p_{ref}}\Big) \qquad p_{ref} = 20\mu Pa\]
+
+\begin{quote}
+💡 Si la pression acoustique double, on observe une augmentation du niveau sonore de 3 dB SPL. Lorsqu'on ressent un doublement du niveau sonore, on observe une augmentation de 10 dB.
+\end{quote}
+
+La question se complexifie lorsque l'on rajoute la dimension fréquentielle à la question de la perception du niveau sonore. En effet, nous percevons des niveaux sonores différents pour différentes fréquences pourtant émises au même niveau de pression acoustique. Pour inclure cette dépendance fréquentielle, nous avons mis en place une unité de mesure : la \textbf{sonie} ou \textbf{bruyance} (\textbf{loudness} en anglais). Il est donc possible ensuite de définir des courbes d'\textbf{isosonie}, c'est-à-dire des courbes indiquant un niveau sonore de perception égale en fonction de la fréquence et du niveau de pression acoustique.
+
+\begin{figure}
+
+{\centering \includegraphics[width=14.61in]{_resources/diagrams/Courbes_isosonie} 
+
+}
+
+\caption{Courbes d'isosonie, aussi dites de Fletcher-Munson}\label{fig:unnamed-chunk-9}
+\end{figure}
+
+Que conclure de cet abaque ?
+
+\begin{itemize}
+\tightlist
+\item
+  Notre oreille ne perçoit pas les fréquences de manière égale.
+\item
+  Notre zone de sensibilité maximale se situe dans l'aigu (3k-4k Hz).
+\item
+  Notre perception d'un matériau sonore en fonction du niveau auquel nous l'écoutons !
+\end{itemize}
+
+\hypertarget{positionnement-dans-lespace}{%
+\subsection{Positionnement dans l'espace}\label{positionnement-dans-lespace}}
+
+Notre système auditif nous permet de situer l'émission d'un son dans l'espace. Cette capacité de localisation repose sur un ensemble de facteurs étroitement liés entre eux.
+
+On qualifie notre écoute de \textbf{binaurale}, littéralement, écouter avec deux oreilles. La présence de deux ``capteurs de pression'' (oserait-on parler de microphones ?) sur les faces latérales de notre crâne et un premier élément expliquant notre capacité de localisation du son.
+
+En effet, l'espacement de nos oreilles (en moyenne 15 cm), créer un décalage temporel entre nos deux canaux d'écoutes. Ce léger retard entendu d'un côté ou de l'autre nous permettra de placer un son plutôt à gauche ou plutôt à notre droite. On appelle cet écart de temps \textbf{différence de temps interaural}, ou \textbf{ITD} (interaural time difference en anglais) et se note \(\Delta t\).
+
+On pourrait d'ailleurs, grâce aux formules de ce début de chapitre, calculer le retard maximal moyen entre nos deux oreilles.
+
+\[\Delta t_{max} = \frac d c = \frac {0,15}{340} = 0.4 \> ms\]
+
+\begin{figure}
+
+{\centering \includegraphics{_resources/drawings/delta_t} 
+
+}
+
+\caption{Illustration de l'ITD}\label{fig:unnamed-chunk-10}
+\end{figure}
+
+Si nos oreilles sont espacées de quelques centimètres, notre tête les séparant représente un obstacle acoustique non négligeable. De plus, les pavillons des oreilles imposent également une certaine directivité à notre écoute. En première approximation, on pourra donc considérer que l'ensemble formé par la tête et les pavillons implique une atténuation linéaire des ondes sonores, elle-même fonction de l'angle d'incidence. On appelle cette différence de niveau \textbf{différence d'intensité interaural}, ou \textbf{ILD} (interaural level difference) et se note \(\Delta i\). On considère que si la différence de niveau de pression acoustique entre les deux oreilles est supérieure à 20 dB, on entendra l'évènement sonore complètement latéralisé.
+
+\begin{quote}
+💡 L'ombre acoustique que représentent la tête et le pavillon n'est en réalité pas du tout linéaire en fréquence. La modification du timbre induite par ce système n'est pas perçue par notre cerveau comme une information de couleur, mais bien comme une information de spatialisation. Ainsi, selon l'angle d'incidence de l'évènement sonore, son spectre sera filtré d'une certaine manière qui permettra à notre cerveau de le positionner dans l'espace. La réponse en fréquence d'une tête se nomme \textbf{HRTF} (\textbf{Head Related Transfer Function}).
+\end{quote}
+
+Enfin, nous sommes également capables de déterminer la distance d'un évènement sonore. La plupart des paramètres permettant d'évaluer cette distance sont relatifs. Cela signifie que l'évènement doit être comparé à un autre pour pouvoir le repositionner dans l'espace. On pourra alors comparer :
+
+\begin{itemize}
+\tightlist
+\item
+  Leurs niveaux sonores : un évènement sonore plus fort paraît plus proche
+\item
+  Leurs timbres : l'absorption de l'air aura pour effet de diminuer les fréquences aiguës
+\item
+  La sensation de réverbération associée : plus le signal de l'évènement sonore semblera solliciter la réponse acoustique du lieu, plus celui-ci semblera fort.
+\item
+  Le temps d'arrivée des premières réflexions : le son direct d'un évènement sonore lointain arrivera quasi simultanément avec ses premières réflexions. Le son direct d'un évènement sonore proche arrivera avant ses premières réflexions.
+\end{itemize}
+
+Le chapitre suivant traitera des notions d'acoustique élémentaire ainsi que de la réverbération.
+
+\hypertarget{acoustique-des-salles}{%
+\chapter{Acoustique des salles}\label{acoustique-des-salles}}
+
+Tout environnement, sollicité par un évènement sonore, produit une réponse acoustique. Cette réponse acoustique est appelée réverbération. Elle est caractéristique d'un lieu et peut, dans certains cas, être une alliée précieuse dans notre travail. Dans d'autres, elle est source de problèmes et complexifie grandement notre travail d'écoute analytique.
+
+\hypertarget{guxe9nuxe9ralituxe9s}{%
+\section{Généralités}\label{guxe9nuxe9ralituxe9s}}
+
+\hypertarget{la-ruxe9verbuxe9ration}{%
+\subsection{La réverbération}\label{la-ruxe9verbuxe9ration}}
+
+L'acoustique d'une salle est généralement décrite en deux temps : le temps des premières réflexions et le temps du champ diffus.
+
+\begin{figure}
+
+{\centering \includegraphics{_resources/drawings/reverb} 
+
+}
+
+\caption{Schéma d'une réponse impulsionnelle de réverbération.}\label{fig:unnamed-chunk-11}
+\end{figure}
+
+Les premières réflexions sont les premiers rebonds d'une onde sonore sur les parois d'une salle et sont caractéristiques de la signature acoustique du lieu. Ces rebonds reviennent à l'auditeur avec un certain temps. Ce retard se nomme souvent «~pré-délai~» dans les moteurs de réverbération artificiels. Ce prédélai est fonction de deux paramètres~:
+
+\begin{itemize}
+\tightlist
+\item
+  la taille de la pièce~; plus la pièce est petite, plus les premières réflexions reviendront à l'auditeur rapidement.
+\item
+  les positions de la source sonore et de l'auditeur~; plus l'auditeur est proche de la source, plus les premières réflexions arriveront après le son direct, plus l'auditeur est loin de la source, plus les premières réflexions arriveront en même temps que le son direct.
+\end{itemize}
+
+Lorsque les premières réflexions elles-mêmes auront rebondi plusieurs fois sur les parois du lieu, le phénomène d'écho des premières réflexions va se muer en champs diffus, par nature plus dense. La longueur du champ diffus se mesure grâce au RT60. Cette méthode de mesure propose de regarder le temps que met la réverbération à perdre 60~dB. Ce temps permettra ensuite de donner une longueur de réverbération.
+
+\hypertarget{calcul-du-temps-de-ruxe9verbuxe9ration}{%
+\subsection{Calcul du temps de réverbération}\label{calcul-du-temps-de-ruxe9verbuxe9ration}}
+
+L'équation de Sabine permet de calculer le temps de réverbération d'une salle à partir de son volume et du coefficient d'absorption de ses matériaux.
+
+\[RT_{60} = 0.1611 \times \frac{V}{\sum_{i=0}^{k} S_i.\alpha_i}\]
+
+\(V\) s'exprime en \(m^3\) et \(S\) en \(m^2\). \(\alpha\) est le coefficient d'absorption du matériau, en sabins. Ce coefficient est compris entre 0 et 1, plus il est important plus le matériau est absorbant.
+
+En guise d'exemple sur l'utilisation de la formule ci-dessus, prenons le cas d'une pièce de \(25\,m^2\) (\(5\,m\) par \(5\,m\)) et de \(2.40\,m\) de hauteur. Nous considérons que le sol est en parquet et les murs en plâtre. Nous avons donc \(25\,m^2\) de parquet et \(4\times(5\times2.4)=48\,m^2\). On trouve sur les sites de fabricant de matériaux que le plâtre peint a un coefficient d'absorption de 0.05 sabins et le bois un coefficient de 0.15 sabins. Notre calcul final.
+
+\[RT_{60} = 0.1611 \times \frac{25 \times 2.4}{25\times0.15+48\times0.05} \approx 1.57\,s\]
+
+On peut dès lors calculer la \textbf{distance critique}, distance à partir de laquelle on entendra autant un évènement sonore que la réponse acoustique de la salle à son stimulus.
+
+\[d_c \approx 0.057 \times \sqrt{\frac{V}{RT60}}\]
+
+Dans notre exemple \(d_c \approx 0.35\,m\).
+
+Il est souvent considéré que la taille de la pièce joue un rôle déterminant sur la longueur de réverbération. L'équation de Sabine indique bien que le coefficient d'absorption des matériaux y joue un rôle beaucoup plus important. Le modèle de réverbération de l'IRCAM va jusqu'à complètement décorréler la taille de la pièce simulée du temps de réverbération. Au final, la taille de l'espace joue davantage sur la structure temporelle des échos, et donc, principalement sur les premières réflexions.
+
+\hypertarget{limite-de-luxe9quation-de-sabine}{%
+\subsection{Limite de l'équation de Sabine}\label{limite-de-luxe9quation-de-sabine}}
+
+Il convient d'observer plusieurs réserves quant à l'utilisation de l'équation de Sabine. Premièrement, elle ne tient pas compte de l'aspect fréquentiel lié à l'absorption des matériaux. En effet, le temps de réverbération des graves est presque toujours plus long que celui des aigus. Afin de contourner ce problème, on pourra chercher des coefficients d'absorption tenant compte de la fréquence et ainsi résoudre l'équation de Sabine pour certaines plages fréquentielles.
+
+L'équation de Sabine pose également problème pour de petits espaces (régie d'écoute par exemple) en prédisant un temps de réverbération trop long. Dans ce cas, l'équation d'Eyring est plus adaptée.
+
+\[RT_{60} = -0.1611 \times \frac{V}{\sum_{i=0}^{k} S_i.\ln(1-\alpha_i)}\]
+
+\begin{quote}
+💡 l'équation d'Eyring n'améliore pas non plus la problématique fréquentielle.
+\end{quote}
+
+\hypertarget{le-phuxe9nomuxe8ne-donde-stationnaire}{%
+\subsection{Le phénomène d'onde stationnaire}\label{le-phuxe9nomuxe8ne-donde-stationnaire}}
+
+La plupart des pièces de vie sont des salles rectangulaires. Dans ce cas, les surfaces sont toutes parallèles. Ce type de salle est particulièrement propice à l'apparition d'ondes stationnaires. Une onde stationnaire est un phénomène acoustique provoquant l'augmentation de volume de certaines fréquences (ventre) et la disparition d'autres (nœuds).
+
+Nous aborderons ici ce phénomène sous l'angle de l'acoustique des salles, mais il est applicable dans d'autres situations, comme la vibration d'une corde par exemple.
+
+\begin{figure}
+
+{\centering \includegraphics{https://upload.wikimedia.org/wikipedia/commons/7/7d/Standing_wave_2} 
+
+}
+
+\caption{Les points rouges représente les noeuds, les amplitudes maximales sont les ventres. Infographie par Lucas Vieira}\label{fig:unnamed-chunk-12}
+\end{figure}
+
+Il est possible de calculer les fréquences d'un mode grâce aux formules vues au chapitre précédent :
+
+\[f(n) = \frac{c}{2L}.n\]
+où \(c=340\,m.s^{-1}\), \(L\) est la longueur considérée de la pièce. Pour \(n=1\) on trouve le \textbf{mode propre}. Pour \(n>1\) on trouvera tous les \textbf{modes harmoniques}.
+
+Étudions la fréquence du mode propre pour deux cas théoriques : une salle de 16 m² (4x4) et une autre de 49 m² (7x7). On trouvera donc :
+
+\[f(1)_{L=4m} = 42.5 \,Hz \>\>\>\> f(1)_{L=7m} = 24 \,Hz\]
+
+On en déduit donc que, plus la pièce est grande, plus la fréquence des modes propres sera grave. Il convient également de considérer la distance de chaque surface parallèle, car les pièces sont rarement cubiques. Cela implique donc la présence de trois modes propres, plus leurs modes harmoniques, pour une seule et même salle.
+
+\hypertarget{premiuxe8res-ruxe9flexions-et-filtre-en-peigne}{%
+\section{Premières réflexions et filtre en peigne}\label{premiuxe8res-ruxe9flexions-et-filtre-en-peigne}}
+
+Nous avons vu que la réponse acoustique, ou réverbération, d'une salle se décompose généralement en deux parties, la première étant les premières réflexions. Ces premières réflexions sont donc, comme leur nom l'indique, les premiers rebonds que nous entendons suite à un évènement sonore.
+
+Dans de petites pièces, les premières réflexions peuvent être entendues si proche du son direct que cela génère un type de filtrage bien particulier appelé \textbf{filtre en peigne}.
+
+\begin{verbatim}
+## <string>:1: RuntimeWarning: divide by zero encountered in log10
+## <string>:1: RuntimeWarning: invalid value encountered in multiply
+\end{verbatim}
+
+\begin{center}\includegraphics{_main_files/figure-latex/unnamed-chunk-13-1} \end{center}
+
+Toujours en utilisant les formules définies au premier chapitre, on établit la relation suivante :
+
+\[ fc = \frac 1{2t} = \frac c{2d} \]
+
+Où \(fc\) correspond à la fréquence d'annulation la plus grave du filtre en peigne. Les autres fréquences se calculent grâce à la relation \(f(n) = fc*n\). Le phénomène de filtre en peigne est donc également harmonique.
+
+Ainsi, on peut calculer les filtres en peignes présents au point d'écoute d'une régie de mixage ou de prise de son grâce à la mesure du chemin des premières réflexions.
+
+\begin{figure}
+
+{\centering \includegraphics{_resources/drawings/roomPr} 
+
+}
+
+\caption{Ensemble des premières reflexions entendues par une oreille pour une enceinte (hors plafond et plancher/bureau).}\label{fig:unnamed-chunk-14}
+\end{figure}
+
+\begin{quote}
+💡 La réflexion du son sur une paroi est tout à fait comparable à de l'optique géométrique. Une onde sonore arrivant avec un angle d'incidence \(\alpha\) sur une surface sera réfléchie avec le même angle. Ainsi, il est souvent conseillé d'utiliser un miroir lorsque l'on positionne des traitements acoustiques. Lorsque la personne assise au point d'écoute voit une enceinte dans un miroir placé sur un mur, on sait alors qu'il faudra placer le panneau à la place du miroir.
+\end{quote}
+
+On se rend donc compte que l'influence des filtres en peigne générés par les premières réflexions est très importante. Ce phénomène à lui seul explique l'intérêt d'une grande régie d'écoute. En effet, plus une pièce est grande, plus l'écart de temps entre le son direct et les premières réflexions est important. Cela implique deux choses :
+
+\begin{itemize}
+\tightlist
+\item
+  Notre cerveau favorisera le son direct plus facilement (effet de précédence)
+\item
+  À partir d'une certaine taille, l'effet du filtre en peigne se mue en information d'acoustique pour notre cerveau. Au-delà de 40 ms (trajet d'une première réflexion d'environ 14 m), l'écart entre le son direct et les premières réflexions est tel que nous entendons un écho (effet Haas).
+\end{itemize}
+
+Afin de réduire au maximum les effets des filtres en peignes, il est recommandé de placer des traitements aux points de réflexion critique par rapport à la position d'écoute (voir schéma ci-dessus).
+
+\begin{center}\includegraphics{_main_files/figure-latex/unnamed-chunk-15-1} \end{center}
+
+\hypertarget{traitement-acoustique}{%
+\section{Traitement acoustique}\label{traitement-acoustique}}
+
+Grâce aux différents points abordés ci-dessus, nous avons maintenant bien l'idée que l'acoustique d'un lieu est un des facteurs les plus déterminants sur le rendu sonore. Mais c'est aussi celui sur lequel il est plus difficile et technique d'intervenir.
+
+On favorisera au maximum une architecture optimisée pour l'acoustique. Dans ce but, il convient de n'avoir aucune surface parallèle, cela permettant de grandement limiter l'apparition d'ondes stationnaires. On choisira également des matériaux avec des propriétés acoustiques intéressantes (plâtre et carrelage sont à proscrire, au profit du bois par exemple).
+
+On se posera ensuite la question des endroits de la pièce les plus propices pour y positionner un évènement sonore (enceinte, musicien, etc.). On cherchera donc un point où la contribution des différents modes semble équilibrée. Pour cela, il suffit de se munir d'une enceinte et d'y diffuser une musique ou un signal test qui nous est familier. En déplaçant l'enceinte, on pourra évaluer la contribution acoustique de la pièce en différents points.
+
+Une fois ces considérations prises en compte, on pourra alors aborder le traitement de l'acoustique.
+
+\begin{quote}
+🛑 Il ne faut pas confondre isolation acoustique et traitement acoustique. Dans le premier cas, on chercher a limiter la contribution sonore d'un lieu sur son environnement, dans l'autre on cherche à améliorer la propagation du son dans un espace donné. Une isolation acoustique satisfaisante nécessite de lourds travaux, voire l'aménagement d'une ``boîte dans une boîte''. Ces notions d'acoustiques dépassent le cadre de ce cours.
+\end{quote}
+
+\hypertarget{les-types-de-traitements}{%
+\subsection{Les types de traitements}\label{les-types-de-traitements}}
+
+On trouve, en général, deux types de traitements~:
+
+\begin{itemize}
+\tightlist
+\item
+  Les absorbeurs, qui réduisent l'énergie d'une onde sonore à son impact.
+\item
+  Les diffuseurs, qui répartissent l'énergie d'une onde sonore dans l'espace.
+\end{itemize}
+
+Dans un lieu où la quantité de réverbération est jugée trop importante, on utilisera des absorbeurs. À l'inverse, dans un lieu où l'on souhaite préserver la quantité de réverbération, mais en évitant les phénomènes de modes ou de filtre en peignes, on utilisera des diffuseurs.
+
+Dans de petits lieux, l'usage de diffuseur semble contre-productif, la priorité étant d'absorber au maximum les premières réflexions, celle-ci arrivant très rapidement après l'émission du son direct.
+
+\hypertarget{considuxe9ration-dacoustique-pour-le-travail-de-son}{%
+\subsection{Considération d'acoustique pour le travail de son}\label{considuxe9ration-dacoustique-pour-le-travail-de-son}}
+
+Il est vivement recommandé d'installer un studio, de prise de son ou de monitoring, dans un lieu plutôt grand. En effet, plus le lieu est grand, plus il sera facile de positionner un point de prise de son ou d'écoute suffisamment éloigné des parois afin de minimiser l'influence des premières réflexions. Aussi, plus le lieu est grand, plus l'espace y sera suffisant pour installer des traitements acoustiques. Certains types de traitements, comme les basstraps, peuvent prendre une place bien trop importante pour être installée dans des pièces de dimension habituelle (chambres, bureau, etc.). On se rappellera aussi de choisir une pièce de travail avec le minimum de surface parallèle, afin de limiter les ondes stationnaires.
+
+En ce qui concerne les traitements en eux-mêmes, il est vivement recommandé de traiter en priorité le bas du spectre. L'ajout de basstrap est donc prioritaire sur le reste des traitements. Plus la longueur d'onde à traiter est grande (donc la fréquence grave), plus la taille des matériaux devra être importante. On retrouve donc le point abordé précédemment~: traiter une pièce correctement, demande un certain espace. Par ailleurs, il est important que les traitements appliqués à un lieu soient linéaires en fréquence, c'est-à-dire qu'il ne se concentre pas sur une seule zone du spectre. Cela arrive souvent avec les kits de mousses peu onéreux, mais n'ayant une réelle efficacité que dans les médiums et hautes fréquences.
+
+Pour une régie d'écoute, on sera tenté de privilégier des traitements d'absorption. En effet, une réverbération trop longue dans une régie de monitoring risque fort de fausser certaines prises de décisions (distance des microphones à la source, quantité de réverbération, etc.). À l'inverse, une pièce avec un temps de réverbération trop court pourra créer un sentiment d'inconfort, voire de malaise.
+
+Pour une salle de prise de son, l'idéal est de disposer d'un grand espace avec un traitement acoustique principalement basé sur de la diffusion, pour ensuite disposer de traitements absorbants amovibles permettant de sculpter le rendu acoustique en fonction de la prise de son à réaliser. Pour des petits lieux (- de 25 m²), on cherchera à absorber au maximum afin de limiter les effets de filtre en peigne.
+
+\hypertarget{le-chemin-du-signal}{%
+\chapter{Le chemin du signal}\label{le-chemin-du-signal}}
+
+La première mission d'un preneur de son est de s'assurer de l'arriver à bon port des signaux dans l'enregistreur. En effet, toute notion de mise en scène sonore et d'esthétique devient très secondaire si le contenu n'a pas été enregistré.
+
+Le diagramme ci-dessous reprend les principaux étages rencontré par un signal audio dans un context de production numérique. Il est essentiel d'être le plus famillier possible avec ces différents composants.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{_resources/diagrams/cheminSignal.drawio} \caption{Le chemin du signal}\label{fig:unnamed-chunk-16}
+\end{figure}
+
+\begin{quote}
+Le schéma peut-être agrandi en ouvrant l'image dans un nouvel onglet.
+\end{quote}
+
+Chaque élément sera abordé dans des sections dédiés dans la suite de ce livre.
+
+\hypertarget{les-microphones}{%
+\chapter{Les microphones}\label{les-microphones}}
+
+Un microphone est un \textbf{transducteur}, qui permet de transformer une onde acoustique en onde électrique. Il est constitué d'une membrane et d'une électronique associée permettant de préparer le signal capté à être transmis à la suite de la chaîne audio à travers un câble. La connectique standard des microphones est le XLR. Il s'agit de connectique \textbf{asymétrique.}
+
+\hypertarget{les-technologies-de-microphones}{%
+\section{Les technologies de microphones}\label{les-technologies-de-microphones}}
+
+Beaucoup de procédés ont pu être utilisés pour permettre la captation du son. Nous aborderons ici les plus communes~:
+
+\begin{itemize}
+\tightlist
+\item
+  Les microphones électrostatiques/à condensateur
+\item
+  Les microphones à ruban
+\item
+  Les microphones dynamiques
+\end{itemize}
+
+\hypertarget{les-microphones-uxe9lectrostatiquesuxe0-condensateur}{%
+\subsection{Les microphones électrostatiques/à condensateur}\label{les-microphones-uxe9lectrostatiquesuxe0-condensateur}}
+
+Ce sont, historiquement, les premiers microphones à permettre une captation satisfaisante du son (réponse en fréquence). Mais à leurs débuts, ils sont très sensibles aux conditions de température et d'humidité. Ces problèmes n'ont plus cours aujourd'hui. Leur fonctionnement repose sur l'utilisation d'un condensateur en guise de capsule. Lorsque le son rencontre celle-critique, l'onde déforme les armatures du condensateur et génère donc une variation de tension. De par l'utilisation de ce condensateur, ces microphones nécessitent une alimentation externe (dites fantôme), maintenant standardisée à +48V.
+
+Ces microphones possèdent des réponses en fréquence souvent très linéaire et une excellente réponse en transitoire. Leur niveau de sortie (sensibilité) est élevé. Leur impédance de sortie est basse.
+
+Exemples~: Neumann~U87/AKG C414/Shoeps~CMC4/DPA 4041
+
+\hypertarget{les-microphones-uxe0-ruban}{%
+\subsection{Les microphones à ruban}\label{les-microphones-uxe0-ruban}}
+
+\begin{itemize}
+\tightlist
+\item
+  Préféré à leurs homologues statiques au début du siècle.
+\item
+  Fonctionne grâce à une feuille en métal, attachée entre deux aimants. L'onde sonore fait vibrer le ruban, perturbant ainsi le champ électromagnétique des aimants et générant donc une variation de tension.
+\item
+  Attention au 48~volts des alimentations fantôme, elles peuvent mettre l'électronique de ces microphones hors service.
+\item
+  Souvent, ces microphones flattent le grave et atténuent les aiguës. Leurs réponses en transitoire sont également assez douces.
+\item
+  Leur niveau de sortie est faible.
+\item
+  Leur impédance de sortie est élevée.
+\end{itemize}
+
+Exemples~: Royer R121/Cohles/Beyerdynamic M160
+
+\hypertarget{les-microphones-dynamiques}{%
+\subsection{Les microphones dynamiques}\label{les-microphones-dynamiques}}
+
+\begin{itemize}
+\tightlist
+\item
+  Ces microphones sont conçus pour des conditions d'utilisation rudes~: scène, fort niveau de pression sonore, etc.
+\item
+  Ils sont mécaniquement et électroniquement robustes.
+\item
+  Leurs membranes sont rattachées à aimant, lui-même entouré d'une bobine. Lorsque cette première est mise en vibration par une onde sonore, le déplacement de l'aimant à l'intérieur de la bobine permet de créer une variation de tension électrique.
+\item
+  Leur réponse en fréquence est souvent accidentée, et donc, loin d'être linéaire. Cela peut être vu comme un inconvénient ou comme un outil de «~coloration~» du son.
+\item
+  Leur niveau de sortie est faible.
+\item
+  Leur impédance de sortie est élevée.
+\end{itemize}
+
+Exemples~: Shure~SM57/Electrovoice~RE20/Sennheiser~MD441
+
+\hypertarget{la-directivituxe9}{%
+\section{La directivité}\label{la-directivituxe9}}
+
+La directivité d'un microphone permet de décrire sa capacité à réaliser une «~écoute~» sélective des ondes sonores émises dans un espace.
+
+\begin{itemize}
+\tightlist
+\item
+  Un microphone omnidirectionnel capte le son tout autour de lui.
+\item
+  Un microphone cardioïde capte le son devant lui et le rejette à l'arrière.
+\item
+  Un microphone bidirectionnel capte très sélectivement devant lui et derrière lui.
+\end{itemize}
+
+Voir la fiche sur les directivités.
+
+\hypertarget{la-taille-des-membranes}{%
+\section{La taille des membranes}\label{la-taille-des-membranes}}
+
+La taille des membranes influe sur la captation du son. Plus la capsule est grande, plus les fréquences aiguës seront diffractées et donc atténuées dans le signal généré.
+Un microphone à petite membrane est donc techniquement un microphone plus «~juste~». Cependant, l'emploi de large membrane permet aussi d'adoucir l'aiguë trop important de certaines sources. C'est un choix de couleur.
+
+\hypertarget{la-directivituxe9-des-microphones}{%
+\chapter{La directivité des microphones}\label{la-directivituxe9-des-microphones}}
+
+Comme décris dans le chapitre sur les microphones, sa directivité rend compte de sa capacité à sélectionner, ou pas, son champ de captation. On connaît trois grandes directivités :
+
+\begin{itemize}
+\tightlist
+\item
+  Omnidirectionnel : qui capte l'ensemble du champ sonore de façon indifférenciée
+\item
+  Cardioïde : qui capte à l'avant, mais rejette à l'arrière du microphone
+\item
+  Bidirectionnel : qui capte à l'avant et à l'arrière, mais selon un lobe plus resserré qu'en cardioïde.
+\end{itemize}
+
+Dans ce chapitre, nous tâcherons d'étudier les différentes directivités de microphones et leur influence sur une prise de son.
+
+\hypertarget{capsules-uxe0-pression}{%
+\section{Capsules à pression}\label{capsules-uxe0-pression}}
+
+Lorsque l'on étudie un microphone, il est peut-être plus judicieux de revenir à son élément fondamental : la capsule. Il existe deux familles de capsules, celles dites «~à pression~», et celles dites à la «~gradient de pression~».
+
+Une capsule sensible à la pression est omnidirectionnelle, puisqu'elle capte l'ensemble du champ acoustique. Mathématiquement, cette relation s'exprime, en coordonnées polaires, par :
+
+\[ \theta = 1 \]
+
+Il faut ici comprendre que l'angle d'incidence d'un son par rapport au microphone importe peu, ce dernier n'atténuera jamais le signal.
+
+\hypertarget{capsules-uxe0-gradient-de-pression}{%
+\section{Capsules à gradient de pression}\label{capsules-uxe0-gradient-de-pression}}
+
+Une capsule à gradient de pression est sensible à la \textbf{variation} du champ de pression. Ces capsules ne sont plus omnidirectionnelles, mais bidirectionnelles : elles captent devant et derrière elles. Mathématiquement, une telle directivité s'exprime par la relation (en coordonnées polaires) :
+
+\[ \theta = cos(\alpha) \]
+
+Où \(\alpha\) est l'angle d'incidence d'un son par rapport à la capsule.
+
+\hypertarget{et-les-autres-directivituxe9s}{%
+\section{Et les autres directivités ?}\label{et-les-autres-directivituxe9s}}
+
+Il est possible, à partir des deux équations ci-dessus, de retrouver toutes les autres directivités. Par exemple, un microphone cardioïde a une équation de directivité polaire tel que :
+
+\[ \theta = \frac{1}{2}(1 + cos(\alpha)) \]
+
+Cela nous indique donc qu'une des façons de concevoir un microphone a directivité variable est d'utiliser deux capsules dont on pourra changer le rapport de gain. Cependant, la plupart des microphones cardioïdes ne possèdent qu'une seule capsule. La directivité est alors créée par un système de labyrinthe acoustique dans le corps de microphone.
+
+\hypertarget{directivituxe9s-ruxe9elles}{%
+\section{Directivités réelles}\label{directivituxe9s-ruxe9elles}}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{http://electroacoustique.univ-lemans.fr/cours/Grain1.2en/res/image_15} 
+
+}
+
+\caption{Directivité réelle d'un microphone cardioïde (Sennheiser)}\label{fig:unnamed-chunk-17}
+\end{figure}
+
+\hypertarget{les-cuxe2bles}{%
+\chapter{Les câbles}\label{les-cuxe2bles}}
+
+Les câbles assurent un rôle de transport vis-à-vis de signaux électriques. Ces signaux peuvent représenter une onde sonore (précédemment captée par un microphone), une valeur de contrôle pour piloter un appareil (pédale d'expression) ou encore une information numérique (câble USB, ethernet, etc.).
+
+En audio, il existe principalement deux types de câbles~:
+
+\begin{itemize}
+\tightlist
+\item
+  Les câbles à modulation unique (un signal transporté)
+\item
+  Les câbles à double modulation (deux signaux transportés)
+\end{itemize}
+
+\hypertarget{cuxe2ble-uxe0-modulation-unique}{%
+\section{Câble à modulation unique}\label{cuxe2ble-uxe0-modulation-unique}}
+
+Ils sont constitués de quatre à cinq composants~:
++ d'un cœur composé d'un filament (souvent multibrin) en un métal conducteur, véhiculant le signal électrique.
++ d'une gaine isolante (plastique) protégeant le cœur
++ d'une tresse en cuivre connectée à la masse
++ Parfois, d'une feuille de cuivre, enrobant la tresse, permettant de réaliser une cage de faraday et de protéger le cœur des ondes électromagnétiques.
++ Enfin, d'une dernière gaine isolante, permettant de protéger l'ensemble du câble.
+
+Ces câbles sont communément soudés à des fiches Jack TS, ou RCA. Ils sont communément utilisés pour les instruments des musiques ainsi que pour l'audio grand public.
+
+\hypertarget{cuxe2ble-uxe0-double-modulation}{%
+\section{Câble à double modulation}\label{cuxe2ble-uxe0-double-modulation}}
+
+La structure de ces câbles est identique aux câbles à modulation unique, à la présence près d'un deuxième cœur, permettant de transporter un deuxième signal électrique.
+
+Ces câbles sont souvent soudés à des fiches XLR, Jack TRS, Jack Battam, «~mini-jack~», etc.
+
+\hypertarget{les-connexions-asymuxe9triques}{%
+\section{Les connexions asymétriques}\label{les-connexions-asymuxe9triques}}
+
+Les connexions asymétriques permettent de transporter un signal entre une source et un récepteur. Il s'agit de la façon la plus simple de connecter deux appareils devant échanger des signaux. Cependant, sur de longue distance, le câble peut se comporter comme une antenne et induire sur le signal certaines ondes électromagnétiques (comme la radio). Ces connexions utilisent des câbles à modulation unique.
+
+\hypertarget{les-connexions-symuxe9triques}{%
+\section{Les connexions symétriques}\label{les-connexions-symuxe9triques}}
+
+Le but de ces connexions est de palier au problème des connexions asymétrique. Dans l'appareil émetteur, le signal à transporter est dupliqué, et ce duplicata est inversé en phase. Cette étape s'appelle la symétrisation. C'est deux signaux sont appelés point chaud (signal d'origine) et point froid (signal opposé en phase). Le câble transporte ces deux signaux. Sur son trajet, lorsqu'une perturbation électromagnétique est induite sur le signal, celle-ci s'inscrit en phase sur les deux signaux (point chaud et point froid). À l'arrivée, l'appareil récepteur inverse la phase du point froid et le somme avec le point chaud. Cette étape se nomme la dé-symétrisation. Ainsi le signal d'origine est sommé en phase, tandis que les interférences sont sommées hors phase et s'annulent.
+Les connexions symétriques nécessitent un câble à double modulation.
+
+\hypertarget{les-connexions-stuxe9ruxe9o-asymuxe9triques}{%
+\section{Les connexions stéréo asymétriques}\label{les-connexions-stuxe9ruxe9o-asymuxe9triques}}
+
+Ces connexions permettent de véhiculer deux signaux à travers un seul et même câble. Elles nécessitent un câble à double modulation.
+
+\hypertarget{les-connexions-dinsert}{%
+\section{Les connexions d'insert}\label{les-connexions-dinsert}}
+
+Utilisées dans les consoles afin de permettre l'insertion de périphérique de traitement externe, ces connexions permettent d'envoyer le signal vers le périphérique et de le récupérer avec le même câble. Elles utilisent des câbles à double modulation.
+
+\hypertarget{les-pruxe9amplificateurs-de-microphones}{%
+\chapter{Les préamplificateurs de microphones}\label{les-pruxe9amplificateurs-de-microphones}}
+
+Le rôle d'un préampli est de réaliser une amplification en tension du signal émis par un microphone. Cette opération est indispensable pour permettre à notre signal de traverser tout le reste de la chaîne du traitement audio.
+
+\hypertarget{les-qualituxe9s-dun-pruxe9ampli}{%
+\section{Les qualités d'un préampli}\label{les-qualituxe9s-dun-pruxe9ampli}}
+
+\begin{itemize}
+\tightlist
+\item
+  La quantité d'amplification. Plus l'amplification disponible est grande, au plus le préampli sera capable de répondre à des situations exigeantes, tel que l'enregistrement d'une source à faible niveau avec un microphone à faible sensibilité.
+\item
+  La réponse en fréquence. Théoriquement, celle-ci doit être la plus neutre possible. Une certaine coloration peut être acceptée (voire souhaitée), mais celle-ci doit rester raisonnable pour répondre à des critères d'utilisations professionnelles.
+\item
+  La réponse en transitoire. Certains préamplis auront tendance à adoucir la sensation d'attaque des sources. Cet effet n'est pas souhaitable.
+\item
+  Le rapport signal bruit. Nous cherchons toujours à rajouter le moins de bruit possible sur le chemin de notre signal.
+\end{itemize}
+
+\hypertarget{les-technologies-de-pruxe9ampli}{%
+\section{Les technologies de préampli}\label{les-technologies-de-pruxe9ampli}}
+
+Il existe trois grandes façons de construire un préamplificateur~:
+
+\begin{itemize}
+\tightlist
+\item
+  à tubes (ou lampes). Le tube est historiquement le premier composant électronique permettant l'amplification des signaux.
+\item
+  à transistor. L'invention du transistor est sans doute la plus grande révolution technologique du siècle dernier. Celui-ci permet de remplacer les lampes pour une taille bien plus petite et une bien meilleure fiabilité.
+\item
+  à circuit intégré. Les circuits intégrés permettent également l'amplification de signaux.
+\end{itemize}
+
+Chacune de ces technologies offre de très légère variation de son lorsque les préamplis sont poussés dans leur retranchement. Cette couleur liée à la technologie est toujours à pondérer, car elle dépend grandement de la topologie du circuit. De plus, l'impédance d'entrée et de sortie du préampli a sans doute dans bien des cas un rôle bien plus important.
+
+\hypertarget{les-contruxf4les-dun-pruxe9ampli}{%
+\section{Les contrôles d'un préampli}\label{les-contruxf4les-dun-pruxe9ampli}}
+
+Un préampli propose souvent les réglages suivants~:
+
+\begin{itemize}
+\tightlist
+\item
+  Un potentiomètre de gain (qui est souvent remplacé par un sélecteur cranté, plus précis, pour les modèles haut de gamme).
+\item
+  Un bouton activant l'alimentation fantôme. En effet, c'est bien le préampli qui génère cette tension d'alimentation pour les microphones statiques.
+\item
+  Un bouton d'inversion de phase.
+\item
+  Un coupe-bas.
+\end{itemize}
+
+\hypertarget{la-conversion-analogique-numuxe9rique}{%
+\chapter{La conversion analogique numérique}\label{la-conversion-analogique-numuxe9rique}}
+
+\hypertarget{la-nuxe9cessituxe9-de-la-conversion-analogique-numuxe9rique}{%
+\section{La nécessité de la conversion analogique numérique}\label{la-nuxe9cessituxe9-de-la-conversion-analogique-numuxe9rique}}
+
+Le support d'enregistrement historique de la musique est la bande magnétique. Le défaut d'un tel support de stockage est principalement son rapport signal/bruit, peu avantageux. A contrario, l'enregistrement numérique offre une dynamique bien supérieure à celle des supports analogiques.
+
+Aujourd'hui, la plupart des productions multimédias reposent sur l'utilisation d'ordinateurs en lieu et place des équipements analogiques équivalents. Cela représente pour les structures une économie de coût importante pour peu ou pas de modification sur la qualité du contenu.
+
+\hypertarget{dun-signal-continu-vers-un-signal-uxe9chantillonnuxe9}{%
+\section{D'un signal continu vers un signal échantillonné}\label{dun-signal-continu-vers-un-signal-uxe9chantillonnuxe9}}
+
+La caractéristique principale d'un signal analogique est sa continuité. Un signal continu, en mathématique, se définit par un signal défini en n'importe quel instant. Afin d'être numérisé, un tel signal doit être dénombré. En effet, la notion d'infini imposé par la continuité du signal n'a pas d'existence en numérique.
+
+La numérisation du signal est comparable à l'utilisation d'un multimètre pour mesurer une tension. Un convertisseur va prélever la valeur du signal, de façon régulière, au cours du temps.
+
+Afin de correctement numériser un signal, il convient de définir deux paramètres~:
+
+\begin{itemize}
+\tightlist
+\item
+  la vitesse de prélèvement, ou \textbf{fréquence d'échantillonnage}
+\item
+  la plage de valeur permise pour le signal, ou \textbf{résolution de quantification}
+\end{itemize}
+
+\hypertarget{la-fruxe9quence-duxe9chantillonnage}{%
+\section{La fréquence d'échantillonnage}\label{la-fruxe9quence-duxe9chantillonnage}}
+
+Cette fréquence définit le nombre de prélèvements par seconde. Par exemple, un morceau édité sur un CD audio a une fréquence d'échantillonnage de 44~100~Hz (44,1~kHz), cela signifie que le signal est mesuré 44~100~fois par seconde.
+
+La fréquence de travail la plus courante est 48~kHz, mais l'on rencontre parfois des valeurs supérieures, multiple de celle-ci~: 96~kHz, 192~kHz, etc. Cette augmentation proportionnelle de la fréquence d'échantillonnage s'appelle \textbf{suréchantillonnage}. Certains techniciens espèrent, par le biais de ce suréchantillonnage, améliorer la qualité de l'enregistrement.
+
+Le suréchantillonnage vient également à un coût de ressource et d'espace de stockage. Un flux audio échantillonné à 96~kHz demande deux fois plus de ressource et d'espace qu'un flux échantillonné à 48~kHz.
+
+\hypertarget{le-thuxe9oruxe8me-de-shannon-nyquist}{%
+\subsection{Le théorème de Shannon-Nyquist}\label{le-thuxe9oruxe8me-de-shannon-nyquist}}
+
+Cette valeur initiale de 44~100~Hz (ou 48~kHz) n'a pas été choisie au hasard. Pour la comprendre, il faut revenir sur le phénomène que nous cherchons à numériser.
+
+Le son est une onde mécanique, et nous l'entendons dans une plage de fréquence comprise entre 20~Hz (très grave) et 20~000~Hz (très aigu). Il faut donc que notre système de numérisation soit capable de reproduire une fréquence maximale allant jusqu'à 20~000~Hz. Pour cela, nous utilisons les résultats des travaux des chercheurs Harry Nyquist et Claude Shannon (tous deux ayant travaillé aux laboratoires Bell).
+
+Le théorème de Shannon-Nyquist stipule que, pour être capable d'échantillonner un signal de fréquence \(f\), la fréquence d'échantillonnage doit au moins être de \(2f\). Un ensemble de points généré par une fréquence ne peut correspondre qu'à cette seule fréquence. Notre plage d'écoute étant limitée à 20~kHz, la fréquence d'échantillonnage minimale dont nous avons besoin est de 40~kHz.
+
+Que se passe-t-il si la fréquence du signal dépasse la moitié de la fréquence d'échantillonnage~? Dans ce cas, la vitesse de prélèvement n'est plus suffisante et nous observons l'apparition de nouvelles fréquences ne provenant pas du signal original. Ce phénomène se nomme \textbf{repliement spectral}.
+
+\hypertarget{la-ruxe9solution-de-quantification}{%
+\section{La résolution de quantification}\label{la-ruxe9solution-de-quantification}}
+
+La résolution de quantification permet de définir la plage de valeur dynamique permise dans le système numérique. Celle-ci s'exprime en 8~bit. Par exemple, si nous prenons un convertisseur travaillant en 8~bit. Sa valeur minimale, en binaire, est 0000 0000, ou encore 0 en base~10. Sa valeur maximale, en binaire, est 1111 1111, soit 255. Admettons que ce convertisseur accepte des signaux ayant une tension en entrée variant entre +15V et 0V, celles-ci seront respectivement affectées aux valeurs numériques~255 et 0. Si maintenant, ce convertisseur travaille en 16~bit, ces valeurs seront affectées aux valeurs numériques~65535 et 0. La précision de la mesure de la dynamique du signal n'est donc pas du tout la même.
+
+En pratique, augmenter la résolution de quantification permet principalement de définir le niveau de bruit du convertisseur. Plus la résolution est élevée, plus le bruit se retrouvera faible. En 8~bit, l'écart entre le niveau maximal d'un signal et le bruit est de 48~dB, en 16~bit cet écart est de 96~dB, en 24~bit, 144~dB.
+
+La résolution de quantification standard en enregistrement est 24~bit. La plage dynamique est telle qu'elle rend le travail d'enregistrement beaucoup plus souple sur les niveaux d'acquisition des différentes sources.
+
+\hypertarget{la-mauvaise-ruxe9putation-du-son-numuxe9rique}{%
+\section{La ``mauvaise réputation'' du son numérique}\label{la-mauvaise-ruxe9putation-du-son-numuxe9rique}}
+
+Le son numérique a longtemps eu la réputation d'être dur, particulièrement dans le haut du spectre. Cela s'explique assez facilement par la méthode de fabrication des premiers convertisseurs.
+
+En effet, toute la difficulté de fabrication d'un convertisseur réside dans la réalisation d'un filtre anti-repliement. Ce filtre enlève les fréquences au-dessus de la moitié de la fréquence d'échantillonnage, afin de prévenir tout repliement spectral. Ce type de filtre est extrêmement délicat à réaliser en analogique. Ce problème est résolu grâce à l'approche sigma-delta.
+
+De plus, le \textbf{repliement spectral} parfois généré par certains traitements (saturation, simulation analogique, compresseurs) n'a pas non plus aidé à la réputation du son numérique. En effets, lorsqu'il devient audible, le repliement spectral se caractérise par l'apparition de fréquences \textbf{non harmoniques} souvent qualifiées de dures et désagréables. Il est cependant bon de rappeler que ce phénomène, certes bien réel, se produit aussi dans des conditions de saturation du signal importante et sur des sources sonores riches en aigus.
+
+Malgré la vie dur que mène le son numérique dans l'inconscient collectif, il est important de rappeler qu'il a apporté un grand nombre d'avantages sur le son analogique, \textbf{y compris sur des questions de rendus sonores}. Par exemple, la dynamique est bien plus importante, la distorsion involontaire du signal infime et l'ajout de bruit inexistant.
+
+\hypertarget{la-conversion-sigma-delta}{%
+\section{La conversion sigma-delta}\label{la-conversion-sigma-delta}}
+
+Aujourd'hui, les convertisseurs ne travaillent pas directement à 44,1~kHz/16~bit ou 48~kHz/24~bit. Ils utilisent à la place un procédé appelé échantillonnage sigma-delta. Le principe est d'utiliser une fréquence d'échantillonnage très rapide (384~kHz) et de coder la dynamique du signal, en relatif, sur un seul bit (ce bit prend une valeur de 1 si le nouvel échantillon est plus fort que l'ancien, 0 pour le cas inverse). Les formats de travail que nous utilisons sont générés après cette première étape.
+
+L'intérêt de cette méthode est double~:
+
+\begin{itemize}
+\tightlist
+\item
+  Le signal est suréchantillonné dès l'enregistrement
+\item
+  Les filtres permettant d'éviter le repliement spectral sont donc très simples à réaliser
+\end{itemize}
+
+\hypertarget{les-supports-denregistrement-numuxe9riques-du-son}{%
+\chapter{Les supports d'enregistrement numériques du son}\label{les-supports-denregistrement-numuxe9riques-du-son}}
+
+\hypertarget{les-enceintes-de-monitoring}{%
+\chapter{Les enceintes de monitoring}\label{les-enceintes-de-monitoring}}
+
+De tous les équipements audio nécessaires pour réaliser une prise de son, les enceintes (et les casques) sont certainement les plus importants. En effet, c'est sous leurs influences que nous pourrons écouter et contrôler notre travail. Il est donc crucial d'utiliser des écoutes regroupant un certain nombre de critères minimaux et de les connaître sur le bout des doigts.
+
+\hypertarget{choisir-une-paire-duxe9coutes}{%
+\section{Choisir une paire d'écoutes}\label{choisir-une-paire-duxe9coutes}}
+
+Choisir une paire d'enceintes peut paraître être un exercice difficile. Il existe énormément de modèles, parcourant des gammes de prix allant de quelques dizaines d'euros à plusieurs dizaines de milliers.
+
+Qui plus est, l'enceinte audio est sans doute l'appareil audio que les Hommes savent le moins bien fabriquer. L'enceinte de monitoring parfait, à savoir linéaire en tout point, n'existe pas.
+
+Premièrement, nous ne savons pas fabriquer des haut-parleurs capables de reproduire uniformément toutes les fréquences. Ces derniers sont souvent spécialisés dans une certaine plage de fréquence. La plupart des enceintes de monitoring utilisent 3~voies~: deux actives (utilisant des haut-parleurs) pour l'aigu et le médium, et une passive (évent avant ou arrière) pour le grave.
+
+Deuxièmement, un haut-parleur peut être approché par un modèle «~masse-ressort~». Cela signifie qu'il y a une certaine inertie à sa mise en action et une certaine inertie à sa mise en arrêt. L'enceinte idéale devrait posséder une inertie nulle dans les deux cas, ce qui n'est malheureusement pas le cas en pratique. Cette inertie est potentiellement responsable d'un adoucissement des transitoires et d'une sensation de flou.
+
+Il y a cependant plusieurs critères assez objectifs pour évaluer la qualité d'une enceinte~:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  La réponse en fréquence~: l'enceinte flatte-t-elle particulièrement une zone du spectre~? En délaisse-t-elle une autre~?
+\item
+  La réponse en transitoires~: les attaques sont-elles respectées~? Retrouve-t-on l'énergie initiale du signal~?
+\item
+  La linéarité en fonction du volume~: a-t-on une sensation de compression du signal lorsque l'on augmente le niveau envoyé dans l'enceinte~?
+\item
+  Le centre fantôme~: le centre du système stéréophonique paraît-il stable~? Paraît-il précis~?
+\item
+  La couleur sonore de l'enceinte~: a-t-on plaisir à écouter du son et de la musique sur ce système~?
+\end{enumerate}
+
+\hypertarget{placer-correctement-son-uxe9coute}{%
+\section{Placer correctement son écoute}\label{placer-correctement-son-uxe9coute}}
+
+Afin de satisfaire les critères de la stéréophonie, il convient de respecter les règles suivantes~:
+
+\begin{itemize}
+\tightlist
+\item
+  Les deux enceintes doivent être de même marque, de même modèle et appairée. Si une des membranes a dû être changée sur l'une d'elle, l'autre aurait dû recevoir la même opération.
+\item
+  Les deux enceintes
+\item
+  doivent être séparées d'un angle de 60°
+\item
+  L'auditeur doit être placé à équidistance des deux haut-parleurs, et regarder vers le milieu du segment formé par les deux enceintes.
+\end{itemize}
+
+Une fois ces critères respectés, voici quelques conseils sur le placement des enceintes dans une pièce~:
+
+\begin{itemize}
+\tightlist
+\item
+  On préférera des pièces de grandes tailles, afin de repousser au maximum le temps d'arrivée des premières réflexions.
+\item
+  Le système stéréophonique devrait être positionné dans un souci de symétrie~: l'enceinte de gauche ne devrait pas être plus proche d'un mur que l'enceinte de droite, par exemple.
+\item
+  Dans le cas de petit espace, on préféra coller les enceintes contre un mur. Cela permettra de supprimer l'influence d'une des premières réflexions au prix de l'augmentation du niveau de grave.
+\item
+  Il est vivement recommandé de procédé au traitement, même minimal, acoustique de la pièce de travail, à commencer par les zones de réflexions premières et par les angles (ou le grave va s'accumuler).
+\item
+  Si le traitement acoustique n'est pas envisageable, il convient de privilégier une écoute à faible niveau et une proximité maximale avec les enceintes.
+\end{itemize}
+
+\hypertarget{luxe9coute-au-casque}{%
+\section{L'écoute au casque}\label{luxe9coute-au-casque}}
+
+Le casque est un outil permettant d'écouter un signal tout en s'extrayant de son environnement (acoustique et/ou bruit). Cependant, de par son mode de fonctionnement, à savoir deux haut-parleurs placés dans une enceinte en contact direct avec les oreilles, il génère un certain nombre de déformations.
+
+Premièrement, la stéréophonie écoutée au casque est hypertrophiée. En effet, dans ces conditions d'écoutes, l'oreille gauche n'entend que le haut-parleur gauche et l'oreille droite n'entend que le haut-parleur droit.
+
+Deuxièmement, il est très difficile de trouver des casques avec une réponse en transitoire satisfaisante. Il convient donc d'être excessivement prudent lorsque l'on mix du contenu percussif sur un casque.
+
+Troisièmement, les casques sont encore moins linéaires en fréquence que les haut-parleurs, il convient là aussi d'être très prudent lors de la réalisation d'un mixage.
+
+Ces défauts peuvent être compensés par l'habitude et la connaissance du système d'écoute, mais la transportabilité d'un mixage (à savoir, sa compatibilité avec d'autres systèmes d'écoute) réalisé au casque est souvent discutable.
+
+\hypertarget{casque-fermuxe9-ou-casque-ouvert}{%
+\section{Casque fermé ou casque ouvert~?}\label{casque-fermuxe9-ou-casque-ouvert}}
+
+Le casque fermé, comme son nom l'indique, propose une fabrication enfermant le haut-parleur dans une enceinte close. Cette méthode de fabrication offre l'avantage d'isoler celui qui écoute de l'environnement, mais aussi d'isoler l'environnement de ce qui est diffusé dans le casque. Par contre, ces casques ont souvent une réponse en fréquence très accidentée, et ne sont pas recommandés pour le mixage. Il est par contre vivement recommandé pour les musiciens en session de prise de son.
+
+Le casque ouvert, à l'inverse de son homologue fermé, n'offre aucune isolation acoustique, au prix d'une meilleure réponse en fréquence du casque. Ces casques sont tout indiqués pour le mixage, mais beaucoup moins pour des situations de prise de son.
+
+\hypertarget{la-prise-de-son-au-couple}{%
+\chapter{La prise de son au couple}\label{la-prise-de-son-au-couple}}
+
+La prise de son au couple stéréophonique regroupe l'ensemble des techniques de prise de son dédié au système d'écoute stéréophonique (deux enceintes séparées de 60° et orientées vers un auditeur placé à équidistance des deux transducteurs).
+
+Ces techniques permettent une bien meilleure représentation des espaces des prises de son ainsi qu'une localisation des différents éléments enregistrés dans cet espace.
+
+\hypertarget{guxe9nuxe9ralituxe9s-sur-les-muxe9canismes-de-la-localisation-du-son-par-loreille-humaine}{%
+\section{Généralités sur les mécanismes de la localisation du son par l'oreille humaine}\label{guxe9nuxe9ralituxe9s-sur-les-muxe9canismes-de-la-localisation-du-son-par-loreille-humaine}}
+
+Afin de mieux comprendre comment fonctionne un couple de prise de son, il convient d'étudier rapidement les principes fondamentaux de notre écoute.
+
+Notre capacité à localiser les sons dans l'espace repose principalement sur deux mécanismes~:
++ La différence de temps
++ La différence de niveau
+
+\hypertarget{la-localisation-par-diffuxe9rence-de-temps}{%
+\subsection{La localisation par différence de temps}\label{la-localisation-par-diffuxe9rence-de-temps}}
+
+Nos oreilles sont espacées, d'environ 15 à 25 cm. Cette distance implique qu'un son émis plus proche de l'oreille droite arrivera également plus tôt qu'à l'oreille gauche. Cet écart de temps, de quelques millisecondes, est suffisant pour donner à notre cerveau un indice sur la localisation du son.
+
+Afin de sentir l'ordre de grandeur en jeu, calculons la différence de temps (\(\Delta t\)) maximale pour un individu possédant un écart d'oreille de 20 cm.
+
+On sait que la célérité du son dans l'air vaut \(c = 340 m.s^{-1}\), et est invariant en fonction de la fréquence. On sait également que \(c = \frac{d}{t}\).
+
+Dès lors, si on pose \(d = 20 cm\) soit \(d = 0.2 m\), on peut en déduire que~:
+
+\(t = \frac{d}{c} \iff t= \frac{0.2}{340} \approx 0.0006 s \approx 0.6 ms\)
+
+Afin de mettre en relief ce résultat, il est communément admis que l'oreille humaine commence à faire la différence entre deux répétitions d'un même son à partir de \(20 ms\).
+
+\hypertarget{la-localisation-par-diffuxe9rence-dintensituxe9}{%
+\subsection{La localisation par différence d'intensité}\label{la-localisation-par-diffuxe9rence-dintensituxe9}}
+
+A priori, l'espace entre nos deux oreilles n'est pas creux. La densité de notre crâne et de son contenu va réfléchir et absorber une partie des fréquences rencontrées.
+
+Également, la partie externe de nos oreilles, appelées pavillon, permet, grâce à sa forme, de donner une directivité à notre écoute.
+
+En d'autres termes, notre tête et le pavillon de nos oreilles se comportent comme un filtre, variant en fonction de l'angle d'incidence de la source. Cette altération du timbre n'est pas perçue comme une coloration, mais bien comme une information de localisation. La modélisation mathématique de ces filtres se retrouve dans la littérature scientifique sous le nom \textbf{HRTF}.
+
+Cette atténuation séquentiellement dépendante est décisive dans notre capacité à localiser les sons. On la retrouve communément sous le nom \(\Delta i\).
+
+\hypertarget{pruxe9valence-fruxe9quentielle-de-ces-deux-phuxe9nomuxe8nes}{%
+\subsection{Prévalence fréquentielle de ces deux phénomènes}\label{pruxe9valence-fruxe9quentielle-de-ces-deux-phuxe9nomuxe8nes}}
+
+Il est communément admis que le \(\Delta t\) aura une efficacité maximale dans les basses fréquences, et le \(\Delta i\) dans les hautes fréquences.
+
+\hypertarget{principes-de-la-prise-de-son-au-couple}{%
+\section{Principes de la prise de son au couple}\label{principes-de-la-prise-de-son-au-couple}}
+
+Pour créer son effet stéréophonique, les couples de prise de son utilisent les mêmes mécanismes que notre écoute naturelle~:
++ La différence de temps
++ La différence d'intensité
+
+Il va de soi que, pour fonctionner de façon optimale, les microphones utilisés pour réaliser une prise de son stéréophonique doivent être de même marque, de même modèle et appairée.
+
+Afin de manipuler ces mécanismes, le preneur de son peut jouer sur les paramètres suivant~:
++ La directivité des microphones
++ L'angle entre les capsules
++ La distance entre les capsules
+
+Modifier chacun de ses paramètres influe sur l'\textbf{angle de prise de son}. Plus l'ange de prise de son est faible, plus l'impression de stéréophonie sera grande. Plus l'angle de prise de son est grand, plus l'impression de stéréophonie sera faible, jusqu'à tendre vers la monophonie.
+
+\begin{quote}
+Attention de ne pas confondre l'angle de prise de son avec l'angle entre les capsules.
+\end{quote}
+
+\hypertarget{comment-choisir-un-angle-de-prise-de-son.}{%
+\subsection{Comment choisir un angle de prise de son.}\label{comment-choisir-un-angle-de-prise-de-son.}}
+
+L'angle de prise de son est étroitement lié à la distance du couple par rapport à l'évènement sonore à enregistrer. En règle générale, plus le couple est loin des objets sonores à enregistrer, plus son angle de prise de son sera faible. À l'inverse, plus le couple sera proche, plus son angle de prise de son sera grand.
+
+Ensuite, lors de la réalisation d'un couple de prise de son, il est commun d'enregistrer un ensemble d'éléments~: plusieurs instruments (batterie), voire plusieurs musiciens (quatuor à corde, orchestre). L'objectif est bien souvent de retrouver une sensation de disposition des éléments dans l'espace proche de la situation réelle. On cherche donc un angle de prise de son suffisamment petit pour que les sources occupent l'intégralité de l'espace stéréophonique, mais également suffisamment grand pour ne pas créer une sensation de trou au centre.
+
+\hypertarget{comment-ruxe9aliser-un-angle-de-prise-de-son.}{%
+\subsection{Comment réaliser un angle de prise de son.}\label{comment-ruxe9aliser-un-angle-de-prise-de-son.}}
+
+Plusieurs outils existent pour aider le preneur de son à configurer son angle de prise de son correctement.
+
+Il est important de commencer par évoquer les abaques de Michael Williams, ayant cherché à étudier l'angle de prise de son et ses qualités en fonction des paramètres vues précédemment. Les résultats de ses travaux se trouvent sur le site \href{https://www.mmad.info/MAD/2\%20Ch/2ch.htm}{mmad.info}.
+
+On trouve également beaucoup d'application mobile, comme celle du constructeur du microphone Neumann, s'appuyant sur les travaux de Michael Williams pour aider leurs utilisateurs à correctement positionner leurs microphones. Évidemment, et heureusement, rien n'est spécifique à un fabricant de microphones en particulier, l'application d'un constructeur A peut servir pour placer des microphones d'un constructeur B.
+
+Plus récemment, des chercheurs britanniques ont développé une application dénommée \href{https://marrsweb.hud.ac.uk/}{MARRS}, permettant de positionner son couple de prise de son par rapport aux sources via une interface graphique très simple à utiliser. Cette application est disponible sur mobile et sur navigateur internet.
+
+\hypertarget{priviluxe9gier-le-delta-i-ou-le-delta-t}{%
+\subsection{\texorpdfstring{Privilégier le \(\Delta i\) ou le \(\Delta t\)~?}{Privilégier le \textbackslash Delta i ou le \textbackslash Delta t~?}}\label{priviluxe9gier-le-delta-i-ou-le-delta-t}}
+
+La différence de perception du champ stéréophonique est très différente entre celui produit par le \(\Delta i\) ou par le \(\Delta t\).
+
+\begin{itemize}
+\tightlist
+\item
+  Un couple reposant sur le \(\Delta i\) aura une sensation de localisation des sources précise. De plus si un tel couple enregistre une source ce déplaçant a vitesse constante, la sensation de déplacement retranscrite par le couple sera, elle aussi, linéaire. Il est également possible de sommer les deux microphones ensemble afin d'obtenir un signal monophonique. Un tel couple est appelé compatible mono.
+\item
+  Un couple reposant sur le \(\Delta t\) aura une sensation de localisation plus floue, mais apportera un sens de l'espace plus grand et une dimension spacieuse. À l'inverse d'un couple \(\Delta i\), la sensation d'un déplacement linéaire d'une source n'est pas linéaire. Il n'est pas possible de sommer les deux capsules pour en obtenir une réduction mono sans générer des altérations de timbre sévères.
+\end{itemize}
+
+Chaque couple possède ses avantages et ses inconvénients. Heureusement, nous ne sommes pas limités à l'un où l'autre et nous pouvons à loisir réaliser une combinaison des deux mécanismes.
+
+\hypertarget{compluxe9ter-une-prise-de-son-au-couple-par-des-appoints}{%
+\section{Compléter une prise de son au couple par des appoints}\label{compluxe9ter-une-prise-de-son-au-couple-par-des-appoints}}
+
+Il est commun, lors d'une prise de son au couple, de chercher à obtenir une entière satisfaction sonore à la seule aide du couple. Cependant, cela n'est parfois pas possible, souvent pour des contraintes physiques et acoustiques (un instrument de l'ensemble jouant moins fort que les autres). Dans ces cas, l'utilisation d'appoint, donc de microphone supplémentaire, placé en proximité de la source, va permettre de venir récupérer une précision supplémentaire de l'instrument.
+
+Lors de l'étape de mixage, le couple servira de base principale et l'on viendra ajouter la quantité nécessaire d'appoints pour préciser le propos. Il sera parfois nécessaire de remettre en phase l'appoint et le couple pour améliorer la sommation de l'ensemble.
+
+\hypertarget{les-topologies-classiques-de-prise-de-son-au-couple}{%
+\section{Les topologies classiques de prise de son au couple}\label{les-topologies-classiques-de-prise-de-son-au-couple}}
+
+Le premier ingénieur à se poser la question du son stéréophonique est l'anglais Alan Blumlein en 1929. Il imagine l'entièreté de la chaîne d'enregistrement et de diffusion nécessaire à la stéréophonie. Cependant, la BBC lui impose comme contrainte que toutes ses propositions soient compatibles avec des systèmes monophoniques. Il inventera donc le couple XY et MS.
+
+Plus tard, la plupart des radios européennes développeront des couples de prises de son mêlant \(\Delta i\) et \(\Delta t\), tel que l'ORTF.
+
+\hypertarget{le-couple-blumlein-xy}{%
+\subsection{Le couple Blumlein / XY}\label{le-couple-blumlein-xy}}
+
+Les deux microphones sont ici directifs, placés au même point de l'espace et ongulé d'une certaine valeur entre eux.
+
+De par les contraintes technologiques de son époque, Blumlein a décrit ce couple pour une utilisation de deux microphones bidirectionnels. Il est aujourd'hui plus commun de le rencontrer avec deux cardioïdes.
+
+Dans sa version originale, le couple Blumlein comprend donc deux microphones bidirectionnels avec un angle de 90°.
+
+La formulation du couple XY comprend deux microphones cardioïdes avec un angle compris entre 90° et 135°.
+
+\hypertarget{le-couple-ms}{%
+\subsection{Le couple MS}\label{le-couple-ms}}
+
+Le couple MS, également inventé par Alan Blumlein, permet de doser la quantité de stéréophonie après l'enregistrement.
+
+Pour se faire, ce couple utilise deux microphones~:
++ Un omnidirectionnel, historiquement, mais aujourd'hui fréquemment remplacé par un microphone cardioïde.
++ Un bidirectionnel
+
+Le microphone omnidirectionnel, ou cardioïde, va rendre compte du centre de la stéréophonie, tandis que le microphone bidirectionnel rendra compte de la latéralité.
+
+Une fois enregistrés, ces deux canaux ont besoin d'être convertis, plus exactement dématricés, vers une paire de canaux stéréophonique. L'opération est très simple~:
+
+\(L = M+S\)
+\(R = M-S\)
+
+Cette opération peut être réalisée sur une console de mixage, telle que décrite ci-dessous.
+
+\begin{figure}
+\includegraphics[width=4.17in]{_resources/171f157be4749ac8446dd9bdfff0625b} \caption{Dématriçage MS}\label{fig:chunk-label}
+\end{figure}
+
+\hypertarget{le-couple-ortf}{%
+\subsection{Le couple ORTF}\label{le-couple-ortf}}
+
+Le couple ORTF, inventé par la radio française du même nom, combine l'effet du \(\Delta i\) et du \(\Delta t\) afin de s'approcher de l'écoute humaine.
+
+Sa topologie est précisément définie. Elle propose l'utilisation d'une paire de microphones cardioïde, ongulé du 110° et avec un écart de 17 cm.
+
+\hypertarget{les-couples-ab}{%
+\subsection{Les couples AB}\label{les-couples-ab}}
+
+Les couples AB peuvent avoir une définition ambiguë. Une partie de la littérature scientifique considère comme couple AB tout couple non coïncident. À cet égard l'ORTF est considéré comme un couple AB. Pour d'autre, les couples AB ne concernent que des couples constitués de microphones omnidirectionnels.
+
+Ces derniers ont la particularité de n'utiliser que le \(\Delta t\) afin de placer les sources dans l'espace. Le rendu est donc souvent spacieux, au prix d'une certaine instabilité et d'un certain manque de précision de l'image stéréophonique.
+
+\hypertarget{muxe9thodologie-de-prise-de-son}{%
+\chapter{Méthodologie de prise de son}\label{muxe9thodologie-de-prise-de-son}}
+
+Le bon déroulement de l'enregistrement d'instruments acoustiques dépend de multiple facteur. Trié par ordre d'importance décroissante, nous trouvons~:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Le confort du musicien
+\item
+  La qualité de l'instrument enregistré
+\item
+  La qualité de l'acoustique de la pièce où a lieu l'enregistrement
+\item
+  Le placement du microphone
+\item
+  Le choix du microphone (technologie et directivité)
+\item
+  Le choix du préampli
+\end{enumerate}
+
+\hypertarget{le-confort-du-musicien}{%
+\section{Le confort du musicien}\label{le-confort-du-musicien}}
+
+Même si elle peut sembler triviale, cette «~étape~» de la chaîne de prise de son est de loin la plus importante.
+La qualité de l'interprétation donnée par le musicien dépendra grandement de son état moral et psychologique~:
+
+\begin{itemize}
+\tightlist
+\item
+  Est-il stressé
+\item
+  Est-il confiant
+\item
+  Se sent-il accueilli
+\item
+  etc.
+\end{itemize}
+
+Nous pourrions considérer qu'un ou une musicienne arrivant dans un studio d'enregistrement se présente avec un taux de confiance maximal envers l'équipe technique. Dès lors l'objectif des différents techniciens est de conserver cette jauge au maximum.
+
+Les premières minutes sont particulièrement importantes et va poser un ressenti fort sur la journée de travail. Il y a donc un équilibre à trouver entre un accueil chaleureux et décontracté et un rapport productiviste et sérieux.
+
+Le système permettant aux musiciens de communiquer entre eux et avec les techniciens est primordial. En pratique, il n'est pas rare de dédier certains microphones du plateau à cette tâche. Du côté régi, le «~talkback~» est l'outil de communication premier des techniciens présents sur la session. Il convient de l'utiliser avec soin et prudence. Un musicien peut rapidement se sentir isolé, s'il enregistre seul. Il convient de maintenir un contact régulier et précis afin de ne pas l'abandonner dans le seul dans sa cabine. Qui plus est, un quiproquo peut être vite arrivé avec les systèmes de talkback. Prudence quant à l'état d'ouverture ou de fermeture du microphone.
+
+\hypertarget{le-choix-de-linstrument}{%
+\section{Le choix de l'instrument}\label{le-choix-de-linstrument}}
+
+La plupart des musiciens se présenteront avec leurs instruments. La marge de manœuvre est donc ici quasi nulle.
+
+Cependant il n'est pas rare que le studio possède du «~backline~», souvent composé de batteries, d'amplificateur guitare et basse, voire de guitares et de basses. Si l'instrument utilisé par le musicien pose problème pour la prise de son, proposer une alternative peut s'avérer être un bon pari. Il convient évidemment de sonder l'ouverture du musicien par rapport à cette proposition, afin de ne pas le braquer.
+
+Il peut également être intéressant de «~préparer~» les instruments. Cette technique est très courante sur les pianos et les batteries, afin de changer les propriétés acoustiques de l'instrument grâce a l'utilisation de draps, coussins, couvertures disposées dans ou sur l'instrument.
+
+\hypertarget{le-choix-de-lacoustique}{%
+\section{Le choix de l'acoustique}\label{le-choix-de-lacoustique}}
+
+L'acoustique de la salle d'enregistrement est-elle aussi plus souvent une contrainte qu'une variable d'ajustement.
+
+On préférera souvent de grandes salles afin de limiter l'apparition prématurée de premières réflexions. Plus la salle sera petite, plus celle-ci apportera une forte coloration sur le contenu enregistré. Il convient donc d'être attentif aux petites cabines de studio, celles-ci sont souvent très mates, mais leur apport sur le timbre des instruments qui y sont enregistrés est souvent très important.
+
+Lorsque l'on a la possibilité d'enregistrer dans de grandes salles, il est souvent intéressant de disposer des quelques panneaux acoustiques mobiles, afin de modeler la pièce à sa convenance.
+
+Si l'acoustique imposée est défavorable, on préférera dans ce cas des prises d'hyper proximité, afin de minimiser son effet au maximum.
+
+\hypertarget{placer-et-choisir-son-microphone}{%
+\section{Placer et choisir son microphone}\label{placer-et-choisir-son-microphone}}
+
+En pratique, il est bien difficile de dissocier le choix du microphone de son placement, les deux étant très interdépendants. Cependant, il convient de garder à l'esprit que le positionnement du microphone est, parmi les deux, sans doute le plus déterminant.
+
+La première étape, avant même de choisir un microphone, consiste à écouter l'instrument dans l'acoustique d'enregistrement. Il s'agit ici d'une écoute active. On se déplace autour de l'instrument, on s'en approche, on s'en éloigne, afin de sentir l'interaction entre la source et l'acoustique du lieu. Aussi, il est important de trouver deux zones d'émission particulière de l'instrument~: la zone de projection maximale et la zone au timbre le plus favorable. La première peut nous servir à positionner l'instrumentiste par rapport aux autres instruments afin de minimiser les reprises entre microphones. La deuxième zone nous indique l'axe de prise de son.
+
+Cette zone au timbre le plus favorable est relative. Elle dépend de l'instrument, bien sûr, mais aussi du modèle. Elle dépend également du mode de jeu, de l'articulation du joueur et évidemment, de l'esthétique de la musique.
+
+\hypertarget{le-rapport-a-la-distance-du-microphone}{%
+\subsection{Le rapport a la distance du microphone}\label{le-rapport-a-la-distance-du-microphone}}
+
+La distance de positionnement du microphone est un élément excessivement important sur le rendu esthétique de la prise de son.
+
+En règle générale, plus on prend de distance, plus on approche une prise de son naturaliste, cherchant à reproduire un évènement sonore dans son environnement, tel qu'il aurait été entendu dans la pièce. Plus on se rapproche, plus on fragmente l'événement sonore et plus on l'arrache aussi a son contexte de diffusion.
+
+Afin de déterminer efficacement le placement d'un microphone, il convient d'abord d'en connaître sa distance critique. Celle-ci correspond au point, dans une pièce, où le son provenant directement d'une source est perçu au même niveau sonore que la réponse acoustique à cette source. Cela signifie que si nous plaçons notre microphone au-delà de ce point, nous obtiendrons plus d'acoustique que de son direct de l'instrument.
+
+Il est important aussi de considérer que la directivité du microphone influe sur la distance critique. En effet, plus la directivité du microphone est large (tends vers l'omnidirectionnalité), plus le microphone paraîtra éloigné de la source. À l'inverse, plus la directivité d'un microphone est étroite (tends vers la bidirectionnalité), plus le microphone paraîtra proche.
+
+Dans le cas de l'utilisation de microphone directif, le placement en proximité et hyperproximité va créer une accentuation du contenu basse-fréquence de la source. Cela devient parfois un élément esthétique, comme sur les voix radiophoniques. Cela aussi peut être un défaut, une exagération qu'il conviendra de corriger en postproduction.
+
+\hypertarget{quand-choisir-une-prise-de-son-stuxe9ruxe9ophonique}{%
+\subsection{Quand choisir une prise de son stéréophonique}\label{quand-choisir-une-prise-de-son-stuxe9ruxe9ophonique}}
+
+La prise de son stéréophonique, comme son nom l'indique, regroupe l'ensemble des techniques de prise de son dédié au système de diffusion stéréophonique (deux enceintes séparées de 60° et orientées vers un auditeur placé à équidistance des deux transducteurs).
+
+L'avantage de tels dispositifs de prises de son est de peupler dès la prise l'espace stéréophonique qui est donné à l'auditeur lors de la diffusion. Ils permettent également de rendre compte de la position de plusieurs évènements sonores ayant lieu dans la même acoustique. Cette dernière est d'ailleurs bien mieux retranscrite par de tels systèmes de prise de son.
+
+Il s'agit à nouveau d'un choix esthétique. Faire le choix d'une prise de son monophonique permet de renforcer la sensation de frontalité et de densité d'une source. À l'inverse, une prise de son stéréophonique donnera une définition spatiale accrue.
+
+\hypertarget{quand-choisir-le-multi-microphonie}{%
+\subsection{Quand choisir le multi-microphonie}\label{quand-choisir-le-multi-microphonie}}
+
+La multi-microphonie consiste à enregistrer un instrument via l'utilisation de microphones (principalement) directifs, placés à différents endroits jugés pertinents et en hyperproximité.
+
+Cette approche esthétique de la prise de son est devenue indissociable des «~musiques actuelles~». Elle offre l'avantage d'une grande flexibilité de traitement lors de la phase de mixage. Voir, elle implique une certaine partie des traitements.
+
+En effet, une prise d'hyperproximité va systématiquement relever deux défauts~:
++ un effet de proximité~: le grave/bas médium de la source paraît hypertrophié lors de l'emploi de microphones directifs.
++ Les dynamiques de jeux sont également hypertrophiées.
+
+L'effet de proximité implique donc bien souvent l'utilisation d'un égaliseur, permettant de corriger cette augmentation artificielle du grave. De même, l'hypertrophie de la dynamique de jeu implique l'usage d'un compresseur afin de corriger ces variations artificielles.
+
+Afin de recréer une sensation de spatialisation, on utilisera principalement deux outils. En premier lieu, le potentiomètre de panoramique afin de diriger ces sons mono dans l'espace stéréophonique, puis les réverbérations artificielles permettra de reconstituer un champ acoustique et de réintégrer ces sources dans une scène sonore.
+
+Si l'approche de la prise au couple pouvait être qualifiée de naturaliste, alors la prise de son en multimicrophone sera son pendant spectaculaire. Évidemment, il convient de ne pas aussi franchement opposer ces deux approches et il existe tout un monde de système de prise de son entre ces deux extrêmes.
+
+\hypertarget{le-choix-du-pruxe9amplificateur}{%
+\section{Le choix du préamplificateur}\label{le-choix-du-pruxe9amplificateur}}
+
+Le rôle du préamplificateur est d'amplifier le signal, le tout en ramenant le minimum de bruit. Un premier élément de choix de préampli va se faire sur le niveau de pression acoustique produit par les sources à enregistrer.
+
+Enregistrer une batterie impose peut de contrainte sur le préampli quand a sa capacité à amplifier sans rajouter beaucoup de bruit sur le signal. À l'inverse, enregistrer des instruments peux sonores, possiblement avec des microphones peux sensibles, implique l'utilisation de préampli avec une excellente réserve de gain et un excellent rapport signal bruit.
+
+\hypertarget{linfluence-du-pruxe9ampli-sur-la-couleur-du-son}{%
+\subsection{L'influence du préampli sur la «~couleur~» du son}\label{linfluence-du-pruxe9ampli-sur-la-couleur-du-son}}
+
+Il est assez connu que le préampli peut également devenir un choix esthétique pour influencer la couleur d'une prise de son. Cette question semble assez complexe. Voici quelques éléments de réponse~:
+
+\begin{itemize}
+\tightlist
+\item
+  Le choix du préampli est d'une influence minime par rapport à \textbf{tous} les autres choix précédemment fait.
+\item
+  Les préamplis sont souvent catégorisés, en termes de couleur, via les composants utilisés pour réaliser l'amplification. Attention, un composant électronique dépend toujours du contexte dans lequel il est placé (ici, du circuit électronique). Il est donc difficile de précisément qualifier le son d'un préampli à lampe ou à transistor de façon générique.
+\item
+  Les impédances d'entrée des préamplis ne sont souvent pas évoquées dans ces discussions. Hors, pour la plus parts des microphones (hors statiques), leur impédance de sortie peut être suffisamment élevée pour engendrer une déperdition en aigu et en transitoire. Cette déperdition peut être heureuse, ou malheureuse, mais surtout bien réelle. Une manière de s'en prémunir peut-être d'utiliser des «~booster~» de microphones (parfois également appelés préamplis), permettant d'augmenter le niveau de sortie des microphones et aussi d'adapter leur impédance.
+\end{itemize}
+
+\hypertarget{les-causes-de-duxe9phasage}{%
+\chapter{Les causes de déphasage}\label{les-causes-de-duxe9phasage}}
+
+\hypertarget{les-effets-sonores-de-duxe9phasage}{%
+\section{Les effets sonores de déphasage}\label{les-effets-sonores-de-duxe9phasage}}
+
+Tous les signaux sont caractérisés par une certaine phase. Celle-ci est moins tangible que celles de niveau sonore ou de fréquence. En effet, lorsqu'un signal est écouté seul, celle-ci ne s'entend pas. C'est au moment où plusieurs signaux corrélés (comprendre, enregistrés au même moment, par plusieurs microphones) sont sommés que les différences de phase peuvent s'entendre.
+
+\hypertarget{approche-mathuxe9matique}{%
+\section{Approche mathématique}\label{approche-mathuxe9matique}}
+
+Prenons l'exemple d'un son pur~:
+\(sin (\omega t + \phi)\) où \(\omega = 2\pi f\)
+
+La phase de ce signal est décrite par \(\omega t +\phi\)
+
+Les deux paramètres responsables de déphasages audibles sont~:
++ \(t\), le temps
++ \(\phi\), la phase à l'origine
+
+Attention, pour un son pur, l'effet de la modification de \(t\) ou de \(\phi\) semble très similaire. Ce n'est pas le cas pour des signaux pseudo-périodiques, atténués dans le temps.
+
+\hypertarget{les-sources-de-duxe9phasage}{%
+\section{Les sources de déphasage}\label{les-sources-de-duxe9phasage}}
+
+Les causes les plus classiques de déphasages sont~:
+
+\begin{itemize}
+\tightlist
+\item
+  Un câble XLR avec une inversion sur le point chaud et le point froid
+\item
+  Une prise de son avec une différence de distance entre deux microphones
+\item
+  Une prise de son utilisant deux microphones positionnés de part et d'autre d'une membrane
+\item
+  Un retard de certaines fréquences lié aux objets rencontrés par les signaux
+\end{itemize}
+
+\hypertarget{gestion-des-circuits-duxe9coutes}{%
+\chapter{Gestion des circuits d'écoutes}\label{gestion-des-circuits-duxe9coutes}}
+
+bla
+
+\end{document}

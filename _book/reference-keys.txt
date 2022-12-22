@@ -1,15 +1,14 @@
 fig:unnamed-chunk-1
-fig:unnamed-chunk-4
-fig:unnamed-chunk-5
 fig:unnamed-chunk-6
 fig:unnamed-chunk-7
 fig:unnamed-chunk-8
 fig:unnamed-chunk-9
 fig:unnamed-chunk-10
 fig:unnamed-chunk-11
-fig:unnamed-chunk-13
-fig:unnamed-chunk-15
+fig:unnamed-chunk-12
+fig:unnamed-chunk-14
 fig:unnamed-chunk-16
+fig:unnamed-chunk-17
 fig:chunk-label
 avant-propos
 mise-à-jour
@@ -30,6 +29,8 @@ positionnement-dans-lespace
 acoustique-des-salles
 généralités
 la-réverbération
+calcul-du-temps-de-réverbération
+limite-de-léquation-de-sabine
 le-phénomène-donde-stationnaire
 premières-réflexions-et-filtre-en-peigne
 traitement-acoustique
@@ -103,8 +104,3 @@ les-effets-sonores-de-déphasage
 approche-mathématique
 les-sources-de-déphasage
 gestion-des-circuits-découtes
-fig:unnamed-chunk-2
-bibliography-book.bib-packages.bib
-liens-entre-vision-et-audition
-calcul-du-temps-de-reverbération
-limite-de-léquation-de-sabine
