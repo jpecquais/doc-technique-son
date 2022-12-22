@@ -4,8 +4,8 @@ La première mission d'un preneur de son est de s'assurer de l'arriver à bon po
 
 Le diagramme ci-dessous reprend les principaux étages rencontré par un signal audio dans un context de production numérique. Il est essentiel d'être le plus famillier possible avec ces différents composants.
 
-```{r, echo=FALSE, out.width="100%", fig.cap = "Le chemin du signal"}
-knitr::include_graphics(path = "_resources/diagrams/cheminSignal.drawio.svg")
+```{r, echo=FALSE, out.width="100%", fig.align="center", fig.cap = "Le chemin du signal"}
+show_fig("_resources/diagrams/cheminSignal.svg")
 ```
 
 > Le schéma peut-être agrandi en ouvrant l'image dans un nouvel onglet.

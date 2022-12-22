@@ -1,6 +1,5 @@
 # Acoustique des salles
 
-
 Tout environnement, sollicité par un évènement sonore, produit une réponse acoustique. Cette réponse acoustique est appelée réverbération. Elle est caractéristique d’un lieu et peut, dans certains cas, être une alliée précieuse dans notre travail. Dans d’autres, elle est source de problèmes et complexifie grandement notre travail d’écoute analytique.
 
 ## Généralités
@@ -10,7 +9,7 @@ Tout environnement, sollicité par un évènement sonore, produit une réponse a
 L'acoustique d'une salle est généralement décrite en deux temps : le temps des premières réflexions et le temps du champ diffus.
 
 ```{r, echo = FALSE, fig.align='center', fig.cap = "Schéma d'une réponse impulsionnelle de réverbération."}
-knitr::include_graphics(rep("_resources/drawings/reverb.svg"))
+show_fig(rep("_resources/drawings/reverb.svg"))
 ```
 
 Les premières réflexions sont les premiers rebonds d’une onde sonore sur les parois d’une salle et sont caractéristiques de la signature acoustique du lieu. Ces rebonds reviennent à l’auditeur avec un certain temps. Ce retard se nomme souvent « pré-délai » dans les moteurs de réverbération artificiels. Ce prédélai est fonction de deux paramètres :
@@ -48,7 +47,7 @@ L'équation de Sabine pose également problème pour de petits espaces (régie d
 
 $$RT_{60} = -0.1611 \times \frac{V}{\sum_{i=0}^{k} S_i.\ln(1-\alpha_i)}$$
 
-> 💡 l'équation d'Eyring n'améliore pas non plus la problématique fréquentielle.
+> L'équation d'Eyring n'améliore pas non plus la problématique fréquentielle.
 
 ### Le phénomène d'onde stationnaire
 
@@ -57,7 +56,12 @@ La plupart des pièces de vie sont des salles rectangulaires. Dans ce cas, les s
 Nous aborderons ici ce  phénomène sous l'angle de l'acoustique des salles, mais il est applicable dans d'autres situations, comme la vibration d'une corde par exemple.
 
 ```{r, echo = FALSE, fig.align='center', fig.cap = 'Les points rouges représente les noeuds, les amplitudes maximales sont les ventres. Infographie par Lucas Vieira'}
-knitr::include_graphics(rep("https://upload.wikimedia.org/wikipedia/commons/7/7d/Standing_wave_2.gif"))
+if (knitr:::is_latex_output()) {
+  knitr::asis_output('\\url{_resources/gif/Standing_wave_2.gif}')
+} else {
+  knitr::include_graphics(rep("_resources/gif/Standing_wave_2.gif"))
+}
+
 ```
 
 Il est possible de calculer les fréquences d'un mode grâce aux formules vues au chapitre précédent :
@@ -114,10 +118,10 @@ Où $fc$ correspond à la fréquence d'annulation la plus grave du filtre en pei
 Ainsi, on peut calculer les filtres en peignes présents au point d'écoute d'une régie de mixage ou de prise de son grâce à la mesure du chemin des premières réflexions.
 
 ```{r, echo = FALSE, fig.align='center', fig.cap = "Ensemble des premières reflexions entendues par une oreille pour une enceinte (hors plafond et plancher/bureau)."}
-knitr::include_graphics(rep("_resources/drawings/roomPr.svg"))
+show_fig(rep("_resources/drawings/roomPr.svg"))
 ```
 
-> 💡 La réflexion du son sur une paroi est tout à fait comparable à de l'optique géométrique. Une onde sonore arrivant avec un angle d'incidence $\alpha$ sur une surface sera réfléchie avec le même angle. Ainsi, il est souvent conseillé d'utiliser un miroir lorsque l'on positionne des traitements acoustiques. Lorsque la personne assise au point d'écoute voit une enceinte dans un miroir placé sur un mur, on sait alors qu'il faudra placer le panneau à la place du miroir.
+> La réflexion du son sur une paroi est tout à fait comparable à de l'optique géométrique. Une onde sonore arrivant avec un angle d'incidence $\alpha$ sur une surface sera réfléchie avec le même angle. Ainsi, il est souvent conseillé d'utiliser un miroir lorsque l'on positionne des traitements acoustiques. Lorsque la personne assise au point d'écoute voit une enceinte dans un miroir placé sur un mur, on sait alors qu'il faudra placer le panneau à la place du miroir.
 
 On se rend donc compte que l'influence des filtres en peigne générés par les premières réflexions est très importante. Ce phénomène à lui seul explique l'intérêt d'une grande régie d'écoute. En effet, plus une pièce est grande, plus l'écart de temps entre le son direct et les premières réflexions est important. Cela implique deux choses :
 
@@ -165,7 +169,7 @@ On se posera ensuite la question des endroits de la pièce les plus propices pou
 
 Une fois ces considérations prises en compte, on pourra alors aborder le traitement de l'acoustique.
 
-> 🛑 Il ne faut pas confondre isolation acoustique et traitement acoustique. Dans le premier cas, on chercher a limiter la contribution sonore d'un lieu sur son environnement, dans l'autre on cherche à améliorer la propagation du son dans un espace donné. Une isolation acoustique satisfaisante nécessite de lourds travaux, voire l'aménagement d'une "boîte dans une boîte". Ces notions d'acoustiques dépassent le cadre de ce cours. 
+> Il ne faut pas confondre isolation acoustique et traitement acoustique. Dans le premier cas, on chercher a limiter la contribution sonore d'un lieu sur son environnement, dans l'autre on cherche à améliorer la propagation du son dans un espace donné. Une isolation acoustique satisfaisante nécessite de lourds travaux, voire l'aménagement d'une "boîte dans une boîte". Ces notions d'acoustiques dépassent le cadre de ce cours. 
 
 ### Les types de traitements
 

@@ -39,5 +39,5 @@ Cela nous indique donc qu’une des façons de concevoir un microphone a directi
 ## Directivités réelles
 
 ```{r, echo = FALSE, fig.cap = "Directivité réelle d'un microphone cardioïde (Sennheiser)", out.width='50%', fig.align='center'}
-knitr::include_graphics(rep("http://electroacoustique.univ-lemans.fr/cours/Grain1.2en/res/image_15.jpg"))
+knitr::include_graphics(rep("_resources/image_15.jpg"))
 ```

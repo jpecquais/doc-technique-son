@@ -49,15 +49,9 @@ axs[1].set_xlabel("Frequences (Hz)")
 axs[1].set_ylabel("Amplitude (dB)")
 ```
 
-<!--
-```{r, echo=FALSE, out.width="50%", fig.show = 'hold', fig.cap = "Représentation d'un son pur : (1) domaine temporel ; (2) domaine fréquentiel"}
-knitr::include_graphics(rep(c("_resources/drawings/sinus_tps.svg","_resources/drawings/sinus_fqc.svg")))
-```
--->
-
 Dans notre environnement, les sons sont donc composés de plusieurs fréquences. La fréquence la plus grave d'un son est sa **fréquence fondamentale**. Les autres sont alors appelées **partiels**. Si ces partielles ont pour fréquence un multiple de la fréquence fondamentale, alors on les nomme **harmoniques**.
 
-> 💡 Plus généralement, on admettra que la composition fréquentielle, ou spectrale, de tout son peut être décomposée par une somme de sinusoïde. L'outil permettant de passer de la représentation temporelle d'un signal à sa représentation fréquentiel s'appelle la **transformée de Fourrier.** 
+> Plus généralement, on admettra que la composition fréquentielle, ou spectrale, de tout son peut être décomposée par une somme de sinusoïde. L'outil permettant de passer de la représentation temporelle d'un signal à sa représentation fréquentiel s'appelle la **transformée de Fourrier.** 
 
 ```{python, echo=FALSE, fig.align="center", fig.caption="Signal carré et visualisation de son spectre"}
 import matplotlib.pyplot as plt
@@ -91,18 +85,12 @@ axs[1].set_xlabel("Frequences (Hz)")
 axs[1].set_ylabel("Amplitude (dB)")
 ```
 
-<!--
-```{r, echo=FALSE, out.width="50%", fig.show = 'hold', fig.cap = "Représentation d'une onde carrée qui ne contient que les harmoniques impaires."}
-knitr::include_graphics(rep(c("_resources/drawings/square_tps.svg","_resources/drawings/square_fqc.svg")))
-```
--->
-
 La fréquence fondamentale donne la **hauteur** du son (sa note en musique par exemple). Les partiels enrichissent cette fréquence fondamentale et créés le **timbre** d'un son. C'est en partie grâce au timbre que l'on peut reconnaître différents instruments de musiques jouant la même note.
 
 Un son se caractérise également par l'évolution de son amplitude au cours du temps. On parle alors de son **enveloppe**. Un modèle courant d'enveloppe est l'ADSR : *Attack*, *Decay*, *Sustain*, *Release*, soit *Attaque*, *Décroissance*, *Maintient* et *Relâchement*.
 
 ```{r, echo=FALSE, out.width="65%", fig.align="center", fig.cap = "Exemple d'enveloppe ADSR"}
-knitr::include_graphics("_resources/drawings/adsr.svg")
+show_fig("_resources/drawings/adsr.svg")
 ```
 
 Lorsque son temps et très bref, l'ensemble *attaque* et *décroissance* forme les **transitoires**. Cette partie du signal est responsable de la sensation percussive du son.
@@ -130,7 +118,7 @@ Si nous étudions à nouveau les bornes minimale et maximale de notre audition, 
 Nous pouvons également calculer le temps de propagation du son. En pratique, nous serons souvent intéressés par le temps de propagation séparant deux points dans l'espace (par exemple, le temps séparant deux microphones par rapport à un instrument).
 
 ```{r, echo=FALSE, out.width="25%", fig.align="center", fig.cap = "Distance entre deux microphones."}
-knitr::include_graphics("_resources/drawings/mic_dist.svg")
+show_fig("_resources/drawings/mic_dist.svg")
 ```
 
 $$ t = \frac {d_2-d_1}{c}$$
@@ -152,7 +140,7 @@ Cette difficulté liée à l'absence de vocabulaire commun quant à la qualifica
 Nous pouvons tout de même nous essayer à cet exercice pour nous permettre d'avoir un vocabulaire commun au fil de ce cours. Vous aurez sans doute compris qu'il n'y aura, dans les termes employés, aucun critère absolu.
 
 ```{r, echo=FALSE, out.width="100%", fig.align="center", fig.cap = "Distance entre deux microphones."}
-knitr::include_graphics("_resources/drawings/spectre.svg")
+show_fig("_resources/drawings/spectre.svg")
 ```
 
 **Proposition d'association entre bandes de fréquences et sensation**.
@@ -167,7 +155,7 @@ knitr::include_graphics("_resources/drawings/spectre.svg")
 
 Il est intéressant de former son oreille à reconnaître une plage de fréquence, ainsi que d'y associer son propre vocabulaire et une sensation. Les appellations proposées ci-dessus ne sont à prendre que comme guides et n'ont pas valeur de référence. Cela favorise une écoute critique et analytique.
 
-> 💡 Aussi, les fréquences graves ont un effet masquant sur les fréquences plus aiguës. Ce phénomène est dû au fonctionnement de notre oreille, et plus particulièrement de la cochlée.
+> Aussi, les fréquences graves ont un effet masquant sur les fréquences plus aiguës. Ce phénomène est dû au fonctionnement de notre oreille, et plus particulièrement de la cochlée.
 
 ### Pression acoustique & niveau sonore
 
@@ -179,12 +167,12 @@ Notre oreille fonctionne de façon logarithmique, et non linéairement, face à 
 
 $$L_p = 20\,\log_{10}\Big(\frac{p_{eff}}{p_{ref}}\Big) \qquad p_{ref} = 20\mu Pa$$
 
-> 💡 Si la pression acoustique double, on observe une augmentation du niveau sonore de 3 dB SPL. Lorsqu'on ressent un doublement du niveau sonore, on observe une augmentation de 10 dB.
+> Si la pression acoustique double, on observe une augmentation du niveau sonore de 3 dB SPL. Lorsqu'on ressent un doublement du niveau sonore, on observe une augmentation de 10 dB.
 
 La question se complexifie lorsque l'on rajoute la dimension fréquentielle à la question de la perception du niveau sonore.  En effet, nous percevons des niveaux sonores différents pour différentes fréquences pourtant émises au même niveau de pression acoustique. Pour inclure cette dépendance fréquentielle, nous avons mis en place une unité de mesure : la **sonie** ou **bruyance** (**loudness** en anglais). Il est donc possible ensuite de définir des courbes d'**isosonie**, c'est-à-dire des courbes indiquant un niveau sonore de perception égale en fonction de la fréquence et du niveau de pression acoustique.
 
 ```{r, echo = FALSE, fig.align="center", fig.cap = "Courbes d'isosonie, aussi dites de Fletcher-Munson"}
-knitr::include_graphics(path = "_resources/diagrams/Courbes_isosonie.png")
+knitr::include_graphics("_resources/diagrams/Courbes_isosonie.png")
 ```
 
 Que conclure de cet abaque ?
@@ -206,12 +194,12 @@ On pourrait d'ailleurs, grâce aux formules de ce début de chapitre, calculer l
 $$\Delta t_{max} = \frac d c = \frac {0,15}{340} = 0.4 \> ms$$
 
 ```{r, echo = FALSE, fig.align="center", fig.cap = "Illustration de l'ITD"}
-knitr::include_graphics(path = "_resources/drawings/delta_t.svg")
+show_fig("_resources/drawings/delta_t.svg")
 ```
 
 Si nos oreilles sont espacées de quelques centimètres, notre tête les séparant représente un obstacle acoustique non négligeable. De plus, les pavillons des oreilles imposent également une certaine directivité à notre écoute. En première approximation, on pourra donc considérer que l'ensemble formé par la tête et les pavillons implique une atténuation linéaire des ondes sonores, elle-même fonction de l'angle d'incidence. On appelle cette différence de niveau **différence d'intensité interaural**, ou **ILD** (interaural level difference) et se note $\Delta i$. On considère que si la différence de niveau de pression acoustique entre les deux oreilles est supérieure à 20 dB, on entendra l'évènement sonore complètement latéralisé.
 
-> 💡 L'ombre acoustique que représentent la tête et le pavillon n'est en réalité pas du tout linéaire en fréquence. La modification du timbre induite par ce système n'est pas perçue par notre cerveau comme une information de couleur, mais bien comme une information de spatialisation. Ainsi, selon l'angle d'incidence de l'évènement sonore, son spectre sera filtré d'une certaine manière qui permettra à notre cerveau de le positionner dans l'espace. La réponse en fréquence d'une tête se nomme **HRTF** (**Head Related Transfer Function**).
+> L'ombre acoustique que représentent la tête et le pavillon n'est en réalité pas du tout linéaire en fréquence. La modification du timbre induite par ce système n'est pas perçue par notre cerveau comme une information de couleur, mais bien comme une information de spatialisation. Ainsi, selon l'angle d'incidence de l'évènement sonore, son spectre sera filtré d'une certaine manière qui permettra à notre cerveau de le positionner dans l'espace. La réponse en fréquence d'une tête se nomme **HRTF** (**Head Related Transfer Function**).
 
 Enfin, nous sommes également capables de déterminer la distance d'un évènement sonore. La plupart des paramètres permettant d'évaluer cette distance sont relatifs. Cela signifie que l'évènement doit être comparé à un autre pour pouvoir le repositionner dans l'espace. On pourra alors comparer :
 

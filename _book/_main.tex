@@ -131,7 +131,7 @@ D'un point de vue sonore, le travail de prise de son est absolument critique. Ce
 La plupart des choix faits à la prise de son ne pourront pas être renégociés a posteriori. Il convient donc de mettre d'accord les artistes, le directeur artistique et le preneur de son sur les moyens à mettre en œuvre.
 
 \begin{figure}
-\includegraphics[width=0.8\linewidth]{_resources/diagrams/productionSonore} \caption{Entonnoir de la production musicale}\label{fig:unnamed-chunk-1}
+\includegraphics[width=0.8\linewidth]{_resources/diagrams/productionSonore} \caption{Entonnoir de la production musicale}\label{fig:unnamed-chunk-2}
 \end{figure}
 
 \hypertarget{les-acteurs-de-la-ruxe9alisation-dune-ux153uvre-enregistruxe9e}{%
@@ -199,15 +199,15 @@ On parlera d'\textbf{évènement sonore} pour parler généralement de phénomè
 
 Les sons composés d'une seule fréquence se nomment \textbf{sons purs}. Cependant, de tels signaux n'existent pas dans la nature, et sont souvent utilisés afin de réaliser des mesures ou des tests psychoacoustiques.
 
-\begin{center}\includegraphics{_main_files/figure-latex/unnamed-chunk-2-1} \end{center}
+\begin{center}\includegraphics{_main_files/figure-latex/unnamed-chunk-3-1} \end{center}
 
 Dans notre environnement, les sons sont donc composés de plusieurs fréquences. La fréquence la plus grave d'un son est sa \textbf{fréquence fondamentale}. Les autres sont alors appelées \textbf{partiels}. Si ces partielles ont pour fréquence un multiple de la fréquence fondamentale, alors on les nomme \textbf{harmoniques}.
 
 \begin{quote}
-💡 Plus généralement, on admettra que la composition fréquentielle, ou spectrale, de tout son peut être décomposée par une somme de sinusoïde. L'outil permettant de passer de la représentation temporelle d'un signal à sa représentation fréquentiel s'appelle la \textbf{transformée de Fourrier.}
+Plus généralement, on admettra que la composition fréquentielle, ou spectrale, de tout son peut être décomposée par une somme de sinusoïde. L'outil permettant de passer de la représentation temporelle d'un signal à sa représentation fréquentiel s'appelle la \textbf{transformée de Fourrier.}
 \end{quote}
 
-\begin{center}\includegraphics{_main_files/figure-latex/unnamed-chunk-4-1} \end{center}
+\begin{center}\includegraphics{_main_files/figure-latex/unnamed-chunk-4-3} \end{center}
 
 La fréquence fondamentale donne la \textbf{hauteur} du son (sa note en musique par exemple). Les partiels enrichissent cette fréquence fondamentale et créés le \textbf{timbre} d'un son. C'est en partie grâce au timbre que l'on peut reconnaître différents instruments de musiques jouant la même note.
 
@@ -219,7 +219,7 @@ Un son se caractérise également par l'évolution de son amplitude au cours du 
 
 }
 
-\caption{Exemple d'enveloppe ADSR}\label{fig:unnamed-chunk-6}
+\caption{Exemple d'enveloppe ADSR}\label{fig:unnamed-chunk-5}
 \end{figure}
 
 Lorsque son temps et très bref, l'ensemble \emph{attaque} et \emph{décroissance} forme les \textbf{transitoires}. Cette partie du signal est responsable de la sensation percussive du son.
@@ -253,7 +253,7 @@ Nous pouvons également calculer le temps de propagation du son. En pratique, no
 
 }
 
-\caption{Distance entre deux microphones.}\label{fig:unnamed-chunk-7}
+\caption{Distance entre deux microphones.}\label{fig:unnamed-chunk-6}
 \end{figure}
 
 \[ t = \frac {d_2-d_1}{c}\]
@@ -282,7 +282,7 @@ Nous pouvons tout de même nous essayer à cet exercice pour nous permettre d'av
 
 }
 
-\caption{Distance entre deux microphones.}\label{fig:unnamed-chunk-8}
+\caption{Distance entre deux microphones.}\label{fig:unnamed-chunk-7}
 \end{figure}
 
 \textbf{Proposition d'association entre bandes de fréquences et sensation}.
@@ -308,7 +308,7 @@ Nous pouvons tout de même nous essayer à cet exercice pour nous permettre d'av
 Il est intéressant de former son oreille à reconnaître une plage de fréquence, ainsi que d'y associer son propre vocabulaire et une sensation. Les appellations proposées ci-dessus ne sont à prendre que comme guides et n'ont pas valeur de référence. Cela favorise une écoute critique et analytique.
 
 \begin{quote}
-💡 Aussi, les fréquences graves ont un effet masquant sur les fréquences plus aiguës. Ce phénomène est dû au fonctionnement de notre oreille, et plus particulièrement de la cochlée.
+Aussi, les fréquences graves ont un effet masquant sur les fréquences plus aiguës. Ce phénomène est dû au fonctionnement de notre oreille, et plus particulièrement de la cochlée.
 \end{quote}
 
 \hypertarget{pression-acoustique-niveau-sonore}{%
@@ -323,7 +323,7 @@ Notre oreille fonctionne de façon logarithmique, et non linéairement, face à 
 \[L_p = 20\,\log_{10}\Big(\frac{p_{eff}}{p_{ref}}\Big) \qquad p_{ref} = 20\mu Pa\]
 
 \begin{quote}
-💡 Si la pression acoustique double, on observe une augmentation du niveau sonore de 3 dB SPL. Lorsqu'on ressent un doublement du niveau sonore, on observe une augmentation de 10 dB.
+Si la pression acoustique double, on observe une augmentation du niveau sonore de 3 dB SPL. Lorsqu'on ressent un doublement du niveau sonore, on observe une augmentation de 10 dB.
 \end{quote}
 
 La question se complexifie lorsque l'on rajoute la dimension fréquentielle à la question de la perception du niveau sonore. En effet, nous percevons des niveaux sonores différents pour différentes fréquences pourtant émises au même niveau de pression acoustique. Pour inclure cette dépendance fréquentielle, nous avons mis en place une unité de mesure : la \textbf{sonie} ou \textbf{bruyance} (\textbf{loudness} en anglais). Il est donc possible ensuite de définir des courbes d'\textbf{isosonie}, c'est-à-dire des courbes indiquant un niveau sonore de perception égale en fonction de la fréquence et du niveau de pression acoustique.
@@ -334,7 +334,7 @@ La question se complexifie lorsque l'on rajoute la dimension fréquentielle à l
 
 }
 
-\caption{Courbes d'isosonie, aussi dites de Fletcher-Munson}\label{fig:unnamed-chunk-9}
+\caption{Courbes d'isosonie, aussi dites de Fletcher-Munson}\label{fig:unnamed-chunk-8}
 \end{figure}
 
 Que conclure de cet abaque ?
@@ -368,13 +368,13 @@ On pourrait d'ailleurs, grâce aux formules de ce début de chapitre, calculer l
 
 }
 
-\caption{Illustration de l'ITD}\label{fig:unnamed-chunk-10}
+\caption{Illustration de l'ITD}\label{fig:unnamed-chunk-9}
 \end{figure}
 
 Si nos oreilles sont espacées de quelques centimètres, notre tête les séparant représente un obstacle acoustique non négligeable. De plus, les pavillons des oreilles imposent également une certaine directivité à notre écoute. En première approximation, on pourra donc considérer que l'ensemble formé par la tête et les pavillons implique une atténuation linéaire des ondes sonores, elle-même fonction de l'angle d'incidence. On appelle cette différence de niveau \textbf{différence d'intensité interaural}, ou \textbf{ILD} (interaural level difference) et se note \(\Delta i\). On considère que si la différence de niveau de pression acoustique entre les deux oreilles est supérieure à 20 dB, on entendra l'évènement sonore complètement latéralisé.
 
 \begin{quote}
-💡 L'ombre acoustique que représentent la tête et le pavillon n'est en réalité pas du tout linéaire en fréquence. La modification du timbre induite par ce système n'est pas perçue par notre cerveau comme une information de couleur, mais bien comme une information de spatialisation. Ainsi, selon l'angle d'incidence de l'évènement sonore, son spectre sera filtré d'une certaine manière qui permettra à notre cerveau de le positionner dans l'espace. La réponse en fréquence d'une tête se nomme \textbf{HRTF} (\textbf{Head Related Transfer Function}).
+L'ombre acoustique que représentent la tête et le pavillon n'est en réalité pas du tout linéaire en fréquence. La modification du timbre induite par ce système n'est pas perçue par notre cerveau comme une information de couleur, mais bien comme une information de spatialisation. Ainsi, selon l'angle d'incidence de l'évènement sonore, son spectre sera filtré d'une certaine manière qui permettra à notre cerveau de le positionner dans l'espace. La réponse en fréquence d'une tête se nomme \textbf{HRTF} (\textbf{Head Related Transfer Function}).
 \end{quote}
 
 Enfin, nous sommes également capables de déterminer la distance d'un évènement sonore. La plupart des paramètres permettant d'évaluer cette distance sont relatifs. Cela signifie que l'évènement doit être comparé à un autre pour pouvoir le repositionner dans l'espace. On pourra alors comparer :
@@ -412,7 +412,7 @@ L'acoustique d'une salle est généralement décrite en deux temps : le temps de
 
 }
 
-\caption{Schéma d'une réponse impulsionnelle de réverbération.}\label{fig:unnamed-chunk-11}
+\caption{Schéma d'une réponse impulsionnelle de réverbération.}\label{fig:unnamed-chunk-10}
 \end{figure}
 
 Les premières réflexions sont les premiers rebonds d'une onde sonore sur les parois d'une salle et sont caractéristiques de la signature acoustique du lieu. Ces rebonds reviennent à l'auditeur avec un certain temps. Ce retard se nomme souvent «~pré-délai~» dans les moteurs de réverbération artificiels. Ce prédélai est fonction de deux paramètres~:
@@ -458,7 +458,7 @@ L'équation de Sabine pose également problème pour de petits espaces (régie d
 \[RT_{60} = -0.1611 \times \frac{V}{\sum_{i=0}^{k} S_i.\ln(1-\alpha_i)}\]
 
 \begin{quote}
-💡 l'équation d'Eyring n'améliore pas non plus la problématique fréquentielle.
+L'équation d'Eyring n'améliore pas non plus la problématique fréquentielle.
 \end{quote}
 
 \hypertarget{le-phuxe9nomuxe8ne-donde-stationnaire}{%
@@ -468,14 +468,7 @@ La plupart des pièces de vie sont des salles rectangulaires. Dans ce cas, les s
 
 Nous aborderons ici ce phénomène sous l'angle de l'acoustique des salles, mais il est applicable dans d'autres situations, comme la vibration d'une corde par exemple.
 
-\begin{figure}
-
-{\centering \includegraphics{https://upload.wikimedia.org/wikipedia/commons/7/7d/Standing_wave_2} 
-
-}
-
-\caption{Les points rouges représente les noeuds, les amplitudes maximales sont les ventres. Infographie par Lucas Vieira}\label{fig:unnamed-chunk-12}
-\end{figure}
+\url{_resources/gif/Standing_wave_2.gif}
 
 Il est possible de calculer les fréquences d'un mode grâce aux formules vues au chapitre précédent :
 
@@ -500,7 +493,7 @@ Dans de petites pièces, les premières réflexions peuvent être entendues si p
 ## <string>:1: RuntimeWarning: invalid value encountered in multiply
 \end{verbatim}
 
-\begin{center}\includegraphics{_main_files/figure-latex/unnamed-chunk-13-1} \end{center}
+\begin{center}\includegraphics{_main_files/figure-latex/unnamed-chunk-12-1} \end{center}
 
 Toujours en utilisant les formules définies au premier chapitre, on établit la relation suivante :
 
@@ -516,11 +509,11 @@ Ainsi, on peut calculer les filtres en peignes présents au point d'écoute d'un
 
 }
 
-\caption{Ensemble des premières reflexions entendues par une oreille pour une enceinte (hors plafond et plancher/bureau).}\label{fig:unnamed-chunk-14}
+\caption{Ensemble des premières reflexions entendues par une oreille pour une enceinte (hors plafond et plancher/bureau).}\label{fig:unnamed-chunk-13}
 \end{figure}
 
 \begin{quote}
-💡 La réflexion du son sur une paroi est tout à fait comparable à de l'optique géométrique. Une onde sonore arrivant avec un angle d'incidence \(\alpha\) sur une surface sera réfléchie avec le même angle. Ainsi, il est souvent conseillé d'utiliser un miroir lorsque l'on positionne des traitements acoustiques. Lorsque la personne assise au point d'écoute voit une enceinte dans un miroir placé sur un mur, on sait alors qu'il faudra placer le panneau à la place du miroir.
+La réflexion du son sur une paroi est tout à fait comparable à de l'optique géométrique. Une onde sonore arrivant avec un angle d'incidence \(\alpha\) sur une surface sera réfléchie avec le même angle. Ainsi, il est souvent conseillé d'utiliser un miroir lorsque l'on positionne des traitements acoustiques. Lorsque la personne assise au point d'écoute voit une enceinte dans un miroir placé sur un mur, on sait alors qu'il faudra placer le panneau à la place du miroir.
 \end{quote}
 
 On se rend donc compte que l'influence des filtres en peigne générés par les premières réflexions est très importante. Ce phénomène à lui seul explique l'intérêt d'une grande régie d'écoute. En effet, plus une pièce est grande, plus l'écart de temps entre le son direct et les premières réflexions est important. Cela implique deux choses :
@@ -535,7 +528,7 @@ On se rend donc compte que l'influence des filtres en peigne générés par les 
 
 Afin de réduire au maximum les effets des filtres en peignes, il est recommandé de placer des traitements aux points de réflexion critique par rapport à la position d'écoute (voir schéma ci-dessus).
 
-\begin{center}\includegraphics{_main_files/figure-latex/unnamed-chunk-15-1} \end{center}
+\begin{center}\includegraphics{_main_files/figure-latex/unnamed-chunk-14-1} \end{center}
 
 \hypertarget{traitement-acoustique}{%
 \section{Traitement acoustique}\label{traitement-acoustique}}
@@ -549,7 +542,7 @@ On se posera ensuite la question des endroits de la pièce les plus propices pou
 Une fois ces considérations prises en compte, on pourra alors aborder le traitement de l'acoustique.
 
 \begin{quote}
-🛑 Il ne faut pas confondre isolation acoustique et traitement acoustique. Dans le premier cas, on chercher a limiter la contribution sonore d'un lieu sur son environnement, dans l'autre on cherche à améliorer la propagation du son dans un espace donné. Une isolation acoustique satisfaisante nécessite de lourds travaux, voire l'aménagement d'une ``boîte dans une boîte''. Ces notions d'acoustiques dépassent le cadre de ce cours.
+Il ne faut pas confondre isolation acoustique et traitement acoustique. Dans le premier cas, on chercher a limiter la contribution sonore d'un lieu sur son environnement, dans l'autre on cherche à améliorer la propagation du son dans un espace donné. Une isolation acoustique satisfaisante nécessite de lourds travaux, voire l'aménagement d'une ``boîte dans une boîte''. Ces notions d'acoustiques dépassent le cadre de ce cours.
 \end{quote}
 
 \hypertarget{les-types-de-traitements}{%
@@ -588,7 +581,12 @@ La première mission d'un preneur de son est de s'assurer de l'arriver à bon po
 Le diagramme ci-dessous reprend les principaux étages rencontré par un signal audio dans un context de production numérique. Il est essentiel d'être le plus famillier possible avec ces différents composants.
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{_resources/diagrams/cheminSignal.drawio} \caption{Le chemin du signal}\label{fig:unnamed-chunk-16}
+
+{\centering \includegraphics[width=1\linewidth]{_resources/diagrams/cheminSignal} 
+
+}
+
+\caption{Le chemin du signal}\label{fig:unnamed-chunk-15}
 \end{figure}
 
 \begin{quote}
@@ -742,11 +740,11 @@ Cela nous indique donc qu'une des façons de concevoir un microphone a directivi
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.5\linewidth]{http://electroacoustique.univ-lemans.fr/cours/Grain1.2en/res/image_15} 
+{\centering \includegraphics[width=0.5\linewidth]{_resources/image_15} 
 
 }
 
-\caption{Directivité réelle d'un microphone cardioïde (Sennheiser)}\label{fig:unnamed-chunk-17}
+\caption{Directivité réelle d'un microphone cardioïde (Sennheiser)}\label{fig:unnamed-chunk-16}
 \end{figure}
 
 \hypertarget{les-cuxe2bles}{%

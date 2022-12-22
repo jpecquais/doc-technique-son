@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.22)  22 DEC 2022 15:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.22)  22 DEC 2022 21:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -352,8 +352,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count296
 \l__pdf_internal_box=\box61
-)
-No file _main.aux.
+) (./_main.aux)
 \openout1 = `_main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
@@ -381,6 +380,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring OFF on input line 80.
+(./_main.out) (./_main.out)
 \@outlinefile=\write3
 \openout3 = `_main.out'.
 
@@ -418,36 +418,249 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
-]
-No file _main.toc.
+] (./_main.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 2.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 2.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 2.
+[3] [4])
 \tf@toc=\write4
 \openout4 = `_main.toc'.
 
-[3] [4
+[5] [6
 
 ]
 Chapter 1.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 102.
 (c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [5] [6]
+) [7] [8]
 Chapter 2.
+<_resources/diagrams/productionSonore.pdf, id=378, 703.62875pt x 593.21625pt>
+File: _resources/diagrams/productionSonore.pdf Graphic file (type pdf)
+<use _resources/diagrams/productionSonore.pdf>
+Package pdftex.def Info: _resources/diagrams/productionSonore.pdf  used on input line 134.
+(pdftex.def)             Requested size: 275.99237pt x 232.684pt.
+[9
 
-! LaTeX Error: File `_resources/diagrams/productionSonore' not found.
+] [10 <./_resources/diagrams/productionSonore.pdf>] [11] [12]
+Chapter 3.
+<_main_files/figure-latex/unnamed-chunk-3-1.pdf, id=415, 469.755pt x 325.215pt>
+File: _main_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (type pdf)
+<use _main_files/figure-latex/unnamed-chunk-3-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-3-1.pdf  used on input line 202.
+(pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.134 ...th]{_resources/diagrams/productionSonore}
-                                                   \caption{Entonnoir de la ... 
+Underfull \vbox (badness 1975) has occurred while \output is active []
+
+[13
+
+]
+<_main_files/figure-latex/unnamed-chunk-4-3.pdf, id=424, 469.755pt x 325.215pt>
+File: _main_files/figure-latex/unnamed-chunk-4-3.pdf Graphic file (type pdf)
+<use _main_files/figure-latex/unnamed-chunk-4-3.pdf>
+Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-4-3.pdf  used on input line 210.
+(pdftex.def)             Requested size: 344.997pt x 238.84406pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[14 <./_main_files/figure-latex/unnamed-chunk-3-1.pdf>]
+<_resources/drawings/adsr.pdf, id=466, 1098.1025pt x 941.5175pt>
+File: _resources/drawings/adsr.pdf Graphic file (type pdf)
+<use _resources/drawings/adsr.pdf>
+Package pdftex.def Info: _resources/drawings/adsr.pdf  used on input line 218.
+(pdftex.def)             Requested size: 224.24117pt x 192.26529pt.
+[15 <./_main_files/figure-latex/unnamed-chunk-4-3.pdf>]
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 236.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 236.
+
+[16 <./_resources/drawings/adsr.pdf>]
+<_resources/drawings/mic_dist.pdf, id=525, 278.03876pt x 617.30624pt>
+File: _resources/drawings/mic_dist.pdf Graphic file (type pdf)
+<use _resources/drawings/mic_dist.pdf>
+Package pdftex.def Info: _resources/drawings/mic_dist.pdf  used on input line 252.
+(pdftex.def)             Requested size: 86.2505pt x 191.49483pt.
+[17 <./_resources/drawings/mic_dist.pdf>]
+<_resources/drawings/spectre.pdf, id=535, 1560.83125pt x 437.635pt>
+File: _resources/drawings/spectre.pdf Graphic file (type pdf)
+<use _resources/drawings/spectre.pdf>
+Package pdftex.def Info: _resources/drawings/spectre.pdf  used on input line 281.
+(pdftex.def)             Requested size: 344.97963pt x 96.7274pt.
+[18 <./_resources/drawings/spectre.pdf>]
+<_resources/diagrams/Courbes_isosonie.png, id=545, 844.756pt x 597.432pt>
+File: _resources/diagrams/Courbes_isosonie.png Graphic file (type png)
+<use _resources/diagrams/Courbes_isosonie.png>
+Package pdftex.def Info: _resources/diagrams/Courbes_isosonie.png  used on input line 333.
+(pdftex.def)             Requested size: 777.75212pt x 550.04523pt.
+
+Overfull \hbox (432.75212pt too wide) in paragraph at lines 333--334
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 23.98965pt on input line 338.
+
+[19] [20 <./_resources/diagrams/Courbes_isosonie.png>]
+<_resources/drawings/delta_t.pdf, id=561, 1028.84375pt x 655.44875pt>
+File: _resources/drawings/delta_t.pdf Graphic file (type pdf)
+<use _resources/drawings/delta_t.pdf>
+Package pdftex.def Info: _resources/drawings/delta_t.pdf  used on input line 367.
+(pdftex.def)             Requested size: 344.9984pt x 219.78922pt.
+[21] [22 <./_resources/drawings/delta_t.pdf>]
+Chapter 4.
+<_resources/drawings/reverb.pdf, id=576, 1164.35pt x 695.59875pt>
+File: _resources/drawings/reverb.pdf Graphic file (type pdf)
+<use _resources/drawings/reverb.pdf>
+Package pdftex.def Info: _resources/drawings/reverb.pdf  used on input line 411.
+(pdftex.def)             Requested size: 344.99043pt x 206.10204pt.
+[23
+
+] [24 <./_resources/drawings/reverb.pdf>] [25]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 491.
+(c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Overfull \hbox (1.499pt too wide) in paragraph at lines 494--494
+[]\T1/lmtt/m/n/10 ## <string>:1: RuntimeWarning: divide by zero encountered in log10[] 
+ []
+
+
+Overfull \hbox (11.99896pt too wide) in paragraph at lines 494--494
+[]\T1/lmtt/m/n/10 ## <string>:1: RuntimeWarning: invalid value encountered in multiply[] 
+ []
+
+<_main_files/figure-latex/unnamed-chunk-12-1.pdf, id=603, 469.755pt x 325.215pt>
+File: _main_files/figure-latex/unnamed-chunk-12-1.pdf Graphic file (type pdf)
+<use _main_files/figure-latex/unnamed-chunk-12-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-12-1.pdf  used on input line 496.
+(pdftex.def)             Requested size: 344.997pt x 238.84406pt.
+[26]
+<_resources/drawings/roomPr.pdf, id=610, 1062.97125pt x 1019.81pt>
+File: _resources/drawings/roomPr.pdf Graphic file (type pdf)
+<use _resources/drawings/roomPr.pdf>
+Package pdftex.def Info: _resources/drawings/roomPr.pdf  used on input line 508.
+(pdftex.def)             Requested size: 345.00742pt x 330.99861pt.
+[27 <./_main_files/figure-latex/unnamed-chunk-12-1.pdf>] [28 <./_resources/drawings/roomPr.pdf>]
+<_main_files/figure-latex/unnamed-chunk-14-1.pdf, id=661, 469.755pt x 325.215pt>
+File: _main_files/figure-latex/unnamed-chunk-14-1.pdf Graphic file (type pdf)
+<use _main_files/figure-latex/unnamed-chunk-14-1.pdf>
+Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-14-1.pdf  used on input line 531.
+(pdftex.def)             Requested size: 344.997pt x 238.84406pt.
+[29 <./_main_files/figure-latex/unnamed-chunk-14-1.pdf>]
+Underfull \hbox (badness 2418) in paragraph at lines 545--546
+\T1/lmr/m/n/10 iso-la-tion acous-tique sat-is-faisante né-ces-site de lourds travaux,
+ []
+
+[30]
+Underfull \hbox (badness 2269) in paragraph at lines 572--573
+[]\T1/lmr/m/n/10 Pour une régie d'écoute, on sera tenté de priv-ilégier des traite-ments
+ []
+
+[31] [32
+
+]
+Chapter 5.
+<_resources/diagrams/cheminSignal.pdf, id=729, 726.715pt x 385.44pt>
+File: _resources/diagrams/cheminSignal.pdf Graphic file (type pdf)
+<use _resources/diagrams/cheminSignal.pdf>
+Package pdftex.def Info: _resources/diagrams/cheminSignal.pdf  used on input line 585.
+(pdftex.def)             Requested size: 345.0047pt x 182.98592pt.
+[33 <./_resources/diagrams/cheminSignal.pdf>] [34
+
+]
+Chapter 6.
+[35] [36] [37] [38
+
+]
+Chapter 7.
+[39]
+<_resources/image_15.jpg, id=789, 554.07pt x 442.65375pt>
+File: _resources/image_15.jpg Graphic file (type jpg)
+<use _resources/image_15.jpg>
+Package pdftex.def Info: _resources/image_15.jpg  used on input line 743.
+(pdftex.def)             Requested size: 172.49545pt x 137.80885pt.
+[40] [41 <./_resources/image_15.jpg>] [42
+
+]
+Chapter 8.
+[43] [44]
+Chapter 9.
+[45
+
+] [46]
+Chapter 10.
+
+Underfull \hbox (badness 1762) in paragraph at lines 876--877
+[]\T1/lmr/m/n/10 Afin de cor-recte-ment numériser un sig-nal, il con-vient de définir deux
+ []
+
+[47
+
+] [48]
+Overfull \hbox (5.73302pt too wide) in paragraph at lines 916--916
+[]\T1/lmr/bx/n/14.4 La ``mau-vaise répu-ta-tion'' du son numérique 
+ []
+
+[49] [50]
+Chapter 11.
+[51
+
+]
+Overfull \hbox (33.71959pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 52 \T1/lmr/m/sl/10 CHAPTER 11.  LES SUPPORTS D'ENREGISTREMENT NUMÉRIQUES DU SON
+ []
+
+[52
+
+]
+Chapter 12.
+[53] [54] [55] [56
+
+]
+Chapter 13.
+[57] [58] [59] [60]
+<_resources/171f157be4749ac8446dd9bdfff0625b.png, id=935, 301.125pt x 565.11125pt>
+File: _resources/171f157be4749ac8446dd9bdfff0625b.png Graphic file (type png)
+<use _resources/171f157be4749ac8446dd9bdfff0625b.png>
+Package pdftex.def Info: _resources/171f157be4749ac8446dd9bdfff0625b.png  used on input line 1174.
+(pdftex.def)             Requested size: 293.09714pt x 550.04567pt.
+
+LaTeX Warning: Float too large for page by 23.9901pt on input line 1175.
+
+[61] [62 <./_resources/171f157be4749ac8446dd9bdfff0625b.png>] [63] [64
+
+]
+Chapter 14.
+[65] [66] [67] [68] [69] [70
+
+]
+Chapter 15.
+[71] [72]
+Chapter 16.
+[73
+
+] (./_main.aux)
+Package rerunfilecheck Info: File `_main.out' has not changed.
+(rerunfilecheck)             Checksum: 5C86DED683797AA73A7B03CD95176DC9;13358.
+ ) 
 Here is how much of TeX's memory you used:
- 10741 strings out of 478053
- 169558 string characters out of 5839307
- 1853787 words of memory out of 5000000
- 30673 multiletter control sequences out of 15000+600000
- 557959 words of font info for 60 fonts, out of 8000000 for 9000
+ 11372 strings out of 478053
+ 183982 string characters out of 5839307
+ 1860787 words of memory out of 5000000
+ 31004 multiletter control sequences out of 15000+600000
+ 577570 words of font info for 78 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,6n,77p,750b,459s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,6n,77p,834b,521s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}<c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi5.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro10.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on _main.pdf (73 pages, 930934 bytes).
+PDF statistics:
+ 1171 PDF objects out of 1200 (max. 8388607)
+ 890 compressed objects within 9 object streams
+ 285 named destinations out of 1000 (max. 500000)
+ 596 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-!  ==> Fatal error occurred, no output PDF file produced!

@@ -13,6 +13,19 @@ link-citations: yes
 github-repo: jpecquais/doc-technique-son
 ---
 
+```{R, echo=FALSE}
+show_fig <- function(f)
+  {if (knitr::is_latex_output())
+  {
+    output = xfun::with_ext(f, 'pdf')
+    rsvg::rsvg_pdf(xfun::with_ext(f,'svg'), file=output)
+  } else {
+    output = xfun::with_ext(f, 'svg')
+  }
+  knitr::include_graphics(output)
+}
+```
+
 # Avant-propos
 
 Ce livre est né de la nécessité d'un support de cours pour la formation "Technique de Prise de Son", dispensée par Jean-Loup Pecquais. Il intègre donc l'ensemble des notions abordées, expliquées en détail, ainsi que des exemples sonores.
