@@ -7,12 +7,11 @@ bookdown::gitbook:
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Publié avec bookdown</a></li>
     edit: "https://github.com/jpecquais/doc-technique-son/%s/index.Rmd"
-    download: null
+    download: ["pdf", "epub"]
     sharing:
       facebook: false
       github: true
       twitter: false
-    #download: ["pdf", "epub"]
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
