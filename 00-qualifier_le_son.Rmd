@@ -173,7 +173,7 @@ $$L_p = 20\,\log_{10}\Big(\frac{p_{eff}}{p_{ref}}\Big) \qquad p_{ref} = 20\mu Pa
 
 La question se complexifie lorsque l'on rajoute la dimension fréquentielle à la question de la perception du niveau sonore.  En effet, nous percevons des niveaux sonores différents pour différentes fréquences pourtant émises au même niveau de pression acoustique. Pour inclure cette dépendance fréquentielle, nous avons mis en place une unité de mesure : la **sonie** ou **bruyance** (**loudness** en anglais). Il est donc possible ensuite de définir des courbes d'**isosonie**, c'est-à-dire des courbes indiquant un niveau sonore de perception égale en fonction de la fréquence et du niveau de pression acoustique.
 
-```{r, echo = FALSE, fig.align="center", fig.cap = "Courbes d'isosonie, aussi dites de Fletcher-Munson"}
+```{r, echo = FALSE, fig.align="center", fig.cap = "Courbes d'isosonie, aussi dites de Fletcher-Munson", out.width="100%"}
 knitr::include_graphics("_resources/diagrams/Courbes_isosonie.png")
 ```
 
