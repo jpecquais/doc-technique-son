@@ -1,3 +1,5 @@
+# (PART) Equipement et usage {-}
+
 # Le chemin du signal
 
 La première mission d'un preneur de son est de s'assurer de l'arriver à bon port des signaux dans l'enregistreur. En effet, toute notion de mise en scène sonore et d'esthétique devient très secondaire si le contenu n'a pas été enregistré.

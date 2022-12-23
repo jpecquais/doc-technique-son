@@ -1,3 +1,5 @@
+# (PART) Généralités {-}
+
 ```{r setup, include=FALSE}
 library(reticulate)
 knitr::knit_engines$set(python = reticulate::eng_python)

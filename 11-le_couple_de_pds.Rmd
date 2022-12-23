@@ -1,3 +1,5 @@
+# (PART) Prise de son pratique {-}
+
 # La prise de son au couple
 
 La prise de son au couple stéréophonique regroupe l’ensemble des techniques de prise de son dédié au système d’écoute stéréophonique (deux enceintes séparées de 60° et orientées vers un auditeur placé à équidistance des deux transducteurs).
