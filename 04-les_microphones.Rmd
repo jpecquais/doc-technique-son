@@ -1,6 +1,12 @@
 # Les microphones
 
-Un microphone est un **transducteur**, qui permet de transformer une onde acoustique en onde électrique. Il est constitué d’une membrane et d’une électronique associée permettant de préparer le signal capté à être transmis à la suite de la chaîne audio à travers un câble. La connectique standard des microphones est le XLR. Il s’agit de connectique **asymétrique.**
+Un microphone est un **transducteur** permettant de transformer une onde acoustique en signal électrique. Il est constitué d’une membrane et d’une électronique associée permettant de préparer le signal capté à être véhiculé au travers d'un câble. La connectique standard des microphones est le XLR. Il s’agit de connectique **asymétrique.** (cf. chapitre sur les modulations analogiques)
+
+La nécessité de capter un évènement sonore grâce à un microphone provient de trois usages :
+
++ le transmettre (téléphonie)
++ l'amplifier (concert, spectacle vivant)
++ l'enregistrer (industrie du disque, livre audio)
 
 ## Les technologies de microphones
 

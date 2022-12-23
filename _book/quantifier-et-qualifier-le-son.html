@@ -72,7 +72,7 @@
 <li><a href="./">La prise de son musicale</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Avant-propos</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> bibliography: [book.bib, packages.bib]</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#mise-à-jour"><i class="fa fa-check"></i><b>1.1</b> Mise à jour</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#structures"><i class="fa fa-check"></i><b>1.2</b> Structures</a></li>
@@ -247,15 +247,15 @@
 <p>Le son est une vibration mécanique d’un fluide. Dans le cadre de ce cours, nous ne considérerons que l’air comme médium de propagation. Cette onde cause une variation de la pression dans l’espace. Nous, les êtres humains, le percevons grâce à notre ouïe. Il s’agit donc, par définition, d’un phénomène ondulatoire et peut être caractérisé par un nombre d’oscillations par seconde, aussi appelé fréquence. On estime que notre espèce est sensible aux fréquences allant de 20 Hz (très grave) jusqu’à 20 000 Hz (très aigu).</p>
 <p>On parlera d’<strong>évènement sonore</strong> pour parler généralement de phénomènes physiques produisant une onde sonore.</p>
 <p>Les sons composés d’une seule fréquence se nomment <strong>sons purs</strong>. Cependant, de tels signaux n’existent pas dans la nature, et sont souvent utilisés afin de réaliser des mesures ou des tests psychoacoustiques.</p>
-<p><img src="_main_files/figure-html/unnamed-chunk-2-1.png" width="624" style="display: block; margin: auto;" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-1-1.png" width="624" style="display: block; margin: auto;" /></p>
 <p>Dans notre environnement, les sons sont donc composés de plusieurs fréquences. La fréquence la plus grave d’un son est sa <strong>fréquence fondamentale</strong>. Les autres sont alors appelées <strong>partiels</strong>. Si ces partielles ont pour fréquence un multiple de la fréquence fondamentale, alors on les nomme <strong>harmoniques</strong>.</p>
 <blockquote>
 <p>Plus généralement, on admettra que la composition fréquentielle, ou spectrale, de tout son peut être décomposée par une somme de sinusoïde. L’outil permettant de passer de la représentation temporelle d’un signal à sa représentation fréquentiel s’appelle la <strong>transformée de Fourrier.</strong></p>
 </blockquote>
-<p><img src="_main_files/figure-html/unnamed-chunk-3-3.png" width="624" style="display: block; margin: auto;" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-2-3.png" width="624" style="display: block; margin: auto;" /></p>
 <p>La fréquence fondamentale donne la <strong>hauteur</strong> du son (sa note en musique par exemple). Les partiels enrichissent cette fréquence fondamentale et créés le <strong>timbre</strong> d’un son. C’est en partie grâce au timbre que l’on peut reconnaître différents instruments de musiques jouant la même note.</p>
 <p>Un son se caractérise également par l’évolution de son amplitude au cours du temps. On parle alors de son <strong>enveloppe</strong>. Un modèle courant d’enveloppe est l’ADSR : <em>Attack</em>, <em>Decay</em>, <em>Sustain</em>, <em>Release</em>, soit <em>Attaque</em>, <em>Décroissance</em>, <em>Maintient</em> et <em>Relâchement</em>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
 <img src="_resources/drawings/adsr.svg" alt="Exemple d'enveloppe ADSR" width="65%" />
 <p class="caption">
 Figure 2.1: Exemple d’enveloppe ADSR
@@ -275,7 +275,7 @@ Figure 2.1: Exemple d’enveloppe ADSR
 <p><span class="math display">\[ \lambda = cT \; \iff \; \lambda = \frac c f\]</span></p>
 <p>Si nous étudions à nouveau les bornes minimale et maximale de notre audition, nous trouvons que <span class="math inline">\(\lambda_{f_{min}} = 17 \,m\)</span> et <span class="math inline">\(\lambda_{f_{max}} = 17 \,mm\)</span>.</p>
 <p>Nous pouvons également calculer le temps de propagation du son. En pratique, nous serons souvent intéressés par le temps de propagation séparant deux points dans l’espace (par exemple, le temps séparant deux microphones par rapport à un instrument).</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
 <img src="_resources/drawings/mic_dist.svg" alt="Distance entre deux microphones." width="25%" />
 <p class="caption">
 Figure 2.2: Distance entre deux microphones.
@@ -294,7 +294,7 @@ Figure 2.2: Distance entre deux microphones.
 <p>D’un point de vue perceptif, le spectre d’un évènement sonore est facilement remarquable. Il est, par contre, beaucoup plus difficile à qualifier. Il n’est pas rare de rencontrer les adjectifs “chaud”, “brillant”, “rond”, “aéré”, “ouvert”, “sombre”, voir d’autres encore plus ésotérique, pour tenter de communiquer la sensation ressentie à l’écoute de tel ou tel son.</p>
 <p>Cette difficulté liée à l’absence de vocabulaire commun quant à la qualification le son emmène systématiquement la redéfinition de ce vocable en fonction de son interlocuteur. En effet, le mot “rond” ne signifiera pas forcément la même chose selon à qui on s’adresse. Une stratégie possible consiste à questionner son interlocuteur sur l’utilisation de ses adjectifs tout en cherchant à y associer des exemples sonores.</p>
 <p>Nous pouvons tout de même nous essayer à cet exercice pour nous permettre d’avoir un vocabulaire commun au fil de ce cours. Vous aurez sans doute compris qu’il n’y aura, dans les termes employés, aucun critère absolu.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
 <img src="_resources/drawings/spectre.svg" alt="Distance entre deux microphones." width="100%" />
 <p class="caption">
 Figure 2.3: Distance entre deux microphones.
@@ -325,7 +325,7 @@ Figure 2.3: Distance entre deux microphones.
 <p>Si la pression acoustique double, on observe une augmentation du niveau sonore de 3 dB SPL. Lorsqu’on ressent un doublement du niveau sonore, on observe une augmentation de 10 dB.</p>
 </blockquote>
 <p>La question se complexifie lorsque l’on rajoute la dimension fréquentielle à la question de la perception du niveau sonore. En effet, nous percevons des niveaux sonores différents pour différentes fréquences pourtant émises au même niveau de pression acoustique. Pour inclure cette dépendance fréquentielle, nous avons mis en place une unité de mesure : la <strong>sonie</strong> ou <strong>bruyance</strong> (<strong>loudness</strong> en anglais). Il est donc possible ensuite de définir des courbes d’<strong>isosonie</strong>, c’est-à-dire des courbes indiquant un niveau sonore de perception égale en fonction de la fréquence et du niveau de pression acoustique.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
 <img src="_resources/diagrams/Courbes_isosonie.png" alt="Courbes d'isosonie, aussi dites de Fletcher-Munson" width="100%" />
 <p class="caption">
 Figure 2.4: Courbes d’isosonie, aussi dites de Fletcher-Munson
@@ -345,7 +345,7 @@ Figure 2.4: Courbes d’isosonie, aussi dites de Fletcher-Munson
 <p>En effet, l’espacement de nos oreilles (en moyenne 15 cm), créer un décalage temporel entre nos deux canaux d’écoutes. Ce léger retard entendu d’un côté ou de l’autre nous permettra de placer un son plutôt à gauche ou plutôt à notre droite. On appelle cet écart de temps <strong>différence de temps interaural</strong>, ou <strong>ITD</strong> (interaural time difference en anglais) et se note <span class="math inline">\(\Delta t\)</span>.</p>
 <p>On pourrait d’ailleurs, grâce aux formules de ce début de chapitre, calculer le retard maximal moyen entre nos deux oreilles.</p>
 <p><span class="math display">\[\Delta t_{max} = \frac d c = \frac {0,15}{340} = 0.4 \&gt; ms\]</span></p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
 <img src="_resources/drawings/delta_t.svg" alt="Illustration de l'ITD"  />
 <p class="caption">
 Figure 2.5: Illustration de l’ITD

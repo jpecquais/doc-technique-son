@@ -72,7 +72,7 @@
 <li><a href="./">La prise de son musicale</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Avant-propos</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> bibliography: [book.bib, packages.bib]</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#mise-à-jour"><i class="fa fa-check"></i><b>1.1</b> Mise à jour</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#structures"><i class="fa fa-check"></i><b>1.2</b> Structures</a></li>
@@ -90,6 +90,7 @@
 <li class="chapter" data-level="2.2.1" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#spectre-timbre-et-vocabulaire"><i class="fa fa-check"></i><b>2.2.1</b> Spectre, timbre et vocabulaire</a></li>
 <li class="chapter" data-level="2.2.2" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#pression-acoustique-niveau-sonore"><i class="fa fa-check"></i><b>2.2.2</b> Pression acoustique &amp; niveau sonore</a></li>
 <li class="chapter" data-level="2.2.3" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#positionnement-dans-lespace"><i class="fa fa-check"></i><b>2.2.3</b> Positionnement dans l’espace</a></li>
+<li class="chapter" data-level="2.2.4" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#liens-entre-vision-et-audition"><i class="fa fa-check"></i><b>2.2.4</b> Liens entre vision et audition</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="acoustique-des-salles.html"><a href="acoustique-des-salles.html"><i class="fa fa-check"></i><b>3</b> Acoustique des salles</a>
@@ -115,7 +116,7 @@
 <li class="chapter" data-level="4.3" data-path="description-dune-production-musicale-type.html"><a href="description-dune-production-musicale-type.html#la-production"><i class="fa fa-check"></i><b>4.3</b> La production</a></li>
 <li class="chapter" data-level="4.4" data-path="description-dune-production-musicale-type.html"><a href="description-dune-production-musicale-type.html#la-postproduction"><i class="fa fa-check"></i><b>4.4</b> La postproduction</a></li>
 </ul></li>
-<li class="part"><span><b>II Equipement et usage</b></span></li>
+<li class="part"><span><b>II Équipement et usage</b></span></li>
 <li class="chapter" data-level="5" data-path="le-chemin-du-signal.html"><a href="le-chemin-du-signal.html"><i class="fa fa-check"></i><b>5</b> Le chemin du signal</a></li>
 <li class="chapter" data-level="6" data-path="les-microphones.html"><a href="les-microphones.html"><i class="fa fa-check"></i><b>6</b> Les microphones</a>
 <ul>
@@ -239,18 +240,22 @@
             <section class="normal" id="section-">
 <div id="le-chemin-du-signal" class="section level1 hasAnchor" number="5">
 <h1><span class="header-section-number">5</span> Le chemin du signal<a href="le-chemin-du-signal.html#le-chemin-du-signal" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>La première mission d’un preneur de son est de s’assurer de l’arriver à bon port des signaux dans l’enregistreur. En effet, toute notion de mise en scène sonore et d’esthétique devient très secondaire si le contenu n’a pas été enregistré.</p>
-<p>Le diagramme ci-dessous reprend les principaux étages rencontré par un signal audio dans un context de production numérique. Il est essentiel d’être le plus famillier possible avec ces différents composants.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-15"></span>
-<img src="_resources/diagrams/cheminSignal.svg" alt="Le chemin du signal" width="100%" />
+<p>La première mission d’un preneur de son est d’assurer l’arrivée à bon port des signaux dans l’enregistreur. En effet, toute notion de mise en scène sonore et d’esthétique devient très secondaire si le contenu n’a pas été enregistré.</p>
+<p>Le diagramme ci-dessous reprend les principaux étages rencontrés par un signal audio dans un contexte de production numérique. Il est essentiel d’être le plus familier possible avec ces différents composants.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<img src="_resources/diagrams/cheminSignal.svg" alt="Le chemin du signal. Elle peut-être agrandie en ouvrant l'image dans un nouvel onglet." width="100%" />
 <p class="caption">
-Figure 5.1: Le chemin du signal
+Figure 5.1: Le chemin du signal. Elle peut-être agrandie en ouvrant l’image dans un nouvel onglet.
 </p>
 </div>
-<blockquote>
-<p>Le schéma peut-être agrandi en ouvrant l’image dans un nouvel onglet.</p>
-</blockquote>
-<p>Chaque élément sera abordé dans des sections dédiés dans la suite de ce livre.</p>
+<p>Nous pourrions catégoriser à partir de ce schéma différents « milieux ». Tout d’abord, nous avons le <strong>milieu acoustique</strong>, où nous trouverons toutes sortes d’instruments de musique, les différents lieux dans lesquels ils pourront s’y trouver. C’est donc le domaine de l’onde sonore mécanique.</p>
+<p>On trouve ensuite le <strong>milieu analogique</strong>, où l’onde sonore est représentée, de façon analogue, par des grandeurs électriques. Celles d’un signal sonore dans un circuit analogique sont fonction, par exemple, de la variation de la pression atmosphérique provoquée en un point par une onde sonore. Les éléments clefs du milieu analogique sont les préamplificateurs et les amplificateurs, mais on trouve aussi certains traitements, comme les égaliseurs et les compresseurs. On définira « analogique » comme une représentation dans laquelle les grandeurs (tension, courant, etc.) qui entrent dans les calculs sont représentées par des grandeurs analogues et qui varient de manière identique (définition du <a href="https://www.cnrtl.fr/definition/analogique">CNRTL</a>).</p>
+<p>Pour passer du milieu acoustique au milieu analogique, et vice-versa, on utilise des microphones et des haut-parleurs. Tous deux sont des <strong>transducteurs</strong>, permettant de transformer une énergie en une autre. Le microphone transforme une énergie mécanique en énergie électrique. Le haut-parleur réalise l’opération inverse.</p>
+<p>On en vient ensuite au <strong>milieu numérique</strong>. Fondamentalement, le signal est toujours de nature électrique, mais il a subi une opération très importante nommée <strong>échantillonnage</strong>. On a donc mesuré à intervalle régulier la tension électrique générée par l’onde sonore. Le passage par le numérique permet une myriade de traitements sur le signal, beaucoup plus complexes que ceux permis par l’électronique analogique. L’audio numérique permet aussi un stockage de l’information à moindre coût et l’acheminement d’un grand nombre de voies (canaux) grâce à un faible nombre de modulations (câble).</p>
+<p>L’appareil permettant de passer du milieu analogique au milieu numérique est le <strong>convertisseur analogique/numérique</strong>. Il ne s’agit pas d’un transducteur, car les signaux d’entrées et de sorties sont de même nature électrique. Pour opérer l’opération inverse, on utilise un <strong>convertisseur numérique/analogique.</strong></p>
+<p>Le <strong>milieu informatique</strong> nous permet d’utiliser des applications relatives aux traitements du son par le biais d’ordinateurs. Il s’agit aujourd’hui indubitablement de notre outil de travail principal. Nous y réalisons la grande majorité des traitements audio, ainsi que l’enregistrement et le routage des sources.</p>
+<p>Le lien entre un ordinateur et un convertisseur A/N/A se fait grâce à un <strong>bus de sérialisation</strong> associé à un <strong>pilote</strong> (ou <strong>driver</strong>). L’ensemble des deux permet de mettre en forme la donnée numérique et de la rendre compréhensible à l’ordinateur.</p>
+<p>Chaque élément évoqué ci-dessus sera abordé dans des sections dédiées dans la suite de ce livre.</p>
 
 </div>
             </section>
