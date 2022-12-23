@@ -6,7 +6,7 @@ bookdown::gitbook:
         <li><a href="./">La prise de son musicale</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Publié avec bookdown</a></li>
-    edit: "https://github.com/jpecquais/doc-technique-son/%s"
+    edit: "https://github.com/jpecquais/doc-technique-son/blob/main/%s"
     download:
       - ["_main.pdf", "PDF"]
     sharing:
