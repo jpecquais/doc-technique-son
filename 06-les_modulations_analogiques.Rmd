@@ -1,4 +1,4 @@
-# Les câbles
+# Les modulation analogiques
 
 Les câbles assurent un rôle de transport vis-à-vis de signaux électriques. Ces signaux peuvent représenter une onde sonore (précédemment captée par un microphone), une valeur de contrôle pour piloter un appareil (pédale d’expression) ou encore une information numérique (câble USB, ethernet, etc.).
 

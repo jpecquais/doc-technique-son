@@ -1,4 +1,4 @@
-# Les causes de déphasage
+# Déphasage et remise en phase
 
 ## Les effets sonores de déphasage
 

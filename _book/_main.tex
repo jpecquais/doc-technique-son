@@ -75,7 +75,7 @@
 
 \title{La prise de son musicale}
 \author{Jean-Loup Pecquais}
-\date{2022-12-23}
+\date{2022-12-24}
 
 \begin{document}
 \maketitle
@@ -611,27 +611,62 @@ Le lien entre un ordinateur et un convertisseur A/N/A se fait grâce à un \text
 
 Chaque élément évoqué ci-dessus sera abordé dans des sections dédiées dans la suite de ce livre.
 
+\hypertarget{notions-uxe9luxe9mentaires-duxe9lectronique}{%
+\chapter{Notions élémentaires d'électronique}\label{notions-uxe9luxe9mentaires-duxe9lectronique}}
+
+\hypertarget{les-composants-passifs}{%
+\section{Les composants passifs}\label{les-composants-passifs}}
+
+\hypertarget{les-semi-conducteurs}{%
+\section{Les semi-conducteurs}\label{les-semi-conducteurs}}
+
+\hypertarget{limpuxe9dance-et-son-ruxf4le-dans-les-circuits}{%
+\section{L'impédance et son rôle dans les circuits}\label{limpuxe9dance-et-son-ruxf4le-dans-les-circuits}}
+
 \hypertarget{les-microphones}{%
 \chapter{Les microphones}\label{les-microphones}}
 
-Un microphone est un \textbf{transducteur} permettant de transformer une onde acoustique en signal électrique. Il est constitué d'une membrane et d'une électronique associée permettant de préparer le signal capté à être véhiculé au travers d'un câble. La connectique standard des microphones est le XLR. Il s'agit de connectique \textbf{asymétrique.} (cf.~chapitre sur les modulations analogiques)
+Un microphone est un \textbf{transducteur} permettant de transformer une onde acoustique en signal électrique. Cette opération est réalisée par une membrane. Selon la nature du microphone, cette membrane pourra être constitué d'une feuille métalique d'un condensateur ou rattaché à une bobine.
 
-La nécessité de capter un évènement sonore grâce à un microphone provient de trois usages :
+Le microphone est l'outil principal du preneur de son. Le choix du modèle et sa position dans l'espace est déterminant sur le rendu sonore d'une captation. Ces deux paramètres ont par ailleurs une certaine interdépendance, position du microphone souhaité pouvant influencer son choix et vice-versa.
+
+\hypertarget{petit-historique-des-microphones}{%
+\section{Petit historique des microphones}\label{petit-historique-des-microphones}}
+
+Sans vouloir rentrer dans un récit exaustif sur l'invention et l'évolution des microphones, relater les moments clefs de cette technologie permet d'avoir une vision globale du marché d'aujourd'hui.
+
+La nécessité de capter un évènement sonore grâce à un microphone provient de trois besoins :
 
 \begin{itemize}
 \tightlist
 \item
-  le transmettre (téléphonie)
+  le transmettre (télécommunication)
 \item
   l'amplifier (concert, spectacle vivant)
 \item
-  l'enregistrer (industrie du disque, livre audio)
+  l'enregistrer (industrie du disque)
 \end{itemize}
 
-\hypertarget{les-technologies-de-microphones}{%
-\section{Les technologies de microphones}\label{les-technologies-de-microphones}}
+En 1876, Alexandre Graham Bell propose un système à base liquide, permettant de transformer une onde sonore en tension électrique. Le système ne fût jamais réellement exploité car le rendu sonore était jugé trop peu satisfaisant.
 
-Beaucoup de procédés ont pu être utilisés pour permettre la captation du son. Nous aborderons ici les plus communes~:
+Le premier type de microphone utilisé industriellement est le \textbf{microphone à charbon} (au UK, par David Edward Hugues, au US par Emile Berliner et Thomas Edison. Le brevet sera d'ailleurs disputé, avec un gain de cause pour Edison malgré des démonstrations public de Hugues antérieur aux publications d'Edison). En raison de sa faible bande-passante et de son niveau de bruit élevé, il se révèle de piètre qualité pour l'enregistrement et la transmission de la musique. Il aura, par contre, une place de choix dans les téléphones durant de longues décénies.
+
+Viennent ensuite les \textbf{microphones à condensateur}, dont les premiers modèles remontent à 1916, par le chercheur Edward Wente. Ces microphones sont tout d'abord réputés assez capricieux, leurs réponses en fréquences pouvant varier significativement en fonction de l'humidité de l'air et de la température.
+
+A cause de ces variations sonores présentes dans les premiers microphones à condensateur, on leur préfèrera un temps les \textbf{microphones à ruban}. Ils sont inventés en 1923 par Harry Olson. Ils sont par contre d'une grande fragilité mécanique.
+
+George Neumann est un des noms à connaitre dans cette histoire des microphones. On lui doit, entre autre, la stabilisation des microphones statiques. Il sera aussi le premier a produire un microphone (U87) utilisant un transistor en lieu et place des traditionnels tubes.
+
+A partir des années 1970, les microphones dynamiques arrivent sur le marché, notemment porté par la marque Shure. Ces microphones ont la grande qualité d'être très robustes, et remplaceront leurs homologues à ruban dans bien des cas.
+
+Depuis, les principales améliorations ont concernées la robustesse d'une part, et la miniaturisation des dispositifs d'autre part, menant ainsi au développement des capsules MEMS.
+
+\hypertarget{les-types-et-technologies-de-microphones}{%
+\section{Les types et technologies de microphones}\label{les-types-et-technologies-de-microphones}}
+
+Avant d'aborder en détail certaines constructions de microphones, il convient de faire attention à certains raccourcis associant des méthodes de fabrications à un niveau présumé de qualité. Par exemple, il est commun d'associer les microphones à électret à une construction ``bas de gamme''. Or, c'est oublier que la série 4000 de chez DPA, considérée par beaucoup comme une référence indétrônable de la prise de son, ne contient que des microphones à électret. Les MEMS souffrent du même biais, ceux-ci se retrouvent pourtant de plus en plus souvent sur des microphones ambisoniques, comme le Zyla ou le SPC mic.
+
+Nous allons maintenant aborder les types de microphones suivants~:
 
 \begin{itemize}
 \tightlist
@@ -646,107 +681,88 @@ Beaucoup de procédés ont pu être utilisés pour permettre la captation du son
 \hypertarget{les-microphones-uxe9lectrostatiquesuxe0-condensateur}{%
 \subsection{Les microphones électrostatiques/à condensateur}\label{les-microphones-uxe9lectrostatiquesuxe0-condensateur}}
 
-Ce sont, historiquement, les premiers microphones à permettre une captation satisfaisante du son (réponse en fréquence). Mais à leurs débuts, ils sont très sensibles aux conditions de température et d'humidité. Ces problèmes n'ont plus cours aujourd'hui. Leur fonctionnement repose sur l'utilisation d'un condensateur en guise de capsule. Lorsque le son rencontre celle-critique, l'onde déforme les armatures du condensateur et génère donc une variation de tension. De par l'utilisation de ce condensateur, ces microphones nécessitent une alimentation externe (dites fantôme), maintenant standardisée à +48V.
+Ce sont, historiquement, les premiers microphones à permettre une captation du spectre audible satisfaisante. Ils sont cependant très sensibles aux conditions de température et d'humidité et il fallut attendre les années trentes pour que ce problème cesse. Ils nécessitent une alimentation externe, appelée alimentation fantôme, normalisée à +48V. Il existe deux familles de microphones électrostatiques, les \textbf{condensateurs à haute-fréquences} et \textbf{condensateur polarisés en courant continu}.
 
-Ces microphones possèdent des réponses en fréquence souvent très linéaire et une excellente réponse en transitoire. Leur niveau de sortie (sensibilité) est élevé. Leur impédance de sortie est basse.
+Les microphones à condensateur polarisés en courant continu ont le fonctionnement le plus commun. Un courant continu vient polariser la capsule/condensateur. Lorsqu'une onde sonore rencontre la capsule, une de ses armartures se déforme et génère une variation de tension analogue à la variation de pression.
 
-Exemples~: Neumann~U87/AKG C414/Shoeps~CMC4/DPA 4041
+Les microphones à condensateur à haute fréquences propose une approche différente. Un oscillateur est intégré dans le microphone et la variation de pression enregistrée par le condensateur vient moduler la fréquence de cette oscillateur. Le signal est ensuite démodulé dans la plage audible. Cette méthode de construction offre une impédance de sortie plus faible et une plus grande resistance aux variations de conditions climatiques.
+
+Concernant leurs caractéristiques, ces microphones possèdent des réponses en fréquence souvent très linéaire et une excellente réponse en transitoire. Leur niveau de sortie (sensibilité) est élevé. Leur impédance de sortie est basse.
+
+Exemples~: Neumann~U87/AKG C414/Shoeps CMC4/Série 4000 DPA/Série MKH Sennheiser
 
 \hypertarget{les-microphones-uxe0-ruban}{%
 \subsection{Les microphones à ruban}\label{les-microphones-uxe0-ruban}}
 
-\begin{itemize}
-\tightlist
-\item
-  Préféré à leurs homologues statiques au début du siècle.
-\item
-  Fonctionne grâce à une feuille en métal, attachée entre deux aimants. L'onde sonore fait vibrer le ruban, perturbant ainsi le champ électromagnétique des aimants et générant donc une variation de tension.
-\item
-  Attention au 48~volts des alimentations fantôme, elles peuvent mettre l'électronique de ces microphones hors service.
-\item
-  Souvent, ces microphones flattent le grave et atténuent les aiguës. Leurs réponses en transitoire sont également assez douces.
-\item
-  Leur niveau de sortie est faible.
-\item
-  Leur impédance de sortie est élevée.
-\end{itemize}
+Les microphones à ruban souvent préférés à leurs homologues statiques dans les débuts de la musique enregistrée. leur fonctionnement repose sur l'utilisation d'une feuille métallique placée entre deux aimant. Lorsqu'une onde sonore rencontre cette feuille, ou ruban, celle-ci vibre et perturbe le champ électromagnétique créé par les aimants et génère une tension analogue à la variation de pression.
+
+D'un point de vue sonore, les microphones à ruban ont souvent un bas du spectre assez généreux et une réponse plutôt douce pour les hautes fréquences. Ils sont aussi connus pour avoir une impédance de sortie assez élevée et un niveau de sortie faible. Attention à l'alimentation fantôme (+48V), elle peut endommager le microphone.
 
 Exemples~: Royer R121/Cohles/Beyerdynamic M160
 
 \hypertarget{les-microphones-dynamiques}{%
 \subsection{Les microphones dynamiques}\label{les-microphones-dynamiques}}
 
-\begin{itemize}
-\tightlist
-\item
-  Ces microphones sont conçus pour des conditions d'utilisation rudes~: scène, fort niveau de pression sonore, etc.
-\item
-  Ils sont mécaniquement et électroniquement robustes.
-\item
-  Leurs membranes sont rattachées à aimant, lui-même entouré d'une bobine. Lorsque cette première est mise en vibration par une onde sonore, le déplacement de l'aimant à l'intérieur de la bobine permet de créer une variation de tension électrique.
-\item
-  Leur réponse en fréquence est souvent accidentée, et donc, loin d'être linéaire. Cela peut être vu comme un inconvénient ou comme un outil de «~coloration~» du son.
-\item
-  Leur niveau de sortie est faible.
-\item
-  Leur impédance de sortie est élevée.
-\end{itemize}
+Les microphones dynamiques sont conçus pour des conditions d'utilisation rudes, où les niveaux sonores sont élevé et où le risque de chute est important. Ils sont donc monnaie courante en sonorisation. Leur membrane est attachée à une bobine entourant un aimant. Lorsqu'une onde sonore la met en vibration, la bobine se déplace autour de l'aimant, et, par perturbation du champ électromagnétique, génère une tension de sortie analogue à la variation de pression.
+
+Leur réponse en fréquence est souvent accidentée, particulièrement dans le haut du spectre. Cela peut être vu comme un inconvénient ou comme un outil de «~coloration~» du son. Comme leurs homologues à ruban, ils possèdent un niveau de sortie faible et une impédance de sortie élevée.
 
 Exemples~: Shure~SM57/Electrovoice~RE20/Sennheiser~MD441
+
+\hypertarget{la-taille-des-membranes}{%
+\subsection{La taille des membranes}\label{la-taille-des-membranes}}
+
+La taille des membranes influe sur la captation du son. Plus la capsule est grande, plus les fréquences aigus seront diffractées et donc atténuées dans la prise de son. Un microphone à petite membrane est donc techniquement un microphone plus «~juste~». Cependant, l'emploi de large membrane permet aussi d'adoucir un surplus d'énergie dans le haut du spectre.
+
+\hypertarget{tubes-et-transistors}{%
+\subsection{Tubes et transistors}\label{tubes-et-transistors}}
+
+Historiquement, les tubes ont été les premiers composants électronique à permettre l'amplification du signal. Le transistor est apparu à la fin des années 40 et à permis de remplir les même fonctions qu'un tube, par un consommation moindre et avec un encombrement beaucoup plus faible.
+
+Certains microphones continuent à être fabriqués avec des tubes, préférant leur comportement vis-à-vis du son. Une écrasante majoritée est cependant fabriquée avec des transistors.
+
+Le choix entre un microphone à tube et un microphone à transistor semble cependant anecdotique par rapport à son type, à son placement et à sa directivité.
 
 \hypertarget{la-directivituxe9}{%
 \section{La directivité}\label{la-directivituxe9}}
 
-La directivité d'un microphone permet de décrire sa capacité à réaliser une «~écoute~» sélective des ondes sonores émises dans un espace.
+La directivité d'un microphone permet de décrire sa capacité à réaliser une «~écoute~» sélective de son environnement. On rencontre les directivités suivante :
 
 \begin{itemize}
 \tightlist
 \item
-  Un microphone omnidirectionnel capte le son tout autour de lui.
+  Omnidirectionnel : capte l'ensemble du champ sonore de façon indifférenciée.
 \item
-  Un microphone cardioïde capte le son devant lui et le rejette à l'arrière.
+  Hypercardioïde : compromis entre Omnidirectionnel et cardioïde.
 \item
-  Un microphone bidirectionnel capte très sélectivement devant lui et derrière lui.
+  Cardioïde : capte à l'avant, mais rejette à l'arrière du microphone.
+\item
+  Supercardioïde : ressert la zone d'écoute avant au prix de l'apparation d'une résurgence arrière.
+\item
+  Hypercardioïde : ressert d'avantage la zone d'écoute et augment d'autant plus la résurgence arrière.
+\item
+  Bidirectionnel : capte à l'avant et à l'arrière, mais selon un lobe plus resserré qu'en cardioïde.
 \end{itemize}
 
-Voir la fiche sur les directivités.
+Plus la directivité d'un microphone est large, plus la contribution de l'acoustique est apparante. Le timbre est également aussi linéaire que possible. A l'inverse, plus la directivité tant à être étroite, plus le microphone aura une capacité à échantillonner seulement une zone de l'espace. Le timbre est, par contre, amoindri dans le bas du spectre. Les microphones omnidirectionnels sont donc les plus larges et les plus ``neutres'', tandis que les microphones bidirectionnels sont les plus focalisés et ont la plus importante perte dans le bas du spectre.
 
-\hypertarget{la-taille-des-membranes}{%
-\section{La taille des membranes}\label{la-taille-des-membranes}}
+Le preneur de son choisi donc une directivité en fonction de la tâche à accomplir. Les microphones directif ont l'avantage de limiter la contribution d'évènements sonores que l'on ne souhaite pas capter. Les microphones omnidirectionnels ont la faculté d'être un dispositif de prise de son plus transparent mais seront beaucoup plus sensible à une acoustique moins optimale.
 
-La taille des membranes influe sur la captation du son. Plus la capsule est grande, plus les fréquences aiguës seront diffractées et donc atténuées dans le signal généré.
-Un microphone à petite membrane est donc techniquement un microphone plus «~juste~». Cependant, l'emploi de large membrane permet aussi d'adoucir l'aiguë trop important de certaines sources. C'est un choix de couleur.
-
-\hypertarget{la-directivituxe9-des-microphones}{%
-\chapter{La directivité des microphones}\label{la-directivituxe9-des-microphones}}
-
-Comme décris dans le chapitre sur les microphones, sa directivité rend compte de sa capacité à sélectionner, ou pas, son champ de captation. On connaît trois grandes directivités :
-
-\begin{itemize}
-\tightlist
-\item
-  Omnidirectionnel : qui capte l'ensemble du champ sonore de façon indifférenciée
-\item
-  Cardioïde : qui capte à l'avant, mais rejette à l'arrière du microphone
-\item
-  Bidirectionnel : qui capte à l'avant et à l'arrière, mais selon un lobe plus resserré qu'en cardioïde.
-\end{itemize}
-
-Dans ce chapitre, nous tâcherons d'étudier les différentes directivités de microphones et leur influence sur une prise de son.
+Nous allons par la suite nous intéresser au coeur du microphone : sa capsule. Il existe deux familles de capsules, celles dites «~à pression~», et celles dites à «~gradient de pression~».
 
 \hypertarget{capsules-uxe0-pression}{%
-\section{Capsules à pression}\label{capsules-uxe0-pression}}
+\subsection{Capsules à pression}\label{capsules-uxe0-pression}}
 
-Lorsque l'on étudie un microphone, il est peut-être plus judicieux de revenir à son élément fondamental : la capsule. Il existe deux familles de capsules, celles dites «~à pression~», et celles dites à la «~gradient de pression~».
-
-Une capsule sensible à la pression est omnidirectionnelle, puisqu'elle capte l'ensemble du champ acoustique. Mathématiquement, cette relation s'exprime, en coordonnées polaires, par :
+Une capsule sensible à la pression est omnidirectionnelle : elle capte les fluctuations de pressions en un point. Mathématiquement, cette relation s'exprime, en coordonnées polaires, par :
 
 \[ \theta = 1 \]
 
-Il faut ici comprendre que l'angle d'incidence d'un son par rapport au microphone importe peu, ce dernier n'atténuera jamais le signal.
+L'angle d'incidence de l'onde sonore par rapport au microphone importe donc peu.
+
+Pour réaliser une capsule à pression, on enferme une partie de la membrane dans un milieu acoustique à pression constante.
 
 \hypertarget{capsules-uxe0-gradient-de-pression}{%
-\section{Capsules à gradient de pression}\label{capsules-uxe0-gradient-de-pression}}
+\subsection{Capsules à gradient de pression}\label{capsules-uxe0-gradient-de-pression}}
 
 Une capsule à gradient de pression est sensible à la \textbf{variation} du champ de pression. Ces capsules ne sont plus omnidirectionnelles, mais bidirectionnelles : elles captent devant et derrière elles. Mathématiquement, une telle directivité s'exprime par la relation (en coordonnées polaires) :
 
@@ -754,17 +770,27 @@ Une capsule à gradient de pression est sensible à la \textbf{variation} du cha
 
 Où \(\alpha\) est l'angle d'incidence d'un son par rapport à la capsule.
 
+Pour réaliser une capsule à gradient de pression, il suffit de laisser exposer les deux faces de la membrane aux variations de pressions.
+
 \hypertarget{et-les-autres-directivituxe9s}{%
-\section{Et les autres directivités ?}\label{et-les-autres-directivituxe9s}}
+\subsection{Et les autres directivités ?}\label{et-les-autres-directivituxe9s}}
 
 Il est possible, à partir des deux équations ci-dessus, de retrouver toutes les autres directivités. Par exemple, un microphone cardioïde a une équation de directivité polaire tel que :
 
-\[ \theta = \frac{1}{2}(1 + cos(\alpha)) \]
+\[ \theta(\alpha) = \frac{1}{2}(1 + cos(\alpha)) \]
 
-Cela nous indique donc qu'une des façons de concevoir un microphone a directivité variable est d'utiliser deux capsules dont on pourra changer le rapport de gain. Cependant, la plupart des microphones cardioïdes ne possèdent qu'une seule capsule. La directivité est alors créée par un système de labyrinthe acoustique dans le corps de microphone.
+Toutes les autres directivités découlent donc des deux primaires : omnidirectionelle et bidirectionnelle. Pour obtenir une directivité particulière, il suffit de ``doser'' l'influence des ces deux directivités. Par exemple, un microphone cardioïde possède une contribution égale de chacune d'elle. Plus on augmente la proportion de la directivté bidirectionnelle, plus on tend vers un microphone supercardioïde, voir ypercardioïde. A l'inverse, augmenter la proportion de la directivité omnidirectionelle fait tendre le microphone vers une directivité hypocardioïde.
+
+Il existe deux solutions pour agir sur la contribution des directivités primaires. La première consiste à utiliser un labyrinthe acoustique pour changer le milieu acoustique d'une des faces de la membrane. L'autre consiste à avoir une caspule omnidirectionelle et une seconde bidirectionnelle et de sommer leur tension de sortie.
+
+Les microphones à multidirectivité permettent à l'utilisateur d'influer, soit sur le labyrinthe acoustique, soit sur la sommation des deux capsules. Il n'est pas rare que ces microphones soient moins performant qu'un seul microphone spécifiquement dédié à une seule directivitée.
+
+On retiendra donc :
+
+\[ \theta(\alpha) = A + B \cos (\alpha) \> où \> A + B = 1\]
 
 \hypertarget{directivituxe9s-ruxe9elles}{%
-\section{Directivités réelles}\label{directivituxe9s-ruxe9elles}}
+\subsection{Directivités réelles}\label{directivituxe9s-ruxe9elles}}
 
 \begin{figure}
 
@@ -775,8 +801,8 @@ Cela nous indique donc qu'une des façons de concevoir un microphone a directivi
 \caption{Directivité réelle d'un microphone cardioïde (Sennheiser)}\label{fig:unnamed-chunk-16}
 \end{figure}
 
-\hypertarget{les-cuxe2bles}{%
-\chapter{Les câbles}\label{les-cuxe2bles}}
+\hypertarget{les-modulation-analogiques}{%
+\chapter{Les modulation analogiques}\label{les-modulation-analogiques}}
 
 Les câbles assurent un rôle de transport vis-à-vis de signaux électriques. Ces signaux peuvent représenter une onde sonore (précédemment captée par un microphone), une valeur de contrôle pour piloter un appareil (pédale d'expression) ou encore une information numérique (câble USB, ethernet, etc.).
 
@@ -966,11 +992,14 @@ L'intérêt de cette méthode est double~:
   Les filtres permettant d'éviter le repliement spectral sont donc très simples à réaliser
 \end{itemize}
 
-\hypertarget{les-supports-denregistrement-numuxe9riques-du-son}{%
-\chapter{Les supports d'enregistrement numériques du son}\label{les-supports-denregistrement-numuxe9riques-du-son}}
+\hypertarget{les-modulations-numuxe9riques}{%
+\chapter{Les modulations numériques}\label{les-modulations-numuxe9riques}}
 
-\hypertarget{les-enceintes-de-monitoring}{%
-\chapter{Les enceintes de monitoring}\label{les-enceintes-de-monitoring}}
+\hypertarget{introduction-uxe0-linformatique-musicale}{%
+\chapter{Introduction à l'informatique musicale}\label{introduction-uxe0-linformatique-musicale}}
+
+\hypertarget{enceintes-et-salle-duxe9coute}{%
+\chapter{Enceintes et salle d'écoute}\label{enceintes-et-salle-duxe9coute}}
 
 De tous les équipements audio nécessaires pour réaliser une prise de son, les enceintes (et les casques) sont certainement les plus importants. En effet, c'est sous leurs influences que nous pourrons écouter et contrôler notre travail. Il est donc crucial d'utiliser des écoutes regroupant un certain nombre de critères minimaux et de les connaître sur le bout des doigts.
 
@@ -1055,8 +1084,11 @@ Le casque fermé, comme son nom l'indique, propose une fabrication enfermant le 
 
 Le casque ouvert, à l'inverse de son homologue fermé, n'offre aucune isolation acoustique, au prix d'une meilleure réponse en fréquence du casque. Ces casques sont tout indiqués pour le mixage, mais beaucoup moins pour des situations de prise de son.
 
-\hypertarget{part-prise-de-son-pratique}{%
-\part{Prise de son pratique}\label{part-prise-de-son-pratique}}
+\hypertarget{part-muxe9thodologie-de-prise-de-son}{%
+\part{Méthodologie de prise de son}\label{part-muxe9thodologie-de-prise-de-son}}
+
+\hypertarget{mono-et-multimicrophonie}{%
+\chapter{Mono et multimicrophonie}\label{mono-et-multimicrophonie}}
 
 \hypertarget{la-prise-de-son-au-couple}{%
 \chapter{La prise de son au couple}\label{la-prise-de-son-au-couple}}
@@ -1158,13 +1190,6 @@ La différence de perception du champ stéréophonique est très différente ent
 
 Chaque couple possède ses avantages et ses inconvénients. Heureusement, nous ne sommes pas limités à l'un où l'autre et nous pouvons à loisir réaliser une combinaison des deux mécanismes.
 
-\hypertarget{compluxe9ter-une-prise-de-son-au-couple-par-des-appoints}{%
-\section{Compléter une prise de son au couple par des appoints}\label{compluxe9ter-une-prise-de-son-au-couple-par-des-appoints}}
-
-Il est commun, lors d'une prise de son au couple, de chercher à obtenir une entière satisfaction sonore à la seule aide du couple. Cependant, cela n'est parfois pas possible, souvent pour des contraintes physiques et acoustiques (un instrument de l'ensemble jouant moins fort que les autres). Dans ces cas, l'utilisation d'appoint, donc de microphone supplémentaire, placé en proximité de la source, va permettre de venir récupérer une précision supplémentaire de l'instrument.
-
-Lors de l'étape de mixage, le couple servira de base principale et l'on viendra ajouter la quantité nécessaire d'appoints pour préciser le propos. Il sera parfois nécessaire de remettre en phase l'appoint et le couple pour améliorer la sommation de l'ensemble.
-
 \hypertarget{les-topologies-classiques-de-prise-de-son-au-couple}{%
 \section{Les topologies classiques de prise de son au couple}\label{les-topologies-classiques-de-prise-de-son-au-couple}}
 
@@ -1219,8 +1244,15 @@ Les couples AB peuvent avoir une définition ambiguë. Une partie de la littéra
 
 Ces derniers ont la particularité de n'utiliser que le \(\Delta t\) afin de placer les sources dans l'espace. Le rendu est donc souvent spacieux, au prix d'une certaine instabilité et d'un certain manque de précision de l'image stéréophonique.
 
-\hypertarget{muxe9thodologie-de-prise-de-son}{%
-\chapter{Méthodologie de prise de son}\label{muxe9thodologie-de-prise-de-son}}
+\hypertarget{compluxe9ter-une-prise-de-son-au-couple-par-des-appoints}{%
+\section{Compléter une prise de son au couple par des appoints}\label{compluxe9ter-une-prise-de-son-au-couple-par-des-appoints}}
+
+Il est commun, lors d'une prise de son au couple, de chercher à obtenir une entière satisfaction sonore à la seule aide du couple. Cependant, cela n'est parfois pas possible, souvent pour des contraintes physiques et acoustiques (un instrument de l'ensemble jouant moins fort que les autres). Dans ces cas, l'utilisation d'appoint, donc de microphone supplémentaire, placé en proximité de la source, va permettre de venir récupérer une précision supplémentaire de l'instrument.
+
+Lors de l'étape de mixage, le couple servira de base principale et l'on viendra ajouter la quantité nécessaire d'appoints pour préciser le propos. Il sera parfois nécessaire de remettre en phase l'appoint et le couple pour améliorer la sommation de l'ensemble.
+
+\hypertarget{considuxe9rations-pratiques}{%
+\chapter{Considérations pratiques}\label{considuxe9rations-pratiques}}
 
 Le bon déroulement de l'enregistrement d'instruments acoustiques dépend de multiple facteur. Trié par ordre d'importance décroissante, nous trouvons~:
 
@@ -1355,8 +1387,8 @@ Il est assez connu que le préampli peut également devenir un choix esthétique
   Les impédances d'entrée des préamplis ne sont souvent pas évoquées dans ces discussions. Hors, pour la plus parts des microphones (hors statiques), leur impédance de sortie peut être suffisamment élevée pour engendrer une déperdition en aigu et en transitoire. Cette déperdition peut être heureuse, ou malheureuse, mais surtout bien réelle. Une manière de s'en prémunir peut-être d'utiliser des «~booster~» de microphones (parfois également appelés préamplis), permettant d'augmenter le niveau de sortie des microphones et aussi d'adapter leur impédance.
 \end{itemize}
 
-\hypertarget{les-causes-de-duxe9phasage}{%
-\chapter{Les causes de déphasage}\label{les-causes-de-duxe9phasage}}
+\hypertarget{duxe9phasage-et-remise-en-phase}{%
+\chapter{Déphasage et remise en phase}\label{duxe9phasage-et-remise-en-phase}}
 
 \hypertarget{les-effets-sonores-de-duxe9phasage}{%
 \section{Les effets sonores de déphasage}\label{les-effets-sonores-de-duxe9phasage}}
@@ -1393,10 +1425,5 @@ Les causes les plus classiques de déphasages sont~:
 \item
   Un retard de certaines fréquences lié aux objets rencontrés par les signaux
 \end{itemize}
-
-\hypertarget{gestion-des-circuits-duxe9coutes}{%
-\chapter{Gestion des circuits d'écoutes}\label{gestion-des-circuits-duxe9coutes}}
-
-bla
 
 \end{document}

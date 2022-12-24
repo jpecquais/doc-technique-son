@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | La prise de son musicale</title>
+  <title>17 Déphasage et remise en phase | La prise de son musicale</title>
   <meta name="description" content="Livre sur la prise de son musicale, par Jean-Loup Pecquais." />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | La prise de son musicale" />
+  <meta property="og:title" content="17 Déphasage et remise en phase | La prise de son musicale" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Livre sur la prise de son musicale, par Jean-Loup Pecquais." />
   <meta name="github-repo" content="jpecquais/doc-technique-son" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | La prise de son musicale" />
+  <meta name="twitter:title" content="17 Déphasage et remise en phase | La prise de son musicale" />
   
   <meta name="twitter:description" content="Livre sur la prise de son musicale, par Jean-Loup Pecquais." />
   
@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
+<link rel="prev" href="considérations-pratiques.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -245,18 +245,40 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="déphasage-et-remise-en-phase" class="section level1 hasAnchor" number="17">
+<h1><span class="header-section-number">17</span> Déphasage et remise en phase<a href="déphasage-et-remise-en-phase.html#déphasage-et-remise-en-phase" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="les-effets-sonores-de-déphasage" class="section level2 hasAnchor" number="17.1">
+<h2><span class="header-section-number">17.1</span> Les effets sonores de déphasage<a href="déphasage-et-remise-en-phase.html#les-effets-sonores-de-déphasage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Tous les signaux sont caractérisés par une certaine phase. Celle-ci est moins tangible que celles de niveau sonore ou de fréquence. En effet, lorsqu’un signal est écouté seul, celle-ci ne s’entend pas. C’est au moment où plusieurs signaux corrélés (comprendre, enregistrés au même moment, par plusieurs microphones) sont sommés que les différences de phase peuvent s’entendre.</p>
+</div>
+<div id="approche-mathématique" class="section level2 hasAnchor" number="17.2">
+<h2><span class="header-section-number">17.2</span> Approche mathématique<a href="déphasage-et-remise-en-phase.html#approche-mathématique" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Prenons l’exemple d’un son pur :
+<span class="math inline">\(sin (\omega t + \phi)\)</span> où <span class="math inline">\(\omega = 2\pi f\)</span></p>
+<p>La phase de ce signal est décrite par <span class="math inline">\(\omega t +\phi\)</span></p>
+<p>Les deux paramètres responsables de déphasages audibles sont :
++ <span class="math inline">\(t\)</span>, le temps
++ <span class="math inline">\(\phi\)</span>, la phase à l’origine</p>
+<p>Attention, pour un son pur, l’effet de la modification de <span class="math inline">\(t\)</span> ou de <span class="math inline">\(\phi\)</span> semble très similaire. Ce n’est pas le cas pour des signaux pseudo-périodiques, atténués dans le temps.</p>
+</div>
+<div id="les-sources-de-déphasage" class="section level2 hasAnchor" number="17.3">
+<h2><span class="header-section-number">17.3</span> Les sources de déphasage<a href="déphasage-et-remise-en-phase.html#les-sources-de-déphasage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Les causes les plus classiques de déphasages sont :</p>
+<ul>
+<li>Un câble XLR avec une inversion sur le point chaud et le point froid</li>
+<li>Une prise de son avec une différence de distance entre deux microphones</li>
+<li>Une prise de son utilisant deux microphones positionnés de part et d’autre d’une membrane</li>
+<li>Un retard de certaines fréquences lié aux objets rencontrés par les signaux</li>
+</ul>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
+<a href="considérations-pratiques.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
@@ -288,7 +310,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/jpecquais/doc-technique-son/blob/main/%s",
+"link": "https://github.com/jpecquais/doc-technique-son/blob/main/15-déphasage_et_remise_en_phase.Rmd",
 "text": "Edit"
 },
 "history": {
