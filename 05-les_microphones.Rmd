@@ -78,7 +78,7 @@ Certains microphones continuent à être fabriqués avec des tubes, préférant 
 
 Le choix entre un microphone à tube et un microphone à transistor semble cependant anecdotique par rapport à son type, à son placement et à sa directivité.
 
-## La directivité
+## Timbre et directivité
 
 La directivité d’un microphone permet de décrire sa capacité à réaliser une « écoute » sélective de son environnement. On rencontre les directivités suivantes : 
 
@@ -132,8 +132,14 @@ On retiendra donc :
 $$ \theta(\alpha) = A + B \cos (\alpha) \> où \> A + B = 1$$
 
 
-### Directivités réelles
+### Directivités réelles & détimbrage
+
+Nous avons jusque là considéré que la directivité d’un microphone était un phénomène indépendant de la fréquence. Or, cela n’est pas vrai. En d’autres termes, la directivité d’un microphone n’est pas la même en fonction de la fréquence de l’onde sonore lui arrivant. Typiquement, un microphone tendra vers une directivité plus resserrée dans le haut du spectre, et vers une directivité plus large dans le bas du spectre.
 
 ```{r, echo = FALSE, fig.cap = "Directivité réelle d'un microphone cardioïde (Sennheiser)", out.width='50%', fig.align='center'}
 knitr::include_graphics(rep("_resources/image_15.jpg"))
 ```
+
+Cela signifie donc que positionner un microphone hors axe face à un évènement sonore n’aura pas seulement un effet sur le niveau du signal en sortie du microphone, mais également sur le timbre. On appelle alors « **timbré** », un évènement sonore capté plein axe par un microphone, et **détimbré** un évènement sonore capté hors axe.
+
+Ce phénomène est un outil précieux pour les preneurs de son. Par exemple, lorsqu’on enregistre une voix, certains sons sont exagérés par le microphone, particulièrement les « s ». En tournant légèrement le microphone pour placer la voix hors axe, on peut déjà grandement améliorer les problèmes de sifflante avant même de penser à un éventuel traitement ultérieur.

@@ -1,10 +1,5 @@
 # (PART) Équipement et usage {-}
 
-<!--
-    Définir analogue, transducteur, numérique, informatique
-
-    -->
-
 # Le chemin du signal
 
 La première mission d’un preneur de son est d’assurer l’arrivée à bon port des signaux dans l’enregistreur. En effet, toute notion de mise en scène sonore et d’esthétique devient très secondaire si le contenu n’a pas été enregistré.

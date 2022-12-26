@@ -1,5 +1,5 @@
 --- 
-title: "La prise de son musicale"
+title: "Guide pratique de la prise de son et du mixage appliqués à la musique"
 author: "Jean-Loup Pecquais"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -8,7 +8,7 @@ documentclass: book
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
-  Livre sur la prise de son musicale, par Jean-Loup Pecquais.
+  Livre sur la prise de son, le mixage et la production musicale, par Jean-Loup Pecquais.
 link-citations: yes
 github-repo: jpecquais/doc-technique-son
 ---
@@ -28,19 +28,33 @@ show_fig <- function(f)
 
 # Avant-propos
 
-Ce livre est né de la nécessité d'un support de cours pour la formation "Technique de Prise de Son", dispensée par Jean-Loup Pecquais. Il intègre donc l'ensemble des notions abordées, expliquées en détail, ainsi que des exemples sonores.
+Ce livre est né de la nécessité d’un support de cours pour la formation professionnelle "Technique de Prise de Son", dispensée par l’auteur. Il intègre donc l’ensemble des notions abordées, expliquées en détail, ainsi que des exemples sonores.
 
-Ce livre est écrit dans la philosophie de l'Open Source. L'intégralité de son contenu est donc disponible gratuitement. Son code source est accessible dans un dépôt GitHub. Ainsi, il est possible à tout à chacun de reporter les éventuelles erreurs ou de proposer des modifications.
+Ce livre est écrit dans la philosophie de l’Open Source. L’intégralité de son contenu est donc disponible gratuitement. Son code source est accessible dans un dépôt GitHub. Ainsi, il est possible à tout à chacun de reporter les éventuelles erreurs ou de proposer des modifications. La grande majorité des outils utilisés pour sa rédaction et la création du contenu sont open source : R & Rmarkdown, Python, FAUST et draw.io.
+
+## A qui s’adresse cet ouvrage
+
+Ce livre s’adresse à toutes personnes désireuses d’en apprendre plus sur le son ainsi que sur les métiers de preneur de son et de mixeur. Ainsi, il fait état des principes physiques nécessaires à la bonne appréhension des techniques de travail des métiers susnommés, avec le souci de les rendre accessibles à toutes et tous.
+
+Il pourra donc servir aux musiciens, aux étudiants, et pourquoi pas, à certains professionnels des métiers du son et du divertissement en général.
 
 ## Mise à jour
 
 La distribution numérique de ce livre permet une mise à jour régulière de son contenu. Cela implique deux choses :
 
 + Certaines sections peuvent être incomplètes, et seront complétées plus tard
-+ C'est une bonne idée de revenir consulter ce site régulièrement
++ C’est une bonne idée de revenir consulter ce site régulièrement
+
+> Pour l’instant, ce livre n’inclut pas encore d’exemples sonores, cela est en cours de création.
 
 ## Structures
 
-Dans un premier temps, ce livre reprend l'ensemble de la chaîne audio, en y explicitant le rôle et le fonctionnement de chacun de ses composants. L'objectif est de fournir une base technique objective au preneur de son.
+Dans un premier temps, le livre aborde des principes généraux, aussi bien sur la physique que sur l’environnement de production de la musique enregistrée. Est ensuite abordé l’ensemble de la chaîne audio, en y explicitant le rôle et le fonctionnement de chacun de ses composants. L’objectif est de fournir une base technique objective au preneur de son.
 
-Dans un second temps, le livre détaille un ensemble de techniques de prise de son, insistant particulièrement sur les mécanismes généraux de la prise et sur l'écoute critique. Cependant, un certain nombre "trucs & astuces" de prises de son sont aussi présentées. Ces derniers ne doivent jamais se supplanter à l'écoute critique.
+Dans un second temps, le livre détaille un ensemble de techniques de prise de son et de mixage, insistant particulièrement sur les mécanismes généraux de la prise et sur l’écoute critique.
+
+> La partie dédiée à la pratique du mixage son n’est pas encore disponible en ligne.
+
+## À propos de l’auteur
+
+Jean-Loup Pecquais est formateur et consultant dans le monde de l’audio professionnel (FLUX:: Immersive, Whiti Audio, Arkalya). Il est plus particulièrement spécialisé dans les techniques de mixage sonore immersives. Il est diplômé de l’ENS Louis-Lumière en 2019.

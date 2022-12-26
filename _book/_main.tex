@@ -68,14 +68,14 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={La prise de son musicale},
+  pdftitle={Guide pratique de la prise de son et du mixage appliqués à la musique},
   pdfauthor={Jean-Loup Pecquais},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
-\title{La prise de son musicale}
+\title{Guide pratique de la prise de son et du mixage appliqués à la musique}
 \author{Jean-Loup Pecquais}
-\date{2022-12-24}
+\date{2022-12-26}
 
 \begin{document}
 \maketitle
@@ -87,9 +87,16 @@
 \hypertarget{avant-propos}{%
 \chapter{Avant-propos}\label{avant-propos}}
 
-Ce livre est né de la nécessité d'un support de cours pour la formation ``Technique de Prise de Son'', dispensée par Jean-Loup Pecquais. Il intègre donc l'ensemble des notions abordées, expliquées en détail, ainsi que des exemples sonores.
+Ce livre est né de la nécessité d'un support de cours pour la formation professionnelle ``Technique de Prise de Son'', dispensée par l'auteur. Il intègre donc l'ensemble des notions abordées, expliquées en détail, ainsi que des exemples sonores.
 
-Ce livre est écrit dans la philosophie de l'Open Source. L'intégralité de son contenu est donc disponible gratuitement. Son code source est accessible dans un dépôt GitHub. Ainsi, il est possible à tout à chacun de reporter les éventuelles erreurs ou de proposer des modifications.
+Ce livre est écrit dans la philosophie de l'Open Source. L'intégralité de son contenu est donc disponible gratuitement. Son code source est accessible dans un dépôt GitHub. Ainsi, il est possible à tout à chacun de reporter les éventuelles erreurs ou de proposer des modifications. La grande majorité des outils utilisés pour sa rédaction et la création du contenu sont open source : R \& Rmarkdown, Python, FAUST et draw.io.
+
+\hypertarget{a-qui-sadresse-cet-ouvrage}{%
+\section{A qui s'adresse cet ouvrage}\label{a-qui-sadresse-cet-ouvrage}}
+
+Ce livre s'adresse à toutes personnes désireuses d'en apprendre plus sur le son ainsi que sur les métiers de preneur de son et de mixeur. Ainsi, il fait état des principes physiques nécessaires à la bonne appréhension des techniques de travail des métiers susnommés, avec le souci de les rendre accessibles à toutes et tous.
+
+Il pourra donc servir aux musiciens, aux étudiants, et pourquoi pas, à certains professionnels des métiers du son et du divertissement en général.
 
 \hypertarget{mise-uxe0-jour}{%
 \section{Mise à jour}\label{mise-uxe0-jour}}
@@ -104,12 +111,25 @@ La distribution numérique de ce livre permet une mise à jour régulière de so
   C'est une bonne idée de revenir consulter ce site régulièrement
 \end{itemize}
 
+\begin{quote}
+Pour l'instant, ce livre n'inclut pas encore d'exemples sonores, cela est en cours de création.
+\end{quote}
+
 \hypertarget{structures}{%
 \section{Structures}\label{structures}}
 
-Dans un premier temps, ce livre reprend l'ensemble de la chaîne audio, en y explicitant le rôle et le fonctionnement de chacun de ses composants. L'objectif est de fournir une base technique objective au preneur de son.
+Dans un premier temps, le livre aborde des principes généraux, aussi bien sur la physique que sur l'environnement de production de la musique enregistrée. Est ensuite abordé l'ensemble de la chaîne audio, en y explicitant le rôle et le fonctionnement de chacun de ses composants. L'objectif est de fournir une base technique objective au preneur de son.
 
-Dans un second temps, le livre détaille un ensemble de techniques de prise de son, insistant particulièrement sur les mécanismes généraux de la prise et sur l'écoute critique. Cependant, un certain nombre ``trucs \& astuces'' de prises de son sont aussi présentées. Ces derniers ne doivent jamais se supplanter à l'écoute critique.
+Dans un second temps, le livre détaille un ensemble de techniques de prise de son et de mixage, insistant particulièrement sur les mécanismes généraux de la prise et sur l'écoute critique.
+
+\begin{quote}
+La partie dédiée à la pratique du mixage son n'est pas encore disponible en ligne.
+\end{quote}
+
+\hypertarget{uxe0-propos-de-lauteur}{%
+\section{À propos de l'auteur}\label{uxe0-propos-de-lauteur}}
+
+Jean-Loup Pecquais est formateur et consultant dans le monde de l'audio professionnel (FLUX:: Immersive, Whiti Audio, Arkalya). Il est plus particulièrement spécialisé dans les techniques de mixage sonore immersives. Il est diplômé de l'ENS Louis-Lumière en 2019.
 
 \hypertarget{part-guxe9nuxe9ralituxe9s}{%
 \part{Généralités}\label{part-guxe9nuxe9ralituxe9s}}
@@ -505,6 +525,109 @@ Pour une régie d'écoute, on sera tenté de privilégier des traitements d'abso
 
 Pour une salle de prise de son, l'idéal est de disposer d'un grand espace avec un traitement acoustique principalement basé sur de la diffusion, pour ensuite disposer de traitements absorbants amovibles permettant de sculpter le rendu acoustique en fonction de la prise de son à réaliser. Pour des petits lieux (- de 25 m²), on cherchera à absorber au maximum afin de limiter les effets de filtre en peigne.
 
+\hypertarget{notions-uxe9luxe9mentaires-duxe9lectronique}{%
+\chapter{Notions élémentaires d'électronique}\label{notions-uxe9luxe9mentaires-duxe9lectronique}}
+
+Les chapitres précédents nous ont permis d'aborder un certain nombre de notions fondamentales sur le son ainsi que sur l'acoustique des salles. Nous allons maintenant aborder quelques notions d'électricité et d'électronique. Le but n'est pas de savoir lire un schéma électronique, ou de comprendre comment réaliser tel ou tel circuit, mais bien d'aborder les quelques notions indispensables pour le travail du son.
+
+Durant tout son trajet dans le milieu analogique, le signal sonore est représenté par un courant électrique. Il est donc régi par les mêmes règles que n'importe quel autre courant, même s'il possède une certaine spécificité, comme son oscillation. Un courant électrique se caractérise par le déplacement d'électrons dans un matériau conducteur (le métal par exemple). Un matériau, comme le plastique, qui ne permet pas aux électrons de se déplacer, est qualifié d'\textbf{isolant}.
+
+\begin{quote}
+Les électrons font partie des composants de l'atome. Ils sont chargés négativement et se déplacent donc dans le sens inverse du courant.
+\end{quote}
+
+\hypertarget{les-grandeurs-physiques}{%
+\section{Les grandeurs physiques}\label{les-grandeurs-physiques}}
+
+Commençons par aborder les grandeurs physiques liées à l'électricité.
+
+\hypertarget{lintensituxe9}{%
+\subsection{L'intensité}\label{lintensituxe9}}
+
+L'intensité électrique, notée \textbf{i} et exprimée en \textbf{Ampère (A)}, est une grandeur permettant de mesurer le débit du courant électrique. Ceci est parfaitement analogue à un débit d'eau. Si un robinet est faiblement ouvert, l'écoulement de l'eau sera faible, s'il est complètement ouvert, le débit sera fort.
+
+\hypertarget{la-tension}{%
+\subsection{La tension}\label{la-tension}}
+
+La tension, généralement notée \textbf{U} et exprimée en \textbf{Volt (V)}, désigne une différence de potentiel entre deux points d'un circuit. Imaginons deux réservoirs d'eau, remplis d'un volume différent et connectés par une valve. Dans ce cas, la différence de potentiel serait la différence du volume d'eau entre les deux réservoirs. En d'autres termes, s'il n'y a pas de tension, il n'y a pas de débit.
+
+\begin{quote}
+On choisit, en général, la masse, valant zéro volt, comme point de référence.
+\end{quote}
+
+Dans le cas de l'audio, la tension électrique du signal sonore est homologue à la variation de pression.
+
+\hypertarget{limpuxe9dance}{%
+\subsection{L'impédance}\label{limpuxe9dance}}
+
+Nous connaissons, en général, la \textbf{loi d'Ohm}. Celle-ci permet de donner une relation entre l'intensité du courant et sa tension, aux bornes d'un composant d'un circuit (aussi appelé dipôle).
+
+\[ U = R \times i \]
+
+Où \[R\] est la résistance du dipôle. Elle traduit la facilité d'un courant à se déplacer dans le dipôle. Pour reprendre les analogies ci-dessus, la résistance correspondrait à une valve. À tension constante, si la résistance tend vers zéro, le débit est très important. Si la résistance tend vers l'infini, le débit sera très faible. Si elle est nulle, alors nous sommes dans le cas d'un court-circuit (interrupteur fermé). Si elle est infinie, cela traduit une absence de connexion entre deux points d'un circuit (interrupteur ouvert). L'unité de cette résistance est l'\textbf{ohm}.
+
+L'impédance traduit elle aussi l'opposition d'un circuit au passage d'un courant électrique, mais dans le cas d'une \textbf{tension oscillante}. Dès lors, l'impédance englobe les effets de résistance, de capacitance et d'inductance (voir ci-dessus).
+
+\hypertarget{les-composants-uxe9lectroniques}{%
+\section{Les composants électroniques}\label{les-composants-uxe9lectroniques}}
+
+\hypertarget{les-composants-passifs}{%
+\subsection{Les composants passifs}\label{les-composants-passifs}}
+
+Étudions maintenant les composants électroniques les plus communs. Nous avons en premier les \textbf{résistances}. Ce sont des dipôles purement résistifs. Leur valeur s'exprime en \textbf{ohm}. Une résistance s'oppose donc au passage du courant. Pour rappel, la tension a ses bornes est \(U = R \times i\).
+
+Viennent ensuite les \textbf{condensateurs}. Ils sont constitués de matériaux conducteurs séparés par une couche isolante. La relation entre tension et intensité à ses bornes en régime oscillant est :
+
+\[ U = Z_c \times I \]
+
+Où \[Z_c\] est l'impédance d'un condensateur idéal. Nous pouvons ici la même analyse que plus haut, quand \(Z_c\) tend vers l'infini le courant ne passe plus, quand \(Z_c\) tend vers 0, le débit est important. L'impédance d'un condensateur est fonction de sa \textbf{capacité} (noté \textbf{C}, et s'exprime en \textbf{farads}).
+
+\[ Z_c = \frac{1}{jC\omega} \> \omega = 2 \pi \, f\]
+
+Si la fréquence \(f\) tend vers l'infini, \(Z_c\) tend vers zéro, si la fréquence tend vers zéro, \(Z_c\) tend vers l'infini. On constate donc que l'impédance d'un condensateur varie en fonction de sa fréquence. On peut assimiler un condensateur à un interrupteur ouvert en basse fréquence et à un interrupteur fermé en haute fréquence.
+
+Terminons sur les bobines. Ces composants sont constitués d'un enroulement de câble en cuivre et possède une \textbf{inductance} notée \textbf{L} et s'exprimant en \textbf{henrys}. Étudions à nouveau la relation entre tension et intensité, aux bornes d'une bobine :
+
+\[ U = Z_L \times I \]
+
+Où \(Z_L\) est l'impédance d'une bobine idéale. Cette impédance se calcule grâce à la relation suivante :
+
+\[ Z_L = j\omega L \> \omega = 2 \pi \, f \]
+
+Si la fréquence \(f\) tend vers l'infini, \(Z_L\) tend vers l'infini. Si \(f\) tend vers zéro, alors \(Z_L\) tend vers zéro. On observe donc le comportement inverse du condensateur. Une bobine se comporte comme un court-circuit en basse fréquence et comme un interrupteur ouvert en haut fréquence.
+
+\begin{quote}
+On admet j comme un outil mathématique permettant de simplifier certaines écritures et certains calculs. On l'appelle le nombre complexe, tel que \(j^2 = -1\). Dans nos applications, sa présence dans les relations des impédances de condensateur et de bobine implique un déphasage de \(-\frac{\pi}{2}\) pour un condensateur, et, de \(\frac{\pi}{2}\) pour une bobine.
+\end{quote}
+
+L'association de résistances, de condensateurs et de bobines donne des circuits RL, RC où RLC, permettant de réaliser des \textbf{opérations de filtrage} sur le signal.
+
+\hypertarget{tubes-semi-conducteurs}{%
+\subsection{Tubes \& semi-conducteurs}\label{tubes-semi-conducteurs}}
+
+Les \textbf{tubes}, tubes à vide, ou parfois, lampes, sont historiquement les premiers composants permettant d'amplifier le signal, contre une certaine tension d'alimentation. On les retrouve donc dans les préamplificateurs, égaliseurs, compresseurs, et autres amplificateurs jusque dans les années soixante. Ils sont alors progressivement remplacés par les \textbf{transistors}, composants appelés \textbf{semi-conducteurs}. Ces transistors permettent de réaliser la même amplification du signal qu'une lampe, mais sont beaucoup plus petits et demandent aussi moins de puissance électrique pour réaliser le même facteur d'amplification (aussi appelé \textbf{gain}). Peu de temps après la mise au point des transistors, les \textbf{circuits intégrés} sont inventés. Ces petites boîtes renferment plusieurs transistors, et peuvent également servir à l'amplification de signaux.
+
+Il est très important de savoir que l'invention du transistor et des circuits intégrés est sans doute l'avancée technologique la plus importante du siècle dernier. Elle a permis le développement exponentiel de l'industrie informatique grâce à la miniaturisation des composants.
+
+L'utilisation de tubes, de transistors ou de circuits intégrés au sein des machines audio, est souvent associée à une certaine «~couleur~». Il y aurait donc un son des tubes, un son des transistors et un son des circuits intégrés. Les différences entre ces dipôles apparaissent principalement dans les zones de \textbf{non-linéarité} des composants, typiquement dans leur zone de saturation. La saturation apparaît lorsque la tension du signal amplifiée dépasse la tension d'alimentation du composant responsable de cette amplification. On observe alors l'apparition de certaines harmoniques. La distribution des harmoniques générés est différente en fonction du dipôle utilisé.
+
+Il est compliqué d'attribuer une couleur sonore particulière à un composant. En effet, le comportement d'un composant est fondamentalement conditionné par la topologie du circuit dans lequel il est utilisé ainsi que par les autres composants qui l'entourent. Il convient donc, à l'humble avis de l'auteur, d'être relativement prudent sur des expressions telles que «~son des tubes~» ou «~son des transistors~», particulièrement quand il s'agit de dire que l'une des technologies «~sonnerait mieux~» que l'autre. L'histoire de l'électronique musicale regorge d'exemples et de contre-exemples pour chacune de ces affirmations.
+
+\hypertarget{linfluence-de-limpuxe9dance-entre-diffuxe9rents-appareils.}{%
+\section{L'influence de l'impédance entre différents appareils.}\label{linfluence-de-limpuxe9dance-entre-diffuxe9rents-appareils.}}
+
+Sur la fiche technique des appareils, on trouve des valeurs pour son impédance d'entrée et son impédance de sortie. Imaginons que nous connections un appareil A dans un appareil B. En pratique, nous faisons en sorte que l'impédance de sortie de l'appareil A soit dix fois inférieure à l'impédance d'entrée de l'appareil B. À partir du moment où ces impédances sont proches, voire que l'impédance de sortie de A soit plus grande que celle d'entrer de B, nous allons atténuer le signal transitant entre les deux appareils. Étudions de plus près ce phénomène.
+
+Soit le schéma électronique ci-dessous. On appelle \(U_{out}\) la tension de sortie de l'appareil A et \(Z_{out}\) son impédance de sortie. De façon similaire, on appelle \$U\_\{in\} la tension d'entré de l'appareil B et \(Z_{in}\) son impédance d'entré.
+
+Dans ce circuit, \(Z_{eq} = Z_{in} + Z_{out}\) et \(U_{out} = Z_{eq} \times i\). Alors, \(i = \frac{U_{out}}{Z_{eq}} = \frac{U_{out}}{Z_{in} + Z_{out}}\). Toujours grâce au circuit ci-dessus, on peut dire que \(U_{in} = Z_{in} \times I\). En remplaçant dans l'expression précédente on trouve : \(\frac{U_{in}}{Z_{in}} = \frac{U_{out}}{Z_{in} + Z_{out}}\)
+
+\[ \frac{U_{in}}{U_{out}} = \frac{Z_{in}}{Z_{in} + Z_{out}} = \frac{1}{1+\frac{Z_{out}}{Z_{in}}} \]
+
+Dès lors, si \(Z_{in}\) est très grand devant \(Z_{out}\), alors \(U_{in}\) tend vers \(U_{out}\). Si \(Z_{out}\) est très grand devant \$Z\_\{in\}, alors \(U_{in}\) tend vers \(0\).
+
+Cela nous amène à démontrer l'affirmation ci-dessus. Maintenant, nous savons que dans un circuit, l'impédance varie en fonction de la fréquence. Dès lors, une mauvaise adaptation d'impédance ne fera pas que diminuer l'amplitude du signal, mais filtrera aussi une partie de spectre, généralement les hautes fréquences.
+
 \hypertarget{description-dune-production-musicale-type}{%
 \chapter{Description d'une production musicale type}\label{description-dune-production-musicale-type}}
 
@@ -611,18 +734,6 @@ Le lien entre un ordinateur et un convertisseur A/N/A se fait grâce à un \text
 
 Chaque élément évoqué ci-dessus sera abordé dans des sections dédiées dans la suite de ce livre.
 
-\hypertarget{notions-uxe9luxe9mentaires-duxe9lectronique}{%
-\chapter{Notions élémentaires d'électronique}\label{notions-uxe9luxe9mentaires-duxe9lectronique}}
-
-\hypertarget{les-composants-passifs}{%
-\section{Les composants passifs}\label{les-composants-passifs}}
-
-\hypertarget{les-semi-conducteurs}{%
-\section{Les semi-conducteurs}\label{les-semi-conducteurs}}
-
-\hypertarget{limpuxe9dance-et-son-ruxf4le-dans-les-circuits}{%
-\section{L'impédance et son rôle dans les circuits}\label{limpuxe9dance-et-son-ruxf4le-dans-les-circuits}}
-
 \hypertarget{les-microphones}{%
 \chapter{Les microphones}\label{les-microphones}}
 
@@ -723,8 +834,8 @@ Certains microphones continuent à être fabriqués avec des tubes, préférant 
 
 Le choix entre un microphone à tube et un microphone à transistor semble cependant anecdotique par rapport à son type, à son placement et à sa directivité.
 
-\hypertarget{la-directivituxe9}{%
-\section{La directivité}\label{la-directivituxe9}}
+\hypertarget{timbre-et-directivituxe9}{%
+\section{Timbre et directivité}\label{timbre-et-directivituxe9}}
 
 La directivité d'un microphone permet de décrire sa capacité à réaliser une «~écoute~» sélective de son environnement. On rencontre les directivités suivantes~:
 
@@ -789,8 +900,10 @@ On retiendra donc :
 
 \[ \theta(\alpha) = A + B \cos (\alpha) \> où \> A + B = 1\]
 
-\hypertarget{directivituxe9s-ruxe9elles}{%
-\subsection{Directivités réelles}\label{directivituxe9s-ruxe9elles}}
+\hypertarget{directivituxe9s-ruxe9elles-duxe9timbrage}{%
+\subsection{Directivités réelles \& détimbrage}\label{directivituxe9s-ruxe9elles-duxe9timbrage}}
+
+Nous avons jusque là considéré que la directivité d'un microphone était un phénomène indépendant de la fréquence. Or, cela n'est pas vrai. En d'autres termes, la directivité d'un microphone n'est pas la même en fonction de la fréquence de l'onde sonore lui arrivant. Typiquement, un microphone tendra vers une directivité plus resserrée dans le haut du spectre, et vers une directivité plus large dans le bas du spectre.
 
 \begin{figure}
 
@@ -801,60 +914,113 @@ On retiendra donc :
 \caption{Directivité réelle d'un microphone cardioïde (Sennheiser)}\label{fig:unnamed-chunk-16}
 \end{figure}
 
-\hypertarget{les-modulation-analogiques}{%
-\chapter{Les modulation analogiques}\label{les-modulation-analogiques}}
+Cela signifie donc que positionner un microphone hors axe face à un évènement sonore n'aura pas seulement un effet sur le niveau du signal en sortie du microphone, mais également sur le timbre. On appelle alors «~\textbf{timbré}~», un évènement sonore capté plein axe par un microphone, et \textbf{détimbré} un évènement sonore capté hors axe.
 
-Les câbles assurent un rôle de transport vis-à-vis de signaux électriques. Ces signaux peuvent représenter une onde sonore (précédemment captée par un microphone), une valeur de contrôle pour piloter un appareil (pédale d'expression) ou encore une information numérique (câble USB, ethernet, etc.).
+Ce phénomène est un outil précieux pour les preneurs de son. Par exemple, lorsqu'on enregistre une voix, certains sons sont exagérés par le microphone, particulièrement les «~s~». En tournant légèrement le microphone pour placer la voix hors axe, on peut déjà grandement améliorer les problèmes de sifflante avant même de penser à un éventuel traitement ultérieur.
 
-En audio, il existe principalement deux types de câbles~:
+\hypertarget{les-modulations-analogiques}{%
+\chapter{Les modulations analogiques}\label{les-modulations-analogiques}}
+
+Les câbles assurent le transport de signaux électriques. Ces signaux peuvent représenter une onde sonore (précédemment captée par un microphone), une valeur de contrôle pour piloter un appareil (pédale d'expression) ou encore une information numérique (câble USB, ethernet, etc.). Nous aborderons ici les câbles dédiés aux modulations analogiques, et tout particulièrement à l'audio.
+
+Le principe de transport d'un signal analogique est assez simple. Pour une modulation, il faudra au moins un conducteur pour véhiculer le signal, et un conducteur pour la référence de tension, la masse. Pour transporter un signal supplémentaire, on conservera le même conducteur pour la référence et l'on en ajoutera un pour véhiculer le signal supplémentaire, faisant ainsi un total de trois conducteurs.
+
+\hypertarget{anatomie-dun-cuxe2ble}{%
+\section{Anatomie d'un câble}\label{anatomie-dun-cuxe2ble}}
+
+Les câbles véhiculant un seul signal sont généralement constitués de quatre à cinq composants~:
 
 \begin{itemize}
 \tightlist
 \item
-  Les câbles à modulation unique (un signal transporté)
+  d'un cœur composé d'un filament (souvent multibrin) en un métal conducteur, véhiculant le signal électrique.
 \item
-  Les câbles à double modulation (deux signaux transportés)
+  d'une gaine isolante (plastique) protégeant le cœur
+\item
+  d'une tresse en cuivre connectée à la masse
+\item
+  Parfois, d'une feuille de cuivre, enrobant la tresse, permettant de réaliser une cage de faraday et de protéger le cœur des ondes électromagnétiques.
+\item
+  Enfin, d'une dernière gaine isolante, permettant de protéger l'ensemble du câble.
 \end{itemize}
 
-\hypertarget{cuxe2ble-uxe0-modulation-unique}{%
-\section{Câble à modulation unique}\label{cuxe2ble-uxe0-modulation-unique}}
+Ceux permettant de transporter plus de signaux rajouteront des cœurs multibrins entourés de leur gaine isolante. La plupart du temps, les câbles véhiculent un ou deux signaux à la fois, mais certains permettent d'en acheminer beaucoup plus (multipaire, Sub-D). On appelle un câble en fonction de ses connecteurs (ou fiches).
 
-Ils sont constitués de quatre à cinq composants~:
-+ d'un cœur composé d'un filament (souvent multibrin) en un métal conducteur, véhiculant le signal électrique.
-+ d'une gaine isolante (plastique) protégeant le cœur
-+ d'une tresse en cuivre connectée à la masse
-+ Parfois, d'une feuille de cuivre, enrobant la tresse, permettant de réaliser une cage de faraday et de protéger le cœur des ondes électromagnétiques.
-+ Enfin, d'une dernière gaine isolante, permettant de protéger l'ensemble du câble.
+\hypertarget{longueur-du-cuxe2ble-son-et-impuxe9dance}{%
+\subsection{Longueur du câble, son et impédance}\label{longueur-du-cuxe2ble-son-et-impuxe9dance}}
 
-Ces câbles sont communément soudés à des fiches Jack TS, ou RCA. Ils sont communément utilisés pour les instruments des musiques ainsi que pour l'audio grand public.
+Étudions la section d'un câble à modulation unique. Nous pouvons faire plusieurs observations. Le fil conducteur du signal, généralement en cuivre, est d'une longueur non négligeable. Plus cette longueur est importante, plus ce fil aura une \textbf{résistance} importante. De plus, ce fil est séparé de la tresse de masse (élément également conducteur) par un isolant. Il existe donc un effet de \textbf{capacitance} entre le point chaud et la masse. Enfin, la tresse de masse peut être comparée à une bobine, et possède donc une \textbf{inductance}. Nous pouvons donc assimiler un câble à un circuit \textbf{RLC} filtrant le haut du spectre audio.
 
-\hypertarget{cuxe2ble-uxe0-double-modulation}{%
-\section{Câble à double modulation}\label{cuxe2ble-uxe0-double-modulation}}
+Physiquement, notre description précédente est valide, mais elle est à corréler à \textbf{l'impédance de sortie} de la source. Typiquement, lors de l'utilisation d'un microphone statique, son impédance est suffisamment faible pour que la longueur du câble soit totalement transparente. Certains microphones dynamiques ou à ruban, possédant une impédance plus élevée, peuvent très légèrement souffrir de la longueur du câble.
 
-La structure de ces câbles est identique aux câbles à modulation unique, à la présence près d'un deuxième cœur, permettant de transporter un deuxième signal électrique.
+Ce phénomène d'altération du timbre à cause de la longueur d'un câble a surtout lieu avec les instruments électriques \textbf{passifs} (guitares et basses). L'impédance de sorte de ces instruments est tellement grande que l'on peut aisément entendre la différence de son entre deux câbles.
 
-Ces câbles sont souvent soudés à des fiches XLR, Jack TRS, Jack Battam, «~mini-jack~», etc.
+\begin{quote}
+Il est amusant de constater que certains musiciens utilisent ce phénomène, et jouent avec des câbles volontairement trop longs, pour atténuer le haut du spectre. Brian May et Eric Johnson en sont deux exemples.
+\end{quote}
 
 \hypertarget{les-connexions-asymuxe9triques}{%
-\section{Les connexions asymétriques}\label{les-connexions-asymuxe9triques}}
+\subsection{Les connexions asymétriques}\label{les-connexions-asymuxe9triques}}
 
-Les connexions asymétriques permettent de transporter un signal entre une source et un récepteur. Il s'agit de la façon la plus simple de connecter deux appareils devant échanger des signaux. Cependant, sur de longue distance, le câble peut se comporter comme une antenne et induire sur le signal certaines ondes électromagnétiques (comme la radio). Ces connexions utilisent des câbles à modulation unique.
+Les connexions asymétriques permettent de transporter un signal entre une source et un récepteur. Il s'agit de la façon la plus simple de connecter deux appareils devant échanger des signaux. Cependant, sur de longue distance, le câble peut se comporter comme une antenne et induire sur le signal certaines ondes électromagnétiques (comme la radio). Ces connexions ne nécessitent qu'un fil conducteur par modulation.
 
 \hypertarget{les-connexions-symuxe9triques}{%
-\section{Les connexions symétriques}\label{les-connexions-symuxe9triques}}
+\subsection{Les connexions symétriques}\label{les-connexions-symuxe9triques}}
 
-Le but de ces connexions est de palier au problème des connexions asymétrique. Dans l'appareil émetteur, le signal à transporter est dupliqué, et ce duplicata est inversé en phase. Cette étape s'appelle la symétrisation. C'est deux signaux sont appelés point chaud (signal d'origine) et point froid (signal opposé en phase). Le câble transporte ces deux signaux. Sur son trajet, lorsqu'une perturbation électromagnétique est induite sur le signal, celle-ci s'inscrit en phase sur les deux signaux (point chaud et point froid). À l'arrivée, l'appareil récepteur inverse la phase du point froid et le somme avec le point chaud. Cette étape se nomme la dé-symétrisation. Ainsi le signal d'origine est sommé en phase, tandis que les interférences sont sommées hors phase et s'annulent.
-Les connexions symétriques nécessitent un câble à double modulation.
+Le but de ces connexions est de palier au problème des connexions asymétrique. Dans l'appareil émetteur, le signal à transporter est dupliqué, et ce duplicata est inversé en phase. Cette étape s'appelle la \textbf{symétrisation}.
 
-\hypertarget{les-connexions-stuxe9ruxe9o-asymuxe9triques}{%
-\section{Les connexions stéréo asymétriques}\label{les-connexions-stuxe9ruxe9o-asymuxe9triques}}
+C'est deux signaux qui sont appelés point chaud (signal d'origine) et point froid (signal opposé en phase). Sur le trajet du câble, lorsqu'une perturbation électromagnétique est induite sur le signal, celle-ci s'inscrit en phase sur les deux conducteurs (point chaud et point froid). À l'arrivée, l'appareil récepteur inverse la phase du point froid et le somme avec le point chaud. Cette étape se nomme la \textbf{dé-symétrisation}. Ainsi le signal d'origine est sommé en phase, tandis que les interférences sont sommées hors phase et s'annulent.
 
-Ces connexions permettent de véhiculer deux signaux à travers un seul et même câble. Elles nécessitent un câble à double modulation.
+Les connexions symétriques nécessitent deux fils conducteurs pour chaque modulation.
+
+\hypertarget{les-fiches-connecteurs}{%
+\section{Les fiches \& connecteurs}\label{les-fiches-connecteurs}}
+
+On appelle «~fiche~» les éléments mécaniques situés aux extrémités d'un câble et permettant sa connexion à un équipement. Celle-ci nous permet de facilement identifier le type de câble que nous avons entre les mains.
+
+\begin{quote}
+Contrairement aux dires de certains mythes, majoritairement reliée à l'audiophilie, la différence de matériau utilisé pour le contact de la fiche n'a pas d'incidence sur le son.
+\end{quote}
+
+On rencontre principalement les connectiques jack TS, jack TRS, jack bantam, XLR et Sub-D. Les fiches jack TS ont deux points de connexion. Les fiches jack TRS, XLR et bantam en ont deux. Les Sub-D~25 en possèdent vingt-cinq.
+
+Les fiches jack TS sont souvent utilisées sur les instruments électriques et électroniques (guitare, basse, synthétiseurs, etc.). Ces connexions sont nécessairement symétriques. Les jack TRS sont un peu plus rare et se trouvent généralement sur des instruments avec des sorties stéréophoniques, ou sur des équipements audio possédant des entrés/sorties symétriques. La connectique XLR remplit fondamentalement le même usage qu'un jack TRS, mais offre un verrouillage mécanique, permettant de sécuriser la connexion. On la trouve principalement sur les microphones et sur préamplificateurs. L'avantage du jack TRS est son plus faible encombrement mécanique. On le préfère donc sur les appareils possédant un grand nombre d'entrées/sorties. Le jack bantam se trouve sur les boîtiers de patch. Leur petite taille permet une grande densité de point de connexion. Les patchbay prennent ainsi moins de place. On trouve aussi les connectiques Sub-D~25, principalement pour remplacer des connexions XLR. En effet, une seule connectique Sub-D~25 permet de remplacer huit câbles XLR.
+
+\hypertarget{exemples-pratiques}{%
+\section{Exemples pratiques}\label{exemples-pratiques}}
+
+\hypertarget{cuxe2ble-jack-mono}{%
+\subsection{Câble jack «~mono~»}\label{cuxe2ble-jack-mono}}
+
+Ce type de câble est souvent utilisé sur les instruments électriques. On l'appelle «~mono~» car il ne véhicule qu'un seul signal.
+
+\hypertarget{cuxe2ble-jack-stuxe9ruxe9o}{%
+\subsection{Câble jack «~stéréo~»}\label{cuxe2ble-jack-stuxe9ruxe9o}}
+
+L'appellation de ce câble est ambiguë. Le terme stéréo fait référence à ses deux voies de connexion, cependant, le nom «~stéréo~» impliquerait qu'une des voies est destinée à alimenter l'enceinte gauche, et l'autre, le canal droit. Or, ce type de câble peut également convenir pour des connexions symétriques.
+
+\begin{quote}
+On notera qu'il est possible de brancher un câble jack TS dans une fiche TRS. Un seul des canaux sera alors acheminé.
+\end{quote}
+
+\hypertarget{cuxe2ble-y}{%
+\subsection{Câble «~Y~»}\label{cuxe2ble-y}}
+
+Ces câbles possèdent trois connecteurs, et sont le plus souvent équipés de jack TS. Ils permettent de récupérer un signal pour le transmettre sur deux appareils. Attention, la duplication du signal étant passive, on risque un problème d'impédance si l'impédance d'entrée des deux appareils est trop différente. Le cas d'école est souvent rencontré lorsqu'on branche deux casques sur le même amplificateur. Si l'impédance des deux casques est trop différente, un des deux aura presque l'intégralité du niveau du signal alors que l'autre sous-modulera.
 
 \hypertarget{les-connexions-dinsert}{%
-\section{Les connexions d'insert}\label{les-connexions-dinsert}}
+\subsection{Les connexions d'insert}\label{les-connexions-dinsert}}
 
-Utilisées dans les consoles afin de permettre l'insertion de périphérique de traitement externe, ces connexions permettent d'envoyer le signal vers le périphérique et de le récupérer avec le même câble. Elles utilisent des câbles à double modulation.
+Ces câbles ont la particularité d'avoir une fiche jack TRS et deux fiches jack TS. En studio, on les rencontre très souvent pour insérer un périphérique de traitement dans la chaîne audio. Le «~tip~» du jack TRS est connecté au «~tip~» d'un des jack TS qui est connectés sur l'entré du périphérique. Le deuxième jack TS est raccordé à la sortie de l'appareil et son «~tip~» est connecté au «~ring~» du jack TRS.
+
+Ces câbles sont aussi utilisés pour séparer une sortie dite «~stéréo~» en deux voies «~mono~».
+
+\hypertarget{routage-des-signaux}{%
+\section{Routage des signaux}\label{routage-des-signaux}}
+
+En studio d'enregistrement, il n'est pas rare de rencontrer plusieurs cabines de prise de son, chacune équipée de boîtier de patch. Ces boîtiers sont constitués d'un certain nombre d'entrées XLR. On achemine ensuite les sorties de ces boîtiers via des multipaires jusqu'à une «~patchbay~». Le rôle de la «~patchbay~» est de permettre de connecter n'importe quelle entrée (signal provenant d'un microphone) vers n'importe quel préamplificateur.
+
+On trouve évidemment beaucoup d'usage à ces «~patchbay~». Elles sont à considérer comme la matrice de routage d'un studio d'enregistrement.
 
 \hypertarget{les-pruxe9amplificateurs-de-microphones}{%
 \chapter{Les préamplificateurs de microphones}\label{les-pruxe9amplificateurs-de-microphones}}
@@ -995,8 +1161,12 @@ L'intérêt de cette méthode est double~:
 \hypertarget{les-modulations-numuxe9riques}{%
 \chapter{Les modulations numériques}\label{les-modulations-numuxe9riques}}
 
+(En cours d'écriture)
+
 \hypertarget{introduction-uxe0-linformatique-musicale}{%
 \chapter{Introduction à l'informatique musicale}\label{introduction-uxe0-linformatique-musicale}}
+
+(En cours d'écriture)
 
 \hypertarget{enceintes-et-salle-duxe9coute}{%
 \chapter{Enceintes et salle d'écoute}\label{enceintes-et-salle-duxe9coute}}
@@ -1089,6 +1259,8 @@ Le casque ouvert, à l'inverse de son homologue fermé, n'offre aucune isolation
 
 \hypertarget{mono-et-multimicrophonie}{%
 \chapter{Mono et multimicrophonie}\label{mono-et-multimicrophonie}}
+
+(En cours d'écriture)
 
 \hypertarget{la-prise-de-son-au-couple}{%
 \chapter{La prise de son au couple}\label{la-prise-de-son-au-couple}}
