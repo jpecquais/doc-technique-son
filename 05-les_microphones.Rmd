@@ -89,6 +89,25 @@ La directivité d’un microphone permet de décrire sa capacité à réaliser u
 + Hypercardioïde : ressers davantage la zone d’écoute et augmente d’autant plus la résurgence arrière.
 + Bidirectionnel : capte à l’avant et à l’arrière, mais selon un lobe plus resserré qu’en cardioïde.
 
+<!--
+```{python, echo=FALSE, fig.align="center"}
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+theta = np.arange(0, 2*np.pi, 0.01)
+r = np.empty(len(theta))
+
+fig, axs = plt.subplots(nrows=1, ncols=3, subplot_kw={'projection': 'polar'})
+
+axs[0].plot(theta,r)
+
+plt.show()
+
+```
+--> 
+
 Plus la directivité d’un microphone est large, plus la contribution de l’acoustique est apparente. Le timbre est également aussi linéaire que possible. À l’inverse, plus la directivité tant à être étroite, plus le microphone aura une capacité à échantillonner seulement une zone de l’espace. Le timbre est, par contre, amoindri dans le bas du spectre. Les microphones omnidirectionnels sont donc les plus larges et les plus « neutres », tandis que les microphones bidirectionnels sont les plus focalisés et ont la plus importante perte dans le bas du spectre.
 
 Le preneur de son choisit donc une directivité en fonction de la tâche à accomplir. Les microphones directifs ont l’avantage de limiter la contribution d’évènements sonores que l’on ne souhaite pas capter. Les microphones omnidirectionnels ont la faculté d’être un dispositif de prise de son plus transparent, mais seront beaucoup plus sensibles à une acoustique moins optimale, ainsi qu’au bruit environnant.

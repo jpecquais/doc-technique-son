@@ -564,7 +564,7 @@ Nous connaissons, en général, la \textbf{loi d'Ohm}. Celle-ci permet de donner
 
 \[ U = R \times i \]
 
-Où \[R\] est la résistance du dipôle. Elle traduit la facilité d'un courant à se déplacer dans le dipôle. Pour reprendre les analogies ci-dessus, la résistance correspondrait à une valve. À tension constante, si la résistance tend vers zéro, le débit est très important. Si la résistance tend vers l'infini, le débit sera très faible. Si elle est nulle, alors nous sommes dans le cas d'un court-circuit (interrupteur fermé). Si elle est infinie, cela traduit une absence de connexion entre deux points d'un circuit (interrupteur ouvert). L'unité de cette résistance est l'\textbf{ohm}.
+Où \(R\) est la résistance du dipôle. Elle traduit la facilité d'un courant à se déplacer dans le dipôle. Pour reprendre les analogies ci-dessus, la résistance correspondrait à une valve. À tension constante, si la résistance tend vers zéro, le débit est très important. Si la résistance tend vers l'infini, le débit sera très faible. Si elle est nulle, alors nous sommes dans le cas d'un court-circuit (interrupteur fermé). Si elle est infinie, cela traduit une absence de connexion entre deux points d'un circuit (interrupteur ouvert). L'unité de cette résistance est l'\textbf{ohm}.
 
 L'impédance traduit elle aussi l'opposition d'un circuit au passage d'un courant électrique, mais dans le cas d'une \textbf{tension oscillante}. Dès lors, l'impédance englobe les effets de résistance, de capacitance et d'inductance (voir ci-dessus).
 
@@ -580,7 +580,7 @@ Viennent ensuite les \textbf{condensateurs}. Ils sont constitués de matériaux 
 
 \[ U = Z_c \times I \]
 
-Où \[Z_c\] est l'impédance d'un condensateur idéal. Nous pouvons ici la même analyse que plus haut, quand \(Z_c\) tend vers l'infini le courant ne passe plus, quand \(Z_c\) tend vers 0, le débit est important. L'impédance d'un condensateur est fonction de sa \textbf{capacité} (noté \textbf{C}, et s'exprime en \textbf{farads}).
+Où \(Z_c\) est l'impédance d'un condensateur idéal. Nous pouvons ici la même analyse que plus haut, quand \(Z_c\) tend vers l'infini le courant ne passe plus, quand \(Z_c\) tend vers 0, le débit est important. L'impédance d'un condensateur est fonction de sa \textbf{capacité} (noté \textbf{C}, et s'exprime en \textbf{farads}).
 
 \[ Z_c = \frac{1}{jC\omega} \> \omega = 2 \pi \, f\]
 
@@ -592,7 +592,7 @@ Terminons sur les bobines. Ces composants sont constitués d'un enroulement de c
 
 Où \(Z_L\) est l'impédance d'une bobine idéale. Cette impédance se calcule grâce à la relation suivante :
 
-\[ Z_L = j\omega L \> \omega = 2 \pi \, f \]
+\[ Z_L = j\omega L = 2 \pi \, f \]
 
 Si la fréquence \(f\) tend vers l'infini, \(Z_L\) tend vers l'infini. Si \(f\) tend vers zéro, alors \(Z_L\) tend vers zéro. On observe donc le comportement inverse du condensateur. Une bobine se comporte comme un court-circuit en basse fréquence et comme un interrupteur ouvert en haut fréquence.
 
@@ -618,13 +618,13 @@ Il est compliqué d'attribuer une couleur sonore particulière à un composant. 
 
 Sur la fiche technique des appareils, on trouve des valeurs pour son impédance d'entrée et son impédance de sortie. Imaginons que nous connections un appareil A dans un appareil B. En pratique, nous faisons en sorte que l'impédance de sortie de l'appareil A soit dix fois inférieure à l'impédance d'entrée de l'appareil B. À partir du moment où ces impédances sont proches, voire que l'impédance de sortie de A soit plus grande que celle d'entrer de B, nous allons atténuer le signal transitant entre les deux appareils. Étudions de plus près ce phénomène.
 
-Soit le schéma électronique ci-dessous. On appelle \(U_{out}\) la tension de sortie de l'appareil A et \(Z_{out}\) son impédance de sortie. De façon similaire, on appelle \$U\_\{in\} la tension d'entré de l'appareil B et \(Z_{in}\) son impédance d'entré.
+Soit le schéma électronique ci-dessous. On appelle \(U_{out}\) la tension de sortie de l'appareil A et \(Z_{out}\) son impédance de sortie. De façon similaire, on appelle \(U_{in}\) la tension d'entré de l'appareil B et \(Z_{in}\) son impédance d'entré.
 
 Dans ce circuit, \(Z_{eq} = Z_{in} + Z_{out}\) et \(U_{out} = Z_{eq} \times i\). Alors, \(i = \frac{U_{out}}{Z_{eq}} = \frac{U_{out}}{Z_{in} + Z_{out}}\). Toujours grâce au circuit ci-dessus, on peut dire que \(U_{in} = Z_{in} \times I\). En remplaçant dans l'expression précédente on trouve : \(\frac{U_{in}}{Z_{in}} = \frac{U_{out}}{Z_{in} + Z_{out}}\)
 
 \[ \frac{U_{in}}{U_{out}} = \frac{Z_{in}}{Z_{in} + Z_{out}} = \frac{1}{1+\frac{Z_{out}}{Z_{in}}} \]
 
-Dès lors, si \(Z_{in}\) est très grand devant \(Z_{out}\), alors \(U_{in}\) tend vers \(U_{out}\). Si \(Z_{out}\) est très grand devant \$Z\_\{in\}, alors \(U_{in}\) tend vers \(0\).
+Dès lors, si \(Z_{in}\) est très grand devant \(Z_{out}\), alors \(U_{in}\) tend vers \(U_{out}\). Si \(Z_{out}\) est très grand devant \(Z_{in}\), alors \(U_{in}\) tend vers \(0\).
 
 Cela nous amène à démontrer l'affirmation ci-dessus. Maintenant, nous savons que dans un circuit, l'impédance varie en fonction de la fréquence. Dès lors, une mauvaise adaptation d'impédance ne fera pas que diminuer l'amplitude du signal, mais filtrera aussi une partie de spectre, généralement les hautes fréquences.
 
@@ -911,7 +911,7 @@ Nous avons jusque là considéré que la directivité d'un microphone était un 
 
 }
 
-\caption{Directivité réelle d'un microphone cardioïde (Sennheiser)}\label{fig:unnamed-chunk-16}
+\caption{Directivité réelle d'un microphone cardioïde (Sennheiser)}\label{fig:unnamed-chunk-17}
 \end{figure}
 
 Cela signifie donc que positionner un microphone hors axe face à un évènement sonore n'aura pas seulement un effet sur le niveau du signal en sortie du microphone, mais également sur le timbre. On appelle alors «~\textbf{timbré}~», un évènement sonore capté plein axe par un microphone, et \textbf{détimbré} un évènement sonore capté hors axe.
