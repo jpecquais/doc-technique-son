@@ -52,6 +52,13 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.0/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 
 
 
@@ -72,7 +79,7 @@
 <li><a href="./">La prise de son musicale</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> bibliography: [book.bib, packages.bib]</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Avant-propos</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#a-qui-sadresse-cet-ouvrage"><i class="fa fa-check"></i><b>1.1</b> A qui s’adresse cet ouvrage</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#mise-à-jour"><i class="fa fa-check"></i><b>1.2</b> Mise à jour</a></li>
@@ -92,7 +99,6 @@
 <li class="chapter" data-level="2.2.1" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#spectre-timbre-et-vocabulaire"><i class="fa fa-check"></i><b>2.2.1</b> Spectre, timbre et vocabulaire</a></li>
 <li class="chapter" data-level="2.2.2" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#pression-acoustique-niveau-sonore"><i class="fa fa-check"></i><b>2.2.2</b> Pression acoustique &amp; niveau sonore</a></li>
 <li class="chapter" data-level="2.2.3" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#positionnement-dans-lespace"><i class="fa fa-check"></i><b>2.2.3</b> Positionnement dans l’espace</a></li>
-<li class="chapter" data-level="2.2.4" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#liens-entre-vision-et-audition"><i class="fa fa-check"></i><b>2.2.4</b> Liens entre vision et audition</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="acoustique-des-salles.html"><a href="acoustique-des-salles.html"><i class="fa fa-check"></i><b>3</b> Acoustique des salles</a>
@@ -172,11 +178,11 @@
 </ul></li>
 <li class="chapter" data-level="8.4" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#routage-des-signaux"><i class="fa fa-check"></i><b>8.4</b> Routage des signaux</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="les-préamplificateurs-de-microphones.html"><a href="les-préamplificateurs-de-microphones.html"><i class="fa fa-check"></i><b>9</b> Les préamplificateurs de microphones</a>
+<li class="chapter" data-level="9" data-path="les-préamplificateurs.html"><a href="les-préamplificateurs.html"><i class="fa fa-check"></i><b>9</b> Les préamplificateurs</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="les-préamplificateurs-de-microphones.html"><a href="les-préamplificateurs-de-microphones.html#les-qualités-dun-préampli"><i class="fa fa-check"></i><b>9.1</b> Les qualités d’un préampli</a></li>
-<li class="chapter" data-level="9.2" data-path="les-préamplificateurs-de-microphones.html"><a href="les-préamplificateurs-de-microphones.html#les-technologies-de-préampli"><i class="fa fa-check"></i><b>9.2</b> Les technologies de préampli</a></li>
-<li class="chapter" data-level="9.3" data-path="les-préamplificateurs-de-microphones.html"><a href="les-préamplificateurs-de-microphones.html#les-contrôles-dun-préampli"><i class="fa fa-check"></i><b>9.3</b> Les contrôles d’un préampli</a></li>
+<li class="chapter" data-level="9.1" data-path="les-préamplificateurs.html"><a href="les-préamplificateurs.html#critères-de-choix-dun-préamplificateur"><i class="fa fa-check"></i><b>9.1</b> Critères de choix d’un préamplificateur</a></li>
+<li class="chapter" data-level="9.2" data-path="les-préamplificateurs.html"><a href="les-préamplificateurs.html#les-technologies-de-préampli"><i class="fa fa-check"></i><b>9.2</b> Les technologies de préampli</a></li>
+<li class="chapter" data-level="9.3" data-path="les-préamplificateurs.html"><a href="les-préamplificateurs.html#les-réglages-dun-préampli"><i class="fa fa-check"></i><b>9.3</b> Les réglages d’un préampli</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html"><i class="fa fa-check"></i><b>10</b> La conversion analogique numérique</a>
 <ul>
@@ -187,10 +193,25 @@
 <li class="chapter" data-level="10.3.1" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#le-théorème-de-shannon-nyquist"><i class="fa fa-check"></i><b>10.3.1</b> Le théorème de Shannon-Nyquist</a></li>
 </ul></li>
 <li class="chapter" data-level="10.4" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-résolution-de-quantification"><i class="fa fa-check"></i><b>10.4</b> La résolution de quantification</a></li>
-<li class="chapter" data-level="10.5" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-mauvaise-réputation-du-son-numérique"><i class="fa fa-check"></i><b>10.5</b> La “mauvaise réputation” du son numérique</a></li>
+<li class="chapter" data-level="10.5" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#numérique-et-qualité-sonore"><i class="fa fa-check"></i><b>10.5</b> Numérique et qualité sonore</a></li>
 <li class="chapter" data-level="10.6" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-conversion-sigma-delta"><i class="fa fa-check"></i><b>10.6</b> La conversion sigma-delta</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html"><i class="fa fa-check"></i><b>11</b> Les modulations numériques</a></li>
+<li class="chapter" data-level="11" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html"><i class="fa fa-check"></i><b>11</b> Les modulations numériques</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html#les-liaisons-point-à-point"><i class="fa fa-check"></i><b>11.1</b> Les liaisons point à point</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html#aesebu"><i class="fa fa-check"></i><b>11.1.1</b> AES/EBU</a></li>
+<li class="chapter" data-level="11.1.2" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html#spdif"><i class="fa fa-check"></i><b>11.1.2</b> S/PDIF</a></li>
+<li class="chapter" data-level="11.1.3" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html#adat"><i class="fa fa-check"></i><b>11.1.3</b> ADAT</a></li>
+<li class="chapter" data-level="11.1.4" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html#madi"><i class="fa fa-check"></i><b>11.1.4</b> MADI</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html#les-réseaux-audio-numériques"><i class="fa fa-check"></i><b>11.2</b> Les réseaux audio numériques</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html#dante"><i class="fa fa-check"></i><b>11.2.1</b> DANTE</a></li>
+<li class="chapter" data-level="11.2.2" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html#ravenna-aes67"><i class="fa fa-check"></i><b>11.2.2</b> Ravenna / AES67</a></li>
+<li class="chapter" data-level="11.2.3" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html#avb"><i class="fa fa-check"></i><b>11.2.3</b> AVB</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="12" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html"><i class="fa fa-check"></i><b>12</b> Introduction à l’informatique musicale</a></li>
 <li class="chapter" data-level="13" data-path="enceintes-et-salle-découte.html"><a href="enceintes-et-salle-découte.html"><i class="fa fa-check"></i><b>13</b> Enceintes et salle d’écoute</a>
 <ul>
@@ -300,17 +321,12 @@
 <h2><span class="header-section-number">4.2</span> Les composants électroniques<a href="notions-élémentaires-délectronique.html#les-composants-électroniques" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="les-composants-passifs" class="section level3 hasAnchor" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> Les composants passifs<a href="notions-élémentaires-délectronique.html#les-composants-passifs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
-<img src="_resources/diagrams/resistor.svg" alt="Représentation d'une résistance et de son symbole" width="25%" /><img src="_resources/diagrams/resistor_sym.svg" alt="Représentation d'une résistance et de son symbole" width="25%" />
-<p class="caption">
-Figure 4.1: Représentation d’une résistance et de son symbole
-</p>
-</div>
+<p><img src="_resources/diagrams/resistor.svg" alt="Représentation d'une résistance et de son symbole" width="25%" /><img src="_resources/diagrams/resistor_sym.svg" alt="Représentation d'une résistance et de son symbole" width="25%" /></p>
 <p>Étudions maintenant les composants électroniques les plus communs. Nous avons en premier les <strong>résistances</strong>. Ce sont des dipôles purement résistifs. Leur valeur s’exprime en <strong>ohm</strong>. Une résistance s’oppose donc au passage du courant. Pour rappel, la tension a ses bornes est <span class="math inline">\(U = R \times i\)</span>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-15"></span>
 <img src="_resources/diagrams/capa.svg" alt="Représentation d'un condensateur et de son symbole" width="25%" /><img src="_resources/diagrams/capa_sym.svg" alt="Représentation d'un condensateur et de son symbole" width="25%" />
 <p class="caption">
-Figure 4.2: Représentation d’un condensateur et de son symbole
+Figure 4.1: Représentation d’un condensateur et de son symbole
 </p>
 </div>
 <p>Viennent ensuite les <strong>condensateurs</strong>. Ils sont constitués de matériaux conducteurs séparés par une couche isolante. La relation entre tension et intensité à ses bornes en régime oscillant est :</p>
@@ -318,10 +334,10 @@ Figure 4.2: Représentation d’un condensateur et de son symbole
 <p>Où <span class="math inline">\(Z_c\)</span> est l’impédance d’un condensateur idéal. Nous pouvons ici la même analyse que plus haut, quand <span class="math inline">\(Z_c\)</span> tend vers l’infini le courant ne passe plus, quand <span class="math inline">\(Z_c\)</span> tend vers 0, le débit est important. L’impédance d’un condensateur est fonction de sa <strong>capacité</strong> (noté <strong>C</strong>, et s’exprime en <strong>farads</strong>).</p>
 <p><span class="math display">\[ Z_c = \frac{1}{jC\omega} \&gt; \omega = 2 \pi \, f\]</span></p>
 <p>Si la fréquence <span class="math inline">\(f\)</span> tend vers l’infini, <span class="math inline">\(Z_c\)</span> tend vers zéro, si la fréquence tend vers zéro, <span class="math inline">\(Z_c\)</span> tend vers l’infini. On constate donc que l’impédance d’un condensateur varie en fonction de sa fréquence. On peut assimiler un condensateur à un interrupteur ouvert en basse fréquence et à un interrupteur fermé en haute fréquence.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-16"></span>
 <img src="_resources/diagrams/inductor_sym.svg" alt="Symbole d'une bobine" width="25%" />
 <p class="caption">
-Figure 4.3: Symbole d’une bobine
+Figure 4.2: Symbole d’une bobine
 </p>
 </div>
 <p>Terminons sur les bobines. Ces composants sont constitués d’un enroulement de câble en cuivre et possède une <strong>inductance</strong> notée <strong>L</strong> et s’exprimant en <strong>henrys</strong>. Étudions à nouveau la relation entre tension et intensité, aux bornes d’une bobine :</p>
@@ -336,10 +352,10 @@ Figure 4.3: Symbole d’une bobine
 </div>
 <div id="tubes-semi-conducteurs" class="section level3 hasAnchor" number="4.2.2">
 <h3><span class="header-section-number">4.2.2</span> Tubes &amp; semi-conducteurs<a href="notions-élémentaires-délectronique.html#tubes-semi-conducteurs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-17"></span>
 <img src="_resources/bitmap/elec/tube.jpg" alt="Tubes, transistor &amp; circuits intégrés" width="25%" /><img src="_resources/bitmap/elec/transistor.jpg" alt="Tubes, transistor &amp; circuits intégrés" width="25%" /><img src="_resources/bitmap/elec/ic.jpg" alt="Tubes, transistor &amp; circuits intégrés" width="25%" />
 <p class="caption">
-Figure 4.4: Tubes, transistor &amp; circuits intégrés
+Figure 4.3: Tubes, transistor &amp; circuits intégrés
 </p>
 </div>
 <p>Les <strong>tubes</strong>, tubes à vide, ou parfois, lampes, sont historiquement les premiers composants permettant d’amplifier le signal, contre une certaine tension d’alimentation. On les retrouve donc dans les préamplificateurs, égaliseurs, compresseurs, et autres amplificateurs jusque dans les années soixante. Ils sont alors progressivement remplacés par les <strong>transistors</strong>, composants appelés <strong>semi-conducteurs</strong>. Ces transistors permettent de réaliser la même amplification du signal qu’une lampe, mais sont beaucoup plus petits et demandent aussi moins de puissance électrique pour réaliser le même facteur d’amplification (aussi appelé <strong>gain</strong>). Peu de temps après la mise au point des transistors, les <strong>circuits intégrés</strong> sont inventés. Ces petites boîtes renferment plusieurs transistors, et peuvent également servir à l’amplification de signaux.</p>

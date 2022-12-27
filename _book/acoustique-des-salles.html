@@ -52,6 +52,13 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.0/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 
 
 
@@ -72,7 +79,7 @@
 <li><a href="./">La prise de son musicale</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> bibliography: [book.bib, packages.bib]</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Avant-propos</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#a-qui-sadresse-cet-ouvrage"><i class="fa fa-check"></i><b>1.1</b> A qui s’adresse cet ouvrage</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#mise-à-jour"><i class="fa fa-check"></i><b>1.2</b> Mise à jour</a></li>
@@ -92,7 +99,6 @@
 <li class="chapter" data-level="2.2.1" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#spectre-timbre-et-vocabulaire"><i class="fa fa-check"></i><b>2.2.1</b> Spectre, timbre et vocabulaire</a></li>
 <li class="chapter" data-level="2.2.2" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#pression-acoustique-niveau-sonore"><i class="fa fa-check"></i><b>2.2.2</b> Pression acoustique &amp; niveau sonore</a></li>
 <li class="chapter" data-level="2.2.3" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#positionnement-dans-lespace"><i class="fa fa-check"></i><b>2.2.3</b> Positionnement dans l’espace</a></li>
-<li class="chapter" data-level="2.2.4" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#liens-entre-vision-et-audition"><i class="fa fa-check"></i><b>2.2.4</b> Liens entre vision et audition</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="acoustique-des-salles.html"><a href="acoustique-des-salles.html"><i class="fa fa-check"></i><b>3</b> Acoustique des salles</a>
@@ -172,11 +178,11 @@
 </ul></li>
 <li class="chapter" data-level="8.4" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#routage-des-signaux"><i class="fa fa-check"></i><b>8.4</b> Routage des signaux</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="les-préamplificateurs-de-microphones.html"><a href="les-préamplificateurs-de-microphones.html"><i class="fa fa-check"></i><b>9</b> Les préamplificateurs de microphones</a>
+<li class="chapter" data-level="9" data-path="les-préamplificateurs.html"><a href="les-préamplificateurs.html"><i class="fa fa-check"></i><b>9</b> Les préamplificateurs</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="les-préamplificateurs-de-microphones.html"><a href="les-préamplificateurs-de-microphones.html#les-qualités-dun-préampli"><i class="fa fa-check"></i><b>9.1</b> Les qualités d’un préampli</a></li>
-<li class="chapter" data-level="9.2" data-path="les-préamplificateurs-de-microphones.html"><a href="les-préamplificateurs-de-microphones.html#les-technologies-de-préampli"><i class="fa fa-check"></i><b>9.2</b> Les technologies de préampli</a></li>
-<li class="chapter" data-level="9.3" data-path="les-préamplificateurs-de-microphones.html"><a href="les-préamplificateurs-de-microphones.html#les-contrôles-dun-préampli"><i class="fa fa-check"></i><b>9.3</b> Les contrôles d’un préampli</a></li>
+<li class="chapter" data-level="9.1" data-path="les-préamplificateurs.html"><a href="les-préamplificateurs.html#critères-de-choix-dun-préamplificateur"><i class="fa fa-check"></i><b>9.1</b> Critères de choix d’un préamplificateur</a></li>
+<li class="chapter" data-level="9.2" data-path="les-préamplificateurs.html"><a href="les-préamplificateurs.html#les-technologies-de-préampli"><i class="fa fa-check"></i><b>9.2</b> Les technologies de préampli</a></li>
+<li class="chapter" data-level="9.3" data-path="les-préamplificateurs.html"><a href="les-préamplificateurs.html#les-réglages-dun-préampli"><i class="fa fa-check"></i><b>9.3</b> Les réglages d’un préampli</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html"><i class="fa fa-check"></i><b>10</b> La conversion analogique numérique</a>
 <ul>
@@ -187,10 +193,25 @@
 <li class="chapter" data-level="10.3.1" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#le-théorème-de-shannon-nyquist"><i class="fa fa-check"></i><b>10.3.1</b> Le théorème de Shannon-Nyquist</a></li>
 </ul></li>
 <li class="chapter" data-level="10.4" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-résolution-de-quantification"><i class="fa fa-check"></i><b>10.4</b> La résolution de quantification</a></li>
-<li class="chapter" data-level="10.5" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-mauvaise-réputation-du-son-numérique"><i class="fa fa-check"></i><b>10.5</b> La “mauvaise réputation” du son numérique</a></li>
+<li class="chapter" data-level="10.5" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#numérique-et-qualité-sonore"><i class="fa fa-check"></i><b>10.5</b> Numérique et qualité sonore</a></li>
 <li class="chapter" data-level="10.6" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-conversion-sigma-delta"><i class="fa fa-check"></i><b>10.6</b> La conversion sigma-delta</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html"><i class="fa fa-check"></i><b>11</b> Les modulations numériques</a></li>
+<li class="chapter" data-level="11" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html"><i class="fa fa-check"></i><b>11</b> Les modulations numériques</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html#les-liaisons-point-à-point"><i class="fa fa-check"></i><b>11.1</b> Les liaisons point à point</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html#aesebu"><i class="fa fa-check"></i><b>11.1.1</b> AES/EBU</a></li>
+<li class="chapter" data-level="11.1.2" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html#spdif"><i class="fa fa-check"></i><b>11.1.2</b> S/PDIF</a></li>
+<li class="chapter" data-level="11.1.3" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html#adat"><i class="fa fa-check"></i><b>11.1.3</b> ADAT</a></li>
+<li class="chapter" data-level="11.1.4" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html#madi"><i class="fa fa-check"></i><b>11.1.4</b> MADI</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html#les-réseaux-audio-numériques"><i class="fa fa-check"></i><b>11.2</b> Les réseaux audio numériques</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html#dante"><i class="fa fa-check"></i><b>11.2.1</b> DANTE</a></li>
+<li class="chapter" data-level="11.2.2" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html#ravenna-aes67"><i class="fa fa-check"></i><b>11.2.2</b> Ravenna / AES67</a></li>
+<li class="chapter" data-level="11.2.3" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html#avb"><i class="fa fa-check"></i><b>11.2.3</b> AVB</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="12" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html"><i class="fa fa-check"></i><b>12</b> Introduction à l’informatique musicale</a></li>
 <li class="chapter" data-level="13" data-path="enceintes-et-salle-découte.html"><a href="enceintes-et-salle-découte.html"><i class="fa fa-check"></i><b>13</b> Enceintes et salle d’écoute</a>
 <ul>
@@ -274,7 +295,7 @@
 <div id="la-réverbération" class="section level3 hasAnchor" number="3.1.1">
 <h3><span class="header-section-number">3.1.1</span> La réverbération<a href="acoustique-des-salles.html#la-réverbération" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>L’acoustique d’une salle est généralement décrite en deux temps : le temps des premières réflexions et le temps du champ diffus.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
 <img src="_resources/drawings/reverb.svg" alt="Schéma d'une réponse impulsionnelle de réverbération."  />
 <p class="caption">
 Figure 3.1: Schéma d’une réponse impulsionnelle de réverbération.
@@ -312,7 +333,7 @@ Figure 3.1: Schéma d’une réponse impulsionnelle de réverbération.
 <h3><span class="header-section-number">3.1.4</span> Le phénomène d’onde stationnaire<a href="acoustique-des-salles.html#le-phénomène-donde-stationnaire" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>La plupart des pièces de vie sont des salles rectangulaires. Dans ce cas, les surfaces sont toutes parallèles. Ce type de salle est particulièrement propice à l’apparition d’ondes stationnaires. Une onde stationnaire est un phénomène acoustique provoquant l’augmentation de volume de certaines fréquences (ventre) et la disparition d’autres (nœuds).</p>
 <p>Nous aborderons ici ce phénomène sous l’angle de l’acoustique des salles, mais il est applicable dans d’autres situations, comme la vibration d’une corde par exemple.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
 <img src="_resources/gif/Standing_wave_2.gif" alt="Les points rouges représente les noeuds, les amplitudes maximales sont les ventres. Infographie par Lucas Vieira"  />
 <p class="caption">
 Figure 3.2: Les points rouges représente les noeuds, les amplitudes maximales sont les ventres. Infographie par Lucas Vieira
@@ -330,12 +351,14 @@ où <span class="math inline">\(c=340\,m.s^{-1}\)</span>, <span class="math inli
 <h2><span class="header-section-number">3.2</span> Premières réflexions et filtre en peigne<a href="acoustique-des-salles.html#premières-réflexions-et-filtre-en-peigne" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Nous avons vu que la réponse acoustique, ou réverbération, d’une salle se décompose généralement en deux parties, la première étant les premières réflexions. Ces premières réflexions sont donc, comme leur nom l’indique, les premiers rebonds que nous entendons suite à un évènement sonore.</p>
 <p>Dans de petites pièces, les premières réflexions peuvent être entendues si proche du son direct que cela génère un type de filtrage bien particulier appelé <strong>filtre en peigne</strong>.</p>
-<p><img src="_main_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre><code>## &lt;string&gt;:1: RuntimeWarning: divide by zero encountered in log10
+## &lt;string&gt;:1: RuntimeWarning: invalid value encountered in multiply</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-11-1.png" width="624" style="display: block; margin: auto;" /></p>
 <p>Toujours en utilisant les formules définies au premier chapitre, on établit la relation suivante :</p>
 <p><span class="math display">\[ fc = \frac 1{2t} = \frac c{2d} \]</span></p>
 <p>Où <span class="math inline">\(fc\)</span> correspond à la fréquence d’annulation la plus grave du filtre en peigne. Les autres fréquences se calculent grâce à la relation <span class="math inline">\(f(n) = fc*n\)</span>. Le phénomène de filtre en peigne est donc également harmonique.</p>
 <p>Ainsi, on peut calculer les filtres en peignes présents au point d’écoute d’une régie de mixage ou de prise de son grâce à la mesure du chemin des premières réflexions.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-12"></span>
 <img src="_resources/drawings/roomPr.svg" alt="Ensemble des premières reflexions entendues par une oreille pour une enceinte (hors plafond et plancher/bureau)."  />
 <p class="caption">
 Figure 3.3: Ensemble des premières reflexions entendues par une oreille pour une enceinte (hors plafond et plancher/bureau).
@@ -350,7 +373,7 @@ Figure 3.3: Ensemble des premières reflexions entendues par une oreille pour un
 <li>À partir d’une certaine taille, l’effet du filtre en peigne se mue en information d’acoustique pour notre cerveau. Au-delà de 40 ms (trajet d’une première réflexion d’environ 14 m), l’écart entre le son direct et les premières réflexions est tel que nous entendons un écho (effet Haas).</li>
 </ul>
 <p>Afin de réduire au maximum les effets des filtres en peignes, il est recommandé de placer des traitements aux points de réflexion critique par rapport à la position d’écoute (voir schéma ci-dessus).</p>
-<p><img src="_main_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-13-1.png" width="624" style="display: block; margin: auto;" /></p>
 </div>
 <div id="traitement-acoustique" class="section level2 hasAnchor" number="3.3">
 <h2><span class="header-section-number">3.3</span> Traitement acoustique<a href="acoustique-des-salles.html#traitement-acoustique" class="anchor-section" aria-label="Anchor link to header"></a></h2>
