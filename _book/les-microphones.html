@@ -23,7 +23,7 @@
 <meta name="author" content="Jean-Loup Pecquais" />
 
 
-<meta name="date" content="2022-12-26" />
+<meta name="date" content="2022-12-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,6 +52,13 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.0/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 
 
 
@@ -72,7 +79,7 @@
 <li><a href="./">La prise de son musicale</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Avant-propos</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> bibliography: [book.bib, packages.bib]</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#a-qui-sadresse-cet-ouvrage"><i class="fa fa-check"></i><b>1.1</b> A qui s’adresse cet ouvrage</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#mise-à-jour"><i class="fa fa-check"></i><b>1.2</b> Mise à jour</a></li>
@@ -92,6 +99,7 @@
 <li class="chapter" data-level="2.2.1" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#spectre-timbre-et-vocabulaire"><i class="fa fa-check"></i><b>2.2.1</b> Spectre, timbre et vocabulaire</a></li>
 <li class="chapter" data-level="2.2.2" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#pression-acoustique-niveau-sonore"><i class="fa fa-check"></i><b>2.2.2</b> Pression acoustique &amp; niveau sonore</a></li>
 <li class="chapter" data-level="2.2.3" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#positionnement-dans-lespace"><i class="fa fa-check"></i><b>2.2.3</b> Positionnement dans l’espace</a></li>
+<li class="chapter" data-level="2.2.4" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#liens-entre-vision-et-audition"><i class="fa fa-check"></i><b>2.2.4</b> Liens entre vision et audition</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="acoustique-des-salles.html"><a href="acoustique-des-salles.html"><i class="fa fa-check"></i><b>3</b> Acoustique des salles</a>
@@ -143,7 +151,7 @@
 <li class="chapter" data-level="7.2.2" data-path="les-microphones.html"><a href="les-microphones.html#les-microphones-à-ruban"><i class="fa fa-check"></i><b>7.2.2</b> Les microphones à ruban</a></li>
 <li class="chapter" data-level="7.2.3" data-path="les-microphones.html"><a href="les-microphones.html#les-microphones-dynamiques"><i class="fa fa-check"></i><b>7.2.3</b> Les microphones dynamiques</a></li>
 <li class="chapter" data-level="7.2.4" data-path="les-microphones.html"><a href="les-microphones.html#la-taille-des-membranes"><i class="fa fa-check"></i><b>7.2.4</b> La taille des membranes</a></li>
-<li class="chapter" data-level="7.2.5" data-path="les-microphones.html"><a href="les-microphones.html#tubes-et-transistors"><i class="fa fa-check"></i><b>7.2.5</b> Tubes et transistors</a></li>
+<li class="chapter" data-level="7.2.5" data-path="les-microphones.html"><a href="les-microphones.html#microphones-à-tubes-ou-transistors"><i class="fa fa-check"></i><b>7.2.5</b> Microphones à tubes ou transistors?</a></li>
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="les-microphones.html"><a href="les-microphones.html#timbre-et-directivité"><i class="fa fa-check"></i><b>7.3</b> Timbre et directivité</a>
 <ul>
@@ -297,6 +305,12 @@
 </ul>
 <div id="les-microphones-électrostatiquesà-condensateur" class="section level3 hasAnchor" number="7.2.1">
 <h3><span class="header-section-number">7.2.1</span> Les microphones électrostatiques/à condensateur<a href="les-microphones.html#les-microphones-électrostatiquesà-condensateur" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="_resources/bitmap/mic/u87.jpg" alt="Neumann U87, Schoeps CMC64, Line Audio CM4" width="33%" /><img src="_resources/bitmap/mic/cmc64.jpg" alt="Neumann U87, Schoeps CMC64, Line Audio CM4" width="33%" /><img src="_resources/bitmap/mic/cm4.jpg" alt="Neumann U87, Schoeps CMC64, Line Audio CM4" width="33%" />
+<p class="caption">
+Figure 7.1: Neumann U87, Schoeps CMC64, Line Audio CM4
+</p>
+</div>
 <p>Ce sont, historiquement, les premiers microphones à permettre une captation du spectre audible satisfaisante. Ils sont cependant très sensibles aux conditions de température et d’humidité et il fallut attendre les années trente pour que ce problème cesse. Ils nécessitent une alimentation externe, appelée alimentation fantôme, normalisée à +48V. Il existe deux familles de microphones électrostatiques, les <strong>condensateurs à hautes fréquences</strong> et <strong>condensateur polarisés en courant continu</strong>.</p>
 <p>Les microphones à condensateur polarisés en courant continu ont le fonctionnement le plus commun. Un courant continu vient polariser la capsule/condensateur. Lorsqu’une onde sonore rencontre la capsule, une de ses armatures se déforme et génère une variation de tension analogue à la variation de pression.</p>
 <p>Les microphones à condensateur à haute fréquence proposent une approche différente. Un oscillateur est intégré dans le microphone et la variation de pression enregistrée par le condensateur vient moduler la fréquence de cet oscillateur. Le signal est ensuite démodulé dans la plage audible. Cette méthode de construction offre une impédance de sortie plus faible et une plus grande résistance aux variations de conditions climatiques.</p>
@@ -305,12 +319,24 @@
 </div>
 <div id="les-microphones-à-ruban" class="section level3 hasAnchor" number="7.2.2">
 <h3><span class="header-section-number">7.2.2</span> Les microphones à ruban<a href="les-microphones.html#les-microphones-à-ruban" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="_resources/bitmap/mic/r121.jpg" alt="Royer R121, Cascade Vinjet, Coles 4038" width="33%" /><img src="_resources/bitmap/mic/vinjet.jpg" alt="Royer R121, Cascade Vinjet, Coles 4038" width="33%" /><img src="_resources/bitmap/mic/coles.jpg" alt="Royer R121, Cascade Vinjet, Coles 4038" width="33%" />
+<p class="caption">
+Figure 7.2: Royer R121, Cascade Vinjet, Coles 4038
+</p>
+</div>
 <p>Les microphones à ruban souvent préférés à leurs homologues statiques dans les débuts de la musique enregistrée. Leur fonctionnement repose sur l’utilisation d’une feuille métallique placée entre deux aimants. Lorsqu’une onde sonore rencontre cette feuille (le ruban), celle-ci vibre et perturbe le champ électromagnétique créé par les aimants et génère une tension analogue à la variation de pression.</p>
 <p>D’un point de vue sonore, les microphones à ruban ont souvent un bas du spectre assez généreux et une réponse plutôt douce pour les hautes fréquences. Ils sont aussi connus pour avoir une impédance de sortie assez élevée et un niveau de sortie faible. Attention à l’alimentation fantôme (+48V), elle peut endommager le microphone.</p>
 <p>Exemples : Royer R121/Cohles/Beyerdynamic M160</p>
 </div>
 <div id="les-microphones-dynamiques" class="section level3 hasAnchor" number="7.2.3">
 <h3><span class="header-section-number">7.2.3</span> Les microphones dynamiques<a href="les-microphones.html#les-microphones-dynamiques" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="_resources/bitmap/mic/sm57.jpg" alt="Shure SM57, Electro-Voice RE20, Sennheiser MD441" width="33%" /><img src="_resources/bitmap/mic/re20.jpg" alt="Shure SM57, Electro-Voice RE20, Sennheiser MD441" width="33%" /><img src="_resources/bitmap/mic/md441.jpg" alt="Shure SM57, Electro-Voice RE20, Sennheiser MD441" width="33%" />
+<p class="caption">
+Figure 7.3: Shure SM57, Electro-Voice RE20, Sennheiser MD441
+</p>
+</div>
 <p>Les microphones dynamiques sont conçus pour des conditions d’utilisation rudes, où les niveaux sonores sont élevés et où le risque de chute est important. Ils sont donc monnaie courante en sonorisation. Leur membrane est attachée à une bobine entourant un aimant. Lorsqu’une onde sonore la met en vibration, la bobine se déplace autour de l’aimant, et, par perturbation du champ électromagnétique, génère une tension de sortie analogue à la variation de pression.</p>
 <p>Leur réponse en fréquence est souvent accidentée, particulièrement dans le haut du spectre. Cela peut être vu comme un inconvénient ou comme un outil de « coloration » du son. Comme leurs homologues à ruban, ils possèdent un niveau de sortie faible et une impédance de sortie élevée.</p>
 <p>Exemples : Shure SM57/Electrovoice RE20/Sennheiser MD441</p>
@@ -319,8 +345,8 @@
 <h3><span class="header-section-number">7.2.4</span> La taille des membranes<a href="les-microphones.html#la-taille-des-membranes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>La taille des membranes influe sur la captation du son. Plus la capsule est grande, plus les fréquences aiguës seront diffractées et donc atténuées dans la prise de son. Un microphone à petite membrane est donc techniquement un microphone plus « juste ». Cependant, l’emploi de large membrane permet aussi d’adoucir un surplus d’énergie dans le haut du spectre.</p>
 </div>
-<div id="tubes-et-transistors" class="section level3 hasAnchor" number="7.2.5">
-<h3><span class="header-section-number">7.2.5</span> Tubes et transistors<a href="les-microphones.html#tubes-et-transistors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="microphones-à-tubes-ou-transistors" class="section level3 hasAnchor" number="7.2.5">
+<h3><span class="header-section-number">7.2.5</span> Microphones à tubes ou transistors?<a href="les-microphones.html#microphones-à-tubes-ou-transistors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Historiquement, les tubes ont été les premiers composants électroniques à permettre l’amplification du signal. Le transistor est apparu à la fin des années 40 et a permis de remplir les mêmes fonctions qu’un tube, par une consommation moindre et avec un encombrement beaucoup plus faible.</p>
 <p>Certains microphones continuent à être fabriqués avec des tubes, préférant leur comportement vis-à-vis du son. Une écrasante majorité est cependant fabriquée avec des transistors.</p>
 <p>Le choix entre un microphone à tube et un microphone à transistor semble cependant anecdotique par rapport à son type, à son placement et à sa directivité.</p>
@@ -337,9 +363,8 @@
 <li>Hypercardioïde : ressers davantage la zone d’écoute et augmente d’autant plus la résurgence arrière.</li>
 <li>Bidirectionnel : capte à l’avant et à l’arrière, mais selon un lobe plus resserré qu’en cardioïde.</li>
 </ul>
-<!--
-<img src="_main_files/figure-html/unnamed-chunk-16-1.png" width="624" style="display: block; margin: auto;" />
--->
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-738366d8dff979e303d3" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-738366d8dff979e303d3">{"x":{"visdat":{"7f868f95ce9":["function () ","plotlyVisDat"]},"cur_data":"7f868f95ce9","attrs":{"7f868f95ce9":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"7f868f95ce9.1":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":{},"theta":{},"name":"Figure en 8","line":{"color":"peru"},"inherit":true},"7f868f95ce9.2":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":{},"theta":{},"name":"Cardioïde","line":{"color":"darkviolet"},"inherit":true},"7f868f95ce9.3":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":{},"theta":{},"name":"Hypercardioïde","line":{"color":"deepskyblue"},"inherit":true},"7f868f95ce9.4":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":{},"theta":{},"name":"Subcardioïde","line":{"color":"orangered"},"inherit":true},"7f868f95ce9.5":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":{},"theta":{},"name":"Supercardioïde","line":{"color":"green"},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"mode":"lines","type":"scatterpolar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"rgba(31,119,180,1)"},"frame":null},{"mode":"lines","type":"scatterpolar","r":[1,0.995,0.978,0.951,0.914,0.866,0.809,0.743,0.669,0.588,0.5,0.407,0.309,0.208,0.105,0.105,0.208,0.309,0.407,0.5,0.588,0.669,0.743,0.809,0.866,0.914,0.951,0.978,0.995,1,0.995,0.978,0.951,0.914,0.866,0.809,0.743,0.669,0.588,0.5,0.407,0.309,0.208,0.105,0,0.105,0.208,0.309,0.407,0.5,0.588,0.669,0.743,0.809,0.866,0.914,0.951,0.978,0.995,1,1],"theta":[0,6,12,18,24,30,36,42,48,54,60,66,72,78,84,90,96,102,108,114,120,126,132,138,144,150,156,162,168,174,180,186,192,198,204,210,216,222,228,234,240,246,252,258,264,270,276,282,288,294,300,306,312,318,324,330,336,342,348,354,360],"name":"Figure en 8","line":{"color":"peru"},"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"frame":null},{"mode":"lines","type":"scatterpolar","r":[1,0.997,0.989,0.976,0.957,0.933,0.905,0.872,0.835,0.794,0.75,0.703,0.655,0.604,0.552,0.5,0.448,0.396,0.345,0.297,0.25,0.206,0.165,0.128,0.095,0.067,0.043,0.024,0.011,0.003,0,0.003,0.011,0.024,0.043,0.067,0.095,0.128,0.165,0.206,0.25,0.297,0.345,0.396,0.448,0.5,0.552,0.604,0.655,0.703,0.75,0.794,0.835,0.872,0.905,0.933,0.957,0.976,0.989,0.997,1],"theta":[0,6,12,18,24,30,36,42,48,54,60,66,72,78,84,90,96,102,108,114,120,126,132,138,144,150,156,162,168,174,180,186,192,198,204,210,216,222,228,234,240,246,252,258,264,270,276,282,288,294,300,306,312,318,324,330,336,342,348,354,360],"name":"Cardioïde","line":{"color":"darkviolet"},"marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"frame":null},{"mode":"lines","type":"scatterpolar","r":[1,0.996,0.984,0.963,0.935,0.9,0.857,0.807,0.752,0.691,0.625,0.555,0.482,0.406,0.328,0.25,0.172,0.094,0.018,0.055,0.125,0.191,0.252,0.307,0.357,0.4,0.435,0.463,0.484,0.496,0.5,0.496,0.484,0.463,0.435,0.4,0.357,0.307,0.252,0.191,0.125,0.055,0.018,0.094,0.172,0.25,0.328,0.406,0.482,0.555,0.625,0.691,0.752,0.807,0.857,0.9,0.935,0.963,0.984,0.996,1],"theta":[0,6,12,18,24,30,36,42,48,54,60,66,72,78,84,90,96,102,108,114,120,126,132,138,144,150,156,162,168,174,180,186,192,198,204,210,216,222,228,234,240,246,252,258,264,270,276,282,288,294,300,306,312,318,324,330,336,342,348,354,360],"name":"Hypercardioïde","line":{"color":"deepskyblue"},"marker":{"color":"rgba(214,39,40,1)","line":{"color":"rgba(214,39,40,1)"}},"frame":null},{"mode":"lines","type":"scatterpolar","r":[1,0.998,0.993,0.985,0.974,0.96,0.943,0.923,0.901,0.876,0.85,0.822,0.793,0.762,0.731,0.7,0.669,0.638,0.607,0.578,0.55,0.524,0.499,0.477,0.457,0.44,0.426,0.415,0.407,0.402,0.4,0.402,0.407,0.415,0.426,0.44,0.457,0.477,0.499,0.524,0.55,0.578,0.607,0.638,0.669,0.7,0.731,0.762,0.793,0.822,0.85,0.876,0.901,0.923,0.943,0.96,0.974,0.985,0.993,0.998,1],"theta":[0,6,12,18,24,30,36,42,48,54,60,66,72,78,84,90,96,102,108,114,120,126,132,138,144,150,156,162,168,174,180,186,192,198,204,210,216,222,228,234,240,246,252,258,264,270,276,282,288,294,300,306,312,318,324,330,336,342,348,354,360],"name":"Subcardioïde","line":{"color":"orangered"},"marker":{"color":"rgba(148,103,189,1)","line":{"color":"rgba(148,103,189,1)"}},"frame":null},{"mode":"lines","type":"scatterpolar","r":[1,0.997,0.986,0.969,0.946,0.916,0.88,0.838,0.792,0.74,0.685,0.626,0.565,0.501,0.436,0.37,0.304,0.239,0.175,0.114,0.055,0,0.052,0.098,0.14,0.176,0.206,0.229,0.246,0.257,0.26,0.257,0.246,0.229,0.206,0.176,0.14,0.098,0.052,0,0.055,0.114,0.175,0.239,0.304,0.37,0.436,0.501,0.565,0.626,0.685,0.74,0.792,0.838,0.88,0.916,0.946,0.969,0.986,0.997,1],"theta":[0,6,12,18,24,30,36,42,48,54,60,66,72,78,84,90,96,102,108,114,120,126,132,138,144,150,156,162,168,174,180,186,192,198,204,210,216,222,228,234,240,246,252,258,264,270,276,282,288,294,300,306,312,318,324,330,336,342,348,354,360],"name":"Supercardioïde","line":{"color":"green"},"marker":{"color":"rgba(140,86,75,1)","line":{"color":"rgba(140,86,75,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 <p>Plus la directivité d’un microphone est large, plus la contribution de l’acoustique est apparente. Le timbre est également aussi linéaire que possible. À l’inverse, plus la directivité tant à être étroite, plus le microphone aura une capacité à échantillonner seulement une zone de l’espace. Le timbre est, par contre, amoindri dans le bas du spectre. Les microphones omnidirectionnels sont donc les plus larges et les plus « neutres », tandis que les microphones bidirectionnels sont les plus focalisés et ont la plus importante perte dans le bas du spectre.</p>
 <p>Le preneur de son choisit donc une directivité en fonction de la tâche à accomplir. Les microphones directifs ont l’avantage de limiter la contribution d’évènements sonores que l’on ne souhaite pas capter. Les microphones omnidirectionnels ont la faculté d’être un dispositif de prise de son plus transparent, mais seront beaucoup plus sensibles à une acoustique moins optimale, ainsi qu’au bruit environnant.</p>
 <p>Nous allons par la suite nous intéresser au cœur du microphone : sa capsule. Il existe deux familles de capsules, celles dites « à pression », et celles dites à « gradient de pression ».</p>
@@ -366,14 +391,32 @@
 <p>Les microphones à multidirectivité permettent à l’utilisateur d’influer, soit sur le labyrinthe acoustique, soit sur la sommation des deux capsules. Il n’est pas rare que ces microphones soient moins performants qu’un microphone spécifiquement dédié à une seule directivité.</p>
 <p>On retiendra donc :</p>
 <p><span class="math display">\[ \theta(\alpha) = A + B \cos (\alpha) \&gt; où \&gt; A + B = 1\]</span></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<img src="_resources/diagrams/Polar-pattern-U-87-Ai-omni.svg" alt="Directivités réelles du microphone (U 87)" width="33%" /><img src="_resources/diagrams/Polar-pattern-U-87-Ai-cardioid.svg" alt="Directivités réelles du microphone (U 87)" width="33%" /><img src="_resources/diagrams/Polar-pattern-U-87-Ai-figure8.svg" alt="Directivités réelles du microphone (U 87)" width="33%" />
+<p class="caption">
+Figure 7.4: Directivités réelles du microphone (U 87)
+</p>
+</div>
 </div>
 <div id="directivités-réelles-détimbrage" class="section level3 hasAnchor" number="7.3.4">
 <h3><span class="header-section-number">7.3.4</span> Directivités réelles &amp; détimbrage<a href="les-microphones.html#directivités-réelles-détimbrage" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Nous avons jusque là considéré que la directivité d’un microphone était un phénomène indépendant de la fréquence. Or, cela n’est pas vrai. En d’autres termes, la directivité d’un microphone n’est pas la même en fonction de la fréquence de l’onde sonore lui arrivant. Typiquement, un microphone tendra vers une directivité plus resserrée dans le haut du spectre, et vers une directivité plus large dans le bas du spectre.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-17"></span>
-<img src="_resources/image_15.jpg" alt="Directivité réelle d'un microphone cardioïde (Sennheiser)" width="50%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
+<img src="_resources/diagrams/Frequency-diagram-U-87-Ai-omni.svg" alt="Réponse en fréquence du microphone  Neumann U87 (omnidirectionnel)" width="66%" />
 <p class="caption">
-Figure 7.1: Directivité réelle d’un microphone cardioïde (Sennheiser)
+Figure 7.5: Réponse en fréquence du microphone Neumann U87 (omnidirectionnel)
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
+<img src="_resources/diagrams/Frequency-diagram-U-87-Ai-cardioid.svg" alt="Réponse en fréquence du microphone Neumann U87 (cardioïde)" width="66%" />
+<p class="caption">
+Figure 7.6: Réponse en fréquence du microphone Neumann U87 (cardioïde)
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
+<img src="_resources/diagrams/Frequency-diagram-U-87-Ai-figure8.svg" alt="Réponse en fréquence du microphone Neumann U87 (figure en huit)" width="66%" />
+<p class="caption">
+Figure 7.7: Réponse en fréquence du microphone Neumann U87 (figure en huit)
 </p>
 </div>
 <p>Cela signifie donc que positionner un microphone hors axe face à un évènement sonore n’aura pas seulement un effet sur le niveau du signal en sortie du microphone, mais également sur le timbre. On appelle alors « <strong>timbré</strong> », un évènement sonore capté plein axe par un microphone, et <strong>détimbré</strong> un évènement sonore capté hors axe.</p>

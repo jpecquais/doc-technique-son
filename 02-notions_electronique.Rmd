@@ -36,7 +36,17 @@ L’impédance traduit elle aussi l’opposition d’un circuit au passage d’u
 
 ### Les composants passifs
 
+```{r, echo = FALSE, fig.align="center", fig.show="hold", out.width="25%", fig.cap="Représentation d'une résistance et de son symbole"}
+show_fig("_resources/diagrams/resistor.svg")
+show_fig("_resources/diagrams/resistor_sym.svg")
+```
+
 Étudions maintenant les composants électroniques les plus communs. Nous avons en premier les **résistances**. Ce sont des dipôles purement résistifs. Leur valeur s’exprime en **ohm**. Une résistance s’oppose donc au passage du courant. Pour rappel, la tension a ses bornes est $U = R \times i$.
+
+```{r, echo = FALSE, fig.align="center", fig.show="hold", out.width="25%", fig.cap="Représentation d'un condensateur et de son symbole"}
+show_fig("_resources/diagrams/capa.svg")
+show_fig("_resources/diagrams/capa_sym.svg")
+```
 
 Viennent ensuite les **condensateurs**. Ils sont constitués de matériaux conducteurs séparés par une couche isolante. La relation entre tension et intensité à ses bornes en régime oscillant est :
 
@@ -47,6 +57,10 @@ Où $Z_c$ est l’impédance d’un condensateur idéal. Nous pouvons ici la mê
 $$ Z_c = \frac{1}{jC\omega} \> \omega = 2 \pi \, f$$
 
 Si la fréquence $f$ tend vers l’infini, $Z_c$ tend vers zéro, si la fréquence tend vers zéro, $Z_c$ tend vers l’infini. On constate donc que l’impédance d’un condensateur varie en fonction de sa fréquence. On peut assimiler un condensateur à un interrupteur ouvert en basse fréquence et à un interrupteur fermé en haute fréquence.
+
+```{r, echo = FALSE, fig.align="center", fig.show="hold", out.width="25%", fig.cap="Symbole d'une bobine"}
+show_fig("_resources/diagrams/inductor_sym.svg")
+```
 
 Terminons sur les bobines. Ces composants sont constitués d’un enroulement de câble en cuivre et possède une **inductance** notée **L** et s’exprimant en **henrys**. Étudions à nouveau la relation entre tension et intensité, aux bornes d’une bobine :
 
@@ -64,6 +78,14 @@ L’association de résistances, de condensateurs et de bobines donne des circui
 
 ### Tubes & semi-conducteurs
 
+```{r, echo=FALSE, fig.align="center", fig.cap="Tubes, transistor & circuits intégrés", fig.show="hold", out.width="25%"}
+
+knitr::include_graphics("_resources/bitmap/elec/tube.jpg")
+knitr::include_graphics("_resources/bitmap/elec/transistor.jpg")
+knitr::include_graphics("_resources/bitmap/elec/ic.jpg")
+
+```
+
 Les **tubes**, tubes à vide, ou parfois, lampes, sont historiquement les premiers composants permettant d’amplifier le signal, contre une certaine tension d’alimentation. On les retrouve donc dans les préamplificateurs, égaliseurs, compresseurs, et autres amplificateurs jusque dans les années soixante. Ils sont alors progressivement remplacés par les **transistors**, composants appelés **semi-conducteurs**. Ces transistors permettent de réaliser la même amplification du signal qu’une lampe, mais sont beaucoup plus petits et demandent aussi moins de puissance électrique pour réaliser le même facteur d’amplification (aussi appelé **gain**). Peu de temps après la mise au point des transistors, les **circuits intégrés** sont inventés. Ces petites boîtes renferment plusieurs transistors, et peuvent également servir à l’amplification de signaux.
 
 Il est très important de savoir que l’invention du transistor et des circuits intégrés est sans doute l’avancée technologique la plus importante du siècle dernier. Elle a permis le développement exponentiel de l’industrie informatique grâce à la miniaturisation des composants.
@@ -78,7 +100,9 @@ Sur la fiche technique des appareils, on trouve des valeurs pour son impédance 
 
 Soit le schéma électronique ci-dessous. On appelle $U_{out}$ la tension de sortie de l’appareil A et $Z_{out}$ son impédance de sortie. De façon similaire, on appelle $U_{in}$ la tension d’entré de l’appareil B et $Z_{in}$ son impédance d’entré.
 
-<!--Ajouter schéma electronique-->
+```{r, echo = FALSE, fig.align="center"}
+show_fig("_resources/diagrams/impedance.svg")
+```
 
 Dans ce circuit, $Z_{eq} = Z_{in} + Z_{out}$ et $U_{out} = Z_{eq} \times i$. Alors, $i = \frac{U_{out}}{Z_{eq}} = \frac{U_{out}}{Z_{in} + Z_{out}}$. Toujours grâce au circuit ci-dessus, on peut dire que $U_{in} = Z_{in} \times I$. En remplaçant dans l’expression précédente on trouve : $\frac{U_{in}}{Z_{in}} = \frac{U_{out}}{Z_{in} + Z_{out}}$
 

@@ -23,7 +23,7 @@
 <meta name="author" content="Jean-Loup Pecquais" />
 
 
-<meta name="date" content="2022-12-26" />
+<meta name="date" content="2022-12-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,6 +52,13 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.0/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 
 
 
@@ -275,12 +282,12 @@
 <p>Le son est une vibration mécanique d’un fluide. Dans le cadre de ce cours, nous ne considérerons que l’air comme médium de propagation. Cette onde cause une variation de la pression dans l’espace. Nous, les êtres humains, le percevons grâce à notre ouïe. Il s’agit donc, par définition, d’un phénomène ondulatoire et peut être caractérisé par un nombre d’oscillations par seconde, aussi appelé fréquence. On estime que notre espèce est sensible aux fréquences allant de 20 Hz (très grave) jusqu’à 20 000 Hz (très aigu).</p>
 <p>On parlera d’<strong>évènement sonore</strong> pour parler généralement de phénomènes physiques produisant une onde sonore.</p>
 <p>Les sons composés d’une seule fréquence se nomment <strong>sons purs</strong>. Cependant, de tels signaux n’existent pas dans la nature, et sont souvent utilisés afin de réaliser des mesures ou des tests psychoacoustiques.</p>
-<p><img src="_main_files/figure-html/unnamed-chunk-2-1.png" width="624" style="display: block; margin: auto;" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>Dans notre environnement, les sons sont donc composés de plusieurs fréquences. La fréquence la plus grave d’un son est sa <strong>fréquence fondamentale</strong>. Les autres sont alors appelées <strong>partiels</strong>. Si ces partielles ont pour fréquence un multiple de la fréquence fondamentale, alors on les nomme <strong>harmoniques</strong>.</p>
 <blockquote>
 <p>Plus généralement, on admettra que la composition fréquentielle, ou spectrale, de tout son peut être décomposée par une somme de sinusoïde. L’outil permettant de passer de la représentation temporelle d’un signal à sa représentation fréquentiel s’appelle la <strong>transformée de Fourrier.</strong></p>
 </blockquote>
-<p><img src="_main_files/figure-html/unnamed-chunk-3-3.png" width="624" style="display: block; margin: auto;" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-3-3.png" width="672" style="display: block; margin: auto;" /></p>
 <p>La fréquence fondamentale donne la <strong>hauteur</strong> du son (sa note en musique par exemple). Les partiels enrichissent cette fréquence fondamentale et créés le <strong>timbre</strong> d’un son. C’est en partie grâce au timbre que l’on peut reconnaître différents instruments de musiques jouant la même note.</p>
 <p>Un son se caractérise également par l’évolution de son amplitude au cours du temps. On parle alors de son <strong>enveloppe</strong>. Un modèle courant d’enveloppe est l’ADSR : <em>Attack</em>, <em>Decay</em>, <em>Sustain</em>, <em>Release</em>, soit <em>Attaque</em>, <em>Décroissance</em>, <em>Maintient</em> et <em>Relâchement</em>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>

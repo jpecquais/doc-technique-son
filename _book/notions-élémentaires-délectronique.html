@@ -23,7 +23,7 @@
 <meta name="author" content="Jean-Loup Pecquais" />
 
 
-<meta name="date" content="2022-12-26" />
+<meta name="date" content="2022-12-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -72,7 +72,7 @@
 <li><a href="./">La prise de son musicale</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Avant-propos</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> bibliography: [book.bib, packages.bib]</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#a-qui-sadresse-cet-ouvrage"><i class="fa fa-check"></i><b>1.1</b> A qui s’adresse cet ouvrage</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#mise-à-jour"><i class="fa fa-check"></i><b>1.2</b> Mise à jour</a></li>
@@ -92,6 +92,7 @@
 <li class="chapter" data-level="2.2.1" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#spectre-timbre-et-vocabulaire"><i class="fa fa-check"></i><b>2.2.1</b> Spectre, timbre et vocabulaire</a></li>
 <li class="chapter" data-level="2.2.2" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#pression-acoustique-niveau-sonore"><i class="fa fa-check"></i><b>2.2.2</b> Pression acoustique &amp; niveau sonore</a></li>
 <li class="chapter" data-level="2.2.3" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#positionnement-dans-lespace"><i class="fa fa-check"></i><b>2.2.3</b> Positionnement dans l’espace</a></li>
+<li class="chapter" data-level="2.2.4" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#liens-entre-vision-et-audition"><i class="fa fa-check"></i><b>2.2.4</b> Liens entre vision et audition</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="acoustique-des-salles.html"><a href="acoustique-des-salles.html"><i class="fa fa-check"></i><b>3</b> Acoustique des salles</a>
@@ -143,7 +144,7 @@
 <li class="chapter" data-level="7.2.2" data-path="les-microphones.html"><a href="les-microphones.html#les-microphones-à-ruban"><i class="fa fa-check"></i><b>7.2.2</b> Les microphones à ruban</a></li>
 <li class="chapter" data-level="7.2.3" data-path="les-microphones.html"><a href="les-microphones.html#les-microphones-dynamiques"><i class="fa fa-check"></i><b>7.2.3</b> Les microphones dynamiques</a></li>
 <li class="chapter" data-level="7.2.4" data-path="les-microphones.html"><a href="les-microphones.html#la-taille-des-membranes"><i class="fa fa-check"></i><b>7.2.4</b> La taille des membranes</a></li>
-<li class="chapter" data-level="7.2.5" data-path="les-microphones.html"><a href="les-microphones.html#tubes-et-transistors"><i class="fa fa-check"></i><b>7.2.5</b> Tubes et transistors</a></li>
+<li class="chapter" data-level="7.2.5" data-path="les-microphones.html"><a href="les-microphones.html#microphones-à-tubes-ou-transistors"><i class="fa fa-check"></i><b>7.2.5</b> Microphones à tubes ou transistors?</a></li>
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="les-microphones.html"><a href="les-microphones.html#timbre-et-directivité"><i class="fa fa-check"></i><b>7.3</b> Timbre et directivité</a>
 <ul>
@@ -299,12 +300,30 @@
 <h2><span class="header-section-number">4.2</span> Les composants électroniques<a href="notions-élémentaires-délectronique.html#les-composants-électroniques" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="les-composants-passifs" class="section level3 hasAnchor" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> Les composants passifs<a href="notions-élémentaires-délectronique.html#les-composants-passifs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<img src="_resources/diagrams/resistor.svg" alt="Représentation d'une résistance et de son symbole" width="25%" /><img src="_resources/diagrams/resistor_sym.svg" alt="Représentation d'une résistance et de son symbole" width="25%" />
+<p class="caption">
+Figure 4.1: Représentation d’une résistance et de son symbole
+</p>
+</div>
 <p>Étudions maintenant les composants électroniques les plus communs. Nous avons en premier les <strong>résistances</strong>. Ce sont des dipôles purement résistifs. Leur valeur s’exprime en <strong>ohm</strong>. Une résistance s’oppose donc au passage du courant. Pour rappel, la tension a ses bornes est <span class="math inline">\(U = R \times i\)</span>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="_resources/diagrams/capa.svg" alt="Représentation d'un condensateur et de son symbole" width="25%" /><img src="_resources/diagrams/capa_sym.svg" alt="Représentation d'un condensateur et de son symbole" width="25%" />
+<p class="caption">
+Figure 4.2: Représentation d’un condensateur et de son symbole
+</p>
+</div>
 <p>Viennent ensuite les <strong>condensateurs</strong>. Ils sont constitués de matériaux conducteurs séparés par une couche isolante. La relation entre tension et intensité à ses bornes en régime oscillant est :</p>
 <p><span class="math display">\[ U = Z_c \times I \]</span></p>
 <p>Où <span class="math inline">\(Z_c\)</span> est l’impédance d’un condensateur idéal. Nous pouvons ici la même analyse que plus haut, quand <span class="math inline">\(Z_c\)</span> tend vers l’infini le courant ne passe plus, quand <span class="math inline">\(Z_c\)</span> tend vers 0, le débit est important. L’impédance d’un condensateur est fonction de sa <strong>capacité</strong> (noté <strong>C</strong>, et s’exprime en <strong>farads</strong>).</p>
 <p><span class="math display">\[ Z_c = \frac{1}{jC\omega} \&gt; \omega = 2 \pi \, f\]</span></p>
 <p>Si la fréquence <span class="math inline">\(f\)</span> tend vers l’infini, <span class="math inline">\(Z_c\)</span> tend vers zéro, si la fréquence tend vers zéro, <span class="math inline">\(Z_c\)</span> tend vers l’infini. On constate donc que l’impédance d’un condensateur varie en fonction de sa fréquence. On peut assimiler un condensateur à un interrupteur ouvert en basse fréquence et à un interrupteur fermé en haute fréquence.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="_resources/diagrams/inductor_sym.svg" alt="Symbole d'une bobine" width="25%" />
+<p class="caption">
+Figure 4.3: Symbole d’une bobine
+</p>
+</div>
 <p>Terminons sur les bobines. Ces composants sont constitués d’un enroulement de câble en cuivre et possède une <strong>inductance</strong> notée <strong>L</strong> et s’exprimant en <strong>henrys</strong>. Étudions à nouveau la relation entre tension et intensité, aux bornes d’une bobine :</p>
 <p><span class="math display">\[ U = Z_L \times I \]</span></p>
 <p>Où <span class="math inline">\(Z_L\)</span> est l’impédance d’une bobine idéale. Cette impédance se calcule grâce à la relation suivante :</p>
@@ -317,6 +336,12 @@
 </div>
 <div id="tubes-semi-conducteurs" class="section level3 hasAnchor" number="4.2.2">
 <h3><span class="header-section-number">4.2.2</span> Tubes &amp; semi-conducteurs<a href="notions-élémentaires-délectronique.html#tubes-semi-conducteurs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="_resources/bitmap/elec/tube.jpg" alt="Tubes, transistor &amp; circuits intégrés" width="25%" /><img src="_resources/bitmap/elec/transistor.jpg" alt="Tubes, transistor &amp; circuits intégrés" width="25%" /><img src="_resources/bitmap/elec/ic.jpg" alt="Tubes, transistor &amp; circuits intégrés" width="25%" />
+<p class="caption">
+Figure 4.4: Tubes, transistor &amp; circuits intégrés
+</p>
+</div>
 <p>Les <strong>tubes</strong>, tubes à vide, ou parfois, lampes, sont historiquement les premiers composants permettant d’amplifier le signal, contre une certaine tension d’alimentation. On les retrouve donc dans les préamplificateurs, égaliseurs, compresseurs, et autres amplificateurs jusque dans les années soixante. Ils sont alors progressivement remplacés par les <strong>transistors</strong>, composants appelés <strong>semi-conducteurs</strong>. Ces transistors permettent de réaliser la même amplification du signal qu’une lampe, mais sont beaucoup plus petits et demandent aussi moins de puissance électrique pour réaliser le même facteur d’amplification (aussi appelé <strong>gain</strong>). Peu de temps après la mise au point des transistors, les <strong>circuits intégrés</strong> sont inventés. Ces petites boîtes renferment plusieurs transistors, et peuvent également servir à l’amplification de signaux.</p>
 <p>Il est très important de savoir que l’invention du transistor et des circuits intégrés est sans doute l’avancée technologique la plus importante du siècle dernier. Elle a permis le développement exponentiel de l’industrie informatique grâce à la miniaturisation des composants.</p>
 <p>L’utilisation de tubes, de transistors ou de circuits intégrés au sein des machines audio, est souvent associée à une certaine « couleur ». Il y aurait donc un son des tubes, un son des transistors et un son des circuits intégrés. Les différences entre ces dipôles apparaissent principalement dans les zones de <strong>non-linéarité</strong> des composants, typiquement dans leur zone de saturation. La saturation apparaît lorsque la tension du signal amplifiée dépasse la tension d’alimentation du composant responsable de cette amplification. On observe alors l’apparition de certaines harmoniques. La distribution des harmoniques générés est différente en fonction du dipôle utilisé.</p>
@@ -327,7 +352,7 @@
 <h2><span class="header-section-number">4.3</span> L’influence de l’impédance entre différents appareils.<a href="notions-élémentaires-délectronique.html#linfluence-de-limpédance-entre-différents-appareils." class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Sur la fiche technique des appareils, on trouve des valeurs pour son impédance d’entrée et son impédance de sortie. Imaginons que nous connections un appareil A dans un appareil B. En pratique, nous faisons en sorte que l’impédance de sortie de l’appareil A soit dix fois inférieure à l’impédance d’entrée de l’appareil B. À partir du moment où ces impédances sont proches, voire que l’impédance de sortie de A soit plus grande que celle d’entrer de B, nous allons atténuer le signal transitant entre les deux appareils. Étudions de plus près ce phénomène.</p>
 <p>Soit le schéma électronique ci-dessous. On appelle <span class="math inline">\(U_{out}\)</span> la tension de sortie de l’appareil A et <span class="math inline">\(Z_{out}\)</span> son impédance de sortie. De façon similaire, on appelle <span class="math inline">\(U_{in}\)</span> la tension d’entré de l’appareil B et <span class="math inline">\(Z_{in}\)</span> son impédance d’entré.</p>
-<!--Ajouter schéma electronique-->
+<p><img src="_resources/diagrams/impedance.svg" style="display: block; margin: auto;" /></p>
 <p>Dans ce circuit, <span class="math inline">\(Z_{eq} = Z_{in} + Z_{out}\)</span> et <span class="math inline">\(U_{out} = Z_{eq} \times i\)</span>. Alors, <span class="math inline">\(i = \frac{U_{out}}{Z_{eq}} = \frac{U_{out}}{Z_{in} + Z_{out}}\)</span>. Toujours grâce au circuit ci-dessus, on peut dire que <span class="math inline">\(U_{in} = Z_{in} \times I\)</span>. En remplaçant dans l’expression précédente on trouve : <span class="math inline">\(\frac{U_{in}}{Z_{in}} = \frac{U_{out}}{Z_{in} + Z_{out}}\)</span></p>
 <p><span class="math display">\[ \frac{U_{in}}{U_{out}} = \frac{Z_{in}}{Z_{in} + Z_{out}} = \frac{1}{1+\frac{Z_{out}}{Z_{in}}} \]</span></p>
 <p>Dès lors, si <span class="math inline">\(Z_{in}\)</span> est très grand devant <span class="math inline">\(Z_{out}\)</span>, alors <span class="math inline">\(U_{in}\)</span> tend vers <span class="math inline">\(U_{out}\)</span>. Si <span class="math inline">\(Z_{out}\)</span> est très grand devant <span class="math inline">\(Z_{in}\)</span>, alors <span class="math inline">\(U_{in}\)</span> tend vers <span class="math inline">\(0\)</span>.</p>

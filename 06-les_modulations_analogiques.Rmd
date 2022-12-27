@@ -42,6 +42,16 @@ Les connexions symétriques nécessitent deux fils conducteurs pour chaque modul
 
 ## Les fiches & connecteurs
 
+```{r, echo=FALSE, fig.cap="Jack TS, Jack TRS, Jack Bantam, XLR, Sub-D 25", fig.show="hold", fig.align="center", out.width="20%"}
+
+knitr::include_graphics("_resources/bitmap/plug/jackTs.jpg")
+knitr::include_graphics("_resources/bitmap/plug/jackTrs.jpg")
+knitr::include_graphics("_resources/bitmap/plug/jackBantam.jpg")
+knitr::include_graphics("_resources/bitmap/plug/xlr.jpg")
+knitr::include_graphics("_resources/bitmap/plug/subd25.jpg")
+
+```
+
 On appelle « fiche » les éléments mécaniques situés aux extrémités d’un câble et permettant sa connexion à un équipement. Celle-ci nous permet de facilement identifier le type de câble que nous avons entre les mains.
 
 > Contrairement aux dires de certains mythes, majoritairement reliée à l’audiophilie, la différence de matériau utilisé pour le contact de la fiche n’a pas d’incidence sur le son.
