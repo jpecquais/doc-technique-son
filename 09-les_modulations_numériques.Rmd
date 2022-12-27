@@ -1,3 +1,23 @@
 # Les modulations numériques
 
+Après être passé au travers d'un convertisseur, l'audio est représenté par un ensemble d'échantillons. En raison de cette représentation particulière, on trouve un certain nombre de protocoles de communication de signaux numériques entre appareils. Il ne s'agit plus ici de faire transiter une tension analogue à celle de la variation de pression d'une onde sonore, mais plutôt une tension représentant des mots binaires (bits).
+
+## Les liaisons point à point
+
+### AES/EBU
+
+### S/PDIF
+
+### ADAT
+
+### MADI
+
+## Les réseaux audio numériques
+
 (En cours d'écriture)
+
+### DANTE
+
+### Ravenna / AES67
+
+### AVB
