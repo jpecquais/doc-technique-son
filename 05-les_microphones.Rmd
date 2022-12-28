@@ -123,6 +123,7 @@ fig <- plot_ly(
   df,
   type = 'scatterpolar',
   mode = 'lines'
+  
   ) 
 
 fig <- fig %>%
@@ -175,7 +176,13 @@ fig <- fig %>%
     )
   )
 
-fig
+if (knitr::is_latex_output())
+  {
+    trash <- capture.output(orca(fig, "_resources/plotly/test.svg"))
+    show_fig("_resources/plotly/test.svg")
+  } else {
+    fig
+  }
 
 ```
 

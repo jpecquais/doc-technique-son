@@ -1,4 +1,4 @@
-# Les modulations analogiques
+# Les modulations de signaux analogiques
 
 Les câbles assurent le transport de signaux électriques. Ces signaux peuvent représenter une onde sonore (précédemment captée par un microphone), une valeur de contrôle pour piloter un appareil (pédale d’expression) ou encore une information numérique (câble USB, ethernet, etc.). Nous aborderons ici les câbles dédiés aux modulations analogiques, et tout particulièrement à l’audio.
 

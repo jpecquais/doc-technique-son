@@ -88,7 +88,7 @@ import numpy as np
 fs = 48000  # Sample rate
 T = 1/fs    # Sample period
 L = 48    # Delay
-a = 1     # Attenuation factor
+a = 0.999999     # Attenuation factor
 
 # h[n] = dirac[n] + a * dirac[n-L]
 h = np.zeros(fs)

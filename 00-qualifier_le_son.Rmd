@@ -55,7 +55,7 @@ Dans notre environnement, les sons sont donc composés de plusieurs fréquences.
 
 > Plus généralement, on admettra que la composition fréquentielle, ou spectrale, de tout son peut être décomposée par une somme de sinusoïde. L'outil permettant de passer de la représentation temporelle d'un signal à sa représentation fréquentiel s'appelle la **transformée de Fourrier.** 
 
-```{python, echo=FALSE, fig.align="center", fig.caption="Signal carré et visualisation de son spectre"}
+```{python, echo=FALSE, fig.align="center", fig.cap="Signal carré et visualisation de son spectre"}
 import matplotlib.pyplot as plt
 import numpy as np
 

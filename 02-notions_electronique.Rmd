@@ -78,7 +78,7 @@ L’association de résistances, de condensateurs et de bobines donne des circui
 
 ### Tubes & semi-conducteurs
 
-```{r, echo=FALSE, fig.align="center", fig.cap="Tubes, transistor & circuits intégrés", fig.show="hold", out.width="25%"}
+```{r, echo=FALSE, fig.align="center", fig.cap="Tubes, transistor et circuits intégrés", fig.show="hold", out.width="25%"}
 
 knitr::include_graphics("_resources/bitmap/elec/tube.jpg")
 knitr::include_graphics("_resources/bitmap/elec/transistor.jpg")

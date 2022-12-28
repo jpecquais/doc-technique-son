@@ -103,6 +103,7 @@ La formulation du couple XY comprend deux microphones cardioïdes avec un angle 
 Le couple MS, également inventé par Alan Blumlein, permet de doser la quantité de stéréophonie après l’enregistrement.
 
 Pour se faire, ce couple utilise deux microphones :
+
 + Un omnidirectionnel, historiquement, mais aujourd’hui fréquemment remplacé par un microphone cardioïde.
 + Un bidirectionnel
 
@@ -110,13 +111,13 @@ Le microphone omnidirectionnel, ou cardioïde, va rendre compte du centre de la 
 
 Une fois enregistrés, ces deux canaux ont besoin d’être convertis, plus exactement dématricés, vers une paire de canaux stéréophonique. L’opération est très simple :
 
-$L = M+S$
-$R = M-S$
+$$L = M+S$$
+$$R = M-S$$
 
 Cette opération peut être réalisée sur une console de mixage, telle que décrite ci-dessous.
 
-```{r chunk-label, echo = FALSE, fig.cap = 'Dématriçage MS'}
-knitr::include_graphics(rep("_resources/171f157be4749ac8446dd9bdfff0625b.png"))
+```{r chunk-label, echo = FALSE, fig.cap = 'Dématriçage MS', out.width="40%"}
+knitr::include_graphics("_resources/171f157be4749ac8446dd9bdfff0625b.png")
 ```
 
 ### Le couple ORTF

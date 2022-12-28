@@ -1,3 +1,9 @@
 # Introduction à l'informatique musicale
 
 (En cours d'écriture)
+
+## Les protocoles de transmission d'information
+
+### MIDI
+
+### OSC

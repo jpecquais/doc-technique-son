@@ -1,16 +1,18 @@
 # Enceintes et salle d'écoute
 
-De tous les équipements audio nécessaires pour réaliser une prise de son, les enceintes (et les casques) sont certainement les plus importants. En effet, c’est sous leurs influences que nous pourrons écouter et contrôler notre travail. Il est donc crucial d’utiliser des écoutes regroupant un certain nombre de critères minimaux et de les connaître sur le bout des doigts.
+De tous les équipements audio nécessaires pour réaliser une prise de son, les enceintes (et les casques) sont certainement les plus importants. En effet, c’est à travers leur prisme que nous pourrons écouter et contrôler notre travail. Il est donc crucial d’utiliser des écoutes regroupant un certain nombre de critères et, surtout, de les connaître sur le bout des doigts.
+
+## Anatomie d'un hautparleur
+
+Qui plus est, le hautparleur est sans doute l’appareil audio que les Hommes savent le moins bien fabriquer. L’enceinte de monitoring parfait, à savoir linéaire en tout point, n’existe pas.
+
+Premièrement, nous ne savons pas fabriquer des haut-parleurs capables de reproduire uniformément toutes les fréquences. Ces derniers sont souvent spécialisés dans une certaine plage de fréquence. La plupart des enceintes de monitoring utilisent 3 voies : deux actives (utilisant des haut-parleurs) pour l’aigu et le médium, et une passive (évent avant ou arrière) pour le grave. L'utilisation du plusieurs voies impose donc l'utilisation de filtres induisant un déphasage de certaines fréquences.
+
+Deuxièmement, un haut-parleur peut être approché par un modèle « masse-ressort ». Cela signifie qu’il y a une certaine inertie à sa mise en action et une certaine inertie à sa mise en arrêt. L’enceinte idéale devrait posséder une inertie nulle. Cette inertie est potentiellement responsable d’un adoucissement des transitoires et d’une sensation de flou. 
 
 ## Choisir une paire d’écoutes
 
-Choisir une paire d’enceintes peut paraître être un exercice difficile. Il existe énormément de modèles, parcourant des gammes de prix allant de quelques dizaines d’euros à plusieurs dizaines de milliers.
-
-Qui plus est, l’enceinte audio est sans doute l’appareil audio que les Hommes savent le moins bien fabriquer. L’enceinte de monitoring parfait, à savoir linéaire en tout point, n’existe pas.
-
-Premièrement, nous ne savons pas fabriquer des haut-parleurs capables de reproduire uniformément toutes les fréquences. Ces derniers sont souvent spécialisés dans une certaine plage de fréquence. La plupart des enceintes de monitoring utilisent 3 voies : deux actives (utilisant des haut-parleurs) pour l’aigu et le médium, et une passive (évent avant ou arrière) pour le grave.
-
-Deuxièmement, un haut-parleur peut être approché par un modèle « masse-ressort ». Cela signifie qu’il y a une certaine inertie à sa mise en action et une certaine inertie à sa mise en arrêt. L’enceinte idéale devrait posséder une inertie nulle dans les deux cas, ce qui n’est malheureusement pas le cas en pratique. Cette inertie est potentiellement responsable d’un adoucissement des transitoires et d’une sensation de flou. 
+Choisir une paire d’enceintes peut sembler être un exercice difficile. Il existe énormément de modèles, coutant de quelques dizaines d’euros à plusieurs dizaines de milliers.
 
 Il y a cependant plusieurs critères assez objectifs pour évaluer la qualité d’une enceinte :
 
