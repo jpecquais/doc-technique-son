@@ -23,7 +23,7 @@
 <meta name="author" content="Jean-Loup Pecquais" />
 
 
-<meta name="date" content="2022-12-26" />
+<meta name="date" content="2022-12-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,6 +52,13 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.0/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 
 
 
@@ -143,7 +150,7 @@
 <li class="chapter" data-level="7.2.2" data-path="les-microphones.html"><a href="les-microphones.html#les-microphones-à-ruban"><i class="fa fa-check"></i><b>7.2.2</b> Les microphones à ruban</a></li>
 <li class="chapter" data-level="7.2.3" data-path="les-microphones.html"><a href="les-microphones.html#les-microphones-dynamiques"><i class="fa fa-check"></i><b>7.2.3</b> Les microphones dynamiques</a></li>
 <li class="chapter" data-level="7.2.4" data-path="les-microphones.html"><a href="les-microphones.html#la-taille-des-membranes"><i class="fa fa-check"></i><b>7.2.4</b> La taille des membranes</a></li>
-<li class="chapter" data-level="7.2.5" data-path="les-microphones.html"><a href="les-microphones.html#tubes-et-transistors"><i class="fa fa-check"></i><b>7.2.5</b> Tubes et transistors</a></li>
+<li class="chapter" data-level="7.2.5" data-path="les-microphones.html"><a href="les-microphones.html#microphones-à-tubes-ou-transistors"><i class="fa fa-check"></i><b>7.2.5</b> Microphones à tubes ou transistors?</a></li>
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="les-microphones.html"><a href="les-microphones.html#timbre-et-directivité"><i class="fa fa-check"></i><b>7.3</b> Timbre et directivité</a>
 <ul>
@@ -153,50 +160,93 @@
 <li class="chapter" data-level="7.3.4" data-path="les-microphones.html"><a href="les-microphones.html#directivités-réelles-détimbrage"><i class="fa fa-check"></i><b>7.3.4</b> Directivités réelles &amp; détimbrage</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html"><i class="fa fa-check"></i><b>8</b> Les modulations analogiques</a>
+<li class="chapter" data-level="8" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html"><i class="fa fa-check"></i><b>8</b> Les modulations de signaux analogiques</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#anatomie-dun-câble"><i class="fa fa-check"></i><b>8.1</b> Anatomie d’un câble</a>
+<li class="chapter" data-level="8.1" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html#anatomie-dun-câble"><i class="fa fa-check"></i><b>8.1</b> Anatomie d’un câble</a>
 <ul>
-<li class="chapter" data-level="8.1.1" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#longueur-du-câble-son-et-impédance"><i class="fa fa-check"></i><b>8.1.1</b> Longueur du câble, son et impédance</a></li>
-<li class="chapter" data-level="8.1.2" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#les-connexions-asymétriques"><i class="fa fa-check"></i><b>8.1.2</b> Les connexions asymétriques</a></li>
-<li class="chapter" data-level="8.1.3" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#les-connexions-symétriques"><i class="fa fa-check"></i><b>8.1.3</b> Les connexions symétriques</a></li>
+<li class="chapter" data-level="8.1.1" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html#longueur-du-câble-son-et-impédance"><i class="fa fa-check"></i><b>8.1.1</b> Longueur du câble, son et impédance</a></li>
+<li class="chapter" data-level="8.1.2" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html#les-connexions-asymétriques"><i class="fa fa-check"></i><b>8.1.2</b> Les connexions asymétriques</a></li>
+<li class="chapter" data-level="8.1.3" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html#les-connexions-symétriques"><i class="fa fa-check"></i><b>8.1.3</b> Les connexions symétriques</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#les-fiches-connecteurs"><i class="fa fa-check"></i><b>8.2</b> Les fiches &amp; connecteurs</a></li>
-<li class="chapter" data-level="8.3" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#exemples-pratiques"><i class="fa fa-check"></i><b>8.3</b> Exemples pratiques</a>
+<li class="chapter" data-level="8.2" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html#les-fiches-connecteurs"><i class="fa fa-check"></i><b>8.2</b> Les fiches &amp; connecteurs</a></li>
+<li class="chapter" data-level="8.3" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html#exemples-pratiques"><i class="fa fa-check"></i><b>8.3</b> Exemples pratiques</a>
 <ul>
-<li class="chapter" data-level="8.3.1" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#câble-jack-mono"><i class="fa fa-check"></i><b>8.3.1</b> Câble jack « mono »</a></li>
-<li class="chapter" data-level="8.3.2" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#câble-jack-stéréo"><i class="fa fa-check"></i><b>8.3.2</b> Câble jack « stéréo »</a></li>
-<li class="chapter" data-level="8.3.3" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#câble-y"><i class="fa fa-check"></i><b>8.3.3</b> Câble « Y »</a></li>
-<li class="chapter" data-level="8.3.4" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#les-connexions-dinsert"><i class="fa fa-check"></i><b>8.3.4</b> Les connexions d’insert</a></li>
+<li class="chapter" data-level="8.3.1" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html#câble-jack-mono"><i class="fa fa-check"></i><b>8.3.1</b> Câble jack « mono »</a></li>
+<li class="chapter" data-level="8.3.2" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html#câble-jack-stéréo"><i class="fa fa-check"></i><b>8.3.2</b> Câble jack « stéréo »</a></li>
+<li class="chapter" data-level="8.3.3" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html#câble-y"><i class="fa fa-check"></i><b>8.3.3</b> Câble « Y »</a></li>
+<li class="chapter" data-level="8.3.4" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html#les-connexions-dinsert"><i class="fa fa-check"></i><b>8.3.4</b> Les connexions d’insert</a></li>
 </ul></li>
-<li class="chapter" data-level="8.4" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#routage-des-signaux"><i class="fa fa-check"></i><b>8.4</b> Routage des signaux</a></li>
+<li class="chapter" data-level="8.4" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html#routage-des-signaux"><i class="fa fa-check"></i><b>8.4</b> Routage des signaux</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="les-préamplificateurs-de-microphones.html"><a href="les-préamplificateurs-de-microphones.html"><i class="fa fa-check"></i><b>9</b> Les préamplificateurs de microphones</a>
+<li class="chapter" data-level="9" data-path="les-préamplificateurs.html"><a href="les-préamplificateurs.html"><i class="fa fa-check"></i><b>9</b> Les préamplificateurs</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="les-préamplificateurs-de-microphones.html"><a href="les-préamplificateurs-de-microphones.html#les-qualités-dun-préampli"><i class="fa fa-check"></i><b>9.1</b> Les qualités d’un préampli</a></li>
-<li class="chapter" data-level="9.2" data-path="les-préamplificateurs-de-microphones.html"><a href="les-préamplificateurs-de-microphones.html#les-technologies-de-préampli"><i class="fa fa-check"></i><b>9.2</b> Les technologies de préampli</a></li>
-<li class="chapter" data-level="9.3" data-path="les-préamplificateurs-de-microphones.html"><a href="les-préamplificateurs-de-microphones.html#les-contrôles-dun-préampli"><i class="fa fa-check"></i><b>9.3</b> Les contrôles d’un préampli</a></li>
+<li class="chapter" data-level="9.1" data-path="les-préamplificateurs.html"><a href="les-préamplificateurs.html#critères-de-choix-dun-préamplificateur"><i class="fa fa-check"></i><b>9.1</b> Critères de choix d’un préamplificateur</a></li>
+<li class="chapter" data-level="9.2" data-path="les-préamplificateurs.html"><a href="les-préamplificateurs.html#les-technologies-de-préampli"><i class="fa fa-check"></i><b>9.2</b> Les technologies de préampli</a></li>
+<li class="chapter" data-level="9.3" data-path="les-préamplificateurs.html"><a href="les-préamplificateurs.html#les-réglages-dun-préampli"><i class="fa fa-check"></i><b>9.3</b> Les réglages d’un préampli</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html"><i class="fa fa-check"></i><b>10</b> La conversion analogique numérique</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-nécessité-de-la-conversion-analogique-numérique"><i class="fa fa-check"></i><b>10.1</b> La nécessité de la conversion analogique numérique</a></li>
-<li class="chapter" data-level="10.2" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#dun-signal-continu-vers-un-signal-échantillonné"><i class="fa fa-check"></i><b>10.2</b> D’un signal continu vers un signal échantillonné</a></li>
-<li class="chapter" data-level="10.3" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-fréquence-déchantillonnage"><i class="fa fa-check"></i><b>10.3</b> La fréquence d’échantillonnage</a>
+<li class="chapter" data-level="10.2" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#théorie-de-léchantillonnage"><i class="fa fa-check"></i><b>10.2</b> Théorie de l’échantillonnage</a>
 <ul>
-<li class="chapter" data-level="10.3.1" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#le-théorème-de-shannon-nyquist"><i class="fa fa-check"></i><b>10.3.1</b> Le théorème de Shannon-Nyquist</a></li>
+<li class="chapter" data-level="10.2.1" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#dun-signal-continu-vers-un-signal-échantillonné"><i class="fa fa-check"></i><b>10.2.1</b> D’un signal continu vers un signal échantillonné</a></li>
+<li class="chapter" data-level="10.2.2" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-fréquence-déchantillonnage"><i class="fa fa-check"></i><b>10.2.2</b> La fréquence d’échantillonnage</a></li>
+<li class="chapter" data-level="10.2.3" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-résolution-de-quantification"><i class="fa fa-check"></i><b>10.2.3</b> La résolution de quantification</a></li>
 </ul></li>
-<li class="chapter" data-level="10.4" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-résolution-de-quantification"><i class="fa fa-check"></i><b>10.4</b> La résolution de quantification</a></li>
-<li class="chapter" data-level="10.5" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-mauvaise-réputation-du-son-numérique"><i class="fa fa-check"></i><b>10.5</b> La “mauvaise réputation” du son numérique</a></li>
-<li class="chapter" data-level="10.6" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-conversion-sigma-delta"><i class="fa fa-check"></i><b>10.6</b> La conversion sigma-delta</a></li>
+<li class="chapter" data-level="10.3" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#quelle-influence-sur-le-signal"><i class="fa fa-check"></i><b>10.3</b> Quelle influence sur le signal ?</a></li>
+<li class="chapter" data-level="10.4" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-conversion-sigma-delta"><i class="fa fa-check"></i><b>10.4</b> La conversion sigma-delta</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html"><i class="fa fa-check"></i><b>11</b> Les modulations numériques</a></li>
-<li class="chapter" data-level="12" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html"><i class="fa fa-check"></i><b>12</b> Introduction à l’informatique musicale</a></li>
-<li class="chapter" data-level="13" data-path="enceintes-et-salle-découte.html"><a href="enceintes-et-salle-découte.html"><i class="fa fa-check"></i><b>13</b> Enceintes et salle d’écoute</a>
+<li class="chapter" data-level="11" data-path="les-modulations-de-signaux-numériques.html"><a href="les-modulations-de-signaux-numériques.html"><i class="fa fa-check"></i><b>11</b> Les modulations de signaux numériques</a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="enceintes-et-salle-découte.html"><a href="enceintes-et-salle-découte.html#choisir-une-paire-découtes"><i class="fa fa-check"></i><b>13.1</b> Choisir une paire d’écoutes</a></li>
-<li class="chapter" data-level="13.2" data-path="enceintes-et-salle-découte.html"><a href="enceintes-et-salle-découte.html#placer-correctement-son-écoute"><i class="fa fa-check"></i><b>13.2</b> Placer correctement son écoute</a></li>
-<li class="chapter" data-level="13.3" data-path="enceintes-et-salle-découte.html"><a href="enceintes-et-salle-découte.html#lécoute-au-casque"><i class="fa fa-check"></i><b>13.3</b> L’écoute au casque</a></li>
-<li class="chapter" data-level="13.4" data-path="enceintes-et-salle-découte.html"><a href="enceintes-et-salle-découte.html#casque-fermé-ou-casque-ouvert"><i class="fa fa-check"></i><b>13.4</b> Casque fermé ou casque ouvert ?</a></li>
+<li class="chapter" data-level="11.1" data-path="les-modulations-de-signaux-numériques.html"><a href="les-modulations-de-signaux-numériques.html#les-liaisons-point-à-point"><i class="fa fa-check"></i><b>11.1</b> Les liaisons point à point</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="les-modulations-de-signaux-numériques.html"><a href="les-modulations-de-signaux-numériques.html#aes3-aesebu"><i class="fa fa-check"></i><b>11.1.1</b> AES3 ; AES/EBU</a></li>
+<li class="chapter" data-level="11.1.2" data-path="les-modulations-de-signaux-numériques.html"><a href="les-modulations-de-signaux-numériques.html#adat"><i class="fa fa-check"></i><b>11.1.2</b> ADAT</a></li>
+<li class="chapter" data-level="11.1.3" data-path="les-modulations-de-signaux-numériques.html"><a href="les-modulations-de-signaux-numériques.html#madi"><i class="fa fa-check"></i><b>11.1.3</b> MADI</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="les-modulations-de-signaux-numériques.html"><a href="les-modulations-de-signaux-numériques.html#les-réseaux-audio-numériques"><i class="fa fa-check"></i><b>11.2</b> Les réseaux audio numériques</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html"><i class="fa fa-check"></i><b>12</b> Introduction à l’informatique musicale</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#fonctionnement-dun-ordinateur"><i class="fa fa-check"></i><b>12.1</b> Fonctionnement d’un ordinateur</a></li>
+<li class="chapter" data-level="12.2" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#les-systèmes-dexploitation"><i class="fa fa-check"></i><b>12.2</b> Les systèmes d’exploitation</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#linux"><i class="fa fa-check"></i><b>12.2.1</b> Linux</a></li>
+<li class="chapter" data-level="12.2.2" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#microsoft-windows"><i class="fa fa-check"></i><b>12.2.2</b> Microsoft Windows</a></li>
+<li class="chapter" data-level="12.2.3" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#apple-macos"><i class="fa fa-check"></i><b>12.2.3</b> Apple MacOS</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#les-pilotes-audio"><i class="fa fa-check"></i><b>12.3</b> Les pilotes audio</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#asio"><i class="fa fa-check"></i><b>12.3.1</b> ASIO</a></li>
+<li class="chapter" data-level="12.3.2" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#coreaudio"><i class="fa fa-check"></i><b>12.3.2</b> CoreAudio</a></li>
+<li class="chapter" data-level="12.3.3" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#alsa"><i class="fa fa-check"></i><b>12.3.3</b> ALSA</a></li>
+<li class="chapter" data-level="12.3.4" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#jack-audio"><i class="fa fa-check"></i><b>12.3.4</b> Jack Audio</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#les-stations-de-travail-audio-numérique-daw"><i class="fa fa-check"></i><b>12.4</b> Les Stations de Travail Audio-Numérique (DAW)</a>
+<ul>
+<li class="chapter" data-level="12.4.1" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#le-moteur-audio"><i class="fa fa-check"></i><b>12.4.1</b> Le moteur audio</a></li>
+<li class="chapter" data-level="12.4.2" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#les-fonctionnalités"><i class="fa fa-check"></i><b>12.4.2</b> Les fonctionnalités</a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#les-protocoles-de-transmission-dinformations"><i class="fa fa-check"></i><b>12.5</b> Les protocoles de transmission d’informations</a>
+<ul>
+<li class="chapter" data-level="12.5.1" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#midi"><i class="fa fa-check"></i><b>12.5.1</b> MIDI</a></li>
+<li class="chapter" data-level="12.5.2" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#osc"><i class="fa fa-check"></i><b>12.5.2</b> OSC</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html"><i class="fa fa-check"></i><b>13</b> Enceintes et amplificateurs</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#anatomie-dun-haut-parleur"><i class="fa fa-check"></i><b>13.1</b> Anatomie d’un haut-parleur</a></li>
+<li class="chapter" data-level="13.2" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#amplification-et-impédance"><i class="fa fa-check"></i><b>13.2</b> Amplification et impédance</a></li>
+<li class="chapter" data-level="13.3" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#puissance-et-sensibilité"><i class="fa fa-check"></i><b>13.3</b> Puissance et sensibilité</a></li>
+<li class="chapter" data-level="13.4" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#conseils-pratiques"><i class="fa fa-check"></i><b>13.4</b> Conseils pratiques</a>
+<ul>
+<li class="chapter" data-level="13.4.1" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#choisir-une-paire-découtes"><i class="fa fa-check"></i><b>13.4.1</b> Choisir une paire d’écoutes</a></li>
+<li class="chapter" data-level="13.4.2" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#placer-correctement-son-écoute"><i class="fa fa-check"></i><b>13.4.2</b> Placer correctement son écoute</a></li>
+</ul></li>
+<li class="chapter" data-level="13.5" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#lécoute-au-casque"><i class="fa fa-check"></i><b>13.5</b> L’écoute au casque</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#casque-fermé-ou-casque-ouvert"><i class="fa fa-check"></i><b>13.5.1</b> Casque fermé ou casque ouvert ?</a></li>
+</ul></li>
 </ul></li>
 <li class="part"><span><b>III Méthodologie de prise de son</b></span></li>
 <li class="chapter" data-level="14" data-path="mono-et-multimicrophonie.html"><a href="mono-et-multimicrophonie.html"><i class="fa fa-check"></i><b>14</b> Mono et multimicrophonie</a></li>
@@ -232,7 +282,7 @@
 <ul>
 <li class="chapter" data-level="16.4.1" data-path="considérations-pratiques.html"><a href="considérations-pratiques.html#le-rapport-a-la-distance-du-microphone"><i class="fa fa-check"></i><b>16.4.1</b> Le rapport a la distance du microphone</a></li>
 <li class="chapter" data-level="16.4.2" data-path="considérations-pratiques.html"><a href="considérations-pratiques.html#quand-choisir-une-prise-de-son-stéréophonique"><i class="fa fa-check"></i><b>16.4.2</b> Quand choisir une prise de son stéréophonique</a></li>
-<li class="chapter" data-level="16.4.3" data-path="considérations-pratiques.html"><a href="considérations-pratiques.html#quand-choisir-le-multi-microphonie"><i class="fa fa-check"></i><b>16.4.3</b> Quand choisir le multi-microphonie</a></li>
+<li class="chapter" data-level="16.4.3" data-path="considérations-pratiques.html"><a href="considérations-pratiques.html#quand-choisir-la-multi-microphonie"><i class="fa fa-check"></i><b>16.4.3</b> Quand choisir la multi-microphonie</a></li>
 </ul></li>
 <li class="chapter" data-level="16.5" data-path="considérations-pratiques.html"><a href="considérations-pratiques.html#le-choix-du-préamplificateur"><i class="fa fa-check"></i><b>16.5</b> Le choix du préamplificateur</a>
 <ul>
@@ -280,13 +330,18 @@
 <blockquote>
 <p>Plus généralement, on admettra que la composition fréquentielle, ou spectrale, de tout son peut être décomposée par une somme de sinusoïde. L’outil permettant de passer de la représentation temporelle d’un signal à sa représentation fréquentiel s’appelle la <strong>transformée de Fourrier.</strong></p>
 </blockquote>
-<p><img src="_main_files/figure-html/unnamed-chunk-3-3.png" width="624" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="_main_files/figure-html/unnamed-chunk-3-3.png" alt="Signal carré et visualisation de son spectre" width="624" />
+<p class="caption">
+Figure 2.1: Signal carré et visualisation de son spectre
+</p>
+</div>
 <p>La fréquence fondamentale donne la <strong>hauteur</strong> du son (sa note en musique par exemple). Les partiels enrichissent cette fréquence fondamentale et créés le <strong>timbre</strong> d’un son. C’est en partie grâce au timbre que l’on peut reconnaître différents instruments de musiques jouant la même note.</p>
 <p>Un son se caractérise également par l’évolution de son amplitude au cours du temps. On parle alors de son <strong>enveloppe</strong>. Un modèle courant d’enveloppe est l’ADSR : <em>Attack</em>, <em>Decay</em>, <em>Sustain</em>, <em>Release</em>, soit <em>Attaque</em>, <em>Décroissance</em>, <em>Maintient</em> et <em>Relâchement</em>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
 <img src="_resources/drawings/adsr.svg" alt="Exemple d'enveloppe ADSR" width="65%" />
 <p class="caption">
-Figure 2.1: Exemple d’enveloppe ADSR
+Figure 2.2: Exemple d’enveloppe ADSR
 </p>
 </div>
 <p>Lorsque son temps et très bref, l’ensemble <em>attaque</em> et <em>décroissance</em> forme les <strong>transitoires</strong>. Cette partie du signal est responsable de la sensation percussive du son.</p>
@@ -306,7 +361,7 @@ Figure 2.1: Exemple d’enveloppe ADSR
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
 <img src="_resources/drawings/mic_dist.svg" alt="Distance entre deux microphones." width="25%" />
 <p class="caption">
-Figure 2.2: Distance entre deux microphones.
+Figure 2.3: Distance entre deux microphones.
 </p>
 </div>
 <p><span class="math display">\[ t = \frac {d_2-d_1}{c}\]</span></p>
@@ -325,7 +380,7 @@ Figure 2.2: Distance entre deux microphones.
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
 <img src="_resources/drawings/spectre.svg" alt="Distance entre deux microphones." width="100%" />
 <p class="caption">
-Figure 2.3: Distance entre deux microphones.
+Figure 2.4: Distance entre deux microphones.
 </p>
 </div>
 <p><strong>Proposition d’association entre bandes de fréquences et sensation</strong>.</p>
@@ -350,13 +405,14 @@ Figure 2.3: Distance entre deux microphones.
 <p>Notre oreille fonctionne de façon logarithmique, et non linéairement, face à une variation de pression acoustique. C’est pour cela que l’on parle généralement de <strong>niveau de pression acoustique</strong>, où <strong>SPL</strong> (pour Sound Pressure Level en anglais), qui s’exprimera en <strong>décibel</strong>. La relation entre la variation de pression et le niveau de pression acoustique se fait grâce à la relation :</p>
 <p><span class="math display">\[L_p = 20\,\log_{10}\Big(\frac{p_{eff}}{p_{ref}}\Big) \qquad p_{ref} = 20\mu Pa\]</span></p>
 <blockquote>
-<p>Si la pression acoustique double, on observe une augmentation du niveau sonore de 3 dB SPL. Lorsqu’on ressent un doublement du niveau sonore, on observe une augmentation de 10 dB.</p>
+<p>Si la pression acoustique double, on observe une augmentation du niveau sonore de 6 dB SPL. Lorsqu’on ressent un doublement du niveau sonore, on observe une augmentation de 20 dB.</p>
+<p>La pression acoustique est divisée par deux à chaque doublement de distance.</p>
 </blockquote>
 <p>La question se complexifie lorsque l’on rajoute la dimension fréquentielle à la question de la perception du niveau sonore. En effet, nous percevons des niveaux sonores différents pour différentes fréquences pourtant émises au même niveau de pression acoustique. Pour inclure cette dépendance fréquentielle, nous avons mis en place une unité de mesure : la <strong>sonie</strong> ou <strong>bruyance</strong> (<strong>loudness</strong> en anglais). Il est donc possible ensuite de définir des courbes d’<strong>isosonie</strong>, c’est-à-dire des courbes indiquant un niveau sonore de perception égale en fonction de la fréquence et du niveau de pression acoustique.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
 <img src="_resources/diagrams/Courbes_isosonie.png" alt="Courbes d'isosonie, aussi dites de Fletcher-Munson" width="100%" />
 <p class="caption">
-Figure 2.4: Courbes d’isosonie, aussi dites de Fletcher-Munson
+Figure 2.5: Courbes d’isosonie, aussi dites de Fletcher-Munson
 </p>
 </div>
 <p>Que conclure de cet abaque ?</p>
@@ -376,7 +432,7 @@ Figure 2.4: Courbes d’isosonie, aussi dites de Fletcher-Munson
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
 <img src="_resources/drawings/delta_t.svg" alt="Illustration de l'ITD"  />
 <p class="caption">
-Figure 2.5: Illustration de l’ITD
+Figure 2.6: Illustration de l’ITD
 </p>
 </div>
 <p>Si nos oreilles sont espacées de quelques centimètres, notre tête les séparant représente un obstacle acoustique non négligeable. De plus, les pavillons des oreilles imposent également une certaine directivité à notre écoute. En première approximation, on pourra donc considérer que l’ensemble formé par la tête et les pavillons implique une atténuation linéaire des ondes sonores, elle-même fonction de l’angle d’incidence. On appelle cette différence de niveau <strong>différence d’intensité interaural</strong>, ou <strong>ILD</strong> (interaural level difference) et se note <span class="math inline">\(\Delta i\)</span>. On considère que si la différence de niveau de pression acoustique entre les deux oreilles est supérieure à 20 dB, on entendra l’évènement sonore complètement latéralisé.</p>

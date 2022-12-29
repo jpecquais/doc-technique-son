@@ -1,4 +1,4 @@
-p {
+p:not(.caption) {
   text-align: justify;
   text-justify: inter-word;
 }

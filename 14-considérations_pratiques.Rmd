@@ -71,13 +71,14 @@ L’avantage de tels dispositifs de prises de son est de peupler dès la prise l
 
 Il s’agit à nouveau d’un choix esthétique. Faire le choix d’une prise de son monophonique permet de renforcer la sensation de frontalité et de densité d’une source. À l’inverse, une prise de son stéréophonique donnera une définition spatiale accrue.
 
-### Quand choisir le multi-microphonie
+### Quand choisir la multi-microphonie
 
 La multi-microphonie consiste à enregistrer un instrument via l’utilisation de microphones (principalement) directifs, placés à différents endroits jugés pertinents et en hyperproximité.
 
 Cette approche esthétique de la prise de son est devenue indissociable des « musiques actuelles ». Elle offre l’avantage d’une grande flexibilité de traitement lors de la phase de mixage. Voir, elle implique une certaine partie des traitements.
 
 En effet, une prise d’hyperproximité va systématiquement relever deux défauts :
+
 + un effet de proximité : le grave/bas médium de la source paraît hypertrophié lors de l’emploi de microphones directifs.
 + Les dynamiques de jeux sont également hypertrophiées.
 

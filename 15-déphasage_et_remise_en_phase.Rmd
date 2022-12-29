@@ -12,6 +12,7 @@ $sin (\omega t + \phi)$ où $\omega = 2\pi f$
 La phase de ce signal est décrite par $\omega t +\phi$
 
 Les deux paramètres responsables de déphasages audibles sont :
+
 + $t$, le temps
 + $\phi$, la phase à l’origine
 

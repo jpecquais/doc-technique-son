@@ -12,7 +12,7 @@ D’un point de vue sonore, le travail de prise de son est absolument critique. 
 
 La plupart des choix faits à la prise de son ne pourront pas être renégociés a posteriori. Il convient donc de mettre d’accord les artistes, le directeur artistique et le preneur de son sur les moyens à mettre en œuvre.
 
-```{r, echo=FALSE, out.width="80%", fig.cap = "Entonnoir de la production musicale"}
+```{r, echo=FALSE, out.width="80%", fig.align="center",fig.cap = "Entonnoir de la production musicale"}
 show_fig("_resources/diagrams/productionSonore.svg")
 ```
 

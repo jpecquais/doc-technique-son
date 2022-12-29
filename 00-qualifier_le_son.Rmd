@@ -55,7 +55,7 @@ Dans notre environnement, les sons sont donc composés de plusieurs fréquences.
 
 > Plus généralement, on admettra que la composition fréquentielle, ou spectrale, de tout son peut être décomposée par une somme de sinusoïde. L'outil permettant de passer de la représentation temporelle d'un signal à sa représentation fréquentiel s'appelle la **transformée de Fourrier.** 
 
-```{python, echo=FALSE, fig.align="center", fig.caption="Signal carré et visualisation de son spectre"}
+```{python, echo=FALSE, fig.align="center", fig.cap="Signal carré et visualisation de son spectre"}
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -169,7 +169,9 @@ Notre oreille fonctionne de façon logarithmique, et non linéairement, face à 
 
 $$L_p = 20\,\log_{10}\Big(\frac{p_{eff}}{p_{ref}}\Big) \qquad p_{ref} = 20\mu Pa$$
 
-> Si la pression acoustique double, on observe une augmentation du niveau sonore de 3 dB SPL. Lorsqu'on ressent un doublement du niveau sonore, on observe une augmentation de 10 dB.
+> Si la pression acoustique double, on observe une augmentation du niveau sonore de 6 dB SPL. Lorsqu'on ressent un doublement du niveau sonore, on observe une augmentation de 20 dB.
+>
+> La pression acoustique est divisée par deux à chaque doublement de distance.
 
 La question se complexifie lorsque l'on rajoute la dimension fréquentielle à la question de la perception du niveau sonore.  En effet, nous percevons des niveaux sonores différents pour différentes fréquences pourtant émises au même niveau de pression acoustique. Pour inclure cette dépendance fréquentielle, nous avons mis en place une unité de mesure : la **sonie** ou **bruyance** (**loudness** en anglais). Il est donc possible ensuite de définir des courbes d'**isosonie**, c'est-à-dire des courbes indiquant un niveau sonore de perception égale en fonction de la fréquence et du niveau de pression acoustique.
 

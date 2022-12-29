@@ -43,12 +43,16 @@ Il est communément admis que le $\Delta t$ aura une efficacité maximale dans l
 ## Principes de la prise de son au couple
 
 Pour créer son effet stéréophonique, les couples de prise de son utilisent les mêmes mécanismes que notre écoute naturelle :
+
 + La différence de temps
 + La différence d’intensité
 
 Il va de soi que, pour fonctionner de façon optimale, les microphones utilisés pour réaliser une prise de son stéréophonique doivent être de même marque, de même modèle et appairée.
 
+> L'appairage garantit que les microphones aient des caractéristiques techniques suffisamment proches pour être considérés comme identiques.
+
 Afin de manipuler ces mécanismes, le preneur de son peut jouer sur les paramètres suivant :
+
 + La directivité des microphones
 + L’angle entre les capsules
 + La distance entre les capsules
@@ -71,7 +75,7 @@ Il est important de commencer par évoquer les abaques de Michael Williams, ayan
 
 On trouve également beaucoup d’application mobile, comme celle du constructeur du microphone Neumann, s’appuyant sur les travaux de Michael Williams pour aider leurs utilisateurs à correctement positionner leurs microphones. Évidemment, et heureusement, rien n’est spécifique à un fabricant de microphones en particulier, l’application d’un constructeur A peut servir pour placer des microphones d’un constructeur B.
 
-Plus récemment, des chercheurs britanniques ont développé une application dénommée [MARRS](https://marrsweb.hud.ac.uk/), permettant de positionner son couple de prise de son par rapport aux sources via une interface graphique très simple à utiliser. Cette application est disponible sur mobile et sur navigateur internet.
+Plus récemment, des chercheurs britanniques ont développé une application, nommée [MARRS](https://marrsweb.hud.ac.uk/), permettant de positionner son couple de prise de son par rapport aux sources via une interface graphique très simple à utiliser. Cette application est disponible sur mobile et sur navigateur internet.
 
 ### Privilégier le $\Delta i$ ou le $\Delta t$ ?
 
@@ -103,6 +107,7 @@ La formulation du couple XY comprend deux microphones cardioïdes avec un angle 
 Le couple MS, également inventé par Alan Blumlein, permet de doser la quantité de stéréophonie après l’enregistrement.
 
 Pour se faire, ce couple utilise deux microphones :
+
 + Un omnidirectionnel, historiquement, mais aujourd’hui fréquemment remplacé par un microphone cardioïde.
 + Un bidirectionnel
 
@@ -110,13 +115,13 @@ Le microphone omnidirectionnel, ou cardioïde, va rendre compte du centre de la 
 
 Une fois enregistrés, ces deux canaux ont besoin d’être convertis, plus exactement dématricés, vers une paire de canaux stéréophonique. L’opération est très simple :
 
-$L = M+S$
-$R = M-S$
+$$L = M+S$$
+$$R = M-S$$
 
 Cette opération peut être réalisée sur une console de mixage, telle que décrite ci-dessous.
 
-```{r chunk-label, echo = FALSE, fig.cap = 'Dématriçage MS'}
-knitr::include_graphics(rep("_resources/171f157be4749ac8446dd9bdfff0625b.png"))
+```{r chunk-label, echo = FALSE, fig.cap = 'Dématriçage MS', out.width="40%"}
+knitr::include_graphics("_resources/171f157be4749ac8446dd9bdfff0625b.png")
 ```
 
 ### Le couple ORTF

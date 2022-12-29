@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>8 Les modulations analogiques | Guide pratique de la prise de son et du mixage appliqués à la musique</title>
+  <title>8 Les modulations de signaux analogiques | Guide pratique de la prise de son et du mixage appliqués à la musique</title>
   <meta name="description" content="Livre sur la prise de son, le mixage et la production musicale, par Jean-Loup Pecquais." />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="8 Les modulations analogiques | Guide pratique de la prise de son et du mixage appliqués à la musique" />
+  <meta property="og:title" content="8 Les modulations de signaux analogiques | Guide pratique de la prise de son et du mixage appliqués à la musique" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Livre sur la prise de son, le mixage et la production musicale, par Jean-Loup Pecquais." />
   <meta name="github-repo" content="jpecquais/doc-technique-son" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="8 Les modulations analogiques | Guide pratique de la prise de son et du mixage appliqués à la musique" />
+  <meta name="twitter:title" content="8 Les modulations de signaux analogiques | Guide pratique de la prise de son et du mixage appliqués à la musique" />
   
   <meta name="twitter:description" content="Livre sur la prise de son, le mixage et la production musicale, par Jean-Loup Pecquais." />
   
@@ -23,7 +23,7 @@
 <meta name="author" content="Jean-Loup Pecquais" />
 
 
-<meta name="date" content="2022-12-26" />
+<meta name="date" content="2022-12-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="les-microphones.html"/>
-<link rel="next" href="les-préamplificateurs-de-microphones.html"/>
+<link rel="next" href="les-préamplificateurs.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -52,6 +52,13 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.0/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 
 
 
@@ -143,7 +150,7 @@
 <li class="chapter" data-level="7.2.2" data-path="les-microphones.html"><a href="les-microphones.html#les-microphones-à-ruban"><i class="fa fa-check"></i><b>7.2.2</b> Les microphones à ruban</a></li>
 <li class="chapter" data-level="7.2.3" data-path="les-microphones.html"><a href="les-microphones.html#les-microphones-dynamiques"><i class="fa fa-check"></i><b>7.2.3</b> Les microphones dynamiques</a></li>
 <li class="chapter" data-level="7.2.4" data-path="les-microphones.html"><a href="les-microphones.html#la-taille-des-membranes"><i class="fa fa-check"></i><b>7.2.4</b> La taille des membranes</a></li>
-<li class="chapter" data-level="7.2.5" data-path="les-microphones.html"><a href="les-microphones.html#tubes-et-transistors"><i class="fa fa-check"></i><b>7.2.5</b> Tubes et transistors</a></li>
+<li class="chapter" data-level="7.2.5" data-path="les-microphones.html"><a href="les-microphones.html#microphones-à-tubes-ou-transistors"><i class="fa fa-check"></i><b>7.2.5</b> Microphones à tubes ou transistors?</a></li>
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="les-microphones.html"><a href="les-microphones.html#timbre-et-directivité"><i class="fa fa-check"></i><b>7.3</b> Timbre et directivité</a>
 <ul>
@@ -153,50 +160,93 @@
 <li class="chapter" data-level="7.3.4" data-path="les-microphones.html"><a href="les-microphones.html#directivités-réelles-détimbrage"><i class="fa fa-check"></i><b>7.3.4</b> Directivités réelles &amp; détimbrage</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html"><i class="fa fa-check"></i><b>8</b> Les modulations analogiques</a>
+<li class="chapter" data-level="8" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html"><i class="fa fa-check"></i><b>8</b> Les modulations de signaux analogiques</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#anatomie-dun-câble"><i class="fa fa-check"></i><b>8.1</b> Anatomie d’un câble</a>
+<li class="chapter" data-level="8.1" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html#anatomie-dun-câble"><i class="fa fa-check"></i><b>8.1</b> Anatomie d’un câble</a>
 <ul>
-<li class="chapter" data-level="8.1.1" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#longueur-du-câble-son-et-impédance"><i class="fa fa-check"></i><b>8.1.1</b> Longueur du câble, son et impédance</a></li>
-<li class="chapter" data-level="8.1.2" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#les-connexions-asymétriques"><i class="fa fa-check"></i><b>8.1.2</b> Les connexions asymétriques</a></li>
-<li class="chapter" data-level="8.1.3" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#les-connexions-symétriques"><i class="fa fa-check"></i><b>8.1.3</b> Les connexions symétriques</a></li>
+<li class="chapter" data-level="8.1.1" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html#longueur-du-câble-son-et-impédance"><i class="fa fa-check"></i><b>8.1.1</b> Longueur du câble, son et impédance</a></li>
+<li class="chapter" data-level="8.1.2" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html#les-connexions-asymétriques"><i class="fa fa-check"></i><b>8.1.2</b> Les connexions asymétriques</a></li>
+<li class="chapter" data-level="8.1.3" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html#les-connexions-symétriques"><i class="fa fa-check"></i><b>8.1.3</b> Les connexions symétriques</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#les-fiches-connecteurs"><i class="fa fa-check"></i><b>8.2</b> Les fiches &amp; connecteurs</a></li>
-<li class="chapter" data-level="8.3" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#exemples-pratiques"><i class="fa fa-check"></i><b>8.3</b> Exemples pratiques</a>
+<li class="chapter" data-level="8.2" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html#les-fiches-connecteurs"><i class="fa fa-check"></i><b>8.2</b> Les fiches &amp; connecteurs</a></li>
+<li class="chapter" data-level="8.3" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html#exemples-pratiques"><i class="fa fa-check"></i><b>8.3</b> Exemples pratiques</a>
 <ul>
-<li class="chapter" data-level="8.3.1" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#câble-jack-mono"><i class="fa fa-check"></i><b>8.3.1</b> Câble jack « mono »</a></li>
-<li class="chapter" data-level="8.3.2" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#câble-jack-stéréo"><i class="fa fa-check"></i><b>8.3.2</b> Câble jack « stéréo »</a></li>
-<li class="chapter" data-level="8.3.3" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#câble-y"><i class="fa fa-check"></i><b>8.3.3</b> Câble « Y »</a></li>
-<li class="chapter" data-level="8.3.4" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#les-connexions-dinsert"><i class="fa fa-check"></i><b>8.3.4</b> Les connexions d’insert</a></li>
+<li class="chapter" data-level="8.3.1" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html#câble-jack-mono"><i class="fa fa-check"></i><b>8.3.1</b> Câble jack « mono »</a></li>
+<li class="chapter" data-level="8.3.2" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html#câble-jack-stéréo"><i class="fa fa-check"></i><b>8.3.2</b> Câble jack « stéréo »</a></li>
+<li class="chapter" data-level="8.3.3" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html#câble-y"><i class="fa fa-check"></i><b>8.3.3</b> Câble « Y »</a></li>
+<li class="chapter" data-level="8.3.4" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html#les-connexions-dinsert"><i class="fa fa-check"></i><b>8.3.4</b> Les connexions d’insert</a></li>
 </ul></li>
-<li class="chapter" data-level="8.4" data-path="les-modulations-analogiques.html"><a href="les-modulations-analogiques.html#routage-des-signaux"><i class="fa fa-check"></i><b>8.4</b> Routage des signaux</a></li>
+<li class="chapter" data-level="8.4" data-path="les-modulations-de-signaux-analogiques.html"><a href="les-modulations-de-signaux-analogiques.html#routage-des-signaux"><i class="fa fa-check"></i><b>8.4</b> Routage des signaux</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="les-préamplificateurs-de-microphones.html"><a href="les-préamplificateurs-de-microphones.html"><i class="fa fa-check"></i><b>9</b> Les préamplificateurs de microphones</a>
+<li class="chapter" data-level="9" data-path="les-préamplificateurs.html"><a href="les-préamplificateurs.html"><i class="fa fa-check"></i><b>9</b> Les préamplificateurs</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="les-préamplificateurs-de-microphones.html"><a href="les-préamplificateurs-de-microphones.html#les-qualités-dun-préampli"><i class="fa fa-check"></i><b>9.1</b> Les qualités d’un préampli</a></li>
-<li class="chapter" data-level="9.2" data-path="les-préamplificateurs-de-microphones.html"><a href="les-préamplificateurs-de-microphones.html#les-technologies-de-préampli"><i class="fa fa-check"></i><b>9.2</b> Les technologies de préampli</a></li>
-<li class="chapter" data-level="9.3" data-path="les-préamplificateurs-de-microphones.html"><a href="les-préamplificateurs-de-microphones.html#les-contrôles-dun-préampli"><i class="fa fa-check"></i><b>9.3</b> Les contrôles d’un préampli</a></li>
+<li class="chapter" data-level="9.1" data-path="les-préamplificateurs.html"><a href="les-préamplificateurs.html#critères-de-choix-dun-préamplificateur"><i class="fa fa-check"></i><b>9.1</b> Critères de choix d’un préamplificateur</a></li>
+<li class="chapter" data-level="9.2" data-path="les-préamplificateurs.html"><a href="les-préamplificateurs.html#les-technologies-de-préampli"><i class="fa fa-check"></i><b>9.2</b> Les technologies de préampli</a></li>
+<li class="chapter" data-level="9.3" data-path="les-préamplificateurs.html"><a href="les-préamplificateurs.html#les-réglages-dun-préampli"><i class="fa fa-check"></i><b>9.3</b> Les réglages d’un préampli</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html"><i class="fa fa-check"></i><b>10</b> La conversion analogique numérique</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-nécessité-de-la-conversion-analogique-numérique"><i class="fa fa-check"></i><b>10.1</b> La nécessité de la conversion analogique numérique</a></li>
-<li class="chapter" data-level="10.2" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#dun-signal-continu-vers-un-signal-échantillonné"><i class="fa fa-check"></i><b>10.2</b> D’un signal continu vers un signal échantillonné</a></li>
-<li class="chapter" data-level="10.3" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-fréquence-déchantillonnage"><i class="fa fa-check"></i><b>10.3</b> La fréquence d’échantillonnage</a>
+<li class="chapter" data-level="10.2" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#théorie-de-léchantillonnage"><i class="fa fa-check"></i><b>10.2</b> Théorie de l’échantillonnage</a>
 <ul>
-<li class="chapter" data-level="10.3.1" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#le-théorème-de-shannon-nyquist"><i class="fa fa-check"></i><b>10.3.1</b> Le théorème de Shannon-Nyquist</a></li>
+<li class="chapter" data-level="10.2.1" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#dun-signal-continu-vers-un-signal-échantillonné"><i class="fa fa-check"></i><b>10.2.1</b> D’un signal continu vers un signal échantillonné</a></li>
+<li class="chapter" data-level="10.2.2" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-fréquence-déchantillonnage"><i class="fa fa-check"></i><b>10.2.2</b> La fréquence d’échantillonnage</a></li>
+<li class="chapter" data-level="10.2.3" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-résolution-de-quantification"><i class="fa fa-check"></i><b>10.2.3</b> La résolution de quantification</a></li>
 </ul></li>
-<li class="chapter" data-level="10.4" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-résolution-de-quantification"><i class="fa fa-check"></i><b>10.4</b> La résolution de quantification</a></li>
-<li class="chapter" data-level="10.5" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-mauvaise-réputation-du-son-numérique"><i class="fa fa-check"></i><b>10.5</b> La “mauvaise réputation” du son numérique</a></li>
-<li class="chapter" data-level="10.6" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-conversion-sigma-delta"><i class="fa fa-check"></i><b>10.6</b> La conversion sigma-delta</a></li>
+<li class="chapter" data-level="10.3" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#quelle-influence-sur-le-signal"><i class="fa fa-check"></i><b>10.3</b> Quelle influence sur le signal ?</a></li>
+<li class="chapter" data-level="10.4" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-conversion-sigma-delta"><i class="fa fa-check"></i><b>10.4</b> La conversion sigma-delta</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="les-modulations-numériques.html"><a href="les-modulations-numériques.html"><i class="fa fa-check"></i><b>11</b> Les modulations numériques</a></li>
-<li class="chapter" data-level="12" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html"><i class="fa fa-check"></i><b>12</b> Introduction à l’informatique musicale</a></li>
-<li class="chapter" data-level="13" data-path="enceintes-et-salle-découte.html"><a href="enceintes-et-salle-découte.html"><i class="fa fa-check"></i><b>13</b> Enceintes et salle d’écoute</a>
+<li class="chapter" data-level="11" data-path="les-modulations-de-signaux-numériques.html"><a href="les-modulations-de-signaux-numériques.html"><i class="fa fa-check"></i><b>11</b> Les modulations de signaux numériques</a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="enceintes-et-salle-découte.html"><a href="enceintes-et-salle-découte.html#choisir-une-paire-découtes"><i class="fa fa-check"></i><b>13.1</b> Choisir une paire d’écoutes</a></li>
-<li class="chapter" data-level="13.2" data-path="enceintes-et-salle-découte.html"><a href="enceintes-et-salle-découte.html#placer-correctement-son-écoute"><i class="fa fa-check"></i><b>13.2</b> Placer correctement son écoute</a></li>
-<li class="chapter" data-level="13.3" data-path="enceintes-et-salle-découte.html"><a href="enceintes-et-salle-découte.html#lécoute-au-casque"><i class="fa fa-check"></i><b>13.3</b> L’écoute au casque</a></li>
-<li class="chapter" data-level="13.4" data-path="enceintes-et-salle-découte.html"><a href="enceintes-et-salle-découte.html#casque-fermé-ou-casque-ouvert"><i class="fa fa-check"></i><b>13.4</b> Casque fermé ou casque ouvert ?</a></li>
+<li class="chapter" data-level="11.1" data-path="les-modulations-de-signaux-numériques.html"><a href="les-modulations-de-signaux-numériques.html#les-liaisons-point-à-point"><i class="fa fa-check"></i><b>11.1</b> Les liaisons point à point</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="les-modulations-de-signaux-numériques.html"><a href="les-modulations-de-signaux-numériques.html#aes3-aesebu"><i class="fa fa-check"></i><b>11.1.1</b> AES3 ; AES/EBU</a></li>
+<li class="chapter" data-level="11.1.2" data-path="les-modulations-de-signaux-numériques.html"><a href="les-modulations-de-signaux-numériques.html#adat"><i class="fa fa-check"></i><b>11.1.2</b> ADAT</a></li>
+<li class="chapter" data-level="11.1.3" data-path="les-modulations-de-signaux-numériques.html"><a href="les-modulations-de-signaux-numériques.html#madi"><i class="fa fa-check"></i><b>11.1.3</b> MADI</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="les-modulations-de-signaux-numériques.html"><a href="les-modulations-de-signaux-numériques.html#les-réseaux-audio-numériques"><i class="fa fa-check"></i><b>11.2</b> Les réseaux audio numériques</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html"><i class="fa fa-check"></i><b>12</b> Introduction à l’informatique musicale</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#fonctionnement-dun-ordinateur"><i class="fa fa-check"></i><b>12.1</b> Fonctionnement d’un ordinateur</a></li>
+<li class="chapter" data-level="12.2" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#les-systèmes-dexploitation"><i class="fa fa-check"></i><b>12.2</b> Les systèmes d’exploitation</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#linux"><i class="fa fa-check"></i><b>12.2.1</b> Linux</a></li>
+<li class="chapter" data-level="12.2.2" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#microsoft-windows"><i class="fa fa-check"></i><b>12.2.2</b> Microsoft Windows</a></li>
+<li class="chapter" data-level="12.2.3" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#apple-macos"><i class="fa fa-check"></i><b>12.2.3</b> Apple MacOS</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#les-pilotes-audio"><i class="fa fa-check"></i><b>12.3</b> Les pilotes audio</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#asio"><i class="fa fa-check"></i><b>12.3.1</b> ASIO</a></li>
+<li class="chapter" data-level="12.3.2" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#coreaudio"><i class="fa fa-check"></i><b>12.3.2</b> CoreAudio</a></li>
+<li class="chapter" data-level="12.3.3" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#alsa"><i class="fa fa-check"></i><b>12.3.3</b> ALSA</a></li>
+<li class="chapter" data-level="12.3.4" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#jack-audio"><i class="fa fa-check"></i><b>12.3.4</b> Jack Audio</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#les-stations-de-travail-audio-numérique-daw"><i class="fa fa-check"></i><b>12.4</b> Les Stations de Travail Audio-Numérique (DAW)</a>
+<ul>
+<li class="chapter" data-level="12.4.1" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#le-moteur-audio"><i class="fa fa-check"></i><b>12.4.1</b> Le moteur audio</a></li>
+<li class="chapter" data-level="12.4.2" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#les-fonctionnalités"><i class="fa fa-check"></i><b>12.4.2</b> Les fonctionnalités</a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#les-protocoles-de-transmission-dinformations"><i class="fa fa-check"></i><b>12.5</b> Les protocoles de transmission d’informations</a>
+<ul>
+<li class="chapter" data-level="12.5.1" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#midi"><i class="fa fa-check"></i><b>12.5.1</b> MIDI</a></li>
+<li class="chapter" data-level="12.5.2" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#osc"><i class="fa fa-check"></i><b>12.5.2</b> OSC</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html"><i class="fa fa-check"></i><b>13</b> Enceintes et amplificateurs</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#anatomie-dun-haut-parleur"><i class="fa fa-check"></i><b>13.1</b> Anatomie d’un haut-parleur</a></li>
+<li class="chapter" data-level="13.2" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#amplification-et-impédance"><i class="fa fa-check"></i><b>13.2</b> Amplification et impédance</a></li>
+<li class="chapter" data-level="13.3" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#puissance-et-sensibilité"><i class="fa fa-check"></i><b>13.3</b> Puissance et sensibilité</a></li>
+<li class="chapter" data-level="13.4" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#conseils-pratiques"><i class="fa fa-check"></i><b>13.4</b> Conseils pratiques</a>
+<ul>
+<li class="chapter" data-level="13.4.1" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#choisir-une-paire-découtes"><i class="fa fa-check"></i><b>13.4.1</b> Choisir une paire d’écoutes</a></li>
+<li class="chapter" data-level="13.4.2" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#placer-correctement-son-écoute"><i class="fa fa-check"></i><b>13.4.2</b> Placer correctement son écoute</a></li>
+</ul></li>
+<li class="chapter" data-level="13.5" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#lécoute-au-casque"><i class="fa fa-check"></i><b>13.5</b> L’écoute au casque</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#casque-fermé-ou-casque-ouvert"><i class="fa fa-check"></i><b>13.5.1</b> Casque fermé ou casque ouvert ?</a></li>
+</ul></li>
 </ul></li>
 <li class="part"><span><b>III Méthodologie de prise de son</b></span></li>
 <li class="chapter" data-level="14" data-path="mono-et-multimicrophonie.html"><a href="mono-et-multimicrophonie.html"><i class="fa fa-check"></i><b>14</b> Mono et multimicrophonie</a></li>
@@ -232,7 +282,7 @@
 <ul>
 <li class="chapter" data-level="16.4.1" data-path="considérations-pratiques.html"><a href="considérations-pratiques.html#le-rapport-a-la-distance-du-microphone"><i class="fa fa-check"></i><b>16.4.1</b> Le rapport a la distance du microphone</a></li>
 <li class="chapter" data-level="16.4.2" data-path="considérations-pratiques.html"><a href="considérations-pratiques.html#quand-choisir-une-prise-de-son-stéréophonique"><i class="fa fa-check"></i><b>16.4.2</b> Quand choisir une prise de son stéréophonique</a></li>
-<li class="chapter" data-level="16.4.3" data-path="considérations-pratiques.html"><a href="considérations-pratiques.html#quand-choisir-le-multi-microphonie"><i class="fa fa-check"></i><b>16.4.3</b> Quand choisir le multi-microphonie</a></li>
+<li class="chapter" data-level="16.4.3" data-path="considérations-pratiques.html"><a href="considérations-pratiques.html#quand-choisir-la-multi-microphonie"><i class="fa fa-check"></i><b>16.4.3</b> Quand choisir la multi-microphonie</a></li>
 </ul></li>
 <li class="chapter" data-level="16.5" data-path="considérations-pratiques.html"><a href="considérations-pratiques.html#le-choix-du-préamplificateur"><i class="fa fa-check"></i><b>16.5</b> Le choix du préamplificateur</a>
 <ul>
@@ -265,12 +315,12 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="les-modulations-analogiques" class="section level1 hasAnchor" number="8">
-<h1><span class="header-section-number">8</span> Les modulations analogiques<a href="les-modulations-analogiques.html#les-modulations-analogiques" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="les-modulations-de-signaux-analogiques" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">8</span> Les modulations de signaux analogiques<a href="les-modulations-de-signaux-analogiques.html#les-modulations-de-signaux-analogiques" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Les câbles assurent le transport de signaux électriques. Ces signaux peuvent représenter une onde sonore (précédemment captée par un microphone), une valeur de contrôle pour piloter un appareil (pédale d’expression) ou encore une information numérique (câble USB, ethernet, etc.). Nous aborderons ici les câbles dédiés aux modulations analogiques, et tout particulièrement à l’audio.</p>
 <p>Le principe de transport d’un signal analogique est assez simple. Pour une modulation, il faudra au moins un conducteur pour véhiculer le signal, et un conducteur pour la référence de tension, la masse. Pour transporter un signal supplémentaire, on conservera le même conducteur pour la référence et l’on en ajoutera un pour véhiculer le signal supplémentaire, faisant ainsi un total de trois conducteurs.</p>
 <div id="anatomie-dun-câble" class="section level2 hasAnchor" number="8.1">
-<h2><span class="header-section-number">8.1</span> Anatomie d’un câble<a href="les-modulations-analogiques.html#anatomie-dun-câble" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">8.1</span> Anatomie d’un câble<a href="les-modulations-de-signaux-analogiques.html#anatomie-dun-câble" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Les câbles véhiculant un seul signal sont généralement constitués de quatre à cinq composants :</p>
 <ul>
 <li>d’un cœur composé d’un filament (souvent multibrin) en un métal conducteur, véhiculant le signal électrique.</li>
@@ -279,9 +329,15 @@
 <li>Parfois, d’une feuille de cuivre, enrobant la tresse, permettant de réaliser une cage de faraday et de protéger le cœur des ondes électromagnétiques.</li>
 <li>Enfin, d’une dernière gaine isolante, permettant de protéger l’ensemble du câble.</li>
 </ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-29"></span>
+<img src="_resources/drawings/cable.svg" alt="Section d'un câble" width="60%" />
+<p class="caption">
+Figure 8.1: Section d’un câble
+</p>
+</div>
 <p>Ceux permettant de transporter plus de signaux rajouteront des cœurs multibrins entourés de leur gaine isolante. La plupart du temps, les câbles véhiculent un ou deux signaux à la fois, mais certains permettent d’en acheminer beaucoup plus (multipaire, Sub-D). On appelle un câble en fonction de ses connecteurs (ou fiches).</p>
 <div id="longueur-du-câble-son-et-impédance" class="section level3 hasAnchor" number="8.1.1">
-<h3><span class="header-section-number">8.1.1</span> Longueur du câble, son et impédance<a href="les-modulations-analogiques.html#longueur-du-câble-son-et-impédance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3><span class="header-section-number">8.1.1</span> Longueur du câble, son et impédance<a href="les-modulations-de-signaux-analogiques.html#longueur-du-câble-son-et-impédance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Étudions la section d’un câble à modulation unique. Nous pouvons faire plusieurs observations. Le fil conducteur du signal, généralement en cuivre, est d’une longueur non négligeable. Plus cette longueur est importante, plus ce fil aura une <strong>résistance</strong> importante. De plus, ce fil est séparé de la tresse de masse (élément également conducteur) par un isolant. Il existe donc un effet de <strong>capacitance</strong> entre le point chaud et la masse. Enfin, la tresse de masse peut être comparée à une bobine, et possède donc une <strong>inductance</strong>. Nous pouvons donc assimiler un câble à un circuit <strong>RLC</strong> filtrant le haut du spectre audio.</p>
 <p>Physiquement, notre description précédente est valide, mais elle est à corréler à <strong>l’impédance de sortie</strong> de la source. Typiquement, lors de l’utilisation d’un microphone statique, son impédance est suffisamment faible pour que la longueur du câble soit totalement transparente. Certains microphones dynamiques ou à ruban, possédant une impédance plus élevée, peuvent très légèrement souffrir de la longueur du câble.</p>
 <p>Ce phénomène d’altération du timbre à cause de la longueur d’un câble a surtout lieu avec les instruments électriques <strong>passifs</strong> (guitares et basses). L’impédance de sorte de ces instruments est tellement grande que l’on peut aisément entendre la différence de son entre deux câbles.</p>
@@ -290,11 +346,11 @@
 </blockquote>
 </div>
 <div id="les-connexions-asymétriques" class="section level3 hasAnchor" number="8.1.2">
-<h3><span class="header-section-number">8.1.2</span> Les connexions asymétriques<a href="les-modulations-analogiques.html#les-connexions-asymétriques" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3><span class="header-section-number">8.1.2</span> Les connexions asymétriques<a href="les-modulations-de-signaux-analogiques.html#les-connexions-asymétriques" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Les connexions asymétriques permettent de transporter un signal entre une source et un récepteur. Il s’agit de la façon la plus simple de connecter deux appareils devant échanger des signaux. Cependant, sur de longue distance, le câble peut se comporter comme une antenne et induire sur le signal certaines ondes électromagnétiques (comme la radio). Ces connexions ne nécessitent qu’un fil conducteur par modulation.</p>
 </div>
 <div id="les-connexions-symétriques" class="section level3 hasAnchor" number="8.1.3">
-<h3><span class="header-section-number">8.1.3</span> Les connexions symétriques<a href="les-modulations-analogiques.html#les-connexions-symétriques" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3><span class="header-section-number">8.1.3</span> Les connexions symétriques<a href="les-modulations-de-signaux-analogiques.html#les-connexions-symétriques" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Le but de ces connexions est de palier au problème des connexions asymétrique. Dans l’appareil émetteur, le signal à transporter est dupliqué, et ce duplicata est inversé en phase. Cette étape s’appelle la <strong>symétrisation</strong>.</p>
 <!-- TODO : graph-->
 <p>C’est deux signaux qui sont appelés point chaud (signal d’origine) et point froid (signal opposé en phase). Sur le trajet du câble, lorsqu’une perturbation électromagnétique est induite sur le signal, celle-ci s’inscrit en phase sur les deux conducteurs (point chaud et point froid). À l’arrivée, l’appareil récepteur inverse la phase du point froid et le somme avec le point chaud. Cette étape se nomme la <strong>dé-symétrisation</strong>. Ainsi le signal d’origine est sommé en phase, tandis que les interférences sont sommées hors phase et s’annulent.</p>
@@ -302,7 +358,13 @@
 </div>
 </div>
 <div id="les-fiches-connecteurs" class="section level2 hasAnchor" number="8.2">
-<h2><span class="header-section-number">8.2</span> Les fiches &amp; connecteurs<a href="les-modulations-analogiques.html#les-fiches-connecteurs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">8.2</span> Les fiches &amp; connecteurs<a href="les-modulations-de-signaux-analogiques.html#les-fiches-connecteurs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-30"></span>
+<img src="_resources/bitmap/plug/jackTs.jpg" alt="Jack TS, Jack TRS, Jack Bantam, XLR, Sub-D 25" width="20%" /><img src="_resources/bitmap/plug/jackTrs.jpg" alt="Jack TS, Jack TRS, Jack Bantam, XLR, Sub-D 25" width="20%" /><img src="_resources/bitmap/plug/jackBantam.jpg" alt="Jack TS, Jack TRS, Jack Bantam, XLR, Sub-D 25" width="20%" /><img src="_resources/bitmap/plug/xlr.jpg" alt="Jack TS, Jack TRS, Jack Bantam, XLR, Sub-D 25" width="20%" /><img src="_resources/bitmap/plug/subd25.jpg" alt="Jack TS, Jack TRS, Jack Bantam, XLR, Sub-D 25" width="20%" />
+<p class="caption">
+Figure 8.2: Jack TS, Jack TRS, Jack Bantam, XLR, Sub-D 25
+</p>
+</div>
 <p>On appelle « fiche » les éléments mécaniques situés aux extrémités d’un câble et permettant sa connexion à un équipement. Celle-ci nous permet de facilement identifier le type de câble que nous avons entre les mains.</p>
 <blockquote>
 <p>Contrairement aux dires de certains mythes, majoritairement reliée à l’audiophilie, la différence de matériau utilisé pour le contact de la fiche n’a pas d’incidence sur le son.</p>
@@ -312,30 +374,30 @@
 <p>Les fiches jack TS sont souvent utilisées sur les instruments électriques et électroniques (guitare, basse, synthétiseurs, etc.). Ces connexions sont nécessairement symétriques. Les jack TRS sont un peu plus rare et se trouvent généralement sur des instruments avec des sorties stéréophoniques, ou sur des équipements audio possédant des entrés/sorties symétriques. La connectique XLR remplit fondamentalement le même usage qu’un jack TRS, mais offre un verrouillage mécanique, permettant de sécuriser la connexion. On la trouve principalement sur les microphones et sur préamplificateurs. L’avantage du jack TRS est son plus faible encombrement mécanique. On le préfère donc sur les appareils possédant un grand nombre d’entrées/sorties. Le jack bantam se trouve sur les boîtiers de patch. Leur petite taille permet une grande densité de point de connexion. Les patchbay prennent ainsi moins de place. On trouve aussi les connectiques Sub-D 25, principalement pour remplacer des connexions XLR. En effet, une seule connectique Sub-D 25 permet de remplacer huit câbles XLR.</p>
 </div>
 <div id="exemples-pratiques" class="section level2 hasAnchor" number="8.3">
-<h2><span class="header-section-number">8.3</span> Exemples pratiques<a href="les-modulations-analogiques.html#exemples-pratiques" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">8.3</span> Exemples pratiques<a href="les-modulations-de-signaux-analogiques.html#exemples-pratiques" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="câble-jack-mono" class="section level3 hasAnchor" number="8.3.1">
-<h3><span class="header-section-number">8.3.1</span> Câble jack « mono »<a href="les-modulations-analogiques.html#câble-jack-mono" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3><span class="header-section-number">8.3.1</span> Câble jack « mono »<a href="les-modulations-de-signaux-analogiques.html#câble-jack-mono" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Ce type de câble est souvent utilisé sur les instruments électriques. On l’appelle « mono » car il ne véhicule qu’un seul signal.</p>
 </div>
 <div id="câble-jack-stéréo" class="section level3 hasAnchor" number="8.3.2">
-<h3><span class="header-section-number">8.3.2</span> Câble jack « stéréo »<a href="les-modulations-analogiques.html#câble-jack-stéréo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3><span class="header-section-number">8.3.2</span> Câble jack « stéréo »<a href="les-modulations-de-signaux-analogiques.html#câble-jack-stéréo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>L’appellation de ce câble est ambiguë. Le terme stéréo fait référence à ses deux voies de connexion, cependant, le nom « stéréo » impliquerait qu’une des voies est destinée à alimenter l’enceinte gauche, et l’autre, le canal droit. Or, ce type de câble peut également convenir pour des connexions symétriques.</p>
 <blockquote>
 <p>On notera qu’il est possible de brancher un câble jack TS dans une fiche TRS. Un seul des canaux sera alors acheminé.</p>
 </blockquote>
 </div>
 <div id="câble-y" class="section level3 hasAnchor" number="8.3.3">
-<h3><span class="header-section-number">8.3.3</span> Câble « Y »<a href="les-modulations-analogiques.html#câble-y" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3><span class="header-section-number">8.3.3</span> Câble « Y »<a href="les-modulations-de-signaux-analogiques.html#câble-y" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Ces câbles possèdent trois connecteurs, et sont le plus souvent équipés de jack TS. Ils permettent de récupérer un signal pour le transmettre sur deux appareils. Attention, la duplication du signal étant passive, on risque un problème d’impédance si l’impédance d’entrée des deux appareils est trop différente. Le cas d’école est souvent rencontré lorsqu’on branche deux casques sur le même amplificateur. Si l’impédance des deux casques est trop différente, un des deux aura presque l’intégralité du niveau du signal alors que l’autre sous-modulera.</p>
 </div>
 <div id="les-connexions-dinsert" class="section level3 hasAnchor" number="8.3.4">
-<h3><span class="header-section-number">8.3.4</span> Les connexions d’insert<a href="les-modulations-analogiques.html#les-connexions-dinsert" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3><span class="header-section-number">8.3.4</span> Les connexions d’insert<a href="les-modulations-de-signaux-analogiques.html#les-connexions-dinsert" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Ces câbles ont la particularité d’avoir une fiche jack TRS et deux fiches jack TS. En studio, on les rencontre très souvent pour insérer un périphérique de traitement dans la chaîne audio. Le « tip » du jack TRS est connecté au « tip » d’un des jack TS qui est connectés sur l’entré du périphérique. Le deuxième jack TS est raccordé à la sortie de l’appareil et son « tip » est connecté au « ring » du jack TRS.</p>
 <p>Ces câbles sont aussi utilisés pour séparer une sortie dite « stéréo » en deux voies « mono ».</p>
 </div>
 </div>
 <div id="routage-des-signaux" class="section level2 hasAnchor" number="8.4">
-<h2><span class="header-section-number">8.4</span> Routage des signaux<a href="les-modulations-analogiques.html#routage-des-signaux" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">8.4</span> Routage des signaux<a href="les-modulations-de-signaux-analogiques.html#routage-des-signaux" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>En studio d’enregistrement, il n’est pas rare de rencontrer plusieurs cabines de prise de son, chacune équipée de boîtier de patch. Ces boîtiers sont constitués d’un certain nombre d’entrées XLR. On achemine ensuite les sorties de ces boîtiers via des multipaires jusqu’à une « patchbay ». Le rôle de la « patchbay » est de permettre de connecter n’importe quelle entrée (signal provenant d’un microphone) vers n’importe quel préamplificateur.</p>
 <p>On trouve évidemment beaucoup d’usage à ces « patchbay ». Elles sont à considérer comme la matrice de routage d’un studio d’enregistrement.</p>
 
@@ -347,7 +409,7 @@
         </div>
       </div>
 <a href="les-microphones.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="les-préamplificateurs-de-microphones.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="les-préamplificateurs.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -12,7 +12,7 @@ Commençons par aborder les grandeurs physiques liées à l’électricité.
 
 ### L’intensité
 
-L’intensité électrique, notée **i** et exprimée en **Ampère (A)**, est une grandeur permettant de mesurer le débit du courant électrique. Ceci est parfaitement analogue à un débit d’eau. Si un robinet est faiblement ouvert, l’écoulement de l’eau sera faible, s’il est complètement ouvert, le débit sera fort.
+L’intensité électrique, notée **I** et exprimée en **Ampère (A)**, est une grandeur permettant de mesurer le débit du courant électrique. Ceci est parfaitement analogue à un débit d’eau. Si un robinet est faiblement ouvert, l’écoulement de l’eau sera faible, s’il est complètement ouvert, le débit sera fort.
 
 ### La tension
 
@@ -22,11 +22,37 @@ La tension, généralement notée **U** et exprimée en **Volt (V)**, désigne u
 
 Dans le cas de l’audio, la tension électrique du signal sonore est homologue à la variation de pression.
 
+Tout comme la pression acoustique, il est possible de rendre compte d'une variation de tension électrique à un niveau sonore en décibel. Le relation liant la tension et le niveau est :
+
+$$ L_{dB} = 20 \, log (\frac{U}{U_{ref}}) $$
+
+Il existe plusieurs valeurs pour U_{ref}, donnant lieu à différentes unités de mesures :
+
++ **dBm**, définie à l'apparition du téléphone, propose $U_{ref} = 0.775 V$ pour une impédance de $600 \omega$. Cette impédance correspond à celle des lignes téléphoniques.
++ **dBu** / **dBv**, qui ne tient plus compte de la charge d'impédance, $U_{ref} = 0.775 V$.
++ **dBV**, où $U_{ref} = 1 V$
+
+> Lorsque la tension double, le niveau augmente de six décibels. Lorsque la tension est multiplié par dix, le niveau augmente de vingt décibels.
+
+On peut également définir l'augmentation du niveau sonore par rapport à la puissance du signal. On admet que :
+
+$$ P = \frac{U^2}{Z} \, U = \sqrt{P \times Z} $$
+
+Où $P$ est la puissance. En remplaçant dans l'équation précédente, on trouve :
+
+$$ L_{dB} = 20 \, log (\frac{\sqrt{P}}{\sqrt{P_{ref}}}) \> = 10 \, log (\frac{P}{P_{ref}}) $$
+
+> Lorsque la puissance double, le niveau augmente de trois décibels. Lorsque la puissance est multiplié par dix, le niveau augmente de dix décibels.
+
+On utilisant la loi d'ohm (voir ci-dessous) et la relation entre la puissance, la tension et l'impédance, on trouve également que :
+
+$$ P = U \times I $$
+
 ### L’impédance
 
 Nous connaissons, en général, la **loi d’Ohm**. Celle-ci permet de donner une relation entre l’intensité du courant et sa tension, aux bornes d’un composant d’un circuit (aussi appelé dipôle).
 
-$$ U = R \times i $$
+$$ U = R \times I $$
 
 Où $R$ est la résistance du dipôle. Elle traduit la facilité d’un courant à se déplacer dans le dipôle. Pour reprendre les analogies ci-dessus, la résistance correspondrait à une valve. À tension constante, si la résistance tend vers zéro, le débit est très important. Si la résistance tend vers l’infini, le débit sera très faible. Si elle est nulle, alors nous sommes dans le cas d’un court-circuit (interrupteur fermé). Si elle est infinie, cela traduit une absence de connexion entre deux points d’un circuit (interrupteur ouvert). L’unité de cette résistance est l’**ohm**.
 
@@ -36,7 +62,17 @@ L’impédance traduit elle aussi l’opposition d’un circuit au passage d’u
 
 ### Les composants passifs
 
+```{r, echo = FALSE, fig.align="center", fig.show="hold", out.width="25%", fig.cap="Représentation d'une résistance et de son symbole"}
+show_fig("_resources/diagrams/resistor.svg")
+show_fig("_resources/diagrams/resistor_sym.svg")
+```
+
 Étudions maintenant les composants électroniques les plus communs. Nous avons en premier les **résistances**. Ce sont des dipôles purement résistifs. Leur valeur s’exprime en **ohm**. Une résistance s’oppose donc au passage du courant. Pour rappel, la tension a ses bornes est $U = R \times i$.
+
+```{r, echo = FALSE, fig.align="center", fig.show="hold", out.width="25%", fig.cap="Représentation d'un condensateur et de son symbole"}
+show_fig("_resources/diagrams/capa.svg")
+show_fig("_resources/diagrams/capa_sym.svg")
+```
 
 Viennent ensuite les **condensateurs**. Ils sont constitués de matériaux conducteurs séparés par une couche isolante. La relation entre tension et intensité à ses bornes en régime oscillant est :
 
@@ -44,9 +80,13 @@ $$ U = Z_c \times I $$
 
 Où $Z_c$ est l’impédance d’un condensateur idéal. Nous pouvons ici la même analyse que plus haut, quand $Z_c$ tend vers l’infini le courant ne passe plus, quand $Z_c$ tend vers 0, le débit est important. L’impédance d’un condensateur est fonction de sa **capacité** (noté **C**, et s’exprime en **farads**).
 
-$$ Z_c = \frac{1}{jC\omega} \> \omega = 2 \pi \, f$$
+$$ Z_c = \frac{1}{jC\omega} \> = 2 \pi \, f$$
 
 Si la fréquence $f$ tend vers l’infini, $Z_c$ tend vers zéro, si la fréquence tend vers zéro, $Z_c$ tend vers l’infini. On constate donc que l’impédance d’un condensateur varie en fonction de sa fréquence. On peut assimiler un condensateur à un interrupteur ouvert en basse fréquence et à un interrupteur fermé en haute fréquence.
+
+```{r, echo = FALSE, fig.align="center", fig.show="hold", out.width="25%", fig.cap="Symbole d'une bobine"}
+show_fig("_resources/diagrams/inductor_sym.svg")
+```
 
 Terminons sur les bobines. Ces composants sont constitués d’un enroulement de câble en cuivre et possède une **inductance** notée **L** et s’exprimant en **henrys**. Étudions à nouveau la relation entre tension et intensité, aux bornes d’une bobine :
 
@@ -64,6 +104,14 @@ L’association de résistances, de condensateurs et de bobines donne des circui
 
 ### Tubes & semi-conducteurs
 
+```{r, echo=FALSE, fig.align="center", fig.cap="Tubes, transistor et circuits intégrés", fig.show="hold", out.width="25%"}
+
+knitr::include_graphics("_resources/bitmap/elec/tube.jpg")
+knitr::include_graphics("_resources/bitmap/elec/transistor.jpg")
+knitr::include_graphics("_resources/bitmap/elec/ic.jpg")
+
+```
+
 Les **tubes**, tubes à vide, ou parfois, lampes, sont historiquement les premiers composants permettant d’amplifier le signal, contre une certaine tension d’alimentation. On les retrouve donc dans les préamplificateurs, égaliseurs, compresseurs, et autres amplificateurs jusque dans les années soixante. Ils sont alors progressivement remplacés par les **transistors**, composants appelés **semi-conducteurs**. Ces transistors permettent de réaliser la même amplification du signal qu’une lampe, mais sont beaucoup plus petits et demandent aussi moins de puissance électrique pour réaliser le même facteur d’amplification (aussi appelé **gain**). Peu de temps après la mise au point des transistors, les **circuits intégrés** sont inventés. Ces petites boîtes renferment plusieurs transistors, et peuvent également servir à l’amplification de signaux.
 
 Il est très important de savoir que l’invention du transistor et des circuits intégrés est sans doute l’avancée technologique la plus importante du siècle dernier. Elle a permis le développement exponentiel de l’industrie informatique grâce à la miniaturisation des composants.
@@ -78,7 +126,9 @@ Sur la fiche technique des appareils, on trouve des valeurs pour son impédance 
 
 Soit le schéma électronique ci-dessous. On appelle $U_{out}$ la tension de sortie de l’appareil A et $Z_{out}$ son impédance de sortie. De façon similaire, on appelle $U_{in}$ la tension d’entré de l’appareil B et $Z_{in}$ son impédance d’entré.
 
-<!--Ajouter schéma electronique-->
+```{r, echo = FALSE, fig.align="center"}
+show_fig("_resources/diagrams/impedance.svg")
+```
 
 Dans ce circuit, $Z_{eq} = Z_{in} + Z_{out}$ et $U_{out} = Z_{eq} \times i$. Alors, $i = \frac{U_{out}}{Z_{eq}} = \frac{U_{out}}{Z_{in} + Z_{out}}$. Toujours grâce au circuit ci-dessus, on peut dire que $U_{in} = Z_{in} \times I$. En remplaçant dans l’expression précédente on trouve : $\frac{U_{in}}{Z_{in}} = \frac{U_{out}}{Z_{in} + Z_{out}}$
 
@@ -87,3 +137,5 @@ $$ \frac{U_{in}}{U_{out}} = \frac{Z_{in}}{Z_{in} + Z_{out}} = \frac{1}{1+\frac{Z
 Dès lors, si $Z_{in}$ est très grand devant $Z_{out}$, alors $U_{in}$ tend vers $U_{out}$. Si $Z_{out}$ est très grand devant $Z_{in}$, alors $U_{in}$ tend vers $0$.
 
 Cela nous amène à démontrer l’affirmation ci-dessus. Maintenant, nous savons que dans un circuit, l’impédance varie en fonction de la fréquence. Dès lors, une mauvaise adaptation d’impédance ne fera pas que diminuer l’amplitude du signal, mais filtrera aussi une partie de spectre, généralement les hautes fréquences.
+
+> On considère aussi l'adaptation d'**impédance en tension**. Lorsque que nous considérons la **puissance** les relations sont différentes (cf section sur les hautparleurs).

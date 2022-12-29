@@ -81,14 +81,14 @@ Nous avons vu que la réponse acoustique, ou réverbération, d'une salle se dé
 
 Dans de petites pièces, les premières réflexions peuvent être entendues si proche du son direct que cela génère un type de filtrage bien particulier appelé **filtre en peigne**.
 
-```{python, echo=FALSE, fig.align="center", fig.caption="Filtre en peigne correspondant à un retard d'une milliseconde"}
+```{python, echo=FALSE, fig.align="center", fig.caption="Filtre en peigne correspondant à un retard d'une milliseconde", warning=FALSE, message=FALSE}
 import matplotlib.pyplot as plt
 import numpy as np
 
 fs = 48000  # Sample rate
 T = 1/fs    # Sample period
 L = 48    # Delay
-a = 1     # Attenuation factor
+a = 0.999999     # Attenuation factor
 
 # h[n] = dirac[n] + a * dirac[n-L]
 h = np.zeros(fs)
