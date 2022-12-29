@@ -33,7 +33,7 @@ Nous ne savons pas fabriquer des haut-parleurs capables de reproduire uniformém
 
 ## Amplification et impédance
 
-Nous avons précédemment abordé le préamplificateur, qui permet d’amplifier la tension d’un signal audio analogique et d’en baisser son impédance. On appelle alors « amplificateur » un amplificateur de **puissance**. La puissance d’un signal s’exprime par la relation ci-dessous. On cherche donc à augmenter la tension **et** l’intensité du signal.
+Nous avons précédemment abordé le préamplificateur, qui permet d’amplifier la tension d’un signal audio analogique et d’en baisser son impédance. On appelle alors « amplificateur » un amplificateur de **puissance**. On rappel que la puissance d’un signal s’exprime par la relation ci-dessous. On cherche donc à augmenter la tension **et** l’intensité du signal.
 
 $$ P = U \times I $$
 

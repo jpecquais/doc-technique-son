@@ -76,7 +76,7 @@
 
 \title{Guide pratique de la prise de son et du mixage appliqués à la musique}
 \author{Jean-Loup Pecquais}
-\date{2022-12-28}
+\date{2022-12-29}
 
 \begin{document}
 \maketitle
@@ -160,7 +160,14 @@ Dans notre environnement, les sons sont donc composés de plusieurs fréquences.
 Plus généralement, on admettra que la composition fréquentielle, ou spectrale, de tout son peut être décomposée par une somme de sinusoïde. L'outil permettant de passer de la représentation temporelle d'un signal à sa représentation fréquentiel s'appelle la \textbf{transformée de Fourrier.}
 \end{quote}
 
-\begin{center}\includegraphics{_main_files/figure-latex/unnamed-chunk-3-3} \end{center}
+\begin{figure}
+
+{\centering \includegraphics{_main_files/figure-latex/unnamed-chunk-3-3} 
+
+}
+
+\caption{Signal carré et visualisation de son spectre}\label{fig:unnamed-chunk-3}
+\end{figure}
 
 La fréquence fondamentale donne la \textbf{hauteur} du son (sa note en musique par exemple). Les partiels enrichissent cette fréquence fondamentale et créés le \textbf{timbre} d'un son. C'est en partie grâce au timbre que l'on peut reconnaître différents instruments de musiques jouant la même note.
 
@@ -276,7 +283,9 @@ Notre oreille fonctionne de façon logarithmique, et non linéairement, face à 
 \[L_p = 20\,\log_{10}\Big(\frac{p_{eff}}{p_{ref}}\Big) \qquad p_{ref} = 20\mu Pa\]
 
 \begin{quote}
-Si la pression acoustique double, on observe une augmentation du niveau sonore de 3 dB SPL. Lorsqu'on ressent un doublement du niveau sonore, on observe une augmentation de 10 dB.
+Si la pression acoustique double, on observe une augmentation du niveau sonore de 6 dB SPL. Lorsqu'on ressent un doublement du niveau sonore, on observe une augmentation de 20 dB.
+
+La pression acoustique est divisée par deux à chaque doublement de distance.
 \end{quote}
 
 La question se complexifie lorsque l'on rajoute la dimension fréquentielle à la question de la perception du niveau sonore. En effet, nous percevons des niveaux sonores différents pour différentes fréquences pourtant émises au même niveau de pression acoustique. Pour inclure cette dépendance fréquentielle, nous avons mis en place une unité de mesure : la \textbf{sonie} ou \textbf{bruyance} (\textbf{loudness} en anglais). Il est donc possible ensuite de définir des courbes d'\textbf{isosonie}, c'est-à-dire des courbes indiquant un niveau sonore de perception égale en fonction de la fréquence et du niveau de pression acoustique.
@@ -540,7 +549,7 @@ Commençons par aborder les grandeurs physiques liées à l'électricité.
 \hypertarget{lintensituxe9}{%
 \subsection{L'intensité}\label{lintensituxe9}}
 
-L'intensité électrique, notée \textbf{i} et exprimée en \textbf{Ampère (A)}, est une grandeur permettant de mesurer le débit du courant électrique. Ceci est parfaitement analogue à un débit d'eau. Si un robinet est faiblement ouvert, l'écoulement de l'eau sera faible, s'il est complètement ouvert, le débit sera fort.
+L'intensité électrique, notée \textbf{I} et exprimée en \textbf{Ampère (A)}, est une grandeur permettant de mesurer le débit du courant électrique. Ceci est parfaitement analogue à un débit d'eau. Si un robinet est faiblement ouvert, l'écoulement de l'eau sera faible, s'il est complètement ouvert, le débit sera fort.
 
 \hypertarget{la-tension}{%
 \subsection{La tension}\label{la-tension}}
@@ -553,12 +562,48 @@ On choisit, en général, la masse, valant zéro volt, comme point de référenc
 
 Dans le cas de l'audio, la tension électrique du signal sonore est homologue à la variation de pression.
 
+Tout comme la pression acoustique, il est possible de rendre compte d'une variation de tension électrique à un niveau sonore en décibel. Le relation liant la tension et le niveau est :
+
+\[ L_{dB} = 20 \, log (\frac{U}{U_{ref}}) \]
+
+Il existe plusieurs valeurs pour U\_\{ref\}, donnant lieu à différentes unités de mesures :
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{dBm}, définie à l'apparition du téléphone, propose \(U_{ref} = 0.775 V\) pour une impédance de \(600 \omega\). Cette impédance correspond à celle des lignes téléphoniques.
+\item
+  \textbf{dBu} / \textbf{dBv}, qui ne tient plus compte de la charge d'impédance, \(U_{ref} = 0.775 V\).
+\item
+  \textbf{dBV}, où \(U_{ref} = 1 V\)
+\end{itemize}
+
+\begin{quote}
+Lorsque la tension double, le niveau augmente de six décibels. Lorsque la tension est multiplié par dix, le niveau augmente de vingt décibels.
+\end{quote}
+
+On peut également définir l'augmentation du niveau sonore par rapport à la puissance du signal. On admet que :
+
+\[ P = \frac{U^2}{Z} \, U = \sqrt{P \times Z} \]
+
+Où \(P\) est la puissance. En remplaçant dans l'équation précédente, on trouve :
+
+\[ L_{dB} = 20 \, log (\frac{\sqrt{P}}{\sqrt{P_{ref}}}) \> = 10 \, log (\frac{P}{P_{ref}}) \]
+
+\begin{quote}
+Lorsque la puissance double, le niveau augmente de trois décibels. Lorsque la puissance est multiplié par dix, le niveau augmente de dix décibels.
+\end{quote}
+
+On utilisant la loi d'ohm (voir ci-dessous) et la relation entre la puissance, la tension et l'impédance, on trouve également que :
+
+\[ P = U \times I \]
+
 \hypertarget{limpuxe9dance}{%
 \subsection{L'impédance}\label{limpuxe9dance}}
 
 Nous connaissons, en général, la \textbf{loi d'Ohm}. Celle-ci permet de donner une relation entre l'intensité du courant et sa tension, aux bornes d'un composant d'un circuit (aussi appelé dipôle).
 
-\[ U = R \times i \]
+\[ U = R \times I \]
 
 Où \(R\) est la résistance du dipôle. Elle traduit la facilité d'un courant à se déplacer dans le dipôle. Pour reprendre les analogies ci-dessus, la résistance correspondrait à une valve. À tension constante, si la résistance tend vers zéro, le débit est très important. Si la résistance tend vers l'infini, le débit sera très faible. Si elle est nulle, alors nous sommes dans le cas d'un court-circuit (interrupteur fermé). Si elle est infinie, cela traduit une absence de connexion entre deux points d'un circuit (interrupteur ouvert). L'unité de cette résistance est l'\textbf{ohm}.
 
@@ -589,7 +634,7 @@ Viennent ensuite les \textbf{condensateurs}. Ils sont constitués de matériaux 
 
 Où \(Z_c\) est l'impédance d'un condensateur idéal. Nous pouvons ici la même analyse que plus haut, quand \(Z_c\) tend vers l'infini le courant ne passe plus, quand \(Z_c\) tend vers 0, le débit est important. L'impédance d'un condensateur est fonction de sa \textbf{capacité} (noté \textbf{C}, et s'exprime en \textbf{farads}).
 
-\[ Z_c = \frac{1}{jC\omega} \> \omega = 2 \pi \, f\]
+\[ Z_c = \frac{1}{jC\omega} \> = 2 \pi \, f\]
 
 Si la fréquence \(f\) tend vers l'infini, \(Z_c\) tend vers zéro, si la fréquence tend vers zéro, \(Z_c\) tend vers l'infini. On constate donc que l'impédance d'un condensateur varie en fonction de sa fréquence. On peut assimiler un condensateur à un interrupteur ouvert en basse fréquence et à un interrupteur fermé en haute fréquence.
 
@@ -654,6 +699,10 @@ Dans ce circuit, \(Z_{eq} = Z_{in} + Z_{out}\) et \(U_{out} = Z_{eq} \times i\).
 Dès lors, si \(Z_{in}\) est très grand devant \(Z_{out}\), alors \(U_{in}\) tend vers \(U_{out}\). Si \(Z_{out}\) est très grand devant \(Z_{in}\), alors \(U_{in}\) tend vers \(0\).
 
 Cela nous amène à démontrer l'affirmation ci-dessus. Maintenant, nous savons que dans un circuit, l'impédance varie en fonction de la fréquence. Dès lors, une mauvaise adaptation d'impédance ne fera pas que diminuer l'amplitude du signal, mais filtrera aussi une partie de spectre, généralement les hautes fréquences.
+
+\begin{quote}
+On considère aussi l'adaptation d'\textbf{impédance en tension}. Lorsque que nous considérons la \textbf{puissance} les relations sont différentes (cf section sur les hautparleurs).
+\end{quote}
 
 \hypertarget{description-dune-production-musicale-type}{%
 \chapter{Description d'une production musicale type}\label{description-dune-production-musicale-type}}
@@ -1184,8 +1233,11 @@ Enfin, nos principaux outils de manipulation du son sont aujourd'hui informatiqu
 En français, le «~digital~» est un anglicisme. Le mot correct est donc bien «~numérique~», et non «~digital~», qui qualifie ce qui a rapport au doigt.
 \end{quote}
 
+\hypertarget{thuxe9orie-de-luxe9chantillonnage}{%
+\section{Théorie de l'échantillonnage}\label{thuxe9orie-de-luxe9chantillonnage}}
+
 \hypertarget{dun-signal-continu-vers-un-signal-uxe9chantillonnuxe9}{%
-\section{D'un signal continu vers un signal échantillonné}\label{dun-signal-continu-vers-un-signal-uxe9chantillonnuxe9}}
+\subsection{D'un signal continu vers un signal échantillonné}\label{dun-signal-continu-vers-un-signal-uxe9chantillonnuxe9}}
 
 Une des caractéristiques principales d'un signal analogique est qu'il est continu. Une fonction, en mathématique, est dite continue si elle est définie en n'importe quel instant. Afin d'être numérisé, un signal doit donc être dénombré. En effet, la notion d'infini imposé par la continuité du signal n'a pas d'existence en numérique.
 
@@ -1202,16 +1254,11 @@ Afin de correctement numériser un signal, il convient de définir deux paramèt
 \end{itemize}
 
 \hypertarget{la-fruxe9quence-duxe9chantillonnage}{%
-\section{La fréquence d'échantillonnage}\label{la-fruxe9quence-duxe9chantillonnage}}
+\subsection{La fréquence d'échantillonnage}\label{la-fruxe9quence-duxe9chantillonnage}}
 
 Cette fréquence définit le nombre de prélèvements par seconde. Par exemple, un morceau édité sur un CD audio a une fréquence d'échantillonnage de 44~100~Hz (44,1~kHz), cela signifie que le signal est mesuré 44~100~fois par seconde.
 
-La fréquence de travail la plus courante est 48~kHz, mais l'on rencontre parfois des valeurs supérieures, multiple de celle-ci~: 96~kHz, 192~kHz, etc. Cette augmentation proportionnelle de la fréquence d'échantillonnage s'appelle \textbf{suréchantillonnage}. Certains techniciens espèrent ainsi améliorer la qualité de l'enregistrement. Ce suréchantillonnage à un coût en ressource CPU et en espace de stockage. Un flux audio échantillonné à 96~kHz demande deux fois plus de ressource et d'espace qu'un flux échantillonné à 48~kHz.
-
-\hypertarget{le-thuxe9oruxe8me-de-shannon-nyquist}{%
-\subsection{Le théorème de Shannon-Nyquist}\label{le-thuxe9oruxe8me-de-shannon-nyquist}}
-
-Cette valeur initiale de 44~100~Hz (ou 48~kHz) n'a pas été choisie au hasard. Pour la comprendre, il faut revenir au phénomène physique que nous cherchons à numériser.
+La fréquence de travail la plus courante est 48~kHz, mais l'on rencontre parfois des valeurs supérieures, multiple de celle-ci~: 96~kHz, 192~kHz, etc. Cette augmentation proportionnelle de la fréquence d'échantillonnage s'appelle \textbf{suréchantillonnage}. Certains techniciens espèrent ainsi améliorer la qualité de l'enregistrement. Ce suréchantillonnage à un coût en ressource CPU et en espace de stockage. Un flux audio échantillonné à 96~kHz demande deux fois plus de ressource et d'espace qu'un flux échantillonné à 48~kHz. Cette valeur initiale de 44~100~Hz (ou 48~kHz) n'a pas été choisie au hasard. Pour la comprendre, il faut revenir au phénomène physique que nous cherchons à numériser.
 
 Rappelons que le son est une onde mécanique, et nous l'entendons lorsqu'elle oscille dans une plage de fréquence comprise entre 20~Hz (très grave) et 20~000~Hz (très aigu). Il faut donc que notre système de numérisation soit capable de reproduire une fréquence maximale allant jusqu'à 20~000~Hz. Pour cela, nous utilisons les résultats des travaux des chercheurs Harry Nyquist et Claude Shannon (tous deux ayant travaillé aux laboratoires Bell).
 
@@ -1220,7 +1267,7 @@ Le \textbf{théorème de Shannon-Nyquist} stipule que, pour être capable d'éch
 Que se passe-t-il si la fréquence du signal dépasse la moitié de la fréquence d'échantillonnage~? Dans ce cas, la vitesse de prélèvement n'est plus suffisante et nous observons l'apparition de nouvelles fréquences ne provenant pas du signal original. Ce phénomène se nomme \textbf{repliement spectral}.
 
 \hypertarget{la-ruxe9solution-de-quantification}{%
-\section{La résolution de quantification}\label{la-ruxe9solution-de-quantification}}
+\subsection{La résolution de quantification}\label{la-ruxe9solution-de-quantification}}
 
 La résolution de quantification permet de définir la plage de valeur dynamique permise dans le système numérique. Celle-ci s'exprime en bit. Par exemple, si nous prenons un convertisseur travaillant en 8~bit. Le nombre de valeurs que peut prendre un signal numérisé par un tel convertisseur est de \(2^8-1 = 255\) en base 10. Admettons que ce convertisseur accepte des signaux ayant une tension en entrée variant entre +15V et -15~V, celles-ci seront \textbf{échelonnées} sur 255~valeurs. Si maintenant, ce convertisseur travaille en 16~bit, il y aura 65~535~échelons. La précision de mesure de la dynamique du signal n'est donc pas du tout la même.
 
@@ -1230,8 +1277,8 @@ En pratique, augmenter la résolution de quantification permet principalement de
 
 La résolution de quantification standard en enregistrement est 24~bit. La plage dynamique est telle qu'elle rend le travail d'enregistrement beaucoup plus souple sur les niveaux d'acquisition des différentes sources.
 
-\hypertarget{numuxe9rique-et-qualituxe9-sonore}{%
-\section{Numérique et qualité sonore}\label{numuxe9rique-et-qualituxe9-sonore}}
+\hypertarget{quelle-influence-sur-le-signal}{%
+\section{Quelle influence sur le signal ?}\label{quelle-influence-sur-le-signal}}
 
 Le son numérique a longtemps eu la réputation d'être «~dur~», particulièrement dans le haut du spectre. Cela s'explique assez facilement par le fonctionnement des premiers convertisseurs.
 
@@ -1263,7 +1310,14 @@ Après être passé au travers d'un convertisseur, l'audio est représenté par 
 
 La variation de tension de ces signaux s'apparente à une onde carrée. Ces signaux périodiques possèdent un état «~haut~» et un état «~bas~», très pratique pour communiquer des nombres binaires.
 
-\begin{center}\includegraphics[width=1\linewidth]{_main_files/figure-latex/unnamed-chunk-31-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{_main_files/figure-latex/unnamed-chunk-31-1} 
+
+}
+
+\caption{Exemples de signaux carrés (Non Return to Zero à gauche, Return to Zero à droite)}\label{fig:unnamed-chunk-31}
+\end{figure}
 
 \hypertarget{les-liaisons-point-uxe0-point}{%
 \section{Les liaisons point à point}\label{les-liaisons-point-uxe0-point}}
@@ -1288,7 +1342,7 @@ La connectique la plus courante pour l'ADAT est la fibre optique avec fiches tos
 
 \begin{figure}
 
-{\centering \includegraphics{_resources/bitmap/plug/toslink} 
+{\centering \includegraphics[width=0.3\linewidth]{_resources/bitmap/plug/toslink} 
 
 }
 
@@ -1304,7 +1358,7 @@ Ce protocole se retrouve fréquemment dans le monde de l'audio professionnel. Le
 
 \begin{figure}
 
-{\centering \includegraphics{_resources/bitmap/plug/fibre} \includegraphics{_resources/bitmap/plug/bnc} 
+{\centering \includegraphics[width=0.3\linewidth]{_resources/bitmap/plug/fibre} \includegraphics[width=0.3\linewidth]{_resources/bitmap/plug/bnc} 
 
 }
 
@@ -1327,8 +1381,47 @@ Les principaux acteurs industriels des réseaux audionumériques sont Audinet av
 
 (En cours d'écriture)
 
-\hypertarget{les-protocoles-de-transmission-dinformation}{%
-\section{Les protocoles de transmission d'information}\label{les-protocoles-de-transmission-dinformation}}
+\hypertarget{fonctionnement-dun-ordinateur}{%
+\section{Fonctionnement d'un ordinateur}\label{fonctionnement-dun-ordinateur}}
+
+\hypertarget{les-systuxe8mes-dexploitation}{%
+\section{Les systèmes d'exploitation}\label{les-systuxe8mes-dexploitation}}
+
+\hypertarget{linux}{%
+\subsection{Linux}\label{linux}}
+
+\hypertarget{microsoft-windows}{%
+\subsection{Microsoft Windows}\label{microsoft-windows}}
+
+\hypertarget{apple-macos}{%
+\subsection{Apple MacOS}\label{apple-macos}}
+
+\hypertarget{les-pilotes-audio}{%
+\section{Les pilotes audio}\label{les-pilotes-audio}}
+
+\hypertarget{asio}{%
+\subsection{ASIO}\label{asio}}
+
+\hypertarget{coreaudio}{%
+\subsection{CoreAudio}\label{coreaudio}}
+
+\hypertarget{alsa}{%
+\subsection{ALSA}\label{alsa}}
+
+\hypertarget{jack-audio}{%
+\subsection{Jack Audio}\label{jack-audio}}
+
+\hypertarget{les-stations-de-travail-audio-numuxe9rique-daw}{%
+\section{Les Stations de Travail Audio-Numérique (DAW)}\label{les-stations-de-travail-audio-numuxe9rique-daw}}
+
+\hypertarget{le-moteur-audio}{%
+\subsection{Le moteur audio}\label{le-moteur-audio}}
+
+\hypertarget{les-fonctionnalituxe9s}{%
+\subsection{Les fonctionnalités}\label{les-fonctionnalituxe9s}}
+
+\hypertarget{les-protocoles-de-transmission-dinformations}{%
+\section{Les protocoles de transmission d'informations}\label{les-protocoles-de-transmission-dinformations}}
 
 \hypertarget{midi}{%
 \subsection{MIDI}\label{midi}}
@@ -1336,21 +1429,87 @@ Les principaux acteurs industriels des réseaux audionumériques sont Audinet av
 \hypertarget{osc}{%
 \subsection{OSC}\label{osc}}
 
-\hypertarget{enceintes-et-salle-duxe9coute}{%
-\chapter{Enceintes et salle d'écoute}\label{enceintes-et-salle-duxe9coute}}
+\hypertarget{enceintes-et-amplificateurs}{%
+\chapter{Enceintes et amplificateurs}\label{enceintes-et-amplificateurs}}
 
-De tous les équipements audio nécessaires pour réaliser une prise de son, les enceintes (et les casques) sont certainement les plus importants. En effet, c'est sous leurs influences que nous pourrons écouter et contrôler notre travail. Il est donc crucial d'utiliser des écoutes regroupant un certain nombre de critères minimaux et de les connaître sur le bout des doigts.
+Un haut-parleur est un appareil permettant de transformer une énergie électrique en énergie mécanique. On l'appelle, plus spécifiquement, un transducteur électroacoustique. Fondamentalement, il s'agit d'un appareil extrêmement proche d'un microphone. D'ailleurs, il est possible d'utiliser un haut-parleur comme microphone, et vice-versa. Les haut-parleurs ont de faibles rendements, il est donc nécessaire d'amplifier les signaux grâce à des amplificateurs de puissance en amont.
+
+De tous les équipements audio nécessaires pour réaliser une prise de son, les enceintes (et les casques) sont certainement les plus importants. En effet, c'est à travers leur prisme que nous pourrons écouter et contrôler notre travail. Il est donc crucial d'utiliser des écoutes regroupant un certain nombre de critères et, surtout, de les connaître sur le bout des doigts.
+
+\hypertarget{anatomie-dun-haut-parleur}{%
+\section{Anatomie d'un haut-parleur}\label{anatomie-dun-haut-parleur}}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.25\linewidth]{_resources/bitmap/speaker/woofer} \includegraphics[width=0.25\linewidth]{_resources/bitmap/speaker/midrange} \includegraphics[width=0.25\linewidth]{_resources/bitmap/speaker/tweeter} 
+
+}
+
+\caption{Coupe de hautparleur (dans l'ordre, woofer, mid-range, tweeter). Infographie par Svjo, CC BY-SA 3.0}\label{fig:unnamed-chunk-34}
+\end{figure}
+
+Sur les schémas ci-dessus, nous trouvons les éléments suivants~:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  L'aimant
+\item
+  La bobine
+\item
+  La suspension
+\item
+  La membrane
+\end{enumerate}
+
+La plupart des haut-parleurs sont qualifiés de \textbf{dynamiques}. La membrane du haut-parleur est reliée à une bobine, elle-même entourée par un système d'aimants. Lorsqu'un courant est appliqué aux bornes de cette bobine, sa position change dût à la modification du champ électromagnétique. Si le courant oscille, la bobine oscille de façon analogue, entraînant la membrane et permet donc la reproduction du son.
+
+On appelle généralement «~subwoofer~» les haut-parleurs conçus pour retranscrire les fréquences très graves (20-200~Hz), «~woofer~» les haut-parleurs dédiés aux fréquences graves (50~Hz à 1000~kHz), «~mid-range~» les haut-parleurs du médium (1~kHz à 6~kHz), et «~tweeter~», ceux de l'aigu (au-delà de 5~kHz).
+
+Le haut-parleur est sans doute l'appareil audio le plus imparfait qui soit. Il est sujet à de nombreuses sources de distorsion du signal.
+
+Nous ne savons pas fabriquer des haut-parleurs capables de reproduire uniformément toutes les fréquences. Ces derniers sont souvent spécialisés dans une certaine plage de fréquence. La plupart des enceintes de monitoring utilisent 3~voies~: deux actives (utilisant des haut-parleurs) pour l'aigu et le médium, et une passive (évent avant ou arrière) pour le grave. L'utilisation du plusieurs voies imposent donc l'utilisation de filtres induisant un déphasage de certaines fréquences.
+
+Également, un haut-parleur peut être approché par un modèle «~masse-ressort~». Cela signifie qu'il y a une certaine inertie à sa mise en action et une certaine inertie à sa mise en arrêt. L'enceinte idéale devrait posséder une inertie nulle. Cette inertie est potentiellement responsable d'un adoucissement des transitoires et d'une sensation de flou.
+
+\hypertarget{amplification-et-impuxe9dance}{%
+\section{Amplification et impédance}\label{amplification-et-impuxe9dance}}
+
+Nous avons précédemment abordé le préamplificateur, qui permet d'amplifier la tension d'un signal audio analogique et d'en baisser son impédance. On appelle alors «~amplificateur~» un amplificateur de \textbf{puissance}. On rappel que la puissance d'un signal s'exprime par la relation ci-dessous. On cherche donc à augmenter la tension \textbf{et} l'intensité du signal.
+
+\[ P = U \times I \]
+
+Nous pouvons rapidement aborder la notion de classe d'amplification. En audio, nous n'utilisons que les classes A, AB et D. La classe A utilise un transistor (ou tube) pour amplifier l'ensemble du signal. Elle possède un très mauvais rendement. Cela signifie qu'il faut fournir beaucoup d'énergie au transistor pour un faible gain sur la puissance du signal. La classe AB utilise deux transistors, un pour les alternances négatives et un pour les alternances positives. Le rendement est meilleur que pour la classe A. Cependant, le point de raccordement entre les deux transistors est assez sensible et peu généré de la distorsion sur le signal (distorsion de croisement). La classe D, aussi appelée à tort «~numérique~», utilise un transistor afin d'indiquer l'état du signal. On retrouve donc la même idée que dans l'échantillonnage du signal. Ces amplificateurs offrent un \textbf{excellent rendement}.
+
+Nous avons également abordé précédemment la notion d'adaptation d'impédance en tension, sans aborder l'adaptation d'impédance en puissance. Pour rappel, afin de préserver la tension entre deux appareils A et B, nous faisons en sorte d'avoir une faible impédance à la sortie de l'appareil A et une grande impédance à l'entré de l'appareil B. Pour préserver la puissance du signal, ce paradigme ne fonctionne plus. On cherche alors à avoir la même impédance entre la sortie d'un appareil et l'entrée d'un autre. En pratique, on raccordera, sur la sortie «~8~ohms~» d'un amplificateur, un haut-parleur ayant une impédance de «~8~ohms~».
+
+\begin{quote}
+On remarque qu'ici, les impédances sont extrêmement faibles. Les impédances typiques des haut-parleurs (et donc des sorties d'amplificateurs en puissance) sont 4, 8 et 16~ohms.
+\end{quote}
+
+La plupart des enceintes de monitoring ont aujourd'hui une amplification de classe D directement intégré.
+
+\hypertarget{puissance-et-sensibilituxe9}{%
+\section{Puissance et sensibilité}\label{puissance-et-sensibilituxe9}}
+
+On trouve généralement deux mesures de la puissance pour les enceintes. La puissance \textbf{crête à crête} (peak) et la \textbf{puissance moyenne} (\textbf{RMS}, ou \textbf{Root Mean Square}). La puissance se calcule grâce à la formule suivante~:
+
+\[ P =\frac {U^2}{Z} \]
+
+\(P\) est la puissance, \(U\) la tension et \(Z\) l'impédance. Pour réaliser la mesure de puissance d'un haut-parleur, on le soumet à un signal test, en général un bruit rose, pendant plusieurs heures. La puissance crête à crête se calcul grâce à la tension crête à crête (aussi dite maximale). Par exemple, pour une tension maximale de 100~V, sous une impédance de 8~ohms, on trouve une \textbf{puissance crête à crête} d'environ 1200~watts (abbrégé W). On considère généralement que la tension moyenne d'un signal est six décibels plus petite que sa tension maximale. En reprenant notre exemple, pour une tension maximale de 100~V, on a une tension moyenne de 50~V, sous une impédance de 8~ohms, on trouve une \textbf{puissance moyenne} d'environ 300~W.
+
+Alors, il faut donc faire très attention sur les spécifications données par les constructeurs, parfois volontairement floues. À défaut, si on lit que la puissance admissible d'un haut-parleur est de 1000~W, on supposera par défaut qu'il s'agit d'une puissance crête à crête. On ne dépassera donc pas une puissance moyenne d'amplification de 250 W.
+
+La \textbf{sensibilité} est une mesure du niveau sonore à un mètre de l'enceinte pour une puissance RMS d'entrée d'un watt. Grâce à cette valeur, on peut calculer le niveau sonore produit par le haut-parleur à diverses distances et en fonction de différentes puissances d'entrées. On comprend aussi que la puissance électrique admissible dans l'enceinte ne donne que peu d'information sur son niveau sonore de sortie.
+
+\hypertarget{conseils-pratiques}{%
+\section{Conseils pratiques}\label{conseils-pratiques}}
 
 \hypertarget{choisir-une-paire-duxe9coutes}{%
-\section{Choisir une paire d'écoutes}\label{choisir-une-paire-duxe9coutes}}
+\subsection{Choisir une paire d'écoutes}\label{choisir-une-paire-duxe9coutes}}
 
-Choisir une paire d'enceintes peut paraître être un exercice difficile. Il existe énormément de modèles, parcourant des gammes de prix allant de quelques dizaines d'euros à plusieurs dizaines de milliers.
-
-Qui plus est, l'enceinte audio est sans doute l'appareil audio que les Hommes savent le moins bien fabriquer. L'enceinte de monitoring parfait, à savoir linéaire en tout point, n'existe pas.
-
-Premièrement, nous ne savons pas fabriquer des haut-parleurs capables de reproduire uniformément toutes les fréquences. Ces derniers sont souvent spécialisés dans une certaine plage de fréquence. La plupart des enceintes de monitoring utilisent 3~voies~: deux actives (utilisant des haut-parleurs) pour l'aigu et le médium, et une passive (évent avant ou arrière) pour le grave.
-
-Deuxièmement, un haut-parleur peut être approché par un modèle «~masse-ressort~». Cela signifie qu'il y a une certaine inertie à sa mise en action et une certaine inertie à sa mise en arrêt. L'enceinte idéale devrait posséder une inertie nulle dans les deux cas, ce qui n'est malheureusement pas le cas en pratique. Cette inertie est potentiellement responsable d'un adoucissement des transitoires et d'une sensation de flou.
+Choisir une paire d'enceintes peut sembler être un exercice difficile. Il existe énormément de modèles, coûtant de quelques dizaines d'euros à plusieurs dizaines de milliers.
 
 Il y a cependant plusieurs critères assez objectifs pour évaluer la qualité d'une enceinte~:
 
@@ -1370,7 +1529,7 @@ Il y a cependant plusieurs critères assez objectifs pour évaluer la qualité d
 \end{enumerate}
 
 \hypertarget{placer-correctement-son-uxe9coute}{%
-\section{Placer correctement son écoute}\label{placer-correctement-son-uxe9coute}}
+\subsection{Placer correctement son écoute}\label{placer-correctement-son-uxe9coute}}
 
 Afin de satisfaire les critères de la stéréophonie, il convient de respecter les règles suivantes~:
 
@@ -1379,28 +1538,14 @@ Afin de satisfaire les critères de la stéréophonie, il convient de respecter 
 \item
   Les deux enceintes doivent être de même marque, de même modèle et appairée. Si une des membranes a dû être changée sur l'une d'elle, l'autre aurait dû recevoir la même opération.
 \item
-  Les deux enceintes
-\item
-  doivent être séparées d'un angle de 60°
+  Les deux enceintes doivent être séparées par un angle de 60°
 \item
   L'auditeur doit être placé à équidistance des deux haut-parleurs, et regarder vers le milieu du segment formé par les deux enceintes.
 \end{itemize}
 
 Une fois ces critères respectés, voici quelques conseils sur le placement des enceintes dans une pièce~:
 
-\begin{itemize}
-\tightlist
-\item
-  On préférera des pièces de grandes tailles, afin de repousser au maximum le temps d'arrivée des premières réflexions.
-\item
-  Le système stéréophonique devrait être positionné dans un souci de symétrie~: l'enceinte de gauche ne devrait pas être plus proche d'un mur que l'enceinte de droite, par exemple.
-\item
-  Dans le cas de petit espace, on préféra coller les enceintes contre un mur. Cela permettra de supprimer l'influence d'une des premières réflexions au prix de l'augmentation du niveau de grave.
-\item
-  Il est vivement recommandé de procédé au traitement, même minimal, acoustique de la pièce de travail, à commencer par les zones de réflexions premières et par les angles (ou le grave va s'accumuler).
-\item
-  Si le traitement acoustique n'est pas envisageable, il convient de privilégier une écoute à faible niveau et une proximité maximale avec les enceintes.
-\end{itemize}
+On préférera des pièces de grandes tailles, afin de repousser au maximum le temps d'arrivée des premières réflexions. Le système stéréophonique devrait être positionné dans un souci de symétrie~: l'enceinte de gauche ne devrait pas être plus proche d'un mur que l'enceinte de droite, par exemple. Dans le cas de petit espace, on préféra coller les enceintes contre un mur. Cela permettra de supprimer l'influence d'une des premières réflexions au prix de l'augmentation du niveau de grave. Il est vivement recommandé de procédé au traitement, même minimal, acoustique de la pièce de travail, à commencer par les zones de réflexions premières et par les angles (ou le grave va s'accumuler). Si le traitement acoustique n'est pas envisageable, il convient de privilégier une écoute à faible niveau et une proximité maximale avec les enceintes.
 
 \hypertarget{luxe9coute-au-casque}{%
 \section{L'écoute au casque}\label{luxe9coute-au-casque}}
@@ -1416,7 +1561,7 @@ Troisièmement, les casques sont encore moins linéaires en fréquence que les h
 Ces défauts peuvent être compensés par l'habitude et la connaissance du système d'écoute, mais la transportabilité d'un mixage (à savoir, sa compatibilité avec d'autres systèmes d'écoute) réalisé au casque est souvent discutable.
 
 \hypertarget{casque-fermuxe9-ou-casque-ouvert}{%
-\section{Casque fermé ou casque ouvert~?}\label{casque-fermuxe9-ou-casque-ouvert}}
+\subsection{Casque fermé ou casque ouvert~?}\label{casque-fermuxe9-ou-casque-ouvert}}
 
 Le casque fermé, comme son nom l'indique, propose une fabrication enfermant le haut-parleur dans une enceinte close. Cette méthode de fabrication offre l'avantage d'isoler celui qui écoute de l'environnement, mais aussi d'isoler l'environnement de ce qui est diffusé dans le casque. Par contre, ces casques ont souvent une réponse en fréquence très accidentée, et ne sont pas recommandés pour le mixage. Il est par contre vivement recommandé pour les musiciens en session de prise de son.
 
@@ -1481,15 +1626,32 @@ Il est communément admis que le \(\Delta t\) aura une efficacité maximale dans
 \section{Principes de la prise de son au couple}\label{principes-de-la-prise-de-son-au-couple}}
 
 Pour créer son effet stéréophonique, les couples de prise de son utilisent les mêmes mécanismes que notre écoute naturelle~:
-+ La différence de temps
-+ La différence d'intensité
+
+\begin{itemize}
+\tightlist
+\item
+  La différence de temps
+\item
+  La différence d'intensité
+\end{itemize}
 
 Il va de soi que, pour fonctionner de façon optimale, les microphones utilisés pour réaliser une prise de son stéréophonique doivent être de même marque, de même modèle et appairée.
 
+\begin{quote}
+L'appairage garantit que les microphones aient des caractéristiques techniques suffisamment proches pour être considérés comme identiques.
+\end{quote}
+
 Afin de manipuler ces mécanismes, le preneur de son peut jouer sur les paramètres suivant~:
-+ La directivité des microphones
-+ L'angle entre les capsules
-+ La distance entre les capsules
+
+\begin{itemize}
+\tightlist
+\item
+  La directivité des microphones
+\item
+  L'angle entre les capsules
+\item
+  La distance entre les capsules
+\end{itemize}
 
 Modifier chacun de ses paramètres influe sur l'\textbf{angle de prise de son}. Plus l'ange de prise de son est faible, plus l'impression de stéréophonie sera grande. Plus l'angle de prise de son est grand, plus l'impression de stéréophonie sera faible, jusqu'à tendre vers la monophonie.
 
@@ -1513,7 +1675,7 @@ Il est important de commencer par évoquer les abaques de Michael Williams, ayan
 
 On trouve également beaucoup d'application mobile, comme celle du constructeur du microphone Neumann, s'appuyant sur les travaux de Michael Williams pour aider leurs utilisateurs à correctement positionner leurs microphones. Évidemment, et heureusement, rien n'est spécifique à un fabricant de microphones en particulier, l'application d'un constructeur A peut servir pour placer des microphones d'un constructeur B.
 
-Plus récemment, des chercheurs britanniques ont développé une application dénommée \href{https://marrsweb.hud.ac.uk/}{MARRS}, permettant de positionner son couple de prise de son par rapport aux sources via une interface graphique très simple à utiliser. Cette application est disponible sur mobile et sur navigateur internet.
+Plus récemment, des chercheurs britanniques ont développé une application, nommée \href{https://marrsweb.hud.ac.uk/}{MARRS}, permettant de positionner son couple de prise de son par rapport aux sources via une interface graphique très simple à utiliser. Cette application est disponible sur mobile et sur navigateur internet.
 
 \hypertarget{priviluxe9gier-le-delta-i-ou-le-delta-t}{%
 \subsection{\texorpdfstring{Privilégier le \(\Delta i\) ou le \(\Delta t\)~?}{Privilégier le \textbackslash Delta i ou le \textbackslash Delta t~?}}\label{priviluxe9gier-le-delta-i-ou-le-delta-t}}
@@ -1756,8 +1918,14 @@ Prenons l'exemple d'un son pur~:
 La phase de ce signal est décrite par \(\omega t +\phi\)
 
 Les deux paramètres responsables de déphasages audibles sont~:
-+ \(t\), le temps
-+ \(\phi\), la phase à l'origine
+
+\begin{itemize}
+\tightlist
+\item
+  \(t\), le temps
+\item
+  \(\phi\), la phase à l'origine
+\end{itemize}
 
 Attention, pour un son pur, l'effet de la modification de \(t\) ou de \(\phi\) semble très similaire. Ce n'est pas le cas pour des signaux pseudo-périodiques, atténués dans le temps.
 

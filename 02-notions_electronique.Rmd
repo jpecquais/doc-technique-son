@@ -12,7 +12,7 @@ Commençons par aborder les grandeurs physiques liées à l’électricité.
 
 ### L’intensité
 
-L’intensité électrique, notée **i** et exprimée en **Ampère (A)**, est une grandeur permettant de mesurer le débit du courant électrique. Ceci est parfaitement analogue à un débit d’eau. Si un robinet est faiblement ouvert, l’écoulement de l’eau sera faible, s’il est complètement ouvert, le débit sera fort.
+L’intensité électrique, notée **I** et exprimée en **Ampère (A)**, est une grandeur permettant de mesurer le débit du courant électrique. Ceci est parfaitement analogue à un débit d’eau. Si un robinet est faiblement ouvert, l’écoulement de l’eau sera faible, s’il est complètement ouvert, le débit sera fort.
 
 ### La tension
 
@@ -22,11 +22,37 @@ La tension, généralement notée **U** et exprimée en **Volt (V)**, désigne u
 
 Dans le cas de l’audio, la tension électrique du signal sonore est homologue à la variation de pression.
 
+Tout comme la pression acoustique, il est possible de rendre compte d'une variation de tension électrique à un niveau sonore en décibel. Le relation liant la tension et le niveau est :
+
+$$ L_{dB} = 20 \, log (\frac{U}{U_{ref}}) $$
+
+Il existe plusieurs valeurs pour U_{ref}, donnant lieu à différentes unités de mesures :
+
++ **dBm**, définie à l'apparition du téléphone, propose $U_{ref} = 0.775 V$ pour une impédance de $600 \omega$. Cette impédance correspond à celle des lignes téléphoniques.
++ **dBu** / **dBv**, qui ne tient plus compte de la charge d'impédance, $U_{ref} = 0.775 V$.
++ **dBV**, où $U_{ref} = 1 V$
+
+> Lorsque la tension double, le niveau augmente de six décibels. Lorsque la tension est multiplié par dix, le niveau augmente de vingt décibels.
+
+On peut également définir l'augmentation du niveau sonore par rapport à la puissance du signal. On admet que :
+
+$$ P = \frac{U^2}{Z} \, U = \sqrt{P \times Z} $$
+
+Où $P$ est la puissance. En remplaçant dans l'équation précédente, on trouve :
+
+$$ L_{dB} = 20 \, log (\frac{\sqrt{P}}{\sqrt{P_{ref}}}) \> = 10 \, log (\frac{P}{P_{ref}}) $$
+
+> Lorsque la puissance double, le niveau augmente de trois décibels. Lorsque la puissance est multiplié par dix, le niveau augmente de dix décibels.
+
+On utilisant la loi d'ohm (voir ci-dessous) et la relation entre la puissance, la tension et l'impédance, on trouve également que :
+
+$$ P = U \times I $$
+
 ### L’impédance
 
 Nous connaissons, en général, la **loi d’Ohm**. Celle-ci permet de donner une relation entre l’intensité du courant et sa tension, aux bornes d’un composant d’un circuit (aussi appelé dipôle).
 
-$$ U = R \times i $$
+$$ U = R \times I $$
 
 Où $R$ est la résistance du dipôle. Elle traduit la facilité d’un courant à se déplacer dans le dipôle. Pour reprendre les analogies ci-dessus, la résistance correspondrait à une valve. À tension constante, si la résistance tend vers zéro, le débit est très important. Si la résistance tend vers l’infini, le débit sera très faible. Si elle est nulle, alors nous sommes dans le cas d’un court-circuit (interrupteur fermé). Si elle est infinie, cela traduit une absence de connexion entre deux points d’un circuit (interrupteur ouvert). L’unité de cette résistance est l’**ohm**.
 
@@ -54,7 +80,7 @@ $$ U = Z_c \times I $$
 
 Où $Z_c$ est l’impédance d’un condensateur idéal. Nous pouvons ici la même analyse que plus haut, quand $Z_c$ tend vers l’infini le courant ne passe plus, quand $Z_c$ tend vers 0, le débit est important. L’impédance d’un condensateur est fonction de sa **capacité** (noté **C**, et s’exprime en **farads**).
 
-$$ Z_c = \frac{1}{jC\omega} \> \omega = 2 \pi \, f$$
+$$ Z_c = \frac{1}{jC\omega} \> = 2 \pi \, f$$
 
 Si la fréquence $f$ tend vers l’infini, $Z_c$ tend vers zéro, si la fréquence tend vers zéro, $Z_c$ tend vers l’infini. On constate donc que l’impédance d’un condensateur varie en fonction de sa fréquence. On peut assimiler un condensateur à un interrupteur ouvert en basse fréquence et à un interrupteur fermé en haute fréquence.
 

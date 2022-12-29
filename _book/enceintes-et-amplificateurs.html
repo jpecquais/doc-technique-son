@@ -52,6 +52,13 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.0/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 
 
 
@@ -72,7 +79,7 @@
 <li><a href="./">La prise de son musicale</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> bibliography: [book.bib, packages.bib]</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Avant-propos</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#a-qui-sadresse-cet-ouvrage"><i class="fa fa-check"></i><b>1.1</b> A qui s’adresse cet ouvrage</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#mise-à-jour"><i class="fa fa-check"></i><b>1.2</b> Mise à jour</a></li>
@@ -92,7 +99,6 @@
 <li class="chapter" data-level="2.2.1" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#spectre-timbre-et-vocabulaire"><i class="fa fa-check"></i><b>2.2.1</b> Spectre, timbre et vocabulaire</a></li>
 <li class="chapter" data-level="2.2.2" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#pression-acoustique-niveau-sonore"><i class="fa fa-check"></i><b>2.2.2</b> Pression acoustique &amp; niveau sonore</a></li>
 <li class="chapter" data-level="2.2.3" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#positionnement-dans-lespace"><i class="fa fa-check"></i><b>2.2.3</b> Positionnement dans l’espace</a></li>
-<li class="chapter" data-level="2.2.4" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#liens-entre-vision-et-audition"><i class="fa fa-check"></i><b>2.2.4</b> Liens entre vision et audition</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="acoustique-des-salles.html"><a href="acoustique-des-salles.html"><i class="fa fa-check"></i><b>3</b> Acoustique des salles</a>
@@ -181,14 +187,14 @@
 <li class="chapter" data-level="10" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html"><i class="fa fa-check"></i><b>10</b> La conversion analogique numérique</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-nécessité-de-la-conversion-analogique-numérique"><i class="fa fa-check"></i><b>10.1</b> La nécessité de la conversion analogique numérique</a></li>
-<li class="chapter" data-level="10.2" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#dun-signal-continu-vers-un-signal-échantillonné"><i class="fa fa-check"></i><b>10.2</b> D’un signal continu vers un signal échantillonné</a></li>
-<li class="chapter" data-level="10.3" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-fréquence-déchantillonnage"><i class="fa fa-check"></i><b>10.3</b> La fréquence d’échantillonnage</a>
+<li class="chapter" data-level="10.2" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#théorie-de-léchantillonnage"><i class="fa fa-check"></i><b>10.2</b> Théorie de l’échantillonnage</a>
 <ul>
-<li class="chapter" data-level="10.3.1" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#le-théorème-de-shannon-nyquist"><i class="fa fa-check"></i><b>10.3.1</b> Le théorème de Shannon-Nyquist</a></li>
+<li class="chapter" data-level="10.2.1" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#dun-signal-continu-vers-un-signal-échantillonné"><i class="fa fa-check"></i><b>10.2.1</b> D’un signal continu vers un signal échantillonné</a></li>
+<li class="chapter" data-level="10.2.2" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-fréquence-déchantillonnage"><i class="fa fa-check"></i><b>10.2.2</b> La fréquence d’échantillonnage</a></li>
+<li class="chapter" data-level="10.2.3" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-résolution-de-quantification"><i class="fa fa-check"></i><b>10.2.3</b> La résolution de quantification</a></li>
 </ul></li>
-<li class="chapter" data-level="10.4" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-résolution-de-quantification"><i class="fa fa-check"></i><b>10.4</b> La résolution de quantification</a></li>
-<li class="chapter" data-level="10.5" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#numérique-et-qualité-sonore"><i class="fa fa-check"></i><b>10.5</b> Numérique et qualité sonore</a></li>
-<li class="chapter" data-level="10.6" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-conversion-sigma-delta"><i class="fa fa-check"></i><b>10.6</b> La conversion sigma-delta</a></li>
+<li class="chapter" data-level="10.3" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#quelle-influence-sur-le-signal"><i class="fa fa-check"></i><b>10.3</b> Quelle influence sur le signal ?</a></li>
+<li class="chapter" data-level="10.4" data-path="la-conversion-analogique-numérique.html"><a href="la-conversion-analogique-numérique.html#la-conversion-sigma-delta"><i class="fa fa-check"></i><b>10.4</b> La conversion sigma-delta</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="les-modulations-de-signaux-numériques.html"><a href="les-modulations-de-signaux-numériques.html"><i class="fa fa-check"></i><b>11</b> Les modulations de signaux numériques</a>
 <ul>
@@ -202,10 +208,29 @@
 </ul></li>
 <li class="chapter" data-level="12" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html"><i class="fa fa-check"></i><b>12</b> Introduction à l’informatique musicale</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#les-protocoles-de-transmission-dinformation"><i class="fa fa-check"></i><b>12.1</b> Les protocoles de transmission d’information</a>
+<li class="chapter" data-level="12.1" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#fonctionnement-dun-ordinateur"><i class="fa fa-check"></i><b>12.1</b> Fonctionnement d’un ordinateur</a></li>
+<li class="chapter" data-level="12.2" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#les-systèmes-dexploitation"><i class="fa fa-check"></i><b>12.2</b> Les systèmes d’exploitation</a>
 <ul>
-<li class="chapter" data-level="12.1.1" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#midi"><i class="fa fa-check"></i><b>12.1.1</b> MIDI</a></li>
-<li class="chapter" data-level="12.1.2" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#osc"><i class="fa fa-check"></i><b>12.1.2</b> OSC</a></li>
+<li class="chapter" data-level="12.2.1" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#linux"><i class="fa fa-check"></i><b>12.2.1</b> Linux</a></li>
+<li class="chapter" data-level="12.2.2" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#microsoft-windows"><i class="fa fa-check"></i><b>12.2.2</b> Microsoft Windows</a></li>
+<li class="chapter" data-level="12.2.3" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#apple-macos"><i class="fa fa-check"></i><b>12.2.3</b> Apple MacOS</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#les-pilotes-audio"><i class="fa fa-check"></i><b>12.3</b> Les pilotes audio</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#asio"><i class="fa fa-check"></i><b>12.3.1</b> ASIO</a></li>
+<li class="chapter" data-level="12.3.2" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#coreaudio"><i class="fa fa-check"></i><b>12.3.2</b> CoreAudio</a></li>
+<li class="chapter" data-level="12.3.3" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#alsa"><i class="fa fa-check"></i><b>12.3.3</b> ALSA</a></li>
+<li class="chapter" data-level="12.3.4" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#jack-audio"><i class="fa fa-check"></i><b>12.3.4</b> Jack Audio</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#les-stations-de-travail-audio-numérique-daw"><i class="fa fa-check"></i><b>12.4</b> Les Stations de Travail Audio-Numérique (DAW)</a>
+<ul>
+<li class="chapter" data-level="12.4.1" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#le-moteur-audio"><i class="fa fa-check"></i><b>12.4.1</b> Le moteur audio</a></li>
+<li class="chapter" data-level="12.4.2" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#les-fonctionnalités"><i class="fa fa-check"></i><b>12.4.2</b> Les fonctionnalités</a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#les-protocoles-de-transmission-dinformations"><i class="fa fa-check"></i><b>12.5</b> Les protocoles de transmission d’informations</a>
+<ul>
+<li class="chapter" data-level="12.5.1" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#midi"><i class="fa fa-check"></i><b>12.5.1</b> MIDI</a></li>
+<li class="chapter" data-level="12.5.2" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#osc"><i class="fa fa-check"></i><b>12.5.2</b> OSC</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html"><i class="fa fa-check"></i><b>13</b> Enceintes et amplificateurs</a>
@@ -296,7 +321,7 @@
 <p>De tous les équipements audio nécessaires pour réaliser une prise de son, les enceintes (et les casques) sont certainement les plus importants. En effet, c’est à travers leur prisme que nous pourrons écouter et contrôler notre travail. Il est donc crucial d’utiliser des écoutes regroupant un certain nombre de critères et, surtout, de les connaître sur le bout des doigts.</p>
 <div id="anatomie-dun-haut-parleur" class="section level2 hasAnchor" number="13.1">
 <h2><span class="header-section-number">13.1</span> Anatomie d’un haut-parleur<a href="enceintes-et-amplificateurs.html#anatomie-dun-haut-parleur" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-34"></span>
 <img src="_resources/bitmap/speaker/woofer.png" alt="Coupe de hautparleur (dans l'ordre, woofer, mid-range, tweeter). Infographie par Svjo, CC BY-SA 3.0" width="25%" /><img src="_resources/bitmap/speaker/midrange.png" alt="Coupe de hautparleur (dans l'ordre, woofer, mid-range, tweeter). Infographie par Svjo, CC BY-SA 3.0" width="25%" /><img src="_resources/bitmap/speaker/tweeter.png" alt="Coupe de hautparleur (dans l'ordre, woofer, mid-range, tweeter). Infographie par Svjo, CC BY-SA 3.0" width="25%" />
 <p class="caption">
 Figure 13.1: Coupe de hautparleur (dans l’ordre, woofer, mid-range, tweeter). Infographie par Svjo, CC BY-SA 3.0
@@ -317,7 +342,7 @@ Figure 13.1: Coupe de hautparleur (dans l’ordre, woofer, mid-range, tweeter). 
 </div>
 <div id="amplification-et-impédance" class="section level2 hasAnchor" number="13.2">
 <h2><span class="header-section-number">13.2</span> Amplification et impédance<a href="enceintes-et-amplificateurs.html#amplification-et-impédance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Nous avons précédemment abordé le préamplificateur, qui permet d’amplifier la tension d’un signal audio analogique et d’en baisser son impédance. On appelle alors « amplificateur » un amplificateur de <strong>puissance</strong>. La puissance d’un signal s’exprime par la relation ci-dessous. On cherche donc à augmenter la tension <strong>et</strong> l’intensité du signal.</p>
+<p>Nous avons précédemment abordé le préamplificateur, qui permet d’amplifier la tension d’un signal audio analogique et d’en baisser son impédance. On appelle alors « amplificateur » un amplificateur de <strong>puissance</strong>. On rappel que la puissance d’un signal s’exprime par la relation ci-dessous. On cherche donc à augmenter la tension <strong>et</strong> l’intensité du signal.</p>
 <p><span class="math display">\[ P = U \times I \]</span></p>
 <p>Nous pouvons rapidement aborder la notion de classe d’amplification. En audio, nous n’utilisons que les classes A, AB et D. La classe A utilise un transistor (ou tube) pour amplifier l’ensemble du signal. Elle possède un très mauvais rendement. Cela signifie qu’il faut fournir beaucoup d’énergie au transistor pour un faible gain sur la puissance du signal. La classe AB utilise deux transistors, un pour les alternances négatives et un pour les alternances positives. Le rendement est meilleur que pour la classe A. Cependant, le point de raccordement entre les deux transistors est assez sensible et peu généré de la distorsion sur le signal (distorsion de croisement). La classe D, aussi appelée à tort « numérique », utilise un transistor afin d’indiquer l’état du signal. On retrouve donc la même idée que dans l’échantillonnage du signal. Ces amplificateurs offrent un <strong>excellent rendement</strong>.</p>
 <p>Nous avons également abordé précédemment la notion d’adaptation d’impédance en tension, sans aborder l’adaptation d’impédance en puissance. Pour rappel, afin de préserver la tension entre deux appareils A et B, nous faisons en sorte d’avoir une faible impédance à la sortie de l’appareil A et une grande impédance à l’entré de l’appareil B. Pour préserver la puissance du signal, ce paradigme ne fonctionne plus. On cherche alors à avoir la même impédance entre la sortie d’un appareil et l’entrée d’un autre. En pratique, on raccordera, sur la sortie « 8 ohms » d’un amplificateur, un haut-parleur ayant une impédance de « 8 ohms ».</p>
@@ -332,7 +357,7 @@ Figure 13.1: Coupe de hautparleur (dans l’ordre, woofer, mid-range, tweeter). 
 <p><span class="math display">\[ P =\frac {U^2}{Z} \]</span></p>
 <p><span class="math inline">\(P\)</span> est la puissance, <span class="math inline">\(U\)</span> la tension et <span class="math inline">\(Z\)</span> l’impédance. Pour réaliser la mesure de puissance d’un haut-parleur, on le soumet à un signal test, en général un bruit rose, pendant plusieurs heures. La puissance crête à crête se calcul grâce à la tension crête à crête (aussi dite maximale). Par exemple, pour une tension maximale de 100 V, sous une impédance de 8 ohms, on trouve une <strong>puissance crête à crête</strong> d’environ 1200 watts (abbrégé W). On considère généralement que la tension moyenne d’un signal est six décibels plus petite que sa tension maximale. En reprenant notre exemple, pour une tension maximale de 100 V, on a une tension moyenne de 50 V, sous une impédance de 8 ohms, on trouve une <strong>puissance moyenne</strong> d’environ 300 W.</p>
 <p>Alors, il faut donc faire très attention sur les spécifications données par les constructeurs, parfois volontairement floues. À défaut, si on lit que la puissance admissible d’un haut-parleur est de 1000 W, on supposera par défaut qu’il s’agit d’une puissance crête à crête. On ne dépassera donc pas une puissance moyenne d’amplification de 250 W.</p>
-<p>La <strong>sensibilité</strong> est une mesure du niveau sonore à un metre de l’enceinte pour une puissance RMS d’entré d’un watt. Grâce à cette valeur on peut calculer le niveau sonore produit par le hautparleur à diverse distance et en fonction de différentes puissance d’entrées.</p>
+<p>La <strong>sensibilité</strong> est une mesure du niveau sonore à un mètre de l’enceinte pour une puissance RMS d’entrée d’un watt. Grâce à cette valeur, on peut calculer le niveau sonore produit par le haut-parleur à diverses distances et en fonction de différentes puissances d’entrées. On comprend aussi que la puissance électrique admissible dans l’enceinte ne donne que peu d’information sur son niveau sonore de sortie.</p>
 </div>
 <div id="conseils-pratiques" class="section level2 hasAnchor" number="13.4">
 <h2><span class="header-section-number">13.4</span> Conseils pratiques<a href="enceintes-et-amplificateurs.html#conseils-pratiques" class="anchor-section" aria-label="Anchor link to header"></a></h2>

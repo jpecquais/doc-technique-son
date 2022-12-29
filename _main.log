@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.28)  28 DEC 2022 20:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.28)  29 DEC 2022 16:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -464,19 +464,19 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 3.
-[3] [4])
+[3] [4] [5])
 \tf@toc=\write4
 \openout4 = `_main.toc'.
 
-[5] [6
-
-]
+[6]
 Chapitre 1.
-[7] [8] [9
+[7
+
+] [8] [9
 
 ] [10]
 Chapitre 2.
-<_main_files/figure-latex/unnamed-chunk-2-1.pdf, id=417, 469.755pt x 325.215pt>
+<_main_files/figure-latex/unnamed-chunk-2-1.pdf, id=432, 469.755pt x 325.215pt>
 File: _main_files/figure-latex/unnamed-chunk-2-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-2-1.pdf>
 Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-2-1.pdf  used on input line 155.
@@ -487,276 +487,271 @@ Underfull \vbox (badness 1975) has occurred while \output is active []
 [11
 
 ]
-<_main_files/figure-latex/unnamed-chunk-3-3.pdf, id=426, 469.755pt x 325.215pt>
+<_main_files/figure-latex/unnamed-chunk-3-3.pdf, id=441, 469.755pt x 325.215pt>
 File: _main_files/figure-latex/unnamed-chunk-3-3.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-3-3.pdf>
-Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-3-3.pdf  used on input line 163.
+Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-3-3.pdf  used on input line 165.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[12 <./_main_files/figure-latex/unnamed-chunk-2-1.pdf>]
-<_resources/drawings/adsr.pdf, id=468, 1098.1025pt x 941.5175pt>
+<_resources/drawings/adsr.pdf, id=442, 1098.1025pt x 941.5175pt>
 File: _resources/drawings/adsr.pdf Graphic file (type pdf)
 <use _resources/drawings/adsr.pdf>
-Package pdftex.def Info: _resources/drawings/adsr.pdf  used on input line 171.
+Package pdftex.def Info: _resources/drawings/adsr.pdf  used on input line 178.
 (pdftex.def)             Requested size: 224.24117pt x 192.26529pt.
-[13 <./_main_files/figure-latex/unnamed-chunk-3-3.pdf>]
+[12 <./_main_files/figure-latex/unnamed-chunk-2-1.pdf>] [13 <./_main_files/figure-latex/unnamed-chunk-3-3.pdf> <./_resources/drawings/adsr.pdf>]
 
-LaTeX Warning: Command \textdegree invalid in math mode on input line 189.
+LaTeX Warning: Command \textdegree invalid in math mode on input line 196.
 
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 189.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 196.
 (c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
-LaTeX Warning: Command \textdegree invalid in math mode on input line 189.
+LaTeX Warning: Command \textdegree invalid in math mode on input line 196.
 
-[14 <./_resources/drawings/adsr.pdf>]
-<_resources/drawings/mic_dist.pdf, id=529, 278.03876pt x 617.30624pt>
+<_resources/drawings/mic_dist.pdf, id=533, 278.03876pt x 617.30624pt>
 File: _resources/drawings/mic_dist.pdf Graphic file (type pdf)
 <use _resources/drawings/mic_dist.pdf>
-Package pdftex.def Info: _resources/drawings/mic_dist.pdf  used on input line 205.
+Package pdftex.def Info: _resources/drawings/mic_dist.pdf  used on input line 212.
 (pdftex.def)             Requested size: 86.2505pt x 191.49483pt.
-[15 <./_resources/drawings/mic_dist.pdf>]
-<_resources/drawings/spectre.pdf, id=538, 1560.83125pt x 437.635pt>
+[14] [15 <./_resources/drawings/mic_dist.pdf>]
+<_resources/drawings/spectre.pdf, id=557, 1560.83125pt x 437.635pt>
 File: _resources/drawings/spectre.pdf Graphic file (type pdf)
 <use _resources/drawings/spectre.pdf>
-Package pdftex.def Info: _resources/drawings/spectre.pdf  used on input line 234.
+Package pdftex.def Info: _resources/drawings/spectre.pdf  used on input line 241.
 (pdftex.def)             Requested size: 344.97963pt x 96.7274pt.
 [16 <./_resources/drawings/spectre.pdf>]
-<_resources/diagrams/Courbes_isosonie.png, id=549, 844.756pt x 597.432pt>
+<_resources/diagrams/Courbes_isosonie.png, id=566, 844.756pt x 597.432pt>
 File: _resources/diagrams/Courbes_isosonie.png Graphic file (type png)
 <use _resources/diagrams/Courbes_isosonie.png>
-Package pdftex.def Info: _resources/diagrams/Courbes_isosonie.png  used on input line 286.
+Package pdftex.def Info: _resources/diagrams/Courbes_isosonie.png  used on input line 295.
 (pdftex.def)             Requested size: 344.99876pt x 243.99152pt.
-[17] [18 <./_resources/diagrams/Courbes_isosonie.png>]
-<_resources/drawings/delta_t.pdf, id=566, 1028.84375pt x 655.44875pt>
+[17]
+<_resources/drawings/delta_t.pdf, id=576, 1028.84375pt x 655.44875pt>
 File: _resources/drawings/delta_t.pdf Graphic file (type pdf)
 <use _resources/drawings/delta_t.pdf>
-Package pdftex.def Info: _resources/drawings/delta_t.pdf  used on input line 320.
+Package pdftex.def Info: _resources/drawings/delta_t.pdf  used on input line 329.
 (pdftex.def)             Requested size: 344.9984pt x 219.78922pt.
-[19 <./_resources/drawings/delta_t.pdf>] [20]
+[18 <./_resources/diagrams/Courbes_isosonie.png>] [19 <./_resources/drawings/delta_t.pdf>] [20]
 Chapitre 3.
-<_resources/drawings/reverb.pdf, id=580, 1164.35pt x 695.59875pt>
+<_resources/drawings/reverb.pdf, id=596, 1164.35pt x 695.59875pt>
 File: _resources/drawings/reverb.pdf Graphic file (type pdf)
 <use _resources/drawings/reverb.pdf>
-Package pdftex.def Info: _resources/drawings/reverb.pdf  used on input line 364.
+Package pdftex.def Info: _resources/drawings/reverb.pdf  used on input line 373.
 (pdftex.def)             Requested size: 344.99043pt x 206.10204pt.
 [21
 
 ] [22 <./_resources/drawings/reverb.pdf>] [23]
-<_main_files/figure-latex/unnamed-chunk-11-1.pdf, id=606, 469.755pt x 325.215pt>
+<_main_files/figure-latex/unnamed-chunk-11-1.pdf, id=622, 469.755pt x 325.215pt>
 File: _main_files/figure-latex/unnamed-chunk-11-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-11-1.pdf>
-Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-11-1.pdf  used on input line 444.
+Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-11-1.pdf  used on input line 453.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 
 Underfull \vbox (badness 4699) has occurred while \output is active []
 
 [24]
-<_resources/drawings/roomPr.pdf, id=613, 1062.97125pt x 1019.81pt>
+<_resources/drawings/roomPr.pdf, id=629, 1062.97125pt x 1019.81pt>
 File: _resources/drawings/roomPr.pdf Graphic file (type pdf)
 <use _resources/drawings/roomPr.pdf>
-Package pdftex.def Info: _resources/drawings/roomPr.pdf  used on input line 456.
+Package pdftex.def Info: _resources/drawings/roomPr.pdf  used on input line 465.
 (pdftex.def)             Requested size: 345.00742pt x 330.99861pt.
 [25 <./_main_files/figure-latex/unnamed-chunk-11-1.pdf>] [26 <./_resources/drawings/roomPr.pdf>]
-<_main_files/figure-latex/unnamed-chunk-13-1.pdf, id=665, 469.755pt x 325.215pt>
+<_main_files/figure-latex/unnamed-chunk-13-1.pdf, id=681, 469.755pt x 325.215pt>
 File: _main_files/figure-latex/unnamed-chunk-13-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-13-1.pdf>
-Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-13-1.pdf  used on input line 479.
+Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-13-1.pdf  used on input line 488.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 [27 <./_main_files/figure-latex/unnamed-chunk-13-1.pdf>] [28] [29] [30
 
 ]
 Chapitre 4.
-[31]
-<_resources/diagrams/resistor.pdf, id=741, 1445.4pt x 722.7pt>
+[31] [32]
+<_resources/diagrams/resistor.pdf, id=763, 1445.4pt x 722.7pt>
 File: _resources/diagrams/resistor.pdf Graphic file (type pdf)
 <use _resources/diagrams/resistor.pdf>
-Package pdftex.def Info: _resources/diagrams/resistor.pdf  used on input line 573.
+Package pdftex.def Info: _resources/diagrams/resistor.pdf  used on input line 618.
 (pdftex.def)             Requested size: 86.23505pt x 43.11752pt.
-<_resources/diagrams/resistor_sym.pdf, id=742, 35.13126pt x 7.02625pt>
+<_resources/diagrams/resistor_sym.pdf, id=764, 35.13126pt x 7.02625pt>
 File: _resources/diagrams/resistor_sym.pdf Graphic file (type pdf)
 <use _resources/diagrams/resistor_sym.pdf>
-Package pdftex.def Info: _resources/diagrams/resistor_sym.pdf  used on input line 573.
+Package pdftex.def Info: _resources/diagrams/resistor_sym.pdf  used on input line 618.
 (pdftex.def)             Requested size: 35.13275pt x 7.02654pt.
-
-Underfull \vbox (badness 1655) has occurred while \output is active []
-
-[32]
-<_resources/diagrams/capa.pdf, id=752, 508.90125pt x 419.5675pt>
+<_resources/diagrams/capa.pdf, id=765, 508.90125pt x 419.5675pt>
 File: _resources/diagrams/capa.pdf Graphic file (type pdf)
 <use _resources/diagrams/capa.pdf>
-Package pdftex.def Info: _resources/diagrams/capa.pdf  used on input line 579.
+Package pdftex.def Info: _resources/diagrams/capa.pdf  used on input line 624.
 (pdftex.def)             Requested size: 86.24805pt x 71.10785pt.
-<_resources/diagrams/capa_sym.pdf, id=753, 47.17625pt x 14.0525pt>
+<_resources/diagrams/capa_sym.pdf, id=766, 47.17625pt x 14.0525pt>
 File: _resources/diagrams/capa_sym.pdf Graphic file (type pdf)
 <use _resources/diagrams/capa_sym.pdf>
-Package pdftex.def Info: _resources/diagrams/capa_sym.pdf  used on input line 579.
+Package pdftex.def Info: _resources/diagrams/capa_sym.pdf  used on input line 624.
 (pdftex.def)             Requested size: 47.17827pt x 14.0531pt.
-<_resources/diagrams/inductor_sym.pdf, id=754, 47.17625pt x 6.0225pt>
-File: _resources/diagrams/inductor_sym.pdf Graphic file (type pdf)
-<use _resources/diagrams/inductor_sym.pdf>
-Package pdftex.def Info: _resources/diagrams/inductor_sym.pdf  used on input line 598.
-(pdftex.def)             Requested size: 47.17612pt x 6.02248pt.
 [33 <./_resources/diagrams/resistor.pdf> <./_resources/diagrams/resistor_sym.pdf
 
 pdfTeX warning: pdflatex.exe (file ./_resources/diagrams/resistor_sym.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./_resources/diagrams/capa.pdf
-
-pdfTeX warning: pdflatex.exe (file ./_resources/diagrams/capa.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./_resources/diagrams/capa_sym.pdf
+>]
+<_resources/diagrams/inductor_sym.pdf, id=779, 47.17625pt x 6.0225pt>
+File: _resources/diagrams/inductor_sym.pdf Graphic file (type pdf)
+<use _resources/diagrams/inductor_sym.pdf>
+Package pdftex.def Info: _resources/diagrams/inductor_sym.pdf  used on input line 643.
+(pdftex.def)             Requested size: 47.17612pt x 6.02248pt.
+[34 <./_resources/diagrams/capa.pdf> <./_resources/diagrams/capa_sym.pdf
 
 pdfTeX warning: pdflatex.exe (file ./_resources/diagrams/capa_sym.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./_resources/diagrams/inductor_sym.pdf
+
+pdfTeX warning: pdflatex.exe (file ./_resources/diagrams/inductor_sym.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<_resources/bitmap/elec/tube.jpg, id=767, 602.25pt x 602.25pt>
+<_resources/bitmap/elec/tube.jpg, id=790, 602.25pt x 602.25pt>
 File: _resources/bitmap/elec/tube.jpg Graphic file (type jpg)
 <use _resources/bitmap/elec/tube.jpg>
-Package pdftex.def Info: _resources/bitmap/elec/tube.jpg  used on input line 626.
+Package pdftex.def Info: _resources/bitmap/elec/tube.jpg  used on input line 671.
 (pdftex.def)             Requested size: 86.24423pt x 86.24423pt.
-<_resources/bitmap/elec/transistor.jpg, id=768, 602.25pt x 602.25pt>
+<_resources/bitmap/elec/transistor.jpg, id=791, 602.25pt x 602.25pt>
 File: _resources/bitmap/elec/transistor.jpg Graphic file (type jpg)
 <use _resources/bitmap/elec/transistor.jpg>
-Package pdftex.def Info: _resources/bitmap/elec/transistor.jpg  used on input line 626.
+Package pdftex.def Info: _resources/bitmap/elec/transistor.jpg  used on input line 671.
 (pdftex.def)             Requested size: 86.24423pt x 86.24423pt.
-<_resources/bitmap/elec/ic.jpg, id=769, 778.6838pt x 814.30986pt>
+<_resources/bitmap/elec/ic.jpg, id=792, 778.6838pt x 814.30986pt>
 File: _resources/bitmap/elec/ic.jpg Graphic file (type jpg)
 <use _resources/bitmap/elec/ic.jpg>
-Package pdftex.def Info: _resources/bitmap/elec/ic.jpg  used on input line 626.
+Package pdftex.def Info: _resources/bitmap/elec/ic.jpg  used on input line 671.
 (pdftex.def)             Requested size: 86.24956pt x 90.19562pt.
-[34 <./_resources/diagrams/inductor_sym.pdf> <./_resources/bitmap/elec/tube.jpg> <./_resources/bitmap/elec/transistor.jpg> <./_resources/bitmap/elec/ic.jpg>]
-Overfull \hbox (12.49965pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 4.3.  L'INFLUENCE DE L'IMPÉDANCE ENTRE DIFFÉRENTS APPAREILS. \T1/lmr/m/n/10 35
- []
-
-[35]
-<_resources/diagrams/impedance.pdf, id=785, 320.19624pt x 199.74625pt>
+[35 <./_resources/bitmap/elec/tube.jpg> <./_resources/bitmap/elec/transistor.jpg> <./_resources/bitmap/elec/ic.jpg>]
+<_resources/diagrams/impedance.pdf, id=800, 320.19624pt x 199.74625pt>
 File: _resources/diagrams/impedance.pdf Graphic file (type pdf)
 <use _resources/diagrams/impedance.pdf>
-Package pdftex.def Info: _resources/diagrams/impedance.pdf  used on input line 648.
+Package pdftex.def Info: _resources/diagrams/impedance.pdf  used on input line 693.
 (pdftex.def)             Requested size: 320.20033pt x 199.7488pt.
-[36 <./_resources/diagrams/impedance.pdf>]
-Chapitre 5.
-<_resources/diagrams/productionSonore.pdf, id=811, 703.62875pt x 593.21625pt>
-File: _resources/diagrams/productionSonore.pdf Graphic file (type pdf)
-<use _resources/diagrams/productionSonore.pdf>
-Package pdftex.def Info: _resources/diagrams/productionSonore.pdf  used on input line 679.
-(pdftex.def)             Requested size: 275.99237pt x 232.684pt.
-[37
 
-] [38 <./_resources/diagrams/productionSonore.pdf>] [39] [40] [41
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-] [42]
-Chapitre 6.
-<_resources/diagrams/cheminSignal.pdf, id=857, 725.71124pt x 385.44pt>
-File: _resources/diagrams/cheminSignal.pdf Graphic file (type pdf)
-<use _resources/diagrams/cheminSignal.pdf>
-Package pdftex.def Info: _resources/diagrams/cheminSignal.pdf  used on input line 746.
-(pdftex.def)             Requested size: 345.00433pt x 183.23882pt.
-[43
+[36]
+Overfull \hbox (12.49965pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10 4.3.  L'INFLUENCE DE L'IMPÉDANCE ENTRE DIFFÉRENTS APPAREILS. \T1/lmr/m/n/10 37
+ []
 
- <./_resources/diagrams/cheminSignal.pdf>] [44]
-Chapitre 7.
-[45
+[37 <./_resources/diagrams/impedance.pdf>] [38
 
 ]
-<_resources/bitmap/mic/u87.jpg, id=893, 2509.375pt x 2509.375pt>
+Chapitre 5.
+<_resources/diagrams/productionSonore.pdf, id=836, 703.62875pt x 593.21625pt>
+File: _resources/diagrams/productionSonore.pdf Graphic file (type pdf)
+<use _resources/diagrams/productionSonore.pdf>
+Package pdftex.def Info: _resources/diagrams/productionSonore.pdf  used on input line 728.
+(pdftex.def)             Requested size: 275.99237pt x 232.684pt.
+[39] [40 <./_resources/diagrams/productionSonore.pdf>] [41] [42] [43
+
+] [44]
+Chapitre 6.
+<_resources/diagrams/cheminSignal.pdf, id=883, 725.71124pt x 385.44pt>
+File: _resources/diagrams/cheminSignal.pdf Graphic file (type pdf)
+<use _resources/diagrams/cheminSignal.pdf>
+Package pdftex.def Info: _resources/diagrams/cheminSignal.pdf  used on input line 795.
+(pdftex.def)             Requested size: 345.00433pt x 183.23882pt.
+[45
+
+ <./_resources/diagrams/cheminSignal.pdf>] [46]
+Chapitre 7.
+[47
+
+]
+<_resources/bitmap/mic/u87.jpg, id=917, 2509.375pt x 2509.375pt>
 File: _resources/bitmap/mic/u87.jpg Graphic file (type jpg)
 <use _resources/bitmap/mic/u87.jpg>
-Package pdftex.def Info: _resources/bitmap/mic/u87.jpg  used on input line 829.
+Package pdftex.def Info: _resources/bitmap/mic/u87.jpg  used on input line 878.
 (pdftex.def)             Requested size: 113.83595pt x 113.83595pt.
-<_resources/bitmap/mic/cmc64.jpg, id=894, 1284.8pt x 1284.8pt>
+<_resources/bitmap/mic/cmc64.jpg, id=918, 1284.8pt x 1284.8pt>
 File: _resources/bitmap/mic/cmc64.jpg Graphic file (type jpg)
 <use _resources/bitmap/mic/cmc64.jpg>
-Package pdftex.def Info: _resources/bitmap/mic/cmc64.jpg  used on input line 829.
+Package pdftex.def Info: _resources/bitmap/mic/cmc64.jpg  used on input line 878.
 (pdftex.def)             Requested size: 113.843pt x 113.843pt.
-<_resources/bitmap/mic/cm4.jpg, id=895, 602.25pt x 602.25pt>
+<_resources/bitmap/mic/cm4.jpg, id=919, 602.25pt x 602.25pt>
 File: _resources/bitmap/mic/cm4.jpg Graphic file (type jpg)
 <use _resources/bitmap/mic/cm4.jpg>
-Package pdftex.def Info: _resources/bitmap/mic/cm4.jpg  used on input line 829.
+Package pdftex.def Info: _resources/bitmap/mic/cm4.jpg  used on input line 878.
 (pdftex.def)             Requested size: 113.84973pt x 113.84973pt.
-[46] [47 <./_resources/bitmap/mic/u87.jpg> <./_resources/bitmap/mic/cmc64.jpg> <./_resources/bitmap/mic/cm4.jpg>]
-<_resources/bitmap/mic/r121.jpg, id=908, 1284.8pt x 1284.8pt>
+[48] [49 <./_resources/bitmap/mic/u87.jpg> <./_resources/bitmap/mic/cmc64.jpg> <./_resources/bitmap/mic/cm4.jpg>]
+<_resources/bitmap/mic/r121.jpg, id=933, 1284.8pt x 1284.8pt>
 File: _resources/bitmap/mic/r121.jpg Graphic file (type jpg)
 <use _resources/bitmap/mic/r121.jpg>
-Package pdftex.def Info: _resources/bitmap/mic/r121.jpg  used on input line 851.
+Package pdftex.def Info: _resources/bitmap/mic/r121.jpg  used on input line 900.
 (pdftex.def)             Requested size: 113.843pt x 113.843pt.
-<_resources/bitmap/mic/vinjet.jpg, id=909, 675.52374pt x 675.52374pt>
+<_resources/bitmap/mic/vinjet.jpg, id=934, 675.52374pt x 675.52374pt>
 File: _resources/bitmap/mic/vinjet.jpg Graphic file (type jpg)
 <use _resources/bitmap/mic/vinjet.jpg>
-Package pdftex.def Info: _resources/bitmap/mic/vinjet.jpg  used on input line 851.
+Package pdftex.def Info: _resources/bitmap/mic/vinjet.jpg  used on input line 900.
 (pdftex.def)             Requested size: 113.84798pt x 113.84798pt.
-<_resources/bitmap/mic/coles.jpg, id=910, 2509.375pt x 2509.375pt>
+<_resources/bitmap/mic/coles.jpg, id=935, 2509.375pt x 2509.375pt>
 File: _resources/bitmap/mic/coles.jpg Graphic file (type jpg)
 <use _resources/bitmap/mic/coles.jpg>
-Package pdftex.def Info: _resources/bitmap/mic/coles.jpg  used on input line 851.
+Package pdftex.def Info: _resources/bitmap/mic/coles.jpg  used on input line 900.
 (pdftex.def)             Requested size: 113.83595pt x 113.83595pt.
-<_resources/bitmap/mic/sm57.jpg, id=911, 963.6pt x 963.6pt>
+<_resources/bitmap/mic/sm57.jpg, id=936, 963.6pt x 963.6pt>
 File: _resources/bitmap/mic/sm57.jpg Graphic file (type jpg)
 <use _resources/bitmap/mic/sm57.jpg>
-Package pdftex.def Info: _resources/bitmap/mic/sm57.jpg  used on input line 869.
+Package pdftex.def Info: _resources/bitmap/mic/sm57.jpg  used on input line 918.
 (pdftex.def)             Requested size: 113.8479pt x 113.8479pt.
-<_resources/bitmap/mic/re20.jpg, id=912, 1129.21875pt x 1129.21875pt>
+<_resources/bitmap/mic/re20.jpg, id=937, 1129.21875pt x 1129.21875pt>
 File: _resources/bitmap/mic/re20.jpg Graphic file (type jpg)
 <use _resources/bitmap/mic/re20.jpg>
-Package pdftex.def Info: _resources/bitmap/mic/re20.jpg  used on input line 869.
+Package pdftex.def Info: _resources/bitmap/mic/re20.jpg  used on input line 918.
 (pdftex.def)             Requested size: 113.8417pt x 113.8417pt.
-<_resources/bitmap/mic/md441.jpg, id=913, 963.6pt x 963.6pt>
+<_resources/bitmap/mic/md441.jpg, id=938, 963.6pt x 963.6pt>
 File: _resources/bitmap/mic/md441.jpg Graphic file (type jpg)
 <use _resources/bitmap/mic/md441.jpg>
-Package pdftex.def Info: _resources/bitmap/mic/md441.jpg  used on input line 869.
+Package pdftex.def Info: _resources/bitmap/mic/md441.jpg  used on input line 918.
 (pdftex.def)             Requested size: 113.8479pt x 113.8479pt.
-[48 <./_resources/bitmap/mic/r121.jpg> <./_resources/bitmap/mic/vinjet.jpg> <./_resources/bitmap/mic/coles.jpg>] [49 <./_resources/bitmap/mic/sm57.jpg> <./_resources/bitmap/mic/re20.jpg> <./_resources/bitmap/mic/md441.jpg>]
-<_resources/plotly/test.pdf, id=931, 702.625pt x 501.875pt>
+[50 <./_resources/bitmap/mic/r121.jpg> <./_resources/bitmap/mic/vinjet.jpg> <./_resources/bitmap/mic/coles.jpg>] [51 <./_resources/bitmap/mic/sm57.jpg> <./_resources/bitmap/mic/re20.jpg> <./_resources/bitmap/mic/md441.jpg>]
+<_resources/plotly/test.pdf, id=955, 702.625pt x 501.875pt>
 File: _resources/plotly/test.pdf Graphic file (type pdf)
 <use _resources/plotly/test.pdf>
-Package pdftex.def Info: _resources/plotly/test.pdf  used on input line 917.
+Package pdftex.def Info: _resources/plotly/test.pdf  used on input line 966.
 (pdftex.def)             Requested size: 345.00758pt x 246.43398pt.
 
 Underfull \vbox (badness 6268) has occurred while \output is active []
 
-[50] [51 <./_resources/plotly/test.pdf>] [52]
+[52] [53 <./_resources/plotly/test.pdf>] [54]
 
-LaTeX Warning: Command \` invalid in math mode on input line 962.
+LaTeX Warning: Command \` invalid in math mode on input line 1011.
 
-<_resources/diagrams/Polar-pattern-U-87-Ai-omni.pdf, id=961, 136.51pt x 139.52126pt>
+<_resources/diagrams/Polar-pattern-U-87-Ai-omni.pdf, id=985, 136.51pt x 139.52126pt>
 File: _resources/diagrams/Polar-pattern-U-87-Ai-omni.pdf Graphic file (type pdf)
 <use _resources/diagrams/Polar-pattern-U-87-Ai-omni.pdf>
-Package pdftex.def Info: _resources/diagrams/Polar-pattern-U-87-Ai-omni.pdf  used on input line 966.
+Package pdftex.def Info: _resources/diagrams/Polar-pattern-U-87-Ai-omni.pdf  used on input line 1015.
 (pdftex.def)             Requested size: 113.85107pt x 116.3625pt.
-<_resources/diagrams/Polar-pattern-U-87-Ai-cardioid.pdf, id=962, 136.51pt x 139.52126pt>
+<_resources/diagrams/Polar-pattern-U-87-Ai-cardioid.pdf, id=986, 136.51pt x 139.52126pt>
 File: _resources/diagrams/Polar-pattern-U-87-Ai-cardioid.pdf Graphic file (type pdf)
 <use _resources/diagrams/Polar-pattern-U-87-Ai-cardioid.pdf>
-Package pdftex.def Info: _resources/diagrams/Polar-pattern-U-87-Ai-cardioid.pdf  used on input line 966.
+Package pdftex.def Info: _resources/diagrams/Polar-pattern-U-87-Ai-cardioid.pdf  used on input line 1015.
 (pdftex.def)             Requested size: 113.85107pt x 116.3625pt.
-<_resources/diagrams/Polar-pattern-U-87-Ai-figure8.pdf, id=963, 136.51pt x 139.52126pt>
+<_resources/diagrams/Polar-pattern-U-87-Ai-figure8.pdf, id=987, 136.51pt x 139.52126pt>
 File: _resources/diagrams/Polar-pattern-U-87-Ai-figure8.pdf Graphic file (type pdf)
 <use _resources/diagrams/Polar-pattern-U-87-Ai-figure8.pdf>
-Package pdftex.def Info: _resources/diagrams/Polar-pattern-U-87-Ai-figure8.pdf  used on input line 966.
+Package pdftex.def Info: _resources/diagrams/Polar-pattern-U-87-Ai-figure8.pdf  used on input line 1015.
 (pdftex.def)             Requested size: 113.85107pt x 116.3625pt.
-<_resources/diagrams/Frequency-diagram-U-87-Ai-omni.pdf, id=964, 162.6075pt x 46.1725pt>
+<_resources/diagrams/Frequency-diagram-U-87-Ai-omni.pdf, id=988, 162.6075pt x 46.1725pt>
 File: _resources/diagrams/Frequency-diagram-U-87-Ai-omni.pdf Graphic file (type pdf)
 <use _resources/diagrams/Frequency-diagram-U-87-Ai-omni.pdf>
-Package pdftex.def Info: _resources/diagrams/Frequency-diagram-U-87-Ai-omni.pdf  used on input line 980.
+Package pdftex.def Info: _resources/diagrams/Frequency-diagram-U-87-Ai-omni.pdf  used on input line 1029.
 (pdftex.def)             Requested size: 162.6071pt x 46.17236pt.
-<_resources/diagrams/Frequency-diagram-U-87-Ai-cardioid.pdf, id=965, 162.6075pt x 46.1725pt>
+<_resources/diagrams/Frequency-diagram-U-87-Ai-cardioid.pdf, id=989, 162.6075pt x 46.1725pt>
 File: _resources/diagrams/Frequency-diagram-U-87-Ai-cardioid.pdf Graphic file (type pdf)
 <use _resources/diagrams/Frequency-diagram-U-87-Ai-cardioid.pdf>
-Package pdftex.def Info: _resources/diagrams/Frequency-diagram-U-87-Ai-cardioid.pdf  used on input line 988.
+Package pdftex.def Info: _resources/diagrams/Frequency-diagram-U-87-Ai-cardioid.pdf  used on input line 1037.
 (pdftex.def)             Requested size: 162.6071pt x 46.17236pt.
-<_resources/diagrams/Frequency-diagram-U-87-Ai-figure8.pdf, id=966, 162.6075pt x 46.1725pt>
+<_resources/diagrams/Frequency-diagram-U-87-Ai-figure8.pdf, id=990, 162.6075pt x 46.1725pt>
 File: _resources/diagrams/Frequency-diagram-U-87-Ai-figure8.pdf Graphic file (type pdf)
 <use _resources/diagrams/Frequency-diagram-U-87-Ai-figure8.pdf>
-Package pdftex.def Info: _resources/diagrams/Frequency-diagram-U-87-Ai-figure8.pdf  used on input line 996.
+Package pdftex.def Info: _resources/diagrams/Frequency-diagram-U-87-Ai-figure8.pdf  used on input line 1045.
 (pdftex.def)             Requested size: 162.6071pt x 46.17236pt.
-[53 <./_resources/diagrams/Polar-pattern-U-87-Ai-omni.pdf> <./_resources/diagrams/Polar-pattern-U-87-Ai-cardioid.pdf
+[55 <./_resources/diagrams/Polar-pattern-U-87-Ai-omni.pdf> <./_resources/diagrams/Polar-pattern-U-87-Ai-cardioid.pdf
 
 pdfTeX warning: pdflatex.exe (file ./_resources/diagrams/Polar-pattern-U-87-Ai-cardioid.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./_resources/diagrams/Polar-pattern-U-87-Ai-figure8.pdf
 
 pdfTeX warning: pdflatex.exe (file ./_resources/diagrams/Polar-pattern-U-87-Ai-figure8.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [54 <./_resources/diagrams/Frequency-diagram-U-87-Ai-omni.pdf> <./_resources/diagrams/Frequency-diagram-U-87-Ai-cardioid.pdf
+>] [56 <./_resources/diagrams/Frequency-diagram-U-87-Ai-omni.pdf> <./_resources/diagrams/Frequency-diagram-U-87-Ai-cardioid.pdf
 
 pdfTeX warning: pdflatex.exe (file ./_resources/diagrams/Frequency-diagram-U-87-Ai-cardioid.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./_resources/diagrams/Frequency-diagram-U-87-Ai-figure8.pdf
@@ -764,141 +759,149 @@ pdfTeX warning: pdflatex.exe (file ./_resources/diagrams/Frequency-diagram-U-87-
 pdfTeX warning: pdflatex.exe (file ./_resources/diagrams/Frequency-diagram-U-87-Ai-figure8.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
 Chapitre 8.
-<_resources/drawings/cable.pdf, id=990, 574.145pt x 624.3325pt>
+<_resources/drawings/cable.pdf, id=1016, 574.145pt x 624.3325pt>
 File: _resources/drawings/cable.pdf Graphic file (type pdf)
 <use _resources/drawings/cable.pdf>
-Package pdftex.def Info: _resources/drawings/cable.pdf  used on input line 1035.
+Package pdftex.def Info: _resources/drawings/cable.pdf  used on input line 1084.
 (pdftex.def)             Requested size: 206.99866pt x 225.09296pt.
-[55
+[57
 
-] [56 <./_resources/drawings/cable.pdf>]
-<_resources/bitmap/plug/jackTs.jpg, id=1007, 803.0pt x 602.25pt>
+] [58 <./_resources/drawings/cable.pdf>]
+<_resources/bitmap/plug/jackTs.jpg, id=1031, 803.0pt x 602.25pt>
 File: _resources/bitmap/plug/jackTs.jpg Graphic file (type jpg)
 <use _resources/bitmap/plug/jackTs.jpg>
-Package pdftex.def Info: _resources/bitmap/plug/jackTs.jpg  used on input line 1076.
+Package pdftex.def Info: _resources/bitmap/plug/jackTs.jpg  used on input line 1125.
 (pdftex.def)             Requested size: 68.99539pt x 51.74654pt.
-<_resources/bitmap/plug/jackTrs.jpg, id=1008, 569.12625pt x 501.875pt>
+<_resources/bitmap/plug/jackTrs.jpg, id=1032, 569.12625pt x 501.875pt>
 File: _resources/bitmap/plug/jackTrs.jpg Graphic file (type jpg)
 <use _resources/bitmap/plug/jackTrs.jpg>
-Package pdftex.def Info: _resources/bitmap/plug/jackTrs.jpg  used on input line 1076.
+Package pdftex.def Info: _resources/bitmap/plug/jackTrs.jpg  used on input line 1125.
 (pdftex.def)             Requested size: 68.99562pt x 60.8427pt.
-<_resources/bitmap/plug/jackBantam.jpg, id=1009, 399.4925pt x 426.59375pt>
+<_resources/bitmap/plug/jackBantam.jpg, id=1033, 399.4925pt x 426.59375pt>
 File: _resources/bitmap/plug/jackBantam.jpg Graphic file (type jpg)
 <use _resources/bitmap/plug/jackBantam.jpg>
-Package pdftex.def Info: _resources/bitmap/plug/jackBantam.jpg  used on input line 1076.
+Package pdftex.def Info: _resources/bitmap/plug/jackBantam.jpg  used on input line 1125.
 (pdftex.def)             Requested size: 68.99786pt x 73.67862pt.
-<_resources/bitmap/plug/xlr.jpg, id=1010, 1593.955pt x 1302.8675pt>
+<_resources/bitmap/plug/xlr.jpg, id=1034, 1593.955pt x 1302.8675pt>
 File: _resources/bitmap/plug/xlr.jpg Graphic file (type jpg)
 <use _resources/bitmap/plug/xlr.jpg>
-Package pdftex.def Info: _resources/bitmap/plug/xlr.jpg  used on input line 1076.
+Package pdftex.def Info: _resources/bitmap/plug/xlr.jpg  used on input line 1125.
 (pdftex.def)             Requested size: 68.97652pt x 56.38005pt.
-<_resources/bitmap/plug/subd25.jpg, id=1011, 1203.7472pt x 805.50937pt>
+<_resources/bitmap/plug/subd25.jpg, id=1035, 1203.7472pt x 805.50937pt>
 File: _resources/bitmap/plug/subd25.jpg Graphic file (type jpg)
 <use _resources/bitmap/plug/subd25.jpg>
-Package pdftex.def Info: _resources/bitmap/plug/subd25.jpg  used on input line 1076.
+Package pdftex.def Info: _resources/bitmap/plug/subd25.jpg  used on input line 1125.
 (pdftex.def)             Requested size: 68.989pt x 46.16524pt.
-[57] [58 <./_resources/bitmap/plug/jackTs.jpg> <./_resources/bitmap/plug/jackTrs.jpg> <./_resources/bitmap/plug/jackBantam.jpg> <./_resources/bitmap/plug/xlr.jpg> <./_resources/bitmap/plug/subd25.jpg>] [59] [60
+[59] [60 <./_resources/bitmap/plug/jackTs.jpg> <./_resources/bitmap/plug/jackTrs.jpg> <./_resources/bitmap/plug/jackBantam.jpg> <./_resources/bitmap/plug/xlr.jpg> <./_resources/bitmap/plug/subd25.jpg>] [61] [62
 
 ]
 Chapitre 9.
-[61] [62]
+[63] [64]
 Chapitre 10.
-[63
+[65
 
-] [64] [65] [66]
+] [66] [67] [68]
 Chapitre 11.
-<_main_files/figure-latex/unnamed-chunk-31-1.pdf, id=1083, 469.755pt x 325.215pt>
+<_main_files/figure-latex/unnamed-chunk-31-1.pdf, id=1111, 469.755pt x 325.215pt>
 File: _main_files/figure-latex/unnamed-chunk-31-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/unnamed-chunk-31-1.pdf>
-Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-31-1.pdf  used on input line 1266.
+Package pdftex.def Info: _main_files/figure-latex/unnamed-chunk-31-1.pdf  used on input line 1315.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
+[69
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[67
-
-] [68 <./_main_files/figure-latex/unnamed-chunk-31-1.pdf>]
-<_resources/bitmap/plug/toslink.jpg, id=1124, 1003.75pt x 1003.75pt>
+] [70 <./_main_files/figure-latex/unnamed-chunk-31-1.pdf>]
+<_resources/bitmap/plug/toslink.jpg, id=1150, 1003.75pt x 1003.75pt>
 File: _resources/bitmap/plug/toslink.jpg Graphic file (type jpg)
 <use _resources/bitmap/plug/toslink.jpg>
-Package pdftex.def Info: _resources/bitmap/plug/toslink.jpg  used on input line 1291.
-(pdftex.def)             Requested size: 345.00758pt x 345.00758pt.
+Package pdftex.def Info: _resources/bitmap/plug/toslink.jpg  used on input line 1345.
+(pdftex.def)             Requested size: 103.49002pt x 103.49002pt.
+<_resources/bitmap/plug/fibre.jpg, id=1151, 475.7775pt x 356.33125pt>
+File: _resources/bitmap/plug/fibre.jpg Graphic file (type jpg)
+<use _resources/bitmap/plug/fibre.jpg>
+Package pdftex.def Info: _resources/bitmap/plug/fibre.jpg  used on input line 1361.
+(pdftex.def)             Requested size: 103.49529pt x 77.51228pt.
+<_resources/bitmap/plug/bnc.jpg, id=1152, 2007.5pt x 2007.5pt>
+File: _resources/bitmap/plug/bnc.jpg Graphic file (type jpg)
+<use _resources/bitmap/plug/bnc.jpg>
+Package pdftex.def Info: _resources/bitmap/plug/bnc.jpg  used on input line 1361.
+(pdftex.def)             Requested size: 103.4747pt x 103.4747pt.
+[71 <./_resources/bitmap/plug/toslink.jpg>] [72 <./_resources/bitmap/plug/fibre.jpg> <./_resources/bitmap/plug/bnc.jpg>]
+Chapitre 12.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[69 <./_resources/bitmap/plug/toslink.jpg>]
-<_resources/bitmap/plug/fibre.jpg, id=1131, 475.7775pt x 356.33125pt>
-File: _resources/bitmap/plug/fibre.jpg Graphic file (type jpg)
-<use _resources/bitmap/plug/fibre.jpg>
-Package pdftex.def Info: _resources/bitmap/plug/fibre.jpg  used on input line 1307.
-(pdftex.def)             Requested size: 345.01332pt x 258.39606pt.
-<_resources/bitmap/plug/bnc.jpg, id=1132, 2007.5pt x 2007.5pt>
-File: _resources/bitmap/plug/bnc.jpg Graphic file (type jpg)
-<use _resources/bitmap/plug/bnc.jpg>
-Package pdftex.def Info: _resources/bitmap/plug/bnc.jpg  used on input line 1307.
-(pdftex.def)             Requested size: 344.97696pt x 344.97696pt.
+[73
 
-LaTeX Warning: Float too large for page by 78.31744pt on input line 1312.
-
-[70] [71 <./_resources/bitmap/plug/fibre.jpg> <./_resources/bitmap/plug/bnc.jpg>] [72
-
-]
-Chapitre 12.
-[73] [74
-
-]
+] [74]
 Chapitre 13.
-[75] [76] [77] [78
+<_resources/bitmap/speaker/woofer.png, id=1205, 281.853pt x 385.44pt>
+File: _resources/bitmap/speaker/woofer.png Graphic file (type png)
+<use _resources/bitmap/speaker/woofer.png>
+Package pdftex.def Info: _resources/bitmap/speaker/woofer.png  used on input line 1444.
+(pdftex.def)             Requested size: 86.24673pt x 117.94424pt.
+<_resources/bitmap/speaker/midrange.png, id=1206, 314.776pt x 385.44pt>
+File: _resources/bitmap/speaker/midrange.png Graphic file (type png)
+<use _resources/bitmap/speaker/midrange.png>
+Package pdftex.def Info: _resources/bitmap/speaker/midrange.png  used on input line 1444.
+(pdftex.def)             Requested size: 86.24905pt x 105.6111pt.
+<_resources/bitmap/speaker/tweeter.png, id=1207, 274.626pt x 385.44pt>
+File: _resources/bitmap/speaker/tweeter.png Graphic file (type png)
+<use _resources/bitmap/speaker/tweeter.png>
+Package pdftex.def Info: _resources/bitmap/speaker/tweeter.png  used on input line 1444.
+(pdftex.def)             Requested size: 86.24783pt x 121.04959pt.
+[75
 
-] [79] [80]
+] [76 <./_resources/bitmap/speaker/woofer.png> <./_resources/bitmap/speaker/midrange.png> <./_resources/bitmap/speaker/tweeter.png>] [77] [78] [79] [80] [81
+
+] [82]
 Chapitre 14.
-[81
+[83
 
-] [82
+] [84
 
 ]
 Chapitre 15.
-[83] [84] [85] [86]
-<_resources/171f157be4749ac8446dd9bdfff0625b.png, id=1248, 301.125pt x 565.11125pt>
+[85] [86] [87] [88]
+<_resources/171f157be4749ac8446dd9bdfff0625b.png, id=1315, 301.125pt x 565.11125pt>
 File: _resources/171f157be4749ac8446dd9bdfff0625b.png Graphic file (type png)
 <use _resources/171f157be4749ac8446dd9bdfff0625b.png>
-Package pdftex.def Info: _resources/171f157be4749ac8446dd9bdfff0625b.png  used on input line 1576.
+Package pdftex.def Info: _resources/171f157be4749ac8446dd9bdfff0625b.png  used on input line 1738.
 (pdftex.def)             Requested size: 138.00455pt x 258.98856pt.
-[87] [88 <./_resources/171f157be4749ac8446dd9bdfff0625b.png>]
+[89] [90 <./_resources/171f157be4749ac8446dd9bdfff0625b.png>]
 Overfull \hbox (13.32883pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 15.4.  COMPLÉTER UNE PRISE DE SON AU COUPLE PAR DES APPOINTS \T1/lmr/m/n/10 89
+\T1/lmr/m/sl/10 15.4.  COMPLÉTER UNE PRISE DE SON AU COUPLE PAR DES APPOINTS \T1/lmr/m/n/10 91
  []
 
-[89] [90
+[91] [92
 
 ]
 Chapitre 16.
-[91]
-Underfull \hbox (badness 1057) in paragraph at lines 1658--1659
+[93]
+Underfull \hbox (badness 1057) in paragraph at lines 1820--1821
 []\T1/lmr/m/n/10 L'acoustique de la salle d'en-re-gis-tre-ment est-elle aussi plus sou-vent une
  []
 
-[92] [93] [94] [95] [96
+[94] [95] [96] [97] [98
 
 ]
 Chapitre 17.
-[97] [98] (./_main.aux)
+[99] [100] (./_main.aux)
 Package rerunfilecheck Info: File `_main.out' has not changed.
-(rerunfilecheck)             Checksum: F457D25945FB6D52EECBF9368E7B8AD9;14809.
+(rerunfilecheck)             Checksum: 73893C945644C4E4ED210C6ECD40EA55;15218.
  ) 
 Here is how much of TeX's memory you used:
- 13592 strings out of 478033
- 230261 string characters out of 5838348
+ 13692 strings out of 478033
+ 232681 string characters out of 5838348
  1859787 words of memory out of 5000000
- 33080 multiletter control sequences out of 15000+600000
+ 33133 multiletter control sequences out of 15000+600000
  580046 words of font info for 78 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,6n,77p,1130b,751s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,6n,77p,1130b,726s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi5.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro10.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Users/pecqu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb>
-Output written on _main.pdf (98 pages, 3291120 bytes).
+Output written on _main.pdf (100 pages, 3567603 bytes).
 PDF statistics:
- 1497 PDF objects out of 1728 (max. 8388607)
- 1126 compressed objects within 12 object streams
- 381 named destinations out of 1000 (max. 500000)
- 814 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1572 PDF objects out of 1728 (max. 8388607)
+ 1193 compressed objects within 12 object streams
+ 424 named destinations out of 1000 (max. 500000)
+ 853 words of extra memory for PDF output out of 10000 (max. 10000000)
 

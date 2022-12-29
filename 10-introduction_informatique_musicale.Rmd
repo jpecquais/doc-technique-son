@@ -2,7 +2,33 @@
 
 (En cours d'écriture)
 
-## Les protocoles de transmission d'information
+## Fonctionnement d'un ordinateur
+
+## Les systèmes d'exploitation
+
+### Linux
+
+### Microsoft Windows
+
+### Apple MacOS
+
+## Les pilotes audio
+
+### ASIO
+
+### CoreAudio
+
+### ALSA
+
+### Jack Audio
+
+## Les Stations de Travail Audio-Numérique (DAW)
+
+### Le moteur audio
+
+### Les fonctionnalités
+
+## Les protocoles de transmission d'informations
 
 ### MIDI
 
