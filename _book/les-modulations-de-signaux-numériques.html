@@ -23,7 +23,7 @@
 <meta name="author" content="Jean-Loup Pecquais" />
 
 
-<meta name="date" content="2022-12-28" />
+<meta name="date" content="2022-12-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,6 +52,13 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.0/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 
 
 
@@ -72,7 +79,7 @@
 <li><a href="./">La prise de son musicale</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> bibliography: [book.bib, packages.bib]</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Avant-propos</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#a-qui-sadresse-cet-ouvrage"><i class="fa fa-check"></i><b>1.1</b> A qui s’adresse cet ouvrage</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#mise-à-jour"><i class="fa fa-check"></i><b>1.2</b> Mise à jour</a></li>
@@ -92,7 +99,6 @@
 <li class="chapter" data-level="2.2.1" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#spectre-timbre-et-vocabulaire"><i class="fa fa-check"></i><b>2.2.1</b> Spectre, timbre et vocabulaire</a></li>
 <li class="chapter" data-level="2.2.2" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#pression-acoustique-niveau-sonore"><i class="fa fa-check"></i><b>2.2.2</b> Pression acoustique &amp; niveau sonore</a></li>
 <li class="chapter" data-level="2.2.3" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#positionnement-dans-lespace"><i class="fa fa-check"></i><b>2.2.3</b> Positionnement dans l’espace</a></li>
-<li class="chapter" data-level="2.2.4" data-path="quantifier-et-qualifier-le-son.html"><a href="quantifier-et-qualifier-le-son.html#liens-entre-vision-et-audition"><i class="fa fa-check"></i><b>2.2.4</b> Liens entre vision et audition</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="acoustique-des-salles.html"><a href="acoustique-des-salles.html"><i class="fa fa-check"></i><b>3</b> Acoustique des salles</a>
@@ -208,12 +214,16 @@
 <li class="chapter" data-level="12.1.2" data-path="introduction-à-linformatique-musicale.html"><a href="introduction-à-linformatique-musicale.html#osc"><i class="fa fa-check"></i><b>12.1.2</b> OSC</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="enceintes-et-salle-découte.html"><a href="enceintes-et-salle-découte.html"><i class="fa fa-check"></i><b>13</b> Enceintes et salle d’écoute</a>
+<li class="chapter" data-level="13" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html"><i class="fa fa-check"></i><b>13</b> Enceintes et amplificateurs</a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="enceintes-et-salle-découte.html"><a href="enceintes-et-salle-découte.html#choisir-une-paire-découtes"><i class="fa fa-check"></i><b>13.1</b> Choisir une paire d’écoutes</a></li>
-<li class="chapter" data-level="13.2" data-path="enceintes-et-salle-découte.html"><a href="enceintes-et-salle-découte.html#placer-correctement-son-écoute"><i class="fa fa-check"></i><b>13.2</b> Placer correctement son écoute</a></li>
-<li class="chapter" data-level="13.3" data-path="enceintes-et-salle-découte.html"><a href="enceintes-et-salle-découte.html#lécoute-au-casque"><i class="fa fa-check"></i><b>13.3</b> L’écoute au casque</a></li>
-<li class="chapter" data-level="13.4" data-path="enceintes-et-salle-découte.html"><a href="enceintes-et-salle-découte.html#casque-fermé-ou-casque-ouvert"><i class="fa fa-check"></i><b>13.4</b> Casque fermé ou casque ouvert ?</a></li>
+<li class="chapter" data-level="13.1" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#anatomie-dun-haut-parleur"><i class="fa fa-check"></i><b>13.1</b> Anatomie d’un haut-parleur</a></li>
+<li class="chapter" data-level="13.2" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#amplification-et-impédance"><i class="fa fa-check"></i><b>13.2</b> Amplification et impédance</a></li>
+<li class="chapter" data-level="13.3" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#puissance-et-sensibilité"><i class="fa fa-check"></i><b>13.3</b> Puissance et sensibilité</a></li>
+<li class="chapter" data-level="13.4" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#difficultés-de-fabrication"><i class="fa fa-check"></i><b>13.4</b> Difficultés de fabrication</a></li>
+<li class="chapter" data-level="13.5" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#choisir-une-paire-découtes"><i class="fa fa-check"></i><b>13.5</b> Choisir une paire d’écoutes</a></li>
+<li class="chapter" data-level="13.6" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#placer-correctement-son-écoute"><i class="fa fa-check"></i><b>13.6</b> Placer correctement son écoute</a></li>
+<li class="chapter" data-level="13.7" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#lécoute-au-casque"><i class="fa fa-check"></i><b>13.7</b> L’écoute au casque</a></li>
+<li class="chapter" data-level="13.8" data-path="enceintes-et-amplificateurs.html"><a href="enceintes-et-amplificateurs.html#casque-fermé-ou-casque-ouvert"><i class="fa fa-check"></i><b>13.8</b> Casque fermé ou casque ouvert ?</a></li>
 </ul></li>
 <li class="part"><span><b>III Méthodologie de prise de son</b></span></li>
 <li class="chapter" data-level="14" data-path="mono-et-multimicrophonie.html"><a href="mono-et-multimicrophonie.html"><i class="fa fa-check"></i><b>14</b> Mono et multimicrophonie</a></li>
@@ -286,8 +296,8 @@
 <h1><span class="header-section-number">11</span> Les modulations de signaux numériques<a href="les-modulations-de-signaux-numériques.html#les-modulations-de-signaux-numériques" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Après être passé au travers d’un convertisseur, l’audio est représenté par un ensemble d’échantillons. En raison de cette représentation particulière, on trouve un certain nombre de protocoles de communication de signaux numériques entre appareils. Il ne s’agit plus ici de faire transiter une tension analogue à celle de la variation de pression d’une onde sonore, mais plutôt une tension représentant des mots binaires (bits).</p>
 <p>La variation de tension de ces signaux s’apparente à une onde carrée. Ces signaux périodiques possèdent un état « haut » et un état « bas », très pratique pour communiquer des nombres binaires.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
-<img src="_main_files/figure-html/unnamed-chunk-2-1.png" alt="Exemples de signaux carrés (Non Return to Zero à gauche, Return to Zero à droite)" width="100%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-31"></span>
+<img src="_main_files/figure-html/unnamed-chunk-31-1.png" alt="Exemples de signaux carrés (Non Return to Zero à gauche, Return to Zero à droite)" width="100%" />
 <p class="caption">
 Figure 11.1: Exemples de signaux carrés (Non Return to Zero à gauche, Return to Zero à droite)
 </p>
@@ -305,7 +315,7 @@ Figure 11.1: Exemples de signaux carrés (Non Return to Zero à gauche, Return t
 <p>L’<em>ADAT lightpipe</em>, souvent abrégé ADAT, est un autre protocole de transmission de signaux numériques. Il a été développé par Alesis pour fonctionner avec les magnétophones à bandes numériques de la même marque. ADAT signifie enfaîte « Alesis Digital Audio Tape ». On retrouve ce protocole sur un grand nombre d’appareils, notamment les interfaces audio, afin d’augmenter le nombre d’entrées/sorties accessibles.</p>
 <p>L’ADAT peut transporter jusqu’à huit canaux à 44.1/48 kHz, quatre canaux à 88.2/96 kHz et deux canaux à 176.4/192 kHz. Le débit d’information est donc constant, doubler la fréquence d’échantillonnage divise par deux le nombre de canaux.</p>
 <p>La connectique la plus courante pour l’ADAT est la fibre optique avec fiches toslink.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-32"></span>
 <img src="_resources/bitmap/plug/toslink.jpg" alt="Câble Toslink" width="30%" />
 <p class="caption">
 Figure 11.2: Câble Toslink
@@ -316,7 +326,7 @@ Figure 11.2: Câble Toslink
 <h3><span class="header-section-number">11.1.3</span> MADI<a href="les-modulations-de-signaux-numériques.html#madi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Le MADI, ou AES10, est un protocole permettant d’acheminer un grand nombre de canaux. On peut donc récupérer soixante-quatre canaux audio à une fréquence de 44.1/48 kHz. Comme pour l’ADAT, le nombre de canaux est divisé par deux à chaque doublement de la fréquence d’échantillonnage.</p>
 <p>Ce protocole se retrouve fréquemment dans le monde de l’audio professionnel. Les connexions entre appareils supportant le MADI peuvent se faire soit avec des fibres optiques, soit sur câble coaxial (fiches BNC). Certains constructeurs, comme DIGICO, ont choisi les câbles RJ45 comme support d’acheminement.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-33"></span>
 <img src="_resources/bitmap/plug/fibre.jpg" alt="Fibre optique et câble BNC" width="30%" /><img src="_resources/bitmap/plug/bnc.jpg" alt="Fibre optique et câble BNC" width="30%" />
 <p class="caption">
 Figure 11.3: Fibre optique et câble BNC

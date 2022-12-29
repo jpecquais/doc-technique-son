@@ -111,3 +111,5 @@ $$ \frac{U_{in}}{U_{out}} = \frac{Z_{in}}{Z_{in} + Z_{out}} = \frac{1}{1+\frac{Z
 Dès lors, si $Z_{in}$ est très grand devant $Z_{out}$, alors $U_{in}$ tend vers $U_{out}$. Si $Z_{out}$ est très grand devant $Z_{in}$, alors $U_{in}$ tend vers $0$.
 
 Cela nous amène à démontrer l’affirmation ci-dessus. Maintenant, nous savons que dans un circuit, l’impédance varie en fonction de la fréquence. Dès lors, une mauvaise adaptation d’impédance ne fera pas que diminuer l’amplitude du signal, mais filtrera aussi une partie de spectre, généralement les hautes fréquences.
+
+> On considère aussi l'adaptation d'**impédance en tension**. Lorsque que nous considérons la **puissance** les relations sont différentes (cf section sur les hautparleurs).
