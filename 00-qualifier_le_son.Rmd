@@ -3,8 +3,14 @@
 ```{r setup, include=FALSE}
 library(reticulate)
 knitr::knit_engines$set(python = reticulate::eng_python)
+py_install("matplotlib")
+py_install("numpy")
+py_install("plotly==5.13.0")
+install.packages("plotly", dependencies = TRUE)
+install.packages("Rcpp", dependencies = TRUE)
+install.packages("ggplot2", dependencies = TRUE)
+install.packages("data.table", dependencies = TRUE)
 ```
-
 # Quantifier et qualifier le son
 
 Le son peut s'appréhender de plusieurs façons différentes. Particulièrement, sa description physique et psychoacoustique est très précieuse pour tous les praticiens du son. Il convient donc, afin de pouvoir proposer un dispositif cohérent de prise de son, de comprendre la physique élémentaire du son ainsi que d'être capable de le décrire efficacement. 

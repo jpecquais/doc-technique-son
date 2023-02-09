@@ -8,6 +8,8 @@ This book is written in RMarkdown. To build or serve the book, you must install 
 + R
   + rmarkdown
   + bookdown
+  + plotly
+  + ggplot2
 + Python
   + Numpy
   + Matplotlib

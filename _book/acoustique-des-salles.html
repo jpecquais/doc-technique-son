@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3 Acoustique des salles | Guide pratique de la prise de son et du mixage appliqués à la musique</title>
   <meta name="description" content="Livre sur la prise de son, le mixage et la production musicale, par Jean-Loup Pecquais." />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3 Acoustique des salles | Guide pratique de la prise de son et du mixage appliqués à la musique" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Jean-Loup Pecquais" />
 
 
-<meta name="date" content="2022-12-29" />
+<meta name="date" content="2023-02-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,7 +52,7 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.6.0/htmlwidgets.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <script src="libs/plotly-binding-4.10.1/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
 <link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
@@ -108,7 +108,8 @@
 <li class="chapter" data-level="3.1.1" data-path="acoustique-des-salles.html"><a href="acoustique-des-salles.html#la-réverbération"><i class="fa fa-check"></i><b>3.1.1</b> La réverbération</a></li>
 <li class="chapter" data-level="3.1.2" data-path="acoustique-des-salles.html"><a href="acoustique-des-salles.html#calcul-du-temps-de-réverbération"><i class="fa fa-check"></i><b>3.1.2</b> Calcul du temps de réverbération</a></li>
 <li class="chapter" data-level="3.1.3" data-path="acoustique-des-salles.html"><a href="acoustique-des-salles.html#limite-de-léquation-de-sabine"><i class="fa fa-check"></i><b>3.1.3</b> Limite de l’équation de Sabine</a></li>
-<li class="chapter" data-level="3.1.4" data-path="acoustique-des-salles.html"><a href="acoustique-des-salles.html#le-phénomène-donde-stationnaire"><i class="fa fa-check"></i><b>3.1.4</b> Le phénomène d’onde stationnaire</a></li>
+<li class="chapter" data-level="3.1.4" data-path="acoustique-des-salles.html"><a href="acoustique-des-salles.html#lindice-de-speech-clarity-c50"><i class="fa fa-check"></i><b>3.1.4</b> L’indice de “Speech Clarity” C50</a></li>
+<li class="chapter" data-level="3.1.5" data-path="acoustique-des-salles.html"><a href="acoustique-des-salles.html#le-phénomène-donde-stationnaire"><i class="fa fa-check"></i><b>3.1.5</b> Le phénomène d’onde stationnaire</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="acoustique-des-salles.html"><a href="acoustique-des-salles.html#premières-réflexions-et-filtre-en-peigne"><i class="fa fa-check"></i><b>3.2</b> Premières réflexions et filtre en peigne</a></li>
 <li class="chapter" data-level="3.3" data-path="acoustique-des-salles.html"><a href="acoustique-des-salles.html#traitement-acoustique"><i class="fa fa-check"></i><b>3.3</b> Traitement acoustique</a>
@@ -322,7 +323,8 @@
 <h2><span class="header-section-number">3.1</span> Généralités<a href="acoustique-des-salles.html#généralités" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="la-réverbération" class="section level3 hasAnchor" number="3.1.1">
 <h3><span class="header-section-number">3.1.1</span> La réverbération<a href="acoustique-des-salles.html#la-réverbération" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>L’acoustique d’une salle est généralement décrite en deux temps : le temps des premières réflexions et le temps du champ diffus.</p>
+<p>Afin d’étudier l’acoustique d’une salle, on procède à la mesure de sa réponse impulsionnelle. Pour se faire, on émet dans le lieu à mesurer un signal audio impulsionnel (clappement de main, explosion d’un ballon, émission d’une impulsion de Dirac grâce à un haut-parleur), et l’on enregistre le résultat à l’aide d’un microphone de mesure.</p>
+<p>La réponse impulsionnelle d’une salle est généralement décrite en deux temps : le temps des premières réflexions et le temps du champ diffus.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
 <img src="_resources/drawings/reverb.svg" alt="Schéma d'une réponse impulsionnelle de réverbération."  />
 <p class="caption">
@@ -354,11 +356,17 @@ Figure 3.1: Schéma d’une réponse impulsionnelle de réverbération.
 <p>L’équation de Sabine pose également problème pour de petits espaces (régie d’écoute par exemple) en prédisant un temps de réverbération trop long. Dans ce cas, l’équation d’Eyring est plus adaptée.</p>
 <p><span class="math display">\[RT_{60} = -0.1611 \times \frac{V}{\sum_{i=0}^{k} S_i.\ln(1-\alpha_i)}\]</span></p>
 <blockquote>
-<p>L’équation d’Eyring n’améliore pas non plus la problématique fréquentielle.</p>
+<p>:warning: L’équation d’Eyring n’améliore pas non plus la problématique fréquentielle.</p>
 </blockquote>
 </div>
-<div id="le-phénomène-donde-stationnaire" class="section level3 hasAnchor" number="3.1.4">
-<h3><span class="header-section-number">3.1.4</span> Le phénomène d’onde stationnaire<a href="acoustique-des-salles.html#le-phénomène-donde-stationnaire" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="lindice-de-speech-clarity-c50" class="section level3 hasAnchor" number="3.1.4">
+<h3><span class="header-section-number">3.1.4</span> L’indice de “Speech Clarity” C50<a href="acoustique-des-salles.html#lindice-de-speech-clarity-c50" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>L’indice d’intelligibilité (noté <span class="math inline">\(C_{50}\)</span>), ou “Speech Clarity” en anglais, indique la faculté d’une pièce à permettre une bonne compréhension d’une voix parlée. Son principe repose sur la mesure de l’énergie de la réponse impulsionnelle de la pièce avant 50 ms et après 50 ms. On en fait ensuite un rapport logarithmique pour obtenir une valeur en décibel.</p>
+<p><span class="math display">\[ C_{50} = 10 \times \log \frac{Energie(&lt;50ms)}{Energie(&gt;50ms)} \, dB \]</span></p>
+<p>Plus la valeur du <span class="math inline">\(C_{50}\)</span> est grande, plus la salle concentre la majorité de son énergie avant les 50 ms de propagation de la réverbération. À l’inverse, plus le <span class="math inline">\(C_{50}\)</span> est faible, plus la salle a une énergie prédominante après 50 ms de temps de propagation. Dans ce cas une voix parlée paraîtra moins intelligible, car la réponse acoustique de la pièce engendrera un effet de fusion et de masquage.</p>
+</div>
+<div id="le-phénomène-donde-stationnaire" class="section level3 hasAnchor" number="3.1.5">
+<h3><span class="header-section-number">3.1.5</span> Le phénomène d’onde stationnaire<a href="acoustique-des-salles.html#le-phénomène-donde-stationnaire" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>La plupart des pièces de vie sont des salles rectangulaires. Dans ce cas, les surfaces sont toutes parallèles. Ce type de salle est particulièrement propice à l’apparition d’ondes stationnaires. Une onde stationnaire est un phénomène acoustique provoquant l’augmentation de volume de certaines fréquences (ventre) et la disparition d’autres (nœuds).</p>
 <p>Nous aborderons ici ce phénomène sous l’angle de l’acoustique des salles, mais il est applicable dans d’autres situations, comme la vibration d’une corde par exemple.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
@@ -379,7 +387,7 @@ où <span class="math inline">\(c=340\,m.s^{-1}\)</span>, <span class="math inli
 <h2><span class="header-section-number">3.2</span> Premières réflexions et filtre en peigne<a href="acoustique-des-salles.html#premières-réflexions-et-filtre-en-peigne" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Nous avons vu que la réponse acoustique, ou réverbération, d’une salle se décompose généralement en deux parties, la première étant les premières réflexions. Ces premières réflexions sont donc, comme leur nom l’indique, les premiers rebonds que nous entendons suite à un évènement sonore.</p>
 <p>Dans de petites pièces, les premières réflexions peuvent être entendues si proche du son direct que cela génère un type de filtrage bien particulier appelé <strong>filtre en peigne</strong>.</p>
-<p><img src="_main_files/figure-html/unnamed-chunk-11-1.png" width="624" style="display: block; margin: auto;" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-11-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>Toujours en utilisant les formules définies au premier chapitre, on établit la relation suivante :</p>
 <p><span class="math display">\[ fc = \frac 1{2t} = \frac c{2d} \]</span></p>
 <p>Où <span class="math inline">\(fc\)</span> correspond à la fréquence d’annulation la plus grave du filtre en peigne. Les autres fréquences se calculent grâce à la relation <span class="math inline">\(f(n) = fc*n\)</span>. Le phénomène de filtre en peigne est donc également harmonique.</p>
@@ -399,7 +407,7 @@ Figure 3.3: Ensemble des premières reflexions entendues par une oreille pour un
 <li>À partir d’une certaine taille, l’effet du filtre en peigne se mue en information d’acoustique pour notre cerveau. Au-delà de 40 ms (trajet d’une première réflexion d’environ 14 m), l’écart entre le son direct et les premières réflexions est tel que nous entendons un écho (effet Haas).</li>
 </ul>
 <p>Afin de réduire au maximum les effets des filtres en peignes, il est recommandé de placer des traitements aux points de réflexion critique par rapport à la position d’écoute (voir schéma ci-dessus).</p>
-<p><img src="_main_files/figure-html/unnamed-chunk-13-1.png" width="624" style="display: block; margin: auto;" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-13-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="traitement-acoustique" class="section level2 hasAnchor" number="3.3">
 <h2><span class="header-section-number">3.3</span> Traitement acoustique<a href="acoustique-des-salles.html#traitement-acoustique" class="anchor-section" aria-label="Anchor link to header"></a></h2>

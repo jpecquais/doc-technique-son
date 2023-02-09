@@ -44,6 +44,7 @@ généralités
 la-réverbération
 calcul-du-temps-de-réverbération
 limite-de-léquation-de-sabine
+lindice-de-speech-clarity-c50
 le-phénomène-donde-stationnaire
 premières-réflexions-et-filtre-en-peigne
 traitement-acoustique

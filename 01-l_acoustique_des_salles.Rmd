@@ -6,7 +6,9 @@ Tout environnement, sollicité par un évènement sonore, produit une réponse a
 
 ### La réverbération
 
-L'acoustique d'une salle est généralement décrite en deux temps : le temps des premières réflexions et le temps du champ diffus.
+Afin d'étudier l'acoustique d'une salle, on procède à la mesure de sa réponse impulsionnelle. Pour se faire, on émet dans le lieu à mesurer un signal audio impulsionnel (clappement de main, explosion d'un ballon, émission d'une impulsion de Dirac grâce à un haut-parleur), et l’on enregistre le résultat à l'aide d'un microphone de mesure.
+
+La réponse impulsionnelle d'une salle est généralement décrite en deux temps : le temps des premières réflexions et le temps du champ diffus.
 
 ```{r, echo = FALSE, fig.align='center', fig.cap = "Schéma d'une réponse impulsionnelle de réverbération."}
 show_fig(rep("_resources/drawings/reverb.svg"))
@@ -47,7 +49,15 @@ L'équation de Sabine pose également problème pour de petits espaces (régie d
 
 $$RT_{60} = -0.1611 \times \frac{V}{\sum_{i=0}^{k} S_i.\ln(1-\alpha_i)}$$
 
-> L'équation d'Eyring n'améliore pas non plus la problématique fréquentielle.
+> :warning: L'équation d'Eyring n'améliore pas non plus la problématique fréquentielle.
+
+### L'indice de "Speech Clarity" C50
+
+L'indice d'intelligibilité (noté $C_{50}$), ou "Speech Clarity" en anglais, indique la faculté d'une pièce à permettre une bonne compréhension d'une voix parlée. Son principe repose sur la mesure de l'énergie de la réponse impulsionnelle de la pièce avant 50 ms et après 50 ms. On en fait ensuite un rapport logarithmique pour obtenir une valeur en décibel.
+
+$$ C_{50} = 10 \times \log \frac{Energie(<50ms)}{Energie(>50ms)} \, dB $$
+
+Plus la valeur du $C_{50}$ est grande, plus la salle concentre la majorité de son énergie avant les 50 ms de propagation de la réverbération. À l'inverse, plus le $C_{50}$ est faible, plus la salle a une énergie prédominante après 50 ms de temps de propagation. Dans ce cas une voix parlée paraîtra moins intelligible, car la réponse acoustique de la pièce engendrera un effet de fusion et de masquage.
 
 ### Le phénomène d'onde stationnaire
 
