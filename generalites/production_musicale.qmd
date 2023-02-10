@@ -1,0 +1,81 @@
+
+# Description d’une production musicale type
+
+Afin de comprendre quels vont être les enjeux du preneur de son, il convient de comprendre dans quel contexte il intervient. Certes, il est le premier métier du son à rentrer en scène, mais l’œuvre à enregistrer a déjà très probablement eu une longue vie. Elle a été composée, arrangée, peut-être même déjà interprétée au cours de concerts.
+
+À ce stade, le preneur de son aura un regard neuf sur la matière. Il aura donc le potentiel de permettre aux créateurs de prendre du recul sur leur travail. Il convient d’ailleurs de rappeler qu’un preneur de son, aussi talentueux et créatif soit il, est un **assistant de création**. Cela signifie qu’il met à disposition une compétence technique à un d’artiste pour lui permettre d’avancer sur son projet. Cela implique également que celui ou celle qui a le mot final sur le choix des orientations esthétiques est l’artiste en question. Il convient donc, en tant que preneur de son, d’être force de proposition, tout en sachant respecter le choix (qu’ils soient bons ou mauvais) des artistes.
+
+D’un point de vue sonore, le travail de prise de son est absolument critique. Ce sera à ce moment que va se jouer la majorité des choix esthétiques. Il convient donc de réunir les conditions optimales pour :
+
++ offrir aux musiciens et musiciennes la chance de donner leur meilleure interprétation possible
++ réaliser une prise de son en adéquation avec l’orientation esthétique du projet
+
+La plupart des choix faits à la prise de son ne pourront pas être renégociés a posteriori. Il convient donc de mettre d’accord les artistes, le directeur artistique et le preneur de son sur les moyens à mettre en œuvre.
+
+![Entonnoir de la production musicale](../_resources/diagrams/productionSonore.svg){out.width="80%", fig.align="center"}
+
+## les acteurs de la réalisation d’une œuvre enregistrée
+
+Nous allons ici rapidement discuter des différents rôles apparaissant dans la production d’une œuvre musicale enregistrée. Ceux-ci sont volontairement très séparés, bien que dans les cas pratiques, une personne puisse en incarner plusieurs.
+
+**Le compositeur** est la personne qui a composé la mélodie et l’harmonie de l’œuvre.
+
+**L’arrangeur** est chargé de l’orchestration (choix des instruments) et l’écriture des différentes partitions.
+
+**L’interprète** a la responsabilité de retranscrire une partition le plus justement possible, à la fois dans sa dimension technique et sensible.
+
+**Le directeur artistique** (ou DA) supervise l’ensemble de l’enregistrement. Il aura, par exemple, à choisir le preneur de son, le mixeur ou dans quel studio enregistrer. Lors de la session d’enregistrement, il aura à diriger les musiciens (comme un réalisateur dirige ses acteurs au cinéma) afin de leur faire jouer la meilleure interprétation possible pour l’œuvre. Lors du mixage, il sera le principal interlocuteur du mixeur. Pour faire court : il est le garant de l’orientation esthétique du projet.
+
+**Le producteur** finance l’ensemble de projets. C’est donc un investisseur qui attend un retour sur investissement.
+
+> L’appellation abusive de « producteur » pour parler du directeur artistique vient d’un anglicisme du mot « producer ». Le producteur est donc bien l’équivalent du directeur artistique dans les pays anglo-saxons. Si le DA a besoin d’un certain talent, le producteur a surtout besoin d’argent.
+
+**Le preneur de son** est chargé d’enregistrer les musiciens et musiciennes. Il a donc un rôle premier très technique : il doit inscrire sur un support les ondes sonores produites par ces musiciens. Il a également un rôle esthétique très important, d’un point de vue sonore, car le choix du dispositif de prise de son aura un fort effet sur la suite de la vie de l’œuvre.
+
+**Le mixeur** intervient après la prise de son et doit réaliser une sommation de l’ensemble des points de captations (microphone) vers un format écoutable par le grand public (mono, stéréo, 5.1, Ambisonique, Dolby Atmos, etc.). Son rôle esthétique est fortement contraint par le travail de prise de son. Si celle-ci est réussie, il pourra amplifier et bonifier les choix de production. Dans le cas contraire, il devra lutter pour essayer de faire sortir le meilleur d’une matière imparfaite.
+
+**Le technicien de mastering** est le dernier maillon de la chaîne. Son rôle premier sera de préparer le travail de mixage à aux supports de diffusion. Il se devra également d’offrir une oreille nouvelle sur le travail réalisé au mixage. 
+
+## La préproduction
+
+La préproduction concerne toutes les étapes d’une œuvre enregistrée qui ont lieu avant ledit enregistrement. On parlera donc en premier lieu de la composition et particulièrement de l’arrangement.
+
+La qualité d’un arrangement aura une influence énorme sur la facilité à mixer une œuvre. Si les instruments sont astucieusement répartis sur l’ensemble du spectre sonore, cela sera une difficulté de moins à gérer au mixage par exemple.
+
+Il est aussi courant pour des artistes de réaliser des « démos ». Celles-ci sont souvent des enregistrements réalisés en home studio afin de définir un cap esthétique pour la suite de la production sonore. C’est un atout extrêmement précieux pour un preneur de son, cela permet de rapidement identifier quel est le projet esthétique de l’œuvre.
+
+## La production
+
+C’est ici que le travail du preneur de son commence. L’étape de production consiste à fixer les interprétations définitives. Le premier objectif est donc de s’assurer du bon enregistrement de tous les canaux prévus. Bien sûr, l’enjeu n’est pas seulement technique, mais aussi esthétique. Et il n’est pas moindre, les choix pris lors de la prise de son seront des carcans impossibles à outrepasser lors de la phase de mixage. Enfin, l’élément le plus déterminant de cette étape est d’obtenir des musiciens leurs meilleures interprétations. La présence d’un directeur artistique est d’une aide précieuse afin de diriger et d’orienter les musiciens. Il permet aussi de faire le lien entre les artistes et l’équipe technique, en exprimant les besoins des uns aux autres.
+
+Sur les projets les plus modestes, le poste de directeur artistique est souvent sacrifié. Il en va donc à l’ingénieur du son de, parfois, remplir ce rôle. 
+
+## La postproduction
+
+Arrivé à ce stade, la majorité du travail est déjà accompli, il ne reste que le mixage et le mastering. Classiquement, chacune de ces tâches incombe à un technicien différent. Le travail du mixeur consistera à réaliser la sommation, généralement en stéréo, de l’ensemble des canaux enregistrés lors de la prise de son. Afin de faire cohabiter tous ces signaux, il est commun d’utiliser des traitements pour les répartir sur l’ensemble du spectre et de gérer leur dynamique. Parfois, ces traitements remplissent un rôle esthétique, en déformant le signal d’origine pour aboutir à une nouvelle matière.
+
+Une fois le travail du mixeur terminé, le mastering commence. Le but et d’homogénéiser l’ensemble des titres d’un disque, en volume, en dynamique et en couleur. Ensuite, il convient aussi de définir le niveau de sortie général du disque. La dernière étape consistera à monter l’ordre des morceaux pour le disque, d’y inscrire les métadonnées (nom de l’artiste, des titres, genre musical, etc.) et de générer le fichier final, dédier à l’exploitation.
+
+<!--
+# Les questions fréquentes lors de l’apprentissage de la prise de son
+
+Après quelques années à dispenser cette formation consacrée à la prise de son, l’auteur à déjà eu l’occasion de rencontrer un certain nombre de fois les mêmes questions et interrogations. Une grande partie de celles-ci trouveront leur réponse dans le reste de ce livre, cependant, une certaine catégorie est plus difficile à intégrer. Celle-ci concerne le matériel lié à la prise de son.
+
+Ces questions expriment souvent, de manière implicite, un certain désarroi par rapport à la quantité astronomique de produits disponible. Ce désarroi n’est que plus grand lorsque de violentes campagnes marketings s’en mêlent.
+
+Ce livre n’a pas pour vocation à faire la promotion de constructeurs ou de fabriquants d’équipements audio. Ainsi, ces derniers ne seront pas évoqués, et cela pour deux raisons :
+— la grande majorité du contenu internet traitant de l’audio parle de matériel audio.
+— le matériel n’est **jamais** la raison d’un rendu sonore médiocre. De la même manière qu’en aéronotique, un accident découle toujours d’une erreur humaine, une prise de son ratée découle forcément des erreurs du preneur de son.
+
+
+Il convient ici de clairement définir ses besoins. Dans tous les cas, il ne sera pas compté l’achat d’un ordinateur, car la plupart des personnes possèdent un ordinateur suffisamment puissant pour enregistrer plusieurs pistes audio simultanément.
+
+**Premier critères : combien d’entrées ?**
+
+Si votre objectif n’est pas d’enregistrer plusieurs instruments à la fois, deux entrées microphones peuvent suffir à 90 % des cas d’usages.
+
+Si vous êtes batteur, alors huits entrées peuvent être appréciables.
+
+Si vous désirez monter une régie de prise de son, afin d’enregistrer plusieurs musiciens à la fois, alors 16 entrées semblent être un minimum requis.
+
+-->

@@ -1,0 +1,27 @@
+# (PART) Équipement et usage {-}
+
+# Le chemin du signal
+
+La première mission d’un preneur de son est d’assurer l’arrivée à bon port des signaux dans l’enregistreur. En effet, toute notion de mise en scène sonore et d’esthétique devient très secondaire si le contenu n’a pas été enregistré.
+
+Le diagramme ci-dessous reprend les principaux étages rencontrés par un signal audio dans un contexte de production numérique. Il est essentiel d’être le plus familier possible avec ces différents composants.
+
+```{r, echo=FALSE, out.width="100%", fig.align="center", fig.cap = "Le chemin du signal. Elle peut-être agrandie en ouvrant l'image dans un nouvel onglet."}
+show_fig("../_resources/diagrams/cheminSignal.svg")
+```
+
+Nous pourrions catégoriser à partir de ce schéma différents « milieux ». Tout d’abord, nous avons le **milieu acoustique**, où nous trouverons toutes sortes d’instruments de musique, les différents lieux dans lesquels ils pourront s’y trouver. C’est donc le domaine de l’onde sonore mécanique.
+
+On trouve ensuite le **milieu analogique**, où l’onde sonore est représentée, de façon analogue, par des grandeurs électriques. Celles d’un signal sonore dans un circuit analogique sont fonction, par exemple, de la variation de la pression atmosphérique provoquée en un point par une onde sonore. Les éléments clefs du milieu analogique sont les préamplificateurs et les amplificateurs, mais on trouve aussi certains traitements, comme les égaliseurs et les compresseurs. On définira « analogique » comme une représentation dans laquelle les grandeurs (tension, courant, etc.) qui entrent dans les calculs sont représentées par des grandeurs analogues et qui varient de manière identique (définition du [CNRTL](https://www.cnrtl.fr/definition/analogique)).
+
+Pour passer du milieu acoustique au milieu analogique, et vice-versa, on utilise des microphones et des haut-parleurs. Tous deux sont des **transducteurs**, permettant de transformer une énergie en une autre. Le microphone transforme une énergie mécanique en énergie électrique. Le haut-parleur réalise l’opération inverse.
+
+On en vient ensuite au **milieu numérique**. Fondamentalement, le signal est toujours de nature électrique, mais il a subi une opération très importante nommée **échantillonnage**. On a donc mesuré à intervalle régulier la tension électrique générée par l’onde sonore. Le passage par le numérique permet une myriade de traitements sur le signal, beaucoup plus complexes que ceux permis par l’électronique analogique. L’audio numérique permet aussi un stockage de l’information à moindre coût et l’acheminement d’un grand nombre de voies (canaux) grâce à un faible nombre de modulations (câble). 
+
+L’appareil permettant de passer du milieu analogique au milieu numérique est le **convertisseur analogique/numérique**. Il ne s’agit pas d’un transducteur, car les signaux d’entrées et de sorties sont de même nature électrique. Pour opérer l’opération inverse, on utilise un **convertisseur numérique/analogique.**
+
+Le **milieu informatique** nous permet d’utiliser des applications relatives aux traitements du son par le biais d’ordinateurs. Il s’agit aujourd’hui indubitablement de notre outil de travail principal. Nous y réalisons la grande majorité des traitements audio, ainsi que l’enregistrement et le routage des sources.
+
+Le lien entre un ordinateur et un convertisseur A/N/A se fait grâce à un **bus de sérialisation** associé à un **pilote** (ou **driver**). L’ensemble des deux permet de mettre en forme la donnée numérique et de la rendre compréhensible à l’ordinateur. 
+
+Chaque élément évoqué ci-dessus sera abordé dans des sections dédiées dans la suite de ce livre.
