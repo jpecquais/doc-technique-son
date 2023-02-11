@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.189">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Guide pratique des techniques du son - 6&nbsp; Les microphones</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../equipement-usages/transport_signaux_analogiques.html" rel="next">
+<link href="../equipement-usages/le_chemin_du_signal.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer"
+  }
+}</script>
+<script src="../site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="../site_libs/plotly-binding-4.10.1/plotly.js"></script>
+<script src="../site_libs/typedarray-0.1/typedarray.min.js"></script>
+<script src="../site_libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="../site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
+<script src="../site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="../site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="../site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Les microphones</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Guide pratique des techniques du son</a> 
+        <div class="sidebar-tools-main">
+    <a href="../Guide-pratique-des-techniques-du-son.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">Avant-propos</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Généralités</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../generalites/qualifier_le_son.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Quantifier et qualifier le son</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../generalites/l_acoustique_des_salles.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Acoustique des salles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../generalites/notions_electronique.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Notions élémentaires d’électronique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../generalites/production_musicale.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Description d’une production musicale type</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Equipements et usages</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../equipement-usages/le_chemin_du_signal.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Le chemin du signal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../equipement-usages/les_microphones.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Les microphones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../equipement-usages/transport_signaux_analogiques.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Transport de signaux analogiques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../equipement-usages/les_preamplificateurs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Les préamplificateurs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../equipement-usages/les_convertisseurs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">La conversion analogique numérique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../equipement-usages/transport_signaux_numériques.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Transports de signaux numériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../equipement-usages/introduction_informatique_musicale.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introduction à l’informatique musicale</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../equipement-usages/les_enceintes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Enceintes et amplificateurs</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Méthodes et usages</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../methode-pds/mono_et_multimicrophonie.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Mono et multimicrophonie</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../methode-pds/le_couple_de_pds.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">La prise de son au couple</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../methode-pds/considérations_pratiques.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Considérations pratiques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../methode-pds/déphasage_et_remise_en_phase.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Déphasage et remise en phase</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#petit-historique-des-microphones" id="toc-petit-historique-des-microphones" class="nav-link active" data-scroll-target="#petit-historique-des-microphones"><span class="toc-section-number">6.1</span>  Petit historique des microphones</a></li>
+  <li><a href="#les-types-et-technologies-de-microphones" id="toc-les-types-et-technologies-de-microphones" class="nav-link" data-scroll-target="#les-types-et-technologies-de-microphones"><span class="toc-section-number">6.2</span>  Les types et technologies de microphones</a>
+  <ul class="collapse">
+  <li><a href="#les-microphones-électrostatiquesà-condensateur" id="toc-les-microphones-électrostatiquesà-condensateur" class="nav-link" data-scroll-target="#les-microphones-électrostatiquesà-condensateur"><span class="toc-section-number">6.2.1</span>  Les microphones électrostatiques/à condensateur</a></li>
+  <li><a href="#les-microphones-à-ruban" id="toc-les-microphones-à-ruban" class="nav-link" data-scroll-target="#les-microphones-à-ruban"><span class="toc-section-number">6.2.2</span>  Les microphones à ruban</a></li>
+  <li><a href="#les-microphones-dynamiques" id="toc-les-microphones-dynamiques" class="nav-link" data-scroll-target="#les-microphones-dynamiques"><span class="toc-section-number">6.2.3</span>  Les microphones dynamiques</a></li>
+  <li><a href="#la-taille-des-membranes" id="toc-la-taille-des-membranes" class="nav-link" data-scroll-target="#la-taille-des-membranes"><span class="toc-section-number">6.2.4</span>  La taille des membranes</a></li>
+  <li><a href="#microphones-à-tubes-ou-transistors" id="toc-microphones-à-tubes-ou-transistors" class="nav-link" data-scroll-target="#microphones-à-tubes-ou-transistors"><span class="toc-section-number">6.2.5</span>  Microphones à tubes ou transistors?</a></li>
+  </ul></li>
+  <li><a href="#timbre-et-directivité" id="toc-timbre-et-directivité" class="nav-link" data-scroll-target="#timbre-et-directivité"><span class="toc-section-number">6.3</span>  Timbre et directivité</a>
+  <ul class="collapse">
+  <li><a href="#capsules-à-pression" id="toc-capsules-à-pression" class="nav-link" data-scroll-target="#capsules-à-pression"><span class="toc-section-number">6.3.1</span>  Capsules à pression</a></li>
+  <li><a href="#capsules-à-gradient-de-pression" id="toc-capsules-à-gradient-de-pression" class="nav-link" data-scroll-target="#capsules-à-gradient-de-pression"><span class="toc-section-number">6.3.2</span>  Capsules à gradient de pression</a></li>
+  <li><a href="#et-les-autres-directivités" id="toc-et-les-autres-directivités" class="nav-link" data-scroll-target="#et-les-autres-directivités"><span class="toc-section-number">6.3.3</span>  Et les autres directivités&nbsp;?</a></li>
+  <li><a href="#directivités-réelles-détimbrage" id="toc-directivités-réelles-détimbrage" class="nav-link" data-scroll-target="#directivités-réelles-détimbrage"><span class="toc-section-number">6.3.4</span>  Directivités réelles &amp; détimbrage</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Les microphones</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Un microphone est un <strong>transducteur</strong> permettant de transformer une onde acoustique en signal électrique. Cette opération est réalisée par une membrane. Selon la nature du microphone, cette membrane pourra être constituée d’une feuille métallique d’un condensateur ou encore être rattachée à une bobine.</p>
+<p>Le microphone est l’outil principal du preneur de son. Le choix du modèle et sa position dans l’espace est déterminants sur le rendu sonore d’une captation. Ces deux paramètres ont par ailleurs une certaine interdépendance&nbsp;: une position souhaitée du microphone pouvant influencer le choix du modèle et vice-versa.</p>
+<section id="petit-historique-des-microphones" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="petit-historique-des-microphones"><span class="header-section-number">6.1</span> Petit historique des microphones</h2>
+<p>Sans vouloir rentrer dans un récit exhaustif sur l’invention et l’évolution des microphones, relater les moments clefs de cette technologie permet d’avoir une vision globale du marché d’aujourd’hui.</p>
+<p>La nécessité de capter un évènement sonore grâce à un microphone provient de trois besoins&nbsp;:</p>
+<ul>
+<li>le transmettre (télécommunication)</li>
+<li>l’amplifier (concert, spectacle vivant)</li>
+<li>l’enregistrer (industrie du disque)</li>
+</ul>
+<p>En 1876, Alexandre Graham Bell propose un système à base liquide, permettant de transformer une onde sonore en tension électrique. Le système ne fut jamais réellement exploité, car le rendu sonore était jugé trop peu satisfaisant.</p>
+<p>Le premier type de microphone utilisé industriellement est le <strong>microphone à charbon</strong> (au UK, par David Edward Hugues, aux US par Emile Berliner et Thomas Edison. Le brevet sera d’ailleurs disputé, avec un gain de cause pour Edison malgré des démonstrations publiques de Hugues antérieur aux publications d’Edison). En raison de sa faible bande passante et de son niveau de bruit élevé, il se révèle de piètres qualités pour l’enregistrement et la transmission de la musique. Il aura, par contre, une place de choix dans les téléphones durant de longues décennies.</p>
+<p>Viennent ensuite les <strong>microphones à condensateur</strong>, dont les premiers modèles remontent à 1916, par le chercheur Edward Wente. Ces microphones sont tout d’abord réputés assez capricieux, leurs réponses en fréquences pouvant varier significativement en fonction de l’humidité de l’air et de la température.</p>
+<p>À cause de ces variations sonores présentes dans les premiers microphones à condensateur, on leur préférera un temps les <strong>microphones à ruban</strong>. Ils sont inventés en 1923 par Harry Olson. Ils sont par contre d’une grande fragilité mécanique.</p>
+<p>George Neumann est un des noms à connaître dans cette histoire des microphones. On lui doit, entre autres, la stabilisation des microphones statiques. Il sera aussi le premier à produire un microphone (U87) utilisant un transistor en lieu et place des traditionnels tubes.</p>
+<p>À partir des années 1970, les microphones dynamiques arrivent sur le marché, notamment porté par la marque Shure. Ces microphones ont la grande qualité d’être très robustes, et remplaceront leurs homologues à ruban dans bien des cas.</p>
+<p>Depuis, les principales améliorations ont concerné la robustesse d’une part, et la miniaturisation des dispositifs d’autre part, menant ainsi au développement des capsules MEMS.</p>
+</section>
+<section id="les-types-et-technologies-de-microphones" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="les-types-et-technologies-de-microphones"><span class="header-section-number">6.2</span> Les types et technologies de microphones</h2>
+<p>Avant d’aborder en détail certaines constructions de microphones, il convient de faire attention à certains raccourcis associant des méthodes de fabrications à un niveau présumé de qualité. Par exemple, il est commun d’associer les microphones à électret à une construction «&nbsp;bas de gamme&nbsp;». Or, c’est oublier que la série 4000 de chez DPA, considérée par beaucoup comme une référence indétrônable de la prise de son, ne contient que des microphones à électret. Les MEMS souffrent du même biais, ceux-ci se retrouvent pourtant de plus en plus souvent sur des microphones ambisoniques, comme le Zyla ou le SPC mic.</p>
+<p>Nous allons maintenant aborder les types de microphones suivants&nbsp;:</p>
+<ul>
+<li>Les microphones électrostatiques/à condensateur</li>
+<li>Les microphones à ruban</li>
+<li>Les microphones dynamiques</li>
+</ul>
+<section id="les-microphones-électrostatiquesà-condensateur" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="les-microphones-électrostatiquesà-condensateur"><span class="header-section-number">6.2.1</span> Les microphones électrostatiques/à condensateur</h3>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="&quot;../_resources/bitmap/mic/u87.jpg&quot;" class="img-fluid"> <img src="&quot;../_resources/bitmap/mic/cmc64.jpg&quot;" class="img-fluid"> <img src="&quot;../_resources/bitmap/mic/cm4.jpg&quot;" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p>Neumann U87, Schoeps CMC64, Line Audio CM4</p>
+</div>
+</div>
+</div>
+<p>Ce sont, historiquement, les premiers microphones à permettre une captation du spectre audible satisfaisante. Ils sont cependant très sensibles aux conditions de température et d’humidité et il fallut attendre les années trente pour que ce problème cesse. Ils nécessitent une alimentation externe, appelée alimentation fantôme, normalisée à +48V. Il existe deux familles de microphones électrostatiques, les <strong>condensateurs à hautes fréquences</strong> et <strong>condensateur polarisés en courant continu</strong>.</p>
+<p>Les microphones à condensateur polarisés en courant continu ont le fonctionnement le plus commun. Un courant continu vient polariser la capsule/condensateur. Lorsqu’une onde sonore rencontre la capsule, une de ses armatures se déforme et génère une variation de tension analogue à la variation de pression.</p>
+<p>Les microphones à condensateur à haute fréquence proposent une approche différente. Un oscillateur est intégré dans le microphone et la variation de pression enregistrée par le condensateur vient moduler la fréquence de cet oscillateur. Le signal est ensuite démodulé dans la plage audible. Cette méthode de construction offre une impédance de sortie plus faible et une plus grande résistance aux variations de conditions climatiques.</p>
+<p>Concernant leurs caractéristiques, ces microphones possèdent des réponses en fréquence souvent très linéaire et une excellente réponse en transitoire. Leur niveau de sortie (sensibilité) est élevé. Leur impédance de sortie est basse.</p>
+<p>Exemples&nbsp;: Neumann&nbsp;U87/AKG C414/Shoeps CMC4/Série 4000 DPA/Série MKH Sennheiser</p>
+</section>
+<section id="les-microphones-à-ruban" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="les-microphones-à-ruban"><span class="header-section-number">6.2.2</span> Les microphones à ruban</h3>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="&quot;../_resources/bitmap/mic/r121.jpg&quot;" class="img-fluid"> <img src="&quot;../_resources/bitmap/mic/vinjet.jpg&quot;" class="img-fluid"> <img src="&quot;../_resources/bitmap/mic/coles.jpg&quot;" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p>Royer R121, Cascade Vinjet, Coles 4038</p>
+</div>
+</div>
+</div>
+<p>Les microphones à ruban souvent préférés à leurs homologues statiques dans les débuts de la musique enregistrée. Leur fonctionnement repose sur l’utilisation d’une feuille métallique placée entre deux aimants. Lorsqu’une onde sonore rencontre cette feuille (le ruban), celle-ci vibre et perturbe le champ électromagnétique créé par les aimants et génère une tension analogue à la variation de pression.</p>
+<p>D’un point de vue sonore, les microphones à ruban ont souvent un bas du spectre assez généreux et une réponse plutôt douce pour les hautes fréquences. Ils sont aussi connus pour avoir une impédance de sortie assez élevée et un niveau de sortie faible. Attention à l’alimentation fantôme (+48V), elle peut endommager le microphone.</p>
+<p>Exemples&nbsp;: Royer R121/Cohles/Beyerdynamic M160</p>
+</section>
+<section id="les-microphones-dynamiques" class="level3" data-number="6.2.3">
+<h3 data-number="6.2.3" class="anchored" data-anchor-id="les-microphones-dynamiques"><span class="header-section-number">6.2.3</span> Les microphones dynamiques</h3>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="&quot;../_resources/bitmap/mic/sm57.jpg&quot;" class="img-fluid"> <img src="&quot;../_resources/bitmap/mic/re20.jpg&quot;" class="img-fluid"> <img src="&quot;../_resources/bitmap/mic/md441.jpg&quot;" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p>Shure SM57, Electro-Voice RE20, Sennheiser MD441</p>
+</div>
+</div>
+</div>
+<p>Les microphones dynamiques sont conçus pour des conditions d’utilisation rudes, où les niveaux sonores sont élevés et où le risque de chute est important. Ils sont donc monnaie courante en sonorisation. Leur membrane est attachée à une bobine entourant un aimant. Lorsqu’une onde sonore la met en vibration, la bobine se déplace autour de l’aimant, et, par perturbation du champ électromagnétique, génère une tension de sortie analogue à la variation de pression.</p>
+<p>Leur réponse en fréquence est souvent accidentée, particulièrement dans le haut du spectre. Cela peut être vu comme un inconvénient ou comme un outil de «&nbsp;coloration&nbsp;» du son. Comme leurs homologues à ruban, ils possèdent un niveau de sortie faible et une impédance de sortie élevée.</p>
+<p>Exemples&nbsp;: Shure&nbsp;SM57/Electrovoice&nbsp;RE20/Sennheiser&nbsp;MD441</p>
+</section>
+<section id="la-taille-des-membranes" class="level3" data-number="6.2.4">
+<h3 data-number="6.2.4" class="anchored" data-anchor-id="la-taille-des-membranes"><span class="header-section-number">6.2.4</span> La taille des membranes</h3>
+<p>La taille des membranes influe sur la captation du son. Plus la capsule est grande, plus les fréquences aiguës seront diffractées et donc atténuées dans la prise de son. Un microphone à petite membrane est donc techniquement un microphone plus «&nbsp;juste&nbsp;». Cependant, l’emploi de large membrane permet aussi d’adoucir un surplus d’énergie dans le haut du spectre.</p>
+</section>
+<section id="microphones-à-tubes-ou-transistors" class="level3" data-number="6.2.5">
+<h3 data-number="6.2.5" class="anchored" data-anchor-id="microphones-à-tubes-ou-transistors"><span class="header-section-number">6.2.5</span> Microphones à tubes ou transistors?</h3>
+<p>Historiquement, les tubes ont été les premiers composants électroniques à permettre l’amplification du signal. Le transistor est apparu à la fin des années 40 et a permis de remplir les mêmes fonctions qu’un tube, par une consommation moindre et avec un encombrement beaucoup plus faible.</p>
+<p>Certains microphones continuent à être fabriqués avec des tubes, préférant leur comportement vis-à-vis du son. Une écrasante majorité est cependant fabriquée avec des transistors.</p>
+<p>Le choix entre un microphone à tube et un microphone à transistor semble cependant anecdotique par rapport à son type, à son placement et à sa directivité.</p>
+</section>
+</section>
+<section id="timbre-et-directivité" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="timbre-et-directivité"><span class="header-section-number">6.3</span> Timbre et directivité</h2>
+<p>La directivité d’un microphone permet de décrire sa capacité à réaliser une «&nbsp;écoute&nbsp;» sélective de son environnement. On rencontre les directivités suivantes&nbsp;:</p>
+<ul>
+<li>Omnidirectionnel&nbsp;: capte l’ensemble du champ sonore de façon indifférenciée.</li>
+<li>Hypercardioïde&nbsp;: compromis entre Omnidirectionnel et cardioïde.</li>
+<li>Cardioïde&nbsp;: capte à l’avant, mais rejette à l’arrière du microphone.</li>
+<li>Supercardioïde&nbsp;: ressers la zone d’écoute avant au prix de l’apparition d’une résurgence arrière.</li>
+<li>Hypercardioïde&nbsp;: ressers davantage la zone d’écoute et augmente d’autant plus la résurgence arrière.</li>
+<li>Bidirectionnel : capte à l’avant et à l’arrière, mais selon un lobe plus resserré qu’en cardioïde.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="htmlwidget-16a4de94b25aea5b267b" style="width:100%;height:464px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-16a4de94b25aea5b267b">{"x":{"visdat":{"529879396bcb":["function () ","plotlyVisDat"]},"cur_data":"529879396bcb","attrs":{"529879396bcb":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar"},"529879396bcb.1":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":{},"theta":{},"name":"Figure en 8","line":{"color":"peru"},"inherit":true},"529879396bcb.2":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":{},"theta":{},"name":"Cardioïde","line":{"color":"darkviolet"},"inherit":true},"529879396bcb.3":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":{},"theta":{},"name":"Hypercardioïde","line":{"color":"deepskyblue"},"inherit":true},"529879396bcb.4":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":{},"theta":{},"name":"Subcardioïde","line":{"color":"orangered"},"inherit":true},"529879396bcb.5":{"mode":"lines","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatterpolar","r":{},"theta":{},"name":"Supercardioïde","line":{"color":"green"},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"mode":"lines","type":"scatterpolar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"rgba(31,119,180,1)"},"frame":null},{"mode":"lines","type":"scatterpolar","r":[1,0.995,0.978,0.951,0.914,0.866,0.809,0.743,0.669,0.588,0.5,0.407,0.309,0.208,0.105,0.105,0.208,0.309,0.407,0.5,0.588,0.669,0.743,0.809,0.866,0.914,0.951,0.978,0.995,1,0.995,0.978,0.951,0.914,0.866,0.809,0.743,0.669,0.588,0.5,0.407,0.309,0.208,0.105,0,0.105,0.208,0.309,0.407,0.5,0.588,0.669,0.743,0.809,0.866,0.914,0.951,0.978,0.995,1,1],"theta":[0,6,12,18,24,30,36,42,48,54,60,66,72,78,84,90,96,102,108,114,120,126,132,138,144,150,156,162,168,174,180,186,192,198,204,210,216,222,228,234,240,246,252,258,264,270,276,282,288,294,300,306,312,318,324,330,336,342,348,354,360],"name":"Figure en 8","line":{"color":"peru"},"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"frame":null},{"mode":"lines","type":"scatterpolar","r":[1,0.997,0.989,0.976,0.957,0.933,0.905,0.872,0.835,0.794,0.75,0.703,0.655,0.604,0.552,0.5,0.448,0.396,0.345,0.297,0.25,0.206,0.165,0.128,0.095,0.067,0.043,0.024,0.011,0.003,0,0.003,0.011,0.024,0.043,0.067,0.095,0.128,0.165,0.206,0.25,0.297,0.345,0.396,0.448,0.5,0.552,0.604,0.655,0.703,0.75,0.794,0.835,0.872,0.905,0.933,0.957,0.976,0.989,0.997,1],"theta":[0,6,12,18,24,30,36,42,48,54,60,66,72,78,84,90,96,102,108,114,120,126,132,138,144,150,156,162,168,174,180,186,192,198,204,210,216,222,228,234,240,246,252,258,264,270,276,282,288,294,300,306,312,318,324,330,336,342,348,354,360],"name":"Cardioïde","line":{"color":"darkviolet"},"marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"frame":null},{"mode":"lines","type":"scatterpolar","r":[1,0.996,0.984,0.963,0.935,0.9,0.857,0.807,0.752,0.691,0.625,0.555,0.482,0.406,0.328,0.25,0.172,0.094,0.018,0.055,0.125,0.191,0.252,0.307,0.357,0.4,0.435,0.463,0.484,0.496,0.5,0.496,0.484,0.463,0.435,0.4,0.357,0.307,0.252,0.191,0.125,0.055,0.018,0.094,0.172,0.25,0.328,0.406,0.482,0.555,0.625,0.691,0.752,0.807,0.857,0.9,0.935,0.963,0.984,0.996,1],"theta":[0,6,12,18,24,30,36,42,48,54,60,66,72,78,84,90,96,102,108,114,120,126,132,138,144,150,156,162,168,174,180,186,192,198,204,210,216,222,228,234,240,246,252,258,264,270,276,282,288,294,300,306,312,318,324,330,336,342,348,354,360],"name":"Hypercardioïde","line":{"color":"deepskyblue"},"marker":{"color":"rgba(214,39,40,1)","line":{"color":"rgba(214,39,40,1)"}},"frame":null},{"mode":"lines","type":"scatterpolar","r":[1,0.998,0.993,0.985,0.974,0.96,0.943,0.923,0.901,0.876,0.85,0.822,0.793,0.762,0.731,0.7,0.669,0.638,0.607,0.578,0.55,0.524,0.499,0.477,0.457,0.44,0.426,0.415,0.407,0.402,0.4,0.402,0.407,0.415,0.426,0.44,0.457,0.477,0.499,0.524,0.55,0.578,0.607,0.638,0.669,0.7,0.731,0.762,0.793,0.822,0.85,0.876,0.901,0.923,0.943,0.96,0.974,0.985,0.993,0.998,1],"theta":[0,6,12,18,24,30,36,42,48,54,60,66,72,78,84,90,96,102,108,114,120,126,132,138,144,150,156,162,168,174,180,186,192,198,204,210,216,222,228,234,240,246,252,258,264,270,276,282,288,294,300,306,312,318,324,330,336,342,348,354,360],"name":"Subcardioïde","line":{"color":"orangered"},"marker":{"color":"rgba(148,103,189,1)","line":{"color":"rgba(148,103,189,1)"}},"frame":null},{"mode":"lines","type":"scatterpolar","r":[1,0.997,0.986,0.969,0.946,0.916,0.88,0.838,0.792,0.74,0.685,0.626,0.565,0.501,0.436,0.37,0.304,0.239,0.175,0.114,0.055,0,0.052,0.098,0.14,0.176,0.206,0.229,0.246,0.257,0.26,0.257,0.246,0.229,0.206,0.176,0.14,0.098,0.052,0,0.055,0.114,0.175,0.239,0.304,0.37,0.436,0.501,0.565,0.626,0.685,0.74,0.792,0.838,0.88,0.916,0.946,0.969,0.986,0.997,1],"theta":[0,6,12,18,24,30,36,42,48,54,60,66,72,78,84,90,96,102,108,114,120,126,132,138,144,150,156,162,168,174,180,186,192,198,204,210,216,222,228,234,240,246,252,258,264,270,276,282,288,294,300,306,312,318,324,330,336,342,348,354,360],"name":"Supercardioïde","line":{"color":"green"},"marker":{"color":"rgba(140,86,75,1)","line":{"color":"rgba(140,86,75,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p>Plus la directivité d’un microphone est large, plus la contribution de l’acoustique est apparente. Le timbre est également aussi linéaire que possible. À l’inverse, plus la directivité tant à être étroite, plus le microphone aura une capacité à échantillonner seulement une zone de l’espace. Le timbre est, par contre, amoindri dans le bas du spectre. Les microphones omnidirectionnels sont donc les plus larges et les plus «&nbsp;neutres&nbsp;», tandis que les microphones bidirectionnels sont les plus focalisés et ont la plus importante perte dans le bas du spectre.</p>
+<p>Le preneur de son choisit donc une directivité en fonction de la tâche à accomplir. Les microphones directifs ont l’avantage de limiter la contribution d’évènements sonores que l’on ne souhaite pas capter. Les microphones omnidirectionnels ont la faculté d’être un dispositif de prise de son plus transparent, mais seront beaucoup plus sensibles à une acoustique moins optimale, ainsi qu’au bruit environnant.</p>
+<p>Nous allons par la suite nous intéresser au cœur du microphone : sa capsule. Il existe deux familles de capsules, celles dites «&nbsp;à pression&nbsp;», et celles dites à «&nbsp;gradient de pression&nbsp;».</p>
+<section id="capsules-à-pression" class="level3" data-number="6.3.1">
+<h3 data-number="6.3.1" class="anchored" data-anchor-id="capsules-à-pression"><span class="header-section-number">6.3.1</span> Capsules à pression</h3>
+<p>Une capsule sensible à la pression est omnidirectionnelle : elle capte les fluctuations de pressions en un point. Mathématiquement, cette relation s’exprime, en coordonnées polaires, par :</p>
+<p><span class="math display">\[ \theta = 1 \]</span></p>
+<p>L’angle d’incidence de l’onde sonore par rapport au microphone importe donc peu.</p>
+<p>Pour réaliser une capsule à pression, on enferme une partie de la membrane dans un milieu acoustique à pression constante.</p>
+</section>
+<section id="capsules-à-gradient-de-pression" class="level3" data-number="6.3.2">
+<h3 data-number="6.3.2" class="anchored" data-anchor-id="capsules-à-gradient-de-pression"><span class="header-section-number">6.3.2</span> Capsules à gradient de pression</h3>
+<p>Une capsule à gradient de pression est sensible à la <strong>variation</strong> du champ de pression. Ces capsules ne sont plus omnidirectionnelles, mais bidirectionnelles : elles captent devant et derrière elles. Mathématiquement, une telle directivité s’exprime par la relation (en coordonnées polaires) :</p>
+<p><span class="math display">\[ \theta = cos(\alpha) \]</span></p>
+<p>Où <span class="math inline">\(\alpha\)</span> est l’angle d’incidence d’un son par rapport à la capsule.</p>
+<p>Pour réaliser une capsule à gradient de pression, il suffit de laisser exposer les deux faces de la membrane aux variations de pressions.</p>
+</section>
+<section id="et-les-autres-directivités" class="level3" data-number="6.3.3">
+<h3 data-number="6.3.3" class="anchored" data-anchor-id="et-les-autres-directivités"><span class="header-section-number">6.3.3</span> Et les autres directivités&nbsp;?</h3>
+<p>Il est possible, à partir des deux équations ci-dessus, de retrouver toutes les autres directivités. Par exemple, un microphone cardioïde a une équation de directivité polaire tel que :</p>
+<p><span class="math display">\[ \theta(\alpha) = \frac{1}{2}(1 + cos[\alpha]) \]</span></p>
+<p>Elles découlent donc des deux directivités primaires : omnidirectionnelle et bidirectionnelle. Pour obtenir une directivité particulière, il suffit de «&nbsp;doser&nbsp;» l’influence de ces deux directivités. Par exemple, un microphone cardioïde possède une contribution égale de chacune d’elles. Plus on augmente la proportion de la directive bidirectionnelle, plus on tend vers un microphone supercardioïde, voire hypercardioïde. À l’inverse, augmenter la proportion de la directivité omnidirectionnelle fait tendre le microphone vers une directivité hypocardioïde.</p>
+<p>Il existe deux solutions pour agir sur la contribution des directivités primaires. La première consiste à utiliser un labyrinthe acoustique pour changer le milieu acoustique d’une des faces de la membrane. L’autre consiste à avoir une capsule omnidirectionnelle et une seconde bidirectionnelle et de sommer leur tension de sortie.</p>
+<p>Les microphones à multidirectivité permettent à l’utilisateur d’influer, soit sur le labyrinthe acoustique, soit sur la sommation des deux capsules. Il n’est pas rare que ces microphones soient moins performants qu’un microphone spécifiquement dédié à une seule directivité.</p>
+<p>On retiendra donc :</p>
+<p><span class="math display">\[ \theta(\alpha) = A + B \cos (\alpha) \&gt; où \&gt; A + B = 1\]</span></p>
+<!-- ::: {layout-ncol=3}
+
+![]("../_resources/diagrams/Polar-pattern-U-87-Ai-omni.svg")
+![]("../_resources/diagrams/Polar-pattern-U-87-Ai-cardioid.svg")
+![]("../_resources/diagrams/Polar-pattern-U-87-Ai-figure8.svg")
+
+Directivités réelles du microphone (U 87)
+
+::: -->
+</section>
+<section id="directivités-réelles-détimbrage" class="level3" data-number="6.3.4">
+<h3 data-number="6.3.4" class="anchored" data-anchor-id="directivités-réelles-détimbrage"><span class="header-section-number">6.3.4</span> Directivités réelles &amp; détimbrage</h3>
+<p>Nous avons jusque là considéré que la directivité d’un microphone était un phénomène indépendant de la fréquence. Or, cela n’est pas vrai. En d’autres termes, la directivité d’un microphone n’est pas la même en fonction de la fréquence de l’onde sonore lui arrivant. Typiquement, un microphone tendra vers une directivité plus resserrée dans le haut du spectre, et vers une directivité plus large dans le bas du spectre.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_resources/diagrams/Frequency-diagram-U-87-Ai-omni.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Réponse en fréquence du microphone Neumann U87 (omnidirectionnel)</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_resources/diagrams/Frequency-diagram-U-87-Ai-cardioid.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Réponse en fréquence du microphone Neumann U87 (cardioïde)</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_resources/diagrams/Frequency-diagram-U-87-Ai-figure8.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Réponse en fréquence du microphone Neumann U87 (figure en huit)</figcaption><p></p>
+</figure>
+</div>
+<p>Cela signifie donc que positionner un microphone hors axe face à un évènement sonore n’aura pas seulement un effet sur le niveau du signal en sortie du microphone, mais également sur le timbre. On appelle alors «&nbsp;<strong>timbré</strong>&nbsp;», un évènement sonore capté plein axe par un microphone, et <strong>détimbré</strong> un évènement sonore capté hors axe.</p>
+<p>Ce phénomène est un outil précieux pour les preneurs de son. Par exemple, lorsqu’on enregistre une voix, certains sons sont exagérés par le microphone, particulièrement les «&nbsp;s&nbsp;». En tournant légèrement le microphone pour placer la voix hors axe, on peut déjà grandement améliorer les problèmes de sifflante avant même de penser à un éventuel traitement ultérieur.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../equipement-usages/le_chemin_du_signal.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Le chemin du signal</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../equipement-usages/transport_signaux_analogiques.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Transport de signaux analogiques</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -6,13 +6,15 @@ De tous les équipements audio nécessaires pour réaliser une prise de son, les
 
 ## Anatomie d’un haut-parleur
 
-```{r, echo=FALSE, fig.align="center", fig.cap="Coupe de hautparleur (dans l'ordre, woofer, mid-range, tweeter). Infographie par Svjo, CC BY-SA 3.0", fig.show="hold", out.width="25%"}
+::: {layout-ncol=3 fig.align="center"}
 
-knitr::include_graphics("../_resources/bitmap/speaker/woofer.png")
-knitr::include_graphics("../_resources/bitmap/speaker/midrange.png")
-knitr::include_graphics("../_resources/bitmap/speaker/tweeter.png")
+![](../_resources/bitmap/speaker/woofer.png)
+![](../_resources/bitmap/speaker/midrange.png)
+![](../_resources/bitmap/speaker/tweeter.png)
 
-```
+Coupe de hautparleur (dans l'ordre, woofer, mid-range, tweeter). Infographie par Svjo, CC BY-SA 3.0
+
+:::
 
 Sur les schémas ci-dessus, nous trouvons les éléments suivants :
 

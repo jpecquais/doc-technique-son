@@ -1,0 +1,10 @@
+
+Spatialization notation refers to the use of symbols and annotations on a musical score to indicate the intended spatial placement of sound sources in a performance. This can include information about the location of individual instruments or voices within an ensemble, as well as the overall spatial relationship between the performers and the audience.
+
+There are a few different methods that have been developed for representing spatial information on a musical score. One common method is the use of graphic symbols, such as circles or diamond shapes, to indicate the approximate location of each sound source. These symbols can be placed on the score according to a grid that represents the performance space, allowing the performer to easily understand the intended spatial distribution of the sounds.
+
+Another method is the use of text annotations, such as "stage left" or "center stage", to describe the location of each sound source. These annotations can be used in conjunction with other symbols or visual aids, such as arrows or lines, to help clarify the intended placement of each sound source.
+
+In recent years, there has been growing interest in the use of digital technologies for spatialization notation, including the use of virtual reality interfaces and software tools for composing and performing music in immersive virtual environments. These technologies offer the potential for more precise and detailed representations of sound source placement and motion, as well as new ways of controlling and manipulating spatial sound in real time.
+
+There is no widely-accepted standard for spatialization notation, and different composers, performers, and music institutions may use different methods and symbols depending on their needs and preferences. However, the development of clear and consistent conventions for representing spatial information in music scores has the potential to improve the communication between composers, performers, and audiences, and to enhance the overall experience of spatial music.

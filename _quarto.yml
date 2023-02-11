@@ -1,10 +1,13 @@
 project:
   type: book
 
+lang: fr
+
 book:
-  title: "Guide pratique de la prise de son et du mixage appliqués à la musique"
+  title: "Guide pratique des techniques du son"
+  subtitle: "Prise de son, mixage et spatialisation, appliqués à la musique"
   author: "Jean-Loup Pecquais"
-  date: "`r Sys.Date()`"
+  downloads: pdf
   chapters:
     - index.qmd
     - part: Généralités
@@ -17,10 +20,10 @@ book:
       chapters:
         - equipement-usages/le_chemin_du_signal.qmd
         - equipement-usages/les_microphones.qmd
-        - equipement-usages/les_modulations_analogiques.qmd
+        - equipement-usages/transport_signaux_analogiques.qmd
         - equipement-usages/les_preamplificateurs.qmd
         - equipement-usages/les_convertisseurs.qmd
-        - equipement-usages/les_modulations_numériques.qmd
+        - equipement-usages/transport_signaux_numériques.qmd
         - equipement-usages/introduction_informatique_musicale.qmd
         - equipement-usages/les_enceintes.qmd 
     - part: Méthodes et usages
@@ -31,6 +34,11 @@ book:
         - methode-pds/déphasage_et_remise_en_phase.qmd
 
 bibliography: references.bib
+
+execute:
+  echo: false
+  warning: false
+  error: false
 
 format:
   html:

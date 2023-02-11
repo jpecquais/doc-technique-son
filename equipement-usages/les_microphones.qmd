@@ -40,13 +40,15 @@ Nous allons maintenant aborder les types de microphones suivants :
 
 ### Les microphones électrostatiques/à condensateur
 
-```{r, echo=FALSE, fig.cap="Neumann U87, Schoeps CMC64, Line Audio CM4", fig.show="hold", fig.align="center", out.width="33%"}
+::: {layout-ncol=3}
 
-knitr::include_graphics("../_resources/bitmap/mic/u87.jpg")
-knitr::include_graphics("../_resources/bitmap/mic/cmc64.jpg")
-knitr::include_graphics("../_resources/bitmap/mic/cm4.jpg")
+![]("../_resources/bitmap/mic/u87.jpg")
+![]("../_resources/bitmap/mic/cmc64.jpg")
+![]("../_resources/bitmap/mic/cm4.jpg")
 
-```
+Neumann U87, Schoeps CMC64, Line Audio CM4
+
+:::
 
 Ce sont, historiquement, les premiers microphones à permettre une captation du spectre audible satisfaisante. Ils sont cependant très sensibles aux conditions de température et d’humidité et il fallut attendre les années trente pour que ce problème cesse. Ils nécessitent une alimentation externe, appelée alimentation fantôme, normalisée à +48V. Il existe deux familles de microphones électrostatiques, les **condensateurs à hautes fréquences** et **condensateur polarisés en courant continu**.
 
@@ -60,13 +62,15 @@ Exemples : Neumann U87/AKG C414/Shoeps CMC4/Série 4000 DPA/Série MKH Sennhei
 
 ### Les microphones à ruban
 
-```{r, echo=FALSE, fig.cap="Royer R121, Cascade Vinjet, Coles 4038", fig.show="hold", fig.align="center", out.width="33%"}
+::: {layout-ncol=3}
 
-knitr::include_graphics("../_resources/bitmap/mic/r121.jpg")
-knitr::include_graphics("../_resources/bitmap/mic/vinjet.jpg")
-knitr::include_graphics("../_resources/bitmap/mic/coles.jpg")
+![]("../_resources/bitmap/mic/r121.jpg")
+![]("../_resources/bitmap/mic/vinjet.jpg")
+![]("../_resources/bitmap/mic/coles.jpg")
 
-```
+Royer R121, Cascade Vinjet, Coles 4038
+
+:::
 
 Les microphones à ruban souvent préférés à leurs homologues statiques dans les débuts de la musique enregistrée. Leur fonctionnement repose sur l’utilisation d’une feuille métallique placée entre deux aimants. Lorsqu’une onde sonore rencontre cette feuille (le ruban), celle-ci vibre et perturbe le champ électromagnétique créé par les aimants et génère une tension analogue à la variation de pression.
 
@@ -76,13 +80,15 @@ Exemples : Royer R121/Cohles/Beyerdynamic M160
 
 ### Les microphones dynamiques
 
-```{r, echo=FALSE, fig.cap="Shure SM57, Electro-Voice RE20, Sennheiser MD441", fig.show="hold", fig.align="center", out.width="33%"}
+::: {layout-ncol=3}
 
-knitr::include_graphics("../_resources/bitmap/mic/sm57.jpg")
-knitr::include_graphics("../_resources/bitmap/mic/re20.jpg")
-knitr::include_graphics("../_resources/bitmap/mic/md441.jpg")
+![]("../_resources/bitmap/mic/sm57.jpg")
+![]("../_resources/bitmap/mic/re20.jpg")
+![]("../_resources/bitmap/mic/md441.jpg")
 
-```
+Shure SM57, Electro-Voice RE20, Sennheiser MD441
+
+:::
 
 Les microphones dynamiques sont conçus pour des conditions d’utilisation rudes, où les niveaux sonores sont élevés et où le risque de chute est important. Ils sont donc monnaie courante en sonorisation. Leur membrane est attachée à une bobine entourant un aimant. Lorsqu’une onde sonore la met en vibration, la bobine se déplace autour de l’aimant, et, par perturbation du champ électromagnétique, génère une tension de sortie analogue à la variation de pression.
 
@@ -116,6 +122,19 @@ La directivité d’un microphone permet de décrire sa capacité à réaliser u
 ```{r, echo=FALSE, fig.align="center", warning = FALSE, message = FALSE}
 
 library(plotly)
+
+
+show_fig <- function(f)
+  {if (knitr::is_latex_output())
+  {
+    output = xfun::with_ext(f, 'pdf')
+    rsvg::rsvg_pdf(xfun::with_ext(f,'svg'), file=output)
+  } else {
+    output = xfun::with_ext(f, 'svg')
+  }
+  knitr::include_graphics(output)
+}
+
 
 df <- read.csv("https://raw.githubusercontent.com/plotly/datasets/master/polar_dataset.csv")
 
@@ -228,25 +247,25 @@ On retiendra donc :
 
 $$ \theta(\alpha) = A + B \cos (\alpha) \> où \> A + B = 1$$
 
-```{r, echo = FALSE, fig.cap = "Directivités réelles du microphone (U 87)", out.width='33%', fig.align='center', fig.show="hold"}
-show_fig("../_resources/diagrams/Polar-pattern-U-87-Ai-omni.svg")
-show_fig("../_resources/diagrams/Polar-pattern-U-87-Ai-cardioid.svg")
-show_fig("../_resources/diagrams/Polar-pattern-U-87-Ai-figure8.svg")
-```
+<!-- ::: {layout-ncol=3}
+
+![]("../_resources/diagrams/Polar-pattern-U-87-Ai-omni.svg")
+![]("../_resources/diagrams/Polar-pattern-U-87-Ai-cardioid.svg")
+![]("../_resources/diagrams/Polar-pattern-U-87-Ai-figure8.svg")
+
+Directivités réelles du microphone (U 87)
+
+::: -->
 
 ### Directivités réelles & détimbrage
 
 Nous avons jusque là considéré que la directivité d’un microphone était un phénomène indépendant de la fréquence. Or, cela n’est pas vrai. En d’autres termes, la directivité d’un microphone n’est pas la même en fonction de la fréquence de l’onde sonore lui arrivant. Typiquement, un microphone tendra vers une directivité plus resserrée dans le haut du spectre, et vers une directivité plus large dans le bas du spectre.
 
-```{r, echo = FALSE, fig.cap = "Réponse en fréquence du microphone  Neumann U87 (omnidirectionnel)", out.width='66%', fig.align='center'}
-show_fig("../_resources/diagrams/Frequency-diagram-U-87-Ai-omni.svg")
-```
-```{r, echo = FALSE, fig.cap = "Réponse en fréquence du microphone Neumann U87 (cardioïde)", out.width='66%', fig.align='center'}
-show_fig("../_resources/diagrams/Frequency-diagram-U-87-Ai-cardioid.svg")
-```
-```{r, echo = FALSE, fig.cap = "Réponse en fréquence du microphone Neumann U87 (figure en huit)", out.width='66%', fig.align='center'}
-show_fig("../_resources/diagrams/Frequency-diagram-U-87-Ai-figure8.svg")
-```
+![Réponse en fréquence du microphone  Neumann U87 (omnidirectionnel)](../_resources/diagrams/Frequency-diagram-U-87-Ai-omni.svg)
+
+![Réponse en fréquence du microphone Neumann U87 (cardioïde)](../_resources/diagrams/Frequency-diagram-U-87-Ai-cardioid.svg)
+
+![Réponse en fréquence du microphone Neumann U87 (figure en huit)](../_resources/diagrams/Frequency-diagram-U-87-Ai-figure8.svg)
 
 Cela signifie donc que positionner un microphone hors axe face à un évènement sonore n’aura pas seulement un effet sur le niveau du signal en sortie du microphone, mais également sur le timbre. On appelle alors « **timbré** », un évènement sonore capté plein axe par un microphone, et **détimbré** un évènement sonore capté hors axe.
 

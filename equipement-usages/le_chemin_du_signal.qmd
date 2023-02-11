@@ -1,14 +1,10 @@
-# (PART) Équipement et usage {-}
-
 # Le chemin du signal
 
 La première mission d’un preneur de son est d’assurer l’arrivée à bon port des signaux dans l’enregistreur. En effet, toute notion de mise en scène sonore et d’esthétique devient très secondaire si le contenu n’a pas été enregistré.
 
 Le diagramme ci-dessous reprend les principaux étages rencontrés par un signal audio dans un contexte de production numérique. Il est essentiel d’être le plus familier possible avec ces différents composants.
 
-```{r, echo=FALSE, out.width="100%", fig.align="center", fig.cap = "Le chemin du signal. Elle peut-être agrandie en ouvrant l'image dans un nouvel onglet."}
-show_fig("../_resources/diagrams/cheminSignal.svg")
-```
+![Le chemin du signal. Elle peut-être agrandie en ouvrant l'image dans un nouvel onglet.](../_resources/diagrams/cheminSignal.svg){out.width="100%", fig.align="center"}
 
 Nous pourrions catégoriser à partir de ce schéma différents « milieux ». Tout d’abord, nous avons le **milieu acoustique**, où nous trouverons toutes sortes d’instruments de musique, les différents lieux dans lesquels ils pourront s’y trouver. C’est donc le domaine de l’onde sonore mécanique.
 

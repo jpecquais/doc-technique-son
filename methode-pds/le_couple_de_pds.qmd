@@ -120,9 +120,7 @@ $$R = M-S$$
 
 Cette opération peut être réalisée sur une console de mixage, telle que décrite ci-dessous.
 
-```{r chunk-label, echo = FALSE, fig.cap = 'Dématriçage MS', out.width="40%"}
-knitr::include_graphics("../_resources/171f157be4749ac8446dd9bdfff0625b.png")
-```
+![Dématriçage MS]("../_resources/171f157be4749ac8446dd9bdfff0625b.png")
 
 ### Le couple ORTF
 
