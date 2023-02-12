@@ -30,60 +30,6 @@ George Neumann est un des noms à connaître dans cette histoire des microphones
 
 Depuis, les principales améliorations ont concerné la robustesse d’une part, et la miniaturisation des dispositifs d’autre part, menant ainsi au développement des capsules MEMS.
 
-<!-- 
-
-The microphone, also known as a mic, is a device that converts sound waves into an electrical signal. It is a crucial component in many modern technologies, including telephones, radios, amplifiers, and recording equipment.
-
-The first microphones were developed in the late 19th century. The earliest design was known as a carbon microphone, which used a carbon granule-filled tube to convert sound waves into an electrical signal. This type of microphone was first demonstrated in 1876 by Emile Berliner, who used it in the first successful telephone transmission of speech.
-
-In the early 20th century, electro-dynamic microphones were developed, which used a diaphragm and a coil of wire to convert sound into an electrical signal. This design was more sensitive and accurate than the carbon microphone and became widely used in telephones, radios, and other communication devices.
-
-In the 1930s, ribbon microphones were introduced, which used a thin metal ribbon to convert sound into an electrical signal. These microphones were popular in the recording industry due to their smooth and natural sound reproduction.
-
-In the 1960s and 1970s, condenser microphones became popular, which used a capacitor to convert sound into an electrical signal. These microphones were more sensitive and accurate than other types of microphones and became the preferred choice for professional recording studios.
-
-Today, there are many different types of microphones available, each designed for specific purposes, such as recording music, speech, or sound effects. Microphones have become ubiquitous in modern society, used in a wide range of applications from personal computers to stage performances.
-
-Overall, the development of the microphone has been a crucial part of the history of modern communication and audio technology, allowing people to capture and transmit sound in ways that were previously impossible.
-
-
-
-An early patent, perhaps the first, for a moving-coil
-dynamic microphone is credited to German engineer and
-industrialist Ernst Werner von Siemens in 1877. In addition
-to founding what became the industrial giant Siemens, he
-is credited with a long list of breakthrough inventions that
-advanced electrical and communication technology.
-Moving-coil technology was put to practical use in the
-1920s when the Marconi-Sykes Company created the so-
-called Magnetophone for the British Broadcasting
-Corporation. In the United States, Bell Laboratory
-engineers A.L. Thuras and E.C. Wente used the
-technology in 1931 for the Western Electric Model 618A,
-which most historians agree is the first moving-coil
-microphone designed for the general public. The Model
-630A ‘8-Ball’ followed in 1935.
-
-
-There are two primary types of dynamic
-transducers – moving coil and moving conductor.
-Whereas the former is used in standard dynamic mics
-like the SM57 or SM7B, the latter is deployed with less
-common ribbon mics. Both have a permanent magnet
-and both are technically ‘dynamic’ microphones.
-
-
-
-The first electro-dynamic microphones were developed in the early 20th century and represented a major improvement over the earlier carbon microphones. Unlike carbon microphones, which used a carbon granule-filled tube to convert sound into an electrical signal, electro-dynamic microphones used a diaphragm and a coil of wire to convert sound into an electrical signal.
-
-The basic design of an electro-dynamic microphone consists of a diaphragm, which vibrates in response to sound waves, and a coil of wire, which is attached to the diaphragm and suspended within a magnetic field. As the diaphragm vibrates, it causes the coil to move, generating an electrical signal that corresponds to the original sound waves.
-
-The first electro-dynamic microphones were more sensitive and accurate than the earlier carbon microphones and were soon adopted for use in telephones, radios, and other communication devices. They also became popular in the recording industry, where their superior sound reproduction made them ideal for capturing music and speech.
-
-The design of electro-dynamic microphones has continued to evolve over the years, with improvements in materials, manufacturing techniques, and circuit design leading to the development of more advanced and sophisticated microphones. Despite these advances, the basic electro-dynamic design remains the foundation of many modern microphones, and electro-dynamic microphones continue to be widely used in a variety of applications.
-
- -->
-
 ## Les types et technologies de microphones
 
 Avant d’aborder en détail certaines constructions de microphones, il convient de faire attention à certains raccourcis associant des méthodes de fabrications à un niveau présumé de qualité. Par exemple, il est commun d’associer les microphones à électret à une construction « bas de gamme ». Or, c’est oublier que la série 4000 de chez DPA, considérée par beaucoup comme une référence indétrônable de la prise de son, ne contient que des microphones à électret. Les MEMS souffrent du même biais, ceux-ci se retrouvent pourtant de plus en plus souvent sur des microphones ambisoniques, comme le Zyla ou le SPC mic.

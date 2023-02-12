@@ -1,19 +1,22 @@
 # Les préamplificateurs
 
+Le rôle d’un préampli est de réaliser une amplification en tension du signal ainsi que de diminuer son impédance. Cette opération est indispensable pour permettre à notre signal de traverser le reste de la chaîne du traitement audio.
+
+Dans les débuts de l'enregistrement audio, les préamplificateurs de microphone étaient des appareils passifs rudimentaires utilisant généralement un couplage par transformateur pour assurer l'isolation et adapter l'impédance du microphone au reste du système audio.
+
+Au fur et à mesure que les techniques d'enregistrement progressaient, les préamplis sont devenus de plus en plus sophistiqués et ont commencé à intégrer des composants électroniques actifs (tube à vide, transistors, circuits intégrés). Ces préamplis actifs offrent une plus grande flexibilité et de meilleures performances.
+
+L'une des principales évolutions de la technologie des préamplis a été l'avènement de l'électronique à semi-conducteurs, remplaçant ainsi la technologie des tubes à vide. Ces préamplis à transistors sont plus petits, plus légers et plus fiables que leurs homologues à tubes, et ils offrent généralement un bruit plus faible et une gamme dynamique plus étendue.
+
+Il n’est pas rare que les préamplificateurs soient choisis pour leur « couleur » sur le signal. Nous commencerons par aborder ces outils d’un point de vue pratique pour enfin déboucher sur cette question.
+
+## Informations techniques des préamplificateurs
+
+Le gain (quantité d'amplification) : Les préamplificateurs pour microphones fournissent généralement un gain compris entre 20 et 60 dB, qui est nécessaire pour amplifier les signaux de faible niveau provenant d'un microphone pour atteindre un niveau utilisable. Le gain d'un préampli est généralement réglable, ce qui permet à l'utilisateur de définir le niveau optimal pour un microphone et une application donnés.
+
 <!-- 
 
-Microphone preamps have a long and interesting history, dating back to the early days of audio recording and broadcasting. A microphone preamp is an electronic device that amplifies the low-level signal from a microphone to a level that can be used by other audio equipment, such as recorders, mixers, and amplifiers.
 
-In the early days of audio recording, microphone preamps were simple, passive devices that simply provided a boost to the microphone signal. These early preamps typically used transformer coupling to provide isolation and to match the impedance of the microphone to the rest of the audio system.
-
-As audio recording technology advanced, microphone preamps became more sophisticated and began to incorporate active electronics, such as amplifiers and equalization circuits. These active preamps offered greater flexibility and improved performance, making them well suited for use in professional recording studios.
-
-One of the key developments in microphone preamp technology was the advent of solid-state electronics, which replaced the earlier vacuum tube technology. Solid-state preamps were smaller, lighter, and more reliable than their tube-based counterparts, and they also offered lower noise and greater dynamic range.
-
-In recent years, advances in digital signal processing have led to the development of digital microphone preamps, which offer even greater flexibility and performance. Digital preamps allow for precise control over gain, equalization, and other parameters, and can also be integrated with other digital audio equipment to form a fully digital audio chain.
-
-
-Gain structure: Microphone preamps typically provide gain in the range of 20 to 60 dB, which is necessary to boost the low-level signal from a microphone to a usable level. The gain structure of a preamp is typically adjustable, allowing the user to set the optimal level for a given microphone and application.
 
 Input impedance: The input impedance of a microphone preamp is a critical parameter, as it determines the load that the preamp places on the microphone. A mismatch in impedance can cause unwanted interactions between the microphone and preamp, leading to changes in frequency response and other distortions.
 
@@ -29,9 +32,6 @@ Power supply: Microphone preamps may be powered by an internal battery or by an 
 
  -->
 
-Le rôle d’un préampli est de réaliser une amplification en tension du signal ainsi que de diminuer son impédance. Cette opération est indispensable pour permettre à notre signal de traverser le reste de la chaîne du traitement audio.
-
-Il n’est pas rare que les préamplificateurs soient souvent choisis pour leur « couleur » sur le signal. Nous commencerons par aborder ces outils d’un point de vue pratique pour enfin déboucher sur cette question.
 
 ## Critères de choix d’un préamplificateur
 
@@ -42,6 +42,7 @@ Le second critère important dans le choix d’un préampli est sa réponse en f
 La réponse en transitoire est un autre élément important. Certains préamplis auront tendance à adoucir la sensation d’attaque des sources. Cet effet n’est pas souhaitable.
 
 Enfin le rapport signal sur bruit doit être le plus grand possible. Nous cherchons toujours à rajouter le moins de bruit possible sur le chemin de notre signal.
+
 
 ## Les technologies de préampli
 
