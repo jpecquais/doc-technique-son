@@ -5,7 +5,7 @@ lang: fr
 
 book:
   title: "Guide pratique des techniques du son"
-  subtitle: "Prise de son, mixage et spatialisation, appliqués à la musique"
+  subtitle: "Enregistrement, mixage et spatialisation, appliqués à la musique"
   author: "Jean-Loup Pecquais"
   downloads: pdf
   chapters:
@@ -16,17 +16,17 @@ book:
         - generalites/l_acoustique_des_salles.qmd
         - generalites/notions_electronique.qmd
         - generalites/production_musicale.qmd
-    - part: Equipements et usages
+    - part: Outils et équipements
       chapters:
-        - equipement-usages/le_chemin_du_signal.qmd
-        - equipement-usages/les_microphones.qmd
-        - equipement-usages/transport_signaux_analogiques.qmd
-        - equipement-usages/les_preamplificateurs.qmd
-        - equipement-usages/les_convertisseurs.qmd
-        - equipement-usages/transport_signaux_numériques.qmd
-        - equipement-usages/introduction_informatique_musicale.qmd
-        - equipement-usages/les_enceintes.qmd 
-    - part: Méthodes et usages
+        - outils_equipements/le_chemin_du_signal.qmd
+        - outils_equipements/les_microphones.qmd
+        - outils_equipements/transport_signaux_analogiques.qmd
+        - outils_equipements/les_preamplificateurs.qmd
+        - outils_equipements/les_convertisseurs.qmd
+        - outils_equipements/transport_signaux_numériques.qmd
+        - outils_equipements/introduction_informatique_musicale.qmd
+        - outils_equipements/les_enceintes.qmd 
+    - part: Méthodologie de prise de son
       chapters:
         - methode-pds/mono_et_multimicrophonie.qmd
         - methode-pds/le_couple_de_pds.qmd
@@ -43,5 +43,7 @@ execute:
 format:
   html:
     theme: cosmo
+    default-image-extension: gif
   pdf:
     documentclass: scrreprt
+    default-image-extension: png

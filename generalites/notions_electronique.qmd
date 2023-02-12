@@ -62,9 +62,10 @@ L’impédance traduit elle aussi l’opposition d’un circuit au passage d’u
 
 ### Les composants passifs
 
-::: {layout-ncol=2}
+::: {#fig-resistances layout="[-10,40,40,-10]" layout-valign="bottom"}
 
 ![](../_resources/diagrams/resistor.svg)
+
 ![](../_resources/diagrams/resistor_sym.svg)
 
 Représentation d'une résistance et de son symbole
@@ -73,9 +74,10 @@ Représentation d'une résistance et de son symbole
 
 Étudions maintenant les composants électroniques les plus communs. Nous avons en premier les **résistances**. Ce sont des dipôles purement résistifs. Leur valeur s’exprime en **ohm**. Une résistance s’oppose donc au passage du courant. Pour rappel, la tension a ses bornes est $U = R \times i$.
 
-::: {layout-ncol=2}
+::: {#fig-capa layout="[-10,40,40,-10]" layout-valign="bottom"}
 
 ![](../_resources/diagrams/capa.svg)
+
 ![](../_resources/diagrams/capa_sym.svg)
 
 Représentation d'un condensateur et de son symbole
@@ -92,7 +94,7 @@ $$ Z_c = \frac{1}{jC\omega} \> = 2 \pi \, f$$
 
 Si la fréquence $f$ tend vers l’infini, $Z_c$ tend vers zéro, si la fréquence tend vers zéro, $Z_c$ tend vers l’infini. On constate donc que l’impédance d’un condensateur varie en fonction de sa fréquence. On peut assimiler un condensateur à un interrupteur ouvert en basse fréquence et à un interrupteur fermé en haute fréquence.
 
-![Symbole d'une bobine](../_resources/diagrams/inductor_sym.svg){fig.align="center", out.width="25%"}
+![Symbole d'une bobine](../_resources/diagrams/inductor_sym.svg){fig-align="center" width="25%"}
 
 Terminons sur les bobines. Ces composants sont constitués d’un enroulement de câble en cuivre et possède une **inductance** notée **L** et s’exprimant en **henrys**. Étudions à nouveau la relation entre tension et intensité, aux bornes d’une bobine :
 
@@ -111,10 +113,12 @@ L’association de résistances, de condensateurs et de bobines donne des circui
 ### Tubes & semi-conducteurs
 
 
-:::{layout-ncol=3}
+:::{#fig-composants layout="[-11,26,26,26,-11]"}
 
 ![](../_resources/bitmap/elec/tube.jpg)
+
 ![](../_resources/bitmap/elec/transistor.jpg)
+
 ![](../_resources/bitmap/elec/ic.jpg)
 
 Tubes, transistor et circuits intégrés
@@ -135,7 +139,7 @@ Sur la fiche technique des appareils, on trouve des valeurs pour son impédance 
 
 Soit le schéma électronique ci-dessous. On appelle $U_{out}$ la tension de sortie de l’appareil A et $Z_{out}$ son impédance de sortie. De façon similaire, on appelle $U_{in}$ la tension d’entré de l’appareil B et $Z_{in}$ son impédance d’entré.
 
-![](../_resources/diagrams/impedance.svg){fig.align="center"}
+![](../_resources/diagrams/impedance.svg){#fig-impedance fig-align="center"}
 
 Dans ce circuit, $Z_{eq} = Z_{in} + Z_{out}$ et $U_{out} = Z_{eq} \times i$. Alors, $i = \frac{U_{out}}{Z_{eq}} = \frac{U_{out}}{Z_{in} + Z_{out}}$. Toujours grâce au circuit ci-dessus, on peut dire que $U_{in} = Z_{in} \times I$. En remplaçant dans l’expression précédente on trouve : $\frac{U_{in}}{Z_{in}} = \frac{U_{out}}{Z_{in} + Z_{out}}$
 

@@ -10,7 +10,7 @@ Afin d'étudier l'acoustique d'une salle, on procède à la mesure de sa répons
 
 La réponse impulsionnelle d'une salle est généralement décrite en deux temps : le temps des premières réflexions et le temps du champ diffus.
 
-![Schéma d'une réponse impulsionnelle de réverbération.](../_resources/drawings/reverb.svg){fig.align='center'}
+![Schéma d'une réponse impulsionnelle de réverbération.](../_resources/drawings/reverb.svg){#fig-impulse fig-align='center'}
 
 Les premières réflexions sont les premiers rebonds d’une onde sonore sur les parois d’une salle et sont caractéristiques de la signature acoustique du lieu. Ces rebonds reviennent à l’auditeur avec un certain temps. Ce retard se nomme souvent « pré-délai » dans les moteurs de réverbération artificiels. Ce prédélai est fonction de deux paramètres :
 
@@ -63,14 +63,16 @@ La plupart des pièces de vie sont des salles rectangulaires. Dans ce cas, les s
 
 Nous aborderons ici ce  phénomène sous l'angle de l'acoustique des salles, mais il est applicable dans d'autres situations, comme la vibration d'une corde par exemple.
 
-```{r, echo = FALSE, fig.align='center', fig.cap = 'Les points rouges représente les noeuds, les amplitudes maximales sont les ventres. Infographie par Lucas Vieira'}
-if (knitr:::is_latex_output()) {
-  knitr::asis_output('\\url{../_resources/gif/Standing_wave_2.gif}')
-} else {
+<!-- ```{r, echo = FALSE, fig.align='center', fig.cap = 'Les points rouges représente les noeuds, les amplitudes maximales sont les ventres. Infographie par Lucas Vieira'}
+if (knitr:::is_html_output()) {
   knitr::include_graphics(rep("../_resources/gif/Standing_wave_2.gif"))
+} else {
+  knitr::asis_output('\\url{../_resources/gif/Standing_wave_2.gif}')
 }
 
-```
+``` -->
+
+![Les points rouges représente les noeuds, les amplitudes maximales sont les ventres. Infographie par Lucas Vieira](../_resources/gif/Standing_wave_2){#fig-onde_stat fig-align="center"}
 
 Il est possible de calculer les fréquences d'un mode grâce aux formules vues au chapitre précédent :
 
@@ -89,7 +91,12 @@ Nous avons vu que la réponse acoustique, ou réverbération, d'une salle se dé
 
 Dans de petites pièces, les premières réflexions peuvent être entendues si proche du son direct que cela génère un type de filtrage bien particulier appelé **filtre en peigne**.
 
-```{python, echo=FALSE, fig.align="center", fig.caption="Filtre en peigne correspondant à un retard d'une milliseconde", warning=FALSE, message=FALSE}
+```{python}
+
+#| label: fig-peigne
+#| fig-cap: Filtre en peigne correspondant à un retard d'une milliseconde
+#| fig-align: center
+
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -107,13 +114,11 @@ h[L] = a
 H_FFT = 20*np.log10(np.fft.fft(h, fs))
 
 plt.figure()
-var = plt.xlim(20,20000)
-var = plt.ylim(-94,24)
-var = 0
+plt.xlim(20,20000)
+plt.ylim(-94,24)
 plt.xscale("log")
 plt.xlabel("Frequences (Hz)")
 plt.ylabel("Amplitude (dB)")
-plt.title("Filtre en peigne correspondant à un retard d'une milliseconde")
 plt.plot(H_FFT)
 ```
 
@@ -125,7 +130,7 @@ Où $fc$ correspond à la fréquence d'annulation la plus grave du filtre en pei
 
 Ainsi, on peut calculer les filtres en peignes présents au point d'écoute d'une régie de mixage ou de prise de son grâce à la mesure du chemin des premières réflexions.
 
-![Ensemble des premières reflexions entendues par une oreille pour une enceinte (hors plafond et plancher/bureau).](../_resources/drawings/roomPr.svg){fig.align='center'}
+![Ensemble des premières reflexions entendues par une oreille pour une enceinte (hors plafond et plancher/bureau).](../_resources/drawings/roomPr.svg){#fig-pr fig-align='center'}
 
 > La réflexion du son sur une paroi est tout à fait comparable à de l'optique géométrique. Une onde sonore arrivant avec un angle d'incidence $\alpha$ sur une surface sera réfléchie avec le même angle. Ainsi, il est souvent conseillé d'utiliser un miroir lorsque l'on positionne des traitements acoustiques. Lorsque la personne assise au point d'écoute voit une enceinte dans un miroir placé sur un mur, on sait alors qu'il faudra placer le panneau à la place du miroir.
 
@@ -136,7 +141,11 @@ On se rend donc compte que l'influence des filtres en peigne générés par les 
 
 Afin de réduire au maximum les effets des filtres en peignes, il est recommandé de placer des traitements aux points de réflexion critique par rapport à la position d'écoute (voir schéma ci-dessus).
 
-```{python, echo=FALSE, fig.align="center", fig.caption="Filtre en peigne correspondant à un retard d'une milliseconde"}
+```{python}
+#| label: fig-peigne_att
+#| fig-cap: Même filtre en peigne, avec une atténuation de 20 dB sur la reflexion
+#| fig-align: center
+
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -154,13 +163,11 @@ h[L] = a
 H_FFT = 20*np.log10(np.fft.fft(h, fs))
 
 plt.figure()
-var = plt.xlim(20,20000)
-var = plt.ylim(-144,24)
-var = 0
+plt.xlim(20,20000)
+plt.ylim(-144,24)
 plt.xscale("log")
 plt.xlabel("Frequences (Hz)")
 plt.ylabel("Amplitude (dB)")
-plt.title("Même filtre en peigne, avec une atténuation de 20 dB sur la reflexion")
 plt.plot(H_FFT)
 ```
 

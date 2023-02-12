@@ -12,7 +12,11 @@ On parlera d'**évènement sonore** pour parler généralement de phénomènes p
 
 Les sons composés d'une seule fréquence se nomment **sons purs**. Cependant, de tels signaux n'existent pas dans la nature, et sont souvent utilisés afin de réaliser des mesures ou des tests psychoacoustiques. 
 
-```{python, echo=FALSE, fig.align="center", fig.caption="Onde sinusoïdale et visualisation de son spectre"}
+```{python}
+#| label: fig-sine
+#| fig-cap: "Onde sinusoïdale et visualisation de son spectre"
+#| fig-align: "center"
+
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -26,22 +30,22 @@ h = np.sin(2*np.pi*f0*t)
 # Transfer function H via FFT - same # of bins
 H_FFT = 20*np.log(2*np.fft.fft(h, fs)/fs)
 
-plt.figure()
 fig, axs = plt.subplots(nrows=2, ncols=1)
-#axs[0].title("Onde sinusoïdale et visualisation de son spectre")
-axs[0].plot(t, h, label = str(f0) + " Hz")
-var = axs[0].set_xlim(0,1/f0)
-#axs[0].set_xlabel("Temps (s)")
+#plt.figure()
+axs[0].set_xlim(0,1/f0)
 axs[0].set_ylabel("Amplitude")
 axs[0].legend()
 
-axs[1].plot(H_FFT)
-var = axs[1].set_xlim(20,20000)
+#fig[1].figure()
+axs[1].set_xlim(20,20000)
 axs[1].set_xscale("log")
-var = axs[1].set_ylim(-96,24)
-var = 0
+axs[1].set_ylim(-96,24)
 axs[1].set_xlabel("Frequences (Hz)")
 axs[1].set_ylabel("Amplitude (dB)")
+
+axs[0].plot(t, h, label = str(f0) + " Hz")
+axs[1].plot(H_FFT)
+
 ```
 
 Dans notre environnement, les sons sont donc composés de plusieurs fréquences. La fréquence la plus grave d'un son est sa **fréquence fondamentale**. Les autres sont alors appelées **partiels**. Si ces partielles ont pour fréquence un multiple de la fréquence fondamentale, alors on les nomme **harmoniques**.
@@ -49,8 +53,9 @@ Dans notre environnement, les sons sont donc composés de plusieurs fréquences.
 > Plus généralement, on admettra que la composition fréquentielle, ou spectrale, de tout son peut être décomposée par une somme de sinusoïde. L'outil permettant de passer de la représentation temporelle d'un signal à sa représentation fréquentiel s'appelle la **transformée de Fourrier.** 
 
 ```{python}
-#| fig.align: "center"
-#| fig.cap: "Signal carré et visualisation de son spectre"
+#| label: fig-square
+#| fig-cap: "Signal carré et visualisation de son spectre"
+#| fig-align: "center"
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -66,28 +71,26 @@ square = np.array([1 if np.sin(2*np.pi*f0*x) >= 0 else -1 for x in t])
 # Transfer function H via FFT - same # of bins
 H_FFT = 20*np.log(2*np.fft.fft(square, fs)/fs)
 
-plt.figure()
 fig, axs = plt.subplots(nrows=2, ncols=1)
-axs[0].plot(t, square, label = str(f0) + " Hz")
 var = axs[0].set_xlim(0,1/f0)
-#axs[0].set_xlabel("Temps (s))")
 axs[0].set_ylabel("Amplitude")
 axs[0].legend()
 
-axs[1].plot(H_FFT)
 var = axs[1].set_xlim(20,20000)
 axs[1].set_xscale("log")
-var = axs[1].set_ylim(-96,24)
-var = 0
+axs[1].set_ylim(-96,24)
 axs[1].set_xlabel("Frequences (Hz)")
 axs[1].set_ylabel("Amplitude (dB)")
+
+axs[0].plot(t, square, label = str(f0) + " Hz")
+axs[1].plot(H_FFT)
 ```
 
 La fréquence fondamentale donne la **hauteur** du son (sa note en musique par exemple). Les partiels enrichissent cette fréquence fondamentale et créés le **timbre** d'un son. C'est en partie grâce au timbre que l'on peut reconnaître différents instruments de musiques jouant la même note.
 
 Un son se caractérise également par l'évolution de son amplitude au cours du temps. On parle alors de son **enveloppe**. Un modèle courant d'enveloppe est l'ADSR : *Attack*, *Decay*, *Sustain*, *Release*, soit *Attaque*, *Décroissance*, *Maintient* et *Relâchement*.
 
-![Exemple d'enveloppe ADSR](../_resources/drawings/adsr.svg){fig.align="center"}
+![Exemple d'enveloppe ADSR](../_resources/drawings/adsr.svg){#fig-adsr fig.align="center"}
 
 Lorsque son temps et très bref, l'ensemble *attaque* et *décroissance* forme les **transitoires**. Cette partie du signal est responsable de la sensation percussive du son.
 
@@ -113,7 +116,7 @@ Si nous étudions à nouveau les bornes minimale et maximale de notre audition, 
 
 Nous pouvons également calculer le temps de propagation du son. En pratique, nous serons souvent intéressés par le temps de propagation séparant deux points dans l'espace (par exemple, le temps séparant deux microphones par rapport à un instrument).
 
-![Distance entre deux microphones.](../_resources/drawings/mic_dist.svg){fig.align="center"}
+![Distance entre deux microphones.](../_resources/drawings/mic_dist.svg){#fig-dist_mic fig-align="center"}
 
 $$ t = \frac {d_2-d_1}{c}$$
 
@@ -133,7 +136,7 @@ Cette difficulté liée à l'absence de vocabulaire commun quant à la qualifica
 
 Nous pouvons tout de même nous essayer à cet exercice pour nous permettre d'avoir un vocabulaire commun au fil de ce cours. Vous aurez sans doute compris qu'il n'y aura, dans les termes employés, aucun critère absolu.
 
-![Exemple de spectre](../_resources/drawings/spectre.svg){fig.align="center"}
+![Proposition de découpage du spectre](../_resources/drawings/spectre.svg){#fig-spectre fig.align="center"}
 
 
 **Proposition d'association entre bandes de fréquences et sensation**.
@@ -166,7 +169,7 @@ $$L_p = 20\,\log_{10}\Big(\frac{p_{eff}}{p_{ref}}\Big) \qquad p_{ref} = 20\mu Pa
 
 La question se complexifie lorsque l'on rajoute la dimension fréquentielle à la question de la perception du niveau sonore.  En effet, nous percevons des niveaux sonores différents pour différentes fréquences pourtant émises au même niveau de pression acoustique. Pour inclure cette dépendance fréquentielle, nous avons mis en place une unité de mesure : la **sonie** ou **bruyance** (**loudness** en anglais). Il est donc possible ensuite de définir des courbes d'**isosonie**, c'est-à-dire des courbes indiquant un niveau sonore de perception égale en fonction de la fréquence et du niveau de pression acoustique.
 
-![Courbes d'isosonie, aussi dites de Fletcher-Munson](../_resources/diagrams/Courbes_isosonie.png){fig.align="center"}
+![Courbes d'isosonie, aussi dites de Fletcher-Munson](../_resources/diagrams/Courbes_isosonie.png){#fig-isosonie fig.align="center"}
 
 
 Que conclure de cet abaque ?
@@ -187,7 +190,7 @@ On pourrait d'ailleurs, grâce aux formules de ce début de chapitre, calculer l
 
 $$\Delta t_{max} = \frac d c = \frac {0,15}{340} = 0.4 \> ms$$
 
-![Illustration de l'ITD](../_resources/drawings/delta_t.svg){fig.align="center"}
+![Illustration de l'ITD](../_resources/drawings/delta_t.svg){#fig-delta_t fig.align="center"}
 
 
 Si nos oreilles sont espacées de quelques centimètres, notre tête les séparant représente un obstacle acoustique non négligeable. De plus, les pavillons des oreilles imposent également une certaine directivité à notre écoute. En première approximation, on pourra donc considérer que l'ensemble formé par la tête et les pavillons implique une atténuation linéaire des ondes sonores, elle-même fonction de l'angle d'incidence. On appelle cette différence de niveau **différence d'intensité interaural**, ou **ILD** (interaural level difference) et se note $\Delta i$. On considère que si la différence de niveau de pression acoustique entre les deux oreilles est supérieure à 20 dB, on entendra l'évènement sonore complètement latéralisé.
