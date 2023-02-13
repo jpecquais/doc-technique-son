@@ -12,6 +12,7 @@ book:
     - index.qmd
     - part: Généralités
       chapters:
+        - generalites/oreille.qmd
         - generalites/qualifier_le_son.qmd
         - generalites/l_acoustique_des_salles.qmd
         - generalites/notions_electronique.qmd

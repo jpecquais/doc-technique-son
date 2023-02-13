@@ -1,0 +1,62 @@
+# Oreille et audition
+
+L'oreille est l'organe qui, chez l'Homme, permet d'entendre les sons environnants. Comme nous le détaillerons dans le chapitre suivant, le son est une vibration de l'air. Afin que celle-ci puisse être audible, l'oreille doit d'abord transformer cette vibration de l'air (caractérisée par une variation de pression) en signal électrique finalement transmis à notre cerveau.
+
+On distingue ainsi entendre, perception passive du son, et écouter, qui suppose une participation active de l'auditeur.
+
+Le sens lié à cette faculté de perception du son se nomme **l'ouïe**.
+
+:::{.callout-note}
+
+Nous ne discuterons pas ici du rôle de l'oreille dans l'équilibre.
+
+:::
+
+![Schéma de l'oreille](../_resources/bitmap/anatomie/anatomie-oreille.jpeg){#fig-oreille width="80%" fig-align="center"}
+
+Cet organe se décompose classiquement en trois parties, l'oreille externe, l'oreille moyenne et l'oreille interne.
+
+## L'oreille externe
+
+Comme son nom l'indique, l'oreille externe est la partie visible de notre organe de l'audition. Elle est caractérisée par ce pavillon à la forme si particulière. Le rôle de ce **pavillon auriculaire** permet de "collecter" le son. Sa forme applique une emprunte fréquentielle sur le son, donnant une information principalement d'ordre spatial. Ce pavillon joue donc un rôle important dans notre capacité à localiser les sons, avec une précision maximale lorsque l'évènement sonore se trouve devant nous.
+
+:::{.callout-note}
+
+Comme nous le verrons plus tard, la forme de notre tête et même de notre torse a également un rôle important dans notre capacité à localiser des évènements sonores dans l'espace.
+
+:::
+
+L'oreille externe comporte aussi le canal auditif, avec à son terme le tympan. Ce dernier est une simple membrane, vibrant de façon homologue à l'onde sonore lui provenant. L'ensemble de ce système de "captation" possède un rendement maximal sur les fréquences autour de 3 kHz (fréquences aiguës).
+
+## L'oreille moyenne
+
+Derrière le tympan se trouve l'oreille moyenne, et plus particulièrement une collection de trois os, nommés "marteau", "enclume" et "étrier". Le **marteau** est directement relié au tympan et transmet les vibrations du tympan à l'"**enclume**" puis à l'"**étrier**". Ce dernier permet la transmission du son à l'oreille interne par la fenêtre ovale.
+
+Nous y trouvons aussi la trompe d'eustache, reliée à la gorge, réalisant ainsi un équilibrage de la pression entre celle de l'oreille interne et celle nous environnant.
+
+Le rôle principal de cette oreille moyenne est de réaliser une adaptation d'impédance acoustique entre l'air et le milieu liquide, dans lequel baigne notre oreille interne. En d'autres termes, elle permet un transfert efficace de l'énergie sonore vers l'oreille interne. Sans cette étape, notre sens de l'audition serait grandement amoindri.
+
+Évoquons également le **muscle stapédien**. Il permet, lorsqu'il est contracté, de limiter l'amplitude de mouvement des trois os évoqués précédemment. Il agit alors comme une protection lorsque nous sommes confrontés à de forts niveaux sonores. Si cette rigidification n'avait pas lieu, notre tympan serait beaucoup plus facilement arraché par des stimulus sonores importants.
+
+Cependant, ce muscle stapédien échappe à notre contrôle cognitif et est donc mis en action par réflexe. Son temps de mise en action est d'au moins 40 millisecondes (ms) après l'émission d'un son supérieur à 90-100 décibel (dB). Pire, la protection maximale n'est atteinte que 150 ms plus tard. Cela signifie que, si nous sommes exposés à des déflagrations sonores très importantes (armes à feu, explosions, etc.), notre **réflexe stapédien** n'aura pas le temps de s'activer, et notre système auditif sera sévèrement endommagé.
+
+## L'oreille interne
+
+Nous avons précédemment évoqué l'attachement de l'étrier à la fenêtre ovale. Cette dernière fait elle-même partie de la cochlée, où commence l'oreille interne. Cette cochlée prend une forme de coquille d'escargot et renferme la membrane basilaire et l'organe de Corti, récepteur de l'audition. Son ensemble est immergé dans différentes lymphes (milieu liquide).
+
+La membrane basilaire court le long de la cochlée et près de 30 000 récepteurs ressemblant à de petits cheveux la parcourent. Cette membrane vibre lorsque la lymphe change de pression. Sur l'ensemble de sa longueur est répartie notre sensibilité aux différentes fréquences. La partie proche de l'oreille moyenne est plus sensible aux aiguës, alors que la zone en bout de son enroulement est plus sensible aux graves. On a donc une correspondance entre fréquence et emplacement sur la membrane basilaire. Lorsque les récepteurs vibrent suffisamment fortement, un signal électrique est émis par l'organe de Cortie dans le système nerveux.
+
+La diminution de sensibilité, voire la perte de certaines fréquences audible dans l'audition, est associée à la mort de ces récepteurs peuplant la membrane basilaire. Ce phénomène est irréversible et peut aboutir à l'apparition d'acouphènes.
+
+:::{.callout-warning}
+L'oreille est un organe fragile, dont l'endommagement est irréversible. Il convient donc d'en prendre soin en limitant :
+
++ son exposition à de forts niveaux sonores
++ son exposition au bruit
+
+Dans les cas où l'exposition est contrainte (voire souhaité en concert par exemple), il est vivement conseillé de porter des protections auditives (bouchons d'oreilles).
+
+Il est également bon de rappeler que, dans la législation française, les niveaux sonores de diffusions dans des lieux de spectacles sont normés et ne doivent pas dépasser certains seuils. L'ingénieur du son affecté au mixage est donc **responsable** du respect de ces normes.
+
+En studio, il n'existe pas de norme de niveau de diffusions dans les casques ou les écoutes, mais l'ingénieur du son reste tout de même responsable de ce que les musiciens entendent, et donc de toute perte d'audition de l'un d’eux lors d'une session de travail.
+:::

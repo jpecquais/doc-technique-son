@@ -14,7 +14,7 @@ Les câbles véhiculant un seul signal sont généralement constitués de quatre
 + Parfois, d’une feuille de cuivre, enrobant la tresse, permettant de réaliser une cage de faraday et de protéger le cœur des ondes électromagnétiques.
 + Enfin, d’une dernière gaine isolante, permettant de protéger l’ensemble du câble.
 
-![](../_resources/drawings/cable.svg){#fig-cable width="60%"}
+![Coupe d'un câble](../_resources/drawings/cable.svg){#fig-cable fig-align="center" width="60%"}
 
 Ceux permettant de transporter plus de signaux rajouteront des cœurs multibrins entourés de leur gaine isolante. La plupart du temps, les câbles véhiculent un ou deux signaux à la fois, mais certains permettent d’en acheminer beaucoup plus (multipaire, Sub-D). On appelle un câble en fonction de ses connecteurs (ou fiches).
 

@@ -12,25 +12,54 @@ Il n’est pas rare que les préamplificateurs soient choisis pour leur « coul
 
 ## Informations techniques des préamplificateurs
 
-Le gain (quantité d'amplification) : Les préamplificateurs pour microphones fournissent généralement un gain compris entre 20 et 60 dB, qui est nécessaire pour amplifier les signaux de faible niveau provenant d'un microphone pour atteindre un niveau utilisable. Le gain d'un préampli est généralement réglable, ce qui permet à l'utilisateur de définir le niveau optimal pour un microphone et une application donnés.
+Le **gain** (quantité d'amplification) : Les préamplificateurs pour microphones fournissent généralement un gain compris entre 20 et 60 dB, qui est nécessaire pour amplifier les signaux de faible niveau provenant d'un microphone pour atteindre un niveau utilisable. Le gain d'un préampli est généralement réglable, ce qui permet à l'utilisateur de définir le niveau optimal pour un microphone et une application donnés.
 
-<!-- 
+L'**impédance** d'entrée d'un préamplificateur de microphone est un paramètre critique, car elle détermine la charge imposée par le préamplificateur au microphone. Une mauvaise adaptation d'impédance peut provoquer des interactions indésirables entre le microphone et le préampli, entraînant, entre autre, des modifications de la réponse en fréquence.
 
+La **réponse en fréquence** d'un préamplificateur est une considération importante, car elle détermine la manière dont le préamplificateur va affecter le son du microphone. Une réponse en fréquence plate est généralement souhaitable.
 
+Le **plancher de bruit** d'un préamplificateur est une mesure du bruit résiduel ajouté au signal par le préamplificateur lui-même. Un plancher de bruit faible est nécessaire pour maintenir un bon rapport signal/bruit dans le système audio. Cette donnée est évidemment d'autant plus critique que le niveau du signal d'entré est faible. Par extension, on désigne la plage dynamique d'un préamplificateur de microphone comme la gamme comprise entre le niveau maximal du signal que le préamplificateur peut accepter et le plancher de bruit.
 
-Input impedance: The input impedance of a microphone preamp is a critical parameter, as it determines the load that the preamp places on the microphone. A mismatch in impedance can cause unwanted interactions between the microphone and preamp, leading to changes in frequency response and other distortions.
+La distorsion est une mesure des modifications indésirables du signal audio qui sont introduites par le préampli. De faibles niveaux de distorsion sont souhaitables, car ils garantissent que le son du microphone est capturé et amplifié avec précision. On évoquera alors la **distortion harmonique**, qui, comme son nom l'indique, augmente le signal d'entré d'harmoniques supplémentaires. On rencontre aussi **la distortion d'intermodulation**. Admettons que nous envoyons en entrée d'un équipement audio deux sons purs de fréquences F1 et F2. La distortion d'intermodulation engendre deux nouvelles fréquences F1+F2 et F1-F2. On cherche donc a maintenir la contribution de ces deux résurgences le plus bas possible.
 
-Frequency response: The frequency response of a microphone preamp is an important consideration, as it determines the way in which the preamp will affect the sound of the microphone. A flat frequency response is generally desirable, but some preamps may also incorporate equalization circuits to adjust the response for specific applications.
+Ci-dessous, en guise d'exemple, on trouve le tableau des spécifications du préampli Rupert Neve Design 511 :
 
-Noise floor: The noise floor of a microphone preamp is a measure of the residual noise that is added to the signal by the preamp itself. A low noise floor is important for maintaining the signal-to-noise ratio of the audio system, particularly in applications where the signal is very low.
+Measured at Main Output, un-weighted, 22 Hz - 22 kHz, source impedance 150 Ohm balanced. Noise performance can vary depending on the 500 series and / or interference from stray magnetic fields.
+**NOISE**
+Unity Gain: Better than -103 dBV
+Gain @ +66 dB: Better than -60 dBV
+Equivalent Input Noise: -125 dB 
 
-Dynamic range: The dynamic range of a microphone preamp refers to the range between the maximum signal level that the preamp can handle and the minimum level that can be resolved without distortion. A high dynamic range is important for capturing a wide range of sounds and for maintaining the integrity of the audio signal.
+**FREQUENCY RESPONSE**
+Main output, no load.
++/- 0.1 dBu from 10 Hz to 31.5 kHz
+-2.6 dB @ 120 kHz
 
-Distortion: Distortion is a measure of the unwanted changes to the audio signal that are introduced by the preamp. Low levels of distortion are desirable, as they ensure that the sound of the microphone is accurately captured and amplified.
-Power supply: Microphone preamps may be powered by an internal battery or by an external power supply. The type of power supply and the voltage it provides can impact the performance of the preamp, so it is important to choose a preamp that is compatible with the other components in the audio system.
+**MAXIMUM OUTPUT LEVEL**
++23 dBu
 
+**TOTAL HARMONIC DISTORTION AND NOISE, NO SILK**
+@ 1 kHz, +20 dBu output level, no load: Better than 0.0025%
+@ 20 Hz, +20 dBu output level, no load: 0.025% Typical (2nd and 3rd harmonic)
 
- -->
+**TOTAL HARMONIC DISTORTION AND NOISE WITH SILK ENGAGED** 
+@ 100 Hz, +20 dBu input level, no load.
+TEXTURE @ min: 0.015%, mostly 3rd harmonic typical
+TEXTURE @ max: 2%, mostly 2rd harmonic typical
+
+**GAIN**
+Unity up to +66 dB in 6 dB steps.
+Trim continuously adjustable from -6 dB to +6 dB.
+
+**PHANTOM POWER**
+Supplied by the 500 series rack power supply. Switch selectable on faceplate.
+
+**HIGH PASS FILTER**
+Continuously variable swept frequency from 20 Hz to 250 Hz.
+Slope: 12 dB/Octave
+
+**POWER REQUIREMENTS**
+@ +/-16VDC, 100mA
 
 
 ## Critères de choix d’un préamplificateur
@@ -49,54 +78,6 @@ Enfin le rapport signal sur bruit doit être le plus grand possible. Nous cherch
 Nous avons vu dans le chapitre trois qu’il existe trois familles de composants électroniques permettant d’amplifier le signal : les tubes, les transistors et les circuits intégrés. On retrouve donc des topologies de circuit de préamplificateurs utilisant chacun de ces composants.
 
 Chacune de ces topologies offre de très légère variation de son lorsque les préamplis sont poussés dans leur retranchement (seuil de saturation). Comme pour les microphones, il est délicat de parler de son « à tube » ou « à transistor ». De plus, l’influence sur le son d’un préamplificateur apparaît en pratique comme très marginale par rapport au positionnement du microphone.
-
-<!-- 
-
-Early microphone preamps were often based on vacuum tube technology, which was the dominant technology for amplification in the first half of the 20th century. These tube preamps were used in a variety of applications, including radio broadcasting, recording studios, and public address systems.
-
-Tube preamps typically consisted of a vacuum tube or tubes, a power supply, and a circuit that provided amplification, often through the use of transformers. The vacuum tubes were responsible for the amplification of the signal, while the transformers provided impedance matching and isolation between the different stages of the circuit.
-
-One of the advantages of tube preamps was that they were capable of providing substantial amounts of gain, which was necessary for boosting the low-level signals from microphones to a usable level. Additionally, tube preamps had a relatively high input impedance, which was well suited for use with dynamic microphones, which were the most common type of microphone at the time.
-
-Another advantage of tube preamps was that they had a distinctive sound, which was often described as warm, rich, and musical. This sound was due to the nonlinear characteristics of the vacuum tubes, which resulted in harmonic distortion that was pleasing to the ear. This sound became an important part of the sound of recorded music in the first half of the 20th century, and it is still prized by some engineers and musicians today.
-
-Despite their many advantages, tube preamps also had several disadvantages. One of the main drawbacks was their size and weight, which made them less convenient to use than modern solid-state preamps. Additionally, tube preamps were relatively delicate and required frequent maintenance, as the vacuum tubes had a limited lifespan and were prone to failure.
-
-Today, tube preamps are still used by some engineers and musicians who appreciate the distinctive sound that they produce. However, they have largely been replaced by solid-state preamps, which are smaller, lighter, and more reliable, and offer comparable performance and sound quality. Nevertheless, the legacy of tube preamps lives on, and they remain an important part of the history of microphone preamps and audio technology.
-
-
-
-
-Early transistor preamps emerged as a replacement for tube preamps in the mid-to-late 20th century, as the technology for transistor manufacturing and design improved. Transistors offered several advantages over vacuum tubes, including smaller size, lighter weight, higher reliability, and lower power consumption.
-
-The first transistor preamps used bipolar junction transistors (BJTs), which were commonly used in a variety of electronic applications at the time. These preamps typically consisted of a few amplifying stages, each consisting of a transistor or two, a power supply, and passive components such as resistors and capacitors. The input stage was typically designed to provide a high input impedance, which was well suited for use with dynamic microphones.
-
-One of the key advantages of early transistor preamps was their lower noise floor compared to tube preamps, as transistors were capable of providing amplification with much less residual noise. This made them well suited for use in applications where the signal from the microphone was very low, such as in radio and television broadcasting.
-
-Another advantage of early transistor preamps was their lower cost and greater reliability compared to tube preamps. Transistors were mass-produced, and they had a much longer lifespan than vacuum tubes, so they required less frequent maintenance and replacement.
-
-Despite these advantages, early transistor preamps did have some disadvantages compared to tube preamps. One of the main drawbacks was that they often lacked the musical character and warmth of tube preamps, which was due in part to the linearity of the transistors and the absence of harmonic distortion. This led some engineers and musicians to prefer the sound of tube preamps, and it took some time for transistor preamps to gain widespread acceptance.
-
-Over time, improvements in transistor technology and design led to the development of newer types of transistors, such as field-effect transistors (FETs), which offered improved sound quality and better linearity. These improvements, along with the continued development of preamp circuits and components, made transistor preamps increasingly popular for use in a variety of audio applications.
-
-Today, transistor preamps are widely used in a variety of audio systems, from professional recording studios to consumer-grade audio equipment. They have proven to be reliable, versatile, and capable of providing high-quality sound, making them a staple of modern audio technology.
-
-
-
-
-Integrated circuit (IC) based preamps emerged in the latter half of the 20th century as a further evolution of the transistor preamp. ICs are small, compact devices that integrate multiple transistors, resistors, and other components into a single package. By using ICs, preamp circuits could be made even smaller, more reliable, and less expensive than those based on individual transistors.
-
-The first IC-based preamps used operational amplifiers (op amps), which are specialized ICs designed for amplification. Op amps have a high gain and a high input impedance, making them well suited for use in preamp circuits. In a typical IC-based preamp circuit, an op amp is used in an inverting or non-inverting configuration, and passive components such as resistors and capacitors are used to tailor the frequency response, gain, and other aspects of the circuit.
-
-One of the key advantages of IC-based preamps is their compact size and low cost, as they can be made in large quantities using automated manufacturing processes. This makes them well suited for use in consumer-grade audio equipment, where cost and space are often major considerations.
-
-Another advantage of IC-based preamps is their high reliability, as they are typically less susceptible to failure than individual components. This makes them ideal for use in portable and battery-powered devices, where the risk of failure must be minimized.
-
-Despite these advantages, IC-based preamps can also have some disadvantages compared to other types of preamps. One of the main drawbacks is that they can sometimes have a less desirable sound quality compared to tube or transistor preamps, as the op amps used in the circuits can introduce noise, distortion, and other artifacts into the signal. However, advances in IC technology and circuit design have greatly reduced these issues, and modern IC-based preamps can provide high-quality sound that is comparable to other types of preamps.
-
-Today, IC-based preamps are widely used in a variety of audio applications, from professional recording studios to consumer-grade audio equipment. They have proven to be reliable, versatile, and capable of providing high-quality sound, making them an important part of modern audio technology.
-
--->
 
 ## Les réglages d’un préampli
 
