@@ -59,7 +59,11 @@ Afin de manipuler ces mécanismes, le preneur de son peut jouer sur les paramèt
 
 Modifier chacun de ses paramètres influe sur l’**angle de prise de son**. Plus l’ange de prise de son est faible, plus l’impression de stéréophonie sera grande. Plus l’angle de prise de son est grand, plus l’impression de stéréophonie sera faible, jusqu’à tendre vers la monophonie.
 
-> Attention de ne pas confondre l’angle de prise de son avec l’angle entre les capsules.
+::: {.callout-caution}
+
+Attention de ne pas confondre l’angle de prise de son avec l’angle entre les capsules.
+
+:::
 
 ### Comment choisir un angle de prise de son.
 
@@ -69,9 +73,9 @@ Ensuite, lors de la réalisation d’un couple de prise de son, il est commun d�
 
 ### Comment réaliser un angle de prise de son.
 
-Plusieurs outils existent pour aider le preneur de son à configurer son angle de prise de son correctement.
+Plusieurs outils existent pour aider le preneur de son à choisir son angle de prise de son correctement.
 
-Il est important de commencer par évoquer les abaques de Michael Williams, ayant cherché à étudier l’angle de prise de son et ses qualités en fonction des paramètres vues précédemment. Les résultats de ses travaux se trouvent sur le site [mmad.info](https://www.mmad.info/MAD/2%20Ch/2ch.htm).
+Il est important de commencer par les abaques de Michael Williams, ayant cherché à étudier l’angle de prise de son et ses qualités en fonction des paramètres vues précédemment. Les résultats de ses travaux se trouvent sur le site [mmad.info](https://www.mmad.info/MAD/2%20Ch/2ch.htm).
 
 On trouve également beaucoup d’application mobile, comme celle du constructeur du microphone Neumann, s’appuyant sur les travaux de Michael Williams pour aider leurs utilisateurs à correctement positionner leurs microphones. Évidemment, et heureusement, rien n’est spécifique à un fabricant de microphones en particulier, l’application d’un constructeur A peut servir pour placer des microphones d’un constructeur B.
 

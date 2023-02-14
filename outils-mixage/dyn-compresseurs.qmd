@@ -1,0 +1,156 @@
+# Les compresseurs
+
+<!-- 
+
+![CleanShot 2023-01-15 at 00.03.45.png](:/59186b83fb4142b9aa0e61c22df8079c)
+
+If you have ever done anything a little bit related to sound, you certainly have heard about compression. It is one of the most used effects, along with EQ. There is also a ton of contents about them, about the different types, about the different clones, about comparisons between hardware and digital version and so many other that it can be a bit tricky to understand what's going on with compression.
+
+In this article we propose to summarize the common practice of knowledge on compressors.
+
+## Understanding the dynamic range
+
+Before tackling down the usage for compression, we have to explain the dynamic range of a signal. It is the difference between the loudest peak and the noise floor. We usually like to have a good amount of dynamic to leave the musical intention intact and the noise inaudible.
+
+But some signals have too much dynamic variation. It is very common when dealing with a voice. There are a lot of level variations when we talk or sing, and it is even worst at a few inches of a microphone. Historically, the only solution to smooth out the unwanted dynamic is either to put the microphone further away or to ride the fader up and down in sync with the performance.
+
+## Automating the Console's Faders
+
+The idea of compression went with the idea to automate the process of fader riding. Basically, a compressor is a device that lower the volume when it gets too loud. By doing so, it reduces the dynamic range of the signal, hopefully by removing only the unwanted variations. The first apparition of such devices goes back around the 40s.
+
+It is important to note that a compressor does actually make the signal quieter until you decide to compensate for the gain reduction. We can also safely conclude that a compressor reduce the loud part of the signal (and not the opposite).
+
+## Where to use a compressor ?
+
+Compressors can be used in many points of the signal path. We can use them on single channels, on instrument buses, or even directly on the master bus.
+
+At this point, having an effective routing solution can drastically simplify the question "where". One simple solution is to sum everything that makes sense together. For example, on drums, if we have two mics and the kick, two mics on the snare and a pair of overhead, we could sum the two kick microphones in one bus, do the same for the two snare channels and finally sum the kick bus, the snare bus and the overhead inside a last bus.
+
+Now, if I hear a dynamic issue on the snare, I can apply a compressor on the snare bus. If I hear another one on the microphone inside the kick, I can apply a compressor on the right channel, and so on.
+
+## Downward and Upward Compression
+
+| Downward Compression | Upward Compression |
+| --- | --- |
+|![d8ed0546b1a9313a6db174103f542e7d.png](:/fe46f27d155c452c86645d9d0f172d3e)|![661d543e666ee0708b71f4336113e590.png](:/7d0a086a244d48e6a031214a0ef51944)|
+
+It is sometimes seen that a compression is any kind of device that reduces the dynamic range of a signal. There are two possibilities here : you can either lower its loudest part or do the opposite and amplify the lowest part of a signal. This second method is much less common but can lead to very effective results. At FLUX:: we call compression everything that does downward compression and de-expansion everything the does upward compression. You can achieve upward compression with Solera, Alchemist or Pure DExpander.
+
+## Why the need of compression?
+
+The recording technic has a strong impact on the dynamic. The closer the microphone is to a sound source, the bigger the instantaneous dynamic of a source is. So, the heavy use of compressors in modern music is very much due to the generalization of close-miking technic. In more acoustic style of music, like orchestral recordings, compressors are much less prominent because the recording technic deployed tends to favour microphones further away from the instruments.
+
+## Common settings on a compressor
+
+![57093fa7d28420b46b995075fa495065.png](:/58a5a091296446be9b2e2e0d88fefa88)
+
+We usually found these four parameters :
+
++ The threshold (dB); when the signal is louder than the level of the threshold, the compressor start to reduce the gain.
++ The ratio; which determines the strength of the compressor. A 4:1 ratio means that when the signal exceeds the threshold by 4 dB, the output signal only see an increase of 1 dB.
++ The attack time; which determines how long the compressor takes to reach the set ratio once the signal exceeds the threshold.
++ The release time, which determines how long the compressor takes to return to 0 dB of gain reduction once the signal goes under the threshold.
+
+Faster time constant produce more harmonic distortion. Slower ones are more transparent but also less effective.
+
+There are more parameters that can be discussed about compressors, but we will tackle them in another article.
+
+## Should a compressor be inaudible?
+
+There is a common place that tend to say that a well-set compressor should be inaudible. While it certainly has some part of truth, it is also very misleading for newcomers.
+
+How could we be satisfied with a mixing move if we can't hear it? Of course we need to hear the effect of a compressor, otherwise, we should just remove it from the audio chain ! The rule of thumb is that, as long as we want a transparent dynamic management of an instrument, we should only hear the proper dynamic processing without the artefact of compression.
+
+## Fifty shades of Compressors
+
+Despite the myriad of compressor models, we can easily distinguish four main usages for a compressor :
+
++ Reduce the crest/peak of a signal (peak compression)
++ Reduce the mean level of variation (RMS compression)
++ Creating a "glue" effect on a bus (Bus compression)
++ Using compression as an effect
+
+For peak compression, we want to use compressors that have a "fast" behaviour. In other words, we want them to be quite sensitive to transients, to be able to catch them.
+
+:warning: Peaks are amplified with closer microphone placement
+
+For RMS compression, we are looking for the opposite behaviour. We prefer compressor with a "slow" behaviour. This type of compressors are not very sensitive to transients, so they are best suited to work on the global variation of the signal.
+
+For bus compression, we usually prefer "faster" compressors too, but who are also capable of being gentle with the signal. As for special effects, there are really not many guide lines as long as the sonic result is enjoyable. Usually, the dirtier the compressor gets, the funnier it is.
+
+## Feedback VS feedforward
+
+Before talking about feedback or feedforward compressors, we should look at a simple diagram of a compressor.
+
+![compressor.svg](:/38df0acc69d640ae8b56dc4765010aed)
+
+
+There are two main blocks in a compressor : a detection block, also called sidechain and a processing block, also called gain reduction circuit.
+
+If the sidechain is fed by the input signal, then the compressor is said to be in feedforward mode. If the sidechain is fed by the output signal, then the compressor is said to be in feedback mode.
+
+:warning: In feedback mode, the feedback loop usually starts after the make-up gain stage. So the output volume has a strong impact on the compression!
+
+Analogue compressors are generally designed in feedback, because it is easier. The feedback loop also introduce some kind of retroaction which tends to limit overcompression.
+
+Feedforward is technically considered as "better", because the quantity of gain reduction does not affect the gain reduction itself. They are more predictable and sometimes easier to handle, they can also easily overcompress the signal.
+
+## Compressor Reactivity and RMS Window
+
+We have used the words "fast" and "slow" to describe the behaviour of a compressor above. These words do not really relate to the attack or release time, but much more to the RMS window (or RMS size).
+
+The RMS size is how smoothed the signal is in the detection circuit of the compressor. A short RMS size (5-10 ms) will produce a compressor very sensitive to crest and transient. A long RMS size (40 ms and above) will produce a compressor less sensible to peak and more adequate to follow the global level variation of the signal.
+
+This RMS size has a very strong impact on the sonic characteristic of a compressor.
+
+## Program dependent compression
+
+We often encounter the term "program dependent" to qualify a compressor. This means that the nature of the input signal will alter some parameters of the compressor.
+
+Pretty much all analogue compressors are "program dependent". Their release time can vary a lot depending on the input signal, or, their ratio can be greater as the input signal voltage grows, etc. It's really more a design constraint than a feature, but it happens to be quite pleasant, sonically speaking.
+
+On the other hand, it is very easy to design a very predictable compressor in the digital domain. But sometimes, these designs can sound a bit "dull" compared to their analogue counterpart. This is why most modern digital compressors also implement many program dependent features.
+
+Most FLUX:: compressors allows the user to set the knee size (the knee make the ratio dependent on the input level) or to have an automatic release based on the input signal crest factor. Even the ratio can be made dependent on the crest factor! And if the FLUX:: compressor you own don't let you set all of this manually, you will find a mode selector, like on Evo Channel or Evo Comp that change all this settings under the hood for you.
+
+## FET, Optical, VCA, Vari-Mu, what is it all about?
+
+There are different ways to build an analogue compressor. Each of these "buzzwords" refer to particular technologies of gain reduction circuit.
+
+The first technology known to build compressors is the so-called Vari-Mu. They involved a tube as a voltage-controlled gain reduction device. These kinds of compressors tend to have time constant on the slower side and a soft knee. So the hotter the input signal is, the harder the compression is.
+
+The natural evolution of tube compressors was to replace the tube with a field-effect-transistor once they have become available. FET compressors are generally closer to a "hard knee" while still having a bit of a progression between no compression and full ratio. They also allow for a much quicker time constant. Their main drawback (or joy, depending on your goal) is their high harmonic distortion level. They tend to be more appropriate for peak compression.
+
+The FET compressors were rapidly replaced by "VCA". While all previous technologies mentioned are built around voltage controlled amplifiers, VCA are analogue processors specifically designed for signal amplification. They usually offer versatile range of control at a low harmonic distortion cost. They also have the nice advantage to be very small and have allowed mixing desks of the 80s to have one compressor per channel.
+
+Optical compressor appears in the 50s. It's based on an electronic optic cell. They have the reputation to be quite slow and clean compressors. The release time is very program dependent. This unit also have a rather soft knee and a frequency-dependent ratio. They are more suited for RMS compression.
+
+One should be careful at characterizing the usage of one component to determine the sonic nature of the whole device. We should never forget that in such complexe systems, the topology of the circuit is very important too.
+
+## Parallel processing
+
+We can often find settings that allow blending the unaffected signal (dry) and the compressed signal (wet) together. It is called parallel compression. The idea is to set a very aggressive peak compression and to blend it back with the original signal to recover some of the natural dynamic.
+
+This is a very colourful and effective processing, which tends to bring low-level information in front of the mix. If you struggle to find the right settings, try a compressor with fast RMS size, with a very short attack (< 3ms) and release (< 60ms) time. The lower the threshold so that a good amount of signal will be processed. Increase the ratio up to taste. It will sound like a lot, that's the goal! We will recover some air by bringing the dry signal in.
+
+## Advantages of digital compressors
+
+We have talked extensively about analogue compressors, but there aren't that often seen nowadays. Like many other types of processing, many analogue processing has moved to digital counterparts, first for cost-effectiveness reason, and also because of simpler workflows.
+
+In digital sound processing, there are far fewer constraints on what we can do compared to the analogue world. It is then easy to build compressors with many settings (user accessible or not), like FLUX:: plug-ins.
+
+This makes digital compressors way more versatile than their analogue counterpart. It sometimes makes them more difficult to learn, but realistically, you could replace a whole collection of compressors with just Evo Comp or Evo Channel, for example. In fact, it's not very difficult to imitate famous analogue compressors.
+
+There are also some things that can't (or can very rarely) be done with analogue compressors. For example, a look ahead option allows delaying the signal in the processor section and can create a zero attack time while keeping a smooth envelope (and a low distortion). Such an option is common on digital compressor.
+
+:warning: Lookahead also had latency in the whole audio system. Becarefull depending on what you are doing!
+
+## TL;DR
+
+Compressors are audio processors that are designed to reduce the dynamic of a signal. Most of the time they lower the signal when it goes above a certain threshold (downward compression). Sometime, they can also amplify the signal when it goes below a certain threshold (upward compression).
+
+There are basically two main usages for compressors, peak and RMS management. For peak compression, we prefer compressors with fast attack, fast release and short RMS windows. For RMS compression we prefer compressors with slower attack and release and longer RMS windows. The first categories often relate to FET or VCA compressors, while the second one relates more with Opto and Tube compressors.
+
+Digital compressors have the advantage to be very flexible and can be adapted to pretty much any mixing situation. They can be both very clean and predictable, or very dirty and dependent on the input signal. One full featured one can replace a whole collection of compression devices. They also have the strong advantage of looking ahead, which allow for clean zero attack time. 
+
+ -->
