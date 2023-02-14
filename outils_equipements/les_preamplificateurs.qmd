@@ -1,0 +1,89 @@
+# Les préamplificateurs
+
+Le rôle d’un préampli est de réaliser une amplification en tension du signal ainsi que de diminuer son impédance. Cette opération est indispensable pour permettre à notre signal de traverser le reste de la chaîne du traitement audio.
+
+Dans les débuts de l'enregistrement audio, les préamplificateurs de microphone étaient des appareils passifs rudimentaires utilisant généralement un couplage par transformateur pour assurer l'isolation et adapter l'impédance du microphone au reste du système audio.
+
+Au fur et à mesure que les techniques d'enregistrement progressaient, les préamplis sont devenus de plus en plus sophistiqués et ont commencé à intégrer des composants électroniques actifs (tube à vide, transistors, circuits intégrés). Ces préamplis actifs offrent une plus grande flexibilité et de meilleures performances.
+
+L'une des principales évolutions de la technologie des préamplis a été l'avènement de l'électronique à semi-conducteurs, remplaçant ainsi la technologie des tubes à vide. Ces préamplis à transistors sont plus petits, plus légers et plus fiables que leurs homologues à tubes, et ils offrent généralement un bruit plus faible et une gamme dynamique plus étendue.
+
+Il n’est pas rare que les préamplificateurs soient choisis pour leur « couleur » sur le signal. Nous commencerons par aborder ces outils d’un point de vue pratique pour enfin déboucher sur cette question.
+
+## Informations techniques des préamplificateurs
+
+Le **gain** (quantité d'amplification) : Les préamplificateurs pour microphones fournissent généralement un gain compris entre 20 et 60 dB, qui est nécessaire pour amplifier les signaux de faible niveau provenant d'un microphone pour atteindre un niveau utilisable. Le gain d'un préampli est généralement réglable, ce qui permet à l'utilisateur de définir le niveau optimal pour un microphone et une application donnés.
+
+L'**impédance** d'entrée d'un préamplificateur de microphone est un paramètre critique, car elle détermine la charge imposée par le préamplificateur au microphone. Une mauvaise adaptation d'impédance peut provoquer des interactions indésirables entre le microphone et le préampli, entraînant, entre autre, des modifications de la réponse en fréquence.
+
+La **réponse en fréquence** d'un préamplificateur est une considération importante, car elle détermine la manière dont le préamplificateur va affecter le son du microphone. Une réponse en fréquence plate est généralement souhaitable.
+
+Le **plancher de bruit** d'un préamplificateur est une mesure du bruit résiduel ajouté au signal par le préamplificateur lui-même. Un plancher de bruit faible est nécessaire pour maintenir un bon rapport signal/bruit dans le système audio. Cette donnée est évidemment d'autant plus critique que le niveau du signal d'entré est faible. Par extension, on désigne la plage dynamique d'un préamplificateur de microphone comme la gamme comprise entre le niveau maximal du signal que le préamplificateur peut accepter et le plancher de bruit.
+
+La distorsion est une mesure des modifications indésirables du signal audio qui sont introduites par le préampli. De faibles niveaux de distorsion sont souhaitables, car ils garantissent que le son du microphone est capturé et amplifié avec précision. On évoquera alors la **distortion harmonique**, qui, comme son nom l'indique, augmente le signal d'entré d'harmoniques supplémentaires. On rencontre aussi **la distortion d'intermodulation**. Admettons que nous envoyons en entrée d'un équipement audio deux sons purs de fréquences F1 et F2. La distortion d'intermodulation engendre deux nouvelles fréquences F1+F2 et F1-F2. On cherche donc a maintenir la contribution de ces deux résurgences le plus bas possible.
+
+Ci-dessous, en guise d'exemple, on trouve le tableau des spécifications du préampli Rupert Neve Design 511 :
+
+Measured at Main Output, un-weighted, 22 Hz - 22 kHz, source impedance 150 Ohm balanced. Noise performance can vary depending on the 500 series and / or interference from stray magnetic fields.
+**NOISE**
+Unity Gain: Better than -103 dBV
+Gain @ +66 dB: Better than -60 dBV
+Equivalent Input Noise: -125 dB 
+
+**FREQUENCY RESPONSE**
+Main output, no load.
++/- 0.1 dBu from 10 Hz to 31.5 kHz
+-2.6 dB @ 120 kHz
+
+**MAXIMUM OUTPUT LEVEL**
++23 dBu
+
+**TOTAL HARMONIC DISTORTION AND NOISE, NO SILK**
+@ 1 kHz, +20 dBu output level, no load: Better than 0.0025%
+@ 20 Hz, +20 dBu output level, no load: 0.025% Typical (2nd and 3rd harmonic)
+
+**TOTAL HARMONIC DISTORTION AND NOISE WITH SILK ENGAGED** 
+@ 100 Hz, +20 dBu input level, no load.
+TEXTURE @ min: 0.015%, mostly 3rd harmonic typical
+TEXTURE @ max: 2%, mostly 2rd harmonic typical
+
+**GAIN**
+Unity up to +66 dB in 6 dB steps.
+Trim continuously adjustable from -6 dB to +6 dB.
+
+**PHANTOM POWER**
+Supplied by the 500 series rack power supply. Switch selectable on faceplate.
+
+**HIGH PASS FILTER**
+Continuously variable swept frequency from 20 Hz to 250 Hz.
+Slope: 12 dB/Octave
+
+**POWER REQUIREMENTS**
+@ +/-16VDC, 100mA
+
+
+## Critères de choix d’un préamplificateur
+
+Le critère de première importance dans le choix d’un préamplificateur est son gain maximal. Plus l’amplification disponible est grande, plus le préampli sera capable de répondre à des situations exigeantes, telles que l’enregistrement d’un évènement sonore à faible niveau, ou l’emploi d’un microphone à faible sensibilité.
+
+Le second critère important dans le choix d’un préampli est sa réponse en fréquence. Théoriquement, celle-ci doit être la plus neutre possible. Une certaine coloration peut être acceptée (voire souhaitée), mais celle-ci doit rester raisonnable pour répondre à des critères d’utilisations professionnelles.
+
+La réponse en transitoire est un autre élément important. Certains préamplis auront tendance à adoucir la sensation d’attaque des sources. Cet effet n’est pas souhaitable.
+
+Enfin le rapport signal sur bruit doit être le plus grand possible. Nous cherchons toujours à rajouter le moins de bruit possible sur le chemin de notre signal.
+
+
+## Les technologies de préampli
+
+Nous avons vu dans le chapitre trois qu’il existe trois familles de composants électroniques permettant d’amplifier le signal : les tubes, les transistors et les circuits intégrés. On retrouve donc des topologies de circuit de préamplificateurs utilisant chacun de ces composants.
+
+Chacune de ces topologies offre de très légère variation de son lorsque les préamplis sont poussés dans leur retranchement (seuil de saturation). Comme pour les microphones, il est délicat de parler de son « à tube » ou « à transistor ». De plus, l’influence sur le son d’un préamplificateur apparaît en pratique comme très marginale par rapport au positionnement du microphone.
+
+## Les réglages d’un préampli
+
+Un préampli propose souvent les réglages suivants :
+
++ Un potentiomètre de gain (qui est souvent remplacé par un sélecteur cranté, plus précis, pour les modèles haut de gamme).
++ Un bouton activant l’alimentation fantôme. En effet, c’est bien le préampli qui génère cette tension d’alimentation pour les microphones statiques.
++ Un bouton d’inversion de phase.
++ Un coupe-bas.

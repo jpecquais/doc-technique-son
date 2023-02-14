@@ -1,0 +1,87 @@
+project:
+  type: book
+
+lang: fr
+
+book:
+  title: "Guide pratique des techniques du son"
+  subtitle: "Enregistrement, mixage et spatialisation, appliqués à la musique"
+  author: "Jean-Loup Pecquais"
+  downloads: pdf
+  chapters:
+    - index.qmd
+    - part: Généralités
+      chapters:
+        - generalites/oreille.qmd
+        - generalites/qualifier_le_son.qmd
+        - generalites/l_acoustique_des_salles.qmd
+        - generalites/notions_electronique.qmd
+        - generalites/production_musicale.qmd
+    - part: Outils et équipements
+      chapters:
+        - outils_equipements/le_chemin_du_signal.qmd
+        - outils_equipements/les_microphones.qmd
+        - outils_equipements/transport_signaux_analogiques.qmd
+        - outils_equipements/les_preamplificateurs.qmd
+        - outils_equipements/les_convertisseurs.qmd
+        - outils_equipements/transport_signaux_numériques.qmd
+        - outils_equipements/introduction_informatique_musicale.qmd
+        - outils_equipements/les_enceintes.qmd 
+    - part: Méthodologie de prise de son
+      chapters:
+        - methode-pds/ecoute-critique-pt1.qmd
+        - methode-pds/mono_et_multimicrophonie.qmd
+        - methode-pds/le_couple_de_pds.qmd
+        - methode-pds/déphasage_et_remise_en_phase.qmd
+        - methode-pds/en_pratiques.qmd
+    - part: Outils de mixage
+      chapters: 
+        - outils-mixage/anatomie-console.qmd
+        - outils-mixage/filtres-phase.qmd
+        - outils-mixage/filtres-egaliseur.qmd
+        - outils-mixage/dyn-compresseurs.qmd
+        - outils-mixage/dyn-limiteur.qmd
+        - outils-mixage/dyn-autres.qmd
+        - outils-mixage/reverberation.qmd
+        - outils-mixage/saturation-distortion.qmd
+        - outils-mixage/effets-modulation.qmd
+    - part: Méthodologie de mixage
+      chapters: 
+        - methode-mixage/ecoute-critique-pt2.qmd
+        - methode-mixage/approche-generale.qmd
+        - methode-mixage/cas-ecole.qmd
+        - methode-mixage/pieges.qmd
+    - part: Introduction à la spatialisation sonore
+      chapter:
+        - spatialisation/spat-introduction.qmd
+        - spatialisation/spat-historique.qmd
+        - spatialisation/espace-hautparlant.qmd
+        - spatialisation/spat-perceptif.qmd
+        - spatialisation/binaural.qmd
+        - spatialisation/spat-perceptive.qmd
+        - spatialisation/ambisonic.qmd
+        - spatialisation/mix-obj.qmd
+    - part: Les outils de spatialisation sonore
+      chapter:
+        - outils-spat/station-travail.qmd
+        - outils-spat/panner-binaural.qmd
+        - outils-spat/panner-cb.qmd
+        - outils-spat/panner-ambisonique.qmd
+        - outils-spat/gestion-effets.qmd
+        - outils-spat/mix-obj-dolby-atmos.qmd
+        - outils-spat/mix-obj-autres.qmd
+
+bibliography: references.bib
+
+execute:
+  echo: false
+  warning: false
+  error: false
+
+format:
+  html:
+    theme: cosmo
+    default-image-extension: gif
+  pdf:
+    documentclass: scrreprt
+    default-image-extension: png
