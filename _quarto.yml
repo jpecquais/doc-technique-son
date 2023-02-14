@@ -52,7 +52,7 @@ book:
         - methode-mixage/cas-ecole.qmd
         - methode-mixage/pieges.qmd
     - part: Introduction à la spatialisation sonore
-      chapter:
+      chapters:
         - spatialisation/spat-introduction.qmd
         - spatialisation/spat-historique.qmd
         - spatialisation/espace-hautparlant.qmd
@@ -62,7 +62,7 @@ book:
         - spatialisation/ambisonic.qmd
         - spatialisation/mix-obj.qmd
     - part: Les outils de spatialisation sonore
-      chapter:
+      chapters:
         - outils-spat/station-travail.qmd
         - outils-spat/panner-binaural.qmd
         - outils-spat/panner-cb.qmd
