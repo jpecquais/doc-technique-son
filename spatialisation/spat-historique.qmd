@@ -1,1 +1,103 @@
-# Historique de la spatialisation
+# Historique de la spatialisation {#sec-hist-spat}
+
+
+<!-- 
+
+http://www.widescreenmuseum.com/sound/fantasound1.htm
+
+ -->
+
+<!-- 
+
+Source : https://www.informit.com/articles/article.aspx?p=337317
+
+You might think that surround sound is a relatively new development. But the concept of having a soundtrack surrounding the listener starts well before today's home theater era—in fact, it dates all the way back to the 1940s!
+
+Surround Sound in the Movies
+Surround sound started as a way to immerse movie-going audiences in the film they were watching. From the very beginning, the movies have driven the development of surround sound technology.
+
+The 1940s: Fantasia
+In many ways, Walt Disney can be considered the inventor of surround sound. When the groundbreaking movie Fantasia was still in development, Disney met with conductor Leopold Stokowski to discuss the film's classical music score. Stokowski suggested that Disney contact the engineers at Bell Labs, who were working on a nascent multiple-microphone stereo recording technology. Intrigued by the technology, Disney thought it would be wonderful if, during the movie's "Flight of the Bumblebee" segment, the musical sound of the bumblebee could be heard flying all around the audience, not just in front of them.
+
+Disney put his engineers to work on the challenge, with the result that Fantasia, released in 1941, became the very first film to incorporate surround sound. Disney employed the proprietary Fantasound technology to create a surround sound field with left front, center front, right front, left rear, and right rear channels. The main soundtrack incorporated only the front three channels; the two rear channels were recorded on a separate reel of film, and "steered in" separately when needed.
+
+Unfortunately, the additional equipment necessary to reproduce Fantasound was too costly to roll out on a widespread basis. Only two Fantasound systems were sold to theaters: New York's Broadway Theater and the Carthay Circle Theater in Los Angeles. These installations cost $85,000 apiece and included 54 speakers placed throughout the auditorium. Disney also produced two scaled-back road show versions of the Fantasound system, at $45,000 each, although these traveling versions didn't include the surround speakers.
+
+The 1950s: Multiple-Channel Stereo
+The Fantasound system proved too complex and too costly for other studios to adopt. It took another decade for Hollywood to embrace a more affordable multiple-channel sound technology—which it did in conjunction with the birth of the new widescreen film formats, in particular Cinerama and CinemaScope.
+
+The new wider-screen formats needed multiple channels to fill the entire front field of the movie screen. The solution was a wall of sound, employing four to six audio channels for a widescreen stereo effect. Among the earliest multiple-channel movies were 1952's This is Cinerama (with seven-channel surround sound) and 1953's The Robe (in Cinemascope, with four-channel sound).
+
+Prior to this point, one sound channel was optically encoded onto a strip of film, the same way the picture itself was recorded. To fit more sound tracks onto a strip of film, multiple tracks were encoded magnetically. A film frame has room for up to six of these magnetic audio tracks. Several of the early widescreen formats added a surround sound channel to this standard stereo setup. In a standard four-channel setup, the tracks are assigned to left, center, right, and surround. The mono surround channel was fed to multiple speakers along the sides and rear of the theater. The surround channel was typically used for ambient background noise or other sound effects, thus inspiring the name "effects channel."
+
+Unfortunately, the cost of these technologies proved prohibitive, and theatrical surround sound died out by the end of the 1950s.
+
+The 1970s: Dolby Stereo
+True surround sound made a comeback in the 1970s with the introduction of Dolby Stereo. In spite of its name, this was an optical four-channel technology, introduced in 1976 by Dolby Laboratories.
+
+Instead of using magnetic audio tracks, which tended to be of lower fidelity, Dolby reverted back to the earlier—and superior—optical recording technology. It also added noise-reduction technology for clearer playback.
+
+The big boost for surround sound was the release of a single movie—1977's Star Wars, with its swooping rear-channel effects. The success of Star Wars inspired theater owners to upgrade their sound equipment to the Dolby Stereo standard, and led to other producers and studios embracing the surround sound format.
+
+The 1980s: Dolby SR and THX
+Throughout the 1980s, more and more movies employed the Dolby Stereo surround sound system. In 1983, Lucasfilm introduced THX certification (named after George Lucas' first film, THX 1138), a set of technical standards designed to ensure a high-quality playback of film soundtracks in specially equipped movie theaters. In 1987, Dolby introduced Dolby SR, an optical four-channel system that offered wider dynamic range and a broader frequency response than the previous Dolby Stereo system.
+
+The 1990s: Dolby Digital Surround, DTS, SDDS, and EX
+Cinema surround sound became digital in 1992 with the introduction of Dolby Digital Surround (originally known as Dolby AC-3, short for audio coding 3). This system still encodes the audio information on a film's optical tracks, but in digital format instead of in analog fashion. Dolby Digital also introduced more channels—a 5.1 configuration with left front, center front, right front, left surround, right surround, and a separate low frequency effects (LFE) channel for deep bass.
+
+In 1993, the Digital Theater Systems company introduced the competing DTS surround sound technology. Like Dolby Digital, DTS is a digital 5.1-channel system. Unlike Dolby Digital, however, DTS records the audio channels on CD, which on playback is synchronized to the film's time code. The first DTS movie was 1993's Jurassic Park.
+
+A third company entered the surround-sound fray in 1993. Developed by Sony, the Sony Dynamic Digital Sound (SDDS) technology is an optical system like Dolby Digital, but with 7.1 channels arranged in a unique pattern—five front channels (left, left center, center, right center, right), left and right surrounds, and the low frequency effects (subwoofer) channel. This multiple-front speaker system purportedly produces better dialogue imaging; the first SDDS film was 1993's The Last Action Hero.
+
+In 1999, Dolby introduced yet another new surround sound technology, Dolby Digital Surround EX. This 6.1-channel optical system adds a rear surround channel to the previous left and right surrounds. The first EX movie was Star Wars: Episode One—The Phantom Menace.
+
+
+
+
+
+
+
+
+
+
+
+Surround Sound at Home
+In the home, multiple-channel sound had its origins with the reproduction of music in stereo. Multiple-channel technology only recently expanded to accommodate surround sound movie soundtracks.
+
+Early Multiple-Channel Experiments
+For decades, music recording and reproduction was monophonic. However, there was a real desire for a multiple-channel system to more accurately represent the live musical experience. Initial industry experiments with stereo recording took place in the early 1930s. These early experiments employed an "infinite" number of microphones deployed in a type of curtain in front of the recording musicians, and an equal number of speakers used to reproduce the sound. Later, engineers discovered that they could use phantom imaging to reproduce the stereo soundstage with just two speakers.
+
+The 1950s and 1960s: Stereophonic Sound
+Practical multiple-channel recording came into being in the 1950s with the introduction of the two-channel stereophonic system. The first commercial two-channel stereo LP was released in 1958, and by the early 1960s stereo recordings became the norm. Stereo reproduction over the airwaves began in 1961, when the first stereo FM radio broadcast took place.
+
+Early 1970s: Quadraphonic Sound
+The desire to reproduce a 360-degree sound field led to the development of four-channel, or quadraphonic, recording. Quadraphonic sound officially debuted in 1969 with the release of the first consumer-level four-channel reel-to-reel tape deck. Soon the quadraphonic process was being applied to both eight-track tapes and vinyl records.
+
+By the early 1970s multiple quadraphonic technologies were competing in the marketplace. JVC's CD-4 system, introduced in 1971 for vinyl records, employed four discrete channels of audio information—front left, front right, rear left, and rear right. The SQ and QS systems, introduced in 1972 by CBS and Sansui, respectively, were both matrix technologies for vinyl records, in which the rear channel information was matrixed into the two front channels and then separated out by a surround decoder. And RCA's Quad-8 format, introduced in 1970, was a discrete format designed specifically for eight-track tape players.
+
+Unfortunately, the confusion generated by these competing technologies, along with the high cost of four-channel amplifiers and additional rear speakers, led to the abandonment of quadraphonic sound by the end of the decade.
+
+Late 1970s: Stereo Video
+Even though stereo audio recordings and broadcasts had been around since the late 1950s, it took until the late 1970s for stereo sound to be applied to video recordings and broadcasts. The first two-channel stereo videocassette was released in 1978, and the first stereo television broadcasts occurred in 1986.
+
+The 1980s: Dolby Surround and Dolby Pro Logic
+True surround sound came to the home in 1982, with the introduction of Dolby Surround technology. Dolby Surround was designed to reproduce the cinema's Dolby Stereo surround soundtracks in a home environment. The Dolby Surround technology consisted of three channels—left, right, and a single surround channel, which was matrixed in with the front two channels. (This single surround channel was frequently sent to two rear speakers, resulting in a four-speaker system.)
+
+Dolby Surround got an upgrade in 1987, when the Dolby Pro Logic system was introduced. Dolby Pro Logic is a four-channel version of the early three-channel Dolby Surround technology, with a separate center channel, primarily used for dialogue. To this day, Dolby Pro Logic is the surround sound standard for prerecorded VHS videotapes.
+
+The 1990s: Dolby Digital and DTS
+Home surround sound went digital in 1995 with the introduction of the first Dolby Digital laserdisc. Like the cinema version, home Dolby Digital is a 5.1-channel system, with left front, center front, right front, left surround, and right surround, along with a separate LFE or subwoofer channel. The first Dolby Digital DVD was released in 1997; Dolby Digital is also the official sound format for high-definition television broadcasts.
+
+The competing DTS system was released in a home version in 1996. DTS works similarly to Dolby Digital, but with higher data rates, which often results in slightly better sound quality. However, DTS is an optional format for the home theater environment, and is not included on many DVDs; there are many more DVDs with Dolby Digital soundtracks than with DTS soundtracks.
+
+2000 and Beyond: More Channels, More Options
+The new millennium brought significant enhancements to all the major home surround-sound technologies. Dolby Laboratories introduced the concept of rear channels to the mix, placed behind the listener to supplement the normal side-firing surround speakers. The new system, Dolby Digital EX, is available with either single (6.1) or right and left (7.1) rear channels. The new rear channels are matrixed into the original channels, and then subtracted out via a surround decoder.
+
+DTS also embraced the separate surround and rear channel concept with DTS-ES. This is a 6.1/7.1-channel system with matrixed rear channels. However, DTS upped the ante with DTS-ES Discrete, which uses a discrete rear surround channel for better channel separation.
+
+Finally, the aging matrix-surround approach got a boost with Dolby Pro Logic II. This new technology is designed to simulate a surround sound field from two-channel sources; you use it to listen to stereo soundtracks in a surround sound system. (Dolby Pro Logic IIx is an enhanced version designed for 7.1-channel systems.)
+
+Going forward, it's likely that new developments will focus on adding even more channels to the surround mix (possibly wide left and wide right front channels, as well as additional side channels) to more accurately reproduce a true 360-degree sound field.
+
+
+ -->

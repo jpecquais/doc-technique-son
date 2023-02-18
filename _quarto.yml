@@ -2,6 +2,7 @@ project:
   type: book
 
 lang: fr
+number-sections: true
 
 book:
   title: "Guide pratique des techniques du son"
@@ -53,13 +54,14 @@ book:
         - methode-mixage/pieges.qmd
     - part: Introduction à la spatialisation sonore
       chapters:
+        - spatialisation/_brouillon.qmd
         - spatialisation/spat-introduction.qmd
         - spatialisation/spat-historique.qmd
-        - spatialisation/espace-hautparlant.qmd
-        - spatialisation/spat-perceptif.qmd
+        - spatialisation/espaces-hautparlants.qmd
         - spatialisation/binaural.qmd
-        - spatialisation/spat-perceptive.qmd
-        - spatialisation/ambisonic.qmd
+        - spatialisation/spat-perceptif.qmd
+        - spatialisation/ambisonique.qmd
+        - spatialisation/wfs.qmd
         - spatialisation/mix-obj.qmd
     - part: Les outils de spatialisation sonore
       chapters:
@@ -68,8 +70,7 @@ book:
         - outils-spat/panner-cb.qmd
         - outils-spat/panner-ambisonique.qmd
         - outils-spat/gestion-effets.qmd
-        - outils-spat/mix-obj-dolby-atmos.qmd
-        - outils-spat/mix-obj-autres.qmd
+        - outils-spat/mix-obj.qmd
 
 bibliography: references.bib
 
