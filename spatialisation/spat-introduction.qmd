@@ -1,1 +1,20 @@
 # Introduction
+
+Cette section, et les suivantes ont à cœur de traiter le vaste sujet de la spatialisation sonore. Il est assez rare de trouver des ouvrages génériques sur les techniques du son abordant aussi cette discipline. Mais cette lacune s'explique très facilement par la très faible part de marché représenté pour les consommateurs de format audio immersif, comme le fameux 5.1. Ces dernières années, les choses bougent un peu. Dolby est revenu d'une longue traversée du désert avec le « Dolby Atmos », d'abord dans les salles et les auditoriums de cinéma, et aujourd'hui dans le monde de la musique. On retrouve ainsi deux logiciels de mixage phares, Pro Tools d'Avid et Logic Pro X d'Apple, intégrant nativement ce « Dolby Atmos ». Cet intérêt pour les technologies immersives se retrouve aussi chez les constructeurs d'enceintes et de casques, proposant des systèmes de plus en plus simples pour accéder a cette expérience d'écoute. Alors, à la lumière de ces récentes évolutions, il paraît important de se pencher sur les longues et riches histoires de la spatialisation sonore, ainsi qu'aborder les différentes technologies et techniques associées.
+
+Cette partie théorique commence par un historique de la spatialisation sonore, qui nous permettra de réaliser que cette conversation ne date pas d'hier, ni de l'Atmos. Puis, il conviendra de s'attarder sur les systèmes de diffusions et le positionnement des enceintes dans l'espace. On pourra ainsi aborder les différents systèmes normés, amenés par des constructeurs tels que DTS ou Dolby, mais aussi décrire et catégoriser les systèmes d'écoutes qui échappent à ces approches rigides. On différenciera alors les systèmes frontaux, les systèmes englobants à une dimension, les systèmes englobants à deux dimensions (souvent appelés « immersif ») et les systèmes à trois dimensions.
+
+Une fois ces deux blocs très généralistes abordés, nous attaquerons alors une à une les grandes techniques permettant de réaliser des mixages à destination de ces systèmes à multiples enceintes, avec dans l'ordre :
+
++ Le binaural
++ L'approche perceptive, ou « orientée canal »
++ L'ambisonique
++ La WFS, ou synthèse de front d'onde
+
+Nous discuterons aussi du mixage orienté objet, proposé notamment par le Dolby Atmos, mais aussi par d'autres, comme l'IRCAM et son « Spat », également intégré par FLUX:: Immersive dans son Spat Revolution.
+
+::: {.callout-note}
+
+Il n'y aura ici que peu de rappels sur les mécanismes de la perception ainsi que sur notre capacité à localiser les sons dans l'espace. Ces informations sont accessibles dans le [chapitre -@sec-son].
+
+:::

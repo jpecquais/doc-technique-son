@@ -25,7 +25,7 @@ book:
         - outils_equipements/transport_signaux_analogiques.qmd
         - outils_equipements/les_preamplificateurs.qmd
         - outils_equipements/les_convertisseurs.qmd
-        - outils_equipements/transport_signaux_numériques.qmd
+        - outils_equipements/transport_signaux_numeriques.qmd
         - outils_equipements/introduction_informatique_musicale.qmd
         - outils_equipements/les_enceintes.qmd 
     - part: Méthodologie de prise de son
@@ -54,15 +54,14 @@ book:
         - methode-mixage/pieges.qmd
     - part: Introduction à la spatialisation sonore
       chapters:
-        - spatialisation/_brouillon.qmd
         - spatialisation/spat-introduction.qmd
         - spatialisation/spat-historique.qmd
         - spatialisation/espaces-hautparlants.qmd
+        - spatialisation/mix-obj.qmd
         - spatialisation/binaural.qmd
         - spatialisation/spat-perceptif.qmd
         - spatialisation/ambisonique.qmd
         - spatialisation/wfs.qmd
-        - spatialisation/mix-obj.qmd
     - part: Les outils de spatialisation sonore
       chapters:
         - outils-spat/station-travail.qmd
