@@ -74,3 +74,9 @@ Il existe plusieurs protocoles permettant le déploiement de tels dispositifs, m
 Les réseaux audio sont régis par les mêmes règles que les réseaux informatiques. Chaque appareil pouvant être connecté à un réseau est identifiable par une adresse matérielle unique, appelée **adresse MAC**. Lorsqu’un appareil est connecté sur un réseau, il faut lui attribuer une adresse logique appelée **adresse IP**. Il y a ici deux façons de faire. Soit l’utilisateur attribue manuellement une adresse différente à chaque machine (solution préférée en audio, mais fastidieuse lorsque le réseau comprend un grand nombre d’appareils), soit le réseau possède un **serveur DHCP** qui se chargera d’attribuer une adresse IP unique à chacun des appareils connectés. Cet outil est généralement intégré dans un appareil nommé **routeur**, permettant d’interconnecter plusieurs appareils ainsi que de gérer le routage des flux d’information. Une fois les appareils interconnectés, chaque constructeur de solutions audio sur IP fournit un logiciel de routage de l’audio entre les appareils.
 
 Les principaux acteurs industriels des réseaux audionumériques sont Audinet avec DANTE, ALC NetworX (appartenant à Lawo) avec Ravenna, et les protocoles open source AES67 et AVB.
+
+<!-- 
+
+[Audio OverIP: Current Status and Future Challenges](https://www.aes.org/e-lib/browse.cfm?elib=17293)
+
+ -->

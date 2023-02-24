@@ -284,3 +284,14 @@ Nous avons jusque là considéré que la directivité d’un microphone était u
 Cela signifie donc que positionner un microphone hors axe face à un évènement sonore n’aura pas seulement un effet sur le niveau du signal en sortie du microphone, mais également sur le timbre. On appelle alors « **timbré** », un évènement sonore capté plein axe par un microphone, et **détimbré** un évènement sonore capté hors axe.
 
 Ce phénomène est un outil précieux pour les preneurs de son. Par exemple, lorsqu’on enregistre une voix, certains sons sont exagérés par le microphone, particulièrement les « s ». En tournant légèrement le microphone pour placer la voix hors axe, on peut déjà grandement améliorer les problèmes de sifflante avant même de penser à un éventuel traitement ultérieur.
+
+<!-- 
+
+[Selected Highlights of Microphone History](https://www.aes.org/e-lib/browse.cfm?elib=11320)
+
+[The Analog Microphone Interface and its History](https://www.aes.org/e-lib/browse.cfm?elib=16377)
+
+[Digital Microphones—What's It All About?](https://www.aes.org/e-lib/browse.cfm?elib=15833)
+
+
+ -->

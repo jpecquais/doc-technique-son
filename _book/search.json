@@ -464,37 +464,58 @@
   {
     "objectID": "spatialisation/mix-obj.html#laudio-definition-model",
     "href": "spatialisation/mix-obj.html#laudio-definition-model",
-    "title": "35  Mixage orienté objet",
-    "section": "35.1 L’Audio Definition Model",
-    "text": "35.1 L’Audio Definition Model\n\n35.1.1 Présentation\nL’Audio Definition Model est une autre recommendation de l’ITU, dont la dernière édition date de 2019. Ce papier concentre beaucoup d’informations importantes. Principalement, il s’agit de décrire une base commune, espérant devenir une base commune entre les différents acteurs de l’audio orienté objet. Le premier objectif est donc d’assurer l’inter-opérabilité entre les différentes solutions de mixage orienté objet.\nTechniquement, l’ADM est donc un catalogue de descripteurs d’audio. Pour chaque canaux audio, un certain nombre d’informations textuelles y sont associées. Elles sont donc lisibles par un être humain, et éditables.\n\n\n35.1.2 Description des métadonnés\nL’ADM permet la représentation de quatre “types” d’audio :\n\nLe channel-based ou orienté-canal\nL’HOA ou Ambisonie d’ordre plus élevé\nLes Matrix ou formats matricés\nLes objets\n\n\n\n\n\n\n\nAvertissement\n\n\n\nLe mot “objet” a deux sens dans la documentation de l’ADM. Un objet est un format, permettant le rendu dynamique d’un élément sonore (changement de position, de volume, etc.). Cependant, un objet est également un contenu, qui permet de référencer un bloc d’échantillons d’un canal audio.\nEn ce sens un objet audio en ADM peut représenter le canal d’un flux orienté objet, le canal d’un flux HOA, un élément d’une matrice ou un objet sonore !\n\n\n\n\n\nFigure 35.1: Organigrame de l’ADM\n\n\nL’ADM permet de définir plusieurs programmes, appelé “audioProgramme”. Prenons comme exemple le cas d’une série télévisée diffusée en France et en Grande-Bretagne. Dans ce cas, nous aurions un premier audioProgramme contenant les voix française et le reste de la bande son et un second contenant les voix anglaise et les reste de la bande son. Nous aurions alors trois contenus audio (appelés audioContent) : les voix anglaise, les voix française et le reste de la bande son (bruitages, montage son, musique, etc.). L’audioProgramme “version anglaise” contiendrait les audioContent voix anglaise et le reste de la bande son, celui “version française” contiendrait les audioContent voix française et le reste de la bande son. Dans ce cas, le spectateur peut choisir d’écouter l’audioProgramme qu’il préfère, de façon interactive.\nChacun de ces audioContent contiennent eux-même des objets, appelés audioObject. Dans notre exemple, nous aurions différents objets dans l’audioContent voix française correspondant aux différents comédiennes et comédiens. Ces audioObject permettent d’indiquer quels échantillons audios du fichier BW64 sont concernés. Il convient alors d’indiquer quel est le format audio de ces échantillons. Les audioObject pointent alors vers un audioPack qui lui même pointera vers un certain nombre de sous modules permettant de caractériser intégralement le format audio et où il doit être positionné dans l’espace.\nSi l’audioObject est de type “directSpeaker”, on l’affect à un haut-parleur, dont on renseigne une position fixe. Si ce hautparleur existe dans l’arrangement de haut-parleurs connecté au décodeur ADM, le signal y est routé, sinon on interpole avec les haut-parleurs les plus proches.\nSi l’audioObject est de type ambisonique, on cherche les autres objets appartenants au même flux, puis on décode l’ensemble, sur le système connecté au décodeur ADM.\nSi l’audioObject est la composante d’une matrice, on cherche les autre objets appartenants au même flux, puis on dématrice l’ensemble vers nouvel audioPack de type “directSpeaker”.\nSi l’audioObject est de type “object”, on regarde ses métadonnées de spatialisation puis on interpole cette position en utilisant les haut-parleurs les plus proches du point indiqué.\n\n\n\n\n\n\nAstuce\n\n\n\nGardons en tête que les audioObject “directSpeaker” ou ambisonique sont des mixages. Les scènes sonores qu’ils représentent sont statiques et immuables. Un audioObject de format objet contient un élément sonore (une voix, un instrument, un bruitage), que le décodeur ADM va ensuite mixer. Un objet peut donc être interactif. L’utilisateur pourrait changer son volume, sa position, etc.\n\n\n\n\n35.1.3 Les métadonnées de spatialisation\nL’ADM n’intègre qu’un jeu de paramètre très sommaire :\n\nLe niveau\nLa position (en coordonnée cartésienne et sphériques)\nLa largeur apparente de la source\n\nLe niveau est un simple réglage de gain. La position permet de placer l’objet dans un espace virtuelle en trois dimension et selon deux systèmes de coordonnés. On préfère généralement le système sphérique, plus proche de notre perception sonore, cependant, la description de certains mouvement est plus simple dans un repère plutôt qu’un autre. La largeur permet de jouer sur l’étalement de l’objet dans l’espace. En pratique, accroître ce paramètre augmente le nombre de haut-parleurs contribuant à la diffusion de l’objet sonore.\nIl n’y a donc pas de descripteurs perceptifs ou d’espaces. L’approche de la spatialisation y est donc très basique voir simpliste. Comme nous le verrons dans les sections plus pratiques, cela impose des techniques de mixages relativement complexes à fin de contourner ses limitations.\n\n\n\n\n\n\nNote\n\n\n\nMalheureusement la plupart des moteurs de mixage orienté objet souffrent des mêmes lacunes, y compris le Dolby Atmos. L’exception principale est l’IRCAM Spat ainsi que le Spat Revolution de FLUX:: Immersive.\n\n\n\n\n35.1.4 Inscription des méta-données dans un fichier audio\nL’ADM décrit la possibilité d’inscrire les méta-données de mixage directement dans un fichier audio, lui-même contenant l’ensemble des données audio nécessaire. Dans le cadre d’un mixage orienté objet, ce fichier audio peut posséder autant de canaux que d’objet déclarer. Le format retenu pour les stockage de ces informations est le BW64 (Broadcast Wavefile 64 bit).\n\n\n\n\n\n\nNote\n\n\n\nLe BW64 est une extension du format BWF. Tous deux sont églament définis dans des recommandations de l’ITU. Ces fichiers prenent la forme de simple fichiers wave (monfichier.wav).\nEgalement, on parle d’une entête de fichier, pour qualifier l’ensemble des métadonnées (nom, type de fichier, conteneur, etc.) précédent la donnée utile (ici, les échantillons audio). Attention, les métadonnées ne sont pas toutes relative à l’ADM. La plupart les fichiers possèdent des métadonnées pour indiquer aux programmes comment exploiter les données qu’ils stockent.\n\n\n\n\n\n\n\n\nFigure 35.2: Structure d’un fichier wave\n\n\n\n\n\n\n\nFigure 35.3: Structure d’un fichier bw64\n\n\n\n\n\n\nIllustations extraites du document BS.2088-2 de l’ITU\n\n\n\nLe figure Figure 35.3 fait mention de plusieurs “chunk” (section, bloc) nommé “axml”, “bxml”, “sxml”, “chna”. La globalité des informations sont stockés sous la forme d’XML dans les chunks “axml”, “bxml” ou “sxml”. Le chunk “chna” stocke les informations permettant de faire le liens entre les données audios et leur description dans l’ADM. Il est en général recommandé d’utiliser le chunk “axml” (le “bxml” est alors plutôt utilisés pour les sur-couches, ou profiles, à l’ADM)."
+    "title": "38  Mixage orienté objet",
+    "section": "38.1 L’Audio Definition Model",
+    "text": "38.1 L’Audio Definition Model\n\n38.1.1 Présentation\nL’Audio Definition Model est une autre recommandation de l’ITU, dont la dernière édition date de 2019. Ce papier concentre beaucoup d’informations importantes. Principalement, il s’agit de décrire une base commune, espérant devenir une base commune entre les différents acteurs de l’audio orienté objet. Le premier objectif est donc d’assurer l’interopérabilité entre les différentes solutions de mixage orienté objet.\nTechniquement, l’ADM est donc un catalogue de descripteurs d’audio. Pour chaque canal audio, un certain nombre d’informations textuelles y sont associées. Elles sont donc lisibles par un être humain, et éditables.\n\n\n38.1.2 Description des métadonnées\nL’ADM permet la représentation de quatre “types” d’audio :\n\nLe channel-based ou orienté-canal\nL’HOA ou Ambisonie d’ordre plus élevé\nLes Matrix ou formats matricés\nLes objets\n\n\n\n\n\n\n\nAvertissement\n\n\n\nLe mot “objet” a deux sens dans la documentation de l’ADM. Un objet est un format, permettant le rendu dynamique d’un élément sonore (changement de position, de volume, etc.). Cependant, un objet est également un contenu, qui permet de référencer un bloc d’échantillons d’un canal audio.\nEn ce sens un objet audio en ADM peut représenter le canal d’un flux orienté objet, le canal d’un flux HOA, un élément d’une matrice ou un objet sonore !\n\n\n\n\n\nFigure 38.1: Organigramme de l’ADM\n\n\nL’ADM permet de définir plusieurs programmes, appelés “audioProgramme”. Prenons comme exemple le cas d’une série télévisée diffusée en France et en Grande-Bretagne. Nous aurions, dans ce cas, un premier audioProgramme contenant les voix françaises et le reste de la bande-son, puis ,un second contenant les voix anglaises et le reste de la bande-son. Nous aurions alors trois contenus audio (appelés audioContent) : les voix anglaises, les voix françaises et le reste de la bande-son (bruitages, montage son, musique, etc.). L’audioProgramme “version anglaise” contiendrait le audioContent voix anglaise et le reste de la bande son, celui “version française” contiendrait les audioContent voix française et le reste de la bande son. Ainsi, le spectateur peut choisir d’écouter l’audioProgramme qu’il préfère, de façon interactive.\nChacun de ces audioContent contiennent eux-même des objets, appelés audioObject. Dans notre exemple, nous aurions différents objets dans l’audioContent voix française correspondant aux différents comédiennes et comédiens. Ces audioObject permettent d’indiquer quels échantillons audio du fichier BW64 sont concernés. Il convient alors d’indiquer quel est le format audio de ces échantillons. Les audioObject pointent vers un audioPack qui lui même pointe vers un certain nombre de sous modules permettant de caractériser intégralement le format audio et où il doit être positionné dans l’espace.\nSi l’audioObject est de type “directSpeaker”, on l’affecte à un haut-parleur, dont on renseigne une position fixe. Si ce haut-parleur existe dans l’arrangement de haut-parleurs connecté au décodeur ADM, le signal y est routé, sinon on interpole avec les haut-parleurs les plus proches.\nSi l’audioObject est de type ambisonique, on cherche les autres objets appartenant au même flux, puis on décode l’ensemble, sur le système connecté au décodeur ADM.\nSi l’audioObject est la composante d’une matrice, on cherche les autres objets appartenant au même flux, puis on dématrice l’ensemble vers nouvel audioPack de type “directSpeaker”.\nSi l’audioObject est de type “object”, on regarde ses métadonnées de spatialisation puis on interpole cette position en utilisant les haut-parleurs les plus proches du point indiqué.\n\n\n\n\n\n\nAstuce\n\n\n\nGardons en tête que les audioObject “directSpeaker” ou ambisonique sont des mixages. Les scènes sonores qu’ils représentent sont statiques et immuables. Un audioObject de format objet contient un élément sonore (une voix, un instrument, un bruitage), que le décodeur ADM va ensuite mixer. Un objet peut donc être interactif. L’utilisateur pourrait changer son volume, sa position, etc.\n\n\n\n\n38.1.3 Les métadonnées de spatialisation\nL’ADM n’intègre qu’un jeu de paramètre très sommaire :\n\nLe niveau\nLa position (en coordonnées cartésiennes et sphériques)\nLa taille et diffusion de la source\n\nLe niveau est un simple réglage de gain. La position permet de placer l’objet dans un espace virtuel en trois dimensions et selon deux systèmes de coordonnées. On préfère généralement le système sphérique, plus proche de notre perception sonore, cependant, la description de certains mouvements est plus simple dans un repère plutôt qu’un autre. Le paramètre de distance permet de placer une source entre les haut-parleurs et le point d’écoute idéal.\nLa largeur permet de jouer sur l’étalement de l’objet dans l’espace. En pratique, accroître ce paramètre augmente le nombre de haut-parleurs contribuant à la diffusion de l’objet sonore. Associé à la taille, le paramètre de diffusion permet d’ajouter de la décorrélation sur les haut-parleurs contribuant à la largeur de restitution de la source.\nIl n’y a donc pas de descripteurs perceptifs ou d’espaces. L’approche de la spatialisation y est donc très basique, voire simpliste. Comme nous le verrons dans les sections plus pratiques, cela impose des techniques de mixage relativement complexes à fin de contourner ses limitations.\n\n\n\n\n\n\nNote\n\n\n\nMalheureusement la plupart des moteurs de mixage orienté objet souffrent de ces mêmes lacunes, y compris le Dolby Atmos. L’exception principale est l’IRCAM Spat ainsi que le Spat Revolution de FLUX:: Immersive.\n\n\n\n\n38.1.4 Inscription des métadonnées dans un fichier audio\nL’ADM décrit la possibilité d’inscrire les métadonnées de mixage directement dans un fichier audio, contenant lui-même l’ensemble des données audio nécessaires. Dans le cadre d’un mixage orienté objet, ce fichier audio peut posséder autant de canaux que d’objets déclarés. Le format retenu pour les stockages de ces informations est le BW64 (Broadcast Wavefile 64 bit).\n\n\n\n\n\n\nNote\n\n\n\nLe BW64 est une extension du format BWF. Tous deux sont également définis dans des recommandations de l’ITU. Ces fichiers prennent la forme de simples fichiers “wave” (monfichier.wav).\nÉgalement, on parle d’un en-tête de fichier, pour qualifier l’ensemble des métadonnées (nom, type de fichier, conteneur, etc.) précèdent la donnée utile (ici, les échantillons audio). Attention, les métadonnées ne sont pas toutes relatives à l’ADM. La plupart les fichiers possèdent des métadonnées pour indiquer aux programmes comment exploiter les données qu’ils stockent.\n\n\n\n\n\n\n\n\nFigure 38.2: Structure d’un fichier wave\n\n\n\n\n\n\n\nFigure 38.3: Structure d’un fichier bw64\n\n\n\n\n\n\nIllustations extraites du document BS.2088-2 de l’ITU\n\n\n\nLa figure Figure 38.3 fait mention de plusieurs “chunk” (section, bloc) nommé “axml”, “bxml”, “sxml”, “chna”. La globalité des informations est stockée sous la forme d’un XML dans les chunks “axml”, “bxml” ou “sxml”. Le chunk “chna” stocke les informations permettant de faire les liens entre les données audio et leur description dans l’ADM. Il est en général recommandé d’utiliser le chunk “axml” (le “bxml” est alors plutôt utilisé pour les surcouches à l’ADM, aussi appelés profiles)."
   },
   {
     "objectID": "spatialisation/mix-obj.html#les-profils-adm",
     "href": "spatialisation/mix-obj.html#les-profils-adm",
-    "title": "35  Mixage orienté objet",
-    "section": "35.2 Les profils ADM",
-    "text": "35.2 Les profils ADM\nFraunhofer MPEG-H ADM Profile\nDolby"
+    "title": "38  Mixage orienté objet",
+    "section": "38.2 Les profils ADM",
+    "text": "38.2 Les profils ADM\nCertains constructeurs ont choisis de proposer des sur-spécification à l’ADM, aussi appelés “profils”. Ces profils ont généralement deux buts :\n\nRajouter des métadonnées spécifiques à l’utilisation de codec audio propriétaire.\nLimite les spécifications de l’ADM pour correspondre aux usages de certains domaines\n\nLes deux principaux profils connus sont ceux du MPEG-H de Fraunhofer et de Dolby\n\n\n\n\n\n\nImportant\n\n\n\nAucun des deux constructeurs n’ont choisit de maintenir le support de l’ambisonique dans leur format.\nDe plus, il n’existe à ce jour, aucun outil pour convertir un ADM d’un profil quelquonque vers un ADM Dolby. La compatibilité des formats n’est donc pas assurée.\n\n\n## L’ADM Sériel (S-ADM)\nPour certaines applications, comme le live ou le streaming, la description des métadonnées sous forme d’un dictionnaire XML n’est pas adéquate. Ici, les flux audio sont en temps réel et ne dépendent pas nécessairement d’un fichier audio. Il existe donc une norme sérielle de l’ADM, permettant de transmettre les métadonnées dans une connexion numérique, type AES, MADI ou encore à travers de l’audio sur IP.\nLa description du S-ADM est disponible dans l’ITU-R BS.2125."
   },
   {
     "objectID": "spatialisation/mix-obj.html#ladm-osc",
     "href": "spatialisation/mix-obj.html#ladm-osc",
-    "title": "35  Mixage orienté objet",
-    "section": "35.3 L’ADM OSC",
-    "text": "35.3 L’ADM OSC"
+    "title": "38  Mixage orienté objet",
+    "section": "38.3 L’ADM OSC",
+    "text": "38.3 L’ADM OSC\nL’ADM OSC est une initiative menée par FLUX:: Immersive, L-Acoustic et Radio France pour proposer une base de communication commune entre les différents moteurs de mixage orienté objet dans le monde du Live. Cela assure donc une interopérabilité minimale entre les principaux acteurs du milieu. À ce jour, les acteurs suivants se sont joints à la conversation : d&b Audiotechnik, DiGiCo, Dolby, Lawo, Magix, Merging Technologies, Meyer Sound, Steinberg.\nLes logiciels implémentant l’ADM OSC comptent SPAT Revolution (FLUX::SE), L-ISA Controller (L-Acoustics), Ovation (Merging Technologies), Nuendo (Steinberg), SpaceMap Go (Meyer Sound), QLAB 5 (Figure 53), Space Controller (Sound Particles), Modulo Kinetic (Modulo Pi), Iosono (Barco).\nLe code source de ce projet, développé sous une licence open source, est disponible dans ce répository github"
   },
   {
-    "objectID": "spatialisation/mix-obj.html#létape-de-rendu",
-    "href": "spatialisation/mix-obj.html#létape-de-rendu",
-    "title": "35  Mixage orienté objet",
-    "section": "35.4 L’étape de rendu",
-    "text": "35.4 L’étape de rendu\nBS.2127 : Audio Definition Model renderer for advanced sound systems\nCommon definitions for the Audio Definition Model"
+    "objectID": "spatialisation/mix-obj.html#létape-de-rendue",
+    "href": "spatialisation/mix-obj.html#létape-de-rendue",
+    "title": "38  Mixage orienté objet",
+    "section": "38.4 L’étape de rendue",
+    "text": "38.4 L’étape de rendue\nTout ce que nous avons vu pour l’instant, au sujet de l’ADM, ne concerne au final que la description d’un mixage, et nous n’avons pour l’instant pas envisagé le “comment”. En d’autres termes, nous avons une liste d’ingrédients, mais ne savons pas comment les mélanger et les cuisiner entre eux.\nIl existe une recommandation de l’ITU (BS-2127) consacrée au sujet du “renderer”, ou processeur de rendu. On fournit donc audio et métadonnées à ce moteur de rendu, qui, grâce à l’analyse de ces métadonnées et au système de haut-parleurs qui lui est connecté, peut calculer le gain de reproduction de chaque source et chaque haut-parleur.\n\n38.4.1 Description de la loi de panoramique\nLa loi de panoramique recommandée par l’ITU BS-2127 empreinte beaucoup au LBAP (voir la section 37.1.3). Nous sommes donc sur une loi de panoramique favorisant un point d’écoute idéal, situé à égale distance des haut-parleurs.\n\n\n\n\n\n\nNote\n\n\n\nIci, la distance ne s’exprime qu’entre les haut-parleurs et le point d’écoute idéal. En d’autres termes, la distance maximale correspond au plan des haut-parleurs, la distance minimale correspond au point d’écoute idéale. La distance ne contribue pas au gain de la source, mais plutôt à une sorte de spreading.\n\n\nL’algorithme se décrit de la façon suivante :\n\nOn recherche les couches (en élévation) de haut-parleurs au-dessus et en dessous de la source. On calcule alors le gain \\(z\\) en interpolant entre les deux couches.\nSur chaque couche trouvée, on recherche les deux lignes de haut-parleurs en avant et en arrière de la source. On calcule ainsi le gain \\(y\\) en interpolant entre les deux lignes.\nEnfin, sur chaque ligne trouvée, on recherche la paire de haut-parleurs à gauche et à droit de la source, permettant finalement de calculer le gain \\(x\\) entre les deux haut-parleurs.\n\n\n\n\n\n\n\nNote\n\n\n\nSi une source est positionnée sur un haut-parleur, alors seul celui-ci contribue à la diffusion sonore.\n\n\n\n\n38.4.2 Largeur et décorrélation\nLe paramètre de “size” ou taille permet de faire paraître une source plus grande en augmentant le nombre de haut-parleurs contribuant à la diffusion de la source. Ce paramètre “size” est enfaîte un macro-paramètre qui manipule trois autres paramètres:\n\nLa largeur (étalement horizontal)\nLa hauteur (étalement vertical)\nLa profondeur (étalement dans la profondeur)\n\nPar principe de source fantôme, augmenter le nombre de haut-parleurs contribuant à la diffusion d’une source n’augmente pas véritablement sa taille apparente dans notre perception de la scène sonore. La source vient plutôt se positionner au barycentre des haut-parleurs, pondéré par leur énergie de diffusion. Pour réellement créer un effet de “taille”, il est nécessaire d’introduire une différence suffisamment importante pour que notre oreille ait l’illusion d’un étalement dans l’espace. Cette différence doit également être suffisamment faible pour ne pas déformer le signal d’origine. On appelle cela la décorrélation. L’ITU recommande ici l’utilisation de filtres passe-tout sur chaque canal de diffusions.\n\n\n38.4.3 Décodage ambisonique\nL’ITU décrit l’utilisation d’un décodage AllRAD. Voir la (section HOA-decode-allrad?)"
   },
   {
     "objectID": "spatialisation/binaural.html#sec-transaural",
     "href": "spatialisation/binaural.html#sec-transaural",
-    "title": "36  Le binaural",
-    "section": "36.1 Le transaural",
-    "text": "36.1 Le transaural"
+    "title": "35  Le binaural",
+    "section": "35.1 Le transaural",
+    "text": "35.1 Le transaural"
+  },
+  {
+    "objectID": "spatialisation/spat-perceptif.html#lapproche-perceptive",
+    "href": "spatialisation/spat-perceptif.html#lapproche-perceptive",
+    "title": "37  Orienté canal",
+    "section": "37.1 L’approche perceptive",
+    "text": "37.1 L’approche perceptive\n\n37.1.1 le VBAP\n\n\n37.1.2 Le VBIP\n\n\n37.1.3 Le LBAP\n\n\n37.1.4 Autres variantes"
+  },
+  {
+    "objectID": "spatialisation/spat-perceptif.html#lapproche-matricielle",
+    "href": "spatialisation/spat-perceptif.html#lapproche-matricielle",
+    "title": "37  Orienté canal",
+    "section": "37.2 L’approche matricielle",
+    "text": "37.2 L’approche matricielle\n\n37.2.1 Le DBAP\n\n\n37.2.2 Le KNN"
+  },
+  {
+    "objectID": "spatialisation/ambisonique.html#HOA-decode-allrad",
+    "href": "spatialisation/ambisonique.html#HOA-decode-allrad",
+    "title": "38  L’ambisonique",
+    "section": "38.1 Décodeurs",
+    "text": "38.1 Décodeurs"
   },
   {
     "objectID": "outils-spat/mix-obj.html#mpeg-h-et-adm",
@@ -523,5 +544,89 @@
     "title": "45  Le mixage orienté objet",
     "section": "45.4 FLUX:: Spat Revolution",
     "text": "45.4 FLUX:: Spat Revolution"
+  },
+  {
+    "objectID": "spatialisation/spat-historique.html#alan-blumlein-1903-1942",
+    "href": "spatialisation/spat-historique.html#alan-blumlein-1903-1942",
+    "title": "33  Historique de la spatialisation",
+    "section": "33.2 Alan Blumlein (1903-1942)",
+    "text": "33.2 Alan Blumlein (1903-1942)\nBiographie\nUnited Kingdom patent 394325 ‘Improvements in and relating to Sound-transmission, Sound-recording and Sound-reproducing Systems’\nThe Inventor of Stereo: The life and works of Alan Dower Blumlein\nGerzon, Michael (1994). “Application of Blumlein Shuffling to Stereo Microphone Techniques”\nCouple de prise de son Blumlein"
+  },
+  {
+    "objectID": "spatialisation/spat-historique.html",
+    "href": "spatialisation/spat-historique.html",
+    "title": "33  Historique de la spatialisation",
+    "section": "",
+    "text": "## Harvey Fletcher ()\nBiographie\nStereophonie 1931-1932 ## Alan Blumlein (1903-1942)\nBiographie\nUnited Kingdom patent 394325 ‘Improvements in and relating to Sound-transmission, Sound-recording and Sound-reproducing Systems’\nThe Inventor of Stereo: The life and works of Alan Dower Blumlein\nGerzon, Michael (1994). “Application of Blumlein Shuffling to Stereo Microphone Techniques”"
+  },
+  {
+    "objectID": "spatialisation/spat-historique.html#clément-ader-1841-1925",
+    "href": "spatialisation/spat-historique.html#clément-ader-1841-1925",
+    "title": "33  Historique de la spatialisation",
+    "section": "33.1 Clément Ader (1841-1925)",
+    "text": "33.1 Clément Ader (1841-1925)\nBiographie\nThéâtrophone\n## Arthur C.Keller (1901-1983) & Harvey Fletcher (1884-1981)\nBiographie d’A. C. Keller\nBiographie de H. Fletcher\nStereophonie 1931-1932"
+  },
+  {
+    "objectID": "spatialisation/spat-historique.html#michael-gerzon-1945-1996",
+    "href": "spatialisation/spat-historique.html#michael-gerzon-1945-1996",
+    "title": "33  Historique de la spatialisation",
+    "section": "33.6 Michael Gerzon (1945-1996)",
+    "text": "33.6 Michael Gerzon (1945-1996)\nBiographie\nSite homage\nArchives d’articles Hi-Fi news\nAmbisonique du 1e ordre\nArchives sonores des enregistrements de Michael Gerzon\nInto The Soundfield\nPractical periphony: the reproduction of full-sphere sound"
+  },
+  {
+    "objectID": "methode-mixage/pieges.html",
+    "href": "methode-mixage/pieges.html",
+    "title": "31  Pièges et erreurs à éviter",
+    "section": "",
+    "text": "The Loudness War: Background, Speculation, and Recommendations"
+  },
+  {
+    "objectID": "spatialisation/spat-historique.html#iannis-xenakis-1922-2001",
+    "href": "spatialisation/spat-historique.html#iannis-xenakis-1922-2001",
+    "title": "33  Historique de la spatialisation",
+    "section": "33.4 Iannis Xenakis (1922-2001)",
+    "text": "33.4 Iannis Xenakis (1922-2001)\nBiographie"
+  },
+  {
+    "objectID": "spatialisation/spat-historique.html#pierre-schaeffer-1910-1995",
+    "href": "spatialisation/spat-historique.html#pierre-schaeffer-1910-1995",
+    "title": "33  Historique de la spatialisation",
+    "section": "33.3 Pierre Schaeffer (1910-1995)",
+    "text": "33.3 Pierre Schaeffer (1910-1995)\nBiographie"
+  },
+  {
+    "objectID": "spatialisation/spat-historique.html#pierre-henry-1927-2017",
+    "href": "spatialisation/spat-historique.html#pierre-henry-1927-2017",
+    "title": "33  Historique de la spatialisation",
+    "section": "33.5 Pierre Henry (1927-2017)",
+    "text": "33.5 Pierre Henry (1927-2017)\nBiographie"
+  },
+  {
+    "objectID": "spatialisation/spat-historique.html#lircam-institut-de-recherche-et-coordination-acoustiquemusique-1970",
+    "href": "spatialisation/spat-historique.html#lircam-institut-de-recherche-et-coordination-acoustiquemusique-1970",
+    "title": "33  Historique de la spatialisation",
+    "section": "33.7 L’IRCAM : Institut de recherche et coordination acoustique/musique (1970)",
+    "text": "33.7 L’IRCAM : Institut de recherche et coordination acoustique/musique (1970)"
+  },
+  {
+    "objectID": "spatialisation/spat-historique.html#dolby",
+    "href": "spatialisation/spat-historique.html#dolby",
+    "title": "33  Historique de la spatialisation",
+    "section": "33.8 Dolby",
+    "text": "33.8 Dolby"
+  },
+  {
+    "objectID": "spatialisation/spat-historique.html#dts",
+    "href": "spatialisation/spat-historique.html#dts",
+    "title": "33  Historique de la spatialisation",
+    "section": "33.9 DTS",
+    "text": "33.9 DTS"
+  },
+  {
+    "objectID": "spatialisation/spat-historique.html#sony",
+    "href": "spatialisation/spat-historique.html#sony",
+    "title": "33  Historique de la spatialisation",
+    "section": "33.10 Sony",
+    "text": "33.10 Sony"
   }
 ]

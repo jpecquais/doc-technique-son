@@ -69,9 +69,11 @@ L'ADM n'intègre qu'un jeu de paramètre très sommaire :
 
 + Le niveau
 + La position (en coordonnées cartésiennes et sphériques)
-+ La largeur apparente de la source
++ La taille et diffusion de la source
 
-Le niveau est un simple réglage de gain. La position permet de placer l'objet dans un espace virtuel en trois dimensions et selon deux systèmes de coordonnées. On préfère généralement le système sphérique, plus proche de notre perception sonore, cependant, la description de certains mouvements est plus simple dans un repère plutôt qu'un autre. La largeur permet de jouer sur l'étalement de l'objet dans l'espace. En pratique, accroître ce paramètre augmente le nombre de haut-parleurs contribuant à la diffusion de l'objet sonore.
+Le niveau est un simple réglage de gain. La position permet de placer l'objet dans un espace virtuel en trois dimensions et selon deux systèmes de coordonnées. On préfère généralement le système sphérique, plus proche de notre perception sonore, cependant, la description de certains mouvements est plus simple dans un repère plutôt qu'un autre. Le paramètre de distance permet de placer une source **entre les haut-parleurs et le point d'écoute idéal**.
+
+La largeur permet de jouer sur l'étalement de l'objet dans l'espace. En pratique, accroître ce paramètre augmente le nombre de haut-parleurs contribuant à la diffusion de l'objet sonore. Associé à la taille, le paramètre de diffusion permet d'ajouter de la décorrélation sur les haut-parleurs contribuant à la largeur de restitution de la source.
 
 Il n'y a donc pas de descripteurs perceptifs ou d'espaces. L'approche de la spatialisation y est donc très basique, voire simpliste. Comme nous le verrons dans les sections plus pratiques, cela impose des techniques de mixage relativement complexes à fin de contourner ses limitations.
 
@@ -118,11 +120,19 @@ Les deux principaux profils connus sont ceux du [MPEG-H de Fraunhofer](https://w
 
 Aucun des deux constructeurs n'ont choisit de maintenir le support de l'ambisonique dans leur format.
 
+De plus, il n'existe à ce jour, aucun outil pour convertir un ADM d'un profil quelquonque vers un ADM Dolby. La compatibilité des formats n'est donc pas assurée.
+
 :::
+
+## L'ADM Sériel (S-ADM)
+
+Pour certaines applications, comme le live ou le streaming, la description des métadonnées sous forme d'un dictionnaire XML n'est pas adéquate. Ici, les flux audio sont en temps réel et ne dépendent pas nécessairement d'un fichier audio. Il existe donc une norme sérielle de l'ADM, permettant de transmettre les métadonnées dans une connexion numérique, type AES, MADI ou encore à travers de l'audio sur IP.
+
+La description du S-ADM est disponible dans l'[ITU-R BS.2125](https://www.itu.int/rec/R-REC-BS.2125/en).
 
 ## L'ADM OSC
 
-L'ADM OSC est une initiative menée par FLUX:: Immersive, L-Acoustic et Radio France pour proposer une base de communication commune entre les différents moteurs de mixage orienté objet dans le monde du Live. Cela assure donc une interopérabilité minimal entre les principaux acteurs du milieu. A ce jour, les acteurs suivants se sont join à la conversation : d&b Audiotechnik, DiGiCo, Dolby, Lawo, Magix, Merging Technologies, Meyer Sound, Steinberg.
+L'ADM OSC est une initiative menée par FLUX:: Immersive, L-Acoustic et Radio France pour proposer une base de communication commune entre les différents moteurs de mixage orienté objet dans le monde du Live. Cela assure donc une interopérabilité minimale entre les principaux acteurs du milieu. À ce jour, les acteurs suivants se sont joints à la conversation : d&b Audiotechnik, DiGiCo, Dolby, Lawo, Magix, Merging Technologies, Meyer Sound, Steinberg.
 
 Les logiciels implémentant l'ADM OSC comptent SPAT Revolution (FLUX::SE), L-ISA Controller (L-Acoustics), Ovation (Merging Technologies), Nuendo (Steinberg), SpaceMap Go (Meyer Sound), QLAB 5 (Figure 53), Space Controller (Sound Particles), Modulo Kinetic (Modulo Pi), Iosono (Barco).
 
@@ -130,6 +140,50 @@ Le code source de ce projet, développé sous une licence open source, est dispo
 
 ## L'étape de rendue
 
-[BS.2127 : Audio Definition Model renderer for advanced sound systems](https://www.itu.int/rec/r-rec-bs.2127/en)
+Tout ce que nous avons vu pour l'instant, au sujet de l'ADM, ne concerne au final que la description d'un mixage, et nous n'avons pour l'instant pas envisagé le "comment". En d'autres termes, nous avons une liste d'ingrédients, mais ne savons pas comment les mélanger et les cuisiner entre eux.
+
+Il existe une [recommandation de l'ITU (BS-2127)](https://www.itu.int/rec/r-rec-bs.2127/en) consacrée au sujet du "renderer", ou processeur de rendu. On fournit donc audio et métadonnées à ce moteur de rendu, qui, grâce à l'analyse de ces métadonnées et au système de haut-parleurs qui lui est connecté, peut calculer le gain de reproduction de chaque source et chaque haut-parleur.
+
+### Description de la loi de panoramique
+
+La loi de panoramique recommandée par l'ITU BS-2127 empreinte beaucoup au **LBAP** (voir la [section -@sec-lbap]). Nous sommes donc sur une loi de panoramique favorisant un point d'écoute idéal, situé à égale distance des haut-parleurs.
+
+:::{.callout-note}
+
+Ici, la distance ne s'exprime qu'entre les haut-parleurs et le point d'écoute idéal. En d'autres termes, la distance maximale correspond au plan des haut-parleurs, la distance minimale correspond au point d'écoute idéale. La distance ne contribue pas au gain de la source, mais plutôt à une sorte de spreading.
+
+:::
+
+L'algorithme se décrit de la façon suivante :
+
++ On recherche les couches (en élévation) de haut-parleurs au-dessus et en dessous de la source. On calcule alors le gain $z$ en interpolant entre les deux couches.
++ Sur chaque couche trouvée, on recherche les deux lignes de haut-parleurs en avant et en arrière de la source. On calcule ainsi le gain $y$ en interpolant entre les deux lignes.
++ Enfin, sur chaque ligne trouvée, on recherche la paire de haut-parleurs à gauche et à droit de la source, permettant finalement de calculer le gain $x$ entre les deux haut-parleurs.
+
+:::{.callout-note}
+
+Si une source est positionnée sur un haut-parleur, alors seul celui-ci contribue à la diffusion sonore.
+
+:::
+
+### Largeur et décorrélation
+
+Le paramètre de "size" ou taille permet de faire paraître une source plus grande en augmentant le nombre de haut-parleurs contribuant à la diffusion de la source. Ce paramètre "size" est enfaîte un macro-paramètre qui manipule trois autres paramètres:
+
++ La largeur (étalement horizontal)
++ La hauteur (étalement vertical)
++ La profondeur (étalement dans la profondeur)
+
+Par principe de source fantôme, augmenter le nombre de haut-parleurs contribuant à la diffusion d'une source n'augmente pas véritablement sa taille apparente dans notre perception de la scène sonore. La source vient plutôt se positionner au [barycentre](https://fr.wikipedia.org/wiki/Barycentre) des haut-parleurs, pondéré par leur énergie de diffusion. Pour réellement créer un effet de "taille", il est nécessaire d'introduire une différence suffisamment importante pour que notre oreille ait l'illusion d'un étalement dans l'espace. Cette différence doit également être suffisamment faible pour ne pas déformer le signal d'origine. On appelle cela la décorrélation. L'ITU recommande ici l'utilisation de filtres passe-tout sur chaque canal de diffusions.
+
+### Décodage ambisonique
+
+L'ITU décrit l'utilisation d'un décodage AllRAD. Voir la [section -@HOA-decode-allrad]
+
+<!--
 
 [Common definitions for the Audio Definition Model](https://www.itu.int/rec/R-REC-BS.2094/en)
+
+[Spatial Audio: Channels, Objects, and Ambisonics](https://www.aes.org/e-lib/browse.cfm?elib=19873)
+
+-->

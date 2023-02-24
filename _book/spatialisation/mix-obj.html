@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.208">
+<meta name="generator" content="quarto-1.3.189">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Guide pratique des techniques du son - 35&nbsp; Mixage orienté objet</title>
+<title>Guide pratique des techniques du son - 38&nbsp; Mixage orienté objet</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../spatialisation/binaural.html" rel="next">
-<link href="../spatialisation/espaces-hautparlants.html" rel="prev">
+<link href="../spatialisation/wfs.html" rel="next">
+<link href="../spatialisation/ambisonique.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -61,6 +61,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -68,16 +69,11 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../spatialisation/spat-introduction.html">Introduction à la spatialisation sonore</a></li><li class="breadcrumb-item"><a href="../spatialisation/mix-obj.html"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Mixage orienté objet</span></a></li></ol></nav>
-      <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Mixage orienté objet</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
       </button>
     </div>
   </nav>
@@ -85,20 +81,20 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Guide pratique des techniques du son</a> 
         <div class="sidebar-tools-main">
-    <a href="../Guide-pratique-des-techniques-du-son.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+    <a href="../Guide-pratique-des-techniques-du-son.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
 </div>
     </div>
       </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
+      <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-        </div>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -336,22 +332,22 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../spatialisation/mix-obj.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Mixage orienté objet</span></a>
+  <a href="../spatialisation/binaural.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Le binaural</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../spatialisation/binaural.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Le binaural</span></a>
+  <a href="../spatialisation/spat-perceptif.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Orienté canal</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../spatialisation/spat-perceptif.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Approche perceptive</span></a>
+  <a href="../spatialisation/ambisonique.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">L’ambisonique</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../spatialisation/ambisonique.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">L’ambisonique</span></a>
+  <a href="../spatialisation/mix-obj.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Mixage orienté objet</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -404,23 +400,27 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#laudio-definition-model" id="toc-laudio-definition-model" class="nav-link active" data-scroll-target="#laudio-definition-model"><span class="toc-section-number">35.1</span>  L’Audio Definition Model</a>
+  <li><a href="#laudio-definition-model" id="toc-laudio-definition-model" class="nav-link active" data-scroll-target="#laudio-definition-model"><span class="toc-section-number">38.1</span>  L’Audio Definition Model</a>
   <ul class="collapse">
-  <li><a href="#présentation" id="toc-présentation" class="nav-link" data-scroll-target="#présentation"><span class="toc-section-number">35.1.1</span>  Présentation</a></li>
-  <li><a href="#description-des-métadonnés" id="toc-description-des-métadonnés" class="nav-link" data-scroll-target="#description-des-métadonnés"><span class="toc-section-number">35.1.2</span>  Description des métadonnés</a></li>
-  <li><a href="#les-métadonnées-de-spatialisation" id="toc-les-métadonnées-de-spatialisation" class="nav-link" data-scroll-target="#les-métadonnées-de-spatialisation"><span class="toc-section-number">35.1.3</span>  Les métadonnées de spatialisation</a></li>
-  <li><a href="#inscription-des-méta-données-dans-un-fichier-audio" id="toc-inscription-des-méta-données-dans-un-fichier-audio" class="nav-link" data-scroll-target="#inscription-des-méta-données-dans-un-fichier-audio"><span class="toc-section-number">35.1.4</span>  Inscription des méta-données dans un fichier audio</a></li>
+  <li><a href="#présentation" id="toc-présentation" class="nav-link" data-scroll-target="#présentation"><span class="toc-section-number">38.1.1</span>  Présentation</a></li>
+  <li><a href="#description-des-métadonnées" id="toc-description-des-métadonnées" class="nav-link" data-scroll-target="#description-des-métadonnées"><span class="toc-section-number">38.1.2</span>  Description des métadonnées</a></li>
+  <li><a href="#les-métadonnées-de-spatialisation" id="toc-les-métadonnées-de-spatialisation" class="nav-link" data-scroll-target="#les-métadonnées-de-spatialisation"><span class="toc-section-number">38.1.3</span>  Les métadonnées de spatialisation</a></li>
+  <li><a href="#inscription-des-métadonnées-dans-un-fichier-audio" id="toc-inscription-des-métadonnées-dans-un-fichier-audio" class="nav-link" data-scroll-target="#inscription-des-métadonnées-dans-un-fichier-audio"><span class="toc-section-number">38.1.4</span>  Inscription des métadonnées dans un fichier audio</a></li>
   </ul></li>
-  <li><a href="#les-profils-adm" id="toc-les-profils-adm" class="nav-link" data-scroll-target="#les-profils-adm"><span class="toc-section-number">35.2</span>  Les profils ADM</a></li>
-  <li><a href="#ladm-osc" id="toc-ladm-osc" class="nav-link" data-scroll-target="#ladm-osc"><span class="toc-section-number">35.3</span>  L’ADM OSC</a></li>
-  <li><a href="#létape-de-rendu" id="toc-létape-de-rendu" class="nav-link" data-scroll-target="#létape-de-rendu"><span class="toc-section-number">35.4</span>  L’étape de rendu</a></li>
+  <li><a href="#les-profils-adm" id="toc-les-profils-adm" class="nav-link" data-scroll-target="#les-profils-adm"><span class="toc-section-number">38.2</span>  Les profils ADM</a></li>
+  <li><a href="#ladm-osc" id="toc-ladm-osc" class="nav-link" data-scroll-target="#ladm-osc"><span class="toc-section-number">38.3</span>  L’ADM OSC</a></li>
+  <li><a href="#létape-de-rendue" id="toc-létape-de-rendue" class="nav-link" data-scroll-target="#létape-de-rendue"><span class="toc-section-number">38.4</span>  L’étape de rendue</a>
+  <ul class="collapse">
+  <li><a href="#description-de-la-loi-de-panoramique" id="toc-description-de-la-loi-de-panoramique" class="nav-link" data-scroll-target="#description-de-la-loi-de-panoramique"><span class="toc-section-number">38.4.1</span>  Description de la loi de panoramique</a></li>
+  <li><a href="#largeur-et-décorrélation" id="toc-largeur-et-décorrélation" class="nav-link" data-scroll-target="#largeur-et-décorrélation"><span class="toc-section-number">38.4.2</span>  Largeur et décorrélation</a></li>
+  <li><a href="#décodage-ambisonique" id="toc-décodage-ambisonique" class="nav-link" data-scroll-target="#décodage-ambisonique"><span class="toc-section-number">38.4.3</span>  Décodage ambisonique</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -429,7 +429,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Mixage orienté objet</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Mixage orienté objet</span></h1>
 </div>
 
 
@@ -462,16 +462,16 @@ Avertissement
 <p>Cette facilité de création de rendus différents n’épargne cependant pas les comportements parfois surprenants d’un mixage d’un système à un autre. Par exemple, un mixage réalisé sur une écoute quadriphonique risque d’être surprenant lors de son passage sur un arrangement 5.1. Il est généralement sage de travailler sur le système le plus grand que l’on souhaite cibler et de contrôler les “downmix”. L’inverse peut amener à certaines surprises.</p>
 </div>
 </div>
-<p>Plusieurs fabricants proposent des formats et des outils de mixage orienté objet. En tête, on retrouve Dolby et son Dolby Atmos, possédant au jour d’aujourd’hui la plus grande part de marché (intégration native dans Pro Tools et Logic Pro). DTS et Auro 3D proposent également leurs propres outils. Enfin, Freinhaufer a défini le codec MPEG-H, implémentant l’Audio Definition Model comme base de métadonnées. L’ADM étant un format ouvert, nous servira donc à décortiquer le fonctionnement de l’encodage et le décodage d’un mixage orienté objet.</p>
-<section id="laudio-definition-model" class="level2" data-number="35.1">
-<h2 data-number="35.1" class="anchored" data-anchor-id="laudio-definition-model"><span class="header-section-number">35.1</span> L’Audio Definition Model</h2>
-<section id="présentation" class="level3" data-number="35.1.1">
-<h3 data-number="35.1.1" class="anchored" data-anchor-id="présentation"><span class="header-section-number">35.1.1</span> Présentation</h3>
-<p>L’<a href="https://www.itu.int/rec/R-REC-BS.2076-2-201910-I/en">Audio Definition Model</a> est une autre recommendation de l’ITU, dont la dernière édition date de 2019. Ce papier concentre beaucoup d’informations importantes. Principalement, il s’agit de décrire une base commune, espérant devenir une base commune entre les différents acteurs de l’audio orienté objet. Le premier objectif est donc d’assurer l’inter-opérabilité entre les différentes solutions de mixage orienté objet.</p>
-<p>Techniquement, l’ADM est donc un catalogue de descripteurs d’audio. Pour chaque canaux audio, un certain nombre d’informations textuelles y sont associées. Elles sont donc <strong>lisibles</strong> par un être humain, et <strong>éditables</strong><!-- avec des outils simples (éditeur de texte)-->.</p>
+<p>Plusieurs fabricants proposent des formats et des outils de mixage orienté objet. En tête, on retrouve Dolby et son Dolby Atmos, possédant au jour d’aujourd’hui la plus grande part de marché (intégration native dans Pro Tools et Logic Pro). DTS et Auro 3D proposent également leurs propres outils. Enfin, Freinhaufer a défini le codec MPEG-H, implémentant l’Audio Definition Model comme base de métadonnées. L’ADM étant un format ouvert nous servira donc à décortiquer le fonctionnement de l’encodage et le décodage d’un mixage orienté objet.</p>
+<section id="laudio-definition-model" class="level2" data-number="38.1">
+<h2 data-number="38.1" class="anchored" data-anchor-id="laudio-definition-model"><span class="header-section-number">38.1</span> L’Audio Definition Model</h2>
+<section id="présentation" class="level3" data-number="38.1.1">
+<h3 data-number="38.1.1" class="anchored" data-anchor-id="présentation"><span class="header-section-number">38.1.1</span> Présentation</h3>
+<p>L’<a href="https://www.itu.int/rec/R-REC-BS.2076-2-201910-I/en">Audio Definition Model</a> est une autre recommandation de l’ITU, dont la dernière édition date de 2019. Ce papier concentre beaucoup d’informations importantes. Principalement, il s’agit de décrire une base commune, espérant devenir une base commune entre les différents acteurs de l’audio orienté objet. Le premier objectif est donc d’assurer l’interopérabilité entre les différentes solutions de mixage orienté objet.</p>
+<p>Techniquement, l’ADM est donc un catalogue de descripteurs d’audio. Pour chaque canal audio, un certain nombre d’informations textuelles y sont associées. Elles sont donc <strong>lisibles</strong> par un être humain, et <strong>éditables</strong><!-- avec des outils simples (éditeur de texte)-->.</p>
 </section>
-<section id="description-des-métadonnés" class="level3" data-number="35.1.2">
-<h3 data-number="35.1.2" class="anchored" data-anchor-id="description-des-métadonnés"><span class="header-section-number">35.1.2</span> Description des métadonnés</h3>
+<section id="description-des-métadonnées" class="level3" data-number="38.1.2">
+<h3 data-number="38.1.2" class="anchored" data-anchor-id="description-des-métadonnées"><span class="header-section-number">38.1.2</span> Description des métadonnées</h3>
 <p>L’ADM permet la représentation de quatre “types” d’audio :</p>
 <ul>
 <li>Le <em>channel-based</em> ou orienté-canal</li>
@@ -496,14 +496,14 @@ Avertissement
 <div id="fig-adm-struct" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="../_resources/bitmap/adm/admStruct.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;35.1: Organigrame de l’ADM</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;38.1: Organigramme de l’ADM</figcaption><p></p>
 </figure>
 </div>
-<p>L’ADM permet de définir plusieurs programmes, appelé “<em>audioProgramme</em>”. Prenons comme exemple le cas d’une série télévisée diffusée en France et en Grande-Bretagne. Dans ce cas, nous aurions un premier <em>audioProgramme</em> contenant les voix française et le reste de la bande son et un second contenant les voix anglaise et les reste de la bande son. Nous aurions alors trois <strong>contenus audio</strong> (appelés <em>audioContent</em>) : les voix anglaise, les voix française et le reste de la bande son (bruitages, montage son, musique, etc.). L’<em>audioProgramme</em> “version anglaise” contiendrait les <em>audioContent</em> voix anglaise et le reste de la bande son, celui “version française” contiendrait les <em>audioContent</em> voix française et le reste de la bande son. Dans ce cas, le spectateur peut choisir d’écouter l’<em>audioProgramme</em> qu’il préfère, de façon interactive.</p>
-<p>Chacun de ces <em>audioContent</em> contiennent eux-même des objets, appelés <em>audioObject</em>. Dans notre exemple, nous aurions différents objets dans l’<em>audioContent</em> voix française correspondant aux différents comédiennes et comédiens. Ces <em>audioObject</em> permettent d’indiquer quels échantillons audios du fichier BW64 sont concernés. Il convient alors d’indiquer quel est le format audio de ces échantillons. Les <em>audioObject</em> pointent alors vers un <em>audioPack</em> qui lui même pointera vers un certain nombre de sous modules permettant de caractériser intégralement le format audio et <strong>où il doit être positionné</strong> dans l’espace.</p>
-<p>Si l’<em>audioObject</em> est de type “directSpeaker”, on l’affect à un haut-parleur, dont on renseigne une position fixe. Si ce hautparleur existe dans l’arrangement de haut-parleurs connecté au décodeur ADM, le signal y est routé, sinon on interpole avec les haut-parleurs les plus proches.</p>
-<p>Si l’<em>audioObject</em> est de type ambisonique, on cherche les autres objets appartenants au même flux, puis on décode l’ensemble, sur le système connecté au décodeur ADM.</p>
-<p>Si l’<em>audioObject</em> est la composante d’une matrice, on cherche les autre objets appartenants au même flux, puis on dématrice l’ensemble vers nouvel <em>audioPack</em> de type “directSpeaker”.</p>
+<p>L’ADM permet de définir plusieurs programmes, appelés “<em>audioProgramme</em>”. Prenons comme exemple le cas d’une série télévisée diffusée en France et en Grande-Bretagne. Nous aurions, dans ce cas, un premier <em>audioProgramme</em> contenant les voix françaises et le reste de la bande-son, puis ,un second contenant les voix anglaises et le reste de la bande-son. Nous aurions alors trois <strong>contenus audio</strong> (appelés <em>audioContent</em>) : les voix anglaises, les voix françaises et le reste de la bande-son (bruitages, montage son, musique, etc.). L’<em>audioProgramme</em> “version anglaise” contiendrait le <em>audioContent</em> voix anglaise et le reste de la bande son, celui “version française” contiendrait les <em>audioContent</em> voix française et le reste de la bande son. Ainsi, le spectateur peut choisir d’écouter l’<em>audioProgramme</em> qu’il préfère, de façon interactive.</p>
+<p>Chacun de ces <em>audioContent</em> contiennent eux-même des objets, appelés <em>audioObject</em>. Dans notre exemple, nous aurions différents objets dans l’<em>audioContent</em> voix française correspondant aux différents comédiennes et comédiens. Ces <em>audioObject</em> permettent d’indiquer quels échantillons audio du fichier BW64 sont concernés. Il convient alors d’indiquer quel est le format audio de ces échantillons. Les <em>audioObject</em> pointent vers un <em>audioPack</em> qui lui même pointe vers un certain nombre de sous modules permettant de caractériser intégralement le format audio et <strong>où il doit être positionné</strong> dans l’espace.</p>
+<p>Si l’<em>audioObject</em> est de type “directSpeaker”, on l’affecte à un haut-parleur, dont on renseigne une position fixe. Si ce haut-parleur existe dans l’arrangement de haut-parleurs connecté au décodeur ADM, le signal y est routé, sinon on interpole avec les haut-parleurs les plus proches.</p>
+<p>Si l’<em>audioObject</em> est de type ambisonique, on cherche les autres objets appartenant au même flux, puis on décode l’ensemble, sur le système connecté au décodeur ADM.</p>
+<p>Si l’<em>audioObject</em> est la composante d’une matrice, on cherche les autres objets appartenant au même flux, puis on dématrice l’ensemble vers nouvel <em>audioPack</em> de type “directSpeaker”.</p>
 <p>Si l’<em>audioObject</em> est de type “object”, on regarde ses <strong>métadonnées de spatialisation</strong> puis on interpole cette position en utilisant les haut-parleurs les plus proches du point indiqué.</p>
 <div class="callout callout-style-default callout-tip callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -519,16 +519,17 @@ Astuce
 </div>
 </div>
 </section>
-<section id="les-métadonnées-de-spatialisation" class="level3" data-number="35.1.3">
-<h3 data-number="35.1.3" class="anchored" data-anchor-id="les-métadonnées-de-spatialisation"><span class="header-section-number">35.1.3</span> Les métadonnées de spatialisation</h3>
+<section id="les-métadonnées-de-spatialisation" class="level3" data-number="38.1.3">
+<h3 data-number="38.1.3" class="anchored" data-anchor-id="les-métadonnées-de-spatialisation"><span class="header-section-number">38.1.3</span> Les métadonnées de spatialisation</h3>
 <p>L’ADM n’intègre qu’un jeu de paramètre très sommaire :</p>
 <ul>
 <li>Le niveau</li>
-<li>La position (en coordonnée cartésienne et sphériques)</li>
-<li>La largeur apparente de la source</li>
+<li>La position (en coordonnées cartésiennes et sphériques)</li>
+<li>La taille et diffusion de la source</li>
 </ul>
-<p>Le niveau est un simple réglage de gain. La position permet de placer l’objet dans un espace virtuelle en trois dimension et selon deux systèmes de coordonnés. On préfère généralement le système sphérique, plus proche de notre perception sonore, cependant, la description de certains mouvement est plus simple dans un repère plutôt qu’un autre. La largeur permet de jouer sur l’étalement de l’objet dans l’espace. En pratique, accroître ce paramètre augmente le nombre de haut-parleurs contribuant à la diffusion de l’objet sonore.</p>
-<p>Il n’y a donc pas de descripteurs perceptifs ou d’espaces. L’approche de la spatialisation y est donc très basique voir simpliste. Comme nous le verrons dans les sections plus pratiques, cela impose des techniques de mixages relativement complexes à fin de contourner ses limitations.</p>
+<p>Le niveau est un simple réglage de gain. La position permet de placer l’objet dans un espace virtuel en trois dimensions et selon deux systèmes de coordonnées. On préfère généralement le système sphérique, plus proche de notre perception sonore, cependant, la description de certains mouvements est plus simple dans un repère plutôt qu’un autre. Le paramètre de distance permet de placer une source <strong>entre les haut-parleurs et le point d’écoute idéal</strong>.</p>
+<p>La largeur permet de jouer sur l’étalement de l’objet dans l’espace. En pratique, accroître ce paramètre augmente le nombre de haut-parleurs contribuant à la diffusion de l’objet sonore. Associé à la taille, le paramètre de diffusion permet d’ajouter de la décorrélation sur les haut-parleurs contribuant à la largeur de restitution de la source.</p>
+<p>Il n’y a donc pas de descripteurs perceptifs ou d’espaces. L’approche de la spatialisation y est donc très basique, voire simpliste. Comme nous le verrons dans les sections plus pratiques, cela impose des techniques de mixage relativement complexes à fin de contourner ses limitations.</p>
 <div class="callout callout-style-default callout-note callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -539,13 +540,13 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Malheureusement la plupart des moteurs de mixage orienté objet souffrent des mêmes lacunes, y compris le Dolby Atmos. L’exception principale est l’IRCAM Spat ainsi que le Spat Revolution de FLUX:: Immersive.</p>
+<p>Malheureusement la plupart des moteurs de mixage orienté objet souffrent de ces mêmes lacunes, y compris le Dolby Atmos. L’exception principale est l’IRCAM Spat ainsi que le Spat Revolution de FLUX:: Immersive.</p>
 </div>
 </div>
 </section>
-<section id="inscription-des-méta-données-dans-un-fichier-audio" class="level3" data-number="35.1.4">
-<h3 data-number="35.1.4" class="anchored" data-anchor-id="inscription-des-méta-données-dans-un-fichier-audio"><span class="header-section-number">35.1.4</span> Inscription des méta-données dans un fichier audio</h3>
-<p>L’ADM décrit la possibilité d’inscrire les méta-données de mixage directement dans un fichier audio, lui-même contenant l’ensemble des données audio nécessaire. Dans le cadre d’un mixage orienté objet, ce fichier audio peut posséder autant de canaux que d’objet déclarer. Le format retenu pour les stockage de ces informations est le <strong>BW64</strong> (Broadcast Wavefile 64 bit).</p>
+<section id="inscription-des-métadonnées-dans-un-fichier-audio" class="level3" data-number="38.1.4">
+<h3 data-number="38.1.4" class="anchored" data-anchor-id="inscription-des-métadonnées-dans-un-fichier-audio"><span class="header-section-number">38.1.4</span> Inscription des métadonnées dans un fichier audio</h3>
+<p>L’ADM décrit la possibilité d’inscrire les métadonnées de mixage directement dans un fichier audio, contenant lui-même l’ensemble des données audio nécessaires. Dans le cadre d’un mixage orienté objet, ce fichier audio peut posséder autant de canaux que d’objets déclarés. Le format retenu pour les stockages de ces informations est le <strong>BW64</strong> (Broadcast Wavefile 64 bit).</p>
 <div class="callout callout-style-default callout-note callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -556,8 +557,8 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Le <a href="https://www.itu.int/rec/R-REC-BS.2088-1-201910-I/en">BW64</a> est une extension du format <a href="https://www.itu.int/rec/R-REC-BS.1352-3-200712-I/en">BWF</a>. Tous deux sont églament définis dans des recommandations de l’ITU. Ces fichiers prenent la forme de simple fichiers wave (monfichier.wav).</p>
-<p>Egalement, on parle d’une entête de fichier, pour qualifier l’ensemble des métadonnées (nom, type de fichier, conteneur, etc.) précédent la donnée utile (ici, les échantillons audio). Attention, les métadonnées ne sont pas toutes relative à l’ADM. La plupart les fichiers possèdent des métadonnées pour indiquer aux programmes comment exploiter les données qu’ils stockent.</p>
+<p>Le <a href="https://www.itu.int/rec/R-REC-BS.2088-1-201910-I/en">BW64</a> est une extension du format <a href="https://www.itu.int/rec/R-REC-BS.1352-3-200712-I/en">BWF</a>. Tous deux sont également définis dans des recommandations de l’ITU. Ces fichiers prennent la forme de simples fichiers “wave” (monfichier.wav).</p>
+<p>Également, on parle d’un en-tête de fichier, pour qualifier l’ensemble des métadonnées (nom, type de fichier, conteneur, etc.) précèdent la donnée utile (ici, les échantillons audio). Attention, les métadonnées ne sont pas toutes relatives à l’ADM. La plupart les fichiers possèdent des métadonnées pour indiquer aux programmes comment exploiter les données qu’ils stockent.</p>
 </div>
 </div>
 <div class="quarto-layout-panel">
@@ -566,7 +567,7 @@ Note
 <div id="fig-wavefile" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="../_resources/bitmap/adm/basicWave.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;35.2: Structure d’un fichier wave</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;38.2: Structure d’un fichier wave</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -574,7 +575,7 @@ Note
 <div id="fig-bw64" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="../_resources/bitmap/adm/bw64.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;35.3: Structure d’un fichier bw64</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;38.3: Structure d’un fichier bw64</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -585,23 +586,104 @@ Note
 </div>
 </div>
 </div>
-<p>Le figure <a href="#fig-bw64">Figure&nbsp;<span>35.3</span></a> fait mention de plusieurs “chunk” (section, bloc) nommé “<em>axml</em>”, “<em>bxml</em>”, “<em>sxml</em>”, “<em>chna</em>”. La globalité des informations sont stockés sous la forme d’<a href="https://fr.wikipedia.org/wiki/Extensible_Markup_Language">XML</a> dans les <em>chunks</em> “axml”, “bxml” ou “sxml”. Le <em>chunk</em> “chna” stocke les informations permettant de faire le liens entre les données audios et leur description dans l’ADM. Il est en général recommandé d’utiliser le <em>chunk</em> “axml” (le “bxml” est alors plutôt utilisés pour les sur-couches, ou profiles, à l’ADM).</p>
+<p>La figure <a href="#fig-bw64">Figure&nbsp;<span>38.3</span></a> fait mention de plusieurs “chunk” (section, bloc) nommé “<em>axml</em>”, “<em>bxml</em>”, “<em>sxml</em>”, “<em>chna</em>”. La globalité des informations est stockée sous la forme d’un <a href="https://fr.wikipedia.org/wiki/Extensible_Markup_Language">XML</a> dans les <em>chunks</em> “axml”, “bxml” ou “sxml”. Le <em>chunk</em> “chna” stocke les informations permettant de faire les liens entre les données audio et leur description dans l’ADM. Il est en général recommandé d’utiliser le <em>chunk</em> “axml” (le “bxml” est alors plutôt utilisé pour les surcouches à l’ADM, aussi appelés profiles).</p>
 </section>
 </section>
-<section id="les-profils-adm" class="level2" data-number="35.2">
-<h2 data-number="35.2" class="anchored" data-anchor-id="les-profils-adm"><span class="header-section-number">35.2</span> Les profils ADM</h2>
-<p><a href="https://www.iis.fraunhofer.de/en/ff/amm/dl/whitepapers/adm-profile.html">Fraunhofer MPEG-H ADM Profile</a></p>
-<p><a href="https://professionalsupport.dolby.com/s/article/Dolby-Atmos-ADM-Profile-specification?language=en_US">Dolby</a></p>
+<section id="les-profils-adm" class="level2" data-number="38.2">
+<h2 data-number="38.2" class="anchored" data-anchor-id="les-profils-adm"><span class="header-section-number">38.2</span> Les profils ADM</h2>
+<p>Certains constructeurs ont choisis de proposer des sur-spécification à l’ADM, aussi appelés “profils”. Ces profils ont généralement deux buts :</p>
+<ul>
+<li>Rajouter des métadonnées spécifiques à l’utilisation de codec audio propriétaire.</li>
+<li>Limite les spécifications de l’ADM pour correspondre aux usages de certains domaines</li>
+</ul>
+<p>Les deux principaux profils connus sont ceux du <a href="https://www.iis.fraunhofer.de/en/ff/amm/dl/whitepapers/adm-profile.html">MPEG-H de Fraunhofer</a> et de <a href="https://professionalsupport.dolby.com/s/article/Dolby-Atmos-ADM-Profile-specification?language=en_US">Dolby</a></p>
+<div class="callout callout-style-default callout-important callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Aucun des deux constructeurs n’ont choisit de maintenir le support de l’ambisonique dans leur format.</p>
+<p>De plus, il n’existe à ce jour, aucun outil pour convertir un ADM d’un profil quelquonque vers un ADM Dolby. La compatibilité des formats n’est donc pas assurée.</p>
+</div>
+</div>
+<p>##&nbsp;L’ADM Sériel (S-ADM)</p>
+<p>Pour certaines applications, comme le live ou le streaming, la description des métadonnées sous forme d’un dictionnaire XML n’est pas adéquate. Ici, les flux audio sont en temps réel et ne dépendent pas nécessairement d’un fichier audio. Il existe donc une norme sérielle de l’ADM, permettant de transmettre les métadonnées dans une connexion numérique, type AES, MADI ou encore à travers de l’audio sur IP.</p>
+<p>La description du S-ADM est disponible dans l’<a href="https://www.itu.int/rec/R-REC-BS.2125/en">ITU-R BS.2125</a>.</p>
 </section>
-<section id="ladm-osc" class="level2" data-number="35.3">
-<h2 data-number="35.3" class="anchored" data-anchor-id="ladm-osc"><span class="header-section-number">35.3</span> L’ADM OSC</h2>
+<section id="ladm-osc" class="level2" data-number="38.3">
+<h2 data-number="38.3" class="anchored" data-anchor-id="ladm-osc"><span class="header-section-number">38.3</span> L’ADM OSC</h2>
+<p>L’ADM OSC est une initiative menée par FLUX:: Immersive, L-Acoustic et Radio France pour proposer une base de communication commune entre les différents moteurs de mixage orienté objet dans le monde du Live. Cela assure donc une interopérabilité minimale entre les principaux acteurs du milieu. À ce jour, les acteurs suivants se sont joints à la conversation : d&amp;b Audiotechnik, DiGiCo, Dolby, Lawo, Magix, Merging Technologies, Meyer Sound, Steinberg.</p>
+<p>Les logiciels implémentant l’ADM OSC comptent SPAT Revolution (FLUX::SE), L-ISA Controller (L-Acoustics), Ovation (Merging Technologies), Nuendo (Steinberg), SpaceMap Go (Meyer Sound), QLAB 5 (Figure 53), Space Controller (Sound Particles), Modulo Kinetic (Modulo Pi), Iosono (Barco).</p>
+<p>Le code source de ce projet, développé sous une licence open source, est disponible dans ce répository <a href="https://github.com/immersive-audio-live/ADM-OSC">github</a></p>
 </section>
-<section id="létape-de-rendu" class="level2" data-number="35.4">
-<h2 data-number="35.4" class="anchored" data-anchor-id="létape-de-rendu"><span class="header-section-number">35.4</span> L’étape de rendu</h2>
-<p><a href="https://www.itu.int/rec/r-rec-bs.2127/en">BS.2127 : Audio Definition Model renderer for advanced sound systems</a></p>
-<p><a href="https://www.itu.int/rec/R-REC-BS.2094/en">Common definitions for the Audio Definition Model</a></p>
+<section id="létape-de-rendue" class="level2" data-number="38.4">
+<h2 data-number="38.4" class="anchored" data-anchor-id="létape-de-rendue"><span class="header-section-number">38.4</span> L’étape de rendue</h2>
+<p>Tout ce que nous avons vu pour l’instant, au sujet de l’ADM, ne concerne au final que la description d’un mixage, et nous n’avons pour l’instant pas envisagé le “comment”. En d’autres termes, nous avons une liste d’ingrédients, mais ne savons pas comment les mélanger et les cuisiner entre eux.</p>
+<p>Il existe une <a href="https://www.itu.int/rec/r-rec-bs.2127/en">recommandation de l’ITU (BS-2127)</a> consacrée au sujet du “renderer”, ou processeur de rendu. On fournit donc audio et métadonnées à ce moteur de rendu, qui, grâce à l’analyse de ces métadonnées et au système de haut-parleurs qui lui est connecté, peut calculer le gain de reproduction de chaque source et chaque haut-parleur.</p>
+<section id="description-de-la-loi-de-panoramique" class="level3" data-number="38.4.1">
+<h3 data-number="38.4.1" class="anchored" data-anchor-id="description-de-la-loi-de-panoramique"><span class="header-section-number">38.4.1</span> Description de la loi de panoramique</h3>
+<p>La loi de panoramique recommandée par l’ITU BS-2127 empreinte beaucoup au <strong>LBAP</strong> (voir la <a href="spat-perceptif.html#sec-lbap">section&nbsp;<span>37.1.3</span></a>). Nous sommes donc sur une loi de panoramique favorisant un point d’écoute idéal, situé à égale distance des haut-parleurs.</p>
+<div class="callout callout-style-default callout-note callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ici, la distance ne s’exprime qu’entre les haut-parleurs et le point d’écoute idéal. En d’autres termes, la distance maximale correspond au plan des haut-parleurs, la distance minimale correspond au point d’écoute idéale. La distance ne contribue pas au gain de la source, mais plutôt à une sorte de spreading.</p>
+</div>
+</div>
+<p>L’algorithme se décrit de la façon suivante :</p>
+<ul>
+<li>On recherche les couches (en élévation) de haut-parleurs au-dessus et en dessous de la source. On calcule alors le gain <span class="math inline">\(z\)</span> en interpolant entre les deux couches.</li>
+<li>Sur chaque couche trouvée, on recherche les deux lignes de haut-parleurs en avant et en arrière de la source. On calcule ainsi le gain <span class="math inline">\(y\)</span> en interpolant entre les deux lignes.</li>
+<li>Enfin, sur chaque ligne trouvée, on recherche la paire de haut-parleurs à gauche et à droit de la source, permettant finalement de calculer le gain <span class="math inline">\(x\)</span> entre les deux haut-parleurs.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si une source est positionnée sur un haut-parleur, alors seul celui-ci contribue à la diffusion sonore.</p>
+</div>
+</div>
+</section>
+<section id="largeur-et-décorrélation" class="level3" data-number="38.4.2">
+<h3 data-number="38.4.2" class="anchored" data-anchor-id="largeur-et-décorrélation"><span class="header-section-number">38.4.2</span> Largeur et décorrélation</h3>
+<p>Le paramètre de “size” ou taille permet de faire paraître une source plus grande en augmentant le nombre de haut-parleurs contribuant à la diffusion de la source. Ce paramètre “size” est enfaîte un macro-paramètre qui manipule trois autres paramètres:</p>
+<ul>
+<li>La largeur (étalement horizontal)</li>
+<li>La hauteur (étalement vertical)</li>
+<li>La profondeur (étalement dans la profondeur)</li>
+</ul>
+<p>Par principe de source fantôme, augmenter le nombre de haut-parleurs contribuant à la diffusion d’une source n’augmente pas véritablement sa taille apparente dans notre perception de la scène sonore. La source vient plutôt se positionner au <a href="https://fr.wikipedia.org/wiki/Barycentre">barycentre</a> des haut-parleurs, pondéré par leur énergie de diffusion. Pour réellement créer un effet de “taille”, il est nécessaire d’introduire une différence suffisamment importante pour que notre oreille ait l’illusion d’un étalement dans l’espace. Cette différence doit également être suffisamment faible pour ne pas déformer le signal d’origine. On appelle cela la décorrélation. L’ITU recommande ici l’utilisation de filtres passe-tout sur chaque canal de diffusions.</p>
+</section>
+<section id="décodage-ambisonique" class="level3" data-number="38.4.3">
+<h3 data-number="38.4.3" class="anchored" data-anchor-id="décodage-ambisonique"><span class="header-section-number">38.4.3</span> Décodage ambisonique</h3>
+<p>L’ITU décrit l’utilisation d’un décodage AllRAD. Voir la <span class="citation" data-cites="HOA-decode-allrad">(section <a href="#ref-HOA-decode-allrad" role="doc-biblioref"><strong>HOA-decode-allrad?</strong></a>)</span></p>
+<!--
+
+[Common definitions for the Audio Definition Model](https://www.itu.int/rec/R-REC-BS.2094/en)
+
+[Spatial Audio: Channels, Objects, and Ambisonics](https://www.aes.org/e-lib/browse.cfm?elib=19873)
+
+-->
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -826,13 +908,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../spatialisation/espaces-hautparlants.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Les espaces haut-parlants</span></span>
+      <a href="../spatialisation/ambisonique.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">L’ambisonique</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../spatialisation/binaural.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Le binaural</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../spatialisation/wfs.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">La synthèse de fronts d’ondes (WFS)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

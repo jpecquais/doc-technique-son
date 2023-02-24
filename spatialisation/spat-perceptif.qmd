@@ -1,1 +1,17 @@
-# Approche perceptive
+# Orienté canal
+
+## L'approche perceptive
+
+### le VBAP {#sec-vbap}
+
+### Le VBIP
+
+### Le LBAP {#sec-lbap}
+
+### Autres variantes
+
+## L'approche matricielle
+
+### Le DBAP
+
+### Le KNN

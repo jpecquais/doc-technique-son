@@ -57,10 +57,10 @@ book:
         - spatialisation/spat-introduction.qmd
         - spatialisation/spat-historique.qmd
         - spatialisation/espaces-hautparlants.qmd
-        - spatialisation/mix-obj.qmd
         - spatialisation/binaural.qmd
         - spatialisation/spat-perceptif.qmd
         - spatialisation/ambisonique.qmd
+        - spatialisation/mix-obj.qmd
         - spatialisation/wfs.qmd
     - part: Les outils de spatialisation sonore
       chapters:

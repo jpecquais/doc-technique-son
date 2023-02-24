@@ -1,5 +1,79 @@
 # Historique de la spatialisation {#sec-hist-spat}
 
+[Histoire de l'enregistrement sonore](https://www.aes.org/e-lib/browse.cfm?elib=16983)
+
+[History of Spatial Coding](https://www.aes.org/e-lib/browse.cfm?elib=12218)
+
+[Son Stéréophonique](https://fr.wikipedia.org/wiki/Son_stéréophonique)
+
+[Binaural history Pt.1](https://www.linkedin.com/pulse/history-binaural-audio-part-1-anthony-mattana)
+
+[Binaural history Pt.2](https://www.linkedin.com/pulse/history-binaural-audio-part-ii-resurgence-1940-2000-anthony-mattana)
+
+## Clément Ader (1841-1925)
+
+[Biographie](https://fr.wikipedia.org/wiki/Clément_Ader)
+
+[Théâtrophone](https://fr.wikipedia.org/wiki/Théâtrophone)
+
+## Arthur C.Keller (1901-1983) & Harvey Fletcher (1884-1981)
+
+[Biographie d'A. C. Keller](https://en.wikipedia.org/wiki/Arthur_C._Keller)
+
+[Biographie de H. Fletcher](http://www.byhigh.org/History/Fletcher/DrHarvey.html)
+
+[Stereophonie 1931-1932](https://www.stokowski.org/Harvey_Fletcher_and_Bell_Labs_Stereo.htm)
+
+## Alan Blumlein (1903-1942)
+
+[Biographie](https://en.wikipedia.org/wiki/Alan_Blumlein)
+
+[United Kingdom patent 394325 'Improvements in and relating to Sound-transmission, Sound-recording and Sound-reproducing Systems'](https://en.wikipedia.org/wiki/United_Kingdom_patent_394325)
+
+[The Inventor of Stereo: The life and works of Alan Dower Blumlein](https://books.google.fr/books?id=bkl5AgAAQBAJ&printsec=frontcover&hl=fr&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false)
+
+[Gerzon, Michael (1994). "Application of Blumlein Shuffling to Stereo Microphone Techniques"](http://decoy.iki.fi/dsound/ambisonic/motherlode/data/6939.pdf)
+
+[Couple de prise de son Blumlein](https://en.wikipedia.org/wiki/Blumlein_pair)
+
+## Pierre Schaeffer (1910-1995)
+
+[Biographie](https://fr.wikipedia.org/wiki/Pierre_Schaeffer)
+
+## Iannis Xenakis (1922-2001)
+
+[Biographie](https://fr.wikipedia.org/wiki/Iannis_Xenakis)
+
+## Pierre Henry (1927-2017)
+
+[Biographie](https://fr.wikipedia.org/wiki/Pierre_Henry)
+
+## Michael Gerzon (1945-1996)
+
+[Biographie](https://en.wikipedia.org/wiki/Michael_Gerzon)
+
+[Site homage](https://www.michaelgerzonphotos.org.uk)
+
+[Archives d'articles Hi-Fi news](http://www.audiosignal.co.uk/Gerzon%20archive.html)
+
+[Ambisonique du 1e ordre](https://en.wikipedia.org/wiki/Ambisonics)
+
+[Archives sonores des enregistrements de Michael Gerzon](https://econtact.ca/10_x/archive_britishlibrary.html#gerzon)
+
+[Into The Soundfield](https://intothesoundfield.music.ox.ac.uk/michael-gerzon-story)
+
+[Practical periphony: the reproduction of full-sphere sound](https://intothesoundfield.music.ox.ac.uk/sites/default/files/intothesoundfield/documents/media/practical_periphony_the_reproduction_of_full_sphere_sound_michael_gerzon_draft_for_aes_london_feb_1980.pdf)
+
+## L'IRCAM : Institut de recherche et coordination acoustique/musique (1970)
+
+
+## Dolby
+
+
+## DTS
+
+
+## Sony
 
 <!-- 
 
