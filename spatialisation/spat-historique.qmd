@@ -1,5 +1,13 @@
 # Historique de la spatialisation {#sec-hist-spat}
 
+De nos jours, (2023 à l'écriture de ce chapitre), le "son immersif" semble être faire partie des nouvelles technologies et la plupart des fabricants se lancent sur ce marché. Il est d'ailleurs très fréquent de voir ce "son immersif" vendu comme quelque chose de nouveau et d'inédit. Pourtant, la question de l'espace sonore, de sa capture et de sa restitution est presque aussi vieille que celle de l'enregistrement.
+
+Nous tâcherons dans ce chapitre de retracer une histoire du son spatialisé, en abordant l'apparition des différentes techniques, mais aussi leurs concepteurs, et les ingénieurs qui y ont participés. Nous traverserons donc près de cent-cinquante années d'histoire, en commençant par les premiers essaies de son "stéréophonique" jusqu'au mixage orienté objet et des opportunités de spatialisation qu'il offre. D'autres part, nous tâcherons également de parler des compositeurs et des artistes qui se sont accaparés la question de l'espace et sa réstitution dans leur oeuvre.
+
+Ce chapitre ne peut évidement pas être exhaustif, mais essaye tout de même de donner une image d'ensemble assez juste.
+
+<!-- 
+
 [Histoire de l'enregistrement sonore](https://www.aes.org/e-lib/browse.cfm?elib=16983)
 
 [History of Spatial Coding](https://www.aes.org/e-lib/browse.cfm?elib=12218)
@@ -10,19 +18,39 @@
 
 [Binaural history Pt.2](https://www.linkedin.com/pulse/history-binaural-audio-part-ii-resurgence-1940-2000-anthony-mattana)
 
-## Clément Ader (1841-1925)
+ -->
 
-[Biographie](https://fr.wikipedia.org/wiki/Clément_Ader)
+## De la monophonie à la stéréophonie : un besoin d'espace
 
-[Théâtrophone](https://fr.wikipedia.org/wiki/Théâtrophone)
+Pendant près de quatre-vingt ans, la majorité des systèmes de diffusion sonores sont monophoniques. Il faut en effet attendre la fin des années soixantes pour que l'écrasante majoritée de la musique enregistrée soit produite en stéréophonie. Avant cela, le norme est donc à une écoute ne se constituant que d'un seul haut-parleur.
 
-## Arthur C.Keller (1901-1983) & Harvey Fletcher (1884-1981)
+Pourtant, le besoin d'espace dans la restitution sonore se fait sentir très tôt, car plusieurs ingénieurs se penchent sur cette question dès le début du XXème siècle. Il semble que le premier à proposer un système de diffusion sur deux canaux soit **[Clément Ader](https://fr.wikipedia.org/wiki/Clément_Ader)** (1841-1925). Cet ingénieur français est avant tout connu pour être le premier à avoir fait décoller un engin motorisé plus lourd que l'air en 1890. Il a également participé au déploiment du réseau téléphonique, à Paris, en 1879. C'est à ce moment qu'il a l'idée d'utiliser le réseau de télécommunication pour diffuser l'opéra dans les foyers. Ce dispositif, nommé **[Théâtrophone](https://fr.wikipedia.org/wiki/Théâtrophone)**, est pour la première fois utilisé en 1881. Les auditeurs peuvent alors écouter la pièce retransmise en direct en plaçant un "écouteurs" sur chacune de leurs oreilles. La diffusion se fait donc sur deux canaux.
 
-[Biographie d'A. C. Keller](https://en.wikipedia.org/wiki/Arthur_C._Keller)
+A cette époque, les seuls microphones disponibles sont des microphones à charbons, dont on connait la faible bande passante. La qualité sonore du dispositif est donc médiocre, mais l'angouement du public est réel, et perdurera jusque dans les années 1930.
 
-[Biographie de H. Fletcher](http://www.byhigh.org/History/Fletcher/DrHarvey.html)
+La stéréophonie va être pensée, quasiment simultanément par deux ingénieurs, **[Arthur C. Keller](https://en.wikipedia.org/wiki/Arthur_C._Keller)** (1901-1983) et **[Alan D. Blumlein](https://en.wikipedia.org/wiki/Alan_Blumlein)** (1903-1942). Le premier travail aux laboratoires Bells, sous la direction d'**[Harvey Fletcher](http://www.byhigh.org/History/Fletcher/DrHarvey.html)** (le même Fletcher que les courbes [Flecther-Munson -@fig-isosonie]). Keller se retrouve à travailler sur la diffusion stéréophonique car on demande au chef d'orchestre **[Leopold Stokowski](https://en.wikipedia.org/wiki/Leopold_Stokowski)** de produire des concerts sur les ondes de la NBC avec l'orchestre de Philadelphia. Stokowski est, à l'époque, très insatisfait de rendu sonore de ce type de dispositif et contact alors les laboratoires Bells pour y apporter une solution. De cette collaboration naît une collection d'enregistrements dont le plus vieux semble être cette interprétation du [Le Carnaval romain (Ouverture)](https://www.stokowski.org/sitebuilderfiles/311201_Roman_Carnival_MA.mp3) de Berlioz, interprété le cinq décembre 1931.
 
-[Stereophonie 1931-1932](https://www.stokowski.org/Harvey_Fletcher_and_Bell_Labs_Stereo.htm)
+De l'autre côté de l'océan, Alan Blumlein travail pour la **[Colombia Graphophone Company](https://en.wikipedia.org/wiki/Columbia_Graphophone_Company)**. L'histoire veut qu'il soit frustré de son expérience du son au cinéma, ne comprenant pas pourquoi les voix sont toutes au centre alors que les acteurs se déplacent de part et d'autre de l'écran. Blumlein va donc proposer, pêle-mêle, les techniques de prises de son coincidente XY/Blumlein et MS (pour garantir la rétro-compatibilité sur les système mono), un système de gravure à deux canaux sur disques microsillons et la discription du système d'enceinte que l'on utilise encore aujourd'hui sous le nom stéréphonie. Il est amusant de constater que dans ses écris, Blumlein ne parle pas de son stéréophonique mais de son binaural. Ceci est d'autant plus surprenant qu'il est le premier à revendiquer l'idée que les haut-parleurs, dans un système stéréophonique, ne correspondent pas aux oreilles, et qu'il convient donc d'étudier ce système avec une approche psycho-acoustique. Blumlein invente également un système, qu'il appelle "shuffling", permettant de convertir une différence de phase en différence d'intensité. Pour lui, ce dispositif fait parti intégrante d'un système de prise de son stéréophonique. Cependant, ce "shuffler" ne sera pas du tout employé dans le reste de l'industrie.
+
+:::{.callout-note}
+
+En 1931, La Colombia Graphophone Company et la [Gramophone Company](https://en.wikipedia.org/wiki/Gramophone_Company) fusionnent pour devenir [EMI](https://en.wikipedia.org/wiki/EMI).
+
+:::
+
+Il existe encore quelques enregistrements du travail d'Alan Blumlein, par exemple, cette démonstration du [mouvement en stéréophonie](https://www.youtube.com/watch?v=rqaMiDqE6QQ) (dans un style tout à fait anglais), ou encore cette interprétation de la [Chevauchée des Valkyries pour trois pianos](https://www.youtube.com/watch?v=gfWuIEgGUJk) enregistrée à Abbey Road. Ces deux enregistrements dates de 1931.
+
+:::{.callout-note}
+
+Le procédé de gravure stéréophonique sur microsillon de Keller et Blumlein est très proche, cependant, il ne semble qu'aucun des deux n'ai eu connaissance des travaux de l'autre. Keller aurait développé sont système avant Blumlein, mais ce dernier a publié son brevet en premier. Les deux approches reposent sur l'idée de gravé les deux canaux à 45° de la verticale. Ce procédé semble être tombé dans l'oublie jusqu'à sa "[réinvention](https://ieeexplore.ieee.org/document/4065276)" dans les années cinquantes par la société Westrex.
+
+:::
+
+Blumlein décède en plein milieu de la seconde guerre mondiale suite au crash du bombardier Helifax, dans lequel il effectuait des tests sur le système de [radar H2S](https://en.wikipedia.org/wiki/H2S_radar).
+
+<!-- [Archives EMI Blumlein](https://www.emiarchivetrust.org/alan-blumlein-and-the-invention-of-stereo/) -->
+
+<!-- [Stereophonie 1931-1932](https://www.stokowski.org/Harvey_Fletcher_and_Bell_Labs_Stereo.htm) -->
 
 ## Alan Blumlein (1903-1942)
 
