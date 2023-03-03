@@ -99,7 +99,7 @@ Le canal central est alors formé par les signaux **en phase** du matriçage bic
 
 Une telle réduction n'est pas indolore sur le signal, et nuit largement à la cohérence d'espace de la diffusion.
 
-### Les systèmes englobants à une dimension
+### Les systèmes englobants à une dimension {#sec-sys-surr-1L}
 
 La quadriphonie est le premier système de ce type marquant, apparu dans les années soixante-dix. On place alors les quatre enceintes en carré et l'auditeur au centre. On notera ainsi que les angles enceintes-auditeur sont de 90°, soit 30° de plus que la stéréophonie. Nous pouvons déduire que l'on gagne globalement en couverture spatiale, mais l'on perd en précision sur les sources fantômes.
 

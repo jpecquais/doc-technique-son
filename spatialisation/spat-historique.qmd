@@ -28,9 +28,11 @@ Pourtant, le besoin d'espace dans la restitution sonore se fait sentir très tô
 
 A cette époque, les seuls microphones disponibles sont des microphones à charbons, dont on connait la faible bande passante. La qualité sonore du dispositif est donc médiocre, mais l'angouement du public est réel, et perdurera jusque dans les années 1930.
 
+![Extrait du journal "Le Gaulois" du 2 Avril 1924](../_resources/bitmap/various/leGaulois2Avril1924.png)
+
 La stéréophonie va être pensée, quasiment simultanément par deux ingénieurs, **[Arthur C. Keller](https://en.wikipedia.org/wiki/Arthur_C._Keller)** (1901-1983) et **[Alan D. Blumlein](https://en.wikipedia.org/wiki/Alan_Blumlein)** (1903-1942). Le premier travail aux laboratoires Bells, sous la direction d'**[Harvey Fletcher](http://www.byhigh.org/History/Fletcher/DrHarvey.html)** (le même Fletcher que les courbes [Flecther-Munson -@fig-isosonie]). Keller se retrouve à travailler sur la diffusion stéréophonique car on demande au chef d'orchestre **[Leopold Stokowski](https://en.wikipedia.org/wiki/Leopold_Stokowski)** de produire des concerts sur les ondes de la NBC avec l'orchestre de Philadelphia. Stokowski est, à l'époque, très insatisfait de rendu sonore de ce type de dispositif et contact alors les laboratoires Bells pour y apporter une solution. De cette collaboration naît une collection d'enregistrements dont le plus vieux semble être cette interprétation du [Le Carnaval romain (Ouverture)](https://www.stokowski.org/sitebuilderfiles/311201_Roman_Carnival_MA.mp3) de Berlioz, interprété le cinq décembre 1931.
 
-De l'autre côté de l'océan, Alan Blumlein travail pour la **[Colombia Graphophone Company](https://en.wikipedia.org/wiki/Columbia_Graphophone_Company)**. L'histoire veut qu'il soit frustré de son expérience du son au cinéma, ne comprenant pas pourquoi les voix sont toutes au centre alors que les acteurs se déplacent de part et d'autre de l'écran. Blumlein va donc proposer, pêle-mêle, les techniques de prises de son coincidente XY/Blumlein et MS (pour garantir la rétro-compatibilité sur les système mono), un système de gravure à deux canaux sur disques microsillons et la discription du système d'enceinte que l'on utilise encore aujourd'hui sous le nom stéréphonie. Il est amusant de constater que dans ses écris, Blumlein ne parle pas de son stéréophonique mais de son binaural. Ceci est d'autant plus surprenant qu'il est le premier à revendiquer l'idée que les haut-parleurs, dans un système stéréophonique, ne correspondent pas aux oreilles, et qu'il convient donc d'étudier ce système avec une approche psycho-acoustique. Blumlein invente également un système, qu'il appelle "shuffling", permettant de convertir une différence de phase en différence d'intensité. Pour lui, ce dispositif fait parti intégrante d'un système de prise de son stéréophonique. Cependant, ce "shuffler" ne sera pas du tout employé dans le reste de l'industrie.
+De l'autre côté de l'océan, Alan Blumlein travail pour la **[Colombia Graphophone Company](https://en.wikipedia.org/wiki/Columbia_Graphophone_Company)**. L'histoire veut qu'il soit frustré de son expérience du son au cinéma, ne comprenant pas pourquoi les voix sont toutes au centre alors que les acteurs se déplacent de part et d'autre de l'écran. Blumlein va donc proposer, pêle-mêle dans un seul et même [brevet](https://en.wikipedia.org/wiki/United_Kingdom_patent_394325), les techniques de prises de son coincidente XY/[Blumlein](https://en.wikipedia.org/wiki/Blumlein_pair) et MS (pour garantir la rétro-compatibilité sur les système mono), un système de gravure à deux canaux sur disques microsillons et la discription du système d'enceinte que l'on utilise encore aujourd'hui sous le nom stéréphonie. Il est amusant de constater que dans ses écris, Blumlein ne parle pas de son stéréophonique mais de son binaural. Ceci est d'autant plus surprenant qu'il est le premier à revendiquer l'idée que les haut-parleurs, dans un système stéréophonique, ne correspondent pas aux oreilles, et qu'il convient donc d'étudier ce système avec une approche psycho-acoustique. Blumlein invente également un système, qu'il appelle "shuffling", permettant de convertir une différence de phase en différence d'intensité. Pour lui, ce dispositif fait parti intégrante d'un système de prise de son stéréophonique. Cependant, ce "shuffler" ne sera pas du tout employé dans le reste de l'industrie.
 
 :::{.callout-note}
 
@@ -48,35 +50,135 @@ Le procédé de gravure stéréophonique sur microsillon de Keller et Blumlein e
 
 Blumlein décède en plein milieu de la seconde guerre mondiale suite au crash du bombardier Helifax, dans lequel il effectuait des tests sur le système de [radar H2S](https://en.wikipedia.org/wiki/H2S_radar).
 
-<!-- [Archives EMI Blumlein](https://www.emiarchivetrust.org/alan-blumlein-and-the-invention-of-stereo/) -->
+Malgré toutes ces avancés, la stéréophonie n'est rapidement adoptée. Il y a pour cela deux raisons principales. La première est que les systèmes de graves sur disques proposés par Blumlein ou Keller ne fonctionne pas sur les gramophones, à cause du poids de la tête de lecture. Il faut donc attendre leurs remplacements par les disques microsillons au milieu des années cinquantes. Le second frein est, comme on le rencontrera souvent, le coût pour s'équiper d'un deuxième amplificiteur et d'une deuxième enceinte.
 
-<!-- [Stereophonie 1931-1932](https://www.stokowski.org/Harvey_Fletcher_and_Bell_Labs_Stereo.htm) -->
+![Sur la diffusion stéréophonique - 1950](../_resources/bitmap/various/WW1950.jpg)
 
-## Alan Blumlein (1903-1942)
+La situation se débloque dans les années soixantes. La radio devient stéréophonique, en partie grâce au passage à la modulation FM. Le coût des équipements devient aussi plus raisonnable. A la fin des années soixantes, on peut considérer que l'ensemble de la production musicale est passée à la stéréophonie. Il est d'ailleurs intéressant de noter que ce passage à la stéréophonie ne s'est pas faite à la même vitesse selon les esthétiques musicales. Dans les musiques dîtes "classiques", la monophonie représente un tel frein à la représentation de l'espace acoustique qu'il existe une réelle motivation à basculer sur un mode de production stéréophonique. Dans les musiques dîtes "populaires" ou "amplifiées", la nécessité de la stérophonie est moins évidente, elle d'ailleurs parfois perçu comme superficiel. Par exemple, il faudra attendre le dernier album des Beatles enregistré (Abbey Road - 1969) pour que avoir une version stéréo officielle, approuvée par George Martin. Certains ont vu dans la stéréophonie une passade un peu exubérante, mais qui ne durerait pas. L'histoire leur aura prouvé le contraire. Il ne faut pas non plus leur jetter la pierre. Nombre des premiers enregistrements stéréophoniques exploite les deux canaux de mixage non pas comme un opportunité de mieux représenter l'espace, mais surtout pour **démasquer** les éléments entre eux. On trouve donc beaucoups de [mixages](https://www.youtube.com/watch?v=213W-8t9MLQ) avec les instruments répartis entre l'enceinte gauche et droite, et la voix en plein centre.
 
-[Biographie](https://en.wikipedia.org/wiki/Alan_Blumlein)
+Devant la généralisation de la stéréophonie, certains constructeurs, labels et artistes vont alors tenter la courte aventure de la quadriphonie.
 
-[United Kingdom patent 394325 'Improvements in and relating to Sound-transmission, Sound-recording and Sound-reproducing Systems'](https://en.wikipedia.org/wiki/United_Kingdom_patent_394325)
+## Le binaural : la spatialisation sonore pour tous
 
-[The Inventor of Stereo: The life and works of Alan Dower Blumlein](https://books.google.fr/books?id=bkl5AgAAQBAJ&printsec=frontcover&hl=fr&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false)
+Il est bon que nous définition ici une définition précise de binaural. De nos jours, le binaural rassemble l'ensemble des techniques et des moyens permettant de reproduire l'effet du corps humain (tête, oreilles, torse) sur le signal. Un signal binaural comporte donc deux canaux, filtrés par la réponse en fréquence du corps humain. Cependant, dans l'histoire du son, le terme binaural a souvent été utilisé comme synonyme du son stéréophonique.
 
-[Gerzon, Michael (1994). "Application of Blumlein Shuffling to Stereo Microphone Techniques"](http://decoy.iki.fi/dsound/ambisonic/motherlode/data/6939.pdf)
+:::{.callout-note}
 
-[Couple de prise de son Blumlein](https://en.wikipedia.org/wiki/Blumlein_pair)
+Par ailleurs, le termes "stéréophonie" se substitue toujours pour désigner tous flux audio comprenant deux canaux. Ce n'est rigoureusement pas juste, car la stéréophonie sous-entendant la diffusion sur un système de haut-parleurs spécifique.
 
-## Pierre Schaeffer (1910-1995)
+:::
 
-[Biographie](https://fr.wikipedia.org/wiki/Pierre_Schaeffer)
+L'[histoire du son binaural](https://www.researchgate.net/publication/233582452_Binaural_Recording_Technology_A_Historical_Review_and_Possible_Future_Developments) s'anime également dans les années 1930, dans les laboratoires Bell. H. Flecther dirige alors une équipe travaillant sur la mise au point d'un mannequin de cire équipé de microphones sur les joues, nommé Oscar.
 
-## Iannis Xenakis (1922-2001)
+![Oscar : premier dispositif d'enregistrement binaural](../_resources/bitmap/binaural/oscar.png)
 
-[Biographie](https://fr.wikipedia.org/wiki/Iannis_Xenakis)
+Ce premier dispositif permet de réaliser un certain nombre de test sur notre perception. Il est alors rapidement montré que la parte de l'image dans l'écoute d'un signal binaural entraine l'augmentation d'erreurs de localisation.
 
-## Pierre Henry (1927-2017)
+En Europe, deux chercheurs de la société Néerlandaise [Philips](https://fr.wikipedia.org/wiki/Philips), De Boer et Vermeulen, développe le premier mannequin avec une simulation de l'effet du pavillon, grâce à l'intégration du microphone directement dans l'oreille. 
 
-[Biographie](https://fr.wikipedia.org/wiki/Pierre_Henry)
+Dans les années 40, De Boer dépose un brevet pour un système de prise de son utilisant une simple sphere d'au moins quatorze centimètre de diamètre en lieu et place d'une tête de mannequin. Les microphones sont alors placés de part d'autre de la sphère.
 
-## Michael Gerzon (1945-1996)
+Toujours aux Pays-Bas, il est alors fait l'expérience de la diffusion de contenu binaural sur les ondes radio, utilisant sans doute le mannequin de De Boer et Vermeulen.
+
+Durant les années cinquantes, plusieurs companies développent leur propre systèmes de prise de son binaural, notemment Schoeps et AKG.
+
+:::{layout-ncol="2" layout-valign="bottom"}
+
+![Première tête factice d'AKG](../_resources/bitmap/binaural/akg-dummyhead1.png)
+
+![Sphère de prise de son Schoeps](../_resources/bitmap/binaural/schoeps-sphere.png)
+
+:::
+
+Les années soixante et soixante-dix sont marquées par de nombreuses études sur l'écoute binaural et l'effet de notre corps sur les signaux. Le système KEMAR devient le premier mannequin de référence. Les mannequins précédents étant souvent récupéré de grands magasins, leur propriétés acoustiques ne correspondent à celle du corps humain. Ce paramètre est alors corrigé par le modèle KEMAR et est ainsi le premier utilisé pour des mesures de protèses auditives.
+
+En 1973, la société Neumann dévoile sa tête artificielle **KU-80**, équipée de microphones omni-directionnels **KM83**. L'année suivante, AKG propose elle aussi son système de prise de son binaural **D99c**.
+
+:::{layout-ncol="3" layout-valign="bottom"}
+
+![KEMAR](../_resources/bitmap/binaural/kemar.png)
+
+![Neumann KU80](../_resources/bitmap/binaural/neumann-ku80.png)
+
+![AKG d99c](../_resources/bitmap/binaural/akg-d99c.png)
+
+:::
+
+En 1997, un groupe de chercheur publie une [étude comparative des différentes têtes artificilles](https://www.aes.org/e-lib/browse.cfm?elib=7375) de l'époque. Il en ressort un problème persistant de trouble de la localisation, particulièrement sur la discrimination de l'avant et de l'arrière. Est alors mis en cause la forme des pavillons des différents mannequins. En partant des résultats de cette étude, plusieurs initiatives vont apparaitres, et vont alors mesurer la réponse en fréquence de la tête d'un grand nombre d'individu, et chercher ainsi à trouver la courbe correspondant au plus grand nombre. Ce type d'approche donnera, entre-autre, naissance à la tête KU-100 de Neumann.
+
+:::{.callout-note}
+
+Le résultat de ce type de mesures se nomment **HRTF**, pour Head-Related Transfer Function, ou, fonction de transfert de la tête.
+
+:::
+
+Grâce au passage à l'audio-numérique, ainsi qu'à l'augmentation significative de la puissance de calcul des ordinateurs, on voit apparaître dans les années quatre-vingt-dix la technique de la [synthèse binaural](https://www.aes.org/e-lib/browse.cfm?elib=8319) (voir [section -@sec-binaural-synthese]). Il devient alors possible à partir de simples prises de son monophonique de recréer l'effet de la tête sur le signal grâce à une batterie de filtres (toujours ces fameuses HRTF).
+
+:::{.callout-tip}
+
+En France, [Lucie Hardoin](https://sonbinaural.com/) est une spécialiste de prise de son et de la post-production binaurale. Elle met à disposition sur son site web un grand nombre d'extrait pour en découvrir les qualités sonores.
+
+:::
+
+## Les pionniers de la musique spatialisé
+
+S'il est important de couvrir l'histoire technologique, il l'est tout autant de raconter celle de ceux qui ont pensé la spatialisation sonore dans leurs créations. Les mouvements de la [musique concrète](https://fr.m.wikipedia.org/wiki/Musique_concr%C3%A8te) et de la [musique électroacoustique](https://fr.m.wikipedia.org/wiki/Musique_%C3%A9lectroacoustique) ont été particulièrement fécond sur ce sujet.
+
+[Pierre Schaeffer](https://fr.m.wikipedia.org/wiki/Pierre_Schaeffer) (1910-1995), ingénieur français diplômé de l'école polytechnique, propose les [fondations esthétiques et théorique](http://archive.olats.org/pionniers/pp/schaeffer/theorieSchaeffer.php) de la musique concrète dans les années quarante. Au coeur de ces idées est celle de l'[acousmatique](http://www.musiques-recherches.be/musiques-recherches/presentation). Une musique dîte acousmatique est une musique qui est complètement arrachée à tout context (notemment visuel) et n'est plus que son. Ce type de musique est donc grandement le fruit des avancés technologiques en matière d'enregistrement sonore. L'objectif de écoute acousmatique est de permettre à l'auditeur une plus grande imagination à la réponse du stimuli sonore seul. Ce concept est étroitement lié avec l'art radiophonique et ses moyens de diffusion. Suite à sa rencontre avec [Pierre Henri](https://fr.wikipedia.org/wiki/Pierre_Henry) (1927-2017), les deux hommes crééront "[Symphonie pour un homme seul](https://fr.m.wikipedia.org/wiki/Symphonie_pour_un_homme_seul)" en 1950. Henri collaborera aussi avec [Edgar Varèse](https://fr.wikipedia.org/wiki/Edgard_Var%C3%A8se) en 1954 pour la création de *Déserts* au Théâtre des Champs-Elysées, en tant que spatialisateur. Le concert est aussi diffusé à la radio, et pour la première fois en stéréophonie.
+
+En 1951, Schaeffer créer le "Groupe de Recherche en Musique Concrète", avec Pierre Henri à sa tête, qui deviend dès 1958 le "[Groupe de Recherche Musique](https://fr.m.wikipedia.org/wiki/Groupe_de_recherches_musicales)" (GRM). On y retrouve alors, entre autre, [Iannis Xenakis](https://fr.m.wikipedia.org/wiki/Iannis_Xenakis), [Michel Chion](https://fr.m.wikipedia.org/wiki/Michel_Chion) et [François Bayle](https://fr.m.wikipedia.org/wiki/Fran%C3%A7ois_Bayle) (Pierre Henri quitte le projet en 1958, avant la création du GRM).
+
+:::{.callout-note}
+
+Pierre Schaeffer fonde également le [service de recherche de la RTF](https://fr.m.wikipedia.org/wiki/Service_de_la_recherche_de_la_RTF) en 1964, dédié à la recherche autour de radio et de la télévision.
+
+:::
+
+Cette branche de la musique a à coeur d'étudier les effets de la captation sonore et de sa diffusion. Si on y réflechi beaucoup sur le sujet de la transformation du son par la manipulation de son support de stockage, on se pose également la question du moyen de diffusion. En 1974, François Bayle invente l'orchestre de hautparleurs qu'il nomme [acousmonium](https://inagrm.com/fr/showcase/news/202/lacousmonium). Ce système de diffusion est constitué de multiples hautparleurs, de taille et qualités sonores différentes, placés sur scène, comme des musiciens. Ces hautparleurs sont alors "orchestré" par le compositeur qui opère depuis une table de mixage, parfois aussi appelée table de spatialisation. Ce dispositif existe toujours et est régulièrement utilisé en concert.
+
+![Une des première forme de l'acousmonium](../_resources/bitmap/various/acousmonium-74.png)
+
+:::{.callout-tip}
+
+A découvrir, une [archive de 1983](https://www.ina.fr/ina-eclaire-actu/audio/phd98021693/ecouter-grm-2eme-partie-l-acousmonium) sur l'acousmonium et la musique que l'on lui fait jouer.
+
+:::
+
+Egalement, est créé en 1970 le Groupe de musique expérimentale de Bourges (**GMEB**) par [Françoise Barrière](https://fr.wikipedia.org/wiki/Fran%C3%A7oise_Barri%C3%A8re) et [Christian Clozier](https://fr.wikipedia.org/wiki/Christian_Clozier). Il sera à l'origine de l'invention d'une table de spatialisation nommé [Gmebaphone](https://misame.org/wp-content/uploads/1670/18/9-Concept-du-Gmebaphone-p126.pdf). Si l'acousmonium propose un "routage" dynamique des signaux vers les différents hautparleurs, le Gmebaphone adopte une approche de filtrage, découpant le signal entrant en bandes pour les répartir sur différents hautparleurs spécialisés.
+
+![Le Gmebaphone](../_resources/bitmap/various/gmebaphone.jpeg)
+
+Le GMEB devient l'IMEB en 1997 (Institut de Musique Expérimentale de Bourges) avant d'être fermé définitivement en juillet 2011.
+
+A partir des années 50, un grand nombre de compositeurs (principalement de musique électro-acoustique et électronique) se poseront cette question de l'[espace et la spatialisation](http://sonhors.free.fr/panorama/sonhors13.htm). On peut alors citer : [Iannis Xenakis](https://fr.wikipedia.org/wiki/Iannis_Xenakis), [Olivier Messaien](https://fr.wikipedia.org/wiki/Olivier_Messiaen), [Karlheinz Stockhausen](https://fr.wikipedia.org/wiki/Karlheinz_Stockhausen) et un certain [Pierre Boulez](https://fr.wikipedia.org/wiki/Pierre_Boulez) qui fondra l'[IRCAM](http://www.ircam.fr/) en 1970.
+
+:::{.callout-tip}
+
+A noter l'excellent site [Electrodoc](https://electrodoc.musiques-recherches.be/fr/accueil), centre de documentation en musiques électroacoustiques. On y trouve de multiples documentations sur les personnes et les oeuvres rattachées à la musique électroacoustique. 
+
+:::
+
+## La quadriphonie : une entreprise infructueuse
+
+La [quadriphonie](https://en.wikipedia.org/wiki/Quadraphonic_sound) (quadraphonic, quadrasonic ou encore quadrophonic en anglais) est le premier format dit "surround" accessible au grand public. Les premières tentatives de productions musicales en en quadriphonie commencent en 1969. Le directeur artistique Thomas Mowrey a alors réalisé un grand nombre de disques quadriphoniques, notamment pour le label [Deutsche Grammophon](https://en.wikipedia.org/wiki/Deutsche_Grammophon). La plupart des enregistrements multi-canaux produits par la Deutsche Grammophon ne sont jamais sortis qu'en stéréo.
+
+En effet, le label n'a pas été convaincu par la qualité du rendu sonore quadriphonique. Il faut alors savoir que la quadriphonie a connu plusieurs formats (que nous détaillerons dans la [section -@sec-sys-surr-1L]), principalement un format matricé et un format intégral. Ce dernier repose donc sur un mixage quatre canaux, un stockage sur un support à quatre canaux (comme une bande magnétique) et sa relecture sur un système haut-parlant à quatre canaux. On appelle aussi ce type de quadriphonie le 4-4-4. Cependant, la grande majorité des personnes sont équipés de lecteurs vinyls stéréo. Il fût donc imaginé différents systèmes pour matricer les quatres canaux de mixages vers deux canaux de stockages, puis de les décoder pour revenir à quatre canaux de diffusions. Le matriçage le plus convaincu fût proposé par [Peter Scheiber](https://en.wikipedia.org/wiki/Peter_Scheiber), mais même celui-la posait un problème sur la correlation des canaux de diffusions. En effet le niveau de séparation entre deux enceintes adjacentes n'était que de trois décibels. Il semble que cela soit la raison principale de la non-publication des productions quadriphonique de la Deutsche Grammophon.
+
+:::{.callout-note}
+
+Ce système de matrice sera "emprunté" par la société Dolby pour créer leur système **Dolby Stereo**.
+
+:::
+
+L'exploitation du son quadriphonique ne se cantonne bien-sûr pas qu'à la musique dîte "classique". Un grand nombre d'artiste et de groupe "pop" verront leur mixage stéréo déclinés en quadriphonie. Les plus connus sont sans doute les **Pink Floyd**. Dès [1967](https://www.wired.com/2009/05/dayintech-0512/), ils embarquent en concert l'azimuth coordinator, leur permettant de recréer une diffusion quadriphonique. En 1972-1973, leur ingénieur du son de l'époque, Alan Parson propose un mix quadriphonique de leur album alors en production, The Dark Side of the Moon.
+
+Malgré tout, le format sera un échec commercial cuisant : trop cher pour équiper un grand nombre de personne, souvent de qualité douteuse à cause de l'étape de matriçage, existant sous de nombreux formats, etc. On trouve tout même aujourd'hui un certains nombre de mixages quadriphonique des années soixante-dix édités sur SACD ou DVD-Audio. Le label anglais [Dutton Vocalion](https://en.wikipedia.org/wiki/Dutton_Vocalion) a dans son catalogue plusieurs dixaines de ces [rééditions](https://www.duttonvocalion.co.uk/products.php?cat=3), principalement de musique dîte "classique".
+
+<!-- [Absolute Sound](https://www.theabsolutesound.com/articles/the-rebirth-of-quad/) -->
+
+## L'ambisonique : découpler le mixage et la diffusion
+
+### Michael Gerzon (1945-1996)
 
 [Biographie](https://en.wikipedia.org/wiki/Michael_Gerzon)
 
@@ -92,16 +194,45 @@ Blumlein décède en plein milieu de la seconde guerre mondiale suite au crash d
 
 [Practical periphony: the reproduction of full-sphere sound](https://intothesoundfield.music.ox.ac.uk/sites/default/files/intothesoundfield/documents/media/practical_periphony_the_reproduction_of_full_sphere_sound_michael_gerzon_draft_for_aes_london_feb_1980.pdf)
 
-## L'IRCAM : Institut de recherche et coordination acoustique/musique (1970)
 
 
-## Dolby
+<!-- [Archives EMI Blumlein](https://www.emiarchivetrust.org/alan-blumlein-and-the-invention-of-stereo/) -->
+
+<!-- [Stereophonie 1931-1932](https://www.stokowski.org/Harvey_Fletcher_and_Bell_Labs_Stereo.htm) -->
+
+<!-- [The Inventor of Stereo: The life and works of Alan Dower Blumlein](https://books.google.fr/books?id=bkl5AgAAQBAJ&printsec=frontcover&hl=fr&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false) -->
+
+[Gerzon, Michael (1994). "Application of Blumlein Shuffling to Stereo Microphone Techniques"](http://decoy.iki.fi/dsound/ambisonic/motherlode/data/6939.pdf)
+
+[Nimbus records - Enregistrements ambisoniques](https://www.wyastone.co.uk/)
+
+[Label Ambisonic Music Library](https://ambisonicmusiclibrary.bandcamp.com/)
+
+[Ambisonic Toolk Kit](https://www.ambisonictoolkit.net/download/recordings/)
+
+[Documentaire](https://www.youtube.com/watch?v=X23hZNoSkUs)
+
+## La grande aventure cinématographique du son immersif
+
+### Fantasia et le Fantasound
+
+### Dolby
+
+### DTS
+
+### Sony
 
 
-## DTS
+## Les grands instituts de recherches
+
+### L'IRCAM : Institut de recherche et coordination acoustique/musique (1970)
+
+### AALTO
+
+### IEM
 
 
-## Sony
+
 
 <!-- 
 

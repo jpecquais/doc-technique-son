@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.189">
+<meta name="generator" content="quarto-1.3.235">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -68,11 +68,16 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Introduction à l’informatique musicale</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../outils_equipements/le_chemin_du_signal.html">Outils et équipements</a></li><li class="breadcrumb-item"><a href="../outils_equipements/introduction_informatique_musicale.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Introduction à l'informatique musicale</span></a></li></ol></nav>
+      <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -80,20 +85,20 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Guide pratique des techniques du son</a> 
         <div class="sidebar-tools-main">
-    <a href="../Guide-pratique-des-techniques-du-son.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
+    <a href="../Guide-pratique-des-techniques-du-son.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
 </div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Recherche"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -399,35 +404,36 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#fonctionnement-dun-ordinateur" id="toc-fonctionnement-dun-ordinateur" class="nav-link active" data-scroll-target="#fonctionnement-dun-ordinateur"><span class="toc-section-number">12.1</span>  Fonctionnement d’un ordinateur</a></li>
-  <li><a href="#les-systèmes-dexploitation" id="toc-les-systèmes-dexploitation" class="nav-link" data-scroll-target="#les-systèmes-dexploitation"><span class="toc-section-number">12.2</span>  Les systèmes d’exploitation</a>
+  <li><a href="#fonctionnement-dun-ordinateur" id="toc-fonctionnement-dun-ordinateur" class="nav-link active" data-scroll-target="#fonctionnement-dun-ordinateur"><span class="header-section-number">12.1</span> Fonctionnement d’un ordinateur</a></li>
+  <li><a href="#les-systèmes-dexploitation" id="toc-les-systèmes-dexploitation" class="nav-link" data-scroll-target="#les-systèmes-dexploitation"><span class="header-section-number">12.2</span> Les systèmes d’exploitation</a>
   <ul class="collapse">
-  <li><a href="#linux" id="toc-linux" class="nav-link" data-scroll-target="#linux"><span class="toc-section-number">12.2.1</span>  Linux</a></li>
-  <li><a href="#apple-macos" id="toc-apple-macos" class="nav-link" data-scroll-target="#apple-macos"><span class="toc-section-number">12.2.2</span>  Apple MacOS</a></li>
-  <li><a href="#microsoft-windows" id="toc-microsoft-windows" class="nav-link" data-scroll-target="#microsoft-windows"><span class="toc-section-number">12.2.3</span>  Microsoft Windows</a></li>
+  <li><a href="#linux" id="toc-linux" class="nav-link" data-scroll-target="#linux"><span class="header-section-number">12.2.1</span> Linux</a></li>
+  <li><a href="#apple-macos" id="toc-apple-macos" class="nav-link" data-scroll-target="#apple-macos"><span class="header-section-number">12.2.2</span> Apple MacOS</a></li>
+  <li><a href="#microsoft-windows" id="toc-microsoft-windows" class="nav-link" data-scroll-target="#microsoft-windows"><span class="header-section-number">12.2.3</span> Microsoft Windows</a></li>
   </ul></li>
-  <li><a href="#les-pilotes-audio" id="toc-les-pilotes-audio" class="nav-link" data-scroll-target="#les-pilotes-audio"><span class="toc-section-number">12.3</span>  Les pilotes audio</a>
+  <li><a href="#les-pilotes-audio" id="toc-les-pilotes-audio" class="nav-link" data-scroll-target="#les-pilotes-audio"><span class="header-section-number">12.3</span> Les pilotes audio</a>
   <ul class="collapse">
-  <li><a href="#asio" id="toc-asio" class="nav-link" data-scroll-target="#asio"><span class="toc-section-number">12.3.1</span>  ASIO</a></li>
-  <li><a href="#coreaudio" id="toc-coreaudio" class="nav-link" data-scroll-target="#coreaudio"><span class="toc-section-number">12.3.2</span>  CoreAudio</a></li>
-  <li><a href="#alsa" id="toc-alsa" class="nav-link" data-scroll-target="#alsa"><span class="toc-section-number">12.3.3</span>  ALSA</a></li>
-  <li><a href="#jack-audio" id="toc-jack-audio" class="nav-link" data-scroll-target="#jack-audio"><span class="toc-section-number">12.3.4</span>  Jack Audio</a></li>
+  <li><a href="#asio" id="toc-asio" class="nav-link" data-scroll-target="#asio"><span class="header-section-number">12.3.1</span> ASIO</a></li>
+  <li><a href="#coreaudio" id="toc-coreaudio" class="nav-link" data-scroll-target="#coreaudio"><span class="header-section-number">12.3.2</span> CoreAudio</a></li>
+  <li><a href="#alsa" id="toc-alsa" class="nav-link" data-scroll-target="#alsa"><span class="header-section-number">12.3.3</span> ALSA</a></li>
+  <li><a href="#jack-audio" id="toc-jack-audio" class="nav-link" data-scroll-target="#jack-audio"><span class="header-section-number">12.3.4</span> Jack Audio</a></li>
   </ul></li>
-  <li><a href="#les-stations-de-travail-audio-numérique-daw" id="toc-les-stations-de-travail-audio-numérique-daw" class="nav-link" data-scroll-target="#les-stations-de-travail-audio-numérique-daw"><span class="toc-section-number">12.4</span>  Les Stations de Travail Audio-Numérique (DAW)</a>
+  <li><a href="#les-stations-de-travail-audio-numérique-daw" id="toc-les-stations-de-travail-audio-numérique-daw" class="nav-link" data-scroll-target="#les-stations-de-travail-audio-numérique-daw"><span class="header-section-number">12.4</span> Les Stations de Travail Audio-Numérique (DAW)</a>
   <ul class="collapse">
-  <li><a href="#le-moteur-audio" id="toc-le-moteur-audio" class="nav-link" data-scroll-target="#le-moteur-audio"><span class="toc-section-number">12.4.1</span>  Le moteur audio</a></li>
-  <li><a href="#les-fonctionnalités" id="toc-les-fonctionnalités" class="nav-link" data-scroll-target="#les-fonctionnalités"><span class="toc-section-number">12.4.2</span>  Les fonctionnalités</a></li>
+  <li><a href="#le-moteur-audio" id="toc-le-moteur-audio" class="nav-link" data-scroll-target="#le-moteur-audio"><span class="header-section-number">12.4.1</span> Le moteur audio</a></li>
+  <li><a href="#les-fonctionnalités" id="toc-les-fonctionnalités" class="nav-link" data-scroll-target="#les-fonctionnalités"><span class="header-section-number">12.4.2</span> Les fonctionnalités</a></li>
   </ul></li>
-  <li><a href="#les-protocoles-de-transmission-dinformations" id="toc-les-protocoles-de-transmission-dinformations" class="nav-link" data-scroll-target="#les-protocoles-de-transmission-dinformations"><span class="toc-section-number">12.5</span>  Les protocoles de transmission d’informations</a>
+  <li><a href="#les-protocoles-de-transmission-dinformations" id="toc-les-protocoles-de-transmission-dinformations" class="nav-link" data-scroll-target="#les-protocoles-de-transmission-dinformations"><span class="header-section-number">12.5</span> Les protocoles de transmission d’informations</a>
   <ul class="collapse">
-  <li><a href="#midi" id="toc-midi" class="nav-link" data-scroll-target="#midi"><span class="toc-section-number">12.5.1</span>  MIDI</a></li>
-  <li><a href="#osc" id="toc-osc" class="nav-link" data-scroll-target="#osc"><span class="toc-section-number">12.5.2</span>  OSC</a></li>
+  <li><a href="#midi" id="toc-midi" class="nav-link" data-scroll-target="#midi"><span class="header-section-number">12.5.1</span> MIDI</a></li>
+  <li><a href="#osc" id="toc-osc" class="nav-link" data-scroll-target="#osc"><span class="header-section-number">12.5.2</span> OSC</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -437,7 +443,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Introduction à l’informatique musicale</span></h1>
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Introduction à l’informatique musicale</span></h1>
 </div>
 
 
@@ -851,9 +857,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {

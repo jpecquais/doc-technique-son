@@ -5,4 +5,9 @@
 [Binaural recording DPA](https://en.wikipedia.org/wiki/Binaural_recording#/media/File:FrequenzgangDruckempfänger.svg)
 
 
+
+## La prise de son binaurale
+
+## La synthèse binaurale {#sec-binaural-synthese}
+
 ## Le transaural {#sec-transaural}

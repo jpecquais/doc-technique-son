@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.189">
+<meta name="generator" content="quarto-1.3.235">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -69,11 +69,16 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">La conversion analogique numérique</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../outils_equipements/le_chemin_du_signal.html">Outils et équipements</a></li><li class="breadcrumb-item"><a href="../outils_equipements/les_convertisseurs.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">La conversion analogique numérique</span></a></li></ol></nav>
+      <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -81,20 +86,20 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Guide pratique des techniques du son</a> 
         <div class="sidebar-tools-main">
-    <a href="../Guide-pratique-des-techniques-du-son.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
+    <a href="../Guide-pratique-des-techniques-du-son.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
 </div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Recherche"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -400,21 +405,22 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#la-nécessité-de-la-conversion-analogique-numérique" id="toc-la-nécessité-de-la-conversion-analogique-numérique" class="nav-link active" data-scroll-target="#la-nécessité-de-la-conversion-analogique-numérique"><span class="toc-section-number">10.1</span>  La nécessité de la conversion analogique numérique</a></li>
-  <li><a href="#théorie-de-léchantillonnage" id="toc-théorie-de-léchantillonnage" class="nav-link" data-scroll-target="#théorie-de-léchantillonnage"><span class="toc-section-number">10.2</span>  Théorie de l’échantillonnage</a>
+  <li><a href="#la-nécessité-de-la-conversion-analogique-numérique" id="toc-la-nécessité-de-la-conversion-analogique-numérique" class="nav-link active" data-scroll-target="#la-nécessité-de-la-conversion-analogique-numérique"><span class="header-section-number">10.1</span> La nécessité de la conversion analogique numérique</a></li>
+  <li><a href="#théorie-de-léchantillonnage" id="toc-théorie-de-léchantillonnage" class="nav-link" data-scroll-target="#théorie-de-léchantillonnage"><span class="header-section-number">10.2</span> Théorie de l’échantillonnage</a>
   <ul class="collapse">
-  <li><a href="#dun-signal-continu-vers-un-signal-échantillonné" id="toc-dun-signal-continu-vers-un-signal-échantillonné" class="nav-link" data-scroll-target="#dun-signal-continu-vers-un-signal-échantillonné"><span class="toc-section-number">10.2.1</span>  D’un signal continu vers un signal échantillonné</a></li>
-  <li><a href="#la-fréquence-déchantillonnage" id="toc-la-fréquence-déchantillonnage" class="nav-link" data-scroll-target="#la-fréquence-déchantillonnage"><span class="toc-section-number">10.2.2</span>  La fréquence d’échantillonnage</a></li>
-  <li><a href="#la-résolution-de-quantification" id="toc-la-résolution-de-quantification" class="nav-link" data-scroll-target="#la-résolution-de-quantification"><span class="toc-section-number">10.2.3</span>  La résolution de quantification</a></li>
+  <li><a href="#dun-signal-continu-vers-un-signal-échantillonné" id="toc-dun-signal-continu-vers-un-signal-échantillonné" class="nav-link" data-scroll-target="#dun-signal-continu-vers-un-signal-échantillonné"><span class="header-section-number">10.2.1</span> D’un signal continu vers un signal échantillonné</a></li>
+  <li><a href="#la-fréquence-déchantillonnage" id="toc-la-fréquence-déchantillonnage" class="nav-link" data-scroll-target="#la-fréquence-déchantillonnage"><span class="header-section-number">10.2.2</span> La fréquence d’échantillonnage</a></li>
+  <li><a href="#la-résolution-de-quantification" id="toc-la-résolution-de-quantification" class="nav-link" data-scroll-target="#la-résolution-de-quantification"><span class="header-section-number">10.2.3</span> La résolution de quantification</a></li>
   </ul></li>
-  <li><a href="#quelle-influence-sur-le-signal" id="toc-quelle-influence-sur-le-signal" class="nav-link" data-scroll-target="#quelle-influence-sur-le-signal"><span class="toc-section-number">10.3</span>  Quelle influence sur le signal ?</a></li>
-  <li><a href="#la-conversion-sigma-delta" id="toc-la-conversion-sigma-delta" class="nav-link" data-scroll-target="#la-conversion-sigma-delta"><span class="toc-section-number">10.4</span>  La conversion sigma-delta</a></li>
+  <li><a href="#quelle-influence-sur-le-signal" id="toc-quelle-influence-sur-le-signal" class="nav-link" data-scroll-target="#quelle-influence-sur-le-signal"><span class="header-section-number">10.3</span> Quelle influence sur le signal ?</a></li>
+  <li><a href="#la-conversion-sigma-delta" id="toc-la-conversion-sigma-delta" class="nav-link" data-scroll-target="#la-conversion-sigma-delta"><span class="header-section-number">10.4</span> La conversion sigma-delta</a></li>
   </ul>
 </nav>
     </div>
@@ -423,7 +429,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">La conversion analogique numérique</span></h1>
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">La conversion analogique numérique</span></h1>
 </div>
 
 
@@ -522,9 +528,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
