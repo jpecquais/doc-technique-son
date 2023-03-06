@@ -73,6 +73,14 @@ Par rapport à notre question de résolution, plus celle d'un système est faibl
 
 ### Les systèmes frontaux
 
+:::{layout-ncol="2"}
+
+![Monophonie](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/1_0_channels_(mono)_label.svg/900px-1_0_channels_(mono)_label.svg.png)
+
+![Stereophonie](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/2_1_channels_%28stereo_subwoofer%29_label.svg/900px-2_1_channels_%28stereo_subwoofer%29_label.svg.png)
+
+:::
+
 La monophonie n'offre évidemment aucun axe de liberté pour à la spatialisation. On pourra éventuellement « tricher » un effet de profondeur en jouant sur le volume des sources sonores et sur le mixage de la réverbération. Depuis la fin des années soixante, la norme de production et d'écoute est la stéréophonie. La stéréophonie repose sur deux enceintes, formant un triangle équilatéral avec l'auditeur. Elle offre alors une scène sonore de 60° face à l'auditeur, et donc un premier axe de liberté dans la spatialisation. Il semble évident que l'on ne peut pas faire jouer un son plus à gauche que l'enceinte gauche, et plus à droite que l'enceinte droite. Dès lors, les axes formés par chacune des enceintes avec le point d'écoute idéal sont des frontières infranchissables par les sons.
 
 :::{.callout-tip}
@@ -101,46 +109,34 @@ Une telle réduction n'est pas indolore sur le signal, et nuit largement à la c
 
 ### Les systèmes englobants à une dimension {#sec-sys-surr-1L}
 
+:::{layout-ncol="2"}
+
+![Quadriphonie](https://upload.wikimedia.org/wikipedia/commons/5/51/4_0_channels_%28quadrophonic%29%28quadrophonie%29_label.svg)
+
+![Surround](https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/4_1channel.svg/900px-4_1channel.svg.png)
+<!-- ![5.1 (icone)](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/5_1_channels_%28surround_sound%29_label.svg/900px-5_1_channels_%28surround_sound%29_label.svg.png) -->
+
+:::
+
 La quadriphonie est le premier système de ce type marquant, apparu dans les années soixante-dix. On place alors les quatre enceintes en carré et l'auditeur au centre. On notera ainsi que les angles enceintes-auditeur sont de 90°, soit 30° de plus que la stéréophonie. Nous pouvons déduire que l'on gagne globalement en couverture spatiale, mais l'on perd en précision sur les sources fantômes.
 
-Il a existé trois formats de quadriphonie. Ils sont notés de la façon suivante : K-M-N. K indique le nombre de canaux de mixage, M le nombre de canaux du support de diffusion et N le nombre de canaux de restitution (ici, N est donc toujours égal à quatre).
+Son homologue dans le monde du cinéma est le LCRS, composé de trois enceintes frontales (gauche, centre, droit) et d'une enceinte arrière. La position exact des enceintes en cinéma est toujours un sujet délicat. On considère généralement que les enceintes gauche et droite forme une stéréophonie (plus ou moins 30°) auxquelles ont rajoute une enceinte centrale et une enceinte arrière (respectivement 0° et 180°). Cependant, la diffusion cinématographique n'est pas vraiment tournée vers un point précis. En effet, il convient de convenablement couvrir l'ensemble des spectateurs de la salle. Alors, dans les auditoriums de mixage ainsi que dans les salles, cette preservation d'angles est somme toute assez relative.
 
-+ Le 4-4-4, que l'on pourrait qualifier de « vrai » quadriphonie. Cela impose un équipement tout particulier pour le support de diffusion. En effet, l'écrasante majorité des magnétophones à bandes et des disques microsillons sont stéréo. Certains constructeurs ont donc vendu des magnétophones « quadriphoniques », tandis que d'autres ont tenté de stocker ces quatre canaux sur disques microsillons grâce à des techniques de modulation d'amplitude. Cependant, ces procédés imposent tout de même d'équiper son lecteur vinyle d'une pointe en diamant spécifique.
+:::{.callout-tip}
 
-+ Le 4-2-4, cherche à simplifier les choses pour les auditeurs. Grâce à un jeu de matriçage, on encode le signal quadriphonique sur deux canaux, que l'on espère récupérer intact par dématriçage. Si ce matriçage fonctionne parfaitement pour des sons purs, il n'en est rien pour des sons complexes, qui peuvent alors induire une corrélation entre les différents canaux. Ce jeu d'encodage et de décodage distord l'espace sonore et ne produit pas des résultats satisfaisants.
-
-:::{.callout-note}
-
-Il inspirera pourtant les laboratoires de Dolby pour élaborer leur fort mal nommé « Dolby Stéréo »
+Le système LCRS est un système historique et n'est plus du tout utilisé aujourd'hui. La quadriphonie quand à elle continue d'avoir une certaine popularité. On peut y avoir deux phénomènes : une nostalgie toujours plus présente pour le "vintage", mais aussi une certaine facilité de prise en main pour les artistes. Il est en effet assez facile d'expliquer la quadriphonie comme quatre espace stéréophoniques (même si ce n'est pas rigoureusement exact).
 
 :::
-
-+ Reste le 2-2-4, que l'on pourrait qualifier du « pire des deux mondes ». Le principe consiste à « inventer » des canaux arrière à un mixage stéréophonique, pour produire un effet englobant. Le résultat est souvent flou et insatisfaisant.
-
-La complexité d'installation, et ces nombreux formats (dont certains n'offrant pas une qualité de restitution satisfaisante), expliquent largement l'échec commercial du format quadriphonique.
-
-Dans les années soixante-dix, Dolby sort le format (peu judicieusement nommé) **Dolby Stereo**, comprenant alors quatre canaux de mixage et de diffusions : droite, centre, gauche et arrière.
-
-::: {.callout-note}
-
-Le canal central est alors formé par les signaux **en phase** du matriçage bicanal.
-Le canal arrière est composé des signaux **hors phase** dans le matriçage bicanal.
-
-:::
-
-Les performances de la restitution de l'espace de ce système sont assez médiocres, ou en tout cas, déséquilibrées vers la scène frontale. Cela s'explique évidemment par le dispositif cinématographique et par la présence de l'écran géant captant toute l'attention du spectateur. Il reste tout de même difficile de le considérer comme un système englobant, car l'écart entre les enceintes latérales et l'enceinte arrière est tellement important que l'effet de source fantôme ne peut pas être opérant.
-
-Aussi, il est rare que ce canal « surround », ou arrière, ne soit constitué que d'une seule enceinte à la diffusion. Il est courant de rencontrer un dispositif en « U », situé à l'arrière du spectateur. Cela n'arrange malheureusement pas nos histoires de précisions de restitution du champ spatiale.
-
-:::{.callout-important}
-
-En ce qui concerne la gestion du canal LFE (Low Frequency Effect), il n'y a pas de canal dédié. C'est donc un simple système de « bass management », où une partie du grave est filtré des « têtes » (enceintes principales) et redirigé vers le subwoofer.
-
-:::
-
-Le tour de force de Dolby est en réalité de contourner la limitation du support optique sans pour autant remettre en cause la chaîne de production cinématographique. Même après l'avènement du son numérique, une version Dolby Stereo était toujours présente sur la pellicule, pour les salles non équipées en système de diffusion numérique, ou en cas de panne de ce dernier.
 
 C'est grâce à la transition du son analogique vers le son numérique que l'on voit apparaître de nouveaux systèmes de diffusions englobants. Toujours dans le cinéma, le premier et le plus connu est le système 5.1, défendu par Dolby et par DTS.
+
+:::{layout-ncol="2"}
+
+![5.1](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/5_1_channels_%28surround_sound%29_label.svg/900px-5_1_channels_%28surround_sound%29_label.svg.png)
+
+![7.1](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/7_1_channels_surround_sound.svg/900px-7_1_channels_surround_sound.svg.png)
+
+:::
 
 Il s'agit au final d'une simple extension du système LCRS, que l'on va augmenter d'un canal de LFE distinct et d'un canal arrière supplémentaire. Alors, le terme arrière est un peu exagéré, car ces enceintes sont placées à plus ou moins 110 degrés de l'enceinte centrale. On a donc plutôt un placement latéral, légèrement décalé vers l'arrière. On notera aussi l'écart important entre les canaux latéraux avant et ces canaux arrière, grand de 80°. Pire, les enceintes arrières sont séparées d'un angle de 140°. Il est donc délicat d'envisager un placement de sources fantôme à l'arrière de l'auditeur. Aussi, il est plus sage de considérer, lors d'un mixage, qu'un système 5.1 n'offre qu'une scène sonore que de 220°.
 
@@ -150,23 +146,15 @@ Le système quadriphonique est quelque part plus homogène et couvre un espace p
 
 :::
 
-Le système 5.1 est défini dans la recommandation de l'ITU (International Union Broadcast) n° BS.775-1. On note d'ailleurs que le placement des enceintes possède une marge de tolérance, celles-ci pouvant être placées entre plus ou moins 100° jusqu'à plus ou moins 120° du centre.
+Le système 5.1 est défini dans la recommandation de l'ITU (International Union Broadcast) n° [BS.775-1](https://www.itu.int/rec/R-REC-BS.775/). On note d'ailleurs que le placement des enceintes possède une marge de tolérance, celles-ci pouvant être placées entre plus ou moins 100° jusqu'à plus ou moins 120° du centre.
 
 Cette recommandation de l'ITU propose également un ordonnancement des canaux. En effet, ce sujet n'est pas normé, et donne lieu parfois à certaines erreurs de rendus. L'ITU propose alors de ranger les canaux dans l'ordre suivant : gauche, droit, centre, LFE, arrière gauche, arrière droit. Cependant, Pro Tools, logiciel de mixage et montage son le plus répandu dans le monde professionnel, adopte l'agencement suivant : gauche, centre, droit, arrière gauche, arrière droit, LFE. Il convient alors d'être excessivement vigilant quant à la diffusion d'un contenu 5.1, et de bien vérifier le bon routage de chaque canal.
 
-Le 5.1 n'a pas franchement eu de succès auprès du grand public. Les raisons sont toujours un peu les mêmes : le coût, la place, l'esthétique (certains n'aiment pas l'apparence des enceintes), et les câbles. Ce format s'est donc limité à un public de niche, souvent associé à l'audiophile.
-
-Au cinéma, cependant, c'est une autre histoire. Le 5.1 s'est accompagné d'une autre révolution : le support du son numérique sur bande optique. Fini donc, les questions de matriçage et de dématriçage du Dolby Stereo. Chaque canal de mixage sera stocké sur la pellicule et correctement relu, sans interprétation ou traitement intermédiaire quelconque. Cette occupation de la pellicule s'apparente d'ailleurs à une véritable guerre de terrain, où l'on peut rapidement savoir qui est arrivé le premier en regardant simplement une copie 35 mm.
-
-![Bord d'une copie 35 mm. À droite le Dolby Stereo (analogique), à gauche, le Sony SDDS, au centre, le Dolby Digital, et enfin, tout à droite, la bande de timecode du DTS](../_resources/bitmap/various/35mm_film_audio_macro.jpg)
-
-Dolby occupe déjà toute une partie de la pellicule avec le stockage optique analogique du Dolby Stereo. Sony arrive alors le premier avec son système de son numérique sur support optique avec le SDDS (Sony Dynamic Digital Sound). Lorsque Dolby termine l'élaboration de son encodage AC-3 pour le Dolby Digital, il ne reste alors que l'espace entre les perforations. Finalement, DTS est obligé de trouver une solution de contournement et n'inscrit qu'une piste de timecode sur le film. Cette piste permet alors de synchroniser un lecteur de CD-ROM contenant la piste audio du film.
-
-Le Dolby digital et le format DTS sont tous deux pensés pour une diffusion sur un système 5.1. Le SDDS propose une couverture de l'espace frontale plus importante, avec 5 enceintes accompagnées de deux enceintes arrière pour le « surrounds ». En pratique, ces canaux de diffusions supplémentaires ne sont pas exploités en phase de mixage, et les mixeurs se content de fournir un 5.1 compatible avec l'ensemble des formats.
-
 Le format marquant suivant est le 7.1 Dolby Surround. On conserve alors le 5.1 que nous avons déjà décrit et y rajoutons deux enceintes, véritable arrière gauche et arrière droit. Il s'est principalement imposé en salle de cinéma.
 
-Nous pouvons également évoquer un système supplémentaire, mais qui n'a pas eu de réelle exploitation commerciale. En d'autres termes, leur utilisation s'est bornée à l'exploitation lors de spectacles vivants, sans intégrer la problématique du stockage, du transport et de la restitution antérieure du programme. Il s'agit cependant de systèmes relativement classiques.
+![Octophonie](https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/8_0_channels_surround_sound.svg/900px-8_0_channels_surround_sound.svg.png)
+
+Nous pouvons également évoquer un système supplémentaire, l'octophonie, mais qui n'a pas eu de réelle exploitation commerciale. En d'autres termes, son utilisation s'est bornée à l'exploitation lors de spectacles vivants, sans intégrer la problématique du stockage, du transport et de la restitution antérieure du programme. Il s'agit cependant de systèmes relativement classiques.
 
 L'octophonie est un nom que l'on rencontre assez fréquemment. Cependant, son nom est souvent rattaché à deux systèmes différents. Dans ce livre, nous appellerons « octophonie » un système de haut-parleurs régulièrement positionnés sur un cercle. Les enceintes sont alors toutes espacées de 45°. On peut voir ce système comme une augmentation de la résolution de la quadriphonie. Cette octophonie offre deux avantages : sa couverture est homogène et sa densité satisfaisante.
 
@@ -190,7 +178,7 @@ A consulter, [le document de NHK sur son 22.2](https://www.nhk.or.jp/strl/public
 
 :::
 
-Revenons aussi sur nos questions d'octophonie. Cette appellation est parfois utilisée pour parler d'un système de haut-parleur cube composé de deux plans :
+Revenons aussi sur nos questions d'octophonie. Cette appelation est parfois utilisée pour parler d'un système de haut-parleur cube composé de deux plans :
 
 + une quadriphonie au sol
 + une quadriphonie en élévation
