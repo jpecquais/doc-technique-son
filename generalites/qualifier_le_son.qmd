@@ -25,7 +25,7 @@ T = 1/fs    # Sample period
 f0 = 1000
 
 t = np.arange(0,1,1/fs)
-h = np.sin(2*np.pi*f0*t)
+h = np.cos(2*np.pi*f0*t)
 
 # Transfer function H via FFT - same # of bins
 H_FFT = 20*np.log(2*np.fft.fft(h, fs)/fs)
@@ -65,8 +65,7 @@ T = 1/fs    # Sample period
 f0 = 1000
 
 t = np.arange(0,1,1/fs)
-sine = np.sin(2*np.pi*f0*t)
-square = np.array([1 if np.sin(2*np.pi*f0*x) >= 0 else -1 for x in t])
+square = np.array([1 if np.cos(2*np.pi*f0*x) >= 0 else -1 for x in t])
 
 # Transfer function H via FFT - same # of bins
 H_FFT = 20*np.log(2*np.fft.fft(square, fs)/fs)

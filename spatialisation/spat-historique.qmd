@@ -304,11 +304,11 @@ Malgré tout, le format sera un échec commercial cuisant : trop cher pour équi
 
 <!-- [Absolute Sound](https://www.theabsolutesound.com/articles/the-rebirth-of-quad/) -->
 
-## L'ambisonique : décorréler l'espace de production et l'espace d'écoute
+## L'ambisonie : décorréler l'espace de production et l'espace d'écoute
 
 Depuis le milieu des années soixante, une équipe de chercheurs anglais de la [National Research Development Corporation](https://en.wikipedia.org/wiki/National_Research_Development_Corporation) mènent de nombreuses recherches sur la spatialisation sonore et sur le son "surround". Nous sommes donc en plein coeur du (bref) boom de la quadriphonie. Parmis eux, on retrouve particulièrement le mathématicien [Micheal Gerzon](https://en.wikipedia.org/wiki/Michael_Gerzon) (1945-1996)
 
-Ensemble, ils élaborent une proposition alternative au son matricé quadriphonique qu'ils nomment "[ambisonique](https://intothesoundfield.music.ox.ac.uk)". Le principe fondamentale de cette technique est de décomposer l'espace sonore en plusieurs "directions", ou plus justement, en plusieurs harmoniques sphériques. Alors, nous ne prend plus le son, ni ne le mixons, en tenant compte d'un système de diffusion précis (stéréophonie ou quadriphonie par exemple), mais plutôt en représentant un **espace échantillonné**.
+Ensemble, ils élaborent une proposition alternative au son matricé quadriphonique qu'ils nomment "[ambisonie](https://intothesoundfield.music.ox.ac.uk)". Le principe fondamentale de cette technique est de décomposer l'espace sonore en plusieurs "directions", ou plus justement, en plusieurs harmoniques sphériques. Alors, nous ne prend plus le son, ni ne le mixons, en tenant compte d'un système de diffusion précis (stéréophonie ou quadriphonie par exemple), mais plutôt en représentant un **espace échantillonné**.
 
 Le premier apport concret des recherches de Michael Gerzon et de ses collègues est le développement d'une technique de prise de son utilisant un tétraèdre de microphones.
 
@@ -322,14 +322,14 @@ Le premier apport concret des recherches de Michael Gerzon et de ses collègues 
 
 De tels dispositifs étant limités par l'encombrement spatial de chaque microphone, il fût ensuite inventé les microphones ambisoniques, regroupant les quatres capsules de façons aussi coincidentes que possible. Le premier de ce type est le Soundfield, qui fit son batême en Fevrier 1975.
 
-![Microphone Soundfield](https://intothesoundfield.music.ox.ac.uk/sites/default/files/styles/mt_image_large/public/intothesoundfield/images/media/8_26.-ambi-landscape-g-web.jpg?itok=FgQnOxz6)
+![Microphone Soundfield](https://intothesoundfield.music.ox.ac.uk/sites/default/files/styles/mt_image_large/public/intothesoundfield/images/media/8_26.-ambi-landscape-g-web.jpg)
 
-La même année, Michael Gerzon rédige deux articles sur le [principe général](https://www.michaelgerzonphotos.org.uk/articles/Ambisonics%201.pdf) de l'ambisonique et son [utilisation en studio](https://intothesoundfield.music.ox.ac.uk/sites/default/files/intothesoundfield/documents/media/ambisonics_2.pdf). On y trouve notamment la définition des différents formats d'ambisonique, principalement:
+La même année, Michael Gerzon rédige deux articles sur le [principe général](https://www.michaelgerzonphotos.org.uk/articles/Ambisonics%201.pdf) de l'ambisonie et son [utilisation en studio](https://intothesoundfield.music.ox.ac.uk/sites/default/files/intothesoundfield/documents/media/ambisonics_2.pdf). On y trouve notamment la définition des différents formats d'ambisonie, principalement:
 
 + Le A-Format, correspondant aux canaux du microphones Soundfield
 + Le B-Format, format matricé WXYZ (W est le canal omni, ou commun, les autres canaux sont les harmoniques sphériques permettant d'apposer une direction au son)
 
-L'ambisonique, comme technique de production et de prise de son, ne rencontra malheureusement qu'un intêret très limité. On notera tout de même le label [Nimbus records - Enregistrements ambisoniques](https://www.wyastone.co.uk/) qui a enregistré la quasi-intégralité de son catalogue en ambisonique. Elle reste alors longtemps une technique restreinte au monde de la recherche.
+L'ambisonie, comme technique de production et de prise de son, ne rencontra malheureusement qu'un intêret très limité. On notera tout de même le label [Nimbus records - Enregistrements ambisoniques](https://www.wyastone.co.uk/) qui a enregistré la quasi-intégralité de son catalogue en ambisonique. De plus, lorsque le nombre de hautparleurs devient trop important, de fortes colorations appraissent sur le signal. Elle reste alors longtemps une technique restreinte au monde de la recherche.
 
 :::{.callout-note}
 
@@ -337,7 +337,9 @@ Michael Gerzon est très influencé par le brevet de 1931 d'Alan Blumlein sur le
 
 :::
 
+L'intêret autour de l'ambisonie revient dans les années quatre-vingt-dix, notamment grâce aux recherches sur l'Ambisonie d'Ordre Plus Elevé (HOA : Higher Order Ambisonic). Cette stratégie vise à augmenter la finesse d'échantillonnage de l'espace en augmentant le nombre d'harmoniques sphériques utilisés. L'ambionie de Michael Gerzon devient alors l'ambisonie de premier ordre, et, chaque nouvel ordre rajoute un certain nombre de nouvelles "directions spatiales". Cette précision d'échantillonnage permet de meilleurs rendus sur un grand nombre de hautparleurs, ainsi qu'un décodage ambisonique vers binaural plus qualitatif. En guise d'exemple, les outils de création de vidéos en réalité virtuelle (VR) de Meta supporte l'ambisonie jusqu'au troisième ordre.
 
+Ce regain d'intêret et la multiplication des canaux ambisoniques est à corrélé avec l'augmentation de la puissance des ordinateurs. En effet, les outils de traitement numériques sont bien plus adéquat que leurs homologues analogiques pour le traitement ambisonique. De plus, l'industrie de la réalité virtuelle, quelle soit sous la forme de simples vidéos, ou mieux vidéoludiques, a montré un réel intêret pour les formats audio ambisonique, notamment pour leurs capacités à être **interactifs**.
 
 <!-- [Biographie](https://en.wikipedia.org/wiki/Michael_Gerzon)
 
@@ -356,18 +358,6 @@ Michael Gerzon est très influencé par le brevet de 1931 d'Alan Blumlein sur le
 [Label Ambisonic Music Library](https://ambisonicmusiclibrary.bandcamp.com/)
 
 [Ambisonic Toolk Kit](https://www.ambisonictoolkit.net/download/recordings/) -->
-
-
-
-## Les grands instituts de recherches
-
-### L'IRCAM : Institut de recherche et coordination acoustique/musique (1970)
-
-### AALTO
-
-### IEM
-
-
 
 
 <!-- 

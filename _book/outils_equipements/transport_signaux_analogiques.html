@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.208">
+<meta name="generator" content="quarto-1.3.235">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -70,13 +70,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
       <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../outils_equipements/le_chemin_du_signal.html">Outils et équipements</a></li><li class="breadcrumb-item"><a href="../outils_equipements/transport_signaux_analogiques.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Transport de signaux analogiques</span></a></li></ol></nav>
-      <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -96,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Recherche"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -411,21 +411,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#anatomie-dun-câble" id="toc-anatomie-dun-câble" class="nav-link active" data-scroll-target="#anatomie-dun-câble"><span class="toc-section-number">8.1</span>  Anatomie d’un câble</a>
+  <li><a href="#anatomie-dun-câble" id="toc-anatomie-dun-câble" class="nav-link active" data-scroll-target="#anatomie-dun-câble"><span class="header-section-number">8.1</span> Anatomie d’un câble</a>
   <ul class="collapse">
-  <li><a href="#longueur-du-câble-son-et-impédance" id="toc-longueur-du-câble-son-et-impédance" class="nav-link" data-scroll-target="#longueur-du-câble-son-et-impédance"><span class="toc-section-number">8.1.1</span>  Longueur du câble, son et impédance</a></li>
-  <li><a href="#les-connexions-asymétriques" id="toc-les-connexions-asymétriques" class="nav-link" data-scroll-target="#les-connexions-asymétriques"><span class="toc-section-number">8.1.2</span>  Les connexions asymétriques</a></li>
-  <li><a href="#les-connexions-symétriques" id="toc-les-connexions-symétriques" class="nav-link" data-scroll-target="#les-connexions-symétriques"><span class="toc-section-number">8.1.3</span>  Les connexions symétriques</a></li>
+  <li><a href="#longueur-du-câble-son-et-impédance" id="toc-longueur-du-câble-son-et-impédance" class="nav-link" data-scroll-target="#longueur-du-câble-son-et-impédance"><span class="header-section-number">8.1.1</span> Longueur du câble, son et impédance</a></li>
+  <li><a href="#les-connexions-asymétriques" id="toc-les-connexions-asymétriques" class="nav-link" data-scroll-target="#les-connexions-asymétriques"><span class="header-section-number">8.1.2</span> Les connexions asymétriques</a></li>
+  <li><a href="#les-connexions-symétriques" id="toc-les-connexions-symétriques" class="nav-link" data-scroll-target="#les-connexions-symétriques"><span class="header-section-number">8.1.3</span> Les connexions symétriques</a></li>
   </ul></li>
-  <li><a href="#les-fiches-connecteurs" id="toc-les-fiches-connecteurs" class="nav-link" data-scroll-target="#les-fiches-connecteurs"><span class="toc-section-number">8.2</span>  Les fiches &amp; connecteurs</a></li>
-  <li><a href="#exemples-pratiques" id="toc-exemples-pratiques" class="nav-link" data-scroll-target="#exemples-pratiques"><span class="toc-section-number">8.3</span>  Exemples pratiques</a>
+  <li><a href="#les-fiches-connecteurs" id="toc-les-fiches-connecteurs" class="nav-link" data-scroll-target="#les-fiches-connecteurs"><span class="header-section-number">8.2</span> Les fiches &amp; connecteurs</a></li>
+  <li><a href="#exemples-pratiques" id="toc-exemples-pratiques" class="nav-link" data-scroll-target="#exemples-pratiques"><span class="header-section-number">8.3</span> Exemples pratiques</a>
   <ul class="collapse">
-  <li><a href="#câble-jack-mono" id="toc-câble-jack-mono" class="nav-link" data-scroll-target="#câble-jack-mono"><span class="toc-section-number">8.3.1</span>  Câble jack «&nbsp;mono&nbsp;»</a></li>
-  <li><a href="#câble-jack-stéréo" id="toc-câble-jack-stéréo" class="nav-link" data-scroll-target="#câble-jack-stéréo"><span class="toc-section-number">8.3.2</span>  Câble jack «&nbsp;stéréo&nbsp;»</a></li>
-  <li><a href="#câble-y" id="toc-câble-y" class="nav-link" data-scroll-target="#câble-y"><span class="toc-section-number">8.3.3</span>  Câble «&nbsp;Y&nbsp;»</a></li>
-  <li><a href="#les-connexions-dinsert" id="toc-les-connexions-dinsert" class="nav-link" data-scroll-target="#les-connexions-dinsert"><span class="toc-section-number">8.3.4</span>  Les connexions d’insert</a></li>
+  <li><a href="#câble-jack-mono" id="toc-câble-jack-mono" class="nav-link" data-scroll-target="#câble-jack-mono"><span class="header-section-number">8.3.1</span> Câble jack «&nbsp;mono&nbsp;»</a></li>
+  <li><a href="#câble-jack-stéréo" id="toc-câble-jack-stéréo" class="nav-link" data-scroll-target="#câble-jack-stéréo"><span class="header-section-number">8.3.2</span> Câble jack «&nbsp;stéréo&nbsp;»</a></li>
+  <li><a href="#câble-y" id="toc-câble-y" class="nav-link" data-scroll-target="#câble-y"><span class="header-section-number">8.3.3</span> Câble «&nbsp;Y&nbsp;»</a></li>
+  <li><a href="#les-connexions-dinsert" id="toc-les-connexions-dinsert" class="nav-link" data-scroll-target="#les-connexions-dinsert"><span class="header-section-number">8.3.4</span> Les connexions d’insert</a></li>
   </ul></li>
-  <li><a href="#routage-des-signaux" id="toc-routage-des-signaux" class="nav-link" data-scroll-target="#routage-des-signaux"><span class="toc-section-number">8.4</span>  Routage des signaux</a></li>
+  <li><a href="#routage-des-signaux" id="toc-routage-des-signaux" class="nav-link" data-scroll-target="#routage-des-signaux"><span class="header-section-number">8.4</span> Routage des signaux</a></li>
   </ul>
 </nav>
     </div>
@@ -580,9 +580,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {

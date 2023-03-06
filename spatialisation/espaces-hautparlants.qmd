@@ -75,9 +75,9 @@ Par rapport à notre question de résolution, plus celle d'un système est faibl
 
 :::{layout-ncol="2"}
 
-![Monophonie](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/1_0_channels_(mono)_label.svg/900px-1_0_channels_(mono)_label.svg.png)
+![Monophonie](../_resources/bitmap/speaker/mono_label.png)
 
-![Stereophonie](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/2_1_channels_%28stereo_subwoofer%29_label.svg/900px-2_1_channels_%28stereo_subwoofer%29_label.svg.png)
+![Stereophonie](../_resources/bitmap/speaker/stereo_label.png)
 
 :::
 
@@ -111,9 +111,9 @@ Une telle réduction n'est pas indolore sur le signal, et nuit largement à la c
 
 :::{layout-ncol="2"}
 
-![Quadriphonie](https://upload.wikimedia.org/wikipedia/commons/5/51/4_0_channels_%28quadrophonic%29%28quadrophonie%29_label.svg)
+![Quadriphonie](../_resources/bitmap/speaker/quad_label.png)
 
-![Surround](https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/4_1channel.svg/900px-4_1channel.svg.png)
+![Surround](../_resources/bitmap/speaker/lcrs_label.png)
 <!-- ![5.1 (icone)](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/5_1_channels_%28surround_sound%29_label.svg/900px-5_1_channels_%28surround_sound%29_label.svg.png) -->
 
 :::
@@ -132,9 +132,9 @@ C'est grâce à la transition du son analogique vers le son numérique que l'on 
 
 :::{layout-ncol="2"}
 
-![5.1](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/5_1_channels_%28surround_sound%29_label.svg/900px-5_1_channels_%28surround_sound%29_label.svg.png)
+![5.1](../_resources/bitmap/speaker/5_1_label.png)
 
-![7.1](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/7_1_channels_surround_sound.svg/900px-7_1_channels_surround_sound.svg.png)
+![7.1](../_resources/bitmap/speaker/7_1_label.png)
 
 :::
 
@@ -152,7 +152,7 @@ Cette recommandation de l'ITU propose également un ordonnancement des canaux. E
 
 Le format marquant suivant est le 7.1 Dolby Surround. On conserve alors le 5.1 que nous avons déjà décrit et y rajoutons deux enceintes, véritable arrière gauche et arrière droit. Il s'est principalement imposé en salle de cinéma.
 
-![Octophonie](https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/8_0_channels_surround_sound.svg/900px-8_0_channels_surround_sound.svg.png)
+![Octophonie](../_resources/bitmap/speaker/8_0_label.png)
 
 Nous pouvons également évoquer un système supplémentaire, l'octophonie, mais qui n'a pas eu de réelle exploitation commerciale. En d'autres termes, son utilisation s'est bornée à l'exploitation lors de spectacles vivants, sans intégrer la problématique du stockage, du transport et de la restitution antérieure du programme. Il s'agit cependant de systèmes relativement classiques.
 

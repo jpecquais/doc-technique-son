@@ -119,6 +119,54 @@ Le choix entre un microphone à tube et un microphone à transistor semble cepen
 
 La directivité d’un microphone permet de décrire sa capacité à réaliser une « écoute » sélective de son environnement. On rencontre les directivités suivantes : 
 
+```{python}
+
+#| label: fig-dir
+#| fig-align: "center"
+#| fig-caption: "Représentation des six grandes directivités de microphones"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+phi = np.arange(0,2*np.pi,0.01)
+omni = np.full(
+  shape=len(phi),
+  fill_value=1,
+  dtype=int
+)
+bidir = np.cos(phi)
+cardio = 0.5*(omni+bidir)
+hypo = 0.7*omni+0.3*bidir
+superC = 0.3*omni+0.7*bidir
+hyperC = 0.25*omni+0.75*bidir
+
+fig, axs = plt.subplots(nrows=2, ncols=3,subplot_kw={'projection': 'polar'})
+fig.tight_layout()
+axs[0][0].plot(phi, omni, color='tomato')
+axs[0][0].set_title('Omnidirectionnel')
+axs[0][1].plot(phi,np.abs(hypo), color='orange')
+axs[0][1].set_title('Hypocardioïde')
+axs[0][2].plot(phi,np.abs(cardio), color='gold')
+axs[0][2].set_title('Cardioïde')
+axs[1][0].plot(phi,np.abs(superC), color='lawngreen')
+axs[1][0].set_title('Supercardioïde')
+axs[1][1].plot(phi,np.abs(hyperC), color='darkturquoise')
+axs[1][1].set_title('Hypercardioïde')
+axs[1][2].plot(phi, np.abs(bidir), color='purple')
+axs[1][2].set_title('Bidirectionnel')
+
+for axl in axs:
+    for ax in axl:
+        ax.set_theta_zero_location("N")
+        ax.set_rticks([0.5, 1])  # Less radial ticks
+        ax.set_rlabel_position(-22.5)  # Move radial labels away from plotted line
+        ax.legend()
+        ax.grid(True)
+
+plt.show()
+
+```
+
 + Omnidirectionnel : capte l’ensemble du champ sonore de façon indifférenciée.
 + Hypercardioïde : compromis entre Omnidirectionnel et cardioïde.
 + Cardioïde : capte à l’avant, mais rejette à l’arrière du microphone.
@@ -126,52 +174,8 @@ La directivité d’un microphone permet de décrire sa capacité à réaliser u
 + Hypercardioïde : ressers davantage la zone d’écoute et augmente d’autant plus la résurgence arrière.
 + Bidirectionnel : capte à l’avant et à l’arrière, mais selon un lobe plus resserré qu’en cardioïde.
 
-:::{layout-ncol="2"}
 
-```{python}
-
-#| label: fig-dir
-#| fig-align: "center"
-
-import plotly.graph_objects as go
-
-import pandas as pd
-
-df = pd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/polar_dataset.csv")
-
-fig = go.Figure()
-fig.add_trace(go.Scatterpolar(
-        r = df['x1'],
-        theta = df['y'],
-        mode = 'lines',
-        name = 'Figure 8',
-        line_color = 'peru'
-    ))
-fig.add_trace(go.Scatterpolar(
-        r = df['x2'],
-        theta = df['y'],
-        mode = 'lines',
-        name = 'Cardioid',
-        line_color = 'darkviolet'
-    ))
-fig.add_trace(go.Scatterpolar(
-        r = df['x3'],
-        theta = df['y'],
-        mode = 'lines',
-        name = 'Hypercardioid',
-        line_color = 'deepskyblue'
-    ))
-
-
-fig.update_layout(
-    title = 'Mic Patterns',
-    showlegend = False
-)
-
-fig.show()
-
-```
-
+:::{.content-visible when-format="html"}
 
 ```{python}
 
@@ -184,10 +188,10 @@ import numpy as np
 
 twoPi = 2*np.pi
 phi = np.arange(0,360,1)
-
+dirName=["Omnidirectionnel"," "," ","Hypo-cardioïde"," ","Cardioïde"," ","Super-cadioïde","Hyper-cardioïde"," ","Bidirectionnel"]
 fig = go.Figure()
 
-for step in np.arange(0,1.1,0.1):
+for step in [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.75,0.9,1]:
   fig.add_trace(
     go.Scatterpolar(
       visible=False,
@@ -205,7 +209,8 @@ steps = []
 for i in range(len(fig.data)):
     step = dict(
         method="update",
-        args=[{"visible": [False] * len(fig.data)}],  # layout attribute
+        args=[{"visible": [False] * len(fig.data)},
+              {"title": "Directivité : " + dirName[i]}],  # layout attribute],  # layout attribute
     )
     step["args"][0]["visible"][i] = True  # Toggle i'th trace to "visible"
     steps.append(step)
@@ -218,7 +223,7 @@ sliders = [dict(
 )]
 
 fig.update_layout(
-    title = "Directivité (d'omnidirectionnel à bidirectionnel)",
+    title = "Evolution de la directivité",
     showlegend = False,
     sliders=sliders
 )
