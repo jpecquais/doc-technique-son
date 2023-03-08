@@ -71,7 +71,7 @@ book:
         - outils-spat/gestion-effets.qmd
         - outils-spat/mix-obj.qmd
 
-bibliography: references.bib
+# bibliography: references.bib
 
 execute:
   echo: false
