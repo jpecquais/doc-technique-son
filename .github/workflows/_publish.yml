@@ -17,6 +17,8 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
       - run: quarto install tinytex
+      - run: sudo apt-get update
+      - run: sudo apt-get install librsvg2-bin
       
       - name: Install Python and Dependencies
         uses: actions/setup-python@v4
