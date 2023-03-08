@@ -366,9 +366,5 @@ Ce regain d’intérêt et la multiplication des canaux ambisoniques sont à cor
 
 http://www.widescreenmuseum.com/sound/fantasound1.htm
 
- -->
-
-<!-- 
-
 Source : https://www.informit.com/articles/article.aspx?p=337317
-
+ -->
