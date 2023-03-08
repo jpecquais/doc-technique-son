@@ -1,10 +1,13 @@
+# Historique de la spatialisation {#sec-hist-spat}
+
 :::{.callout-warning}
 
-Section en cours de création. Le texte n’est pas corrigé.
+Section en cours de création.
+
+Les secteurs du jeux-vidéo et de la VR ne sont pas encore traités.
 
 :::
 
-# Historique de la spatialisation {#sec-hist-spat}
 
 De nos jours (2023 à l’écriture de ce chapitre), le « son immersif » semble appartenir aux nouvelles technologies et la plupart des fabricants se lancent sur ce marché. Il est d’ailleurs très fréquent de voir ce « son immersif » vendu comme quelque chose de nouveau et d’inédit. Pourtant, la question de l’espace sonore, de sa capture et de sa restitution est presque aussi vieille que celle de l’enregistrement.
 
@@ -64,7 +67,35 @@ La situation se débloque dans les années soixante. La radio devient stéréoph
 
 Devant la généralisation de la stéréophonie, certains constructeurs, labels et artistes vont alors tenter la courte aventure de la quadriphonie.
 
-# La grande aventure cinématographique du son immersif
+## La quadriphonie : une entreprise infructueuse
+
+La [quadriphonie](https://en.wikipedia.org/wiki/Quadraphonic_sound) (quadraphonic, quadrasonic ou encore quadrophonic en anglais) est le premier format dit « surround » accessible au grand public. Les premières tentatives de productions musicales en quadriphonie commencent en 1969. Le directeur artistique Thomas Mowrey a alors réalisé un grand nombre de disques quadriphoniques, notamment pour le label [Deutsche Grammophon](https://en.wikipedia.org/wiki/Deutsche_Grammophon).
+
+Il a existé trois formats de quadriphonie. Ils sont notés de la façon suivante : K-M-N. K indique le nombre de canaux de mixage, M le nombre de canaux du support de diffusion et N le nombre de canaux de restitution (ici, N est donc toujours égal à quatre).
+
++ Le 4-4-4, que l’on pourrait qualifier de « vrai » quadriphonie. Cela impose un équipement tout particulier pour le support de diffusion. En effet, l’écrasante majorité des magnétophones à bandes et des disques microsillons sont stéréo. Certains constructeurs ont donc vendu des magnétophones « quadriphoniques », tandis que d’autres ont tenté de stocker ces quatre canaux sur disques microsillons grâce à des techniques de modulation d’amplitude. Cependant, ces procédés imposent tout de même d’équiper son lecteur vinyle d’une pointe en diamant spécifique.
+
++ Le 4-2-4 cherche à simplifier les choses pour les auditeurs. Grâce à un jeu de matriçage, on encode le signal quadriphonique sur deux canaux, que l’on espère récupérer intact par dématriçage. Si ce matriçage fonctionne parfaitement pour des sons purs, il n’en est rien pour des sons complexes, qui peuvent alors induire une corrélation importante entre les différents canaux. Le matriçage le plus convaincant fut proposé par [Peter Scheiber](https://en.wikipedia.org/wiki/Peter_Scheiber) et perfectionné par [Benjamin Bauer](https://en.wikipedia.org/wiki/Benjamin_Bauer) ([SQ Quadriphonic](https://en.wikipedia.org/wiki/Stereo_Quadraphonic)), mais même celui-là posait un problème sur la corrélation des canaux de diffusions. En effet le niveau de séparation entre deux enceintes adjacentes n’était que de trois décibels. Ce jeu d’encodage et de décodage distord l’espace sonore et ne produit pas des résultats satisfaisants.
+
+:::{.callout-note}
+
+Il « inspirera » pourtant les laboratoires de Dolby pour élaborer leur fort mal nommé « Dolby Stéréo »
+
+:::
+
++ Reste le 2-2-4, que l’on pourrait qualifier du « pire des deux mondes ». Le principe consiste à « inventer » des canaux arrière à un mixage stéréophonique, pour produire un effet englobant. Le résultat est souvent flou et insatisfaisant.
+
+La plupart des enregistrements multicanaux produits par la Deutsche Grammophon ne sont jamais sortis qu’en stéréo. En effet, le label n’a pas été convaincu par la qualité du rendu sonore quadriphonique, notamment à cause du matriçage 4-2-4. 
+
+La complexité d’installation, et l’existence de nombreux formats (dont certains n’offrant pas une qualité de restitution satisfaisante) expliquent largement l’échec commercial du format quadriphonique.
+
+L’exploitation commerciale du son quadriphonique ne se limite pas à la musique dite « classique ». Un grand nombre d’artistes et de groupe « pop » verront leurs mixages stéréo déclinés en quadriphonie. Les plus connus sont sans doute les **Pink Floyd**. Dès [1967](https://www.wired.com/2009/05/dayintech-0512/), ils embarquent en concert l’azimuth coordinator, leur permettant de recréer une diffusion quadriphonique. En 1972-1973, leur ingénieur du son de l’époque, Alan Parson propose un mix quadriphonique de leur album alors en production, The Dark Side of the Moon.
+
+Malgré tout, le format sera un échec commercial cuisant : trop cher pour équiper un grand nombre de personnes, souvent de qualité douteuse à cause de l’étape de matriçage, existant sous de nombreux formats, etc. On trouve tout même aujourd’hui un certain nombre de mixages quadriphoniques des années soixante-dix édités sur SACD ou DVD-Audio. Le label anglais [Dutton Vocalion](https://en.wikipedia.org/wiki/Dutton_Vocalion) a dans son catalogue plusieurs dizaines de ces [rééditions](https://www.duttonvocalion.co.uk/products.php?cat=3), principalement de musique dite « classique ».
+
+<!-- [Absolute Sound](https://www.theabsolutesound.com/articles/the-rebirth-of-quad/) -->
+
+## La grande aventure du son spatialisé au cinéma
 
 Le [cinéma](https://fr.wikipedia.org/wiki/Cin%C3%A9ma), naissant autour de 1984, est une des industries du divertissement mettant le plus en avant les intérêts d’une diffusion spatialisée. Sa dimension visuelle spectaculaire et immersive (écran géant, salle noire, etc.) a donc motivé un traitement du son similaire. On qualifie parfois le cinéma des premiers temps de « muet », principalement dû au fait de l’absence de son synchrone rattaché au film. Cependant, imaginer le dispositif cinématographique comme un dispositif silencieux est une erreur. Dès ses débuts, il est très souvent accompagné par un musicien et il est alors courant pour le public de parler, de commenter la projection. N’oublions pas qu’à l’origine le cinéma est un spectacle forain. Ce n’est que dans un second temps que le cinéma prend place dans les théâtres puis dans des lieux qui lui sont dédiés. 
 
@@ -275,34 +306,6 @@ Le GMEB devient l’IMEB en 1997 (Institut de Musique Expérimentale de Bourges)
 À noter l’excellent site [Electrodoc](https://electrodoc.musiques-recherches.be/fr/accueil), centre de documentation en musiques électroacoustiques. On y trouve de multiples documentations sur les personnes et les œuvres rattachées à la musique électroacoustique. 
 
 :::
-
-## La quadriphonie : une entreprise infructueuse
-
-La [quadriphonie](https://en.wikipedia.org/wiki/Quadraphonic_sound) (quadraphonic, quadrasonic ou encore quadrophonic en anglais) est le premier format dit « surround » accessible au grand public. Les premières tentatives de productions musicales en quadriphonie commencent en 1969. Le directeur artistique Thomas Mowrey a alors réalisé un grand nombre de disques quadriphoniques, notamment pour le label [Deutsche Grammophon](https://en.wikipedia.org/wiki/Deutsche_Grammophon).
-
-Il a existé trois formats de quadriphonie. Ils sont notés de la façon suivante : K-M-N. K indique le nombre de canaux de mixage, M le nombre de canaux du support de diffusion et N le nombre de canaux de restitution (ici, N est donc toujours égal à quatre).
-
-+ Le 4-4-4, que l’on pourrait qualifier de « vrai » quadriphonie. Cela impose un équipement tout particulier pour le support de diffusion. En effet, l’écrasante majorité des magnétophones à bandes et des disques microsillons sont stéréo. Certains constructeurs ont donc vendu des magnétophones « quadriphoniques », tandis que d’autres ont tenté de stocker ces quatre canaux sur disques microsillons grâce à des techniques de modulation d’amplitude. Cependant, ces procédés imposent tout de même d’équiper son lecteur vinyle d’une pointe en diamant spécifique.
-
-+ Le 4-2-4 cherche à simplifier les choses pour les auditeurs. Grâce à un jeu de matriçage, on encode le signal quadriphonique sur deux canaux, que l’on espère récupérer intact par dématriçage. Si ce matriçage fonctionne parfaitement pour des sons purs, il n’en est rien pour des sons complexes, qui peuvent alors induire une corrélation importante entre les différents canaux. Le matriçage le plus convaincant fut proposé par [Peter Scheiber](https://en.wikipedia.org/wiki/Peter_Scheiber) et perfectionné par [Benjamin Bauer](https://en.wikipedia.org/wiki/Benjamin_Bauer) ([SQ Quadriphonic](https://en.wikipedia.org/wiki/Stereo_Quadraphonic)), mais même celui-là posait un problème sur la corrélation des canaux de diffusions. En effet le niveau de séparation entre deux enceintes adjacentes n’était que de trois décibels. Ce jeu d’encodage et de décodage distord l’espace sonore et ne produit pas des résultats satisfaisants.
-
-:::{.callout-note}
-
-Il « inspirera » pourtant les laboratoires de Dolby pour élaborer leur fort mal nommé « Dolby Stéréo »
-
-:::
-
-+ Reste le 2-2-4, que l’on pourrait qualifier du « pire des deux mondes ». Le principe consiste à « inventer » des canaux arrière à un mixage stéréophonique, pour produire un effet englobant. Le résultat est souvent flou et insatisfaisant.
-
-La plupart des enregistrements multicanaux produits par la Deutsche Grammophon ne sont jamais sortis qu’en stéréo. En effet, le label n’a pas été convaincu par la qualité du rendu sonore quadriphonique, notamment à cause du matriçage 4-2-4. 
-
-La complexité d’installation, et l’existence de nombreux formats (dont certains n’offrant pas une qualité de restitution satisfaisante) expliquent largement l’échec commercial du format quadriphonique.
-
-L’exploitation commerciale du son quadriphonique ne se limite pas à la musique dite « classique ». Un grand nombre d’artistes et de groupe « pop » verront leurs mixages stéréo déclinés en quadriphonie. Les plus connus sont sans doute les **Pink Floyd**. Dès [1967](https://www.wired.com/2009/05/dayintech-0512/), ils embarquent en concert l’azimuth coordinator, leur permettant de recréer une diffusion quadriphonique. En 1972-1973, leur ingénieur du son de l’époque, Alan Parson propose un mix quadriphonique de leur album alors en production, The Dark Side of the Moon.
-
-Malgré tout, le format sera un échec commercial cuisant : trop cher pour équiper un grand nombre de personnes, souvent de qualité douteuse à cause de l’étape de matriçage, existant sous de nombreux formats, etc. On trouve tout même aujourd’hui un certain nombre de mixages quadriphoniques des années soixante-dix édités sur SACD ou DVD-Audio. Le label anglais [Dutton Vocalion](https://en.wikipedia.org/wiki/Dutton_Vocalion) a dans son catalogue plusieurs dizaines de ces [rééditions](https://www.duttonvocalion.co.uk/products.php?cat=3), principalement de musique dite « classique ».
-
-<!-- [Absolute Sound](https://www.theabsolutesound.com/articles/the-rebirth-of-quad/) -->
 
 ## L’ambisonie : décorréler l’espace de production et l’espace d’écoute
 
