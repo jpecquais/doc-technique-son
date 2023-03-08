@@ -64,7 +64,7 @@ La situation se débloque dans les années soixante. La radio devient stéréoph
 
 Devant la généralisation de la stéréophonie, certains constructeurs, labels et artistes vont alors tenter la courte aventure de la quadriphonie.
 
-## La grande aventure cinématographique du son immersif
+# La grande aventure cinématographique du son immersif
 
 Le [cinéma](https://fr.wikipedia.org/wiki/Cin%C3%A9ma), naissant autour de 1984, est une des industries du divertissement mettant le plus en avant les intérêts d’une diffusion spatialisée. Sa dimension visuelle spectaculaire et immersive (écran géant, salle noire, etc.) a donc motivé un traitement du son similaire. On qualifie parfois le cinéma des premiers temps de « muet », principalement dû au fait de l’absence de son synchrone rattaché au film. Cependant, imaginer le dispositif cinématographique comme un dispositif silencieux est une erreur. Dès ses débuts, il est très souvent accompagné par un musicien et il est alors courant pour le public de parler, de commenter la projection. N’oublions pas qu’à l’origine le cinéma est un spectacle forain. Ce n’est que dans un second temps que le cinéma prend place dans les théâtres puis dans des lieux qui lui sont dédiés. 
 
