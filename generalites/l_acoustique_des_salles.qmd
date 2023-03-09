@@ -23,9 +23,15 @@ Lorsque les premières réflexions elles-mêmes auront rebondi plusieurs fois su
 
 L'équation de Sabine permet de calculer le temps de réverbération d'une salle à partir de son volume et du coefficient d'absorption de ses matériaux.
 
-$$RT_{60} = 0.1611 \times \frac{V}{\sum_{i=0}^{k} S_i.\alpha_i}$$
+$$RT_{60} = 0.1611 \times \frac{V}{\sum_{i=0}^{k} S_i.\alpha_i +  \mu V}$$
 
-$V$ s'exprime en $m^3$ et $S$ en $m^2$. $\alpha$ est le coefficient d'absorption du matériau, en sabins. Ce coefficient est compris entre 0 et 1, plus il est important plus le matériau est absorbant.
+$V$ s'exprime en $m^3$ et $S$ en $m^2$. $\alpha$ est le coefficient d'absorption du matériau, en sabins. Ce coefficient est compris entre 0 et 1, plus il est important plus le matériau est absorbant. $\mu$ est le coefficient d'absorption de l'air ($m^{-1}$).
+
+:::{.callout-tip}
+
+Pour des fréquences inférieures à 8 kHz, on peut considérer le terme $\mu V$ comme négligeable
+
+:::
 
 En guise d'exemple sur l'utilisation de la formule ci-dessus, prenons le cas d'une pièce de $25\,m^2$ ($5\,m$ par $5\,m$) et de $2.40\,m$ de hauteur. Nous considérons que le sol est en parquet et les murs en plâtre. Nous avons donc $25\,m^2$ de parquet et $4\times(5\times2.4)=48\,m^2$. On trouve sur les sites de fabricant de matériaux que le plâtre peint a un coefficient d'absorption de 0.05 sabins et le bois un coefficient de 0.15 sabins. Notre calcul final.
 
@@ -45,9 +51,13 @@ Il convient d'observer plusieurs réserves quant à l'utilisation de l'équation
 
 L'équation de Sabine pose également problème pour de petits espaces (régie d'écoute par exemple) en prédisant un temps de réverbération trop long. Dans ce cas, l'équation d'Eyring est plus adaptée.
 
-$$RT_{60} = -0.1611 \times \frac{V}{\sum_{i=0}^{k} S_i.\ln(1-\alpha_i)}$$
+$$RT_{60} = -0.1611 \times \frac{V}{\sum_{i=0}^{k} S_i.\ln(1-\alpha_i) +  \mu V}$$
 
-> :warning: L'équation d'Eyring n'améliore pas non plus la problématique fréquentielle.
+:::{.callout-warning}
+
+L'équation d'Eyring n'améliore pas non plus la problématique fréquentielle.
+
+:::
 
 ### L'indice de "Speech Clarity" C50
 
@@ -63,21 +73,12 @@ La plupart des pièces de vie sont des salles rectangulaires. Dans ce cas, les s
 
 Nous aborderons ici ce  phénomène sous l'angle de l'acoustique des salles, mais il est applicable dans d'autres situations, comme la vibration d'une corde par exemple.
 
-<!-- ```{r, echo = FALSE, fig.align='center', fig.cap = 'Les points rouges représente les noeuds, les amplitudes maximales sont les ventres. Infographie par Lucas Vieira'}
-if (knitr:::is_html_output()) {
-  knitr::include_graphics(rep("../_resources/gif/Standing_wave_2.gif"))
-} else {
-  knitr::asis_output('\\url{../_resources/gif/Standing_wave_2.gif}')
-}
-
-``` -->
-
 ![Les points rouges représente les noeuds, les amplitudes maximales sont les ventres. Infographie par Lucas Vieira](../_resources/gif/Standing_wave_2){#fig-onde_stat fig-align="center"}
 
 Il est possible de calculer les fréquences d'un mode grâce aux formules vues au chapitre précédent :
 
 $$f(n) = \frac{c}{2L}.n$$
-où $c=340\,m.s^{-1}$, $L$ est la longueur considérée de la pièce. Pour $n=1$ on trouve le **mode propre**. Pour $n>1$ on trouvera tous les **modes harmoniques**.
+où $c=340\,m.s^{-1}$, $L$ est la longueur considérée de la pièce. Pour $n=1$ on trouve le **mode propre**. Pour $n$ strictemment supérieur à un on trouvera tous les **modes harmoniques**.
 
 Étudions la fréquence du mode propre pour deux cas théoriques : une salle de 16 m² (4x4) et une autre de 49 m² (7x7). On trouvera donc :
 
@@ -85,7 +86,11 @@ $$f(1)_{L=4m} = 42.5 \,Hz \>\>\>\> f(1)_{L=7m} = 24 \,Hz$$
 
 On en déduit donc que, plus la pièce est grande, plus la fréquence des modes propres sera grave. Il convient également de considérer la distance de chaque surface parallèle, car les pièces sont rarement cubiques. Cela implique donc la présence de trois modes propres, plus leurs modes harmoniques, pour une seule et même salle.
 
-## Premières réflexions et filtre en peigne
+Au-delà d'une certaine fréquence, dite de *Schroeder*, le recoupement entre les différents modes et leurs harmoniques est tel qu'ils ne sont plus distinguables. Le phénomène de réverbération s'apparente donc à un processus aléatoire gaussien.
+
+$$F_{Schroeder} \approx 2000 \sqrt{{T_{60}}\over{V}} (Hz)$$
+
+## Premières réflexions et filtres en peignes
 
 Nous avons vu que la réponse acoustique, ou réverbération, d'une salle se décompose généralement en deux parties, la première étant les premières réflexions. Ces premières réflexions sont donc, comme leur nom l'indique, les premiers rebonds que nous entendons suite à un évènement sonore.
 
@@ -126,13 +131,17 @@ Toujours en utilisant les formules définies au premier chapitre, on établit la
 
 $$ fc = \frac 1{2t} = \frac c{2d} $$
 
-Où $fc$ correspond à la fréquence d'annulation la plus grave du filtre en peigne. Les autres fréquences se calculent grâce à la relation $f(n) = fc*n$. Le phénomène de filtre en peigne est donc également harmonique.
+Où $fc$ correspond à la fréquence d'annulation la plus grave du filtre en peigne. Les autres fréquences se calculent grâce à la relation $f(n) = fc \times n$. Le phénomène de filtre en peigne est donc également harmonique.
 
 Ainsi, on peut calculer les filtres en peignes présents au point d'écoute d'une régie de mixage ou de prise de son grâce à la mesure du chemin des premières réflexions.
 
 ![Ensemble des premières reflexions entendues par une oreille pour une enceinte (hors plafond et plancher/bureau).](../_resources/drawings/roomPr.svg){#fig-pr fig-align='center'}
 
-> La réflexion du son sur une paroi est tout à fait comparable à de l'optique géométrique. Une onde sonore arrivant avec un angle d'incidence $\alpha$ sur une surface sera réfléchie avec le même angle. Ainsi, il est souvent conseillé d'utiliser un miroir lorsque l'on positionne des traitements acoustiques. Lorsque la personne assise au point d'écoute voit une enceinte dans un miroir placé sur un mur, on sait alors qu'il faudra placer le panneau à la place du miroir.
+:::{callout-note}
+
+La réflexion du son sur une paroi est tout à fait comparable à de l'optique géométrique. Une onde sonore arrivant avec un angle d'incidence $\alpha$ sur une surface sera réfléchie avec le même angle. Ainsi, il est souvent conseillé d'utiliser un miroir lorsque l'on positionne des traitements acoustiques. Lorsque la personne assise au point d'écoute voit une enceinte dans un miroir placé sur un mur, on sait alors qu'il faudra placer le panneau à la place du miroir.
+
+:::
 
 On se rend donc compte que l'influence des filtres en peigne générés par les premières réflexions est très importante. Ce phénomène à lui seul explique l'intérêt d'une grande régie d'écoute. En effet, plus une pièce est grande, plus l'écart de temps entre le son direct et les premières réflexions est important. Cela implique deux choses :
 
@@ -182,7 +191,11 @@ On se posera ensuite la question des endroits de la pièce les plus propices pou
 
 Une fois ces considérations prises en compte, on pourra alors aborder le traitement de l'acoustique.
 
-> Il ne faut pas confondre isolation acoustique et traitement acoustique. Dans le premier cas, on chercher a limiter la contribution sonore d'un lieu sur son environnement, dans l'autre on cherche à améliorer la propagation du son dans un espace donné. Une isolation acoustique satisfaisante nécessite de lourds travaux, voire l'aménagement d'une "boîte dans une boîte". Ces notions d'acoustiques dépassent le cadre de ce cours. 
+:::{.callout-warning}
+
+Il ne faut pas confondre isolation acoustique et traitement acoustique. Dans le premier cas, on chercher a limiter la contribution sonore d'un lieu sur son environnement, dans l'autre on cherche à améliorer la propagation du son dans un espace donné. Une isolation acoustique satisfaisante nécessite de lourds travaux, voire l'aménagement d'une "boîte dans une boîte". Ces notions d'acoustiques dépassent le cadre de ce cours. 
+
+:::
 
 ### Les types de traitements
 

@@ -150,7 +150,11 @@ Nous pouvons tout de même nous essayer à cet exercice pour nous permettre d'av
 
 Il est intéressant de former son oreille à reconnaître une plage de fréquence, ainsi que d'y associer son propre vocabulaire et une sensation. Les appellations proposées ci-dessus ne sont à prendre que comme guides et n'ont pas valeur de référence. Cela favorise une écoute critique et analytique.
 
-> Aussi, les fréquences graves ont un effet masquant sur les fréquences plus aiguës. Ce phénomène est dû au fonctionnement de notre oreille, et plus particulièrement de la cochlée.
+:::{.callout-important}
+
+Aussi, les fréquences graves ont un effet masquant sur les fréquences plus aiguës. Ce phénomène est dû au fonctionnement de notre oreille, et plus particulièrement de la cochlée.
+
+:::
 
 ### Pression acoustique & niveau sonore
 
@@ -162,9 +166,13 @@ Notre oreille fonctionne de façon logarithmique, et non linéairement, face à 
 
 $$L_p = 20\,\log_{10}\Big(\frac{p_{eff}}{p_{ref}}\Big) \qquad p_{ref} = 20\mu Pa$$
 
-> Si la pression acoustique double, on observe une augmentation du niveau sonore de 6 dB SPL. Lorsqu'on ressent un doublement du niveau sonore, on observe une augmentation de 20 dB.
->
-> La pression acoustique est divisée par deux à chaque doublement de distance.
+:::{.callout-note}
+
+Si la pression acoustique double, on observe une augmentation du niveau sonore de 6 dB SPL. Lorsqu'on ressent un doublement du niveau sonore, on observe une augmentation de 20 dB.
+
+La pression acoustique est divisée par deux à chaque doublement de distance.
+
+:::
 
 La question se complexifie lorsque l'on rajoute la dimension fréquentielle à la question de la perception du niveau sonore.  En effet, nous percevons des niveaux sonores différents pour différentes fréquences pourtant émises au même niveau de pression acoustique. Pour inclure cette dépendance fréquentielle, nous avons mis en place une unité de mesure : la **sonie** ou **bruyance** (**loudness** en anglais). Il est donc possible ensuite de définir des courbes d'**isosonie**, c'est-à-dire des courbes indiquant un niveau sonore de perception égale en fonction de la fréquence et du niveau de pression acoustique.
 
@@ -194,7 +202,11 @@ $$\Delta t_{max} = \frac d c = \frac {0,15}{340} = 0.4 \> ms$$
 
 Si nos oreilles sont espacées de quelques centimètres, notre tête les séparant représente un obstacle acoustique non négligeable. De plus, les pavillons des oreilles imposent également une certaine directivité à notre écoute. En première approximation, on pourra donc considérer que l'ensemble formé par la tête et les pavillons implique une atténuation linéaire des ondes sonores, elle-même fonction de l'angle d'incidence. On appelle cette différence de niveau **différence d'intensité interaural**, ou **ILD** (interaural level difference) et se note $\Delta i$. On considère que si la différence de niveau de pression acoustique entre les deux oreilles est supérieure à 20 dB, on entendra l'évènement sonore complètement latéralisé.
 
-> L'ombre acoustique que représentent la tête et le pavillon n'est en réalité pas du tout linéaire en fréquence. La modification du timbre induite par ce système n'est pas perçue par notre cerveau comme une information de couleur, mais bien comme une information de spatialisation. Ainsi, selon l'angle d'incidence de l'évènement sonore, son spectre sera filtré d'une certaine manière qui permettra à notre cerveau de le positionner dans l'espace. La réponse en fréquence d'une tête se nomme **HRTF** (**Head Related Transfer Function**).
+:::{.callout-important}
+
+L'ombre acoustique que représentent la tête et le pavillon n'est en réalité pas du tout linéaire en fréquence. La modification du timbre induite par ce système n'est pas perçue par notre cerveau comme une information de couleur, mais bien comme une information de spatialisation. Ainsi, selon l'angle d'incidence de l'évènement sonore, son spectre sera filtré d'une certaine manière qui permettra à notre cerveau de le positionner dans l'espace. La réponse en fréquence d'une tête se nomme **HRTF** (**Head Related Transfer Function**).
+
+:::
 
 Enfin, nous sommes également capables de déterminer la distance d'un évènement sonore. La plupart des paramètres permettant d'évaluer cette distance sont relatifs. Cela signifie que l'évènement doit être comparé à un autre pour pouvoir le repositionner dans l'espace. On pourra alors comparer :
 
