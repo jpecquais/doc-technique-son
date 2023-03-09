@@ -536,9 +536,19 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>8000&nbsp;Hz — 20&nbsp;000&nbsp;Hz</strong> : Air, apporte une sensation d’ouverture voir de finesse</li>
 </ul>
 <p>Il est intéressant de former son oreille à reconnaître une plage de fréquence, ainsi que d’y associer son propre vocabulaire et une sensation. Les appellations proposées ci-dessus ne sont à prendre que comme guides et n’ont pas valeur de référence. Cela favorise une écoute critique et analytique.</p>
-<blockquote class="blockquote">
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Aussi, les fréquences graves ont un effet masquant sur les fréquences plus aiguës. Ce phénomène est dû au fonctionnement de notre oreille, et plus particulièrement de la cochlée.</p>
-</blockquote>
+</div>
+</div>
 </section>
 <section id="pression-acoustique-niveau-sonore" class="level3" data-number="2.2.2">
 <h3 data-number="2.2.2" class="anchored" data-anchor-id="pression-acoustique-niveau-sonore"><span class="header-section-number">2.2.2</span> Pression acoustique &amp; niveau sonore</h3>
@@ -546,10 +556,20 @@ ul.task-list li input[type="checkbox"] {
 <p>L’unité du système international de la pression est le <strong>pascal</strong> (<strong>Pa</strong>). Or, il est très rare de parler de la pression acoustique en pascal, car la variation de cette pression exprimée en pascal ne correspond pas à ce que nous percevons. En d’autres termes, si la pression acoustique exprimée en pascal double, nous ne percevons pas un son deux fois plus fort.</p>
 <p>Notre oreille fonctionne de façon logarithmique, et non linéairement, face à une variation de pression acoustique. C’est pour cela que l’on parle généralement de <strong>niveau de pression acoustique</strong>, où <strong>SPL</strong> (pour Sound Pressure Level en anglais), qui s’exprimera en <strong>décibel</strong>. La relation entre la variation de pression et le niveau de pression acoustique se fait grâce à la relation :</p>
 <p><span class="math display">\[L_p = 20\,\log_{10}\Big(\frac{p_{eff}}{p_{ref}}\Big) \qquad p_{ref} = 20\mu Pa\]</span></p>
-<blockquote class="blockquote">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Si la pression acoustique double, on observe une augmentation du niveau sonore de 6 dB SPL. Lorsqu’on ressent un doublement du niveau sonore, on observe une augmentation de 20 dB.</p>
 <p>La pression acoustique est divisée par deux à chaque doublement de distance.</p>
-</blockquote>
+</div>
+</div>
 <p>La question se complexifie lorsque l’on rajoute la dimension fréquentielle à la question de la perception du niveau sonore. En effet, nous percevons des niveaux sonores différents pour différentes fréquences pourtant émises au même niveau de pression acoustique. Pour inclure cette dépendance fréquentielle, nous avons mis en place une unité de mesure : la <strong>sonie</strong> ou <strong>bruyance</strong> (<strong>loudness</strong> en anglais). Il est donc possible ensuite de définir des courbes d’<strong>isosonie</strong>, c’est-à-dire des courbes indiquant un niveau sonore de perception égale en fonction de la fréquence et du niveau de pression acoustique.</p>
 <div id="fig-isosonie" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -578,9 +598,19 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>Si nos oreilles sont espacées de quelques centimètres, notre tête les séparant représente un obstacle acoustique non négligeable. De plus, les pavillons des oreilles imposent également une certaine directivité à notre écoute. En première approximation, on pourra donc considérer que l’ensemble formé par la tête et les pavillons implique une atténuation linéaire des ondes sonores, elle-même fonction de l’angle d’incidence. On appelle cette différence de niveau <strong>différence d’intensité interaural</strong>, ou <strong>ILD</strong> (interaural level difference) et se note <span class="math inline">\(\Delta i\)</span>. On considère que si la différence de niveau de pression acoustique entre les deux oreilles est supérieure à 20 dB, on entendra l’évènement sonore complètement latéralisé.</p>
-<blockquote class="blockquote">
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>L’ombre acoustique que représentent la tête et le pavillon n’est en réalité pas du tout linéaire en fréquence. La modification du timbre induite par ce système n’est pas perçue par notre cerveau comme une information de couleur, mais bien comme une information de spatialisation. Ainsi, selon l’angle d’incidence de l’évènement sonore, son spectre sera filtré d’une certaine manière qui permettra à notre cerveau de le positionner dans l’espace. La réponse en fréquence d’une tête se nomme <strong>HRTF</strong> (<strong>Head Related Transfer Function</strong>).</p>
-</blockquote>
+</div>
+</div>
 <p>Enfin, nous sommes également capables de déterminer la distance d’un évènement sonore. La plupart des paramètres permettant d’évaluer cette distance sont relatifs. Cela signifie que l’évènement doit être comparé à un autre pour pouvoir le repositionner dans l’espace. On pourra alors comparer :</p>
 <ul>
 <li>Leurs niveaux sonores : un évènement sonore plus fort paraît plus proche</li>
