@@ -123,7 +123,7 @@ La directivité d’un microphone permet de décrire sa capacité à réaliser u
 
 #| label: fig-dir
 #| fig-align: "center"
-#| fig-caption: "Représentation des six grandes directivités de microphones"
+#| fig-cap: "Représentation des six grandes directivités de microphones"
 
 import numpy as np
 import matplotlib.pyplot as plt
