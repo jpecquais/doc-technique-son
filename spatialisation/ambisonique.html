@@ -411,7 +411,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#HOA-decode-allrad" id="toc-HOA-decode-allrad" class="nav-link active" data-scroll-target="#HOA-decode-allrad"><span class="header-section-number">37.1</span> Décodeurs</a></li>
+  <li><a href="#lambisonie-du-premier-ordre-foa" id="toc-lambisonie-du-premier-ordre-foa" class="nav-link active" data-scroll-target="#lambisonie-du-premier-ordre-foa"><span class="header-section-number">37.1</span> L’ambisonie du premier ordre (FOA)</a></li>
+  <li><a href="#captation-du-champs-sonore" id="toc-captation-du-champs-sonore" class="nav-link" data-scroll-target="#captation-du-champs-sonore"><span class="header-section-number">37.2</span> Captation du champs sonore</a></li>
+  <li><a href="#synthèse-du-champs-sonore" id="toc-synthèse-du-champs-sonore" class="nav-link" data-scroll-target="#synthèse-du-champs-sonore"><span class="header-section-number">37.3</span> Synthèse du champs sonore</a></li>
+  <li><a href="#HOA-decode-allrad" id="toc-HOA-decode-allrad" class="nav-link" data-scroll-target="#HOA-decode-allrad"><span class="header-section-number">37.4</span> Décodeurs</a></li>
   </ul>
 </nav>
     </div>
@@ -435,8 +438,49 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="HOA-decode-allrad" class="level2" data-number="37.1">
-<h2 data-number="37.1" class="anchored" data-anchor-id="HOA-decode-allrad"><span class="header-section-number">37.1</span> Décodeurs</h2>
+<p>L’ambisonique (ou ambisonie), s’attache à décrire le champ acoustique en trois dimensions d’un espace donné en un point. C’est à la fois une technique de prise de son, grâce à l’utilisation de microphones particuliers et une solution de panning en post-production. De part son indépendance par rapport au dispositif du système de diffusion, on qualifie parfois un mixage ambisonique de <em>mixage orienté scène</em>. Nous ici l’implication que nous décrivons, à l’aide de canaux audio, une scène sonore, et non pas un certain arrangement de haut-parleur (par opposition à l’orienté canal).</p>
+<p>L’ambisonie se distingue également des approches plus conventionnelles (approche perceptives du panning usuel) par son approche <strong>physique</strong>. Nous verrons que dans son fonctionnement, l’ambisonie réalise l’<strong>échantillonnage du champ de pression acoustique</strong>. Cet échantillonnage peut varier en précision en fonction de l’<strong>ordre</strong> auquel nous souhaitons travailler.</p>
+<p>Nous allons commencer par étudier l’ambisonie dit du “premier ordre”, tel que proposé par Michael Gerzon et son équipe dans les années soixante-dix. Seulement ensuite, nous questionnerons l’ambisonie d’ordre plus élevé, apparut au début des années 2000.</p>
+<section id="lambisonie-du-premier-ordre-foa" class="level2" data-number="37.1">
+<h2 data-number="37.1" class="anchored" data-anchor-id="lambisonie-du-premier-ordre-foa"><span class="header-section-number">37.1</span> L’ambisonie du premier ordre (FOA)</h2>
+<p>L’ambisonie du premier ordre (ou FOA pour First Order Ambisonic) voit le jour sous la forme d’une technique de prise de son. Celle-ci permet l’enregistrement d’un scène sonore sur <strong>quatres canaux</strong>, que l’on peut ensuite décoder sur n’importe quel système de haut-parleurs.</p>
+<p>Pour capturer le champ acoustique en un point, il faut donc s’intéresser au champ acoustique lui-même. Nous l’avons vu à la <a href="../generalites/qualifier_le_son.html#sec-le-son-physique"><span>Section&nbsp;2.1</span></a>, sous sa forme acoustique, une onde sonore se caractérise par la variation locale de la pression. Pour mesurer la pression en un point, nous pouvons utiliser un microphone omnidirectionnel (également appelé microphone à pression). Ce microphone omnidirectionnel va donc rendre compte a chaque instant du temps de la valeur de la pression. A ce stade, il n’est pas question de parler de spatialisation, la capatation d’une tel capsule étant monophonique.</p>
+<p>Il conviendrait donc de mesurer la “direction” du déplacement local des particules d’air. Quelque part, on se demande dans <strong>quel sens varie la pression</strong>. Pour cela, on cherche à mesurer la vitesse de ce déplacement, et donc la variation de la pression en un point. Pour se faire, on utilise un microphone bidirectionnel (aussi appelé à gradient de pression). Ce microphone va donc mesurer, à chaque un instant du temps, la différence entre la pression qui à lieu tout de suite et celle qui a eu lieu. On caractérise donc une <strong>variation dans le temps</strong>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Astuce
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour clarifier le sujet, faisons le parallèle avec une voiture sur une route. On peut facilement mesure sa position sur la route (à quelle borne kilométrique se situe t-elle ?). Sa vitesse correspond à la variation de son déplacement dans le temps (combien de temps à telle mise pour passer d’une borne kilométrique A à une borne kilométrique B). Son accélération est alors la mesure de la variation de la vitesse. Quand j’accélère, la vitesse augmente, quand je décélère, la vitesse diminue, quand l’accélération est nulle, la vitesse est constante.</p>
+<p>Nous pourrions pousser ce raisonnement dans l’absurde : si la voiture oscille entre marche avant et marche arrière (donc sa position moyenne est toujours la même), nous pouvons faire une parallèle direct avec ce que vie une particule d’air lorsqu’elle est traversée par une onde sonore.</p>
+</div>
+</div>
+<div class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div id="fig-dir" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="ambisonique_files/figure-html/fig-dir-output-1.png" width="662" height="361" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;37.1: Pression et variation de pression sur l’axe X</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Une capsule bidirectionnelle nous permet de mesurer dans quel axe se déplace les molécules d’air (si les les molécules oscillent dans l’axe du microphone, on obtient une tension mesurable, si les molécules oscillent sur l’axe normal (à 90°) de l’axe du microphone, on obtient une tension négligeable). Cependant cela ne nous renseigne pas si la source sonore responsable de la perturbation se trouve plutôt devant ou derrière le microphone. Cependant, si nous associons au même point de l’espace une capsule omnidirectionnelle et une capsule bidirectionnelle, nous allons pouvoir lever cette indétermination.</p>
+<p>Si nous additionons le signal obtenue par la cellule omnidirectionnelle et la cellule bidirectionnelle, nous crééons une directivité cardioïdes qui écoute vers l’avant du microphone bidirectionnelle, et donc, rejette ce qui se trouve dans son dos. Si l’on soustrait au microphone omnidirectionnel la tension obtenue par le microphone bidirectionnel, on créer alors une directivité cardioïdes qui écoute à l’arrière du microphone omnidirectionnel et rejette ce qui se trouve devant lui. Nous vennons ici de fabriquer un couple MS.</p>
+</section>
+<section id="captation-du-champs-sonore" class="level2" data-number="37.2">
+<h2 data-number="37.2" class="anchored" data-anchor-id="captation-du-champs-sonore"><span class="header-section-number">37.2</span> Captation du champs sonore</h2>
+</section>
+<section id="synthèse-du-champs-sonore" class="level2" data-number="37.3">
+<h2 data-number="37.3" class="anchored" data-anchor-id="synthèse-du-champs-sonore"><span class="header-section-number">37.3</span> Synthèse du champs sonore</h2>
+</section>
+<section id="HOA-decode-allrad" class="level2" data-number="37.4">
+<h2 data-number="37.4" class="anchored" data-anchor-id="HOA-decode-allrad"><span class="header-section-number">37.4</span> Décodeurs</h2>
 
 
 </section>
