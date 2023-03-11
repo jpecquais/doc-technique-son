@@ -462,16 +462,32 @@ Astuce
 </div>
 <div class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
-<div id="fig-dir" class="quarto-figure quarto-figure-center anchored">
+<div id="fig-ms" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="ambisonique_files/figure-html/fig-dir-output-1.png" width="662" height="361" class="figure-img"></p>
+<p><img src="ambisonique_files/figure-html/fig-ms-output-1.png" width="662" height="361" class="figure-img"></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;37.1: Pression et variation de pression sur l’axe X</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Une capsule bidirectionnelle nous permet de mesurer dans quel axe se déplace les molécules d’air (si les les molécules oscillent dans l’axe du microphone, on obtient une tension mesurable, si les molécules oscillent sur l’axe normal (à 90°) de l’axe du microphone, on obtient une tension négligeable). Cependant cela ne nous renseigne pas si la source sonore responsable de la perturbation se trouve plutôt devant ou derrière le microphone. Cependant, si nous associons au même point de l’espace une capsule omnidirectionnelle et une capsule bidirectionnelle, nous allons pouvoir lever cette indétermination.</p>
-<p>Si nous additionons le signal obtenue par la cellule omnidirectionnelle et la cellule bidirectionnelle, nous crééons une directivité cardioïdes qui écoute vers l’avant du microphone bidirectionnelle, et donc, rejette ce qui se trouve dans son dos. Si l’on soustrait au microphone omnidirectionnel la tension obtenue par le microphone bidirectionnel, on créer alors une directivité cardioïdes qui écoute à l’arrière du microphone omnidirectionnel et rejette ce qui se trouve devant lui. Nous vennons ici de fabriquer un couple MS.</p>
+<div class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div id="fig-ms-cardio" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="ambisonique_files/figure-html/fig-ms-cardio-output-1.png" width="662" height="361" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;37.2: Résultante de la somme et de la différence des composantes W et X</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Si nous additionnons le signal obtenue par la cellule omnidirectionnelle et la cellule bidirectionnelle, nous crééons une directivité cardioïdes qui écoute vers l’avant du microphone bidirectionnelle, et donc, rejette ce qui se trouve dans son dos. Si l’on soustrait au microphone omnidirectionnel la tension obtenue par le microphone bidirectionnel, on créer alors une directivité cardioïdes qui écoute à l’arrière du microphone omnidirectionnel et rejette ce qui se trouve devant lui. Nous venons ici de fabriquer un couple MS.</p>
+<p>Notre dispositif permet ici de capter des ondes sonores selon un axe (ici, X). Si l’on souhaite étendre ce dispositif pour capter l’espace en trois dimensions, nous serions naturellement tenté d’ajouter deux autres capsules bidirectionnelles.</p>
+<div class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<p><img src="ambisonique_files/figure-html/cell-4-output-1.png" width="399" height="405"></p>
+</div>
+</div>
 </section>
 <section id="captation-du-champs-sonore" class="level2" data-number="37.2">
 <h2 data-number="37.2" class="anchored" data-anchor-id="captation-du-champs-sonore"><span class="header-section-number">37.2</span> Captation du champs sonore</h2>
