@@ -24,7 +24,7 @@ Nous pourrions pousser ce raisonnement dans l'absurde : si la voiture oscille en
 
 ```{python}
 
-#| label: fig-dir
+#| label: fig-ms
 #| fig-align: "center"
 #| fig-cap: "Pression et variation de pression sur l'axe X"
 
@@ -74,7 +74,78 @@ plt.show()
 
 Une capsule bidirectionnelle nous permet de mesurer dans quel axe se déplace les molécules d'air (si les les molécules oscillent dans l'axe du microphone, on obtient une tension mesurable, si les molécules oscillent sur l'axe normal (à 90°) de l'axe du microphone, on obtient une tension négligeable). Cependant cela ne nous renseigne pas si la source sonore responsable de la perturbation se trouve plutôt devant ou derrière le microphone. Cependant, si nous associons au même point de l'espace une capsule omnidirectionnelle et une capsule bidirectionnelle, nous allons pouvoir lever cette indétermination.
 
-Si nous additionons le signal obtenue par la cellule omnidirectionnelle et la cellule bidirectionnelle, nous crééons une directivité cardioïdes qui écoute vers l'avant du microphone bidirectionnelle, et donc, rejette ce qui se trouve dans son dos. Si l'on soustrait au microphone omnidirectionnel la tension obtenue par le microphone bidirectionnel, on créer alors une directivité cardioïdes qui écoute à l'arrière du microphone omnidirectionnel et rejette ce qui se trouve devant lui. Nous vennons ici de fabriquer un couple MS.
+```{python}
+
+#| label: fig-ms-cardio
+#| fig-align: "center"
+#| fig-cap: "Résultante de la somme et de la différence des composantes W et X"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+phi = np.arange(0,2*np.pi,0.01)
+omni = np.full(
+  shape=len(phi),
+  fill_value=1,
+  dtype=int
+)
+bidir = np.cos(phi)
+
+cardio1 = 0.5*(omni+bidir)
+cardio2 = 0.5*(omni-bidir)
+
+fig, axs = plt.subplots(nrows=1, ncols=2,subplot_kw={'projection': 'polar'})
+fig.tight_layout()
+axs[0].plot(phi, np.abs(cardio1), color='tomato')
+axs[0].set_title('Cardioïde pointant vers l\'Est \n (M+S / W+X)')
+axs[1].plot(phi, np.abs(cardio2), color='darkturquoise')
+axs[1].set_title('Cardioïde pointant vers l\'Ouest \n (M-S / W-X)')
+
+for ax in axs:
+    # ax.set_theta_zero_location("E")
+    ax.set_rticks([0.5, 1])  # Less radial ticks
+    ax.set_rlabel_position(-22.5)  # Move radial labels away from plotted line
+    ax.legend()
+    ax.grid(True)
+
+plt.show()
+
+```
+
+Si nous additionnons le signal obtenue par la cellule omnidirectionnelle et la cellule bidirectionnelle, nous crééons une directivité cardioïdes qui écoute vers l'avant du microphone bidirectionnelle, et donc, rejette ce qui se trouve dans son dos. Si l'on soustrait au microphone omnidirectionnel la tension obtenue par le microphone bidirectionnel, on créer alors une directivité cardioïdes qui écoute à l'arrière du microphone omnidirectionnel et rejette ce qui se trouve devant lui. Nous venons ici de fabriquer un couple MS. 
+
+Notre dispositif permet ici de capter des ondes sonores selon un axe (ici, X). Si l'on souhaite étendre ce dispositif pour capter l'espace en trois dimensions, nous serions naturellement tenté d'ajouter deux autres capsules bidirectionnelles.
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+
+fig = plt.figure()
+ax = fig.add_subplot(projection='3d')
+
+# Make data
+phi = np.arange(0,2*np.pi,0.01)
+theta = np.arange(0,np.pi,0.01)
+
+w_r = 1
+w_x = w_r*np.outer(np.cos(phi), np.sin(theta))
+w_y = w_r*np.outer(np.sin(phi), np.sin(theta))
+w_z = w_r*np.outer(np.ones(np.size(phi)), np.cos(theta))
+
+x_x = np.outer(np.cos(phi)*np.cos(phi), np.sin(theta)*np.sin(theta))
+x_y = np.outer(np.cos(phi)*np.sin(phi), np.sin(theta)*np.sin(theta))
+x_z = np.outer(np.cos(phi)*np.ones(np.size(phi)), np.sin(theta)*np.cos(theta))
+
+# Plot the surface
+# ax.plot_surface(w_x, w_y, w_z)
+ax.plot_surface(x_x, x_y, x_z)
+
+# Set an equal aspect ratio
+ax.set_aspect('equal')
+
+plt.show()
+
+```
 
 ## Captation du champs sonore
 

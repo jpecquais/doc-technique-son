@@ -42,3 +42,6 @@ vignettes/*.pdf
 /_book/
 
 /.luarc.json
+
+.venv
+.vscode
