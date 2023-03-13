@@ -30,6 +30,9 @@ Nous pourrions pousser ce raisonnement dans l'absurde : si la voiture oscille en
 
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.colors as colors
+from matplotlib.collections import LineCollection
+from matplotlib.colors import ListedColormap, BoundaryNorm
 
 phi = np.arange(0,2*np.pi,0.01)
 omni = np.full(
@@ -38,27 +41,25 @@ omni = np.full(
   dtype=int
 )
 
+bidir = np.cos(phi)
 
-firstQuarter_phi = np.arange(0,np.pi/2,0.01)
-bidir1 = np.cos(firstQuarter_phi)
+points = np.array([phi, np.abs(bidir)]).T.reshape(-1, 1, 2)
+segments = np.concatenate([points[:-1], points[1:]], axis=1)
+# Create a continuous norm to map from data points to colors
+norm = plt.Normalize(-1, 1)
+lc = LineCollection(segments, cmap='bwr', norm=norm)
+# Set the values used for colormapping
+lc.set_array(bidir)
+lc.set_linewidth(2)
 
-secondQuarter_phi = np.arange(0.5*np.pi,np.pi,0.01)
-bidir3 = np.cos(secondQuarter_phi)
-
-thirdQuarter_phi = np.arange(np.pi,1.5*np.pi,0.01)
-bidir4 = np.cos(thirdQuarter_phi)
-
-lastQuarter_phi = np.arange(1.5*np.pi,2*np.pi,0.01)
-bidir2 = np.cos(lastQuarter_phi)
 
 fig, axs = plt.subplots(nrows=1, ncols=2,subplot_kw={'projection': 'polar'})
 fig.tight_layout()
-axs[0].plot(phi, omni, color='tomato')
+axs[0].plot(phi, omni, color='red')
 axs[0].set_title('Omnidirectionnel \n (M / W)')
-axs[1].plot(firstQuarter_phi, np.abs(bidir1), color='tomato')
-axs[1].plot(lastQuarter_phi, np.abs(bidir2), color='tomato')
-axs[1].plot(secondQuarter_phi, np.abs(bidir3), color='darkturquoise')
-axs[1].plot(thirdQuarter_phi, np.abs(bidir4), color='darkturquoise')
+line = axs[1].add_collection(lc)
+# fig.colorbar(line, ax=axs[1])
+# axs[1].plot(phi, np.abs(bidir))
 axs[1].set_title('Bidirectionnel \n (S / X)')
 
 for ax in axs:
@@ -81,6 +82,7 @@ Une capsule bidirectionnelle nous permet de mesurer dans quel axe se déplace le
 #| fig-cap: "Résultante de la somme et de la différence des composantes W et X"
 
 import numpy as np
+import math
 import matplotlib.pyplot as plt
 
 phi = np.arange(0,2*np.pi,0.01)
@@ -96,9 +98,9 @@ cardio2 = 0.5*(omni-bidir)
 
 fig, axs = plt.subplots(nrows=1, ncols=2,subplot_kw={'projection': 'polar'})
 fig.tight_layout()
-axs[0].plot(phi, np.abs(cardio1), color='tomato')
+axs[0].plot(phi, np.abs(cardio1), color='red')
 axs[0].set_title('Cardioïde pointant vers l\'Est \n (M+S / W+X)')
-axs[1].plot(phi, np.abs(cardio2), color='darkturquoise')
+axs[1].plot(phi, np.abs(cardio2), color='blue')
 axs[1].set_title('Cardioïde pointant vers l\'Ouest \n (M-S / W-X)')
 
 for ax in axs:
@@ -117,31 +119,69 @@ Si nous additionnons le signal obtenue par la cellule omnidirectionnelle et la c
 Notre dispositif permet ici de capter des ondes sonores selon un axe (ici, X). Si l'on souhaite étendre ce dispositif pour capter l'espace en trois dimensions, nous serions naturellement tenté d'ajouter deux autres capsules bidirectionnelles.
 
 ```{python}
-import matplotlib.pyplot as plt
+
+#|fig-align: 'center'
+
 import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+# The following import configures Matplotlib for 3D plotting.
+from mpl_toolkits.mplot3d import Axes3D
+from scipy.special import sph_harm
+
+# Grids of polar and azimuthal angles
+theta = np.linspace(0, np.pi, 300)
+phi = np.linspace(0, 2*np.pi, 300)
+# Create a 2-D meshgrid of (theta, phi) angles.
+theta, phi = np.meshgrid(theta, phi)
+# Calculate the Cartesian coordinates of each point in the mesh.
+xyz = np.array([np.sin(theta) * np.sin(phi),
+                np.sin(theta) * np.cos(phi),
+                np.cos(theta)])
+
+def plot_Y(ax, el, m):
+    # """Plot the spherical harmonic of degree el and order m on Axes ax."""
+
+    # NB In SciPy's sph_harm function the azimuthal coordinate, theta,
+    # comes before the polar coordinate, phi.
+    Y = sph_harm(abs(m), el, phi, theta)
+
+    # Linear combination of Y_l,m and Y_l,-m to create the real form.
+    if m < 0:
+        Y = np.sqrt(2) * (-1)**m * Y.imag
+    elif m > 0:
+        Y = np.sqrt(2) * (-1)**m * Y.real
+    Yx, Yy, Yz = np.abs(Y) * xyz
+
+    # Colour the plotted surface according to the sign of Y.
+    cmap = plt.cm.ScalarMappable(cmap=plt.get_cmap('bwr'))
+    cmap.set_clim(-0.5, 0.5)
+
+    ax.plot_surface(Yx, Yy, Yz,
+                    facecolors=cmap.to_rgba(Y.real),
+                    rstride=2, cstride=2)
+
+    # Draw a set of x, y, z axes for reference.
+    ax_lim = 0.5
+    ax.plot([-ax_lim, ax_lim], [0,0], [0,0], c='0.5', lw=1, zorder=10)
+    ax.plot([0,0], [-ax_lim, ax_lim], [0,0], c='0.5', lw=1, zorder=10)
+    ax.plot([0,0], [0,0], [-ax_lim, ax_lim], c='0.5', lw=1, zorder=10)
+    
+    ax_lim = 0.3
+    ax.set_xlim(-ax_lim, ax_lim)
+    ax.set_ylim(-ax_lim, ax_lim)
+    ax.set_zlim(-ax_lim, ax_lim)
+    ax.axis('off')
 
 fig = plt.figure()
-ax = fig.add_subplot(projection='3d')
-
-# Make data
-phi = np.arange(0,2*np.pi,0.01)
-theta = np.arange(0,np.pi,0.01)
-
-w_r = 1
-w_x = w_r*np.outer(np.cos(phi), np.sin(theta))
-w_y = w_r*np.outer(np.sin(phi), np.sin(theta))
-w_z = w_r*np.outer(np.ones(np.size(phi)), np.cos(theta))
-
-x_x = np.outer(np.cos(phi)*np.cos(phi), np.sin(theta)*np.sin(theta))
-x_y = np.outer(np.cos(phi)*np.sin(phi), np.sin(theta)*np.sin(theta))
-x_z = np.outer(np.cos(phi)*np.ones(np.size(phi)), np.sin(theta)*np.cos(theta))
-
-# Plot the surface
-# ax.plot_surface(w_x, w_y, w_z)
-ax.plot_surface(x_x, x_y, x_z)
-
-# Set an equal aspect ratio
-ax.set_aspect('equal')
+order = 1
+spec = gridspec.GridSpec(ncols=pow(order+1,2), nrows=1, figure=fig)
+axName = ['W','Y','Z','X']
+for l in range(order+1):
+  for m in range(-l,l+1):
+    ax = fig.add_subplot(spec[2*l+m], projection='3d')
+    ax.set_title(axName[2*l+m])
+    plot_Y(ax, l, m)
 
 plt.show()
 
