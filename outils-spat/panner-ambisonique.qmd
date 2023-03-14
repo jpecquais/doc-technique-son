@@ -1,1 +1,1 @@
-# Panner ambisonique
+# Panner ambisonique {#sec-outils-ambisoniques}

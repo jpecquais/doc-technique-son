@@ -1,5 +1,7 @@
 # L'ambisonique
 
+![Dôme ambisonique du Théâtre de Gennevilliers](https://www.journal-laterrasse.fr/wp-content/uploads/2022/05/sousledomeambisonique.jpg)
+
 L'ambisonique (ou ambisonie), s'attache à décrire le champ acoustique en trois dimensions d'un espace donné en un point. C'est à la fois une technique de prise de son, grâce à l'utilisation de microphones particuliers et une solution de panning en post-production. De part son indépendance par rapport au dispositif du système de diffusion, on qualifie parfois un mixage ambisonique de *mixage orienté scène*. Nous ici l'implication que nous décrivons, à l'aide de canaux audio, une scène sonore, et non pas un certain arrangement de haut-parleur (par opposition à l'orienté canal).
 
 L'ambisonie se distingue également des approches plus conventionnelles (approche perceptives du panning usuel) par son approche **physique**. Nous verrons que dans son fonctionnement, l'ambisonie réalise l'**échantillonnage du champ de pression acoustique**. Cet échantillonnage peut varier en précision en fonction de l'**ordre** auquel nous souhaitons travailler.
@@ -7,6 +9,8 @@ L'ambisonie se distingue également des approches plus conventionnelles (approch
 Nous allons commencer par étudier l'ambisonie dit du "premier ordre", tel que proposé par Michael Gerzon et son équipe dans les années soixante-dix. Seulement ensuite, nous questionnerons l'ambisonie d'ordre plus élevé, apparut au début des années 2000.
 
 ## L'ambisonie du premier ordre (FOA)
+
+### Captation du champs sonore
 
 L'ambisonie du premier ordre (ou FOA pour First Order Ambisonic) voit le jour sous la forme d'une technique de prise de son. Celle-ci permet l'enregistrement d'un scène sonore sur **quatres canaux**, que l'on peut ensuite décoder sur n'importe quel système de haut-parleurs.
 
@@ -26,46 +30,36 @@ Nous pourrions pousser ce raisonnement dans l'absurde : si la voiture oscille en
 
 #| label: fig-ms
 #| fig-align: "center"
-#| fig-cap: "Pression et variation de pression sur l'axe X"
+#| fig-cap: "Pression et variation de pression sur l'axe Y. Les portions rouges ont une phase positive, les portions bleues ont une phase négative."
 
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.colors as colors
-from matplotlib.collections import LineCollection
-from matplotlib.colors import ListedColormap, BoundaryNorm
 
-phi = np.arange(0,2*np.pi,0.01)
+dbnorm = lambda x: 20*np.log10(np.abs(x)/np.max(x))
+
+phi = np.arange(-np.pi,np.pi,0.01)
 omni = np.full(
   shape=len(phi),
-  fill_value=1,
+  fill_value=dbnorm(1),
   dtype=int
 )
 
-bidir = np.cos(phi)
-
-points = np.array([phi, np.abs(bidir)]).T.reshape(-1, 1, 2)
-segments = np.concatenate([points[:-1], points[1:]], axis=1)
-# Create a continuous norm to map from data points to colors
-norm = plt.Normalize(-1, 1)
-lc = LineCollection(segments, cmap='bwr', norm=norm)
-# Set the values used for colormapping
-lc.set_array(bidir)
-lc.set_linewidth(2)
-
+bidir = dbnorm(np.cos(phi))
+bidir_pos = np.ma.masked_where(np.abs(phi)>np.pi/2, bidir)
+bidir_neg = np.ma.masked_where(np.abs(phi)<=np.pi/2, bidir)
 
 fig, axs = plt.subplots(nrows=1, ncols=2,subplot_kw={'projection': 'polar'})
 fig.tight_layout()
 axs[0].plot(phi, omni, color='red')
 axs[0].set_title('Omnidirectionnel \n (M / W)')
-line = axs[1].add_collection(lc)
-# fig.colorbar(line, ax=axs[1])
-# axs[1].plot(phi, np.abs(bidir))
-axs[1].set_title('Bidirectionnel \n (S / X)')
+axs[1].plot(phi, bidir_pos, color='red')
+axs[1].plot(phi, bidir_neg, color='blue')
+axs[1].set_title('Bidirectionnel \n (S / Y)')
 
 for ax in axs:
-    # ax.set_theta_zero_location("E")
-    ax.set_rticks([0.5, 1])  # Less radial ticks
-    ax.set_rlabel_position(-22.5)  # Move radial labels away from plotted line
+    ax.set_ylim(-20,0)
+    ax.set_rticks([-20, -12, -6, 0, 3])  # Less radial ticks
     ax.legend()
     ax.grid(True)
 
@@ -75,52 +69,56 @@ plt.show()
 
 Une capsule bidirectionnelle nous permet de mesurer dans quel axe se déplace les molécules d'air (si les les molécules oscillent dans l'axe du microphone, on obtient une tension mesurable, si les molécules oscillent sur l'axe normal (à 90°) de l'axe du microphone, on obtient une tension négligeable). Cependant cela ne nous renseigne pas si la source sonore responsable de la perturbation se trouve plutôt devant ou derrière le microphone. Cependant, si nous associons au même point de l'espace une capsule omnidirectionnelle et une capsule bidirectionnelle, nous allons pouvoir lever cette indétermination.
 
+
 ```{python}
 
-#| label: fig-ms-cardio
+#| label: fig-m-et-s
 #| fig-align: "center"
-#| fig-cap: "Résultante de la somme et de la différence des composantes W et X"
+#| fig-cap: "Représentation des composantes W et Y sur le même graphique. Les portions rouges ont une phase positive, les portions bleues ont une phase négative."
 
 import numpy as np
-import math
 import matplotlib.pyplot as plt
+import matplotlib.colors as colors
 
-phi = np.arange(0,2*np.pi,0.01)
+dbnorm = lambda x: 20*np.log10(np.abs(x)/np.max(x))
+
+phi = np.arange(-np.pi,np.pi,0.01)
 omni = np.full(
   shape=len(phi),
-  fill_value=1,
+  fill_value=dbnorm(1),
   dtype=int
 )
-bidir = np.cos(phi)
 
-cardio1 = 0.5*(omni+bidir)
-cardio2 = 0.5*(omni-bidir)
+bidir = dbnorm(np.cos(phi))
+bidir_pos = np.ma.masked_where(np.abs(phi)>np.pi/2, bidir)
+bidir_neg = np.ma.masked_where(np.abs(phi)<=np.pi/2, bidir)
 
-fig, axs = plt.subplots(nrows=1, ncols=2,subplot_kw={'projection': 'polar'})
+fig, ax = plt.subplots(nrows=1, ncols=1,subplot_kw={'projection': 'polar'})
 fig.tight_layout()
-axs[0].plot(phi, np.abs(cardio1), color='red')
-axs[0].set_title('Cardioïde pointant vers l\'Est \n (M+S / W+X)')
-axs[1].plot(phi, np.abs(cardio2), color='blue')
-axs[1].set_title('Cardioïde pointant vers l\'Ouest \n (M-S / W-X)')
+ax.plot(phi, omni, color='red')
+ax.plot(phi, bidir_pos, color='red')
+ax.plot(phi, bidir_neg, color='blue')
+ax.plot(np.pi/8,0, markersize=20)
+ax.set_title('Association de deux harmoniques sphériques \n (M et S / W et Y)')
 
-for ax in axs:
-    # ax.set_theta_zero_location("E")
-    ax.set_rticks([0.5, 1])  # Less radial ticks
-    ax.set_rlabel_position(-22.5)  # Move radial labels away from plotted line
-    ax.legend()
-    ax.grid(True)
+ax.set_ylim(-20,0)
+ax.set_rticks([-20, -12, -6, 0, 3])  # Less radial ticks
+ax.legend()
+ax.grid(True)
 
 plt.show()
 
 ```
 
-Si nous additionnons le signal obtenue par la cellule omnidirectionnelle et la cellule bidirectionnelle, nous crééons une directivité cardioïdes qui écoute vers l'avant du microphone bidirectionnelle, et donc, rejette ce qui se trouve dans son dos. Si l'on soustrait au microphone omnidirectionnel la tension obtenue par le microphone bidirectionnel, on créer alors une directivité cardioïdes qui écoute à l'arrière du microphone omnidirectionnel et rejette ce qui se trouve devant lui. Nous venons ici de fabriquer un couple MS. 
+On constate donc que, selon l'angle d'incidence de la source par rapport aux capsules, celle subit une atténuation (et une modification de la phase si la valeur absolue de l'angle d'incidence est ici supérieur à 90°) dans le canal de captation Y, permettant donc de coder sa position autour du microphone. Le canal W capte la source de la même manière, peut importe son angle d'incidence. Nous venons ici de fabriquer un couple MS (voir @sec-pds-stereo-ms).
 
-Notre dispositif permet ici de capter des ondes sonores selon un axe (ici, X). Si l'on souhaite étendre ce dispositif pour capter l'espace en trois dimensions, nous serions naturellement tenté d'ajouter deux autres capsules bidirectionnelles.
+Notre dispositif permet ici de capter des ondes sonores selon un seul axe (ici, Y). Si l'on souhaite étendre ce dispositif pour capter l'espace en trois dimensions, nous serions naturellement tenté d'ajouter deux autres capsules bidirectionnelles supplémentaires.
 
 ```{python}
 
 #|fig-align: 'center'
+#| label: fig-foa
+#| fig-cap: "Composantes ambisonique du premier ordre. Les surfaces rouges ont une phase positive, les surfaces bleues ont une phase négative."
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -183,12 +181,96 @@ for l in range(order+1):
     ax.set_title(axName[2*l+m])
     plot_Y(ax, l, m)
 
+# TODO: ADD 2D VERSION (ALL HARMONIC ON ONE PLOT)
+
 plt.show()
 
 ```
 
-## Captation du champs sonore
+En pratique, les microphones ambisoniques n'utilisent pas cet arrangement de capsules. En effet, l'encombrement des capsules bidirectionnelles compromet sévèrement la coincidence du système. La qualité d'un tel microphone dépend largement de sa capacité à positionner les capsules avec la plus grande coincidence possible, au risque sinon de déterriorer la précision de localisation dans le haut du spectre. On utilise alors plutôt quatre capsules cardioïde, placé sur les surfaces d'un tétraèdre. Cet arrangement est mathématiquement strictement équivalent à l'utilisation d'une capsule omnidirectionnelle et de trois capsules bidirectionnelles. Seulement, l'encombrement moindres des capsules cardioïdes permet une meilleure coincidence de celles-ci.
 
-## Synthèse du champs sonore
+![Microphone Sennheiser Ambeo](https://d2j6dbq0eux0bg.cloudfront.net/images/29143418/1438893864.jpg){width=50%}
+
+On appelle le flux audio en sortie d'un microphone ambisonique du premier order **Format-A**, dans lequel chaque canal correspond à une capsule précise. Par opposition, on appele généralement **Format-B** un flux ambisonique du premier ordre encodé, où chaque canal correspond à une des composantes W, X, Y, Z.
+
+:::{.callout-note}
+
+L'appellation **Format-A** se retrouve également pour les ordres supérieurs, même si ces microphones sont rares ! Le terme **Format-B** est quant à lui, discutable pour les ordre supérieurs.
+
+:::
+
+### Synthèse du champs sonore
+
+Nous avons vu qu'un microphone ambisonique nous permet de capturer l'espace acoustique entendu d'un point. Nous pouvons également "synthétiser", c'est à dire encoder une source sonore monophonique dans un espace acoustique virtuel ambisonique. Pour cela, on utilise simplement des panners ambisoniques.
+
+Pour une incidence donnée de cette sources sonore, le panner va affecter une partie de son énergie aux différentes composantes d'un signal ambisonique (W, X, Y, Z) et une phase particulière (positive ou négative). Il est également possible d'encoder des signaux multicanaux (stéréo, quadriphonie, 5.0). Il s'agit d'une technique très efficace pour adapter un mixage réalisé sur un arrangement de haut-parleurs particuliers vers un autre.
+
+Nous ferons état de ces différentes techniques et des différents panners ambisoniques dans le @sec-outils-ambisoniques .
+
+### Restitution du champs sonore
+
+```{python}
+
+#| fig-align: "center"
+#| label: fig-ms-sum
+#| fig-cap: "Résultante de la somme et de la différence des composantes W et X. Les portions rouges ont une phase positive, les portions bleues ont une phase négative."
+
+import numpy as np
+import math
+import matplotlib
+import matplotlib.pyplot as plt
+from matplotlib.collections import LineCollection
+from matplotlib.colors import ListedColormap, BoundaryNorm
+
+phi = np.arange(0,2*np.pi,0.01)
+omni = np.full(
+  shape=len(phi),
+  fill_value=1,
+  dtype=int
+)
+bidir = np.cos(phi)
+
+cardio1 = (1/3)*omni+bidir
+cardio2 = (1/3)*omni-bidir
+
+points1 = np.array([phi, np.abs(cardio1)]).T.reshape(-1, 1, 2)
+segments1 = np.concatenate([points1[:-1], points1[1:]], axis=1)
+# Create a continuous norm to map from data points to colors
+norm = plt.Normalize(-1, 1)
+lc1 = LineCollection(segments1, cmap='bwr', norm=norm)
+# Set the values used for colormapping
+lc1.set_array(cardio1)
+lc1.set_linewidth(2)
+
+points2 = np.array([phi, np.abs(cardio2)]).T.reshape(-1, 1, 2)
+segments2 = np.concatenate([points2[:-1], points2[1:]], axis=1)
+# Create a continuous norm to map from data points to colors
+lc2 = LineCollection(segments2, cmap='bwr', norm=norm)
+# Set the values used for colormapping
+lc2.set_array(cardio2)
+lc2.set_linewidth(2)
+
+
+fig, axs = plt.subplots(nrows=1, ncols=2,subplot_kw={'projection': 'polar'})
+fig.tight_layout()
+# axs[0].plot(phi, np.abs(cardio1), color='red')
+line1 = axs[0].add_collection(lc1)
+axs[0].set_title('Cardioïde pointant vers l\'Est \n (M+S / W+X)')
+line2 = axs[1].add_collection(lc2)
+# axs[1].plot(phi, np.abs(cardio2), color='blue')
+axs[1].set_title('Cardioïde pointant vers l\'Ouest \n (M-S / W-X)')
+
+for ax in axs:
+    # ax.set_theta_zero_location("E")
+    ax.set_rticks([0.5, 1, 1.414])  # Less radial ticks
+    ax.set_rlabel_position(-22.5)  # Move radial labels away from plotted line
+    ax.legend()
+    ax.grid(True)
+
+plt.show()
+
+```
+
+Si nous additionnons le signal obtenue par la cellule omnidirectionnelle et la cellule bidirectionnelle, nous crééons une directivité cardioïdes qui écoute vers l'avant du microphone bidirectionnelle, et donc, rejette ce qui se trouve dans son dos. Si l'on soustrait au microphone omnidirectionnel la tension obtenue par le microphone bidirectionnel, on créer alors une directivité cardioïdes qui écoute à l'arrière du microphone omnidirectionnel et rejette ce qui se trouve devant lui.
 
 ## Décodeurs {#HOA-decode-allrad}

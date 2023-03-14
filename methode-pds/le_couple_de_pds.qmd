@@ -106,7 +106,7 @@ Dans sa version originale, le couple Blumlein comprend donc deux microphones bid
 
 La formulation du couple XY comprend deux microphones cardioïdes avec un angle compris entre 90° et 135°.
 
-### Le couple MS
+### Le couple MS {#sec-pds-stereo-ms}
 
 Le couple MS, également inventé par Alan Blumlein, permet de doser la quantité de stéréophonie après l’enregistrement.
 
