@@ -1,6 +1,6 @@
 # L'ambisonique
 
-![Dôme ambisonique du Théâtre de Gennevilliers](https://www.journal-laterrasse.fr/wp-content/uploads/2022/05/sousledomeambisonique.jpg)
+![Dôme ambisonique du Théâtre de Gennevilliers](../_resources/bitmap/ambisonic/ambisonic_dome.jpeg)
 
 L'ambisonique (ou ambisonie), s'attache à décrire le champ acoustique en trois dimensions d'un espace donné en un point. C'est à la fois une technique de prise de son, grâce à l'utilisation de microphones particuliers et une solution de panning en post-production. De part son indépendance par rapport au dispositif du système de diffusion, on qualifie parfois un mixage ambisonique de *mixage orienté scène*. En effet, un signal ambisonique décrit, à l'aide de canaux audio, une scène sonore, et non pas un certain arrangement de haut-parleur (par opposition à l'orienté canal).
 
