@@ -2,11 +2,11 @@
 
 ![Dôme ambisonique du Théâtre de Gennevilliers](https://www.journal-laterrasse.fr/wp-content/uploads/2022/05/sousledomeambisonique.jpg)
 
-L'ambisonique (ou ambisonie), s'attache à décrire le champ acoustique en trois dimensions d'un espace donné en un point. C'est à la fois une technique de prise de son, grâce à l'utilisation de microphones particuliers et une solution de panning en post-production. De part son indépendance par rapport au dispositif du système de diffusion, on qualifie parfois un mixage ambisonique de *mixage orienté scène*. Nous ici l'implication que nous décrivons, à l'aide de canaux audio, une scène sonore, et non pas un certain arrangement de haut-parleur (par opposition à l'orienté canal).
+L'ambisonique (ou ambisonie), s'attache à décrire le champ acoustique en trois dimensions d'un espace donné en un point. C'est à la fois une technique de prise de son, grâce à l'utilisation de microphones particuliers et une solution de panning en post-production. De part son indépendance par rapport au dispositif du système de diffusion, on qualifie parfois un mixage ambisonique de *mixage orienté scène*. En effet, un signal ambisonique décrit, à l'aide de canaux audio, une scène sonore, et non pas un certain arrangement de haut-parleur (par opposition à l'orienté canal).
 
 L'ambisonie se distingue également des approches plus conventionnelles (approche perceptives du panning usuel) par son approche **physique**. Nous verrons que dans son fonctionnement, l'ambisonie réalise l'**échantillonnage du champ de pression acoustique**. Cet échantillonnage peut varier en précision en fonction de l'**ordre** auquel nous souhaitons travailler.
 
-Nous allons commencer par étudier l'ambisonie dit du "premier ordre", tel que proposé par Michael Gerzon et son équipe dans les années soixante-dix. Seulement ensuite, nous questionnerons l'ambisonie d'ordre plus élevé, apparut au début des années 2000.
+Nous commencerons par étudier l'ambisonie dit du "premier ordre", tel que proposé par Michael Gerzon et son équipe dans les années soixante-dix. Seulement ensuite, nous questionnerons l'ambisonie d'ordre plus élevé, apparut au début des années 2000.
 
 ## L'ambisonie du premier ordre (FOA)
 
@@ -14,17 +14,17 @@ Nous allons commencer par étudier l'ambisonie dit du "premier ordre", tel que p
 
 L'ambisonie du premier ordre (ou FOA pour First Order Ambisonic) voit le jour sous la forme d'une technique de prise de son. Celle-ci permet l'enregistrement d'un scène sonore sur **quatres canaux**, que l'on peut ensuite décoder sur n'importe quel système de haut-parleurs.
 
-Pour capturer le champ acoustique en un point, il faut donc s'intéresser au champ acoustique lui-même. Nous l'avons vu à la @sec-le-son-physique, sous sa forme acoustique, une onde sonore se caractérise par la variation locale de la pression. Pour mesurer la pression en un point, nous pouvons utiliser un microphone omnidirectionnel (également appelé microphone à pression). Ce microphone omnidirectionnel va donc rendre compte a chaque instant du temps de la valeur de la pression. A ce stade, il n'est pas question de parler de spatialisation, la capatation d'une tel capsule étant monophonique.
+Pour capturer le champ acoustique en un point, il faut donc s'intéresser au champ acoustique lui-même. Nous l'avons vu à la @sec-le-son-physique, sous sa forme acoustique, une onde sonore se caractérise par la variation locale dans le temps de la pression. Pour mesurer la pression en un point, nous pouvons utiliser un microphone omnidirectionnel (également appelé microphone à pression). Ce microphone omnidirectionnel va donc rendre compte a chaque instant du temps de la valeur de la pression. A ce stade, il n'est pas question de parler de spatialisation, la capatation d'une tel capsule étant monophonique.
 
-Il conviendrait donc de mesurer la "direction" du déplacement local des particules d'air. Quelque part, on se demande dans **quel sens varie la pression**. Pour cela, on cherche à mesurer la vitesse de ce déplacement, et donc la variation de la pression en un point. Pour se faire, on utilise un microphone bidirectionnel (aussi appelé à gradient de pression). Ce microphone va donc mesurer, à chaque un instant du temps, la différence entre la pression qui à lieu tout de suite et celle qui a eu lieu. On caractérise donc une **variation dans le temps**.
+Il conviendrait donc de mesurer la "direction" du déplacement local des particules d'air. Quelque part, on se demande dans **quel sens et quelle direction varie la pression**. Pour cela, on cherche à mesurer la vitesse de ce déplacement, et donc la variation de la pression en un point. Pour se faire, on utilise un microphone bidirectionnel (aussi appelé à gradient de pression). Ce microphone va donc mesurer, à chaque un instant du temps, la différence entre la pression entre un point de l'espace et un autre très rapproché. On caractérise donc une **variation dans l'espace**.
 
-:::{.callout-tip}
+<!-- :::{.callout-tip}
 
-Pour clarifier le sujet, faisons le parallèle avec une voiture sur une route. On peut facilement mesure sa position sur la route (à quelle borne kilométrique se situe t-elle ?). Sa vitesse correspond à la variation de son déplacement dans le temps (combien de temps à telle mise pour passer d'une borne kilométrique A à une borne kilométrique B). Son accélération est alors la mesure de la variation de la vitesse. Quand j'accélère, la vitesse augmente, quand je décélère, la vitesse diminue, quand l'accélération est nulle, la vitesse est constante.
+Quelques mots sur le formalisme mathématique. Soit $p(t,\vec{r})$, le champ de pression, $v(t,\vec{r})$ sa vitesse et $s(t,\vec{r})$, une onde sonore. Ces trois fonctions dépendent du **temps** et de l'**espace** (représenté par le vecteur unitaire $\vec{r}$).
 
-Nous pourrions pousser ce raisonnement dans l'absurde : si la voiture oscille entre marche avant et marche arrière (donc sa position moyenne est toujours la même), nous pouvons faire une parallèle direct avec ce que vie une particule d'air lorsqu'elle est traversée par une onde sonore.
+Lorsqu'un évènement sonore est produit, on approxime
 
-:::
+::: -->
 
 ```{python}
 
@@ -67,7 +67,7 @@ plt.show()
 
 ```
 
-Une capsule bidirectionnelle nous permet de mesurer dans quel axe se déplace les molécules d'air (si les les molécules oscillent dans l'axe du microphone, on obtient une tension mesurable, si les molécules oscillent sur l'axe normal (à 90°) de l'axe du microphone, on obtient une tension négligeable). Cependant cela ne nous renseigne pas si la source sonore responsable de la perturbation se trouve plutôt devant ou derrière le microphone. Cependant, si nous associons au même point de l'espace une capsule omnidirectionnelle et une capsule bidirectionnelle, nous allons pouvoir lever cette indétermination.
+Une capsule bidirectionnelle nous permet de mesurer dans quel axe se déplace les molécules d'air (si les les molécules oscillent dans l'axe du microphone, on obtient un niveau mesurable, si les molécules oscillent sur l'axe normal (à 90°) de l'axe du microphone, on obtient un niveau négligeable). Cependant cela ne nous renseigne pas si la source sonore responsable de la perturbation se trouve plutôt devant ou derrière le microphone. Cependant, si nous associons au même point de l'espace une capsule omnidirectionnelle et une capsule bidirectionnelle, nous allons pouvoir lever cette indétermination.
 
 
 ```{python}
@@ -205,11 +205,88 @@ Nous avons vu qu'un microphone ambisonique nous permet de capturer l'espace acou
 
 Pour une incidence donnée de cette sources sonore, le panner va affecter une partie de son énergie aux différentes composantes d'un signal ambisonique (W, X, Y, Z) et une phase particulière (positive ou négative). Il est également possible d'encoder des signaux multicanaux (stéréo, quadriphonie, 5.0). Il s'agit d'une technique très efficace pour adapter un mixage réalisé sur un arrangement de haut-parleurs particuliers vers un autre.
 
+
 Nous ferons état de ces différentes techniques et des différents panners ambisoniques dans le @sec-outils-ambisoniques .
 
 ### Restitution du champs sonore
 
+Une fois le signal enregistré, ou encodé en ambisonique, il convient de le décoder sur un arrangement de haut-parleurs particulier. Cette phase de décodage est peut être la plus complexe à appréhender (et explique très certainement pourquoi l'ambisonique reste à ce jour si peu utilisée).
+
+Illustrons le procédé de décodage en considérant un flux audio ambisonique 2D (W, X, Y) et un système de diffusion quadriphonique.
+
 ```{python}
+
+#| label: fig-amb2D-quad
+#| fig-align: "center"
+#| fig-cap: "Décodage par projection basique."
+
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.colors as colors
+
+db = lambda x: 20*np.log10(np.abs(x))
+dbnorm = lambda x: 20*np.log10(np.abs(x)/np.max(x))
+
+phi = np.arange(-np.pi,np.pi,0.01)
+omniLin = np.full(shape=len(phi),fill_value=1/np.sqrt(2),dtype=float)
+omni = db(omniLin)
+
+bidirLin = np.cos(phi)
+bidir = db(bidirLin)
+bidir_pos = np.ma.masked_where(np.abs(phi)>np.pi/2, bidir)
+bidir_neg = np.ma.masked_where(np.abs(phi)<=np.pi/2, bidir)
+
+bidir2Lin = np.sin(phi)
+bidir2 = db(bidir2Lin)
+bidir2_pos = np.ma.masked_where(phi<0, bidir2)
+bidir2_neg = np.ma.masked_where(phi>=0, bidir2)
+
+alphaSource = -np.pi/8
+sourceDir = omniLin+np.cos(alphaSource)*bidirLin+np.sin(alphaSource)*bidir2Lin
+sourceDir = dbnorm(sourceDir)
+
+speakerPos = [np.pi/4, 3*np.pi/4, 5*np.pi/4, 7*np.pi/4]
+speakerWeight = [4, 4, 4, 4] #in dB
+
+fig, axs = plt.subplots(nrows=1, ncols=2,subplot_kw={'projection': 'polar'})
+fig.tight_layout()
+
+axs[0].plot(phi, omni, color='crimson')
+axs[0].plot(phi, bidir_pos, color='red')
+axs[0].plot(phi, bidir_neg, color='blue')
+axs[0].plot(phi, bidir2_pos, color='red')
+axs[0].plot(phi, bidir2_neg, color='blue')
+axs[1].plot(phi,sourceDir)
+axs[0].set_title("Encodage d'une source virtuelle\nen ambisonie d'ordre 1, 2D")
+axs[1].set_title("Directivité résultante")
+
+for ax in axs:
+  ax.plot(speakerPos, speakerWeight, "D", ms=20, color='black')
+  ax.plot(alphaSource, 0, "o", ms=10, color='purple', label='Source virtuelle')
+  ax.set_ylim(-20,0)
+  ax.set_rticks([-20, -12, -6, 0, 6])  # Less radial ticks
+  ax.legend()
+  ax.grid(True)
+
+plt.show()
+
+
+```
+
+La figure ci-dessus représente une approche de décodage par projection dite basique.
+
+Pour connaitre la quantité de chaques canaux à emettre sur chaque enceintes, il suffit de regarder l'axe enceinte-centre, et de regarder pour quelle valeur cet axe coupe les harmoniques sphériques. Dans ce cas précis, on trouve :
+
+$$
+\begin{array}{ll}
+  L_{front} = W + \frac{1}{\sqrt(2)}(X - Y) \\
+  R_{front} = W + \frac{1}{\sqrt(2)}(X + Y) \\
+  L_{back} = W - \frac{1}{\sqrt(2)}(X + Y) \\
+  R_{back} = W - \frac{1}{\sqrt(2)}(X - Y) \\
+\end{array}
+$$
+
+<!-- ```{python}
 
 #| fig-align: "center"
 #| label: fig-ms-sum
@@ -269,8 +346,8 @@ for ax in axs:
 
 plt.show()
 
-```
+``` -->
 
-Si nous additionnons le signal obtenue par la cellule omnidirectionnelle et la cellule bidirectionnelle, nous crééons une directivité cardioïdes qui écoute vers l'avant du microphone bidirectionnelle, et donc, rejette ce qui se trouve dans son dos. Si l'on soustrait au microphone omnidirectionnel la tension obtenue par le microphone bidirectionnel, on créer alors une directivité cardioïdes qui écoute à l'arrière du microphone omnidirectionnel et rejette ce qui se trouve devant lui.
+<!-- Si nous additionnons le signal obtenue par la cellule omnidirectionnelle et la cellule bidirectionnelle, nous crééons une directivité cardioïdes qui écoute vers l'avant du microphone bidirectionnelle, et donc, rejette ce qui se trouve dans son dos. Si l'on soustrait au microphone omnidirectionnel la tension obtenue par le microphone bidirectionnel, on créer alors une directivité cardioïdes qui écoute à l'arrière du microphone omnidirectionnel et rejette ce qui se trouve devant lui. -->
 
 ## Décodeurs {#HOA-decode-allrad}
