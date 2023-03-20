@@ -2,21 +2,21 @@
 
 ![Dôme ambisonique du Théâtre de Gennevilliers](../_resources/bitmap/ambisonic/ambisonic_dome.jpeg)
 
-L'ambisonique (ou ambisonie), s'attache à décrire le champ acoustique en trois dimensions d'un espace donné en un point. C'est à la fois une technique de prise de son, grâce à l'utilisation de microphones particuliers et une solution de panning en post-production. De part son indépendance par rapport au dispositif du système de diffusion, on qualifie parfois un mixage ambisonique de *mixage orienté scène*. En effet, un signal ambisonique décrit, à l'aide de canaux audio, une scène sonore, et non pas un certain arrangement de haut-parleur (par opposition à l'orienté canal).
+L'ambisonique (ou ambisonie) s'attache à décrire le champ acoustique en trois dimensions d'un espace donné en un point. C'est à la fois une technique de prise de son, grâce à l'utilisation de microphones particuliers et une solution de panning en postproduction. De par son indépendance par rapport au dispositif du système de diffusion, on qualifie parfois un mixage ambisonique de « *mixage orienté scène »*. En effet, un signal ambisonique décrit, à l'aide de canaux audio, une scène sonore, et non pas un certain arrangement de haut-parleur (par opposition à l'orienté canal).
 
-L'ambisonie se distingue également des approches plus conventionnelles (approche perceptives du panning usuel) par son approche **physique**. Nous verrons que dans son fonctionnement, l'ambisonie réalise l'**échantillonnage du champ de pression acoustique**. Cet échantillonnage peut varier en précision en fonction de l'**ordre** auquel nous souhaitons travailler.
+L'ambisonie se distingue également des approches plus conventionnelles (approche perceptive du panning usuel) par son approche **physique**. Nous verrons que dans son fonctionnement, l'ambisonie réalise l'**échantillonnage du champ de pression acoustique**. Cet échantillonnage peut varier en précision en fonction de l'**ordre** auquel nous souhaitons travailler.
 
-Nous commencerons par étudier l'ambisonie dit du "premier ordre", tel que proposé par Michael Gerzon et son équipe dans les années soixante-dix. Seulement ensuite, nous questionnerons l'ambisonie d'ordre plus élevé, apparut au début des années 2000.
+Nous commencerons par étudier l'ambisonie dit du "premier ordre", tel que proposé par Michael Gerzon et son équipe dans les années soixante-dix. Seulement ensuite, nous envisagerons l'ambisonie d'ordre plus élevé, pour pallier aux défauts de l’ambisonie du premier ordre.
 
 ## L'ambisonie du premier ordre (FOA)
 
-### Captation du champs sonore
+### Captation du champ sonore
 
-L'ambisonie du premier ordre (ou FOA pour First Order Ambisonic) voit le jour sous la forme d'une technique de prise de son. Celle-ci permet l'enregistrement d'un scène sonore sur **quatres canaux**, que l'on peut ensuite décoder sur n'importe quel système de haut-parleurs.
+L'ambisonie du premier ordre (ou FOA pour « First Order Ambisonic ») voit le jour sous la forme d'une technique de prise de son. Celle-ci permet l'enregistrement d'une scène sonore sur **quatre canaux**, que l'on peut ensuite décoder sur n'importe quel système de haut-parleurs.
 
-Pour capturer le champ acoustique en un point, il faut donc s'intéresser au champ acoustique lui-même. Nous l'avons vu à la @sec-le-son-physique, sous sa forme acoustique, une onde sonore se caractérise par la variation locale dans le temps de la pression. Pour mesurer la pression en un point, nous pouvons utiliser un microphone omnidirectionnel (également appelé microphone à pression). Ce microphone omnidirectionnel va donc rendre compte a chaque instant du temps de la valeur de la pression. A ce stade, il n'est pas question de parler de spatialisation, la capatation d'une tel capsule étant monophonique.
+Pour capturer le champ acoustique en un point, il faut donc s'intéresser au champ acoustique lui-même. Nous l'avons vu à la @sec-le-son-physique, sous sa forme acoustique, une onde sonore se caractérise par la variation locale dans le temps de la pression. Pour mesurer la pression en un point, nous pouvons utiliser un microphone omnidirectionnel (également appelé microphone à pression). Ce microphone omnidirectionnel va donc rendre compte à chaque instant du temps de la valeur de la pression. À ce stade, il n'est pas question de parler de spatialisation, la captation d'une telle capsule étant monophonique.
 
-Il conviendrait donc de mesurer la "direction" du déplacement local des particules d'air. Quelque part, on se demande dans **quel sens et quelle direction varie la pression**. Pour cela, on cherche à mesurer la vitesse de ce déplacement, et donc la variation de la pression en un point. Pour se faire, on utilise un microphone bidirectionnel (aussi appelé à gradient de pression). Ce microphone va donc mesurer, à chaque un instant du temps, la différence entre la pression entre un point de l'espace et un autre très rapproché. On caractérise donc une **variation dans l'espace**.
+Il conviendrait donc de mesurer la "direction" du déplacement local des particules d'air. Quelque part, on se demande dans **quel sens et quelle direction varie la pression**. Pour cela, on cherche à mesurer la vitesse de ce déplacement, et donc la variation de la pression en un point. Pour se faire, on utilise un microphone bidirectionnel (aussi appelé à gradient de pression). Ce microphone va donc mesurer, pour chaque instant du temps, la différence entre la pression entre un point de l'espace et un autre très rapproché. On caractérise donc une **variation dans l'espace**.
 
 <!-- :::{.callout-tip}
 
@@ -67,7 +67,7 @@ plt.show()
 
 ```
 
-Une capsule bidirectionnelle nous permet de mesurer dans quel axe se déplace les molécules d'air (si les les molécules oscillent dans l'axe du microphone, on obtient un niveau mesurable, si les molécules oscillent sur l'axe normal (à 90°) de l'axe du microphone, on obtient un niveau négligeable). Cependant cela ne nous renseigne pas si la source sonore responsable de la perturbation se trouve plutôt devant ou derrière le microphone. Cependant, si nous associons au même point de l'espace une capsule omnidirectionnelle et une capsule bidirectionnelle, nous allons pouvoir lever cette indétermination.
+Une capsule bidirectionnelle nous permet de mesurer sur quel axe se déplacent les molécules d'air (si les molécules oscillent dans l'axe du microphone, on obtient un niveau mesurable, si les molécules oscillent sur l'axe normal (à 90°) de l'axe du microphone, on obtient un niveau négligeable). Cependant, cela ne nous indique pas si la source sonore responsable de la perturbation se trouve plutôt devant ou derrière le microphone. Néanmoins, si nous associons au même point de l'espace une capsule omnidirectionnelle et une capsule bidirectionnelle, nous allons pouvoir lever cette indétermination.
 
 
 ```{python}
@@ -110,9 +110,9 @@ plt.show()
 
 ```
 
-On constate donc que, selon l'angle d'incidence de la source par rapport aux capsules, celle subit une atténuation (et une modification de la phase si la valeur absolue de l'angle d'incidence est ici supérieur à 90°) dans le canal de captation Y, permettant donc de coder sa position autour du microphone. Le canal W capte la source de la même manière, peut importe son angle d'incidence. Nous venons ici de fabriquer un couple MS (voir @sec-pds-stereo-ms).
+On constate alors que, selon l'angle d'incidence de la source par rapport aux capsules, celle-ci subit une atténuation (et une modification de la phase si la valeur absolue de l'angle d'incidence est ici supérieure à 90°) dans le canal de captation Y, permettant donc de coder sa position autour du microphone. Le canal W capte la source de la même manière, peu importe son angle d'incidence. Nous venons ici de fabriquer un couple MS (voir @sec-pds-stereo-ms).
 
-Notre dispositif permet ici de capter des ondes sonores selon un seul axe (ici, Y). Si l'on souhaite étendre ce dispositif pour capter l'espace en trois dimensions, nous serions naturellement tenté d'ajouter deux autres capsules bidirectionnelles supplémentaires.
+Notre dispositif permet ici de capter des ondes sonores selon un seul axe (ici, Y). Si l'on souhaite étendre ce dispositif pour capter l'espace en trois dimensions, nous serions naturellement tentés d'ajouter deux autres capsules bidirectionnelles supplémentaires.
 
 ```{python}
 
@@ -187,30 +187,30 @@ plt.show()
 
 ```
 
-En pratique, les microphones ambisoniques n'utilisent pas cet arrangement de capsules. En effet, l'encombrement des capsules bidirectionnelles compromet sévèrement la coincidence du système. La qualité d'un tel microphone dépend largement de sa capacité à positionner les capsules avec la plus grande coincidence possible, au risque sinon de déterriorer la précision de localisation dans le haut du spectre. On utilise alors plutôt quatre capsules cardioïde, placé sur les surfaces d'un tétraèdre. Cet arrangement est mathématiquement strictement équivalent à l'utilisation d'une capsule omnidirectionnelle et de trois capsules bidirectionnelles. Seulement, l'encombrement moindres des capsules cardioïdes permet une meilleure coincidence de celles-ci.
+En pratique, les microphones ambisoniques n'utilisent pas cet arrangement de capsules. En effet, l'encombrement des capsules bidirectionnelles compromet sévèrement la coïncidence du système. La qualité d'un tel microphone dépend largement de sa capacité à positionner les capsules avec la plus grande coïncidence possible, au risque sinon de détériorer la précision de localisation dans le haut du spectre. On utilise alors plutôt quatre capsules cardioïdes, placé sur les surfaces d'un tétraèdre. Cet arrangement est mathématiquement strictement équivalent à l'utilisation d'une capsule omnidirectionnelle et de trois capsules bidirectionnelles. Seulement, l'encombrement moindre des capsules cardioïdes permet une meilleure coïncidence de celles-ci.
 
 ![Microphone Sennheiser Ambeo](https://d2j6dbq0eux0bg.cloudfront.net/images/29143418/1438893864.jpg){width=50%}
 
-On appelle le flux audio en sortie d'un microphone ambisonique du premier order **Format-A**, dans lequel chaque canal correspond à une capsule précise. Par opposition, on appele généralement **Format-B** un flux ambisonique du premier ordre encodé, où chaque canal correspond à une des composantes W, X, Y, Z.
+On appelle le flux audio en sortie d'un microphone ambisonique du premier ordre **Format-A**, dans lequel chaque canal correspond à une capsule précise. Par opposition, on appelle généralement **Format-B** un flux ambisonique du premier ordre encodé, où chaque canal correspond à une des composantes W, X, Y, Z.
 
 :::{.callout-note}
 
-L'appellation **Format-A** se retrouve également pour les ordres supérieurs, même si ces microphones sont rares ! Le terme **Format-B** est quant à lui, discutable pour les ordre supérieurs.
+L'appellation **Format-A** se retrouve également pour les ordres supérieurs, même si ces microphones sont rares ! Le terme **Format-B** est, quant à lui, discutable pour les ordres supérieurs.
 
 :::
 
-### Synthèse du champs sonore
+### Synthèse du champ sonore
 
-Nous avons vu qu'un microphone ambisonique nous permet de capturer l'espace acoustique entendu d'un point. Nous pouvons également "synthétiser", c'est à dire encoder une source sonore monophonique dans un espace acoustique virtuel ambisonique. Pour cela, on utilise simplement des panners ambisoniques.
+Nous avons vu qu'un microphone ambisonique nous permet de capturer l'espace acoustique entendu d'un point. Nous pouvons également "synthétiser", c'est-à-dire encoder une source sonore monophonique dans un espace acoustique virtuel ambisonique. Pour cela, on utilise simplement des panners ambisoniques.
 
-Pour une incidence donnée de cette sources sonore, le panner va affecter une partie de son énergie aux différentes composantes d'un signal ambisonique (W, X, Y, Z) et une phase particulière (positive ou négative). Il est également possible d'encoder des signaux multicanaux (stéréo, quadriphonie, 5.0). Il s'agit d'une technique très efficace pour adapter un mixage réalisé sur un arrangement de haut-parleurs particuliers vers un autre.
+Pour une incidence donnée de cette source sonore, le panner va affecter une partie de son énergie aux différentes composantes d'un signal ambisonique (W, X, Y, Z) et une phase particulière (positive ou négative). Il est également possible d'encoder des signaux multicanaux (stéréo, quadriphonie, 5.0). Il s'agit d'une technique très efficace pour adapter un mixage réalisé sur un arrangement de haut-parleurs particuliers vers un autre.
 
 
 Nous ferons état de ces différentes techniques et des différents panners ambisoniques dans le @sec-outils-ambisoniques .
 
-### Restitution du champs sonore
+### Restitution du champ sonore
 
-Une fois le signal enregistré, ou encodé en ambisonique, il convient de le décoder sur un arrangement de haut-parleurs particulier. Cette phase de décodage est peut être la plus complexe à appréhender (et explique très certainement pourquoi l'ambisonique reste à ce jour si peu utilisée).
+Une fois le signal enregistré, ou encodé en ambisonique, il convient de le décoder sur un arrangement de haut-parleurs particulier. Cette phase de décodage est peut-être la plus complexe à appréhender (et explique très certainement pourquoi l'ambisonique reste à ce jour si peu utilisée).
 
 Illustrons le procédé de décodage en considérant un flux audio ambisonique 2D (W, X, Y) et un système de diffusion quadriphonique.
 
@@ -273,7 +273,7 @@ plt.show()
 
 ```
 
-La figure ci-dessus représente une approche de décodage par **projection** dite **basique**. Pour connaitre la quantité de chaques canaux à émettre sur chaque enceinte, il suffit de regarder l'axe enceinte-centre, et de lire pour quelle valeur cet axe coupe les harmoniques sphériques. Dans ce cas précis, on trouve :
+La figure ci-dessus représente une approche de décodage par **projection** dite **basique**. Pour connaître la quantité de chaque canal à émettre sur chaque enceinte, il suffit de regarder l'axe enceinte-centre, et de lire pour quelle valeur cet axe coupe les harmoniques sphériques. Dans ce cas précis, on trouve :
 
 $$
 \begin{array}{ll}
@@ -284,9 +284,9 @@ $$
 \end{array}
 $$
 
-On peut également étudier la directivité formée pour une source et projetter sur les haut-parleurs pour observer leurs différentes contributions. On remarque dans ce cas (décodage dit basique), la présence d'un lobe arrière. Cela signifie que les enceintes peuvente contribuer à la diffusion d'une source en **opposition de phase** lorsque celle-ci ont certaines positions.
+On peut également étudier la directivité formée pour une source et projeter sur les haut-parleurs pour observer leurs différentes contributions. On remarque dans ce cas (décodage dit basique) la présence d'un lobe arrière. Cela signifie que les enceintes peuvent contribuer à la diffusion d'une source en **opposition de phase** lorsque celles-ci ont certaines positions.
 
-Il existe d'autres modes de décodage permettant de changer la directivité associé à une source. Ces modes supplémentaires sont "maxRe" et "InPhase".
+Il existe d'autres modes de décodage permettant de changer la directivité associée à une source. Ces modes supplémentaires sont "maxRe" et "InPhase".
 
 
 ```{python}
@@ -389,11 +389,11 @@ plt.show()
 
 ```
 
-Le décodage basique permet un rendu psycho-acoustique correct du registre basse fréquence (jusqu'à 500 Hz environ) et offre une précision de localisation maximale au point d'écoute idéal.
+Le décodage basique permet un rendu psychoacoustique correct du registre basse fréquence (jusqu'à 500 Hz environ) et offre une précision de localisation maximale au point d'écoute idéal.
 
-Un décodage dit "maxRe" a pour conséquence d'améliorer la localisation dans les hautes fréquences (>700 Hz environt). On constate aussi la réduction des lobes arrières, et donc une contribution moindre des composantes en opposition de phase dans les enceintes.
+Un décodage dit "maxRe" a pour conséquence d'améliorer la localisation dans les hautes fréquences (>700 Hz environ). On constate aussi la réduction des lobes arrière, et donc une contribution moindre des composantes en opposition de phase dans les enceintes.
 
-Lorsqu'un décodeur utilise un optimisation InPhase, la totalité des lobes arrières sont supprimés. Cela signifie qu'aucune enceinte de ne diffuse de composante en opposition de phase. Cela à pour conséquence d'améliorer l'homogénéité de la diffusion, d'augmenter la largeur du point d'écoute idéal, au détriment de la précision de localisation.
+Lorsqu'un décodeur utilise une optimisation InPhase, la totalité des lobes arrière est supprimée. Cela signifie qu'aucune enceinte ne diffuse de composantes en opposition de phase. Cela a pour conséquence d'améliorer l'homogénéité de la diffusion, d'augmenter la largeur du point d'écoute idéal, au détriment de la précision de localisation.
 
 :::{.callout-note}
 
@@ -401,13 +401,13 @@ Il n'est pas rare de trouver le mode "maxRe" par défaut dans les décodeurs.
 
 :::
 
-Afin de tenir compte des différences de perception entre les basses fréquences et les hautes fréquences, il est souvent préconisé d'adapter le mode de décodage en fonction de la plage de fréquence. Par exemple, Michael Gerzon propose un décodage "perceptif", en mode basique dans le bas du spectre et maxRe dans les fréquences aigues. Jérome Daniel fait également le lien entre zone de couverture, mode de décodage et plage de fréquences.
+Afin de tenir compte des différences de perception entre les basses fréquences et les hautes fréquences, il est souvent préconisé d'adapter le mode de décodage en fonction de la plage de fréquence. Par exemple, Michael Gerzon propose un décodage "perceptif", en mode basique dans le bas du spectre et maxRe dans les fréquences aiguës. Jérome Daniel fait également le lien entre zone de couverture, mode de décodage et plage de fréquences.
 
 ![Mode de décodage et zone de couverture. J. Daniel (2001).](../_resources/bitmap/ambisonic/coverage.png)
 
 :::{.callout-important}
 
-Une restitution ambisonique sur un arrange de haut-parleurs à deux ou trois dimensions n'est pas équivalente. En effet, un décodage 2D offre une meilleur précision de localisation.
+Une restitution ambisonique sur un arrangement de haut-parleurs à deux ou trois dimensions n'est pas équivalente. En effet, un décodage 2D offre une meilleure précision de localisation.
 
 :::
 
@@ -490,7 +490,7 @@ plt.show()
 
 ```
 
-Il existe alors plusieurs stratégies pour pallier à ce problème. La plus utilisée est le décodage **AllRAD** (All-Round Ambisonic Decoder). Celle-ci consiste à décoder le signal ambisonique en deux étapes. Tout d'abord on le décode sur un arrangement de 240 haut-parleurs parfaitement idéal, puis, on utilise une loi de panoramique VBAP pour réduire ces 240 haut-parleurs à l'arrangement réel.
+Il existe alors plusieurs stratégies pour pallier ce problème. La plus utilisée est le décodage **AllRAD** (All-Round Ambisonic Decoder). Celle-ci consiste à décoder le signal ambisonique en deux étapes. Tout d'abord on le décode sur un arrangement de 240 haut-parleurs parfaitement idéal, puis on utilise une loi de panoramique VBAP pour réduire ces 240 haut-parleurs à l'arrangement réel.
 
 Une autre stratégie assez connue est l'**EPAD** (Energy Preserving Ambisonic Decoding), qui permet de produire un champ d'énergie invariant en fonction de l'angle d'incidence de la source.
 
@@ -502,7 +502,7 @@ Peu importe que l'on utilise une stratégie de décodage AllRAD ou EPAD, il conv
 
 ##  L'ambisonie d'ordre plus élevé (HOA)
 
-L'HOA (pour *Higher Order Ambisonic*) est une extension du système proposé par Michael Gerzon. En effet, l'ambisonie du premier ordre introduit un certain nombre de problème lorsqu'on le décode sur un arrangement comprenant un trop grand nombre de haut-parleurs. Il en résulte alors un flou de localisation important, voir l'apparition de problèmes de timbre.
+L'HOA (pour *Higher Order Ambisonic*) est une extension du système proposé par Michael Gerzon. En effet, l'ambisonie du premier ordre introduit un certain nombre de problèmes lorsqu'on le décode sur un arrangement comprenant un trop grand nombre de haut-parleurs. Il en résulte alors un flou de localisation important, voir l'apparition de problèmes de timbre.
 
 Le FOA reposant sur l'exploitation des harmoniques sphériques aux ordres 0 et 1, il était alors tout indiqué d'utiliser les harmoniques d'ordre supérieur.
 
