@@ -228,7 +228,7 @@ db = lambda x: 20*np.log10(np.abs(x))
 dbnorm = lambda x: 20*np.log10(np.abs(x)/np.max(x))
 
 phi = np.arange(-np.pi,np.pi,0.01)
-omniLin = np.full(shape=len(phi),fill_value=1/np.sqrt(2),dtype=float)
+omniLin = np.full(shape=len(phi),fill_value=1/3,dtype=float)
 omni = db(omniLin)
 
 bidirLin = np.cos(phi)
@@ -273,81 +273,308 @@ plt.show()
 
 ```
 
-La figure ci-dessus représente une approche de décodage par projection dite basique.
-
-Pour connaitre la quantité de chaques canaux à emettre sur chaque enceintes, il suffit de regarder l'axe enceinte-centre, et de regarder pour quelle valeur cet axe coupe les harmoniques sphériques. Dans ce cas précis, on trouve :
+La figure ci-dessus représente une approche de décodage par **projection** dite **basique**. Pour connaitre la quantité de chaques canaux à émettre sur chaque enceinte, il suffit de regarder l'axe enceinte-centre, et de lire pour quelle valeur cet axe coupe les harmoniques sphériques. Dans ce cas précis, on trouve :
 
 $$
 \begin{array}{ll}
-  L_{front} = W + \frac{1}{\sqrt(2)}(X - Y) \\
-  R_{front} = W + \frac{1}{\sqrt(2)}(X + Y) \\
-  L_{back} = W - \frac{1}{\sqrt(2)}(X + Y) \\
-  R_{back} = W - \frac{1}{\sqrt(2)}(X - Y) \\
+  L_{front} = \frac{1}{3}W + X - Y \\
+  R_{front} = \frac{1}{3}W + X + Y \\
+  L_{back} = \frac{1}{3}W - X - Y \\
+  R_{back} = \frac{1}{3}W - X + Y \\
 \end{array}
 $$
 
-<!-- ```{python}
+On peut également étudier la directivité formée pour une source et projetter sur les haut-parleurs pour observer leurs différentes contributions. On remarque dans ce cas (décodage dit basique), la présence d'un lobe arrière. Cela signifie que les enceintes peuvente contribuer à la diffusion d'une source en **opposition de phase** lorsque celle-ci ont certaines positions.
 
+Il existe d'autres modes de décodage permettant de changer la directivité associé à une source. Ces modes supplémentaires sont "maxRe" et "InPhase".
+
+
+```{python}
+
+#| label: fig-amb-dec-mode
 #| fig-align: "center"
-#| label: fig-ms-sum
-#| fig-cap: "Résultante de la somme et de la différence des composantes W et X. Les portions rouges ont une phase positive, les portions bleues ont une phase négative."
+#| fig-cap: "Décodage par projection basique, maxRe et inPhase."
 
 import numpy as np
-import math
-import matplotlib
 import matplotlib.pyplot as plt
-from matplotlib.collections import LineCollection
-from matplotlib.colors import ListedColormap, BoundaryNorm
+import matplotlib.colors as colors
 
-phi = np.arange(0,2*np.pi,0.01)
-omni = np.full(
-  shape=len(phi),
-  fill_value=1,
-  dtype=int
-)
-bidir = np.cos(phi)
+db = lambda x: 20*np.log10(np.abs(x))
+dbnorm = lambda x: 20*np.log10(np.abs(x)/np.max(x))
 
-cardio1 = (1/3)*omni+bidir
-cardio2 = (1/3)*omni-bidir
-
-points1 = np.array([phi, np.abs(cardio1)]).T.reshape(-1, 1, 2)
-segments1 = np.concatenate([points1[:-1], points1[1:]], axis=1)
-# Create a continuous norm to map from data points to colors
-norm = plt.Normalize(-1, 1)
-lc1 = LineCollection(segments1, cmap='bwr', norm=norm)
-# Set the values used for colormapping
-lc1.set_array(cardio1)
-lc1.set_linewidth(2)
-
-points2 = np.array([phi, np.abs(cardio2)]).T.reshape(-1, 1, 2)
-segments2 = np.concatenate([points2[:-1], points2[1:]], axis=1)
-# Create a continuous norm to map from data points to colors
-lc2 = LineCollection(segments2, cmap='bwr', norm=norm)
-# Set the values used for colormapping
-lc2.set_array(cardio2)
-lc2.set_linewidth(2)
-
-
-fig, axs = plt.subplots(nrows=1, ncols=2,subplot_kw={'projection': 'polar'})
+fig, axs = plt.subplots(nrows=2, ncols=3,subplot_kw={'projection': 'polar'})
 fig.tight_layout()
-# axs[0].plot(phi, np.abs(cardio1), color='red')
-line1 = axs[0].add_collection(lc1)
-axs[0].set_title('Cardioïde pointant vers l\'Est \n (M+S / W+X)')
-line2 = axs[1].add_collection(lc2)
-# axs[1].plot(phi, np.abs(cardio2), color='blue')
-axs[1].set_title('Cardioïde pointant vers l\'Ouest \n (M-S / W-X)')
 
-for ax in axs:
-    # ax.set_theta_zero_location("E")
-    ax.set_rticks([0.5, 1, 1.414])  # Less radial ticks
-    ax.set_rlabel_position(-22.5)  # Move radial labels away from plotted line
+#common
+phi = np.arange(-np.pi,np.pi,0.01)
+alphaSource = -np.pi/8
+
+speakerPos = [np.pi/4, 3*np.pi/4, 5*np.pi/4, 7*np.pi/4]
+speakerWeight = [4, 4, 4, 4] #in dB
+
+#Basic plot
+omni = np.full(shape=len(phi),fill_value=db(1/3),dtype=float)
+bidir = db(np.cos(phi))
+bidir_pos = np.ma.masked_where(np.abs(phi)>np.pi/2, bidir)
+bidir_neg = np.ma.masked_where(np.abs(phi)<=np.pi/2, bidir)
+
+bidir2 = db(np.sin(phi))
+bidir2_pos = np.ma.masked_where(phi<0, bidir2)
+bidir2_neg = np.ma.masked_where(phi>=0, bidir2)
+
+sourceDir = dbnorm(1/3+np.cos(alphaSource)*np.cos(phi)+np.sin(alphaSource)*np.sin(phi))
+
+axs[0][0].plot(phi, omni, color='crimson')
+axs[0][0].plot(phi, bidir_pos, color='red')
+axs[0][0].plot(phi, bidir_neg, color='blue')
+axs[0][0].plot(phi, bidir2_pos, color='red')
+axs[0][0].plot(phi, bidir2_neg, color='blue')
+
+axs[1][0].plot(phi, sourceDir)
+
+#maxRe plot
+omni = np.full(shape=len(phi),fill_value=db(1/np.sqrt(2)),dtype=float)
+bidir = db(np.cos(phi))
+bidir_pos = np.ma.masked_where(np.abs(phi)>np.pi/2, bidir)
+bidir_neg = np.ma.masked_where(np.abs(phi)<=np.pi/2, bidir)
+
+bidir2 = db(np.sin(phi))
+bidir2_pos = np.ma.masked_where(phi<0, bidir2)
+bidir2_neg = np.ma.masked_where(phi>=0, bidir2)
+
+sourceDir = dbnorm(1/np.sqrt(2)+np.cos(alphaSource)*np.cos(phi)+np.sin(alphaSource)*np.sin(phi))
+
+axs[0][1].plot(phi, omni, color='crimson')
+axs[0][1].plot(phi, bidir_pos, color='red')
+axs[0][1].plot(phi, bidir_neg, color='blue')
+axs[0][1].plot(phi, bidir2_pos, color='red')
+axs[0][1].plot(phi, bidir2_neg, color='blue')
+
+axs[1][1].plot(phi, sourceDir)
+
+#inPhase plot
+omni = np.full(shape=len(phi),fill_value=db(1),dtype=float)
+bidir = db(np.cos(phi))
+bidir_pos = np.ma.masked_where(np.abs(phi)>np.pi/2, bidir)
+bidir_neg = np.ma.masked_where(np.abs(phi)<=np.pi/2, bidir)
+
+bidir2 = db(np.sin(phi))
+bidir2_pos = np.ma.masked_where(phi<0, bidir2)
+bidir2_neg = np.ma.masked_where(phi>=0, bidir2)
+
+sourceDir = dbnorm(1+np.cos(alphaSource)*np.cos(phi)+np.sin(alphaSource)*np.sin(phi))
+
+axs[0][2].plot(phi, omni, color='crimson')
+axs[0][2].plot(phi, bidir_pos, color='red')
+axs[0][2].plot(phi, bidir_neg, color='blue')
+axs[0][2].plot(phi, bidir2_pos, color='red')
+axs[0][2].plot(phi, bidir2_neg, color='blue')
+
+axs[1][2].plot(phi, sourceDir)
+
+# axs[1][0].plot(phi,sourceDir)
+# axs[1][0].set_title("Directivité résultante")
+
+for axl in axs:
+  for ax in axl:
+    ax.plot(speakerPos, speakerWeight, "D", ms=6, color='black')
+    ax.plot(alphaSource, 0, "o", ms=10, color='purple')
+    ax.set_ylim(-20,0)
+    ax.set_rticks([-20, -12, -6, 0, 6])  # Less radial ticks
     ax.legend()
     ax.grid(True)
 
 plt.show()
 
-``` -->
 
-<!-- Si nous additionnons le signal obtenue par la cellule omnidirectionnelle et la cellule bidirectionnelle, nous crééons une directivité cardioïdes qui écoute vers l'avant du microphone bidirectionnelle, et donc, rejette ce qui se trouve dans son dos. Si l'on soustrait au microphone omnidirectionnel la tension obtenue par le microphone bidirectionnel, on créer alors une directivité cardioïdes qui écoute à l'arrière du microphone omnidirectionnel et rejette ce qui se trouve devant lui. -->
+```
 
-## Décodeurs {#HOA-decode-allrad}
+Le décodage basique permet un rendu psycho-acoustique correct du registre basse fréquence (jusqu'à 500 Hz environ) et offre une précision de localisation maximale au point d'écoute idéal.
+
+Un décodage dit "maxRe" a pour conséquence d'améliorer la localisation dans les hautes fréquences (>700 Hz environt). On constate aussi la réduction des lobes arrières, et donc une contribution moindre des composantes en opposition de phase dans les enceintes.
+
+Lorsqu'un décodeur utilise un optimisation InPhase, la totalité des lobes arrières sont supprimés. Cela signifie qu'aucune enceinte de ne diffuse de composante en opposition de phase. Cela à pour conséquence d'améliorer l'homogénéité de la diffusion, d'augmenter la largeur du point d'écoute idéal, au détriment de la précision de localisation.
+
+:::{.callout-note}
+
+Il n'est pas rare de trouver le mode "maxRe" par défaut dans les décodeurs.
+
+:::
+
+Afin de tenir compte des différences de perception entre les basses fréquences et les hautes fréquences, il est souvent préconisé d'adapter le mode de décodage en fonction de la plage de fréquence. Par exemple, Michael Gerzon propose un décodage "perceptif", en mode basique dans le bas du spectre et maxRe dans les fréquences aigues. Jérome Daniel fait également le lien entre zone de couverture, mode de décodage et plage de fréquences.
+
+![Mode de décodage et zone de couverture. J. Daniel (2001).](../_resources/bitmap/ambisonic/coverage.png)
+
+:::{.callout-important}
+
+Une restitution ambisonique sur un arrange de haut-parleurs à deux ou trois dimensions n'est pas équivalente. En effet, un décodage 2D offre une meilleur précision de localisation.
+
+:::
+
+### Décodage pour arrangement de haut-parleurs irréguliers
+
+Le décodage par projection mentionné précédemment fonctionne bien pour des arrangements de haut-parleurs réguliers dans l'espace. Cependant, la majorité des systèmes utilisés dans l'industrie de l'audio ne sont pas réguliers (stéréophonie, 5.1, 7.1.4, etc). Dès lors un décodage par projection ne sera pas homogène en niveau.
+
+```{python}
+
+#| label: fig-amb-loudness
+#| fig-align: "center"
+#| fig-cap: "Décodage par projection basique."
+
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.colors as colors
+
+db = lambda x: 20*np.log10(np.abs(x))
+dbnorm = lambda x: 20*np.log10(np.abs(x)/np.max(x))
+
+fig, axs = plt.subplots(nrows=2, ncols=2,subplot_kw={'projection': 'polar'})
+fig.tight_layout()
+
+phi = np.arange(-np.pi,np.pi,0.01)
+
+omni = np.full(shape=len(phi),fill_value=1,dtype=float)
+bidir = np.cos(phi)
+bidir2 = np.sin(phi)
+
+### QUAD PLOT
+
+speakerPos = [np.pi/4, 3*np.pi/4, 5*np.pi/4, 7*np.pi/4]
+speakerWeight = np.full(shape=len(speakerPos),fill_value=4,dtype=float) #in dB
+
+axs[0][0].plot(speakerPos, speakerWeight, "D", ms=10, color='black')
+axs[0][1].plot(speakerPos, speakerWeight, "D", ms=10, color='black')
+
+energy = 0
+for spkr in speakerPos:
+  sourceDir = 1/3*omni+np.cos(spkr)*bidir+np.sin(spkr)*bidir2
+  energy = energy + np.power(sourceDir,2)
+  axs[0][0].plot(phi,dbnorm(sourceDir))
+
+axs[0][1].plot(phi,dbnorm(energy))
+
+axs[0][0].set_title("Projection sur une quadriphonie")
+axs[0][1].set_title("Energie résultante")
+
+### 5.1 PLOT
+
+speakerPos = [0, -30/180*np.pi, 30/180*np.pi, -110/180*np.pi, 110/180*np.pi]
+speakerWeight = np.full(shape=len(speakerPos),fill_value=4,dtype=float) #in dB
+
+ax.plot(speakerPos, speakerWeight, "D", ms=10, color='black')
+
+axs[1][0].plot(speakerPos, speakerWeight, "D", ms=10, color='black')
+axs[1][1].plot(speakerPos, speakerWeight, "D", ms=10, color='black')
+
+energy = 0
+for spkr in speakerPos:
+  sourceDir = 1/3*omni+np.cos(spkr)*bidir+np.sin(spkr)*bidir2
+  energy = energy + np.power(sourceDir,2)
+  axs[1][0].plot(phi,dbnorm(sourceDir))
+
+axs[1][1].plot(phi,dbnorm(energy))
+
+axs[1][0].set_title("Projection sur un 5.1")
+axs[1][1].set_title("Energie résultante")
+
+for axl in axs:
+  for ax in axl:
+    
+    ax.set_ylim(-20,0)
+    ax.set_rticks([-20, -12, -6, 0, 6])  # Less radial ticks
+    ax.legend()
+    ax.grid(True)
+
+plt.show()
+
+
+```
+
+Il existe alors plusieurs stratégies pour pallier à ce problème. La plus utilisée est le décodage **AllRAD** (All-Round Ambisonic Decoder). Celle-ci consiste à décoder le signal ambisonique en deux étapes. Tout d'abord on le décode sur un arrangement de 240 haut-parleurs parfaitement idéal, puis, on utilise une loi de panoramique VBAP pour réduire ces 240 haut-parleurs à l'arrangement réel.
+
+Une autre stratégie assez connue est l'**EPAD** (Energy Preserving Ambisonic Decoding), qui permet de produire un champ d'énergie invariant en fonction de l'angle d'incidence de la source.
+
+:::{.callout-important}
+
+Peu importe que l'on utilise une stratégie de décodage AllRAD ou EPAD, il convient de **toujours** avoir plus de canaux d'enceintes que de canaux ambisoniques.
+
+:::
+
+##  L'ambisonie d'ordre plus élevé (HOA)
+
+L'HOA (pour *Higher Order Ambisonic*) est une extension du système proposé par Michael Gerzon. En effet, l'ambisonie du premier ordre introduit un certain nombre de problème lorsqu'on le décode sur un arrangement comprenant un trop grand nombre de haut-parleurs. Il en résulte alors un flou de localisation important, voir l'apparition de problèmes de timbre.
+
+Le FOA reposant sur l'exploitation des harmoniques sphériques aux ordres 0 et 1, il était alors tout indiqué d'utiliser les harmoniques d'ordre supérieur.
+
+```{python}
+
+#|fig-align: 'center'
+#| label: fig-hoa
+#| fig-cap: "Composantes ambisonique jusqu'à l'ordre quatre. Les surfaces rouges ont une phase positive, les surfaces bleues ont une phase négative."
+
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+# The following import configures Matplotlib for 3D plotting.
+from mpl_toolkits.mplot3d import Axes3D
+from scipy.special import sph_harm
+
+# Grids of polar and azimuthal angles
+theta = np.linspace(0, np.pi, 300)
+phi = np.linspace(0, 2*np.pi, 300)
+# Create a 2-D meshgrid of (theta, phi) angles.
+theta, phi = np.meshgrid(theta, phi)
+# Calculate the Cartesian coordinates of each point in the mesh.
+xyz = np.array([np.sin(theta) * np.sin(phi),
+                np.sin(theta) * np.cos(phi),
+                np.cos(theta)])
+
+def plot_Y(ax, el, m):
+    # """Plot the spherical harmonic of degree el and order m on Axes ax."""
+
+    # NB In SciPy's sph_harm function the azimuthal coordinate, theta,
+    # comes before the polar coordinate, phi.
+    Y = sph_harm(abs(m), el, phi, theta)
+
+    # Linear combination of Y_l,m and Y_l,-m to create the real form.
+    if m < 0:
+        Y = np.sqrt(2) * (-1)**m * Y.imag
+    elif m > 0:
+        Y = np.sqrt(2) * (-1)**m * Y.real
+    Yx, Yy, Yz = np.abs(Y) * xyz
+
+    # Colour the plotted surface according to the sign of Y.
+    cmap = plt.cm.ScalarMappable(cmap=plt.get_cmap('bwr'))
+    cmap.set_clim(-0.5, 0.5)
+
+    ax.plot_surface(Yx, Yy, Yz,
+                    facecolors=cmap.to_rgba(Y.real),
+                    rstride=2, cstride=2)
+
+    # Draw a set of x, y, z axes for reference.
+    ax_lim = 0.5
+    ax.plot([-ax_lim, ax_lim], [0,0], [0,0], c='0.5', lw=1, zorder=10)
+    ax.plot([0,0], [-ax_lim, ax_lim], [0,0], c='0.5', lw=1, zorder=10)
+    ax.plot([0,0], [0,0], [-ax_lim, ax_lim], c='0.5', lw=1, zorder=10)
+    
+    ax_lim = 0.4
+    ax.set_xlim(-ax_lim, ax_lim)
+    ax.set_ylim(-ax_lim, ax_lim)
+    ax.set_zlim(-ax_lim, ax_lim)
+    ax.axis('off')
+
+fig = plt.figure()
+order = 4
+spec = gridspec.GridSpec(ncols=2*order+1, nrows=order+1, figure=fig)
+# axName = ['W','Y','Z','X']
+for l in range(order):
+  for m in range(-l,l+1):
+    ax = fig.add_subplot(spec[l, m+order], projection='3d')
+    # ax.set_title(axName[2*l+m])
+    plot_Y(ax, l, m)
+
+# TODO: ADD 2D VERSION (ALL HARMONIC ON ONE PLOT)
+
+plt.show()
+
+```
