@@ -417,8 +417,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#captation-du-champs-sonore" id="toc-captation-du-champs-sonore" class="nav-link" data-scroll-target="#captation-du-champs-sonore"><span class="header-section-number">37.1.1</span> Captation du champs sonore</a></li>
   <li><a href="#synthèse-du-champs-sonore" id="toc-synthèse-du-champs-sonore" class="nav-link" data-scroll-target="#synthèse-du-champs-sonore"><span class="header-section-number">37.1.2</span> Synthèse du champs sonore</a></li>
   <li><a href="#restitution-du-champs-sonore" id="toc-restitution-du-champs-sonore" class="nav-link" data-scroll-target="#restitution-du-champs-sonore"><span class="header-section-number">37.1.3</span> Restitution du champs sonore</a></li>
+  <li><a href="#décodage-pour-arrangement-de-haut-parleurs-irréguliers" id="toc-décodage-pour-arrangement-de-haut-parleurs-irréguliers" class="nav-link" data-scroll-target="#décodage-pour-arrangement-de-haut-parleurs-irréguliers"><span class="header-section-number">37.1.4</span> Décodage pour arrangement de haut-parleurs irréguliers</a></li>
   </ul></li>
-  <li><a href="#HOA-decode-allrad" id="toc-HOA-decode-allrad" class="nav-link" data-scroll-target="#HOA-decode-allrad"><span class="header-section-number">37.2</span> Décodeurs</a></li>
+  <li><a href="#lambisonie-dordre-plus-élevé-hoa" id="toc-lambisonie-dordre-plus-élevé-hoa" class="nav-link" data-scroll-target="#lambisonie-dordre-plus-élevé-hoa"><span class="header-section-number">37.2</span> L’ambisonie d’ordre plus élevé (HOA)</a></li>
   </ul>
 </nav>
     </div>
@@ -540,82 +541,108 @@ Note
 </div>
 </div>
 </div>
-<p>La figure ci-dessus représente une approche de décodage par projection dite basique.</p>
-<p>Pour connaitre la quantité de chaques canaux à emettre sur chaque enceintes, il suffit de regarder l’axe enceinte-centre, et de regarder pour quelle valeur cet axe coupe les harmoniques sphériques. Dans ce cas précis, on trouve :</p>
+<p>La figure ci-dessus représente une approche de décodage par <strong>projection</strong> dite <strong>basique</strong>. Pour connaitre la quantité de chaques canaux à émettre sur chaque enceinte, il suffit de regarder l’axe enceinte-centre, et de lire pour quelle valeur cet axe coupe les harmoniques sphériques. Dans ce cas précis, on trouve :</p>
 <p><span class="math display">\[
 \begin{array}{ll}
-  L_{front} = W + \frac{1}{\sqrt(2)}(X - Y) \\
-  R_{front} = W + \frac{1}{\sqrt(2)}(X + Y) \\
-  L_{back} = W - \frac{1}{\sqrt(2)}(X + Y) \\
-  R_{back} = W - \frac{1}{\sqrt(2)}(X - Y) \\
+  L_{front} = \frac{1}{3}W + X - Y \\
+  R_{front} = \frac{1}{3}W + X + Y \\
+  L_{back} = \frac{1}{3}W - X - Y \\
+  R_{back} = \frac{1}{3}W - X + Y \\
 \end{array}
 \]</span></p>
-<!-- ```{python}
-
-#| fig-align: "center"
-#| label: fig-ms-sum
-#| fig-cap: "Résultante de la somme et de la différence des composantes W et X. Les portions rouges ont une phase positive, les portions bleues ont une phase négative."
-
-import numpy as np
-import math
-import matplotlib
-import matplotlib.pyplot as plt
-from matplotlib.collections import LineCollection
-from matplotlib.colors import ListedColormap, BoundaryNorm
-
-phi = np.arange(0,2*np.pi,0.01)
-omni = np.full(
-  shape=len(phi),
-  fill_value=1,
-  dtype=int
-)
-bidir = np.cos(phi)
-
-cardio1 = (1/3)*omni+bidir
-cardio2 = (1/3)*omni-bidir
-
-points1 = np.array([phi, np.abs(cardio1)]).T.reshape(-1, 1, 2)
-segments1 = np.concatenate([points1[:-1], points1[1:]], axis=1)
-# Create a continuous norm to map from data points to colors
-norm = plt.Normalize(-1, 1)
-lc1 = LineCollection(segments1, cmap='bwr', norm=norm)
-# Set the values used for colormapping
-lc1.set_array(cardio1)
-lc1.set_linewidth(2)
-
-points2 = np.array([phi, np.abs(cardio2)]).T.reshape(-1, 1, 2)
-segments2 = np.concatenate([points2[:-1], points2[1:]], axis=1)
-# Create a continuous norm to map from data points to colors
-lc2 = LineCollection(segments2, cmap='bwr', norm=norm)
-# Set the values used for colormapping
-lc2.set_array(cardio2)
-lc2.set_linewidth(2)
-
-
-fig, axs = plt.subplots(nrows=1, ncols=2,subplot_kw={'projection': 'polar'})
-fig.tight_layout()
-# axs[0].plot(phi, np.abs(cardio1), color='red')
-line1 = axs[0].add_collection(lc1)
-axs[0].set_title('Cardioïde pointant vers l\'Est \n (M+S / W+X)')
-line2 = axs[1].add_collection(lc2)
-# axs[1].plot(phi, np.abs(cardio2), color='blue')
-axs[1].set_title('Cardioïde pointant vers l\'Ouest \n (M-S / W-X)')
-
-for ax in axs:
-    # ax.set_theta_zero_location("E")
-    ax.set_rticks([0.5, 1, 1.414])  # Less radial ticks
-    ax.set_rlabel_position(-22.5)  # Move radial labels away from plotted line
-    ax.legend()
-    ax.grid(True)
-
-plt.show()
-
-``` -->
-<!-- Si nous additionnons le signal obtenue par la cellule omnidirectionnelle et la cellule bidirectionnelle, nous crééons une directivité cardioïdes qui écoute vers l'avant du microphone bidirectionnelle, et donc, rejette ce qui se trouve dans son dos. Si l'on soustrait au microphone omnidirectionnel la tension obtenue par le microphone bidirectionnel, on créer alors une directivité cardioïdes qui écoute à l'arrière du microphone omnidirectionnel et rejette ce qui se trouve devant lui. -->
+<p>On peut également étudier la directivité formée pour une source et projetter sur les haut-parleurs pour observer leurs différentes contributions. On remarque dans ce cas (décodage dit basique), la présence d’un lobe arrière. Cela signifie que les enceintes peuvente contribuer à la diffusion d’une source en <strong>opposition de phase</strong> lorsque celle-ci ont certaines positions.</p>
+<p>Il existe d’autres modes de décodage permettant de changer la directivité associé à une source. Ces modes supplémentaires sont “maxRe” et “InPhase”.</p>
+<div class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div id="fig-amb-dec-mode" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="ambisonique_files/figure-html/fig-amb-dec-mode-output-1.png" width="662" height="446" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;37.5: Décodage par projection basique, maxRe et inPhase.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Le décodage basique permet un rendu psycho-acoustique correct du registre basse fréquence (jusqu’à 500 Hz environ) et offre une précision de localisation maximale au point d’écoute idéal.</p>
+<p>Un décodage dit “maxRe” a pour conséquence d’améliorer la localisation dans les hautes fréquences (&gt;700 Hz environt). On constate aussi la réduction des lobes arrières, et donc une contribution moindre des composantes en opposition de phase dans les enceintes.</p>
+<p>Lorsqu’un décodeur utilise un optimisation InPhase, la totalité des lobes arrières sont supprimés. Cela signifie qu’aucune enceinte de ne diffuse de composante en opposition de phase. Cela à pour conséquence d’améliorer l’homogénéité de la diffusion, d’augmenter la largeur du point d’écoute idéal, au détriment de la précision de localisation.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Il n’est pas rare de trouver le mode “maxRe” par défaut dans les décodeurs.</p>
+</div>
+</div>
+<p>Afin de tenir compte des différences de perception entre les basses fréquences et les hautes fréquences, il est souvent préconisé d’adapter le mode de décodage en fonction de la plage de fréquence. Par exemple, Michael Gerzon propose un décodage “perceptif”, en mode basique dans le bas du spectre et maxRe dans les fréquences aigues. Jérome Daniel fait également le lien entre zone de couverture, mode de décodage et plage de fréquences.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_resources/bitmap/ambisonic/coverage.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Mode de décodage et zone de couverture. J. Daniel (2001).</figcaption><p></p>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Une restitution ambisonique sur un arrange de haut-parleurs à deux ou trois dimensions n’est pas équivalente. En effet, un décodage 2D offre une meilleur précision de localisation.</p>
+</div>
+</div>
+</section>
+<section id="décodage-pour-arrangement-de-haut-parleurs-irréguliers" class="level3" data-number="37.1.4">
+<h3 data-number="37.1.4" class="anchored" data-anchor-id="décodage-pour-arrangement-de-haut-parleurs-irréguliers"><span class="header-section-number">37.1.4</span> Décodage pour arrangement de haut-parleurs irréguliers</h3>
+<p>Le décodage par projection mentionné précédemment fonctionne bien pour des arrangements de haut-parleurs réguliers dans l’espace. Cependant, la majorité des systèmes utilisés dans l’industrie de l’audio ne sont pas réguliers (stéréophonie, 5.1, 7.1.4, etc). Dès lors un décodage par projection ne sera pas homogène en niveau.</p>
+<div class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<div id="fig-amb-loudness" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="ambisonique_files/figure-html/fig-amb-loudness-output-1.png" width="582" height="491" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;37.6: Décodage par projection basique.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Il existe alors plusieurs stratégies pour pallier à ce problème. La plus utilisée est le décodage <strong>AllRAD</strong> (All-Round Ambisonic Decoder). Celle-ci consiste à décoder le signal ambisonique en deux étapes. Tout d’abord on le décode sur un arrangement de 240 haut-parleurs parfaitement idéal, puis, on utilise une loi de panoramique VBAP pour réduire ces 240 haut-parleurs à l’arrangement réel.</p>
+<p>Une autre stratégie assez connue est l’<strong>EPAD</strong> (Energy Preserving Ambisonic Decoding), qui permet de produire un champ d’énergie invariant en fonction de l’angle d’incidence de la source.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Peu importe que l’on utilise une stratégie de décodage AllRAD ou EPAD, il convient de <strong>toujours</strong> avoir plus de canaux d’enceintes que de canaux ambisoniques.</p>
+</div>
+</div>
 </section>
 </section>
-<section id="HOA-decode-allrad" class="level2" data-number="37.2">
-<h2 data-number="37.2" class="anchored" data-anchor-id="HOA-decode-allrad"><span class="header-section-number">37.2</span> Décodeurs</h2>
+<section id="lambisonie-dordre-plus-élevé-hoa" class="level2" data-number="37.2">
+<h2 data-number="37.2" class="anchored" data-anchor-id="lambisonie-dordre-plus-élevé-hoa"><span class="header-section-number">37.2</span> L’ambisonie d’ordre plus élevé (HOA)</h2>
+<p>L’HOA (pour <em>Higher Order Ambisonic</em>) est une extension du système proposé par Michael Gerzon. En effet, l’ambisonie du premier ordre introduit un certain nombre de problème lorsqu’on le décode sur un arrangement comprenant un trop grand nombre de haut-parleurs. Il en résulte alors un flou de localisation important, voir l’apparition de problèmes de timbre.</p>
+<p>Le FOA reposant sur l’exploitation des harmoniques sphériques aux ordres 0 et 1, il était alors tout indiqué d’utiliser les harmoniques d’ordre supérieur.</p>
+<div class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display">
+<div id="fig-hoa" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="ambisonique_files/figure-html/fig-hoa-output-1.png" width="422" height="298" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;37.7: Composantes ambisonique jusqu’à l’ordre quatre. Les surfaces rouges ont une phase positive, les surfaces bleues ont une phase négative.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 </section>
