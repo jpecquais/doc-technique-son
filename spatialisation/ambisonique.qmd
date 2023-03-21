@@ -286,6 +286,10 @@ $$
 
 On peut également étudier la directivité formée pour une source et projeter sur les haut-parleurs pour observer leurs différentes contributions. On remarque dans ce cas (décodage dit basique) la présence d'un lobe arrière. Cela signifie que les enceintes peuvent contribuer à la diffusion d'une source en **opposition de phase** lorsque celles-ci ont certaines positions.
 
+:::{.callout-tips}
+On appelle aussi le décodage par projection "SAD", pour Sample Ambisonic Decoding. En effet, l'opération consiste à échantillonner la valeur de chaque harmonique sphérique en fonction de l'angle d'incidence de la source.
+:::
+
 Il existe d'autres modes de décodage permettant de changer la directivité associée à une source. Ces modes supplémentaires sont "maxRe" et "InPhase".
 
 
@@ -419,7 +423,7 @@ Le décodage par projection mentionné précédemment fonctionne bien pour des a
 
 #| label: fig-amb-loudness
 #| fig-align: "center"
-#| fig-cap: "Décodage par projection basique."
+#| fig-cap: "Le décodage par projection sur un arrangement 5.0 n'est homogène en énergie."
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -502,7 +506,7 @@ Peu importe que l'on utilise une stratégie de décodage AllRAD ou EPAD, il conv
 
 ##  L'ambisonie d'ordre plus élevé (HOA)
 
-L'HOA (pour *Higher Order Ambisonic*) est une extension du système proposé par Michael Gerzon. En effet, l'ambisonie du premier ordre introduit un certain nombre de problèmes lorsqu'on le décode sur un arrangement comprenant un trop grand nombre de haut-parleurs. Il en résulte alors un flou de localisation important, voir l'apparition de problèmes de timbre.
+L'HOA (pour *Higher Order Ambisonic*) est une extension du système proposé par Michael Gerzon. En effet, l'ambisonie du premier ordre introduit un certain nombre d'effets indésirables lorsqu'on le décode sur un arrangement comprenant un trop grand nombre de haut-parleurs. Il en résulte alors un flou de localisation important, voir l'apparition de problèmes de timbre.
 
 Le FOA reposant sur l'exploitation des harmoniques sphériques aux ordres 0 et 1, il était alors tout indiqué d'utiliser les harmoniques d'ordre supérieur.
 
@@ -578,3 +582,47 @@ for l in range(order):
 plt.show()
 
 ```
+
+Chaque nouvel ordre ajoute donc un certain nombre de canaux au flux ambisonique. On trouve le nombre de canaux d'un ambisonique d'ordre N avec la formule suivante:
+
+$$ N_{ch} = (N+1)^2$$
+
+On rappel que lors d'un décodage, on doit toujours avoir plus de canaux d'enceintes que de canaux ambisoniques. Augmenter l'ordre augmente la limite du nombre de haut-parleurs minimum. Cependant, la rétrocompatibilité des ordres inférieurs et garantis par la suppression des canaux correspondant aux ordres supérieurs. Par exemple, un flux ambisonique d'ordre 7 (64 canaux) est trop important pour le décoder sur un système Dolby Atmos 7.1.4 (11 canaux, hors sub). Nous pourrions alors tronquer le signal ambisonique d'ordre 7 pour ne garder que les canaux de 1 à 9. Nous aurions ainsi réalisé une réduction de l'ordre 7 à l'ordre 2, ce dernier étant tout à fait adéquat pour un décodage sur un arrangement de 11 haut-parleurs.
+
+:::{.callout-important} 
+Ainsi, nous admettrons ces deux règles du décodage ambisonique d'ordre élevé:
+
++ Le nombre de canaux HOA doit toujours être inférieur au nombre de canaux d'enceintes
++ Si possible, l'ordre ambisonique doit être le plus élevé possible (tout en respectant la condition précédente)
+:::
+
+### Les outils de captations d'ordre plus élevé
+
+Il existe un certain nombre de systèmes de prise de son ambisonique d'ordre supérieurs. A l'ordre deux, on mentionnera les microphones suivants : [Core Sound OctoMic](https://www.core-sound.com/products/octomic), [Voyage Spatial Mic](https://voyage.audio/spatialmic/) et l'Audiotechnica. Au troisième ordre, le [Zylia](https://www.zylia.co/), le [Spcmic](https://spcmic.com/) et l'[Eigenmike](https://mhacoustics.com/products).
+
+:::{layout-ncol="3"}
+
+![](../_resources/bitmap/ambisonic/octomic.jpg)
+
+![](../_resources/bitmap/ambisonic/voyagemic.jpg)
+
+![](../_resources/bitmap/ambisonic/voyagemic.jpg)
+
+![](../_resources/bitmap/ambisonic/zylia.jpg)
+
+![](../_resources/bitmap/ambisonic/spcmic.png)
+
+![](../_resources/bitmap/ambisonic/eigenmike.png)
+
+:::
+
+La plus part de ces microphones sont fournis avec des décodeurs spécialisés. En effet, chacun d'entre eux utilise des techniques sensiblement différentes afin de capturer l'espace acoustique. Dès lors, l'encodage du signal des capsules vers de l'ambisonique est bien souvent un procédé propriétaire.
+
+Le nombre de canaux de sortie importants contre indique rapidement l'usage de sorties analogiques. La majorité de ces microphones préfères des sorties USB (fonctionnement d'interface audio) ou audio-numérique (Audio sur IP, ADAT).
+
+### Les différents formats ambisoniques
+
+Bien que la notion de "format" ambisonique ne soit pas spécifique à l'ambisonie d'ordre élevé, le multiplication du nombre de canaux rend sa compréhension impérative.
+
+Deux paramètres sont à prendre en compte : l'ordonencement des canaux et la normalisation de la composante W par rapport aux autres.
+
