@@ -419,7 +419,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#restitution-du-champ-sonore" id="toc-restitution-du-champ-sonore" class="nav-link" data-scroll-target="#restitution-du-champ-sonore"><span class="header-section-number">37.1.3</span> Restitution du champ sonore</a></li>
   <li><a href="#décodage-pour-arrangement-de-haut-parleurs-irréguliers" id="toc-décodage-pour-arrangement-de-haut-parleurs-irréguliers" class="nav-link" data-scroll-target="#décodage-pour-arrangement-de-haut-parleurs-irréguliers"><span class="header-section-number">37.1.4</span> Décodage pour arrangement de haut-parleurs irréguliers</a></li>
   </ul></li>
-  <li><a href="#lambisonie-dordre-plus-élevé-hoa" id="toc-lambisonie-dordre-plus-élevé-hoa" class="nav-link" data-scroll-target="#lambisonie-dordre-plus-élevé-hoa"><span class="header-section-number">37.2</span> L’ambisonie d’ordre plus élevé (HOA)</a></li>
+  <li><a href="#lambisonie-dordre-plus-élevé-hoa" id="toc-lambisonie-dordre-plus-élevé-hoa" class="nav-link" data-scroll-target="#lambisonie-dordre-plus-élevé-hoa"><span class="header-section-number">37.2</span> L’ambisonie d’ordre plus élevé (HOA)</a>
+  <ul class="collapse">
+  <li><a href="#les-outils-de-captations-dordre-plus-élevé" id="toc-les-outils-de-captations-dordre-plus-élevé" class="nav-link" data-scroll-target="#les-outils-de-captations-dordre-plus-élevé"><span class="header-section-number">37.2.1</span> Les outils de captations d’ordre plus élevé</a></li>
+  <li><a href="#les-différents-formats-ambisoniques" id="toc-les-différents-formats-ambisoniques" class="nav-link" data-scroll-target="#les-différents-formats-ambisoniques"><span class="header-section-number">37.2.2</span> Les différents formats ambisoniques</a></li>
+  </ul></li>
+  <li><a href="#avantages-de-lambisonie" id="toc-avantages-de-lambisonie" class="nav-link" data-scroll-target="#avantages-de-lambisonie"><span class="header-section-number">37.3</span> Avantages de l’ambisonie</a></li>
   </ul>
 </nav>
     </div>
@@ -458,7 +463,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="37.1.1" class="anchored" data-anchor-id="captation-du-champ-sonore"><span class="header-section-number">37.1.1</span> Captation du champ sonore</h3>
 <p>L’ambisonie du premier ordre (ou FOA pour «&nbsp;First Order Ambisonic&nbsp;») voit le jour sous la forme d’une technique de prise de son. Celle-ci permet l’enregistrement d’une scène sonore sur <strong>quatre canaux</strong>, que l’on peut ensuite décoder sur n’importe quel système de haut-parleurs.</p>
 <p>Pour capturer le champ acoustique en un point, il faut donc s’intéresser au champ acoustique lui-même. Nous l’avons vu à la <a href="../generalites/qualifier_le_son.html#sec-le-son-physique"><span>Section&nbsp;2.1</span></a>, sous sa forme acoustique, une onde sonore se caractérise par la variation locale dans le temps de la pression. Pour mesurer la pression en un point, nous pouvons utiliser un microphone omnidirectionnel (également appelé microphone à pression). Ce microphone omnidirectionnel va donc rendre compte à chaque instant du temps de la valeur de la pression. À ce stade, il n’est pas question de parler de spatialisation, la captation d’une telle capsule étant monophonique.</p>
-<p>Il conviendrait donc de mesurer la “direction” du déplacement local des particules d’air. Quelque part, on se demande dans <strong>quel sens et quelle direction varie la pression</strong>. Pour cela, on cherche à mesurer la vitesse de ce déplacement, et donc la variation de la pression en un point. Pour se faire, on utilise un microphone bidirectionnel (aussi appelé à gradient de pression). Ce microphone va donc mesurer, pour chaque instant du temps, la différence entre la pression entre un point de l’espace et un autre très rapproché. On caractérise donc une <strong>variation dans l’espace</strong>.</p>
+<p>Il conviendrait donc de mesurer la “direction” du déplacement local des particules d’air. Quelque part, on se demande dans <strong>quel sens et quelle direction varie la pression</strong>. <!--Pour cela, on cherche à mesurer la variation dans l'espace de la pression d'un point.--> Pour se faire, on utilise un microphone bidirectionnel (aussi appelé à gradient de pression). Ce microphone va donc mesurer, pour chaque instant du temps, la différence entre la pression entre un point de l’espace et un autre très rapproché. On caractérise donc une <strong>variation dans l’espace</strong>.</p>
 <!-- :::{.callout-tip}
 
 Quelques mots sur le formalisme mathématique. Soit $p(t,\vec{r})$, le champ de pression, $v(t,\vec{r})$ sa vitesse et $s(t,\vec{r})$, une onde sonore. Ces trois fonctions dépendent du **temps** et de l'**espace** (représenté par le vecteur unitaire $\vec{r}$).
@@ -551,6 +556,9 @@ Note
 \end{array}
 \]</span></p>
 <p>On peut également étudier la directivité formée pour une source et projeter sur les haut-parleurs pour observer leurs différentes contributions. On remarque dans ce cas (décodage dit basique) la présence d’un lobe arrière. Cela signifie que les enceintes peuvent contribuer à la diffusion d’une source en <strong>opposition de phase</strong> lorsque celles-ci ont certaines positions.</p>
+<div class="callout-tips">
+<p>On appelle aussi le décodage par projection “SAD”, pour Sample Ambisonic Decoding. En effet, l’opération consiste à échantillonner la valeur de chaque harmonique sphérique en fonction de l’angle d’incidence de la source.</p>
+</div>
 <p>Il existe d’autres modes de décodage permettant de changer la directivité associée à une source. Ces modes supplémentaires sont “maxRe” et “InPhase”.</p>
 <div class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
@@ -607,12 +615,12 @@ Important
 <div id="fig-amb-loudness" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="ambisonique_files/figure-html/fig-amb-loudness-output-1.png" width="582" height="491" class="figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;37.6: Décodage par projection basique.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;37.6: Le décodage par projection sur un arrangement 5.0 n’est homogène en énergie.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Il existe alors plusieurs stratégies pour pallier ce problème. La plus utilisée est le décodage <strong>AllRAD</strong> (All-Round Ambisonic Decoder). Celle-ci consiste à décoder le signal ambisonique en deux étapes. Tout d’abord on le décode sur un arrangement de 240 haut-parleurs parfaitement idéal, puis on utilise une loi de panoramique VBAP pour réduire ces 240 haut-parleurs à l’arrangement réel.</p>
+<p>Il existe alors plusieurs stratégies pour pallier ce problème. La plus utilisée est le décodage <strong>AllRAD</strong> (All-Round Ambisonic Decoder). Celle-ci consiste à décoder le signal ambisonique en deux étapes. Tout d’abord on le décode sur un arrangement de <a href="http://neilsloane.com/sphdesigns/">240 haut-parleurs parfait</a>, puis on utilise une loi de panoramique VBAP pour réduire ces 240 haut-parleurs à l’arrangement réel.</p>
 <p>Une autre stratégie assez connue est l’<strong>EPAD</strong> (Energy Preserving Ambisonic Decoding), qui permet de produire un champ d’énergie invariant en fonction de l’angle d’incidence de la source.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -631,7 +639,7 @@ Important
 </section>
 <section id="lambisonie-dordre-plus-élevé-hoa" class="level2" data-number="37.2">
 <h2 data-number="37.2" class="anchored" data-anchor-id="lambisonie-dordre-plus-élevé-hoa"><span class="header-section-number">37.2</span> L’ambisonie d’ordre plus élevé (HOA)</h2>
-<p>L’HOA (pour <em>Higher Order Ambisonic</em>) est une extension du système proposé par Michael Gerzon. En effet, l’ambisonie du premier ordre introduit un certain nombre de problèmes lorsqu’on le décode sur un arrangement comprenant un trop grand nombre de haut-parleurs. Il en résulte alors un flou de localisation important, voir l’apparition de problèmes de timbre.</p>
+<p>L’HOA (pour <em>Higher Order Ambisonic</em>) est une extension du système proposé par Michael Gerzon. En effet, l’ambisonie du premier ordre introduit un certain nombre d’effets indésirables lorsqu’on le décode sur un arrangement comprenant un trop grand nombre de haut-parleurs. Il en résulte alors un flou de localisation important, voir l’apparition de problèmes de timbre.</p>
 <p>Le FOA reposant sur l’exploitation des harmoniques sphériques aux ordres 0 et 1, il était alors tout indiqué d’utiliser les harmoniques d’ordre supérieur.</p>
 <div class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
@@ -643,6 +651,225 @@ Important
 </div>
 </div>
 </div>
+<p>Chaque nouvel ordre ajoute donc un certain nombre de canaux au flux ambisonique. On trouve le nombre de canaux d’un ambisonique d’ordre N avec la formule suivante:</p>
+<p><span class="math display">\[ N_{ch} = (N+1)^2\]</span></p>
+<p>On rappelle que lors d’un décodage, on doit toujours avoir plus de canaux d’enceintes que de canaux ambisoniques. Augmenter l’ordre augmente la limite du nombre de haut-parleurs minimum. Cependant, la rétrocompatibilité des ordres inférieurs est garantie par la suppression des canaux correspondant aux ordres supérieurs. Par exemple, un flux ambisonique d’ordre 7 (64 canaux) est trop important pour le décoder sur un système Dolby Atmos 7.1.4 (11 canaux, hors sub). Nous pourrions alors tronquer le signal ambisonique d’ordre 7 pour ne garder que les canaux de 1 à 9. Nous aurions ainsi réalisé une réduction de l’ordre 7 à l’ordre 2, ce dernier étant tout à fait adéquat pour un décodage sur un arrangement de 11 haut-parleurs.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ainsi, nous admettrons ces deux règles du décodage ambisonique d’ordre élevé:</p>
+<ul>
+<li>Le nombre de canaux HOA doit toujours être inférieur au nombre de canaux d’enceintes</li>
+<li>Si possible, l’ordre ambisonique doit être le plus élevé possible (tout en respectant la condition précédente)</li>
+</ul>
+</div>
+</div>
+<section id="les-outils-de-captations-dordre-plus-élevé" class="level3" data-number="37.2.1">
+<h3 data-number="37.2.1" class="anchored" data-anchor-id="les-outils-de-captations-dordre-plus-élevé"><span class="header-section-number">37.2.1</span> Les outils de captations d’ordre plus élevé</h3>
+<p>Il existe un certain nombre de systèmes de prise de son ambisonique d’ordre supérieur. À l’ordre deux, on mentionnera les microphones suivants : <a href="https://www.core-sound.com/products/octomic">Core Sound OctoMic</a>, <a href="https://voyage.audio/spatialmic/">Voyage Spatial Mic</a> et l’Audiotechnica. Au troisième ordre, le <a href="https://www.zylia.co/">Zylia</a>, le <a href="https://spcmic.com/">Spcmic</a> et l’<a href="https://mhacoustics.com/products">Eigenmike</a>.</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="../_resources/bitmap/ambisonic/octomic.jpg" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="../_resources/bitmap/ambisonic/voyagemic.jpg" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="../_resources/bitmap/ambisonic/voyagemic.jpg" class="img-fluid"></p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="../_resources/bitmap/ambisonic/zylia.jpg" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="../_resources/bitmap/ambisonic/spcmic.png" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="../_resources/bitmap/ambisonic/eigenmike.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p>La plupart de ces microphones sont fournis avec des encodeurs spécialisés. En effet, chacun d’entre eux utilise des techniques sensiblement différentes afin de capturer l’espace acoustique. Dès lors, l’encodage du signal des capsules vers de l’ambisonique est bien souvent un procédé propriétaire.</p>
+<p>Le nombre de canaux de sortie importants contre indique rapidement l’usage de sorties analogiques. La majorité de ces microphones préfère des sorties USB (fonctionnement d’interface audio) ou audionumériques (Audio sur IP, ADAT).</p>
+</section>
+<section id="les-différents-formats-ambisoniques" class="level3" data-number="37.2.2">
+<h3 data-number="37.2.2" class="anchored" data-anchor-id="les-différents-formats-ambisoniques"><span class="header-section-number">37.2.2</span> Les différents formats ambisoniques</h3>
+<p>Bien que la notion de <a href="https://en.wikipedia.org/wiki/Ambisonic_data_exchange_formats">“format” ambisonique</a> ne soit pas spécifique à l’ambisonie d’ordre élevé, le multiplication du nombre de canaux rend sa compréhension impérative. Deux paramètres sont à prendre en compte : l’ordonnancement des canaux et la normalisation de la composante W par rapport aux autres.</p>
+<p>On compte trois principaux ordonnancement ambisoniques, nommés : <strong>Furse-Malham (FuMa)</strong>, <strong>Single Index Designation (SID)</strong> et <strong>Ambisonic Channel Numbering (ACN)</strong>. Le FuMa défini l’ordre des canaux jusqu’au troisième ordre. Le SID est défini par J. Daniel mais reste peut utilisé. L’ACN est aujourd’hui le plus utilisé (format Ambix).</p>
+<!-- ![Ordonnancement FuMa](../_resources/bitmap/ambisonic/sorting_acn.png) -->
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<table class="table">
+<caption>FuMa</caption>
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="math inline">\(W_{0}\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="math inline">\(Y_{2}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(Z_{3}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(X_1\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="math inline">\(V_{8}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(T_{6}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(R_4\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(S_5\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(U_7\)</span></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(Q_{15}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(O_{13}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(M_{11}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(K_{9}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(L_{10}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(N_{12}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(P_{14}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<table class="table">
+<caption>SID</caption>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(3\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="math inline">\(5\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(7\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(8\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(6\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(4\)</span></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(10\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(12\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(14\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(15\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(13\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(11\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(9\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<table class="table">
+<caption>ACN</caption>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(3\)</span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="math inline">\(4\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(5\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(6\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(7\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(8\)</span></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(9\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(10\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(11\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(12\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(13\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(14\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(15\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Concernant la normalisation, il existe trois variantes: <strong>maxN</strong>, <strong>N3D</strong> et <strong>SN3D</strong>. La normalisation <strong>maxN</strong> assure que le gain d’une source monophonique pannée n’excède jamais 1 (le panner fonctionne alors seulement en atténuation). La normalisation <strong>N3D</strong> assure que les différentes composantes soient encodées à égale puissance. Enfin, la normalisation <strong>SN3D</strong> est la plus répandue. Elle assure qu’aucune composante ne dépasse les valeurs crêtes du canal W.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La normalisation n’a aucun effet sur le rendu sonore ambisonique. Il est d’ailleurs possible de passer d’une normalisation à une autre. Il convient seulement d’être vigilant lors de la manipulation de flux ambisonique, et de bien s’assurer de leurs formats d’acquisition, avant de correctement paramétrer ses outils.</p>
+</div>
+</div>
+<p>Aujourd’hui, le format le plus commun d’ambisonique est l’<strong><a href="https://www.researchgate.net/publication/266602800_AMBIX_-A_SUGGESTED_AMBISONICS_FORMAT">Ambix</a></strong>, utilisant un triage ACN et une normalisation SN3D. Son prédécesseur était ce qu’on nomme couramment le B-Format, ou parfois FuMa, utilisant un triage FuMa et une normalisation maxN (avec une atténuation de -3 dB).</p>
+</section>
+</section>
+<section id="avantages-de-lambisonie" class="level2" data-number="37.3">
+<h2 data-number="37.3" class="anchored" data-anchor-id="avantages-de-lambisonie"><span class="header-section-number">37.3</span> Avantages de l’ambisonie</h2>
+<p>Malgré sa complexité théorique certaine, l’ambisonique offre un bon nombre d’avantages par rapport aux autres techniques de mixage. Avant tout, un mixage ambisonique ne dépend pas du système de restitution. Il peut être décodé après mixage sur, virtuellement n’importe quel arrangement d’enceinte (bien que nous ayons vu certaines contraintes à respecter pour satisfaire les critères de qualité sonore). Travailler à un ordre élevé permet également un décodage vers du binaural cohérent. Il s’agit d’ailleurs d’une approche de la synthèse binaurale courante (Meta 360 et autres casquent de réalité virtuelle).</p>
+<p>Le traitement d’un signal ambisonique (égalisation, compression) s’assimile au traitement de multiples canaux. Les outils sont relativement rares, mais cela reste possible. Les traitements impliquant des systèmes linéaire et invariant temporellement (comme les égaliseurs) s’appliquent sans précautions particulières. Attention néanmoins aux traitements dynamiques et non linéaires, ceux-ci peuvent briser la cohérence de la scène sonore. Il est alors recommandé d’utiliser le canal W comme canal de détection afin d’appliquer le traitement de façon indifférenciée sur les autres composantes. On trouve également des traitements spécifiques à l’ambisonique, comme des compresseurs directionnels, permettant de maîtriser l’énergie d’un mixage provenant d’une certaine direction.</p>
+<p>L’ambisonie est souvent apprécié pour sa malléabilité et son interactivité. En effet, l’encodage par harmonique sphérique permet d’appliquer des effets en temps réel, même après mixage (et donc sommation). Il est possible de tourner la scène sonore, de l’inverser, de zoomer dedans, etc. Cette propriété de l’ambisonique explique son utilisation courante dans les médias de l’interaction, comme la VR et le jeu-vidéo.</p>
 
 
 </section>
