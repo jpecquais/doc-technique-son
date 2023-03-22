@@ -16,7 +16,7 @@ L'ambisonie du premier ordre (ou FOA pour « First Order Ambisonic ») voit le
 
 Pour capturer le champ acoustique en un point, il faut donc s'intéresser au champ acoustique lui-même. Nous l'avons vu à la @sec-le-son-physique, sous sa forme acoustique, une onde sonore se caractérise par la variation locale dans le temps de la pression. Pour mesurer la pression en un point, nous pouvons utiliser un microphone omnidirectionnel (également appelé microphone à pression). Ce microphone omnidirectionnel va donc rendre compte à chaque instant du temps de la valeur de la pression. À ce stade, il n'est pas question de parler de spatialisation, la captation d'une telle capsule étant monophonique.
 
-Il conviendrait donc de mesurer la "direction" du déplacement local des particules d'air. Quelque part, on se demande dans **quel sens et quelle direction varie la pression**. Pour cela, on cherche à mesurer la vitesse de ce déplacement, et donc la variation de la pression en un point. Pour se faire, on utilise un microphone bidirectionnel (aussi appelé à gradient de pression). Ce microphone va donc mesurer, pour chaque instant du temps, la différence entre la pression entre un point de l'espace et un autre très rapproché. On caractérise donc une **variation dans l'espace**.
+Il conviendrait donc de mesurer la "direction" du déplacement local des particules d'air. Quelque part, on se demande dans **quel sens et quelle direction varie la pression**. <!--Pour cela, on cherche à mesurer la variation dans l'espace de la pression d'un point.--> Pour se faire, on utilise un microphone bidirectionnel (aussi appelé à gradient de pression). Ce microphone va donc mesurer, pour chaque instant du temps, la différence entre la pression entre un point de l'espace et un autre très rapproché. On caractérise donc une **variation dans l'espace**.
 
 <!-- :::{.callout-tip}
 
@@ -494,7 +494,7 @@ plt.show()
 
 ```
 
-Il existe alors plusieurs stratégies pour pallier ce problème. La plus utilisée est le décodage **AllRAD** (All-Round Ambisonic Decoder). Celle-ci consiste à décoder le signal ambisonique en deux étapes. Tout d'abord on le décode sur un arrangement de 240 haut-parleurs parfaitement idéal, puis on utilise une loi de panoramique VBAP pour réduire ces 240 haut-parleurs à l'arrangement réel.
+Il existe alors plusieurs stratégies pour pallier ce problème. La plus utilisée est le décodage **AllRAD** (All-Round Ambisonic Decoder). Celle-ci consiste à décoder le signal ambisonique en deux étapes. Tout d'abord on le décode sur un arrangement de [240 haut-parleurs parfait](http://neilsloane.com/sphdesigns/), puis on utilise une loi de panoramique VBAP pour réduire ces 240 haut-parleurs à l'arrangement réel.
 
 Une autre stratégie assez connue est l'**EPAD** (Energy Preserving Ambisonic Decoding), qui permet de produire un champ d'énergie invariant en fonction de l'angle d'incidence de la source.
 
@@ -587,7 +587,7 @@ Chaque nouvel ordre ajoute donc un certain nombre de canaux au flux ambisonique.
 
 $$ N_{ch} = (N+1)^2$$
 
-On rappel que lors d'un décodage, on doit toujours avoir plus de canaux d'enceintes que de canaux ambisoniques. Augmenter l'ordre augmente la limite du nombre de haut-parleurs minimum. Cependant, la rétrocompatibilité des ordres inférieurs et garantis par la suppression des canaux correspondant aux ordres supérieurs. Par exemple, un flux ambisonique d'ordre 7 (64 canaux) est trop important pour le décoder sur un système Dolby Atmos 7.1.4 (11 canaux, hors sub). Nous pourrions alors tronquer le signal ambisonique d'ordre 7 pour ne garder que les canaux de 1 à 9. Nous aurions ainsi réalisé une réduction de l'ordre 7 à l'ordre 2, ce dernier étant tout à fait adéquat pour un décodage sur un arrangement de 11 haut-parleurs.
+On rappelle que lors d'un décodage, on doit toujours avoir plus de canaux d'enceintes que de canaux ambisoniques. Augmenter l'ordre augmente la limite du nombre de haut-parleurs minimum. Cependant, la rétrocompatibilité des ordres inférieurs est garantie par la suppression des canaux correspondant aux ordres supérieurs. Par exemple, un flux ambisonique d'ordre 7 (64 canaux) est trop important pour le décoder sur un système Dolby Atmos 7.1.4 (11 canaux, hors sub). Nous pourrions alors tronquer le signal ambisonique d'ordre 7 pour ne garder que les canaux de 1 à 9. Nous aurions ainsi réalisé une réduction de l'ordre 7 à l'ordre 2, ce dernier étant tout à fait adéquat pour un décodage sur un arrangement de 11 haut-parleurs.
 
 :::{.callout-important} 
 Ainsi, nous admettrons ces deux règles du décodage ambisonique d'ordre élevé:
@@ -598,7 +598,7 @@ Ainsi, nous admettrons ces deux règles du décodage ambisonique d'ordre élevé
 
 ### Les outils de captations d'ordre plus élevé
 
-Il existe un certain nombre de systèmes de prise de son ambisonique d'ordre supérieurs. A l'ordre deux, on mentionnera les microphones suivants : [Core Sound OctoMic](https://www.core-sound.com/products/octomic), [Voyage Spatial Mic](https://voyage.audio/spatialmic/) et l'Audiotechnica. Au troisième ordre, le [Zylia](https://www.zylia.co/), le [Spcmic](https://spcmic.com/) et l'[Eigenmike](https://mhacoustics.com/products).
+Il existe un certain nombre de systèmes de prise de son ambisonique d'ordre supérieur. À l'ordre deux, on mentionnera les microphones suivants : [Core Sound OctoMic](https://www.core-sound.com/products/octomic), [Voyage Spatial Mic](https://voyage.audio/spatialmic/) et l'Audiotechnica. Au troisième ordre, le [Zylia](https://www.zylia.co/), le [Spcmic](https://spcmic.com/) et l'[Eigenmike](https://mhacoustics.com/products).
 
 :::{layout-ncol="3"}
 
@@ -616,13 +616,62 @@ Il existe un certain nombre de systèmes de prise de son ambisonique d'ordre sup
 
 :::
 
-La plus part de ces microphones sont fournis avec des décodeurs spécialisés. En effet, chacun d'entre eux utilise des techniques sensiblement différentes afin de capturer l'espace acoustique. Dès lors, l'encodage du signal des capsules vers de l'ambisonique est bien souvent un procédé propriétaire.
+La plupart de ces microphones sont fournis avec des encodeurs spécialisés. En effet, chacun d'entre eux utilise des techniques sensiblement différentes afin de capturer l'espace acoustique. Dès lors, l'encodage du signal des capsules vers de l'ambisonique est bien souvent un procédé propriétaire.
 
-Le nombre de canaux de sortie importants contre indique rapidement l'usage de sorties analogiques. La majorité de ces microphones préfères des sorties USB (fonctionnement d'interface audio) ou audio-numérique (Audio sur IP, ADAT).
+Le nombre de canaux de sortie importants contre indique rapidement l'usage de sorties analogiques. La majorité de ces microphones préfère des sorties USB (fonctionnement d'interface audio) ou audionumériques (Audio sur IP, ADAT).
 
 ### Les différents formats ambisoniques
 
-Bien que la notion de "format" ambisonique ne soit pas spécifique à l'ambisonie d'ordre élevé, le multiplication du nombre de canaux rend sa compréhension impérative.
+Bien que la notion de ["format" ambisonique](https://en.wikipedia.org/wiki/Ambisonic_data_exchange_formats) ne soit pas spécifique à l'ambisonie d'ordre élevé, le multiplication du nombre de canaux rend sa compréhension impérative.
+Deux paramètres sont à prendre en compte : l'ordonnancement des canaux et la normalisation de la composante W par rapport aux autres.
 
-Deux paramètres sont à prendre en compte : l'ordonencement des canaux et la normalisation de la composante W par rapport aux autres.
+On compte trois principaux ordonnancement ambisoniques, nommés : **Furse-Malham (FuMa)**, **Single Index Designation (SID)** et **Ambisonic Channel Numbering (ACN)**. Le FuMa défini l'ordre des canaux jusqu'au troisième ordre. Le SID est défini par J. Daniel mais reste peut utilisé. L'ACN est aujourd'hui le plus utilisé (format Ambix).
 
+<!-- ![Ordonnancement FuMa](../_resources/bitmap/ambisonic/sorting_acn.png) -->
+
+:::{layout-ncol="3"}
+
+|   |   |   |   |   |   |   |
+|---|---|---|---|---|---|---|
+|   |   |   | $W_{0}$  |   |   |   |
+|   |   | $Y_{2}$ | $Z_{3}$ | $X_1$|   |   |
+|   | $V_{8}$ | $T_{6}$ | $R_4$ | $S_5$ | $U_7$ |   |
+| $Q_{15}$ | $O_{13}$ | $M_{11}$ | $K_{9}$ | $L_{10}$ | $N_{12}$ | $P_{14}$ |
+
+: FuMa
+
+|   |   |   |   |   |   |   |
+|---|---|---|---|---|---|---|
+|   |   |   | $0$  |   |   |   |
+|   |   | $2$ | $3$ | $1$|   |   |
+|   | $5$ | $7$ | $8$ | $6$ | $4$ |   |
+| $10$ | $12$ | $14$ | $15$ | $13$ | $11$ | $9$ |
+
+: SID
+
+|   |   |   |   |   |   |   |
+|---|---|---|---|---|---|---|
+|   |   |   | $0$ |   |   |   |
+|   |   | $1$ | $2$ | $3$|   |   |
+|   | $4$ | $5$ | $6$ | $7$ | $8$ |   |
+| $9$ | $10$ | $11$ | $12$ | $13$ | $14$ | $15$ |
+
+: ACN
+
+:::
+
+Concernant la normalisation, il existe trois variantes: **maxN**, **N3D** et **SN3D**. La normalisation **maxN** assure que le gain d'une source monophonique pannée n'excède jamais 1 (le panner fonctionne alors seulement en atténuation). La normalisation **N3D** assure que les différentes composantes soient encodées à égale puissance. Enfin, la normalisation **SN3D** est la plus répandue. Elle assure qu'aucune composante ne dépasse les valeurs crêtes du canal W.
+
+:::{.callout-important}
+La normalisation n'a aucun effet sur le rendu sonore ambisonique. Il est d'ailleurs possible de passer d'une normalisation à une autre. Il convient seulement d'être vigilant lors de la manipulation de flux ambisonique, et de bien s'assurer de leurs formats d'acquisition, avant de correctement paramétrer ses outils.
+:::
+
+Aujourd'hui, le format le plus commun d'ambisonique est l'**[Ambix](https://www.researchgate.net/publication/266602800_AMBIX_-A_SUGGESTED_AMBISONICS_FORMAT)**, utilisant un triage ACN et une normalisation SN3D. Son prédécesseur était ce qu'on nomme couramment le B-Format, ou parfois FuMa, utilisant un triage FuMa et une normalisation maxN (avec une atténuation de -3 dB).
+
+## Avantages de l'ambisonie
+
+Malgré sa complexité théorique certaine, l'ambisonique offre un bon nombre d'avantages par rapport aux autres techniques de mixage. Avant tout, un mixage ambisonique ne dépend pas du système de restitution. Il peut être décodé après mixage sur, virtuellement n'importe quel arrangement d'enceinte (bien que nous ayons vu certaines contraintes à respecter pour satisfaire les critères de qualité sonore). Travailler à un ordre élevé permet également un décodage vers du binaural cohérent. Il s'agit d'ailleurs d'une approche de la synthèse binaurale courante (Meta 360 et autres casquent de réalité virtuelle).
+
+Le traitement d'un signal ambisonique (égalisation, compression) s'assimile au traitement de multiples canaux. Les outils sont relativement rares, mais cela reste possible. Les traitements impliquant des systèmes linéaire et invariant temporellement (comme les égaliseurs) s'appliquent sans précautions particulières. Attention néanmoins aux traitements dynamiques et non linéaires, ceux-ci peuvent briser la cohérence de la scène sonore. Il est alors recommandé d'utiliser le canal W comme canal de détection afin d'appliquer le traitement de façon indifférenciée sur les autres composantes. On trouve également des traitements spécifiques à l'ambisonique, comme des compresseurs directionnels, permettant de maîtriser l'énergie d'un mixage provenant d'une certaine direction.
+
+L'ambisonie est souvent apprécié pour sa malléabilité et son interactivité. En effet, l'encodage par harmonique sphérique permet d'appliquer des effets en temps réel, même après mixage (et donc sommation). Il est possible de tourner la scène sonore, de l'inverser, de zoomer dedans, etc. Cette propriété de l'ambisonique explique son utilisation courante dans les médias de l'interaction, comme la VR et le jeu-vidéo.
