@@ -1,4 +1,4 @@
-# Les espaces haut-parlants
+# Espaces haut-parlants
 
 Une fois n'est pas coutume, nous allons aborder le problème de la spatialisation par sa fin : le système de diffusion. De quoi parle-t-on lorsque l'on parle d'un système « immersif ». À vrai dire, que qualifie réellement ce terme « immersif » ?
 
@@ -8,9 +8,7 @@ Nous commençons donc à pressentir qu'il ne faut pas confondre l'**espace d'éc
 
 ## Catégorisation des espaces haut-parlants
 
-On peut généralement différencier deux types de spectacle sonores : ceux où la position de l'auditeur est connue et fixe, et ceux où l'on ne peut pas présupposer du positionnement de l'auditeur. Par exemple, lors de l'écoute d'un disque, on suppose que l'auditeur se positionnera au point d'écoute idéal (sweetspot), qui était alors la même place que l'ingénieur du son pendant sa production. À l'inverse, en muséographie, l'auditeur se déplace en permanence et, même si souvent guidés par un sens de visite, ses déplacements sont aléatoires.
-
-Ces deux grandes catégories ont une forte influence sur le choix des technologies de spatialisation.
+On peut généralement différencier deux types de spectacle sonores : ceux où la position de l'auditeur est connue et fixe, et ceux où l'on ne peut pas présupposer du positionnement de l'auditeur. Par exemple, lors de l'écoute d'un disque, on suppose que l'auditeur se positionnera au point d'écoute idéal (sweetspot), qui était alors la même place que l'ingénieur du son pendant sa production. À l'inverse, en muséographie, l'auditeur se déplace en permanence et, même si souvent guidés par un sens de visite, ses déplacements sont aléatoires. Ces deux grandes catégories ont une forte influence sur le choix des technologies de spatialisation.
 
 :::{.callout-note}
 
@@ -68,6 +66,99 @@ Gardons bien en tête cette idée d'échantillonnage d'espace, car c'est exactem
 Si l'on prend en exemple le système stéréophonique, nous avons à notre disposition deux enceintes, une à gauche de l'auditeur et une à sa droite. De manière assez évidente, si nous envoyons un signal seulement sur l'enceinte gauche, le son semblera venir de la gauche et vice-versa. Alors, que se passe-t-il lorsque nous envoyons le même signal (amplitude et phase identique) sur les deux enceintes ? Il se créer alors un effet psychoacoustique qui va nous donner l'illusion que le son provient du « centre de gravité » du système (barycentre serait plus juste). Ce phénomène se nomme **centre fantôme**. Si l'on introduit un écart de gain entre les deux enceintes, cette source fantôme se déplace vers l'enceinte la plus forte. Il s'agit alors d'une forme d'interpolation. On déduit ainsi des points de diffusions physiquement inexistants grâce aux points de diffusions réels environnants. 
 
 Par rapport à notre question de résolution, plus celle d'un système est faible, plus on peut supposer que l'espacement entre les enceintes sera grand. Le poids mis sur cette stratégie d'interpolation est alors plus important, jusqu'au point où l'illusion du centre fantôme cesse d'opérer.
+
+## Evaluation objective des espaces haut-parlants
+
+Lorsque l'on étudie un espace haut-parlant, on cherche rapidement à évaluer la précision de localisation dont il est capables. Pour cela, on étudie la contribution de chaque haut-parleur du système pour une source sonore à reproduire donnée (et donc pour une technique de spatialisation précise). Il est dans ce cas commode d'utiliser une approche vectorielle, où, pour chaque enceinte, on lui attribue un vecteur, ayant pour norme son gain et poitant vers l'auditeur.
+
+```{python}
+
+#| fig-align: "center"
+#| fig-cap: "Contribution des haut-parleurs et leur résultante, en rouge"
+
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.colors as colors
+from PIL import Image
+
+db = lambda x: 20*np.log10(np.abs(x))
+dbnorm = lambda x: 20*np.log10(np.abs(x)/np.max(x))
+
+theta = np.pi/8
+alphaSource = [1.4, 1.4*np.sin(-theta)/np.cos(-theta)]
+speakers = [[1,1], [-1,1], [-1,-1], [1,-1]]
+# speakerWeight = [1.3, 1.3, 1.3, 1.3] #in dB
+spkrGain = [0.3, 0.1, 0, 0.6]
+
+fig, ax = plt.subplots()
+fig.tight_layout()
+
+img = np.asarray(Image.open('../_resources/bitmap/various/head.png'))
+ax.imshow(img)
+for speakerPos in speakers:
+    ax.plot(speakerPos[0]*1.05, speakerPos[1]*1.05, "D", ms=20, color='black')
+ax.plot(alphaSource[0], alphaSource[1], "o", ms=20, color='purple')
+speakers = [[1,1], [-1,1], [-1,-1], [1,-1]]
+
+# Vector origin location
+X = speakers[0][0]
+Y = speakers[0][1]
+  
+# Directional vectors
+U = 0.3*-1/np.sqrt(2)  
+V = 0.3*-1/np.sqrt(2)  
+vec1 = [U,V]
+
+ax.quiver(X, Y, U, V, color='b', units='xy', scale=1)
+
+# Vector origin location
+X = speakers[1][0]
+Y = speakers[1][1]
+  
+# Directional vectors
+U = 0.1*+1/np.sqrt(2)  
+V = 0.1*-1/np.sqrt(2)  
+vec2 = [U,V]
+
+ax.quiver(X, Y, U, V, color='b', units='xy', scale=1)
+
+# Vector origin location
+X = speakers[3][0]
+Y = speakers[3][1]
+  
+# Directional vectors
+U = 0.6*-1/np.sqrt(2)  
+V = 0.6*+1/np.sqrt(2)  
+vec3 = [U,V]
+
+ax.quiver(X, Y, U, V, color='b', units='xy', scale=1)
+
+# Vector origin location
+X = alphaSource[0]
+Y = alphaSource[1]
+  
+# Directional vectors
+U = 0.583*-np.cos(-np.pi/8)  
+V = 0.583*-np.sin(-np.pi/8)
+
+# L=np.sum([vec1,vec2])
+L=(vec1,vec2,vec3)
+L=np.add.reduce(L)
+ax.quiver(0, 0, -L[0], -L[1], color='r', units='xy', scale=1)
+
+square_lim=1.6
+ax.set_ylim(-square_lim,square_lim)
+ax.set_xlim(-square_lim,square_lim)
+# ax.set_rticks([-20, -12, -6, 0, 6])  # Less radial ticks
+ax.legend()
+ax.grid(True)
+ax.set_aspect("equal")
+plt.show()
+
+
+```
+
+En bleu, les vecteurs de la contribution de chacun des haut-parleurs, en rouge, le vecteur résultant $\vec{V}$ de norme Rv 
 
 ## Études des systèmes normés
 
