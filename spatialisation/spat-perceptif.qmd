@@ -22,7 +22,6 @@ Le "panpot" stéréophonique permet de déplacer un son de l'enceinte gauche à 
 
 Pour qualifier cette loi, on cherche donc les variables $g_L$ et $g_R$, respectivement les gains de restitution de l'enceinte gauche et droite. Puisque nous cherchons deux inconnus, il nous faut alors deux équations. Nous allons alors définir une relation entre $g_L$ et $g_R$ en fonction de la valeur du panoramique, et une loi de conservation entre ces deux variables (selon la puissance ou selon l'énergie).
 
-:::{layout-ncol="2"}
 $$
 \left\{\begin{array}{@{}l@{}}
     \displaystyle \sqrt{3}\tan(\phi) = \frac{g_L-g_R}{g_L+g_R} \\
@@ -47,7 +46,6 @@ ax.set_ylim(-1,1);
 ax.plot(phi*180/np.pi,tanPhi)
 
 ```
-:::
 
 Ici, $\phi$ correspond à la position du potentiomètre de panoramique, tel que $-30° \leq \phi \leq 30°$. On retrouve alors nos 60° de liberté (ou $\frac{\pi}{3}$ radians). Lorsqu'on exprime $g_L^2 + g_R^2 = 1$, on impose une énergie constante au système. Cela signifie donc que, lorsque notre potentiomètre de panoramique est positionné au centre, l'atténuation est de **trois décibels**. En resolvant le système, nous trouvons pour $g_L$ et $g_R$:
 
