@@ -473,6 +473,9 @@ Astuce
 <h3 data-number="36.1.1" class="anchored" data-anchor-id="le-panoramique-stéréophonique"><span class="header-section-number">36.1.1</span> Le panoramique stéréophonique</h3>
 <p>Le “panpot” stéréophonique permet de déplacer un son de l’enceinte gauche à l’enceinte droite. Dans ses positions extrêmes, le signal n’est que dans l’enceinte gauche ou que dans l’enceinte droite. Il est important de bien saisir le fonctionnement de cette loi de panoramique, car les extensions multicanales en découlent.</p>
 <p>Pour qualifier cette loi, on cherche donc les variables <span class="math inline">\(g_L\)</span> et <span class="math inline">\(g_R\)</span>, respectivement les gains de restitution de l’enceinte gauche et droite. Puisque nous cherchons deux inconnus, il nous faut alors deux équations. Nous allons alors définir une relation entre <span class="math inline">\(g_L\)</span> et <span class="math inline">\(g_R\)</span> en fonction de la valeur du panoramique, et une loi de conservation entre ces deux variables (selon la puissance ou selon l’énergie).</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><span class="math display">\[
 \left\{\begin{array}{@{}l@{}}
     \displaystyle \sqrt{3}\tan(\phi) = \frac{g_L-g_R}{g_L+g_R} \\
@@ -480,13 +483,11 @@ Astuce
     g_L^2+g_R^2 = 1 \\
 \end{array}\right.\,.
 \]</span></p>
-<div class="cell" data-execution_count="1">
+</div>
+<div class="cell quarto-layout-cell" data-execution_count="1" style="flex-basis: 50.0%;justify-content: center;">
 <div class="cell-output cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="spat-perceptif_files/figure-html/cell-2-output-1.png" width="582" height="194" class="figure-img"></p>
-<p></p><figcaption class="figure-caption">Tracé de <span class="math inline">\(\sqrt{3}\tan(\phi)\)</span> en fonction de <span class="math inline">\(\phi\)</span></figcaption><p></p>
-</figure>
+<p><img src="spat-perceptif_files/figure-html/cell-2-output-1.png" width="582" height="194"></p>
+</div>
 </div>
 </div>
 </div>
