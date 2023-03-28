@@ -449,12 +449,12 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>On parle de mixage orienté canal, ou d’orienté canal tout court, lorsqu’un ensemble de canaux audio représente directement un arrangement de haut-parleurs. Par exemple, un mixage stéréophonique produit deux canaux, un pour l’enceinte gauche et un pour l’enceinte droite. De façon analogue, une prise de son 5.0 est conçue pour que chacune des capsules du dispositif soit affectée à une enceinte précise. Cette approche orientée canal est au final la façon la plus courante, et semble-t-il la plus naturelle, de penser la spatialisation sonore. Elle est également impérative à une certaine étape du chemin du signal. Par exemple, pour un mixage ambisonique, il sera nécessaire de le décoder vers un flux audio orienté canal afin de pouvoir écouter le rendu sonore.</p>
-<p>Lors d’un mixage orienté canal, on utilise une <strong>loi de panoramique</strong> pour répartir l’énergie d’une source sonore sur les différents haut-parleurs. Il existe alors deux grandes approches : l’approche perceptive, spécifiquement conçue pour des dispositifs de reproduction centrés sur un point d’écoute idéal (systèmes subjectifs); et l’approche matricielle, particulièrement efficace pour des systèmes maillés multicouches (reproduction objective).</p>
+<p>On parle de mixage orienté canal, ou d’orienté canal tout court, lorsqu’un ensemble de canaux audio représente directement un arrangement de haut-parleurs. Par exemple, un mixage stéréophonique produit deux canaux, un pour l’enceinte gauche et un autre pour l’enceinte droite. De façon analogue, une prise de son 5.0 est conçue pour que chacune des capsules du dispositif soit affectée à une enceinte précise. Cette approche orientée canal est au final la façon la plus courante, et semble-t-il la plus naturelle, de penser la spatialisation sonore. Elle est également impérative à une certaine étape du chemin du signal. Par exemple, pour un mixage ambisonique, il sera nécessaire de le décoder vers un flux audio orienté canal afin de pouvoir écouter le rendu sonore.</p>
+<p>Lors d’un mixage orienté canal, on utilise une <strong>loi de panoramique</strong> pour répartir l’énergie d’une source sonore sur les différents haut-parleurs. Il existe alors deux grandes approches : l’approche perceptive, adaptée à des dispositifs de reproduction centrés sur un point d’écoute idéal (systèmes subjectifs); et l’approche matricielle, particulièrement efficace pour des systèmes maillés multicouches (reproduction objective).</p>
 <section id="lapproche-perceptive" class="level2" data-number="36.1">
 <h2 data-number="36.1" class="anchored" data-anchor-id="lapproche-perceptive"><span class="header-section-number">36.1</span> L’approche perceptive</h2>
-<p>Les stratégies de panoramique perceptives portent ce nom car elles reposent toutes sur un principe très fort, celui du centre fantôme. Illustrons ce sujet pour une simple stéréophonie. Lorsque nous utilisons un panneur stéréo pour placer une source au milieu de la scène sonore, le signal est au final diffusé en même temps et au même niveau sur les deux enceintes. En supposant que les enceintes soient appairées, on a alors la sensation, l’impression que le son émane du centre des enceintes. Ce phénomène perceptif permet alors de créer toute une scène sonore grande de soixante degrés en stéréophonie.</p>
-<p>Ce centre fantôme est cependant assez fragile. En effet, sa crédibilité dépend fortement de l’espacement, de l’angle entre les enceintes. Si celui-ci est tout à fait convaincant en stéréo (60°), lorsque l’on passe un écart de quatre-vingt-dix degrés entre les enceintes, alors cette illusion ne fonctionne plus vraiment et la cohérence de la scène sonore s’effondre.</p>
+<p>Les stratégies de panoramique perceptives portent ce nom car elles reposent toutes sur un principe très fort, celui du centre fantôme. Illustrons ce sujet pour une simple stéréophonie. Lorsque nous utilisons un panneur stéréo pour placer une source au milieu de la scène sonore, le signal est au final diffusé en même temps et au même niveau sur les deux enceintes. En supposant que les enceintes soient appairées, on a alors la sensation, l’impression que le son émane du centre des enceintes. Ce phénomène perceptif permet alors de créer toute une scène sonore large de soixante degrés en stéréophonie.</p>
+<p>Ce centre fantôme est cependant assez fragile. En effet, sa crédibilité dépend fortement de l’angle formé par le triangle enceintes-auditeur. Si celui-ci est tout à fait convaincant en stéréo (60°), lorsque l’on passe à un écart de quatre-vingt-dix degrés entre les enceintes, alors cette illusion ne fonctionne plus vraiment et la cohérence de la scène sonore s’effondre.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -472,7 +472,7 @@ Astuce
 <section id="le-panoramique-stéréophonique" class="level3" data-number="36.1.1">
 <h3 data-number="36.1.1" class="anchored" data-anchor-id="le-panoramique-stéréophonique"><span class="header-section-number">36.1.1</span> Le panoramique stéréophonique</h3>
 <p>Le “panpot” stéréophonique permet de déplacer un son de l’enceinte gauche à l’enceinte droite. Dans ses positions extrêmes, le signal n’est que dans l’enceinte gauche ou que dans l’enceinte droite. Il est important de bien saisir le fonctionnement de cette loi de panoramique, car les extensions multicanales en découlent.</p>
-<p>Pour qualifier cette loi, on cherche donc les variables <span class="math inline">\(g_L\)</span> et <span class="math inline">\(g_R\)</span>, respectivement les gains de restitution de l’enceinte gauche et droite. Puisque nous cherchons deux inconnus, il nous faut alors deux équations. Nous allons alors définir une relation entre <span class="math inline">\(g_L\)</span> et <span class="math inline">\(g_R\)</span> en fonction de la valeur du panoramique, et une loi de conservation entre ces deux variables (selon la puissance ou selon l’énergie).</p>
+<p>Pour qualifier cette loi, on cherche donc les variables <span class="math inline">\(g_L\)</span> et <span class="math inline">\(g_R\)</span>, respectivement les gains de restitution de l’enceinte gauche et droite. Puisque nous cherchons deux inconnus, il nous faut alors deux équations. Nous allons donc définir une relation entre <span class="math inline">\(g_L\)</span> et <span class="math inline">\(g_R\)</span> en fonction de la valeur du panoramique (ici, l’angle d’incidence de la source virtuelle <span class="math inline">\(\phi\)</span>), et une loi de conservation entre ces deux variables (selon la puissance ou selon l’énergie).</p>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -491,12 +491,12 @@ Astuce
 </div>
 </div>
 </div>
-<p>Ici, <span class="math inline">\(\phi\)</span> correspond à la position du potentiomètre de panoramique, tel que <span class="math inline">\(-30° \leq \phi \leq 30°\)</span>. On retrouve alors nos 60° de liberté (ou <span class="math inline">\(\frac{\pi}{3}\)</span> radians). Lorsqu’on exprime <span class="math inline">\(g_L^2 + g_R^2 = 1\)</span>, on impose une énergie constante au système. Cela signifie donc que, lorsque notre potentiomètre de panoramique est positionné au centre, l’atténuation est de <strong>trois décibels</strong>. En resolvant le système, nous trouvons pour <span class="math inline">\(g_L\)</span> et <span class="math inline">\(g_R\)</span>:</p>
+<p>Ici, <span class="math inline">\(\phi\)</span> correspond à la position du potentiomètre de panoramique, tel que <span class="math inline">\(-30° \leq \phi \leq 30°\)</span>. On retrouve alors nos 60° de liberté (ou <span class="math inline">\(\frac{\pi}{3}\)</span> radians). Aussi, la deuxième expression <span class="math inline">\(g_L^2 + g_R^2 = 1\)</span> impose une énergie constante au système. Cela signifie donc que, lorsque notre potentiomètre de panoramique est positionné au centre, le gain de chacune des enceintes est égal et atténué de <strong>trois décibels</strong>. En résolvant le système, nous trouvons pour <span class="math inline">\(g_L\)</span> et <span class="math inline">\(g_R\)</span>:</p>
 <p><span class="math display">\[
 \left\{\begin{array}{@{}l@{}}
-    \displaystyle g_L^2 = \frac{(1+\sqrt{3}\tan(\phi))^\frac{1}{2}}{(1-\sqrt{3}\tan(\phi))^\frac{1}{2}+(1+\sqrt{3}\tan(\phi))^\frac{1}{2}}\\
+    \displaystyle g_L = \frac{\sqrt{2}}{{2}}\frac{1+\sqrt{3}\tan(\phi)}{\sqrt{1+\sqrt{3}\tan(\phi)^2}}\\
     \\
-    \displaystyle g_L^2 = \frac{(1-\sqrt{3}\tan(\phi))^\frac{1}{2}}{(1-\sqrt{3}\tan(\phi))^\frac{1}{2}+(1+\sqrt{3}\tan(\phi))^\frac{1}{2}}\\\\
+    \displaystyle g_L = \frac{\sqrt{2}}{{2}}\frac{1-\sqrt{3}\tan(\phi)}{\sqrt{1+\sqrt{3}\tan(\phi)^2}}\\
 \end{array}\right.\,.
 \]</span></p>
 <p>Si l’on souhaite maintenant conserver la puissance du système (panoramique avec une atténuation de <strong>six décibels</strong> au centre), on pose alors le système suivant:</p>
@@ -514,9 +514,9 @@ Astuce
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><span class="math display">\[
 \left\{\begin{array}{@{}l@{}}
-    \displaystyle g_L = 1+\sqrt{3}\tan(\phi)\\
+    \displaystyle g_L = \frac{1}{{2}}(1+\sqrt{3}\tan(\phi))\\
     \\
-    \displaystyle g_R = 1-\sqrt{3}\tan(\phi)\\
+    \displaystyle g_R = \frac{1}{{2}}(1-\sqrt{3}\tan(\phi))\\
 \end{array}\right.\,.
 \]</span></p>
 </div>
@@ -533,9 +533,9 @@ Astuce
 </div>
 </div>
 </div>
-<p>En guise de dernier exemple, nous pourrions aussi tracer la loi de panoramique tel que l’atténuation au centre soit de <strong>quatre décibels</strong>. Pour ce faire, nous souhaitons donc changer la loi de conservation. On pose alors:</p>
+<p>En guise de dernier exemple, nous pourrions aussi tracer la loi de panoramique tel que l’atténuation au centre soit de <strong>quatre décibels cinq</strong>. Pour ce faire, nous allons à nouveau modifier la loi de conservation. On pose alors:</p>
 <p><span class="math display">\[g_L^\eta+g_R^\eta=1\]</span></p>
-<p>Pour trouver <span class="math inline">\(\eta\)</span>, on se place dans le cas ou <span class="math inline">\(g_L\)</span> et <span class="math inline">\(g_R\)</span> sont égaux et valent <span class="math inline">\(10^{\frac{-4}{20}} \approx 0.63\)</span>. On trouve alors <span class="math inline">\(\eta=1.5\)</span>.</p>
+<p>Pour trouver <span class="math inline">\(\eta\)</span>, on se place dans le cas ou <span class="math inline">\(g_L\)</span> et <span class="math inline">\(g_R\)</span> sont égaux et valent <span class="math inline">\(10^{\frac{-4.5}{20}} \approx 0.60\)</span>. On trouve alors <span class="math inline">\(\eta=1.36\)</span>.</p>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -543,7 +543,7 @@ Astuce
 \left\{\begin{array}{@{}l@{}}
     \displaystyle\sqrt{3}\tan(\phi) = \frac{g_L-g_R}{g_L+g_R} \\
     \\
-    g_L^{1.5}+g_R^{1.5} = 1 \\
+    g_L^{1.36}+g_R^{1.36} = 1 \\
 \end{array}\right.\,.
 \]</span></p>
 </div>
@@ -554,10 +554,11 @@ Astuce
 </div>
 </div>
 </div>
+<p>Le terme <span class="math inline">\(\eta\)</span> permet donc de définir l’atténuation du système lorsque l’on positionne une source virtuelle au centre des deux enceintes. Lorsque <span class="math inline">\(\eta\)</span> vaut <span class="math inline">\(2\)</span>, alors on conserve l’énergie, et l’atténuation au centre vaut <span class="math inline">\(3 dB\)</span>. Si <span class="math inline">\(\eta\)</span> vaut <span class="math inline">\(1\)</span>, alors on conserve l’amplitude, et l’atténuation au centre vaut <span class="math inline">\(6 dB\)</span>.</p>
 </section>
 <section id="généralisation-du-pan-dun-signal-sur-deux-enceintes." class="level3" data-number="36.1.2">
 <h3 data-number="36.1.2" class="anchored" data-anchor-id="généralisation-du-pan-dun-signal-sur-deux-enceintes."><span class="header-section-number">36.1.2</span> Généralisation du pan d’un signal sur deux enceintes.</h3>
-<p>Continuons l’étude d’un pan pour deux enceintes, mais tachons de généraliser son fonctionnement. Dorénavant, nous ne voulons plus seulement nous attacher au cas de la stéréophonie, mais nous souhaitons pouvoir adapter notre stratégie pour des paires d’enceintes formant un angle avec l’auditeur quelquonque.</p>
+<p>Continuons l’étude d’un pan pour deux enceintes, mais tâchons de généraliser son fonctionnement. Dorénavant, nous ne voulons plus seulement nous attacher au cas de la stéréophonie, mais nous souhaitons pouvoir adapter notre stratégie pour des paires d’enceintes formant un angle avec l’auditeur quelconque.</p>
 <p>Il convient donc d’abandonner le terme <span class="math inline">\(\sqrt{3}\tan{\phi}\)</span> pour <span class="math inline">\(\frac{\tan(\phi)}{\tan(\phi_0)}\)</span>. Ici, <span class="math inline">\(\phi_0\)</span> correspond à la moitié de l’angle entre les enceintes, donc 30° (ou <span class="math inline">\(\frac{\pi}{6}\)</span> radians) pour la stéréophonie. <span class="math inline">\(\phi\)</span> correspond toujours à la position du potentiomètre de panoramique, mais dont ses bornes sont <span class="math inline">\(-\phi_0 \leq \phi \leq \phi_0\)</span>. On retrouve alors nos 60° de liberté (ou <span class="math inline">\(\frac{\pi}{3}\)</span> radians) dans le cas de la stéréophonie.</p>
 <div class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
@@ -569,11 +570,11 @@ Astuce
 </div>
 </div>
 </div>
-<p>Nous voulons aussi manipuler l’évolution du gain de chaque haut-parleurs. Pour cela, nous pouvons écrire:</p>
+<p>Nous voulons aussi manipuler l’évolution du gain de chaque haut-parleur. Pour cela, nous pouvons écrire:</p>
 <p><span class="math display">\[
 \frac{\tan(\phi)}{\tan(\phi_0)} = \frac{g_L^{\gamma}-g_R^{\gamma}}{g_L^{\gamma}+g_R^{\gamma}}
 \]</span></p>
-<p>lorsque <span class="math inline">\(\gamma\)</span> vaut un, alors nous retrouvons les conditions traités ci-dessus. Pour alléger l’écriture, on définit la fonction <span class="math inline">\(q\)</span>, qui pour tout <span class="math inline">\(\phi\)</span> vaut <span class="math inline">\(q(\phi)=\frac{\tan(\phi)}{\tan(\phi_0)}\)</span>. En rassemblant l’ensemble de ces conditions, cela donne :</p>
+<p>lorsque <span class="math inline">\(\gamma\)</span> vaut un, alors nous retrouvons les conditions traitées ci-dessus. Pour alléger l’écriture, on définit la fonction <span class="math inline">\(q\)</span>, qui pour tout <span class="math inline">\(\phi\)</span> vaut <span class="math inline">\(q(\phi)=\frac{\tan(\phi)}{\tan(\phi_0)}\)</span>. En rassemblant l’ensemble de ces conditions, cela donne :</p>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -596,6 +597,19 @@ Astuce
 </div>
 </div>
 </div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>On rappelle que le terme <span class="math inline">\(\eta\)</span> permet de définir l’atténuation du système lorsqu’on place un source virtuelle entre ses deux enceintes.</p>
+</div>
+</div>
 <p>Nous pouvons maintenant étudier l’influence du terme <span class="math inline">\(\gamma\)</span>. Pour simplifier la conversation, nous nous replaçons dans les conditions de la stéréophonie avec conservation de l’énergie (<span class="math inline">\(\phi_0 = 60°\)</span> et <span class="math inline">\(\eta = 2\)</span>).</p>
 <div class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
@@ -607,11 +621,23 @@ Astuce
 </div>
 </div>
 </div>
-<p>On remarque, entre les deux courbes ci-dessus, une différence d’évolution des gains des deux enceintes. A gauche, nous appliquons une panoramique d’amplitude, à droite une panoramique d’intensité. Cela se concrétise par une zone de contribution commune des deux haut-parleurs plus faibles dans le cas de la panoramique d’intensité.</p>
+<p>On remarque, entre les deux courbes ci-dessus, une différence d’évolution des gains des deux enceintes. À gauche, nous appliquons un panoramique d’amplitude, à droite un panoramique d’intensité. Cela se concrétise par une zone de contribution commune des deux haut-parleurs plus faibles dans le cas de la panoramique d’amplitude.</p>
 <!-- Relier à Rv et Re -->
+<div class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="spat-perceptif_files/figure-html/cell-7-output-1.png" width="663" height="315" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Contribution des haut-parleurs et leur résultante, en rouge, pour une source virtuelle (dans l’axe d’un haut-parleur et entre deux enceintes), spatialisée en VBAP</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Lorsque le terme <span class="math inline">\(\gamma\)</span> augmente (typiquement égal à deux), on maximise la norme du vecteur énergie <span class="math inline">\(r_E\)</span>. Cela signifie que la zone du panoramique ou les deux enceintes participent à la restitution du signal de façon significative est réduite. On considère également que la localisation des fréquences aiguës (supérieurs à 700 Hz) est améliorée.</p>
 </section>
 <section id="sec-vbap" class="level3" data-number="36.1.3">
 <h3 data-number="36.1.3" class="anchored" data-anchor-id="sec-vbap"><span class="header-section-number">36.1.3</span> le VBAP</h3>
+<p>Le VBAP (pour <em>Vector Based Amplitude Panning</em>) apparait pour la première dans le papier <a href="http://lib.tkk.fi/Diss/2001/isbn9512255324/article1.pdf"><em>Virtual Sound Source Positioning Using Vector Base Amplitude Panning</em></a> publié en 1997 à journal de l’AES par <a href="https://en.wikipedia.org/wiki/Ville_Topias_Pulkki">Ville Pulkki</a>.</p>
 </section>
 <section id="le-vbip" class="level3" data-number="36.1.4">
 <h3 data-number="36.1.4" class="anchored" data-anchor-id="le-vbip"><span class="header-section-number">36.1.4</span> Le VBIP</h3>
