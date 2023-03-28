@@ -71,10 +71,92 @@ Par rapport à notre question de résolution, plus celle d'un système est faibl
 
 Lorsque l'on étudie un espace haut-parlant, on cherche rapidement à évaluer la précision de localisation dont il est capable. Pour cela, on étudie la contribution de chaque haut-parleur du système lors de la reproduction d'une source sonore, utilisant une technique de spatialisation donnée. Il est dans ce cas commode d'utiliser une approche vectorielle, où, pour chaque enceinte, on lui attribue un vecteur, ayant pour norme son gain et pointant vers l'auditeur.
 
+
 ```{python}
 
 #| fig-align: "center"
-#| fig-cap: "Contribution des haut-parleurs et leur résultante, en rouge, pour une source virtuelle, spatialisée en VBAP"
+#| fig-cap: "Contribution des haut-parleurs et leur résultante, en rouge, pour une source virtuelle (dans l'axe d'un haut-parleur et entre deux enceintes), spatialisée en VBAP"
+
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.colors as colors
+
+spkrStep=np.pi/2
+spkrStart=np.pi/4
+
+db=lambda x: 20*np.log10(np.abs(x))
+dbnorm=lambda x: 20*np.log10(np.abs(x)/np.max(x))
+q=lambda phi: np.tan(phi)/np.tan(spkrStep/2)
+
+fig, axs=plt.subplots(nrows=1, ncols=2)
+fig.tight_layout()
+
+sourceAzim = [-np.pi/4,0]
+for i in np.arange(0,len(sourceAzim)):
+    source = [1.4, 1.4*np.sin(sourceAzim[i])/np.cos(sourceAzim[i])]
+    speakersAzim = np.arange(spkrStart,2*np.pi+spkrStart,spkrStep)
+    speakers = []
+
+    for azim in speakersAzim:
+        speakers.append([np.cos(azim),np.sin(azim)])
+
+    for speakerPos in speakers:
+        axs[i].plot(speakerPos[0]*1.05, speakerPos[1]*1.05, "D", ms=20, color='black')
+    axs[i].plot(source[0], source[1], "o", ms=20, color='purple')
+
+    L=[]
+
+    # First speaker vector
+    X=speakers[0][0]
+    Y=speakers[0][1]
+    vNorm=(1+q(sourceAzim[i]))/(np.sqrt(np.power(1+q(sourceAzim[i]),2)+np.power(1-q(sourceAzim[i]),2)))
+
+    vec=np.array([-X,-Y])
+    vec=np.dot(vNorm/np.linalg.norm(vec),vec)
+    L.append(vec)
+
+    axs[i].quiver(X, Y, vec[0], vec[1], color='g', units='xy', scale=1)
+
+    # Second Speaker vector
+    X=speakers[len(speakers)-1][0]
+    Y=speakers[len(speakers)-1][1]
+    vNorm=(1-q(sourceAzim[i]))/(np.sqrt(np.power(1+q(sourceAzim[i]),2)+np.power(1-q(sourceAzim[i]),2)))
+
+    vec=np.array([-X,-Y])
+    vec=np.dot(vNorm/np.linalg.norm(vec),vec)
+    L.append(vec)
+
+    axs[i].quiver(X, Y, vec[0], vec[1], color='g', units='xy', scale=1)
+
+    #Plot V vector
+    V=np.add.reduce(L)
+    axs[i].quiver(0, 0, V[0], V[1], color='r', units='xy', scale=1)
+
+    #Plot E vector
+    sumSquare=0
+    sumSquareVec=[]
+    for vec in L:
+        sumSquareVec.append(np.dot(np.power(np.linalg.norm(vec),2/np.linalg.norm(vec)),vec))
+        sumSquare=sumSquare+np.power(np.linalg.norm(vec),2)
+    E=np.dot(np.add.reduce(sumSquareVec),1/sumSquare)
+    axs[i].quiver(0, 0, E[0], E[1], color='b', units='xy', scale=1)
+
+    square_lim=1.6
+    axs[i].set_ylim(-square_lim,square_lim)
+    axs[i].set_xlim(-square_lim,square_lim)
+    # axs[i].set_rticks([-20, -12, -6, 0, 6])  # Less radial ticks
+    axs[i].legend()
+    axs[i].grid(True)
+    axs[i].set_aspect("equal")
+
+plt.show()
+```
+
+
+```{python}
+
+#| fig-align: "center"
+#| fig-cap: "Même chose pour une position de la source virtuelle quelquonque"
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -107,7 +189,7 @@ L=[]
 # First speaker vector
 X=speakers[0][0]
 Y=speakers[0][1]
-vNorm=(np.sqrt(np.sqrt(1+q(sourceAzim))/(np.sqrt(1+q(sourceAzim))+np.sqrt(1-q(sourceAzim)))))
+vNorm=(1+q(sourceAzim))/(np.sqrt(np.power(1+q(sourceAzim),2)+np.power(1-q(sourceAzim),2)))
 
 vec=np.array([-X,-Y])
 vec=np.dot(vNorm/np.linalg.norm(vec),vec)
@@ -118,7 +200,7 @@ ax.quiver(X, Y, vec[0], vec[1], color='g', units='xy', scale=1)
 # Second Speaker vector
 X=speakers[len(speakers)-1][0]
 Y=speakers[len(speakers)-1][1]
-vNorm=(np.sqrt(np.sqrt(1-q(sourceAzim))/(np.sqrt(1+q(sourceAzim))+np.sqrt(1-q(sourceAzim)))))
+vNorm=(1-q(sourceAzim))/(np.sqrt(np.power(1+q(sourceAzim),2)+np.power(1-q(sourceAzim),2)))
 
 vec=np.array([-X,-Y])
 vec=np.dot(vNorm/np.linalg.norm(vec),vec)
@@ -128,7 +210,7 @@ ax.quiver(X, Y, vec[0], vec[1], color='g', units='xy', scale=1)
 
 #Plot V vector
 V=np.add.reduce(L)
-ax.quiver(0, 0, -V[0], -V[1], color='r', units='xy', scale=1)
+ax.quiver(0, 0, V[0], V[1], color='r', units='xy', scale=1)
 
 #Plot E vector
 sumSquare=0
@@ -137,17 +219,17 @@ for vec in L:
     sumSquareVec.append(np.dot(np.power(np.linalg.norm(vec),2/np.linalg.norm(vec)),vec))
     sumSquare=sumSquare+np.power(np.linalg.norm(vec),2)
 E=np.dot(np.add.reduce(sumSquareVec),1/sumSquare)
-ax.quiver(0, 0, -E[0], -E[1], color='b', units='xy', scale=1)
+ax.quiver(0, 0, E[0], E[1], color='b', units='xy', scale=1)
 
 square_lim=1.6
 ax.set_ylim(-square_lim,square_lim)
 ax.set_xlim(-square_lim,square_lim)
-# ax.set_rticks([-20, -12, -6, 0, 6])  # Less radial ticks
+# axs[i].set_rticks([-20, -12, -6, 0, 6])  # Less radial ticks
 ax.legend()
 ax.grid(True)
 ax.set_aspect("equal")
-plt.show()
 
+plt.show()
 ```
 
 
@@ -155,7 +237,7 @@ Sur la figure ci-dessus, on trouve:
 
 + En vert, les vecteurs de la contribution de chacun des haut-parleurs.
 + En rouge, le vecteur résultante normalisé $\vec{V}$ de norme $r_V$, indiquant  
-+ Et en bleu, le vecteur résultante normalisé $\vec{E}$ du carré des vecteurs de norme $r_E$, indiquant l'énergie du système
++ Et en bleu, le vecteur résultante normalisé $\vec{E}$ du carré des vecteurs de norme $r_E$
 
 
 :::{layout-ncol="2"}
@@ -170,7 +252,7 @@ $$
 
 :::
 
-$\vec{V}$, appelé vecteur vélocité, s'apparente à la propagation en champ libre de la somme des ondes acoustiques produites par les haut-parleurs. Le vecteur énergie $\vec{E}$ indique, ici, la direction moyenne de la provenance de l'énergie. On remarque que sa norme est maximale (égale à un) lorsqu'un seul et unique haut-parleur contribue à la diffusion du son.
+$\vec{V}$, appelé vecteur vélocité, s'apparente à la propagation en champ libre de la somme des ondes acoustiques produites par les haut-parleurs. Le vecteur énergie $\vec{E}$ indique, ici, la direction moyenne de l'énergie. On remarque que sa norme est maximale (égale à un) lorsqu'un seul et unique haut-parleur contribue à la diffusion du son.
 
 Également, on considère que $\vec{V}$ est un bon prédicteur de localisation pour les basses fréquences ($\leq 700 Hz$), et que $\vec{E}$ est un bon prédicteur pour les hautes fréquences.
 
