@@ -416,10 +416,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#le-panoramique-stéréophonique" id="toc-le-panoramique-stéréophonique" class="nav-link" data-scroll-target="#le-panoramique-stéréophonique"><span class="header-section-number">36.1.1</span> Le panoramique stéréophonique</a></li>
   <li><a href="#généralisation-du-pan-dun-signal-sur-deux-enceintes." id="toc-généralisation-du-pan-dun-signal-sur-deux-enceintes." class="nav-link" data-scroll-target="#généralisation-du-pan-dun-signal-sur-deux-enceintes."><span class="header-section-number">36.1.2</span> Généralisation du pan d’un signal sur deux enceintes.</a></li>
-  <li><a href="#sec-vbap" id="toc-sec-vbap" class="nav-link" data-scroll-target="#sec-vbap"><span class="header-section-number">36.1.3</span> le VBAP</a></li>
-  <li><a href="#le-vbip" id="toc-le-vbip" class="nav-link" data-scroll-target="#le-vbip"><span class="header-section-number">36.1.4</span> Le VBIP</a></li>
-  <li><a href="#sec-lbap" id="toc-sec-lbap" class="nav-link" data-scroll-target="#sec-lbap"><span class="header-section-number">36.1.5</span> Le LBAP</a></li>
-  <li><a href="#autres-variantes" id="toc-autres-variantes" class="nav-link" data-scroll-target="#autres-variantes"><span class="header-section-number">36.1.6</span> Autres variantes</a></li>
+  <li><a href="#sec-vbap" id="toc-sec-vbap" class="nav-link" data-scroll-target="#sec-vbap"><span class="header-section-number">36.1.3</span> le “Vector Based Panning”</a></li>
   </ul></li>
   <li><a href="#lapproche-matricielle" id="toc-lapproche-matricielle" class="nav-link" data-scroll-target="#lapproche-matricielle"><span class="header-section-number">36.2</span> L’approche matricielle</a>
   <ul class="collapse">
@@ -465,7 +462,7 @@ Astuce
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Quand on a le choix du nombre et du placement des enceintes d’un système, on préfère souvent ne pas dépasser cet écart de soixante degrés entre les enceintes afin de preserver la cohérence de l’espace sonore.</p>
+<p>Quand on a le choix du nombre et du placement des enceintes d’un système, on préfère souvent ne pas dépasser cet écart de soixante degrés entre les enceintes afin de préserver la cohérence de l’espace sonore.</p>
 </div>
 </div>
 <p>On retrouve ici toute la difficulté de certains systèmes, comme le 5.1 et ses dérivés, à reproduire une spatialisation cohérente, cela du à certains écarts d’angles entre enceintes bien trop importants.</p>
@@ -574,7 +571,7 @@ Astuce
 <p><span class="math display">\[
 \frac{\tan(\phi)}{\tan(\phi_0)} = \frac{g_L^{\gamma}-g_R^{\gamma}}{g_L^{\gamma}+g_R^{\gamma}}
 \]</span></p>
-<p>lorsque <span class="math inline">\(\gamma\)</span> vaut un, alors nous retrouvons les conditions traitées ci-dessus. Pour alléger l’écriture, on définit la fonction <span class="math inline">\(q\)</span>, qui pour tout <span class="math inline">\(\phi\)</span> vaut <span class="math inline">\(q(\phi)=\frac{\tan(\phi)}{\tan(\phi_0)}\)</span>. En rassemblant l’ensemble de ces conditions, cela donne :</p>
+<p>Lorsque <span class="math inline">\(\gamma\)</span> vaut un, alors nous retrouvons les conditions traitées ci-dessus. Pour alléger l’écriture, on définit la fonction <span class="math inline">\(q\)</span>, qui pour tout <span class="math inline">\(\phi\)</span> vaut <span class="math inline">\(q(\phi)=\frac{\tan(\phi)}{\tan(\phi_0)}\)</span>. En rassemblant l’ensemble de ces conditions, cela donne :</p>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -622,7 +619,7 @@ Important
 </div>
 </div>
 <p>On remarque, entre les deux courbes ci-dessus, une différence d’évolution des gains des deux enceintes. À gauche, nous appliquons un panoramique d’amplitude, à droite un panoramique d’intensité. Cela se concrétise par une zone de contribution commune des deux haut-parleurs plus faibles dans le cas de la panoramique d’amplitude.</p>
-<!-- Relier à Rv et Re -->
+<!-- Relié à Rv et Re -->
 <div class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -633,20 +630,48 @@ Important
 </div>
 </div>
 </div>
-<p>Lorsque le terme <span class="math inline">\(\gamma\)</span> augmente (typiquement égal à deux), on améliore la direction du vecteur énergie <span class="math inline">\(r_E\)</span> (au final, le vecteur <span class="math inline">\(r_V\)</span> du VBAP est égal au vect <span class="math inline">\(r_E\)</span> du VBIP). Cela signifie que la zone du panoramique ou les deux enceintes participent à la restitution du signal de façon significative est réduite. On considère également que la localisation des fréquences aiguës (supérieurs à 700 Hz) est améliorée.</p>
+<p>Lorsque le terme <span class="math inline">\(\gamma\)</span> augmente (typiquement égal à deux), on aligne la direction du vecteur énergie <span class="math inline">\(r_E\)</span> sur l’axe auditeur-source virtuelle. On remarque également que le vecteur <span class="math inline">\(r_V\)</span> du panoramique d’amplitude est égal au vecteur <span class="math inline">\(r_E\)</span> du panoramique d’intensité. On considère alors que la localisation des fréquences aiguës (supérieurs à 700 Hz) en est alors améliorée.</p>
 </section>
 <section id="sec-vbap" class="level3" data-number="36.1.3">
-<h3 data-number="36.1.3" class="anchored" data-anchor-id="sec-vbap"><span class="header-section-number">36.1.3</span> le VBAP</h3>
-<p>Le VBAP (pour <em>Vector Based Amplitude Panning</em>) apparait pour la première dans le papier <a href="http://lib.tkk.fi/Diss/2001/isbn9512255324/article1.pdf"><em>Virtual Sound Source Positioning Using Vector Base Amplitude Panning</em></a> publié en 1997 à journal de l’AES par <a href="https://en.wikipedia.org/wiki/Ville_Topias_Pulkki">Ville Pulkki</a>.</p>
-</section>
-<section id="le-vbip" class="level3" data-number="36.1.4">
-<h3 data-number="36.1.4" class="anchored" data-anchor-id="le-vbip"><span class="header-section-number">36.1.4</span> Le VBIP</h3>
-</section>
-<section id="sec-lbap" class="level3" data-number="36.1.5">
-<h3 data-number="36.1.5" class="anchored" data-anchor-id="sec-lbap"><span class="header-section-number">36.1.5</span> Le LBAP</h3>
-</section>
-<section id="autres-variantes" class="level3" data-number="36.1.6">
-<h3 data-number="36.1.6" class="anchored" data-anchor-id="autres-variantes"><span class="header-section-number">36.1.6</span> Autres variantes</h3>
+<h3 data-number="36.1.3" class="anchored" data-anchor-id="sec-vbap"><span class="header-section-number">36.1.3</span> le “Vector Based Panning”</h3>
+<p>La famille des techniques de panoramique dites “Vector Based” est la plus répandue dans le monde de la spatialisation sonore. Fondamentalement, il s’agit d’une extension des panoramiques d’amplitudes et d’intensité sur deux enceintes que nous avons décrites précédemment. Pour les panning <strong>VBP</strong> on abandonne le formalisme mathématique angulaire pour une représentation vectorielle. Lorsque le système haut-parlant est “2D”, alors la loi de panoramique <strong>VPB</strong> sélectionne la paire de haut-parleurs la plus proche de la source virtuelle. Si le système de restitution est “3D”, alors on sélectionne le triangle d’enceinte le plus proche de la source virtuelle. Peu importe la variante de panning VBP, si une source virtuelle est alignée avec un haut-parleur alors seul celui-ci contribue à la diffusion du signal.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Précisons que les performances des lois de panoramiques vectorielles sont optimales pour des arrangements d’enceintes sphériques ou demi-sphériques. Également une telle approche de la spatialisation suppose un auditeur placé au centre du système, et donc concerne une restitution sonore favorisant un point d’écoute idéal.</p>
+</div>
+</div>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_resources/bitmap/vpb/vbp-2D.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">VBP 2D</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_resources/bitmap/vpb/vbp-3D.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">VBP 3D</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Le VBAP, pour <em>Vector Based Amplitude Panning</em>, est une loi de panoramique 2D et 3D basé sur la panoramique d’amplitude. Elle est décrite dans le papier <a href="http://lib.tkk.fi/Diss/2001/isbn9512255324/article1.pdf"><em>Virtual Sound Source Positioning Using Vector Base Amplitude Panning</em></a> publié en 1997 à journal de l’AES par <a href="https://en.wikipedia.org/wiki/Ville_Topias_Pulkki">Ville Pulkki</a>. C’est très certainement la loi de panoramique la plus utilisée. La précision de localisation est optimale pour les fréquences inférieures à 700 Hz.</p>
+<p>Le VBIP, pour <em>Vector Based Intensity Panning</em>, est également une loi de panoramique 2D et 3D mais s’appuyant sur une panoramique d’intensité. Ici, la précision de localisation est maximale pour les fréquences supérieures à 700 Hz.</p>
+<p>Il serait alors logique d’appliquer du VBAP pour les fréquences inférieures à 700 Hz et du VBIP pour les fréquences supérieures à 700 Hz. C’est l’approche adoptée par le DualBand-VBP. On obtient ici une précision de localisation maximale.</p>
+<p>Enfin, on rencontre aussi le LBAP, pour <em>Layer Based Amplitude</em> panini. Ici, le but est d’améliorer le comportement du panoramique d’amplitude en élévation, sur des systèmes de <strong>haut-parleurs en couche</strong>.</p>
 </section>
 </section>
 <section id="lapproche-matricielle" class="level2" data-number="36.2">
