@@ -11,7 +11,7 @@ Les stratégies de panoramique perceptives portent ce nom car elles reposent tou
 Ce centre fantôme est cependant assez fragile. En effet, sa crédibilité dépend fortement de l'angle formé par le triangle enceintes-auditeur. Si celui-ci est tout à fait convaincant en stéréo (60°), lorsque l'on passe à un écart de quatre-vingt-dix degrés entre les enceintes, alors cette illusion ne fonctionne plus vraiment et la cohérence de la scène sonore s'effondre.
 
 :::{.callout-tip}
-Quand on a le choix du nombre et du placement des enceintes d'un système, on préfère souvent ne pas dépasser cet écart de soixante degrés entre les enceintes afin de preserver la cohérence de l'espace sonore.
+Quand on a le choix du nombre et du placement des enceintes d'un système, on préfère souvent ne pas dépasser cet écart de soixante degrés entre les enceintes afin de préserver la cohérence de l'espace sonore.
 :::
 
 On retrouve ici toute la difficulté de certains systèmes, comme le 5.1 et ses dérivés, à reproduire une spatialisation cohérente, cela du à certains écarts d'angles entre enceintes bien trop importants.
@@ -208,7 +208,7 @@ $$
 \frac{\tan(\phi)}{\tan(\phi_0)} = \frac{g_L^{\gamma}-g_R^{\gamma}}{g_L^{\gamma}+g_R^{\gamma}}
 $$
 
-lorsque $\gamma$ vaut un, alors nous retrouvons les conditions traitées ci-dessus. Pour alléger l'écriture, on définit la fonction $q$, qui pour tout $\phi$ vaut $q(\phi)=\frac{\tan(\phi)}{\tan(\phi_0)}$. En rassemblant l'ensemble de ces conditions, cela donne :
+Lorsque $\gamma$ vaut un, alors nous retrouvons les conditions traitées ci-dessus. Pour alléger l'écriture, on définit la fonction $q$, qui pour tout $\phi$ vaut $q(\phi)=\frac{\tan(\phi)}{\tan(\phi_0)}$. En rassemblant l'ensemble de ces conditions, cela donne :
 
 :::{layout-ncol="2"}
 
@@ -278,7 +278,7 @@ for ax in axs:
 
 On remarque, entre les deux courbes ci-dessus, une différence d'évolution des gains des deux enceintes. À gauche, nous appliquons un panoramique d'amplitude, à droite un panoramique d'intensité. Cela se concrétise par une zone de contribution commune des deux haut-parleurs plus faibles dans le cas de la panoramique d'amplitude.
 
-<!-- Relier à Rv et Re -->
+<!-- Relié à Rv et Re -->
 
 ```{python}
 
@@ -384,19 +384,35 @@ for i in np.arange(0,len(panLaw)):
 plt.show()
 ```
 
-Lorsque le terme $\gamma$ augmente (typiquement égal à deux), on améliore la direction du vecteur énergie $r_E$ (au final, le vecteur $r_V$ du VBAP est égal au vect $r_E$ du VBIP). Cela signifie que la zone du panoramique ou les deux enceintes participent à la restitution du signal de façon significative est réduite. On considère également que la localisation des fréquences aiguës (supérieurs à 700 Hz) est améliorée. 
+Lorsque le terme $\gamma$ augmente (typiquement égal à deux), on aligne la direction du vecteur énergie $r_E$ sur l'axe auditeur-source virtuelle. On remarque également que le vecteur $r_V$ du panoramique d'amplitude est égal au vecteur $r_E$ du panoramique d'intensité. On considère alors que la localisation des fréquences aiguës (supérieurs à 700 Hz) en est alors améliorée. 
 
 
-### le VBAP {#sec-vbap}
+### le "Vector Based Panning" {#sec-vbap}
 
-Le VBAP (pour *Vector Based Amplitude Panning*) apparait pour la première dans le papier [*Virtual Sound Source Positioning Using Vector Base
-Amplitude Panning*](http://lib.tkk.fi/Diss/2001/isbn9512255324/article1.pdf) publié en 1997 à journal de l'AES par [Ville Pulkki](https://en.wikipedia.org/wiki/Ville_Topias_Pulkki).
+La famille des techniques de panoramique dites "Vector Based" est la plus répandue dans le monde de la spatialisation sonore. Fondamentalement, il s'agit d'une extension des panoramiques d'amplitudes et d'intensité sur deux enceintes que nous avons décrites précédemment. Pour les panning **VBP** on abandonne le formalisme mathématique angulaire pour une représentation vectorielle. Lorsque le système haut-parlant est "2D", alors la loi de panoramique **VPB** sélectionne la paire de haut-parleurs la plus proche de la source virtuelle. Si le système de restitution est "3D", alors on sélectionne le triangle d'enceinte le plus proche de la source virtuelle. Peu importe la variante de panning VBP, si une source virtuelle est alignée avec un haut-parleur alors seul celui-ci contribue à la diffusion du signal.
 
-### Le VBIP
+:::{.callout-important}
 
-### Le LBAP {#sec-lbap}
+Précisons que les performances des lois de panoramiques vectorielles sont optimales pour des arrangements d'enceintes sphériques ou demi-sphériques. Également une telle approche de la spatialisation suppose un auditeur placé au centre du système, et donc concerne une restitution sonore favorisant un point d'écoute idéal.
 
-### Autres variantes
+:::
+
+:::{layout-ncol="2"}
+
+![VBP 2D](../_resources/bitmap/vpb/vbp-2D.png)
+
+![VBP 3D](../_resources/bitmap/vpb/vbp-3D.png)
+
+:::
+
+Le VBAP, pour *Vector Based Amplitude Panning*, est une loi de panoramique 2D et 3D basé sur la panoramique d'amplitude. Elle est décrite dans le papier [*Virtual Sound Source Positioning Using Vector Base
+Amplitude Panning*](http://lib.tkk.fi/Diss/2001/isbn9512255324/article1.pdf) publié en 1997 à journal de l'AES par [Ville Pulkki](https://en.wikipedia.org/wiki/Ville_Topias_Pulkki). C'est très certainement la loi de panoramique la plus utilisée. La précision de localisation est optimale pour les fréquences inférieures à 700 Hz.
+
+Le VBIP, pour *Vector Based Intensity Panning*, est également une loi de panoramique 2D et 3D mais s'appuyant sur une panoramique d'intensité. Ici, la précision de localisation est maximale pour les fréquences supérieures à 700 Hz.
+
+Il serait alors logique d'appliquer du VBAP pour les fréquences inférieures à 700 Hz et du VBIP pour les fréquences supérieures à 700 Hz. C'est l'approche adoptée par le DualBand-VBP. On obtient ici une précision de localisation maximale.
+
+Enfin, on rencontre aussi le LBAP, pour *Layer Based Amplitude* panini. Ici, le but est d'améliorer le comportement du panoramique d'amplitude en élévation, sur des systèmes de **haut-parleurs en couche**.
 
 ## L'approche matricielle
 
