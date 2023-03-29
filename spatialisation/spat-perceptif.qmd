@@ -320,7 +320,10 @@ for i in np.arange(0,len(panLaw)):
         axs[i].plot(speakerPos[0]*1.05, speakerPos[1]*1.05, "D", ms=20, color='black')
     axs[i].plot(source[0], source[1], "o", ms=20, color='purple')
 
-    L=[]
+    V=[]
+    E=[]
+    vSum=0
+    eSum=0
 
     #Compute speaker gain
     g1, g2 = anyPan(sourceAzim,spkrStep/2,panLaw[i]["eta"],panLaw[i]["gamma"])
@@ -329,39 +332,45 @@ for i in np.arange(0,len(panLaw)):
     X=speakers[0][0]
     Y=speakers[0][1]
     vNorm=g2
+    eNorm=np.power(vNorm,2)
 
-    vec=np.array([-X,-Y])
-    vec=np.dot(np.power(vNorm,1/panLaw[i]["gamma"]),vec)
-    L.append(vec)
-
+    vec=np.dot(vNorm,np.array([-X,-Y]))
     axs[i].quiver(X, Y, vec[0], vec[1], color='g', units='xy', scale=1)
+    
+    vVec=np.dot(vNorm,np.array([-X,-Y]))
+    eVec=np.dot(eNorm,np.array([-X,-Y]))
+
+    V.append(vVec)
+    vSum=vSum+vNorm
+    E.append(eVec)
+    eSum=eSum+eNorm
+
 
     # Second Speaker vector
     X=speakers[len(speakers)-1][0]
     Y=speakers[len(speakers)-1][1]
     vNorm=g1
+    eNorm=np.power(vNorm,2)
 
-    vec=np.array([-X,-Y])
-    vec=np.dot(np.power(vNorm,1/panLaw[i]["gamma"]),vec)
-    L.append(vec)
-
+    vec=np.dot(vNorm,np.array([-X,-Y]))
     axs[i].quiver(X, Y, vec[0], vec[1], color='g', units='xy', scale=1)
 
+    vVec=np.dot(vNorm,np.array([-X,-Y]))
+    eVec=np.dot(eNorm,np.array([-X,-Y]))
+
+    V.append(vVec)
+    vSum=vSum+vNorm
+    E.append(eVec)
+    eSum=eSum+eNorm
+
+
     #Plot V vector
-    normSum=0
-    for vec in L:
-        normSum=normSum+np.power(np.linalg.norm(vec),2/panLaw[i]["gamma"])
-    V=np.dot(np.add.reduce(L),1/normSum)
+    V=np.dot(np.add.reduce(V),1/vSum)
     
     axs[i].quiver(0, 0, V[0], V[1], color='r', units='xy', scale=1)
 
     #Plot E vector
-    sumSquare=0
-    sumSquareVec=[]
-    for nVec in L:
-        sumSquareVec.append(np.dot(np.linalg.norm(nVec),nVec))
-        sumSquare=sumSquare+np.power(np.linalg.norm(nVec),2)
-    E=np.dot(np.add.reduce(sumSquareVec),1/sumSquare)
+    E=np.dot(np.add.reduce(E),1/eSum)
     axs[i].quiver(0, 0, E[0], E[1], color='b', units='xy', scale=1)
 
     square_lim=1.6
@@ -375,7 +384,7 @@ for i in np.arange(0,len(panLaw)):
 plt.show()
 ```
 
-Lorsque le terme $\gamma$ augmente (typiquement égal à deux), on maximise la norme du vecteur énergie $r_E$. Cela signifie que la zone du panoramique ou les deux enceintes participent à la restitution du signal de façon significative est réduite. On considère également que la localisation des fréquences aiguës (supérieurs à 700 Hz) est améliorée. 
+Lorsque le terme $\gamma$ augmente (typiquement égal à deux), on améliore la direction du vecteur énergie $r_E$ (au final, le vecteur $r_V$ du VBAP est égal au vect $r_E$ du VBIP). Cela signifie que la zone du panoramique ou les deux enceintes participent à la restitution du signal de façon significative est réduite. On considère également que la localisation des fréquences aiguës (supérieurs à 700 Hz) est améliorée. 
 
 
 ### le VBAP {#sec-vbap}

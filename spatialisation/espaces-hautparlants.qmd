@@ -88,8 +88,17 @@ db=lambda x: 20*np.log10(np.abs(x))
 dbnorm=lambda x: 20*np.log10(np.abs(x)/np.max(x))
 q=lambda phi: np.tan(phi)/np.tan(spkrStep/2)
 
+def anyPan(theta, theta_0, eta, gamma):
+    q = np.tan(theta)/np.tan(theta_0)
+    g1 = np.power(np.power((1-q),eta/gamma)/(np.power(1-q,eta/gamma)+np.power(1+q,eta/gamma)),1/eta)
+    g2 = np.power(1-np.power(g1,eta),1/eta)
+    return g1, g2
+
+
 fig, axs=plt.subplots(nrows=1, ncols=2)
 fig.tight_layout()
+
+panLaw={"eta": 2, "gamma": 1}
 
 sourceAzim = [-np.pi/4,0]
 for i in np.arange(0,len(sourceAzim)):
@@ -104,41 +113,51 @@ for i in np.arange(0,len(sourceAzim)):
         axs[i].plot(speakerPos[0]*1.05, speakerPos[1]*1.05, "D", ms=20, color='black')
     axs[i].plot(source[0], source[1], "o", ms=20, color='purple')
 
-    L=[]
+    V=[]
+    E=[]
+    vSum=0
+    eSum=0
+
+    g1, g2 = anyPan(sourceAzim[i],spkrStep/2,2,1)
 
     # First speaker vector
     X=speakers[0][0]
     Y=speakers[0][1]
-    vNorm=(1+q(sourceAzim[i]))/(np.sqrt(np.power(1+q(sourceAzim[i]),2)+np.power(1-q(sourceAzim[i]),2)))
+    vNorm=g2
+    eNorm=np.power(vNorm,2)
 
-    vec=np.array([-X,-Y])
-    vec=np.dot(vNorm/np.linalg.norm(vec),vec)
-    L.append(vec)
+    vec=np.dot(vNorm,np.array([-X,-Y]))
+    eVec=np.dot(eNorm,np.array([-X,-Y]))
+
+    V.append(vec)
+    vSum=vSum+vNorm
+    E.append(eVec)
+    eSum=eSum+eNorm
 
     axs[i].quiver(X, Y, vec[0], vec[1], color='g', units='xy', scale=1)
 
     # Second Speaker vector
     X=speakers[len(speakers)-1][0]
     Y=speakers[len(speakers)-1][1]
-    vNorm=(1-q(sourceAzim[i]))/(np.sqrt(np.power(1+q(sourceAzim[i]),2)+np.power(1-q(sourceAzim[i]),2)))
+    vNorm=g1
+    eNorm=np.power(vNorm,2)
 
-    vec=np.array([-X,-Y])
-    vec=np.dot(vNorm/np.linalg.norm(vec),vec)
-    L.append(vec)
+    vec=np.dot(vNorm,np.array([-X,-Y]))
+    eVec=np.dot(eNorm,np.array([-X,-Y]))
+
+    V.append(vec)
+    vSum=vSum+vNorm
+    E.append(eVec)
+    eSum=eSum+eNorm
 
     axs[i].quiver(X, Y, vec[0], vec[1], color='g', units='xy', scale=1)
 
     #Plot V vector
-    V=np.add.reduce(L)
+    V=np.dot(np.add.reduce(V),1/vSum)
     axs[i].quiver(0, 0, V[0], V[1], color='r', units='xy', scale=1)
 
     #Plot E vector
-    sumSquare=0
-    sumSquareVec=[]
-    for vec in L:
-        sumSquareVec.append(np.dot(np.power(np.linalg.norm(vec),2/np.linalg.norm(vec)),vec))
-        sumSquare=sumSquare+np.power(np.linalg.norm(vec),2)
-    E=np.dot(np.add.reduce(sumSquareVec),1/sumSquare)
+    E=np.dot(np.add.reduce(E),1/eSum)
     axs[i].quiver(0, 0, E[0], E[1], color='b', units='xy', scale=1)
 
     square_lim=1.6
@@ -169,6 +188,12 @@ db=lambda x: 20*np.log10(np.abs(x))
 dbnorm=lambda x: 20*np.log10(np.abs(x)/np.max(x))
 q=lambda phi: np.tan(phi)/np.tan(spkrStep/2)
 
+def anyPan(theta, theta_0, eta, gamma):
+    q = np.tan(theta)/np.tan(theta_0)
+    g1 = np.power(np.power((1-q),eta/gamma)/(np.power(1-q,eta/gamma)+np.power(1+q,eta/gamma)),1/eta)
+    g2 = np.power(1-np.power(g1,eta),1/eta)
+    return g1, g2
+
 fig, ax=plt.subplots()
 fig.tight_layout()
 
@@ -184,41 +209,51 @@ for speakerPos in speakers:
     ax.plot(speakerPos[0]*1.05, speakerPos[1]*1.05, "D", ms=20, color='black')
 ax.plot(source[0], source[1], "o", ms=20, color='purple')
 
-L=[]
+V=[]
+E=[]
+vSum=0
+eSum=0
+
+g1, g2 = anyPan(sourceAzim,spkrStep/2,2,1)
 
 # First speaker vector
 X=speakers[0][0]
 Y=speakers[0][1]
-vNorm=(1+q(sourceAzim))/(np.sqrt(np.power(1+q(sourceAzim),2)+np.power(1-q(sourceAzim),2)))
+vNorm=g2
+eNorm=np.power(vNorm,2)
 
-vec=np.array([-X,-Y])
-vec=np.dot(vNorm/np.linalg.norm(vec),vec)
-L.append(vec)
+vec=np.dot(vNorm,np.array([-X,-Y]))
+eVec=np.dot(eNorm,np.array([-X,-Y]))
+
+V.append(vec)
+vSum=vSum+vNorm
+E.append(eVec)
+eSum=eSum+eNorm
 
 ax.quiver(X, Y, vec[0], vec[1], color='g', units='xy', scale=1)
 
 # Second Speaker vector
 X=speakers[len(speakers)-1][0]
 Y=speakers[len(speakers)-1][1]
-vNorm=(1-q(sourceAzim))/(np.sqrt(np.power(1+q(sourceAzim),2)+np.power(1-q(sourceAzim),2)))
+vNorm=g1
+eNorm=np.power(vNorm,2)
 
-vec=np.array([-X,-Y])
-vec=np.dot(vNorm/np.linalg.norm(vec),vec)
-L.append(vec)
+vec=np.dot(vNorm,np.array([-X,-Y]))
+eVec=np.dot(eNorm,np.array([-X,-Y]))
+
+V.append(vec)
+vSum=vSum+vNorm
+E.append(eVec)
+eSum=eSum+eNorm
 
 ax.quiver(X, Y, vec[0], vec[1], color='g', units='xy', scale=1)
 
 #Plot V vector
-V=np.add.reduce(L)
+V=np.dot(np.add.reduce(V),1/vSum)
 ax.quiver(0, 0, V[0], V[1], color='r', units='xy', scale=1)
 
 #Plot E vector
-sumSquare=0
-sumSquareVec=[]
-for vec in L:
-    sumSquareVec.append(np.dot(np.power(np.linalg.norm(vec),2/np.linalg.norm(vec)),vec))
-    sumSquare=sumSquare+np.power(np.linalg.norm(vec),2)
-E=np.dot(np.add.reduce(sumSquareVec),1/sumSquare)
+E=np.dot(np.add.reduce(E),1/eSum)
 ax.quiver(0, 0, E[0], E[1], color='b', units='xy', scale=1)
 
 square_lim=1.6
