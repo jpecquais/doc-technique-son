@@ -414,8 +414,18 @@ Il serait alors logique d'appliquer du VBAP pour les fréquences inférieures à
 
 Enfin, on rencontre aussi le LBAP, pour *Layer Based Amplitude* panini. Ici, le but est d'améliorer le comportement du panoramique d'amplitude en élévation, sur des systèmes de **haut-parleurs en couche**.
 
-## L'approche matricielle
+## L'approche physique
+
+Nous quittons ici la spatialisation "orientée", c'est à dire, tournée vers un point d'écoute idéal pour aborder des techniques qui ne présupposent pas de la position de l'auditeur dans l'espace. Dès lors, il convient d'adopter une approche de la panoramique qui ne repose pas sur des paires ou triplets de haut-parleurs. Du même coup, les techniques de spatialisation que nous allons aborder ne sont plus construitent sur un phénomène perceptif, mais sur une approche physique.
+
+Si l'on ne peut plus présupposer de la position de l'auditeur dans l'espace, il convient alors d'augmenter le nombre de hautparleurs contribuant à la restitution d'une source virtuelle. Ainsi, on augmente la zone de couverture, au dépit de la précision de localisation. L'approche commune est alors de diffuser la source virtuelle dans tous les haut-parleurs du système, tout en y associant atténuation fonction de la distance entre la source et chaque haut-parleur. Cette approche ce nomme de **DBAP**.
 
 ### Le DBAP
+
+Le [DBAP](https://www.researchgate.net/profile/Trond-Lossius-2/publication/241169129_DBAP_-_Distance-Based_Amplitude_Panning/links/00b7d539f5dc15b144000000/DBAP-Distance-Based-Amplitude-Panning.pdf), pour *Distance Based Amplitude Panning*, est la loi de panoramique classique lorsque l'on souhaite réaliser une spatialisation pour un auditoire mobile, ou, pour une zone d'écoute très large. On calcul alors la distance entre la source et chaque haut-parleurs. Cette distance permet d'y relier un comportement d'atténuation du gain, puisque l'on sait qu'à chaque doublement de distance, on atténue le signal de **6 dB**.
+
+La notion de distance est donc un facteur clef dans la spatialisation en DBAP. Plus la source est proche d'une enceinte, pour les différences de gain avec les autres haut-parleur sera marqué (et donc la localisation sera précise). A l'inverse, plus on éloigne la source, plus la différence de contribution des haut-parleurs devient négligeable : la source n'est plus vraiment localisable.
+
+
 
 ### Le KNN

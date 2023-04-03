@@ -1,0 +1,810 @@
+---
+title: "Initiation à la spatialisation sonore"
+subtitle: "Vers la 3D sonore"
+author: "Jean-Loup Pecquais"
+institute: "Whiti Audio Formation"
+order: 1
+freeze: auto
+format: 
+    revealjs:
+        theme: moon
+        logo: _resources/waf-noir.png
+        chalkboard: 
+            buttons: true
+        scrollable: true
+        slide-number: true
+---
+
+# Programme
+
+## Jours 1 - Introduction
+
++ Écoute et perception
++ La spatialisation sonore, aujourd'hui
++ La spatialisation sonore au XXe et XXIe siècle
++ Découverte des techniques de spatialisation
+
+## Jours 2 - Comment réaliser ?
+
++ Les espaces de captation, de création et de diffusion
++ Les espaces haut-parlants
++ Les formats de réalisations
+  + Orienté scène
+  + Orienté canal
+  + Orienté objet
+
+## Jours 3 - Comment capturer ?
+
++ Prise de son stéréophonique
++ Prise de son binaural
++ Prise de son ambisonique
++ Prise de son multicanal
+
+## Jours 4 - Comment reproduire ?
+
++ Panoramique d'intensité
++ Synthèse d'espace ambisonique
++ Synthèse d'espace binaural
++ Transporter sa réalisation : "up-mix" et "down-mix"
+
+## Jours 5 - Les solutions
+
++ REAPER
++ SPARTA
++ IEM
++ Anaglyph
++ Panoramix
++ Contrôle via MIDI / OSC
+
+## Support de formation
+
++ Drive Whiti Audio
++ [Livre de la formation](https://jpecquais.github.io/doc-technique-son/)
+    + En cours d'écriture, mais très régulièrement mis à jour.
+    + Référence un certain nombre d'articles et publications scientifiques
+
+# La problématique du son spatialisé
+
+## Le pourquoi ?
+
+:::{.incremental}
++ Sujet omniprésent dans l'industrie de l'audio
++ Pourtant, peu de réactions chez les créateurs
++ Quel rapport d'offre et de demande ?
+:::
+
+## Le comment ?
+
+:::{.incremental}
++ Les solutions "boîte noire"
+  + A priori simple à prendre en main
+  + Limitées et limitantes
+  + Parfois techniquement suspecte
++ Les solutions "ouvertes"
+  + Techniquement difficiles à prendre en main
+  + Nombreuse, laquelle choisir et pourquoi ?
+  + Délicate à intégrer dans un "workflow"
+:::
+
+## Transmission du savoir
+
+:::{.incremental}
++ Gap énorme dans la transmission des techniques
+    + Papiers scientifiques :
+      + Complexes
+      + Écris pour un public "érudit"
+      + Mais riche en savoir
+    + Articles vulgarisés :
+      + Compréhension très générale (lacunaire ?)
+      + Explications techniques superficielles
+      + Souvent trop vulgarisés
+:::
+
+## Aparté : l'effet Denning-Kruger
+
+![Rapport confiance/compétence](https://www.agrowthhacker.com/wp-content/uploads/2018/12/the-dunning-kruger-effect_agrowthhacker.png)
+
+## Objectifs
+
+**Sur le plan technique :**
+
+:::{.incremental}
++ Faire le lien entre le savoir pratique et le savoir technique
++ Fournir quelques bases du formalisme scientifique
++ Mettre en place les éléments de compréhension
+
+**Sur le plan pratique :**
+
++ Écoutes et comparaisons
++ Découvertes d'oeuvres
+
+:::
+
+# Écoute et perception
+
+## L'oreille
+
+:::{layout-ncol="2" .incremental}
+
++ L'oreille externe
++ L'oreille moyenne
++ L'oreille interne
+
+![Schéma de l'oreille](https://jpecquais.github.io/doc-technique-son/_resources/bitmap/anatomie/anatomie-oreille.jpeg)
+
+:::
+
+:::{.notes}
+
+**OREILLE EXTERNE**
+
+la partie visible de notre organe de l’audition = **pavillon**.
+pavillon auriculaire = “collecter” le son.
+Sa forme applique une **emprunte fréquentielle sur le son** : information principalement d’ordre spatial
+**rôle important** notre capacité à **localiser les sons**, avec une précision maximale lorsque l’évènement sonore se trouve devant nous.
+
+**la forme de notre tête et même de notre torse a également un rôle important dans notre capacité à localiser des évènements sonores dans l’espace.**
+
+L’oreille externe comporte aussi le **canal auditif**, avec à son terme **le tympan**. Ce dernier est une **simple membrane**, vibrant de façon homologue à l’onde sonore lui provenant. L’ensemble de ce système de “captation” possède un **rendement maximal** sur les **fréquences autour de 3 kHz** (fréquences aiguës).
+
+**OREILLE MOYENNE**
+
+Le **marteau** est directement relié au tympan et transmet les vibrations du tympan à l’“**enclume**” puis à l’“**étrier**”
+
+**trompe d’eustache**, reliée à la gorge, réalisant ainsi un **équilibrage de la pression** entre celle de l’oreille interne et celle nous environnant.
+
+le **muscle stapédien**. Il permet, lorsqu’il est contracté, de limiter l’amplitude de mouvement des trois os évoqués précédemment. 
+
+mis en action par réflexe
+
+temps de mise en action est d’au moins 40 millisecondes (ms) après l’émission d’un son supérieur à 90-100 décibel (dB). la protection maximale n’est atteinte que 150 ms après
+
+**OREILLE INTERNE**
+
+l’étrier attaché à la fenêtre ovale.
+
+fenêtre ovale fait partie de la cochlée, où commence l’oreille interne.
+
+Cette cochlée prend une forme de coquille d’escargot et renferme la membrane basilaire et l’organe de Corti, récepteur de l’audition. Son ensemble est immergé dans différentes lymphes (milieu liquide).
+
+La membrane basilaire court le long de la cochlée et près de 30 000 récepteurs ressemblant à de petits cheveux la parcourent. 
+
+Cette membrane vibre lorsque la lymphe change de pression.
+
+Sur l’ensemble de sa longueur est répartie notre sensibilité aux différentes fréquences.
+
+La partie proche de l’oreille moyenne est plus sensible aux aiguës, alors que la zone en bout de son enroulement est plus sensible aux graves.
+
+On a donc une correspondance entre fréquence et emplacement sur la membrane basilaire
+
+Lorsque les récepteurs vibrent suffisamment fortement, un signal électrique est émis par l’organe de Cortie dans le système nerveux.
+
+La diminution de sensibilité, voire la perte de certaines fréquences audible dans l’audition, est associée à la mort de ces récepteurs peuplant la membrane basilaire. Ce phénomène est irréversible et peut aboutir à l’apparition d’acouphènes.
+
+:::
+
+## Perception de la localisation
+
+**Mécanismes de la localisation**
+
++ Espacement entre les oreilles : $\Delta t$ et $\Delta p$
++ Ombre acoustique de la tête : $\Delta i$
+
+**Dépendance fréquentielle**
+
++ Grave ( $< 700 Hz$ ) : $\Delta p$
++ Aigu ( $> 700 Hz$ ) : $\Delta t$ & $\Delta i$
+
+## Localisation par différence de phase $\Delta p$
+
++ Proviens de l'espacement entre les oreilles
++ Mécanisme de verrouillage de phase
++ Opérant pour des fréquences inférieures à 700 Hz
+  + Pour des périodes de $50 ms$ à $\approx 1.43 ms$ 
+  + Longueurs d'ondrs de $17 m$ à $\approx 50 cm$
+
+## Localisation par différence de temps $\Delta t$
+
++ Proviens de l'espacement entre les oreilles
++ Mécanisme par différence de front d'onde
++ Opérant pour des fréquences supérieures à 700 Hz
+
+## Localisation par différence d'intensité $\Delta i$
+
++ Proviens de la directivité créée par les pavillons
++ Causées par l'ombre acoustique du crâne et du torse
++ Filtrage dépendant de l'angle d'incidence
++ Opérant pour des fréquences à $700 Hz$
+
+## Flou de localisation
+
+:::{.r-stack}
+![](_resources/blauert-hz-plane.png)
+
+![](_resources/blauert-elev-plane.png){.fragment}
+
+![](_resources/blauert-hz-freq.png){.fragment width="200%"}
+:::
+
+## HRTF
+
+**Head Related Transfer Function**
+
+Décris la fonction de transfert de la tête pour un angle d'incidence donnée.
+
++ Temps
++ Volume
++ Timbre
+
+## Références :
+
+:::{layout-ncol="2"}
+[Spatial Hearing: The Psychophysics of Human Sound Localization (Revised Edition)](https://direct.mit.edu/books/oa-monograph/4885/Spatial-HearingThe-Psychophysics-of-Human-Sound) par **Jens Blauert**.
+
+![](https://mitp.silverchair-cdn.com/mitp/content_public/books/4885/book/2/m_9780262268684-cover.jpeg?Expires=1683365811&Signature=OnibnEQc4tM1YBXa9S5ACuHr9NbjVGyWbgKHb9FB07lYnb19ddezOoqu9r3945fuaMQ7cB~~K~ozqJjgJw5FTviyRgBnVkgpZtjH0ksKPYhtCv9M1qkYW-HMdKNGuoyG3yRLyyKLseCB1x4RXy8jA4OW42w2j1emq4liK1V5gHj3XD624L6p2cv95D5hqddaTanZlxt2YMcLE7YxNobLtDTQmMEUNTfiR~Ew5uSUq-I5HfVy4K8kErGpCXOmncRsspGcNoyal2Zc-JrdZQiPt3ueBSGGRTAu~syGE9PWAU9lMI3BVFA~cjW5jNgF4uYML4H8G-tZFnKb4LjAE8-2bQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)
+:::
+
+# État des techniques de spatialisation en 2023
+
+## Cinéma
+
++ Transition progressive vers le **Dolby Atmos** depuis $\approx$ 2010.
++ Principalement exploité dans le cinéma de divertissement / spectaculaire
+
+## Musique
+
++ Également tournée vers **Dolby Atmos** (Avid / Apple)
++ Intégration native dans **Logic**
++ Distribution de contenu Atmos à travers les plateformes de streaming (**Apple Music**, **Amazon Music**)
++ "Transformation" automatique en binaural pour auditeur au casque 
+
+## Spectacle vivant
+
++ Intérêt économique (3D sonore = plus d'enceintes)
++ Intérêt qualitatif (+ d'enceinte = meilleure couverture)
++ Engouement des constructeurs (**L-Acoustic**, **DnB**, **Adamson**, **Holophonics**, **FLUX:: Immersive**, etc.)
+
+## Réalité Virtuelle
+
++ Champ d'utilisation commun de l'**ambisonique** (car interactif)
++ Facebook VR / Youtube VR
++ Rendu binaural pour écoute au casque
++ Enjeux industriels pour le metaverse (?)
+
+## Installations sonores
+
++ Context plus exotique
++ Très peu de "normalisation"
++ Usages de techniques variés (systèmes maillés, DBAP, ambisonique, etc.)
+
+## En résumé
+
++ Normalisation importante autour du **Dolby Atmos**
++ Entre mixage orienté canal et mixage orienté objet
+  + Problèmes de workflow (mastering, gestion des sommations, effets de bus)
+  + Boîte noire
++ Normalisation importante du live autour de deux techniques (VBAP et WFS)
+  + VBAP : panning d'amplitude par paire d'enceintes (L-ISA, SPAT Revolution)
+  + WFS : synthèse de front d'onde (DnB, SPAT Revolution)
++ Présence importante du binaural pour une large diffusion
+
+# Histoire de la spatialisation
+
+## Vers la stéréophonie : le Théâtrophone
+
+:::{layout="[0.8, 0.2]"}
++ Inventé par Clément Ader
+  + Premier engin motorisé volant (1890)
+  + Déploiement réseau téléphonique (Paris, 1879)
++ Diffuse l'opéra à travers les lignes téléphoniques (1881)
++ Engouement réel du public, perdure jusque dans les années 1930
+
+![](https://upload.wikimedia.org/wikipedia/commons/b/ba/Clement_ader%2C_1891.jpg)
+:::
+
+:::{.notes}
+
+Clément Ader (1841-1925) semble être le premier à proposer un système de diffusion sur deux canaux. Cet ingénieur français est avant tout connu pour être le premier à avoir fait décoller un engin motorisé plus lourd que l’air en 1890. Il a également participé au déploiement du réseau téléphonique, à Paris, en 1879. C’est à ce moment qu’il a l’idée d’utiliser le réseau de télécommunication pour diffuser l’opéra dans les foyers. Ce dispositif, nommé Théâtrophone, est pour la première fois utilisé en 1881. Les auditeurs peuvent alors écouter la pièce retransmise en direct en plaçant un « écouteurs » sur chacune de leurs oreilles. La diffusion se fait donc sur deux canaux.
+
+À cette époque, les seuls microphones disponibles sont des microphones à charbons, dont on connaît la faible bande passante. La qualité sonore du dispositif est donc médiocre, mais l’engouement du public est réel, et perdurera jusque dans les années 1930.
+
+:::
+
+---
+
+**Le Théâtrophone**
+
+:::{layout="[0.35, 0.65]"}
+![](https://www.timetunnel.com/mm5/graphics/00000001/nouv0033.jpg)
+
+![](https://jpecquais.github.io/doc-technique-son/_resources/bitmap/various/leGaulois2Avril1924.png
+)
+:::
+
+## Vers la stéréophonie : Arthur C. Keller
+
++ Ingénieur des laboratoires Bells
+  + Sous la direction d'Harvey Fletcher (le même que les courbes Fletcher-Munson)
++ Étude motivée par le chef Leopold Stokowski
+  + Commande de la NBC de diffuser des concerts par les ondes radios.
++ Propose une technique de gravure sur disque
+
+Le premier enregistrement de cette collaboration : Carnaval Romain, de Berlioz (5 Décembre 1931)
+
+:::{.notes}
+
+Le premier travail aux laboratoires Bells, sous la direction d’Harvey Fletcher (le même Fletcher que les courbes Flecther-Munson 2.6). Keller se retrouve à travailler sur la diffusion stéréophonique, à la demande du chef d’orchestre Leopold Stokowski, alors chargé de produire des concerts sur les ondes de la NBC avec l’orchestre de Philadelphie. Stokowski est alors très insatisfait de la qualité sonore de ce type de dispositif. Il contacte donc les laboratoires Bell, leur demandant d’y apporter une solution. De cette collaboration naît une collection d’enregistrements dont le plus vieux semble être une interprétation du Carnaval romain (Ouverture) de Berlioz, le cinq décembre 1931.
+
+:::
+
+## Vers la stéréophonie : Alan Blumlein
+
+:::{layout="[0.7, 0.3]"}
+
++ Ingénieur anglais
++ Travail pour la Colombia Graphophone Company (absorbée par EMI en 1931)
++ À l'origine d'un brevet majeur : [Improvements in and relating to Sound-transmission, Sound-recording and Sound-reproducing Systems](https://en.wikipedia.org/wiki/United_Kingdom_patent_394325)
+
+![](https://upload.wikimedia.org/wikipedia/en/7/79/Alan_Blumlein_1932-1933_from_Simon_Blumlein_archives_%28Burns_145%29_ENG.png)
+
+:::
+
+## Vers la stéréophonie : le "binaural" de Blumlein
+
++ Propose deux techniques de prise de son
+  + Le MS
+  + Le Blumlein
++ Conversion de $\Delta t$ à $\Delta i$ : Blumlein Shuffling
++ Gravure sur disque microsillon
+
+---
+
+**Technique M-S**
+
++ Mid : Milieu
++ Side : Côté
++ Largeur stéréophonique ajustable **après** l'enregistrement
++ Nécessite l'usage d'un dématriçage.
+
+$$
+\left\{\begin{array}{@{}l@{}}
+    \displaystyle L = M+S \\
+    \\
+    R =  M - S \\
+\end{array}\right.\,
+$$
+
+---
+
+**Les différents couples MS**
+
+```{python}
+#| fig-align: "center"
+
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.colors as colors
+
+dbnorm = lambda x: 20*np.log10(np.abs(x)/np.max(x))
+
+phi = np.arange(-np.pi,np.pi,0.01)
+omni = np.full(
+  shape=len(phi),
+  fill_value=dbnorm(1),
+  dtype=int
+)
+
+bidir = dbnorm(np.cos(phi))
+bidir_pos = np.ma.masked_where(np.abs(phi)>np.pi/2, bidir)
+bidir_neg = np.ma.masked_where(np.abs(phi)<=np.pi/2, bidir)
+
+bidir_north = dbnorm(np.sin(phi))
+bidir_north_pos = np.ma.masked_where(phi<0, bidir_north)
+bidir_north_neg = np.ma.masked_where(phi>0, bidir_north)
+
+cardio_north = dbnorm(0.5+0.5*np.sin(phi))
+
+fig, axs = plt.subplots(nrows=1, ncols=3,subplot_kw={'projection': 'polar'})
+for ax in axs:
+  fig.tight_layout()
+  ax.plot(phi, bidir_pos, color='red')
+  ax.plot(phi, bidir_neg, color='blue')
+  ax.plot(np.pi/8,0, markersize=20)
+  # ax.set_title('Association de deux harmoniques sphériques \n (M et S / W et Y)')
+
+  ax.set_ylim(-20,0)
+  ax.set_rticks([-20, -12, -6, 0, 3])  # Less radial ticks
+  ax.legend()
+  ax.grid(True)
+
+axs[0].plot(phi, omni, color='red')
+axs[1].plot(phi, cardio_north, color='red')
+axs[2].plot(phi, bidir_north_pos, color='red')
+axs[2].plot(phi, bidir_north_neg, color='blue')
+
+plt.show()
+
+```
+
++ Stéréophonie par différence d'intensité
++ Parfaitement compatible pour une réduction monophonique ($L+R = M$)
+
+## Le Shuffling
+
++ Étudié pour les couples de microphones à pression (stéréophonie par $\Delta t$)
++ Encodage stéréophonique en MS, traitement, puis décodage
++ Permet de transformer une $\Delta t$ en $\Delta i$
+
+---
+
+**Principe du shuffling**
+
+:::{layout="[1,1]"}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Blumlein_shuffler_principle_1_of_4.svg/564px-Blumlein_shuffler_principle_1_of_4.svg.png)
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Blumlein_shuffler_principle_2_of_4.svg/564px-Blumlein_shuffler_principle_2_of_4.svg.png)
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Blumlein_shuffler_principle_3_of_4.svg/564px-Blumlein_shuffler_principle_3_of_4.svg.png)
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Blumlein_shuffler_principle_4_of_4.svg/565px-Blumlein_shuffler_principle_4_of_4.svg.png)
+
+:::
+
+## Un progrès trop précoce...
+
+:::{layout="[0.4, 0.6]"}
+
+![](https://jpecquais.github.io/doc-technique-son/_resources/bitmap/various/WW1950.jpg)
+
++ Les techniques de gravure de Blumlein et de Keller ne fonctionnent pas sur Gramophone.
++ Le coût d'équipement pour les foyers est trop élevé.
+
+:::
+
+## ... puis une adoption généralisée
+
+:::{layout="[0.7, 0.3]"}
++ À partir de la fin des années soixante, la stéréophonie devient le standard d'enregistrement de la musique
+  + Pour les musiques actuelles
+  + Pour les musiques "classiques", la transition s'est faite avant
+
+![](https://nicestuff.pl/img/towary/1/2017_12/The-Beatles-Abbey-Road-obraz-na-plotnie-w-rozmiarze-30x30-cm-idealny-na-sciane-1.jpg)
+:::
++ Apparition des disques microsillons, on réinvente les techniques de gravure stéréo.
++ L'esthétique de production stéréophonique s'est affinée
+
+## Bifurcation entre binaural et stéréophonie
+
++ Binaural : écoute au casque
++ Stéréophonie : écoute frontale sur deux enceintes
+
+## Le binaural : Recréer l'écoute naturelle
+
+:::{layout="[0.6,0.4]"}
++ Débuté dans les années 1930 (Bells)
++ Premier mannequin de prise de son, Oscar.
++ Permets la réalisation d'un certain nombre de tests perceptifs.
+
+![](https://jpecquais.github.io/doc-technique-son/_resources/bitmap/binaural/oscar.png)
+:::
+
+## Le binaural aux Pays-Bas
+
+:::{layout="[0.6,0.4]"}
++ Ingénieurs de Phillips, De Boer et Vermeulen, créaient leur propre mannequin. (Année 30)
++ De Boer propose un simple système sphérique 10 ans plus tard.
++ Certains programmes radiophoniques sont diffusés en binaural.
+
+![](https://jpecquais.github.io/doc-technique-son/_resources/bitmap/binaural/schoeps-sphere.png)
+:::
+
+## Les années soixante-dix, premier âge d'or du binaural
+
++ Multiplication des têtes de prises de son.
+
+:::{layout-ncol="3"}
+
+![](https://jpecquais.github.io/doc-technique-son/_resources/bitmap/binaural/kemar.png)
+
+![](https://jpecquais.github.io/doc-technique-son/_resources/bitmap/binaural/neumann-ku80.png)
+
+![](https://jpecquais.github.io/doc-technique-son/_resources/bitmap/binaural/akg-d99c.png)
+
+:::
+
+## Études critiques, nouvelle tête de référence
+
+:::{layout="[0.4,0.6]"}
+
+![](https://cdn.musoscorner.com.au/media/catalog/product/cache/1/image/2000x2000/9df78eab33525d08d6e5fb8d27136e95/p/r/product_detail_x2_desktop_KU-100-Diagonal_Neumann-Dummy-Head_M.png_1.png)
+
++ Étude de 1997 sur la [comparaison des têtes artificielles](https://www.aes.org/e-lib/browse.cfm?elib=7375)
++ Problème de localisation (avant-arrière)
++ Suite à cette étude, Neumann créer la KU-100
+:::
+
+## L'aventure quadriphonique
+
++ Premier format "surround" commercial et domestique
++ Premiers enregistrements : 1969
++ C'est un échec commercial cuisant:
+  + Trop coûteux pour les foyers
+  + Trop compliqués (multiples formats)
+  + Qualité souvent douteuse
+
+---
+
+**Les formats quadriphoniques**
+
++ 4-4-4 : 4 canaux de mixages, 4 canaux de stockages, 4 canaux de restitutions
++ 4-2-4 : 4 canaux de mixages, 2 canaux de stockages, 4 canaux de restitutions
++ 2-2-4 : 2 canaux de mixages, 2 canaux de stockages, 4 canaux de restitutions
+
+---
+
+**Le format 4-2-4**
+
++ Matriçage proposé par Peter Scheiber et perfectionné par Benjamin Bauer pour donner lieu au **SQ Quadriphonic**
++ Le système fonctionne correctement pour des sons purs. Ses performances sont moindres pour des sons complexes, encore pires s’ils sont corrélés.
+
+|   | L  |  R |  Lr  |  Rr  |
+|---|---|---|---|---|
+| Lt | 1 | 0 | $\sqrt{2}\over{2}$ | $— j\times{\sqrt{2}}\over{2}$ | 
+| Rt | 0 | 1 | $— j\sqrt{2}\over{2}$ | $\times{\sqrt{2}}\over{2}$ | 
+
+## La quadriphonie, un format culte
+
+:::{layout="[0.7, 0.3]"}
++ Porté par Pink Floyd
+  + D'abord en live, avec l'**Azimuth Coordinator**
+  + En studio, avec Dark Side of the Moon (Alan Parson)
++ Redécouvert par la vague nostalgique "vintage" : [Dutton Vocalion](https://en.wikipedia.org/wiki/Dutton_Vocalion)
++ Format de son immersif simple à appréhender.
+
+![](https://cdn.antenne.de/thumbs/images/galleries/387353/91109_dark_side_of_the_moon.011c6919.jpg)
+:::
+
+---
+
+**Musique "classique"**
+
+:::{layout-ncol="2"}
+
+![](https://acimg.auctivacommerce.com/imgdata/0/1/0/6/9/6/webimg/14068446.jpg)
+
+![](https://i.discogs.com/7U3OmxvrE6nagoep3xt9Q93Funr3PD8xvatdIxkixE8/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMxODc5/ODUtMTMxOTY4MDM3/Mi5qcGVn.jpeg)
+
+:::
+
+# Son spatialisé et cinéma
+
+## Le cinéma sonore
+
++ L'idée du cinéma muet, pour dire silencieux, est une erreur
+  + Spectacle accompagné de musiciens. Réactions du public lui-même
++ Premier système de synchronisation : le Vitaphone en 1924 (Western Electric Company)
++ Premier film partiellement parlant : Le Chanteur de Jazz (1927)
++ Premier film intégralement parlant : Lights of New York (1928)
+
+---
+
+**Le Vitaphone**
+
+![](https://warnersisters.com/wp-content/uploads/2016/09/vit-104-vita-projector.jpg)
+
+## Le démesuré Fantasound
+
+:::{layout="[0.7,0.3]"}
+
++ Système de diffusion sonore développé pour Fantasia (Disney, 1940)
++ Collaboration avec Leopold Stokowski
++ Avancées technologiques majeures
+  + Premier "pan-pot"
+  + Premier VCA
+
+![](http://www.widescreenmuseum.com/sound/fantasia_fantasound_poster-r.jpg)
+:::
+
+---
+
+**Les défis de la diffusion musicale en salle de cinéma**
+
++ Une mauvaise dynamique : le rapport signal sur bruit de la musique enregistrée est trop mauvais pour reproduire la plage dynamique nécessaire.
++ La diffusion cinématographique est alors monophonique.
+
+---
+
+**Les solutions techniques**
+
+:::{layout="[0.6, 0.4]"}
+
++ Mise en place d'un système de diffusion sur cinq enceintes (trois frontales, deux arrières)
++ Création d'un dispositif de déplacement du son : le potentiomètre de panoramique
+
+![](http://photos.cinematreasures.org/production/photos/138005/1443719471/large.png?1443719471)
+
+:::
++ Mise en place de système d'automation par inscription d'un son pur sur bande optique, synchronisé au film.
+
+## Un problème de bruit : Dolby
+
+:::{layout="[0.7,0.3]"}
++ Société américaine fondée par Ray Dolby
++ Créer un système de réduction de bruit de fond : Dolby-NR
++ S'implique dans la spatialisation du spectacle stéréophonique
+
+![](https://socalcinetech.com/wp-content/uploads/2014/05/logo-dolby.jpg)
+:::
+
+---
+
+**Principe du Dolby-NR**
+
++ Compression du signal à stocker sur bande (par le haut et par le bas)
++ Expansion du signal à la relecture pour retrouver la dynamique originale et baisser le bruit de fond
++ Le traitement est appliqué sur plusieurs bandes de fréquences
+
+## Le mal nommé "Dolby Stereo"
+
+:::{layout="[0.7,0.3]"}
++ Système de diffusion sur quatre enceintes : LCRS + Sub
++ Matriçage "emprunté" aux travaux sur la quadriphonie (4-2-4)
++ Rétrocompatible avec les salles équipées en mono, ou stéréo.
++ Stocké sur la bande optique du film
+
+![](https://jpecquais.github.io/doc-technique-son/_resources/bitmap/speaker/lcrs_label.png)
+:::
+
+---
+
+**Matriçage LCRS**
+
+:::{layout-ncol="2"}
+
+|   | L  |  R |  C  |  S  |
+|---|---|---|---|---|
+| Lt | 1 | 0 | $\sqrt{2}\over{2}$ | $j\times{\sqrt{2}}\over{2}$ | 
+| Rt | 0 | 1 | $\sqrt{2}\over{2}$ | $— j\times{\sqrt{2}}\over{2}$ | 
+
+|   | Lt | Rt |
+|---|---|---|
+| L | 1 | 0 |
+| R | 0 | 1 |
+| C | 1 | 1 |
+| S | 1 | -1 |
+
+:::
+
+Le canal LFE est simplement routé par filtrage.
+
+---
+
+**Un format porté par un des plus grands succès du cinéma**
+
+:::{layout="[0.35,0.65]"}
+![](https://static0.colliderimages.com/wordpress/wp-content/uploads/2015/12/star-wars-a-new-hope-poster.jpg)
+
++ La Guerre des Étoiles
++ Réalisé par George Lucas (1977)
++ Aucune trace du film original
+
+:::
+
+## Passage au son numérique
+
++ Mettre fin au défaut du matriçage analogique
++ Ouverture à la concurrence (fin d'une situation de monopole pour Dolby)
++ Stockage de multiples canaux (avènement du 5.1)
+
+---
+
+**Le son numérique : une guerre de terrain**
+
+![](https://jpecquais.github.io/doc-technique-son/_resources/bitmap/various/35mm_film_audio_macro.jpg){width="70%"}
+
+---
+
+**Les premiers films**
+
++ Dolby Digital (Batman Returns - Tim Burton - 1992)
++ DTS (Jurassic Park - Steven Spielberg - 1993)
++ Sony SDDS (Last Action Heroes - John McTiernan - 1993)
+
+:::{layout-ncol="3"}
+![](https://image.tmdb.org/t/p/original/aKaW5pmO0IcguVOuyLavv1UnRxv.jpg)
+
+![](https://image.tmdb.org/t/p/original/aSHxw5PEaI5NafUc6lHVZmWdfy4.jpg)
+
+![](https://media.senscritique.com/media/000019241999/source_big/last_action_hero.jpg)
+:::
+---
+
+## L'adoption du système 5.1 en salle...
+
+:::{layout="[1,1]"}
+
++ On retrouve le LCR du Dolby Stereo
++ Deux enceintes arrières
++ Canal dédié au LFE
+
+![](https://jpecquais.github.io/doc-technique-son/_resources/bitmap/speaker/5_1_label.png)
+
+:::
+
+## ...Mais échec à domicile
+
+On retrouve alors toujours les mêmes raisons : coût prohibitif, et trop de câbles dans le salon !
+
+## Passage au Dolby Atmos
+
++ Format hybride entre **mixage orienté objet** et **mixage orienté canal**
++ Complètement intégré sur l'ensemble de la chaîne de production cinématographique
+  + De Pro Tools, à la salle de cinéma.
++ Système de haut-parleur variable de 5.1.4 à 9.1.6
++ Système classique : 7.1.4
+
+## Les pionniers de la musique spatialisée
+
++ [Musique concrète](https://fr.m.wikipedia.org/wiki/Musique_concr%C3%A8te) & [musique électroacoustique](https://fr.m.wikipedia.org/wiki/Musique_%C3%A9lectroacoustique)
++ Pierre Schaeffer (1910-1995) : fondations de la musique concrète
+  + Expérience du sillon fermé
+  + Expérience de la cloche coupée
++ Musique acousmatique
++ Pierre Henry (1927-1917)
++ "[Symphonie pour un seul homme](https://fr.m.wikipedia.org/wiki/Symphonie_pour_un_homme_seul)"
++ Création du GRMC (Groupe de Recherche en Musique Concrète)
+
+## La naissance du GRM
+
++ Groupe de Recherche Musique
++ On retrouve Iannis Xenakis, Michel Chion et François Bayle
++ Création de l'orchestre de haut-parleurs : l'Acousmonium (1974)
+
+:::{layout="[1,1]"}
+![](https://jpecquais.github.io/doc-technique-son/_resources/bitmap/various/acousmonium-74.png)
+
+![](https://esad-talm.fr/sites/default/files/talm/styles/16x9_1920/public/ged/soiree_ina-grm_biennale_le_mans_sonore_le_mans_2019.jpg?itok=F9ekSYaK)
+:::
+
+## Le GMEB
+
+:::{layout="[0.35,0.65]"}
+
+![](https://jpecquais.github.io/doc-technique-son/_resources/bitmap/various/gmebaphone.jpeg)
+
++ Groupe de Musique Expérimentale de Bourge
++ Françoise Barrière & Christian Clozier
++ Gmebaphone
+
+:::
+
+## Ambisonic
+
+:::{layout="[1,1]"}
++ Michale Gerzon (1945-1996)
++ National Research Development Corporation
++ Échantillonnage de l'espace acoustique
++ Microphones Soundfield
+
+![](https://intothesoundfield.music.ox.ac.uk/sites/default/files/styles/mt_image_large/public/intothesoundfield/images/media/8_26.-ambi-landscape-g-web.jpg)
+:::
+
+:::{.notes}
+
+Formats A, B, C
+
+:::
+
+## Ambisonie d'ordre plus élevé
+
++ Échantillonnage plus fin de l'espace acoustique
++ Resource :
+  + [Thèse de Jérome Daniel](https://www.researchgate.net/publication/242669363_Representation_de_champs_acoustiques_application_a_la_transmission_et_a_la_reproduction_de_scenes_sonores_complexes_dans_un_contexte_multimedia)
+  + [Ambisonic : Franz Zotter & Matthias Frank](https://link.springer.com/book/10.1007/978-3-030-17207-7)
+
+---
+
+**Harmoniques Sphériques**
+
+![](https://jpecquais.github.io/doc-technique-son/_resources/bitmap/ambisonic/spherical_harmonic.png)
