@@ -1,0 +1,94 @@
+# La Mesure du Niveau Sonore
+
+Nous avons brievement évoqué la question du niveau sonore dans les chapitres précédents. Nous avions établie le lien entre la pression acoustique exprimée en Pascale (Pa) et en décibels (dB). Cependant la question du niveau sonore, et plus particulièrement de sa mesure et de sa variation dans le temps mérite un chapitre à part entière.
+
+## Lien entre le domaine acoustique et électrique
+
+Nous allons rapidement être confronté à l'utilisation de grandeur liées à des signaux électriques. Il est donc important d'établir le lien entre l'onde acoustique originellement produite, sa mesure de pression acoustique, et ses grandeurs **analogues** électriques.
+
+La grandeur électrique analogue à la pression acoustique est la **tension**. En effet, lorsque l'o| place un microphone face à un évènement sonore, ce dernier transforme une énergie acoustique en énergie électrique, et sa tension de sortie évolue de façon **analogue** à la pression acoustique.
+
+Nous avions précédement établit la relation suivante :
+
+$$L_p = 20\,\log_{10}\Big(\frac{p_{eff}}{p_{ref}}\Big)$$
+
+Nous pouvons alors écrire celle-ci :
+
+$$L_V = 20\,\log_{10}\Big(\frac{V_{eff}}{V_{ref}}\Big)$$
+
+Nous allons par la suite nous expliquer plus en détail l'emploi du décibel.
+
+## Le décibel
+
+En audio, l'unité reine est le **décibel** (noté *dB*). Elle se définit comme le **logarithme du rapport de deux puissances**. Ainsi, lorsque l'on mesure une puissance sonore, il est possible d'exprimer un **gain** en décibel, par rapport à une puissance de référence :
+$$
+G_{dB} = 10\log\Big(\frac{|P_{sig}|}{P_{ref}}\Big)
+$$
+Ci-dessus, $P_{sig}$ est la puissance acoustique de notre signal, tandis que $P_{ref}$ est la puissance de référence. Prenons, par exemple, le cas où la puissance de notre signal est deux fois supérieure à notre puissance de référence :
+$$
+G_{dB} = 10\log\Big(\frac{2.P_{ref}}{P_{ref}}\Big)=10\log(2) \approx 3\,dB
+$$
+Nous venons donc de démontrer que, lorsque la puissance du signal double, on obtient un gain de 3 dB.
+
+Lorsque l'on manipule des **grandeurs de champs** (une tension électrique, une pression acoustique, etc), alors la formule du calcul du gain s'écrit comme ci-dessous :
+$$
+G_{dB} = 20\log\Big(\frac{|V_{sig}|}{V_{ref}}\Big)
+$$
+Où $V_{sig}$ désigne la tension électrique du signal et $V_{ref}$ une tension de référence. Refaisons la même démonstration que précédemment, mais pour une tension deux fois supérieure à la tension de référence :
+$$
+G_{dB} = 20\log\Big(\frac{|V_{sig}|}{V_{ref}}\Big)=20\log(2) \approx 6\,dB
+$$
+Lorsque l'on double la tension ou la pression d'un signal, son gain augmente de 6 dB.
+
+On démontre la relation précédente en posant $P = \frac{V^2}{R}$. On trouve alors :
+$$
+G_{dB} = 10\log\Big(\frac{V_{sig}^2}{V_{ref}^2}\Big) = 20\log\Big(\frac{|V_{sig}|}{V_{ref}}\Big)
+$$
+
+:::{.callout-tip}
+Suivant les valeurs de références prises, on définira différentes unités, comme les **dBm**, **dBu**, **dBv** ou **dBFS**. Voir cet article [Wikipédia.](https://en.wikipedia.org/wiki/Decibel#Suffixes_and_reference_values)
+:::
+
+Détaillons tout de même les **dBFS**. "FS" signifie "Full Scale". Cette unité ne s'applique qu'aux signaux numériques. Lorsqu'un signal est numérisé, la valeur maximale qu'il peut prendre est donnée par la tension d'entrée maximale autorisée par le convertisseur. Cette tension analogique maximale correspond à une valeur de 1 en numérique. Le plancher de bruit du convertisseur est lui codé sur une valeur de 0. Nous en déduisons ainsi que les signaux numériques peuvent prendre des valeurs comprises entre zéros et plus ou moins un. Selon l'AES et l'EBU, la valeur de référence pour la définition du *dBFS* est la valeur maximale admissible dans le canal numérique, soit un. Donc, en **dBFS**, la valeur maximale est 0 dBFS et la valeur minimale $-\infty$ dBFS.
+
+:::{.callout-tip}
+Cette valeur minimale de $-\infty$ est en fait le plancher de bruit du système numérique et possède une valeur exprimable en décibel. Celle-ci est définie par la précision de quantification du convertisseur. Par exemple, pour une quantification de $24\,bit$, le plancher de bruit se trouve à $\approx -144\,dB$. La formule pour le calculer est : $SNR_{dB} = 1.76+6.02.N$ où N est le nombre de bit.
+:::
+
+
+## Comment mesure t-on le niveau sonore
+
+Nous pouvons distinguer trois mesures de niveaux sur un seul et même signal :
+
++ Le niveau *crête*
++ Le niveau *crête à crête*
++ Le niveau efficace ou *RMS*
+
+![](../_resources/bitmap/signal/Pasted%20image%2020230523143625.png)
+
+**Le niveau crête** est défini comme la différence entre le niveau maximal et le niveau moyen du signal. **Le niveau crête à crête** est exactement le double du niveau crête et est souvent plus simple à mesurer car indépendante du niveau moyen. **Le niveau efficace** (RMS) est définie comme une tension continue ayant la même puissance que le signal étudié sur un interval de temps donnée.
+
+:::{.callout-tip}
+En audio, on espère que le niveau moyen du signal est 0. Sinon, cela signifie qu'une tension continue est venu parasiter notre signal. Bien qu'elle soit théoriquement inaudible, elle diminue cependant la dynamique de notre chaîne audio et augment le risque de saturation.
+:::
+
+Les niveaux **crêtes** sont principalement utilisés pour ne pas dépasser les seuils d'acceptances des équipements audio. Si l'on dépasse ces seuils, alors notre signal est écrêté.
+
+Le niveau **efficace** (RMS) est intéressant pour évaluer le niveau sonore moyen. Il est donc plus proche de notre perception sonore. En d'autre terme, lorsque le niveau RMS augmente, nous percevons une sensation d'augmentation du niveau sonore. Cette corrélation ne fonctionne pas pour les niveaux crêtes.
+
+:::{.callout-tip}
+RMS signifie "Root Mean Square", et ce traduit également par "valeur efficace". Une valeur dite efficace rend compte d'une variation moyenne, lissée, plutôt que d'une variation instantanée. Pour plus d'informations, voir cet article [wikipedia](https://fr.wikipedia.org/wiki/Valeur_efficace#cite_note-1).
+$$
+ x_{eff} = \lim_{T \rightarrow +\infty} \sqrt{\frac{1}{2T}\int\limits_{-T}^{T}x^{2}(t)dt}
+$$
+:::
+
+Définissons du même coup la **dynamique** d'un signal. Il s'agit de la différence entre la crête la plus forte du signal et du plancher de bruit. Nous cherchons en pratique à avoir une dynamique la plus grande possible. Pour y parvenir, il est nécessaire de maintenir le bruit généré par les différents équipements le plus bas possible.
+
+La **dynamique** d'un équipement (microphone, amplificateur, effets, etc.) se définie comme la différence entre son seuil de saturation et son plancher de bruit. Le seuil de saturation correspond au niveau à partir du quel le signal va être écrêté par l'appareil. Ce phénomène rajoute des harmoniques au signal et l'on cherche à l'éviter autant que faire se peu.
+
+![Exemple de saturation (clipping) sur un son pur](../_resources/bitmap/signal/clipped-signal.jpg)
+
+:::{.callout-important}
+Il est important de ne pas confondre la dynamique "technique" et la dynamique musicale. La seconde relève plus de la perception sonore et n'admet pas de mesure objective.
+:::

@@ -1,4 +1,6 @@
-# Les compresseurs
+# Les Traitements de la Dynamique
+
+Nous avons définie la notion de niveau sonore dans les premières sections de ce livre.
 
 <!-- 
 

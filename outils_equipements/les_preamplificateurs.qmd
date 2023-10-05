@@ -24,6 +24,7 @@ La distorsion est une mesure des modifications indésirables du signal audio qui
 
 Ci-dessous, en guise d'exemple, on trouve le tableau des spécifications du préampli Rupert Neve Design 511 :
 
+```
 Measured at Main Output, un-weighted, 22 Hz - 22 kHz, source impedance 150 Ohm balanced. Noise performance can vary depending on the 500 series and / or interference from stray magnetic fields.
 **NOISE**
 Unity Gain: Better than -103 dBV
@@ -60,7 +61,7 @@ Slope: 12 dB/Octave
 
 **POWER REQUIREMENTS**
 @ +/-16VDC, 100mA
-
+```
 
 ## Critères de choix d’un préamplificateur
 

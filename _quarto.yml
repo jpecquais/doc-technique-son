@@ -16,9 +16,10 @@ book:
         - generalites/oreille.qmd
         - generalites/qualifier_le_son.qmd
         - generalites/l_acoustique_des_salles.qmd
+        - generalites/niveau_sonore.qmd
         - generalites/notions_electronique.qmd
         - generalites/production_musicale.qmd
-    - part: Outils et équipements
+    - part: Savoirs et outils pour la prise de son
       chapters:
         - outils_equipements/le_chemin_du_signal.qmd
         - outils_equipements/les_microphones.qmd
@@ -35,14 +36,12 @@ book:
         - methode-pds/le_couple_de_pds.qmd
         - methode-pds/déphasage_et_remise_en_phase.qmd
         - methode-pds/en_pratiques.qmd
-    - part: Outils de mixage
+    - part: Savoirs et outils pour la mixage
       chapters: 
         - outils-mixage/anatomie-console.qmd
         - outils-mixage/filtres-phase.qmd
         - outils-mixage/filtres-egaliseur.qmd
-        - outils-mixage/dyn-compresseurs.qmd
-        - outils-mixage/dyn-limiteur.qmd
-        - outils-mixage/dyn-autres.qmd
+        - outils-mixage/dynamique.qmd
         - outils-mixage/reverberation.qmd
         - outils-mixage/saturation-distortion.qmd
         - outils-mixage/effets-modulation.qmd

@@ -1,153 +1,100 @@
-# Egalisation et égaliseurs
+# Égalisation et égaliseurs
 
-<!-- 
+<!-- TODO: plus d'images -->
 
-![CleanShot 2023-01-15 at 00.18.06.png](:/4ad1506bf6cc40d3b1de73ec643075c0)
+Un égaliseur est un outil permettant de modifier le timbre d’une source sonore. En d’autres termes, on modifie la réponse en fréquence d’un signal. On peut alors considérer qu’un égaliseur est un potentiomètre de volume évolué, permettant d’accentuer ou d’atténuer certaines zones du spectre.
 
-Equalizer is certainly the best known audio processing tool. It's everywhere, in your car, in your phone, in your hi-fi system (if you happen to still have one), etc. It is certainly one of the easiest effects to identify, while being a tough one to master.
+## La nécessité d’égaliser
 
-In this article we will discuss about digital equalizer, how they work and how you can improve your mixing process with them.
+L’égaliseur est certainement l’outil de traitement audio le plus connu. On le retrouve dans nombre d’application et d’équipement grand public. On peut alors se demander ce qui explique cette présence, et la nécessité de son utilisation.
 
-## Stating the obvious
+### Corriger des artefacts de prise de son
 
-Equalization is a tool that allows changing the timber of an audio signal. Basically, it is a sophisticated volume control that can target certain parts of the spectrum. So we can boost bass or trebles, cut mediums, etc. *Basically EQs are built with a certain number of filters.*
+Nous avons discuté, dans la partie précédente, de l’influence de la distance du microphone à la source sur le rendu sonore de celle-ci. L’esthétique majoritaire est actuellement à la prise de son d’hyperproximité. Or, les microphones directifs vont amplifier le bas du spectre lorsqu’ils sont placés à quelques centimètres (et moins) d’une source sonore. Voilà un premier artefact que l’on sera fréquemment amené à corriger par un traitement d’égalisation.
 
-Equalizers have a long history that we are not going to cover in the article. We will focus on **parametric EQ**. Equalizer are qualified of parametric when their target frequency and quality factor can be adjusted by the user. This is mostly the kind of EQ we are using when mixing or mastering.
+Cependant, on peut se demander alors pourquoi ne pas simplement reculer le microphone. Lorsque l’on cherche à réduire au maximum la contribution de l’acoustique environnante, ou à réaliser un « zoom » sonore sur un instrument, cette option n’est pas toujours envisageable.
 
-These parametric EQs have three main controls :
+### Réduire les problèmes de masquage
 
-+ The frequency; which changes the target area of the audio spectrum
-+ The gain; defining how much we want tot add or remove the frequency range we have selected
-+ The Q factor (or bandwidth); which set how wide the processed band is. A high Q factor is a small bandwidth. A little Q factor is a wide bandwidth.
+Comme nous l’avons déjà vu, le dispositif d’écoute traditionnel est le système stéréophonique. Ce système est cependant très limitant. En effet, nous avons à faire passer un grand nombre d’informations sur peu d’enceintes (seulement deux). On découvre alors des problèmes de masquage, où des sources sonores produisant leurs énergies dans des zones du spectre similaires auront tendance à se « brouiller ». On utilise alors un égaliseur pour créer une différentiation de timbre suffisante pour rendre les sources plus intelligibles.
 
-Sometimes you can also change the order of the filter. The higher the order, the steeper the filter's curve is.
+### Une question de couleur
 
-We also use four main filter shapes :
+On choisit aussi d’égaliser des sources pour des raisons esthétiques. On bascule alors dans un traitement d’effet. Ici, il n’y a pas de justification technique, mais seulement la question du plaisir d’écoute, ou mieux, de la narration.
 
-+ The bell shape. It only boosts or cut a certain part of the spectrum centered around the set frequency.
-+ The shelves. It boosts or cut everything above (high shelves) or below (low shelves) the set frequency.
-+ The low pass. Let only pass frequencies below the set frequency.
-+ The high pass. Let only pass frequencies above the set frequency.
+## Les types d’égaliseurs
 
-## How digital EQ are built
+Les égaliseurs ont une longue histoire que nous n’aborderons pas en détail. Rappelons simplement que les premiers égaliseurs ne permettaient souvent pas d’ajuster la zone du spectre à traiter. On appelle alors égaliseur **paramétrique** un égaliseur que l’on peut paramétrer. Ces derniers ont généralement trois réglages, la **fréquence de coupure**, le **facteur de qualité** et le **gain**.
 
-Without entering in too much detail about digital signal processing, there are two main types of filters : filters which have finite impulse response and those who have an infinite impulse response. Let's clarify this.
++ La fréquence de coupure ajuste l’emplacement du spectre à traiter.
++ Le facteur de qualité (appelé aussi Q) définit la sélectivité du traitement. Plus le Q est grand, plus le filtre sera sélectif. Au contraire, plus le Q sera faible, plus le traitement affectera les fréquences environnantes.
++ Le gain définit le niveau de correction appliqué, en décibel.
 
-You may have heard the words "impulse response" when talking about reverberation. In this context, an impulse response is the reaction of a specific room to an impulse. In simple words, if you clap your hands in a cathedral, and record the reaction of the space to the clap, you will get an impulse response, which is really, just an audio sample.
+:::{.callout-tip}
+Le facteur de qualité est parfois appelé bande passante. Plus le facteur de qualité est grand, plus la bande passante est étroite, et vice versa.
 
-If we were able to clap our hands inside a digital filter, and record its output, we will also get an impulse response. The good news is that we actually have a way to do that, and it's called a Dirac.
+En mixage, on préfère généralement des filtres peu sélectifs.
+:::
 
-A Dirac is a very specific type of signal. Theoretically, it is an impulse as short as possible. In practice, you can imagine an audio file filled with zero, except for one sample that is at full scale.
+Parfois, il est possible de changer l’ordre d’un filtre. Plus son ordre est élevé, plus la zone de transition entre la zone de spectre traitée et celle laissée intacte est raide.
 
-So back to our filters. To simplify the question, let's admit that filters that have infinite impulse response (IIR) have the property to be real time, they do not add any latency. Filters that have a finite impulse response have the property of having a linear phase shift, equivalent to a certain latency. Again, let's clarify this point.
+On trouve généralement quatre formes principales de filtres :
 
-## Phase and EQ
++ La forme en cloche (*bell/peak filter*). Elle n’augmente ou ne réduit qu’une certaine partie du spectre centrée autour de la fréquence définie.
++ Les filtres en plateau (*shelf filter*). Il amplifie ou coupe tout ce qui se trouve au-dessus (haut) ou au-dessous (bas) de la fréquence choisie.
++ Le passe-bas (*lowpass/hicut*). Ne laisse passer que les fréquences inférieures à la fréquence réglée.
++ Le passe-haut (*hipass/lowcut*). Ne laisse passer que les fréquences supérieures à la fréquence définie.
 
-Phase in audio is a complex subject. If you listen to the world around you, you will not perceive the phase. We start to perceive it when it changes in time or when you listen to two correlated signals.
+## Un aperçu du fonctionnement des filtres numériques
 
-> Correlated signals are simply signals that are close enough together. For example, two microphones that are recording the same instrument at the same time.
+Sans entrer dans les détails du traitement numérique du signal, il existe deux grands types de filtres : les filtres à réponse impulsionnelle finie et ceux à réponse impulsionnelle infinie. Clarifions ce point.
 
-We often talk about the phase shift, and we need a reference point to measure it and to hear it. There is some very well-known sources of phase issues :
+On entend généralement parler de « réponse impulsionnelle » lorsque l’on parle de réverbération. Dans ce contexte, une réponse impulsionnelle est la réaction d’une pièce spécifique à une impulsion. En d’autres termes, si vous frappez des mains dans une cathédrale et que vous enregistrez la réaction de l’espace à ce signal, vous obtiendrez une réponse impulsionnelle, qui n’est en fait qu’un enregistrement audio.
 
-+ Using multiple microphones to record the same instrument
-+ Filters
+Si nous pouvions taper des mains à l’intérieur d’un filtre numérique et enregistrer sa sortie, nous obtiendrions également une réponse impulsionnelle. En traitement du signal, on utilise un signal très particulier à la place, appelé impulsion de Dirac.
 
-![Capture d’écran 2023-01-19 à 16.04.46.png](:/dd1e4d6fc1244b75bf05a318a8db1fbe)
+Un Dirac est une impulsion aussi courte que possible. En pratique, on peut imaginer un fichier audio rempli de zéros, à l’exception d’un échantillon qui prend la valeur maximale admissible.
 
-All analog and digital IIR filters generate some amount of phase shifting. This means that, when you are EQing the snare top microphone with an IIR equalizer, you are generating a phase shift which change the sound of the top mic with the bottom one and even the overheads.
+Lorsque l’on soumet un filtre à une impulsion de Dirac, on obtient en sortie du filtre sa réponse impulsionnelle. Cette seule réponse permet de caractériser l’ensemble du système.
 
-The phase distortion generated by equalizer is totally solved when using FIR filters, or phase linear EQ.
+Un filtre à réponse impulsionnelle infinie possède la propriété d’être applicable en temps réel sur le signal, au mépris d’une certaine altération de la phase du signal. Un filtre à réponse impulsionnelle finie prend généralement la forme d’un filtre à phase linéaire. Ainsi, la phase du signal est préservée, au mépris d’une latence importante ajoutée au signal.
 
-## Here comes the linear phase EQ.
+:::{.callout-important}
+Les filtres analogiques sont toujours des filtres IIR.
+:::
 
-So now that we know that analog and digital IIR introduce phase shifting on the signal, you may think, "OK from now on, let's only use linear phase EQ". And I can understand the idea, but sadly, in the world of physics, everything comes at a certain price.
+## Les égaliseurs à phase linéaire
 
-It's true that linear phase EQ do not alter the phase relationship between microphones, but they have two major issues. The first one, they add tons of latency. It's not always a big deal when mixing, but for live mixing desk or for headphone cues, it is not acceptable. Linear phase EQ also have the very bad habit of creating a pre-ringing effect.
+:::{layout-ncol="2"}
+![Magnétude et phase d’un filtre IIR](../_resources/bitmap/eq/Capture%20d%E2%80%99e%CC%81cran%202023-01-19%20a%CC%80%2015.51.19.png)
 
-What is "pre-ringing" you may ask? Well, first of all, we will admit that all audio filters have a **post-ringing** effect. Remember that impulse response we've talked about? When we "clap in a filter", using a Dirac, we get a response that has some length. The filter kind of "oscillate" if you want. Post-ringing is not an issue, it really is how filtering works. It is not really audible because it is masked by the input signal itself.
+![Magnitude et phase d’un filtre FIR](../_resources/bitmap/eq/Capture%20d%E2%80%99e%CC%81cran%202023-01-19%20a%CC%80%2015.54.22.png)
+:::
 
-Pre-ringing on the other hand is much more audible, because it happens **before** the input signal onset. At this point, you may scratch your head thinking that filtering is about time traveling. Unfortunately, no it's not. But the good news is that we can delay things. If you remember correctly, we said before that linear phase EQs add "tons of latency". So because there is this delay, we can hear the consequence of the filter **before** the input signal. And thanks to the delay compensation of our DAWs, everything stay in sync.
+Maintenant que nous savons que les filtres IIR analogiques et numériques introduisent un déphasage sur le signal, il est tentant de systématiquement utiliser un filtre à phase linéaire. Malheureusement, dans le monde de la physique, tout a un certain prix.
 
-> Filters that generate content before the input signal have a mathematical existence, but not a physical one. They are said to be non-causal (because the effects precede the causes).
+Il est vrai que les égaliseurs de phase linéaires ne modifient pas la relation de phase entre les microphones, mais ils posent deux problèmes majeurs. Le premier est qu’ils ajoutent énormément de latence. Ce n’est pas toujours un problème lors du mixage, mais si cet égaliseur doit être utilisé dans une console de mixage pour le live, ou sur un réseau de casques, cette conséquence n’est pas acceptable. 
 
-Pre-ringing generates an effect comparable to a "reverse" effect, and it smooths out the transients. If the filter work in low frequencies, the pre-ringing will increase. To reduce the pre-ringing we need to use a longer impulse response, and thus, increase the latency.
+De plus, les égaliseurs à phase linéaire ont également la très mauvaise habitude de créer un effet de *pre-ringing*. Avant d’éclaircir cette notion de « pre-ringing », admettons, tout d’abord, que tous les filtres audio ont un effet **post-ringing**. Nous nous souvenons qu’un filtre, soumis à une impulsion, produit une réponse impulsionnelle. On peut dire qu’en quelque sorte, le filtre « oscille » pendant un certain temps. Le « post-ringing » n’est pas un problème en soi, c’est là, la façon dont le filtrage fonctionne. Il n’est pas vraiment audible non plus, car il est masqué par le signal d’entrée.
 
-## What EQ should I use ?
+Le préfiltrage, quant à lui, est beaucoup plus audible, car il se produit **avant** l’apparition du signal d’entrée. À ce stade, vous vous grattez peut-être la tête en pensant que le filtrage est une question de voyage dans le temps. Il est bien sûr impossible de prévoir la réponse d’un traitement avant sa stimulation, par contre, il nous est possible de retarder le signal pour rendre ce fonctionnement possible. C’est donc pour cela que les filtres à phase linéaire rajoutent une latence non négligeable sur le signal, afin de nous faire entendre les conséquences du filtre **avant** le signal traité. Et surtout, grâce à la compensation de retard de nos DAW, toutes nos pistes restent synchronisées.
 
-I admit that these previous parts may be very confusing. But in practice, it's not very complicated.
+:::{.callout-tip}
+Les filtres qui génèrent un contenu avant le signal d’entrée ont une existence mathématique, mais pas physique. On dit qu’ils sont non causaux (parce que les effets précèdent les causes).
+:::
 
-Linear phase EQ have too much drawback to have a common practical usage. Also, even the linear phase advantage is quite marginal. Let's go back to our snare top mic we want to EQ. The phase offset generated by the bell and shelves filter is marginal and its effect on timber is hidden in the filter itself.
+Le *pre-ringing* génère un effet comparable à un effet « d’inversion » et lisse les transitoires. Si le filtre travaille dans les basses fréquences, le *pre-ringing* augmente. Pour réduire ce phénomène, il faut utiliser une réponse impulsionnelle plus longue, et donc augmenter la latence.
 
-|Phase minimal|Phase Linear|
-|---|---|
-|![Phase minimal EQ blend with dry signal](:/f040e9f3853946c4b27fa8f206a1d25d) | ![Phase linear EQ blend with dry signal](:/ba1505e4c8b741478f476cd0d3340bb7) |
+## Les filtres analogiques et leurs transpositions numériques
 
-The graph above show the magnitude and phase response of the same filter curve blend with the dry signal (50%). The first one is a minimal phase filter, the second one a phase linear filter. Notice that the main difference on the magnitude is the difference in the bandwidth of the filter. The phase response of the minimal phase EQ tends to make filter curves narrow. So if you can simply compensate that effect by having smaller Q factor.
+De nombreux outils (plug-ins) de mixages se vantent d’être des simulations numériques d’un équivalent analogique. Investiguons rapidement ce sujet.
 
-When it comes to low pass or high-pass filters, the discussion is not the same. The phase offset generated by these filters is much more important, and thus, we have a severe effect on timber.
+Les filtres analogiques, comme dit plus haut, sont nécessairement des filtres IIR. Il existe donc une littérature très dense sur la réalisation de filtre analogique, la plupart reposant sur l’utilisation de fonctions mathématiques dites « polynomiales » (Butterworth, Bessel, Chebychev, etc.).
 
-This is why I often advise people to only use IIR equalizer, and to use shelves filters instead of high pass to clean their track. If a high-pass filter is really required, I would use it on a bus, where all the correlated signals get summed into, to avoid any phase distortion.
+Tout se savoir précède l’ère du numérique. Il est donc naturel que la conception de filtres IIR en numérique s’appuie sur la conception de filtres analogiques. La réelle difficulté consiste à passer le filtrage du domaine analogique au domaine numérique.
 
-> We consider that correlated signals are signals from the same instrument recorded in the same room at the same time. Bleed between microphones can also cause some correlation. 
+:::{.callout-note}
+Pour les lectrices et lecteurs les plus courageux, les principales stratégies d’adaptation d’un filtre analogique au domaine numérique sont l’utilisation de *la transformée bilinéaire*, *l’invariance impulsionnelle* et la *transformée par correspondance en Z*
+:::
 
-## Should I use a high-pass filter to remove sub-low ?
-
-If you have read the previous part, you should have an idea of the answer. First, and this may be controversial, but there is a strange habit to high pass everything. It's not that rare to see the idea that we should "clean" the low end of each and every track. Which is strange because there is rarely anything at all there. So why even bother ? Moreover, when we start to use many high-pass filter on many correlated signals, it can create some really funky phase interactions.
-
-As previously said, a low shelf filter seems like a better alternative for this kind of application. I would also strongly recommend to only treat the low end (or anything really) **if you hear something there**.
-
-I personally prefer to use a high-pass filter to **improve the phase interaction** between several microphones. Depending on the order of the high pass, the phase shift will increase or decrease.
-
-| Order 1 | Order 2 |
-|---|---|
-|![Capture d’écran 2023-01-19 à 16.26.31.png](:/a2750dfd7eaa477785a6d137ed9a18e0)|![Capture d’écran 2023-01-19 à 16.26.46.png](:/e99028ad60e24f099a87b712f2c8df82)|
-
-| Order 3 | Order 4 |
-|---|---|
-![Capture d’écran 2023-01-19 à 16.26.59.png](:/166ec0c25c744192a32ee961d8a8ee6d)|![Capture d’écran 2023-01-19 à 16.27.15.png](:/876f624d166a451a93f4098acfb48042)|
-
-+ At first order (6 dB/oct), we register a phase shift of 90° at the cutoff frequency.
-+ At order 2 (12 dB/oct), we find a 180° phase shift at the cutoff frequency.
-+ At order 3 (18 dB/oct), we find a 270° phase shift.
-+ At order four (24 dB/oct), we come back at 360°
-
-> Be careful, the higher the order, the more chaotic the phase rotation becomes.
-
-If you add the order of the high pass with the polarity switch of the mixing channel, you start to have a nice phase adjustment tool. It's even better if you happen to use the Evo Channel, which features a high-pass filter with a selectable order, and a phase adjustment dial to go from anywhere from -180° to 180° phase shift.
-
-## Should I only use subtractive EQ ?
-
-We often see this advice on the internet that we should prefer cutting things we don't like instead of boosting frequency. Another approach is possible, though.
-
-Critical listening is the best tool to sharpen when mixing, combining that with a bit of common sense we can simply say that :
-
-+ If we found that there is a disturbing frequency in the signal, we can remove it with an EQ cut.
-+ If we lack something in the signal, we can emphasize this area with an EQ boost.
-
-As a general guide line, we tend to favor greater Q-factor for cuts and smaller ones for a boost.
-
-> In the extremes of the spectrum, I tend to avoid shelves for boosting, as it tends to push too many frequencies upfront. Bells offer more precision. On the other hand, a shelve filter is very efficient to smooth out too much high-end and to remove harshness.
-
-## The Sweeping of Hell
-
-When we search for advice on the internet for learning how to EQ, we often found this method : take a narrow band bell EQ, give it a good amount of gain a sweep around the spectrum to find something that you don't like. Once it's founded, simply cut it.
-
-To be honest, I think it is a terrible method. I don't know if you experience the same thing as me, but when I'm listening to a bell filter, with a narrow band, boosted, nothing sounds right to me.
-
-I would rather propose another method. Listen carefully to the signal you want to process. Listen to it **in the mix** (don't use the solo button). Pay attention to interaction with other instruments if some sources are masking each other. Pay attention to things you'd like to improve in the timber. Eventually, you can take some notes. Then, for each problem you want to solve, you will make a bet. For example, if I found a resonating frequency on an electric guitar that is disturbing, I will say to myself, "I think it is at 300 Hz". Then, I set my equalizer to 300 Hz, give it a boost to emphasize this area. If it's there : good job! You can now cut it. If it's not there, go back to a flat response and repeat the whole process. Is the problem higher or lower from what we've just heard?
-
-> When we bet on a wrong frequency, it's worth trying an octave lower or higher. We often target the wrong harmonic. Also, if you can directly cut instead of boosting, it's a good improvement exercise too.
-
-The advantage of this method is that you actually train your ear to detect certain frequencies. With the repetition you will get the right frequency faster and faster.
-
-Also, It is now very common to have a spectrum analysis tool directly embedded in the user interface. The Evo Channel and Evo EQ feature the same praised spectrum analyzer found in the FLUX:: Analyzer. On a single channel, a frequency analyzer can give some precious information. We can instantly **see** the harmonic content of a signal a target the right spot for our treatment. While it should not replace the ears, it can be a great tool for beginners.
-
-## TL;DR
-
-Equalizer is one of the most used tools in audio production. The form we mostly use as audio professional is the parametric EQ. Equalizer is built upon filters, whose numbers and shape depends on the usage. In the digital world, there are two main digital filter types : IIR (Infinite Impulse Response) and FIR (Finite Impulse Response). We tend to associate the first type with minimal phase EQ (similar to their analog counterpart) and the second type with linear phase EQ.
-
-While linear phase EQ sound like a major improvement, it actually has too many drawbacks to be a solid alternative for minimal phase EQ. Actually, filter result on correlated sources are pretty similar between minimal phase and phase linear EQ, as long as you use bells or shelf filters. For high pass and low pass filter, they should be used with caution due to their important phase shift.
-
-Critical listening is the best approach to sound equalization. One should always interrogate himself about the nature of the problem he is listening too. The "sweep and boost" technique often found on the internet seems like a bad strategy as it does not help to identify the problem and it does not improve the ear of the mixer. 
-
- -->
+Cependant, il s’agit d’un sujet bien connu et bien documenté. Il faut donc retenir qu’une grande majorité (tous ?) des égaliseurs audio numérique exploitent des modélisations de filtres analogiques. Leur adaptation au domaine numérique est aujourd’hui une trivialité.

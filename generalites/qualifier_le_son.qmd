@@ -185,6 +185,12 @@ Que conclure de cet abaque ?
 + Notre zone de sensibilité maximale se situe dans l'aigu (3k-4k Hz).
 + Notre perception d'un matériau sonore en fonction du niveau auquel nous l'écoutons !
 
+Il est également intéressant d'aborder dès à présent la notion de dynamique. Une dynamique est toujours la mesure d'une différence entre deux niveaux. On parle alors de dynamique dans bien des contextes : pour caractériser un signal, un outil de traitement du son, un instrument de musique, une interprétation, etc. Nous aborderons l'approche technique de la dynamique dans un prochain chapitre. Concentrons-nous maintenant sur la dynamique musicale.
+
+La dynamique musicale permet de caractériser une intention de jeu. Elle a par ailleurs une existence sur les partitions, par l'emploi des termes italiens «  forte », «  mezzo forte » , «  piano » , etc. Les compositeurs et musiciens ont donc bien conscience qu'il s'agit là d'un vecteur d'émotion très puissant. On dira alors que la dynamique d'un morceau de musique est la différence de niveau entre son passage ayant le niveau sonore le plus faible et celui ayant le plus fort. On établit une définition similaire au sujet des interprétations. Une interprétation qualifiée de dynamique accentue les différences entre les moments forts et les moments faibles.
+
+La dynamique est très souvent considérée comme un gage de qualité. Si cette idée peut être discutable quant à la dynamique musicale, cette affirmation est tout à fait pertinente d'un point de vue technique. Plus nos équipements ont une grande dynamique, moins l'on risque de détériorer le signal.
+
 ### Positionnement dans l'espace
 
 Notre système auditif nous permet de situer l'émission d'un son dans l'espace. Cette capacité de localisation repose sur un ensemble de facteurs étroitement liés entre eux.
