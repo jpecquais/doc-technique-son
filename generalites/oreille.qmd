@@ -54,7 +54,7 @@ L'oreille est un organe fragile, dont l'endommagement est irréversible. Il conv
 + son exposition à de forts niveaux sonores
 + son exposition au bruit
 
-Dans les cas où l'exposition est contrainte (voire souhaité en concert par exemple), il est vivement conseillé de porter des protections auditives (bouchons d'oreilles).
+Dans les cas où l'exposition est contrainte (voire souhaitée, en concert par exemple), il est vivement conseillé de porter des protections auditives (bouchons d'oreilles).
 
 Il est également bon de rappeler que, dans la législation française, les niveaux sonores de diffusions dans des lieux de spectacles sont normés et ne doivent pas dépasser certains seuils. L'ingénieur du son affecté au mixage est donc **responsable** du respect de ces normes.
 
